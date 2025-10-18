@@ -130,6 +130,56 @@ You should see: **"The gdpr-auditor plugin is running..."**
 
 ---
 
+## 📐 Skill Design Principles
+
+**Core Philosophy:** Claude skills are designed to help Claude **generate deliverables**, not to perform live analysis or real-time monitoring.
+
+### ✅ Claude Skills ARE:
+
+- **Document Generators** - Create specific file types (reports, configs, documentation)
+- **Workflow Guides** - Step-by-step instructions for systematic tasks
+- **Template Systems** - Reusable patterns and boilerplates
+- **Format Converters** - Transform data into structured deliverables
+- **Code Libraries** - Manipulate file structures and generate code
+
+**Examples:**
+- ✅ GDPR Auditor: Guides Claude to generate compliance reports by analyzing code
+- ✅ Privacy Policy Generator: Creates policy documents from data practices
+- ✅ Security Checklist: Produces security assessment checklists
+
+### ❌ Claude Skills are NOT:
+
+- **Analysis Tools** - That scan live systems or running applications
+- **External Services** - That require APIs or third-party integrations
+- **Real-time Monitors** - That need continuous data streams
+- **Subjective Assessors** - That make judgments without clear criteria
+- **Simple Calculators** - That just return a single number
+
+**Anti-patterns:**
+- ❌ "Live vulnerability scanner" - Requires real-time system access
+- ❌ "API health monitor" - Needs continuous external service calls
+- ❌ "Performance analyzer" - Requires runtime metrics
+- ❌ "Code quality scorer" - Too subjective without clear deliverable
+
+### Design Guidelines
+
+**When creating a skill, ask:**
+
+1. **Does it produce a tangible deliverable?** (report, document, config file, etc.)
+2. **Can it work with static code/files?** (no live system access required)
+3. **Does it follow a systematic workflow?** (clear step-by-step process)
+4. **Is it based on objective criteria?** (regulations, standards, best practices)
+5. **Does it include reference materials?** (authoritative sources, templates)
+
+**Good Skill Pattern:**
+```
+Input: Codebase files, configuration files, documentation
+Process: Systematic analysis using reference materials
+Output: Structured report/document/checklist with specific findings
+```
+
+---
+
 ## Skill Development Standards
 
 All skills in this collection adhere to these quality standards:
@@ -146,13 +196,20 @@ All skills in this collection adhere to these quality standards:
 - ✅ Type hints and docstrings
 - ✅ Defensive security practices (no malicious code)
 - ✅ Tested on real-world projects
-- ✅ Follows Claude Skills best practices
+- ✅ Follows Claude Code plugin best practices
 
 ### Accuracy
 - ✅ Information verified against primary sources
 - ✅ No hallucinated facts or fake examples
 - ✅ Regular updates to reflect current standards
 - ✅ Clear version tracking
+
+### Design Compliance
+- ✅ Produces tangible deliverables (reports, documents, configs)
+- ✅ Works with static files (no live system scanning)
+- ✅ Based on objective criteria (regulations, standards)
+- ✅ Includes reference materials and templates
+- ✅ Follows systematic workflows
 
 ---
 

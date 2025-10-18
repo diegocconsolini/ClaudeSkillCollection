@@ -80,12 +80,56 @@ Documentation improvements are always welcome:
 
 ## Skill Submission Guidelines
 
+### ⚠️ Core Design Principles (REQUIRED READING)
+
+**Claude skills must follow these fundamental principles:**
+
+#### ✅ Skills ARE:
+- **Document Generators** - Create specific file types (reports, configs, documentation)
+- **Workflow Guides** - Step-by-step instructions for systematic tasks
+- **Template Systems** - Reusable patterns and boilerplates
+- **Format Converters** - Transform data into structured deliverables
+- **Code Libraries** - Manipulate file structures and generate code
+
+#### ❌ Skills are NOT:
+- **Analysis Tools** - That scan live systems or running applications
+- **External Services** - That require APIs or third-party integrations
+- **Real-time Monitors** - That need continuous data streams
+- **Subjective Assessors** - That make judgments without clear criteria
+- **Simple Calculators** - That just return a single number
+
+#### Design Validation Checklist
+
+Before submitting, verify your skill:
+
+1. ✅ **Produces tangible deliverables** (report, document, config file, etc.)
+2. ✅ **Works with static code/files** (no live system access required)
+3. ✅ **Follows systematic workflow** (clear step-by-step process)
+4. ✅ **Based on objective criteria** (regulations, standards, best practices)
+5. ✅ **Includes reference materials** (authoritative sources, templates)
+
+**Good Pattern:**
+```
+Input: Codebase files, configuration, documentation
+Process: Systematic analysis using reference materials
+Output: Structured report/document with specific findings
+```
+
+**Bad Patterns (Will be rejected):**
+- "Live vulnerability scanner" - Requires real-time system access
+- "API health monitor" - Needs continuous external service calls
+- "Performance analyzer" - Requires runtime metrics
+- "Code quality scorer" - Too subjective without clear deliverable
+
+---
+
 ### Before You Start
 
-1. **Check existing skills** - Avoid duplicates
-2. **Discuss your idea** - Open GitHub Discussion
-3. **Review quality standards** - Ensure you can meet them
-4. **Gather authoritative sources** - For reference materials
+1. **Review design principles above** - Ensure your skill fits the model
+2. **Check existing skills** - Avoid duplicates
+3. **Discuss your idea** - Open GitHub Discussion
+4. **Review quality standards** - Ensure you can meet them
+5. **Gather authoritative sources** - For reference materials
 
 ### Skill Requirements
 

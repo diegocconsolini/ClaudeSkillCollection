@@ -317,6 +317,26 @@ We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for guideline
 - Share usage examples
 - Submit test cases
 
+#### Plugin Design Requirements
+
+**All plugins must follow core design principles:**
+
+✅ **Plugins MUST:**
+- Generate tangible deliverables (reports, documents, configs)
+- Work with static code/files (no live system scanning)
+- Follow systematic workflows
+- Be based on objective criteria (regulations, standards)
+- Include reference materials and templates
+
+❌ **Plugins MUST NOT:**
+- Require real-time system access or live scanning
+- Depend on external APIs or third-party services
+- Need continuous data streams or monitoring
+- Make subjective judgments without clear criteria
+- Be simple calculators that just return numbers
+
+See [SKILL_DESIGN_PRINCIPLES.md](./SKILL_DESIGN_PRINCIPLES.md) for full details.
+
 ---
 
 ## Marketplace Management
