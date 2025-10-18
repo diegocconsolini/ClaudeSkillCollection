@@ -1,0 +1,31 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "gdpr-auditor",
+  "version": "1.0.0",
+  "description": "Comprehensive GDPR compliance auditing skill that analyzes codebases, databases, and systems for EU data protection regulation compliance. Includes 8 reference documents, 5 automated scanning tools, and generates detailed compliance reports.",
+  "author": {
+    "name": "Diego Consolini",
+    "email": "diego@diegocon.nl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/gdpr-auditor",
+  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+  "keywords": [
+    "gdpr",
+    "compliance",
+    "privacy",
+    "data-protection",
+    "eu-regulation",
+    "audit",
+    "security",
+    "personal-data"
+  ],
+  "category": "security",
+  "agents": [
+    {
+      "name": "gdpr-auditor",
+      "description": "GDPR compliance auditor agent that analyzes systems for EU data protection compliance",
+      "prompt": "./SKILL.md"
+    }
+  ]
+}

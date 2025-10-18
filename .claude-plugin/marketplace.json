@@ -1,0 +1,36 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "security-compliance-marketplace",
+  "version": "1.0.0",
+  "description": "Professional security, privacy, and compliance auditing tools for Claude Code. Specialized marketplace featuring production-ready skills for GDPR, CCPA, HIPAA compliance, security vulnerability scanning, and defensive security analysis.",
+  "owner": {
+    "name": "Diego Consolini",
+    "email": "diego@diegocon.nl"
+  },
+  "plugins": [
+    {
+      "name": "gdpr-auditor",
+      "description": "Comprehensive GDPR compliance auditing skill that analyzes codebases, databases, and systems for EU data protection regulation compliance. Includes 8 reference documents, 5 automated scanning tools, and generates detailed compliance reports.",
+      "source": "./gdpr-auditor",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Consolini",
+        "email": "diego@diegocon.nl"
+      },
+      "category": "security",
+      "keywords": [
+        "gdpr",
+        "compliance",
+        "privacy",
+        "data-protection",
+        "eu-regulation",
+        "audit",
+        "security",
+        "personal-data"
+      ],
+      "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/gdpr-auditor",
+      "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+      "license": "MIT"
+    }
+  ]
+}

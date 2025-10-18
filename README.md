@@ -1,10 +1,36 @@
-# Claude Skills Collection
+# Security & Compliance Marketplace
 
-A curated collection of professional, production-ready skills for Claude Code that extend its capabilities for specialized workflows and domain expertise.
+**A Community Claude Code Plugin Marketplace for Security, Privacy, and Compliance Auditing**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
+[![Plugins](https://img.shields.io/badge/plugins-1-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
+
+A curated collection of professional, production-ready security and compliance plugins for Claude Code. This is the only marketplace dedicated exclusively to privacy regulations (GDPR, CCPA, HIPAA), security auditing, and compliance automation.
+
+## 🚀 Quick Install
+
+**Recommended: Install via Plugin Marketplace**
+
+```bash
+/plugin marketplace add diegocconsolini/ClaudeSkillCollection
+/plugin install gdpr-auditor@security-compliance-marketplace
+```
+
+**Alternative: Traditional Skills Installation** (see below)
+
+---
 
 ## Overview
 
-This repository provides high-quality, well-documented skills that you can install in Claude Code to unlock specialized capabilities. Each skill is designed following best practices with comprehensive reference materials, automated tools, and clear workflows.
+This repository provides high-quality, well-documented security and compliance tools that you can install in Claude Code to unlock specialized capabilities. Each plugin is designed following best practices with comprehensive reference materials, automated tools, and clear workflows.
+
+**What Makes This Different:**
+- ✅ **Community marketplace dedicated to security & compliance**
+- ✅ **Production-tested** on real-world applications
+- ✅ **Verified against authoritative sources** (EUR-Lex, ICO, OWASP)
+- ✅ **Defensive security only** (ethical focus)
+- ✅ **Professional documentation** and support
 
 ## Available Skills
 
@@ -32,19 +58,57 @@ Comprehensive GDPR compliance auditing skill that analyzes codebases, databases,
 
 ### Prerequisites
 
-- **Claude Code** (latest version)
+- **Claude Code** (latest version with plugin support)
 - **Python 3.8+** (for automated scanning tools)
-- Basic understanding of Claude Code skills system
+- **Git** (for installation)
 
-### Installation
+### Installation Options
 
-#### Option 1: Install Individual Skill
+#### ⭐ Option 1: Plugin Marketplace (Recommended)
+
+The easiest way to install plugins from this marketplace:
+
+```bash
+# Add the Security & Compliance Marketplace
+/plugin marketplace add diegocconsolini/ClaudeSkillCollection
+
+# Browse available plugins
+/plugin
+
+# Install GDPR Auditor
+/plugin install gdpr-auditor@security-compliance-marketplace
+```
+
+**Benefits:**
+- ✅ One-command installation
+- ✅ Automatic updates via `/plugin update`
+- ✅ Easy plugin management
+- ✅ Access to all marketplace plugins
+
+#### Option 2: Traditional Skills Installation
+
+For Claude Code versions without plugin marketplace support:
 
 ```bash
 # Navigate to your Claude skills directory
 cd ~/.claude/skills/
 
-# Clone specific skill
+# Clone the repository
+git clone https://github.com/diegocconsolini/ClaudeSkillCollection.git
+
+# Symlink desired skills
+ln -s ClaudeSkillCollection/gdpr-auditor ./gdpr-auditor
+
+# Restart Claude Code
+```
+
+#### Option 3: Individual Plugin Download
+
+```bash
+# Navigate to your Claude plugins/skills directory
+cd ~/.claude/plugins/  # or ~/.claude/skills/
+
+# Clone and extract specific plugin
 git clone https://github.com/diegocconsolini/ClaudeSkillCollection.git temp
 cp -r temp/gdpr-auditor ./
 rm -rf temp
@@ -52,29 +116,17 @@ rm -rf temp
 # Restart Claude Code
 ```
 
-#### Option 2: Install All Skills
-
-```bash
-# Clone entire repository
-cd ~/.claude/skills/
-git clone https://github.com/diegocconsolini/ClaudeSkillCollection.git
-
-# Symlink desired skills
-ln -s claude-skills-collection/gdpr-auditor ./gdpr-auditor
-
-# Restart Claude Code
-```
-
 ### Verification
 
-After installation and restart:
+After installation, verify the plugin is loaded:
 
 ```
-# In Claude Code, test that the skill loads:
 "Can you help me audit my application for GDPR compliance?"
-
-# You should see: "The gdpr-auditor skill is running"
 ```
+
+You should see: **"The gdpr-auditor plugin is running..."**
+
+[→ Full Installation Guide](./docs/installation.md) | [→ Marketplace Guide](./MARKETPLACE.md)
 
 ---
 
@@ -107,28 +159,78 @@ All skills in this collection adhere to these quality standards:
 ## Repository Structure
 
 ```
-claude-skills-collection/
-├── README.md                    # This file
-├── LICENSE                      # MIT License
-├── CONTRIBUTING.md              # Contribution guidelines
+ClaudeSkillCollection/
+├── README.md                       # This file
+├── LICENSE                         # MIT License
+├── CONTRIBUTING.md                 # Contribution guidelines
+├── MARKETPLACE.md                  # Marketplace documentation
+├── CHANGELOG.md                    # Version history
 │
-├── gdpr-auditor/               # GDPR Compliance Auditor Skill
-│   ├── README.md               # Skill-specific documentation
-│   ├── SKILL.md                # Claude skill prompt
-│   ├── scripts/                # Automated scanning tools (5 scripts)
-│   ├── references/             # GDPR reference materials (8 docs)
-│   ├── examples/               # Usage examples and demos
-│   └── tests/                  # Test files and validation
+├── .claude-plugin/                 # Marketplace configuration
+│   └── marketplace.json            # Plugin marketplace manifest
 │
-├── docs/                       # Global documentation
-│   ├── installation.md         # Detailed installation guide
-│   ├── skill-development.md    # Creating your own skills
-│   └── troubleshooting.md      # Common issues and solutions
+├── gdpr-auditor/                   # GDPR Compliance Auditor Plugin
+│   ├── README.md                   # Plugin documentation
+│   ├── SKILL.md                    # Claude agent prompt
+│   ├── plugin.json                 # Plugin manifest
+│   ├── scripts/                    # Automated scanning tools (5 scripts)
+│   ├── references/                 # GDPR reference materials (8 docs)
+│   └── examples/                   # Usage examples and demos
 │
-└── .github/                    # GitHub-specific files
-    ├── ISSUE_TEMPLATE/
-    └── workflows/
+├── private/                        # Private development workspace (submodule)
+│   ├── drafts/                     # Draft documentation
+│   ├── research/                   # Research materials
+│   ├── wip-plugins/                # Work-in-progress plugins
+│   ├── test-data/                  # Test datasets
+│   └── notes/                      # Development notes
+│
+│   ⚠️  This is a git submodule pointing to a PRIVATE repository
+│       Only accessible to repository owner and collaborators
+│       Public visitors see the reference but cannot access contents
+│
+├── docs/                           # Global documentation
+│   └── installation.md             # Detailed installation guide
+│
+└── .github/                        # GitHub-specific files
+    └── ISSUE_TEMPLATE/
 ```
+
+---
+
+## 🔒 Private Development Workspace
+
+This repository includes a **private submodule** for work-in-progress plugins and development materials.
+
+### What's in `private/`?
+
+The `private/` directory is a **git submodule** pointing to a separate private repository:
+- **Repository:** [ClaudeSkillCollection-Private](https://github.com/diegocconsolini/ClaudeSkillCollection-Private) (private)
+- **Purpose:** Development workspace for unreleased plugins
+- **Access:** Repository owner and invited collaborators only
+
+**Contents:**
+- `drafts/` - Draft documentation and ideas
+- `research/` - Research materials and references
+- `wip-plugins/` - Work-in-progress plugins (not ready for release)
+- `test-data/` - Test datasets (sanitized)
+- `notes/` - Development notes and planning
+
+### How to Access (For Collaborators)
+
+If you have access to the private repository:
+
+```bash
+# Clone with submodule
+git clone --recurse-submodules https://github.com/diegocconsolini/ClaudeSkillCollection.git
+
+# Or if already cloned
+git submodule init
+git submodule update
+```
+
+### For Public Users
+
+Public visitors will see the `private/` submodule reference in the repository, but **cannot access** the contents. This is intentional - it allows development work to happen privately before plugins are ready for public release.
 
 ---
 
@@ -248,6 +350,40 @@ Skills are actively maintained with:
 - Bug fixes and improvements
 - Community feedback integration
 - Version tracking
+
+---
+
+## 📦 Plugin Marketplace
+
+This repository is also a **Claude Code Plugin Marketplace**! You can add it to your Claude Code instance to browse and install plugins easily.
+
+### Why Use the Marketplace?
+
+**Easy Installation:**
+- One-command plugin installation
+- Automatic plugin discovery
+- Centralized management
+
+**Automatic Updates:**
+- Keep plugins up-to-date with `/plugin update`
+- Get notified of new releases
+- Seamless version management
+
+**Professional Quality:**
+- Curated, production-ready plugins only
+- Verified against authoritative sources
+- Regular security audits
+- Comprehensive documentation
+
+### Marketplace Features
+
+- **Specialization:** Community marketplace focused on security, privacy, and compliance
+- **Quality Assurance:** All plugins production-tested
+- **Ethical Focus:** Defensive security only (no offensive tools)
+- **Professional Support:** Dedicated security expertise
+- **Regular Updates:** Active maintenance and improvements
+
+[→ Full Marketplace Documentation](./MARKETPLACE.md)
 
 ---
 

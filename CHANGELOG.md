@@ -11,6 +11,51 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CCPA Compliance Auditor skill
 - Security Vulnerability Scanner skill
 - Accessibility Auditor (WCAG 2.1) skill
+- HIPAA Compliance Checker skill
+- API Security Auditor skill
+
+---
+
+## [1.1.0] - 2025-10-19
+
+### Added - Marketplace Support
+
+#### Claude Code Plugin Marketplace
+- Added `.claude-plugin/marketplace.json` for marketplace functionality
+- Repository now functions as a Claude Code plugin marketplace
+- One-command installation via `/plugin marketplace add`
+- Automatic plugin discovery and updates
+
+#### Plugin Infrastructure
+- Created `plugin.json` for GDPR Auditor
+- Configured agent-based skill loading
+- Marketplace metadata and categorization
+- Keywords and search optimization
+
+#### Documentation
+- New `MARKETPLACE.md` with comprehensive marketplace guide
+- Updated main README with marketplace installation instructions
+- Added comparison with other marketplaces
+- Installation options: marketplace vs. traditional skills
+
+#### Marketplace Positioning
+- Community marketplace specializing in security and compliance
+- Production-ready, verified plugins only
+- Defensive security focus
+- Professional quality assurance
+
+### Changed
+- Updated README title to reflect marketplace functionality
+- Enhanced installation section with multiple options
+- Added marketplace benefits and features section
+- Updated contact email to diego@diegocon.nl
+
+### Technical Details
+- Marketplace name: `security-compliance-marketplace`
+- Version: 1.0.0
+- Category: Security & Compliance
+- Available plugins: 1 (GDPR Auditor)
+- Roadmap plugins: 12+
 
 ---
 
