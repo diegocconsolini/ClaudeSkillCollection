@@ -30,6 +30,9 @@ This skill is a **tool to assist analysis** - it does NOT:
 - Provide legal advice
 - Guarantee compliance
 - Certify GDPR compliance
+- Access live databases or running systems
+- Monitor runtime behavior or execute code
+- Test third-party APIs or external services
 - Exploit vulnerabilities (defensive security only)
 
 ---
@@ -362,9 +365,11 @@ This skill has been tested on:
 
 1. **Legal Advice** - This is a technical tool, not legal counsel
 2. **Guarantee Compliance** - Only professional auditors can certify
-3. **Dynamic Analysis** - Cannot run applications or simulate user flows
-4. **Third-Party Services** - Cannot audit external APIs directly
-5. **Cloud Infrastructure** - Limited visibility into cloud provider internals
+3. **Runtime Analysis** - Works with static code only; cannot execute applications, simulate user flows, or observe runtime behavior
+4. **Live Database Access** - Analyzes schema files only; does not connect to running databases
+5. **Third-Party API Testing** - Cannot call or audit external services directly
+6. **Cloud Infrastructure** - Limited visibility into cloud provider internals
+7. **Network Monitoring** - No real-time traffic analysis capability
 
 ### Known Limitations
 

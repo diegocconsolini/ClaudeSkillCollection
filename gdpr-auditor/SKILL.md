@@ -34,6 +34,86 @@ Use this skill when:
 - Investigating potential data protection violations
 - Designing data protection impact assessments (DPIAs)
 
+## When NOT to Use This Skill
+
+Do **NOT** use this skill for:
+
+- **Live system penetration testing** - This audits static code, not running systems
+- **Runtime behavior analysis** - Cannot observe application execution or user flows
+- **Live database auditing** - Does not connect to running databases (only analyzes schema files)
+- **Network traffic monitoring** - No real-time traffic analysis capability
+- **Third-party API testing** - Cannot call or test external services directly
+- **Legal compliance certification** - This is a technical tool, not official legal certification
+- **Non-EU jurisdictions** - Use CCPA Auditor for California, HIPAA Auditor for US healthcare
+- **Production system scanning** - Works with source code repositories, not deployed systems
+- **Active vulnerability exploitation** - Defensive analysis only
+
+**This skill analyzes static files only** (source code, configuration files, database schema files, documentation). For live system testing or runtime analysis, consult qualified security professionals.
+
+## Output Format
+
+This skill generates a **GDPR Compliance Audit Report** in Markdown format.
+
+**Report Structure:**
+
+```markdown
+# GDPR Compliance Audit Report
+Generated: [Date]
+Application: [Name/Description]
+Audited by: GDPR Auditor Skill
+
+## Executive Summary
+- Overall Compliance Status: [Compliant / Partially Compliant / Non-Compliant]
+- Critical Issues: [Number]
+- High Priority Issues: [Number]
+- Overall Risk Level: [Low / Medium / High / Critical]
+- Primary Concerns: [Brief list]
+
+## Critical Issues
+[Issues requiring immediate attention]
+
+1. [Issue Title]
+   - **GDPR Article(s):** [Relevant articles]
+   - **File/Location:** [file.py:line or description]
+   - **Risk:** Critical
+   - **Finding:** [Detailed description]
+   - **Recommendation:** [Specific remediation steps]
+
+## High-Priority Recommendations
+[Important improvements needed for compliance]
+
+## Medium-Priority Recommendations
+[Suggested enhancements and best practices]
+
+## Compliant Areas
+[Aspects that meet GDPR requirements - positive findings]
+
+## Data Subject Rights Assessment
+- Right to Access: [Implemented / Not Implemented / Partial]
+- Right to Rectification: [Status]
+- Right to Erasure: [Status]
+- Right to Data Portability: [Status]
+- Right to Object: [Status]
+
+## Compliance Roadmap
+**Phase 1 (Immediate - 0-30 days):**
+[Critical fixes]
+
+**Phase 2 (Short-term - 1-3 months):**
+[High-priority items]
+
+**Phase 3 (Medium-term - 3-6 months):**
+[Enhancements and optimizations]
+
+## GDPR Articles Referenced
+[List of GDPR articles cited in findings]
+
+## Next Steps
+[Prioritized action items]
+```
+
+**Deliverable:** A comprehensive, actionable audit report with specific code references, GDPR article citations, and prioritized remediation guidance.
+
 ## Workflow
 
 ### Initial Assessment
@@ -45,21 +125,22 @@ Start by understanding the scope of the audit:
 3. Understand the legal basis for processing (consent, contract, legitimate interest, etc.)
 4. Identify data subjects (EU residents, employees, customers, etc.)
 
-### Code and System Analysis
+### Static Code and File Analysis
 
-When analyzing code or systems, examine:
+When analyzing codebase files and configurations, examine:
 
-1. **Data Collection Points**
-   - Forms, input fields, API endpoints
-   - Third-party integrations (analytics, advertising, social media)
-   - Cookies and tracking technologies
-   - Use `scripts/scan_data_collection.py` to automatically identify data collection patterns
+1. **Data Collection Points** (Source Code Analysis)
+   - Forms, input fields, API endpoint definitions in code
+   - Third-party integration code (analytics, advertising, social media SDKs)
+   - Cookie and tracking technology implementations
+   - Use `scripts/scan_data_collection.py` to automatically identify data collection patterns in source files
 
-2. **Data Storage**
-   - Database schemas and field types
-   - Encryption at rest implementation
-   - Data retention policies in code
-   - Use `scripts/analyze_database_schema.py` to review database structures
+2. **Data Storage** (Schema File Analysis)
+   - Database schema files (SQL DDL, migrations, ORM models)
+   - Field types and constraints in schema definitions
+   - Encryption configuration in code
+   - Data retention policies defined in code or configuration
+   - Use `scripts/analyze_database_schema.py` to review database schema files and migration scripts
 
 3. **Data Processing**
    - How personal data flows through the system
@@ -144,15 +225,21 @@ Always verify the following common compliance issues:
 
 ## Using the Scripts
 
-The skill includes Python scripts in the `scripts/` directory:
+The skill includes Python scripts for **static file analysis** in the `scripts/` directory:
 
-- **scan_data_collection.py** - Scans code for data collection patterns (forms, inputs, API calls)
-- **analyze_database_schema.py** - Analyzes database schemas for personal data and sensitive fields
-- **check_dsr_implementation.py** - Verifies implementation of data subject rights endpoints
-- **security_audit.py** - Checks for common security issues affecting GDPR compliance
-- **generate_audit_report.py** - Creates a comprehensive audit report from findings
+- **scan_data_collection.py** - Scans source code files for data collection patterns (forms, inputs, API endpoint definitions)
+- **analyze_database_schema.py** - Analyzes database schema files (SQL DDL, migration files, ORM models) for personal data fields
+- **check_dsr_implementation.py** - Scans code for data subject rights endpoint implementations
+- **security_audit.py** - Reviews code and configuration files for security patterns
+- **generate_audit_report.py** - Formats findings into a structured audit report (Markdown)
 
-Execute scripts when relevant to automate parts of the audit process. Scripts are defensive security tools designed to identify compliance issues, not to exploit systems.
+**Important:** All scripts work with **static files only** (source code, schemas, configuration files). They do NOT:
+- Connect to live databases or running systems
+- Execute code or make network requests
+- Require system access or credentials
+- Modify any files
+
+Execute scripts when relevant to automate parts of the audit process. Scripts are defensive security tools designed to identify compliance issues for remediation, not to exploit systems.
 
 ## Note on Defensive Security
 

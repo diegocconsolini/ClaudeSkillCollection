@@ -381,8 +381,8 @@ Update with each release following Keep a Changelog format.
 
 ### 1. GDPR Auditor (v1.0.0)
 **Status:** Production Ready
-**Description:** GDPR compliance auditing for EU data protection
-**Features:** 8 reference docs, 5 automation scripts, comprehensive audit reports
+**Description:** GDPR compliance auditing for EU data protection (static file analysis only)
+**Features:** 8 reference docs, 5 automation scripts (analyze code/schema files), comprehensive audit reports
 **Install:** `/plugin install gdpr-auditor@security-compliance-marketplace`
 
 ### Roadmap (12+ Planned):

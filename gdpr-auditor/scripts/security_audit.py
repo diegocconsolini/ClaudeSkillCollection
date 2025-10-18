@@ -1,7 +1,22 @@
 #!/usr/bin/env python3
 """
-GDPR Security Audit Script
-Checks for common security issues that affect GDPR compliance.
+GDPR Security Audit Script - Static File Analysis Tool
+
+Scans source code and configuration files for common security patterns and issues
+that affect GDPR compliance (encryption, authentication, access control, audit logging).
+
+IMPORTANT - STATIC ANALYSIS ONLY:
+This script analyzes static code and configuration files. It does NOT:
+- Perform penetration testing or vulnerability exploitation
+- Connect to running systems or production environments
+- Test actual security controls or authentication
+- Execute code or simulate attacks
+- Access live servers, databases, or networks
+- Require system credentials or elevated privileges
+- Monitor runtime security behavior
+
+Analyzes: Source code, configuration files, security-related code patterns
+Purpose: Identify security implementation patterns in code for GDPR Article 32 compliance
 """
 
 import os

@@ -1,7 +1,21 @@
 #!/usr/bin/env python3
 """
-GDPR Audit Report Generator
-Generates comprehensive GDPR compliance audit reports from findings.
+GDPR Audit Report Generator - Static File Analysis Tool
+
+Generates comprehensive GDPR compliance audit reports in Markdown format from
+JSON findings collected by other analysis scripts.
+
+IMPORTANT - STATIC ANALYSIS ONLY:
+This script processes JSON files and generates Markdown reports. It does NOT:
+- Connect to any external systems or services
+- Execute code or make network requests
+- Access databases or live applications
+- Require credentials or system access
+- Monitor or analyze runtime behavior
+- Modify any files except the output report
+
+Analyzes: JSON files containing audit findings from other scanning tools
+Purpose: Format findings into professional GDPR compliance audit reports
 """
 
 import json

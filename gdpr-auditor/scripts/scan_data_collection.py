@@ -1,7 +1,21 @@
 #!/usr/bin/env python3
 """
-GDPR Data Collection Scanner
-Scans code for data collection patterns including forms, inputs, API calls, and tracking.
+GDPR Data Collection Scanner - Static File Analysis Tool
+
+Scans source code files for data collection patterns including forms, inputs,
+API endpoint definitions, cookies, local storage, and analytics tracking.
+
+IMPORTANT - STATIC ANALYSIS ONLY:
+This script analyzes static source code files. It does NOT:
+- Connect to running applications or live systems
+- Execute code or simulate user interactions
+- Make network requests or API calls
+- Access live databases or servers
+- Monitor runtime behavior
+- Require system credentials or access
+
+Analyzes: Source code files (.py, .js, .tsx, .html, .php, .java, etc.)
+Purpose: Identify data collection points in code for GDPR compliance review
 """
 
 import os

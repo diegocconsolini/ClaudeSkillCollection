@@ -1,7 +1,21 @@
 #!/usr/bin/env python3
 """
-GDPR Data Subject Rights (DSR) Implementation Checker
-Verifies implementation of data subject rights endpoints and functionality.
+GDPR Data Subject Rights (DSR) Implementation Checker - Static File Analysis Tool
+
+Scans source code for data subject rights endpoint definitions and implementation patterns
+(access, portability, erasure, rectification, objection, consent management).
+
+IMPORTANT - STATIC ANALYSIS ONLY:
+This script analyzes static source code files. It does NOT:
+- Test live API endpoints or make HTTP requests
+- Execute code or test actual functionality
+- Verify if endpoints work correctly at runtime
+- Connect to running applications or servers
+- Require API keys, credentials, or authentication
+- Monitor live traffic or API usage
+
+Analyzes: Source code files containing API route definitions, endpoint handlers
+Purpose: Verify data subject rights are implemented in code for GDPR compliance
 """
 
 import os

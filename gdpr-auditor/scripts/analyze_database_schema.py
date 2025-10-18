@@ -1,7 +1,21 @@
 #!/usr/bin/env python3
 """
-GDPR Database Schema Analyzer
-Analyzes database schemas for personal data fields and sensitive information.
+GDPR Database Schema Analyzer - Static File Analysis Tool
+
+Analyzes database schema files (SQL DDL, migration scripts, ORM models, JSON schemas)
+for personal data fields and sensitive information.
+
+IMPORTANT - STATIC ANALYSIS ONLY:
+This script analyzes static database schema files. It does NOT:
+- Connect to running databases or database servers
+- Execute queries or access live data
+- Require database credentials or connection strings
+- Monitor database activity or transactions
+- Modify any database or data
+- Access production or development database instances
+
+Analyzes: .sql files (DDL/migrations), .json schema files, ORM model definitions
+Purpose: Identify personal data fields in database schemas for GDPR compliance review
 """
 
 import re

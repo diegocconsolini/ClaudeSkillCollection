@@ -39,16 +39,16 @@ This repository provides high-quality, well-documented security and compliance t
 **Version:** 1.0.0
 **Category:** Data Privacy & Compliance
 
-Comprehensive GDPR compliance auditing skill that analyzes codebases, databases, and systems for EU data protection regulation compliance.
+Comprehensive GDPR compliance auditing plugin that analyzes static code files, database schema files, and configuration files for EU data protection regulation compliance.
 
 **Key Features:**
-- Scans code for personal data collection patterns
-- Analyzes database schemas for sensitive data
-- Verifies data subject rights implementation
-- Audits security measures and encryption
-- Generates detailed compliance reports with specific code references
+- Scans source code files for personal data collection patterns
+- Analyzes database schema files (SQL DDL, migrations) for sensitive data
+- Verifies data subject rights implementation in code
+- Audits security measures and encryption configurations
+- Generates detailed compliance audit reports with specific code references
 - 8 comprehensive reference documents covering GDPR articles
-- 5 automated scanning tools
+- 5 automated scanning tools (work with static files only)
 
 [→ Read GDPR Auditor Documentation](./gdpr-auditor/README.md)
 
