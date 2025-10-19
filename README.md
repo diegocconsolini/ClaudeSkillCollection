@@ -3,8 +3,8 @@
 **A Community Claude Code Plugin Marketplace for Security, Privacy, and Compliance Auditing**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
-[![Plugins](https://img.shields.io/badge/plugins-1-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
+[![Plugins](https://img.shields.io/badge/plugins-2-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
 
 A curated collection of professional, production-ready security and compliance plugins for Claude Code. This is the only marketplace dedicated exclusively to privacy regulations (GDPR, CCPA, HIPAA), security auditing, and compliance automation.
 
@@ -51,6 +51,39 @@ Comprehensive GDPR compliance auditing plugin that analyzes static code files, d
 - 5 automated scanning tools (work with static files only)
 
 [→ Read GDPR Auditor Documentation](./gdpr-auditor/README.md)
+
+### 2. Cybersecurity Policy Generator
+**Status:** Work in Progress (Private Development)
+**Version:** 0.9.0 (Beta)
+**Category:** Security Governance & Compliance
+
+Professional cybersecurity policy document generator using 51 industry-standard templates from SANS and CIS Controls. Creates complete, framework-compliant policy documents customized for your organization in multiple formats.
+
+**Key Features:**
+- 51 professional policy templates (36 SANS + 15 CIS Controls)
+- Interactive workflow using AskUserQuestion for beautiful UX
+- Compliance framework mappings (ISO 27001, SOC 2, NIST CSF, CIS Controls v8, GDPR)
+- Multi-format generation (Markdown, Word, HTML, PDF)
+- 15 security policy categories covering all aspects of InfoSec
+- Organization customization with branding options
+- Production-tested with real company policies generated
+
+**Policy Categories:**
+- Governance (13 policies) - Information Security, Acceptable Use, Password, etc.
+- Identity & Access (8 policies) - Access Control, Authentication, Remote Access
+- Application Security (7 policies) - Secure Development, API Security
+- Compute & Network (10 policies) - Cloud Security, Network Security, Virtualization
+- Data Protection (2 policies) - Data Classification, Data Recovery
+- And 9 more categories covering all security domains
+
+**Use Cases:**
+- Starting a security program (foundational policies)
+- Preparing for compliance audits (ISO 27001, SOC 2, NIST CSF)
+- Updating outdated security policies
+- Creating incident response, data protection, or access control policies
+- Building policy documentation for framework compliance
+
+**Note:** This plugin is currently in private development and will be released publicly once testing is complete. It has been production-tested with Guatemaltek generating 8 foundational policies across all formats.
 
 ---
 
@@ -235,9 +268,17 @@ ClaudeSkillCollection/
 │   └── examples/                   # Usage examples and demos
 │
 ├── private/                        # Private development workspace (submodule)
+│   ├── wip-plugins/                # Work-in-progress plugins
+│   │   └── cybersecurity-policy-generator/  # Policy generator (in development)
+│   │       ├── SKILL.md            # Plugin workflow and instructions
+│   │       ├── README.md           # Plugin documentation
+│   │       ├── plugin.json         # Plugin manifest
+│   │       ├── scripts/            # Policy generation scripts (4 tools)
+│   │       ├── references/         # 320KB policy templates and frameworks
+│   │       ├── output/             # Generated policies (production-tested)
+│   │       └── examples/           # Customization examples
 │   ├── drafts/                     # Draft documentation
 │   ├── research/                   # Research materials
-│   ├── wip-plugins/                # Work-in-progress plugins
 │   ├── test-data/                  # Test datasets
 │   └── notes/                      # Development notes
 │
@@ -344,6 +385,7 @@ Professional audit report with specific findings
 ## Planned Skills (Roadmap)
 
 ### Data Privacy & Security
+- [🔄] **Cybersecurity Policy Generator** - In development (private workspace)
 - [ ] **CCPA Compliance Auditor** - California Consumer Privacy Act
 - [ ] **Security Vulnerability Scanner** - OWASP Top 10 analysis
 - [ ] **API Security Auditor** - REST/GraphQL security review
@@ -513,6 +555,17 @@ Thanks to all contributors and users who help improve these skills!
 ---
 
 ## Changelog
+
+### Version 1.1.0 (2025-10-19)
+- Added Cybersecurity Policy Generator to private development workspace
+  - 51 professional policy templates (SANS + CIS Controls)
+  - 320KB reference data with compliance framework mappings
+  - Interactive AskUserQuestion workflow
+  - Multi-format generation (Markdown, Word, HTML, PDF)
+  - Production-tested with Guatemaltek (8 foundational policies)
+  - Improved SKILL.md with proper skill delegation architecture
+- Updated repository structure documentation
+- Enhanced marketplace capabilities
 
 ### Version 1.0.0 (2025-10-18)
 - Initial release
