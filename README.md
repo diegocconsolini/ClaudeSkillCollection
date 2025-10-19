@@ -1,249 +1,223 @@
 # Security & Compliance Marketplace
 
-**A Community Claude Code Plugin Marketplace for Security, Privacy, and Compliance Auditing**
+**Professional Security and Compliance Plugins for Claude Code**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
 [![Plugins](https://img.shields.io/badge/plugins-2-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
 
-A curated collection of professional, production-ready security and compliance plugins for Claude Code. This is the only marketplace dedicated exclusively to privacy regulations (GDPR, CCPA, HIPAA), security auditing, and compliance automation.
+A curated collection of production-ready security and compliance plugins for Claude Code. The only marketplace dedicated exclusively to privacy regulations, security auditing, and compliance automation.
 
-## 🚀 Quick Install
-
-**Recommended: Install via Plugin Marketplace**
+## 🚀 Quick Start
 
 ```bash
+# Add marketplace to Claude Code
 /plugin marketplace add diegocconsolini/ClaudeSkillCollection
+
+# Install plugins
 /plugin install gdpr-auditor@security-compliance-marketplace
 /plugin install cybersecurity-policy-generator@security-compliance-marketplace
 ```
 
-**Alternative: Traditional Skills Installation** (see below)
+---
+
+## Available Plugins
+
+### 1. GDPR Auditor
+**Production Ready** • **v1.0.0** • **Data Privacy & Compliance**
+
+Comprehensive GDPR compliance auditing plugin that analyzes static code files, database schemas, and configurations for EU data protection regulation compliance.
+
+**Key Features:**
+- Scans source code for personal data collection patterns
+- Analyzes database schema files (SQL DDL, migrations) for sensitive data
+- Verifies data subject rights implementation
+- Audits security measures and encryption configurations
+- Generates detailed compliance audit reports
+- 8 comprehensive reference documents covering GDPR articles
+- 5 automated scanning tools (static file analysis only)
+
+**Use Cases:**
+- Pre-launch GDPR compliance checks
+- Regular compliance audits and monitoring
+- Privacy policy development and validation
+- Data protection impact assessments (DPIA)
+- Third-party vendor security assessments
+- Security review preparation
+
+**Who Should Use:**
+- Web application developers
+- DevOps and infrastructure teams
+- Privacy officers and DPOs
+- Security consultants and auditors
+- Startup founders preparing for EU markets
+- Legal and compliance teams
+
+[→ View GDPR Auditor Documentation](./gdpr-auditor/README.md)
 
 ---
 
-## Overview
-
-This repository provides high-quality, well-documented security and compliance tools that you can install in Claude Code to unlock specialized capabilities. Each plugin is designed following best practices with comprehensive reference materials, automated tools, and clear workflows.
-
-**What Makes This Different:**
-- ✅ **Community marketplace dedicated to security & compliance**
-- ✅ **Production-tested** on real-world applications
-- ✅ **Verified against authoritative sources** (EUR-Lex, ICO, OWASP)
-- ✅ **Defensive security only** (ethical focus)
-- ✅ **Professional documentation** and support
-
-## Available Skills
-
-### 1. GDPR Auditor
-**Status:** Production Ready
-**Version:** 1.0.0
-**Category:** Data Privacy & Compliance
-
-Comprehensive GDPR compliance auditing plugin that analyzes static code files, database schema files, and configuration files for EU data protection regulation compliance.
-
-**Key Features:**
-- Scans source code files for personal data collection patterns
-- Analyzes database schema files (SQL DDL, migrations) for sensitive data
-- Verifies data subject rights implementation in code
-- Audits security measures and encryption configurations
-- Generates detailed compliance audit reports with specific code references
-- 8 comprehensive reference documents covering GDPR articles
-- 5 automated scanning tools (work with static files only)
-
-[→ Read GDPR Auditor Documentation](./gdpr-auditor/README.md)
-
 ### 2. Cybersecurity Policy Generator
-**Status:** Production Ready
-**Version:** 1.0.0
-**Category:** Security Governance & Compliance
+**Production Ready** • **v1.0.0** • **Security Governance & Compliance**
 
-Professional cybersecurity policy document generator using 51 industry-standard templates from SANS and CIS Controls. Creates complete, framework-compliant policy documents customized for your organization in multiple formats.
+Professional cybersecurity policy document generator using 51 industry-standard templates from SANS and CIS Controls. Creates complete, framework-compliant policy documents customized for your organization.
 
 **Key Features:**
 - 51 professional policy templates (36 SANS + 15 CIS Controls)
-- Interactive workflow using AskUserQuestion for beautiful UX
+- Interactive AskUserQuestion workflow with beautiful UI
 - Compliance framework mappings (ISO 27001, SOC 2, NIST CSF, CIS Controls v8, GDPR)
 - Multi-format generation (Markdown, Word, HTML, PDF)
-- 15 security policy categories covering all aspects of InfoSec
+- 15 security policy categories covering all InfoSec domains
 - Organization customization with branding options
-- Production-tested with real company policies generated
+- 4 automated policy generation scripts
+- 320KB reference data with compliance mappings
 
 **Policy Categories:**
-- Governance (13 policies) - Information Security, Acceptable Use, Password, etc.
-- Identity & Access (8 policies) - Access Control, Authentication, Remote Access
-- Application Security (7 policies) - Secure Development, API Security
-- Compute & Network (10 policies) - Cloud Security, Network Security, Virtualization
-- Data Protection (2 policies) - Data Classification, Data Recovery
-- And 9 more categories covering all security domains
+- **Governance** (13 policies) - Information Security, Acceptable Use, Password Management
+- **Identity & Access** (8 policies) - Access Control, Authentication, Remote Access
+- **Application Security** (7 policies) - Secure Development, API Security, Code Review
+- **Compute & Network** (10 policies) - Cloud Security, Network Security, Virtualization
+- **Data Protection** (2 policies) - Data Classification, Data Recovery & Backup
+- **Operations, Resilience, Risk, and more** (11 policies)
 
 **Use Cases:**
-- Starting a security program (foundational policies)
-- Preparing for compliance audits (ISO 27001, SOC 2, NIST CSF)
-- Updating outdated security policies
+- Starting a new security program (foundational policies)
+- Preparing for compliance audits (ISO 27001, SOC 2, NIST CSF, CIS Controls)
+- Updating outdated or missing security policies
 - Creating incident response, data protection, or access control policies
-- Building policy documentation for framework compliance
+- Building comprehensive policy documentation for framework compliance
+- Meeting insurance or vendor security requirements
 
-[→ Read Cybersecurity Policy Generator Documentation](./cybersecurity-policy-generator/README.md)
+**Who Should Use:**
+- CISOs and security leaders starting or improving security programs
+- Compliance officers preparing for audits
+- Startups establishing security governance
+- IT managers needing standardized policies
+- Consultants creating client security documentation
+- Organizations pursuing ISO 27001, SOC 2, or NIST compliance
+
+[→ View Cybersecurity Policy Generator Documentation](./cybersecurity-policy-generator/README.md)
 
 ---
 
-## Quick Start
+## Installation
 
 ### Prerequisites
 
-- **Claude Code** (latest version with plugin support)
-- **Python 3.8+** (for automated scanning tools)
-- **Git** (for installation)
+- **Claude Code** (latest version recommended)
+- **Python 3.8+** (for automated tools and scripts)
+- **Git** (for repository cloning)
 
-### Installation Options
-
-#### ⭐ Option 1: Plugin Marketplace (Recommended)
-
-The easiest way to install plugins from this marketplace:
+### Option 1: Plugin Marketplace (Recommended)
 
 ```bash
 # Add the Security & Compliance Marketplace
 /plugin marketplace add diegocconsolini/ClaudeSkillCollection
 
 # Browse available plugins
-/plugin
+/plugin list
 
-# Install GDPR Auditor
+# Install specific plugins
 /plugin install gdpr-auditor@security-compliance-marketplace
+/plugin install cybersecurity-policy-generator@security-compliance-marketplace
+
+# Update installed plugins
+/plugin update
 ```
 
 **Benefits:**
 - ✅ One-command installation
-- ✅ Automatic updates via `/plugin update`
+- ✅ Automatic updates
 - ✅ Easy plugin management
-- ✅ Access to all marketplace plugins
+- ✅ Version tracking
 
-#### Option 2: Traditional Skills Installation
-
-For Claude Code versions without plugin marketplace support:
+### Option 2: Manual Installation
 
 ```bash
-# Navigate to your Claude skills directory
+# Navigate to Claude skills directory
 cd ~/.claude/skills/
 
-# Clone the repository
+# Clone repository
 git clone https://github.com/diegocconsolini/ClaudeSkillCollection.git
 
-# Symlink desired skills
+# Symlink desired plugins
 ln -s ClaudeSkillCollection/gdpr-auditor ./gdpr-auditor
+ln -s ClaudeSkillCollection/cybersecurity-policy-generator ./cybersecurity-policy-generator
 
 # Restart Claude Code
 ```
 
-#### Option 3: Individual Plugin Download
+### Option 3: Direct Download
 
 ```bash
-# Navigate to your Claude plugins/skills directory
-cd ~/.claude/plugins/  # or ~/.claude/skills/
-
 # Clone and extract specific plugin
+cd ~/.claude/plugins/
 git clone https://github.com/diegocconsolini/ClaudeSkillCollection.git temp
 cp -r temp/gdpr-auditor ./
+cp -r temp/cybersecurity-policy-generator ./
 rm -rf temp
-
-# Restart Claude Code
 ```
 
 ### Verification
 
-After installation, verify the plugin is loaded:
+Test that plugins are loaded:
 
+**For GDPR Auditor:**
 ```
 "Can you help me audit my application for GDPR compliance?"
 ```
 
-You should see: **"The gdpr-auditor plugin is running..."**
+**For Policy Generator:**
+```
+"Generate cybersecurity policies for my organization"
+```
 
-[→ Full Installation Guide](./docs/installation.md) | [→ Marketplace Guide](./MARKETPLACE.md)
+[→ Full Installation Guide](./docs/installation.md)
 
 ---
 
-## 📐 Skill Design Principles
+## How Plugins Work
 
-**Core Philosophy:** Claude skills are designed to help Claude **generate deliverables**, not to perform live analysis or real-time monitoring.
+Claude Code plugins are specialized prompts with supporting materials that give Claude domain expertise:
 
-### ✅ Claude Skills ARE:
+1. **Automatic Loading** - Mention the plugin's domain or use explicit commands
+2. **Context Injection** - Claude loads plugin knowledge and workflows
+3. **Tool Access** - Claude uses plugin-specific scripts and reference materials
+4. **Guided Workflow** - Claude follows systematic methodology for thorough analysis
 
-- **Document Generators** - Create specific file types (reports, configs, documentation)
-- **Workflow Guides** - Step-by-step instructions for systematic tasks
-- **Template Systems** - Reusable patterns and boilerplates
-- **Format Converters** - Transform data into structured deliverables
-- **Code Libraries** - Manipulate file structures and generate code
+### Example: GDPR Auditor Workflow
 
-**Examples:**
-- ✅ GDPR Auditor: Guides Claude to generate compliance reports by analyzing code
-- ✅ Privacy Policy Generator: Creates policy documents from data practices
-- ✅ Security Checklist: Produces security assessment checklists
-
-### ❌ Claude Skills are NOT:
-
-- **Analysis Tools** - That scan live systems or running applications
-- **External Services** - That require APIs or third-party integrations
-- **Real-time Monitors** - That need continuous data streams
-- **Subjective Assessors** - That make judgments without clear criteria
-- **Simple Calculators** - That just return a single number
-
-**Anti-patterns:**
-- ❌ "Live vulnerability scanner" - Requires real-time system access
-- ❌ "API health monitor" - Needs continuous external service calls
-- ❌ "Performance analyzer" - Requires runtime metrics
-- ❌ "Code quality scorer" - Too subjective without clear deliverable
-
-### Design Guidelines
-
-**When creating a skill, ask:**
-
-1. **Does it produce a tangible deliverable?** (report, document, config file, etc.)
-2. **Can it work with static code/files?** (no live system access required)
-3. **Does it follow a systematic workflow?** (clear step-by-step process)
-4. **Is it based on objective criteria?** (regulations, standards, best practices)
-5. **Does it include reference materials?** (authoritative sources, templates)
-
-**Good Skill Pattern:**
 ```
-Input: Codebase files, configuration files, documentation
-Process: Systematic analysis using reference materials
-Output: Structured report/document/checklist with specific findings
+User: "Audit my app for GDPR compliance"
+  ↓
+Claude loads gdpr-auditor plugin
+  ↓
+Plugin guides Claude through:
+  1. Identify scope and personal data types
+  2. Run automated code scanners
+  3. Consult GDPR reference materials
+  4. Analyze code and configurations
+  5. Generate compliance audit report
+  ↓
+Professional audit report with specific findings
 ```
 
----
+### Example: Policy Generator Workflow
 
-## Skill Development Standards
-
-All skills in this collection adhere to these quality standards:
-
-### Documentation
-- ✅ Comprehensive README with installation instructions
-- ✅ Clear usage examples and workflows
-- ✅ Technical specifications and requirements
-- ✅ Troubleshooting guide
-- ✅ Reference materials from authoritative sources
-
-### Code Quality
-- ✅ Production-ready Python scripts with error handling
-- ✅ Type hints and docstrings
-- ✅ Defensive security practices (no malicious code)
-- ✅ Tested on real-world projects
-- ✅ Follows Claude Code plugin best practices
-
-### Accuracy
-- ✅ Information verified against primary sources
-- ✅ No hallucinated facts or fake examples
-- ✅ Regular updates to reflect current standards
-- ✅ Clear version tracking
-
-### Design Compliance
-- ✅ Produces tangible deliverables (reports, documents, configs)
-- ✅ Works with static files (no live system scanning)
-- ✅ Based on objective criteria (regulations, standards)
-- ✅ Includes reference materials and templates
-- ✅ Follows systematic workflows
+```
+User: "Generate security policies for my startup"
+  ↓
+Claude loads cybersecurity-policy-generator plugin
+  ↓
+Plugin guides Claude through:
+  1. Ask policy quantity and selection (AskUserQuestion UI)
+  2. Collect organization information (interactive)
+  3. Select compliance frameworks and branding
+  4. Generate policies in requested formats
+  5. Provide organized output with summaries
+  ↓
+Complete policy documents ready for review
+```
 
 ---
 
@@ -256,337 +230,221 @@ ClaudeSkillCollection/
 ├── CONTRIBUTING.md                 # Contribution guidelines
 ├── MARKETPLACE.md                  # Marketplace documentation
 ├── CHANGELOG.md                    # Version history
+├── QUICKSTART.md                   # Quick start guide
 │
 ├── .claude-plugin/                 # Marketplace configuration
-│   └── marketplace.json            # Plugin marketplace manifest
+│   └── marketplace.json
 │
 ├── gdpr-auditor/                   # GDPR Compliance Auditor Plugin
-│   ├── README.md                   # Plugin documentation
-│   ├── SKILL.md                    # Claude agent prompt
-│   ├── plugin.json                 # Plugin manifest
-│   ├── scripts/                    # Automated scanning tools (5 scripts)
-│   ├── references/                 # GDPR reference materials (8 docs)
-│   └── examples/                   # Usage examples and demos
+│   ├── README.md
+│   ├── SKILL.md
+│   ├── plugin.json
+│   ├── scripts/                    # 5 automated scanning tools
+│   ├── references/                 # 8 GDPR reference documents
+│   └── examples/
 │
 ├── cybersecurity-policy-generator/ # Cybersecurity Policy Generator Plugin
-│   ├── README.md                   # Plugin documentation
-│   ├── SKILL.md                    # Plugin workflow and instructions
-│   ├── plugin.json                 # Plugin manifest
-│   ├── scripts/                    # Policy generation scripts (4 tools)
-│   ├── references/                 # 320KB policy templates and frameworks
-│   ├── output/                     # Output directory for generated policies
-│   └── examples/                   # Customization examples
+│   ├── README.md
+│   ├── SKILL.md
+│   ├── plugin.json
+│   ├── scripts/                    # 4 policy generation scripts
+│   ├── references/                 # 320KB policy templates & mappings
+│   ├── output/                     # Generated policies directory
+│   └── examples/
 │
-├── private/                        # Private development workspace (submodule)
-│   ├── drafts/                     # Draft documentation
-│   ├── research/                   # Research materials
-│   ├── wip-plugins/                # Work-in-progress plugins
-│   ├── test-data/                  # Test datasets
-│   └── notes/                      # Development notes
+├── docs/                           # Documentation
+│   └── installation.md
 │
-│   ⚠️  This is a git submodule pointing to a PRIVATE repository
-│       Only accessible to repository owner and collaborators
-│       Public visitors see the reference but cannot access contents
-│
-├── docs/                           # Global documentation
-│   └── installation.md             # Detailed installation guide
-│
-└── .github/                        # GitHub-specific files
+└── .github/                        # GitHub templates
     └── ISSUE_TEMPLATE/
 ```
 
 ---
 
-## 🔒 Private Development Workspace
+## Quality Standards
 
-This repository includes a **private submodule** for work-in-progress plugins and development materials.
+All plugins in this marketplace meet professional quality standards:
 
-### What's in `private/`?
+### Documentation
+- ✅ Comprehensive README with clear instructions
+- ✅ Detailed usage examples and workflows
+- ✅ Technical specifications and requirements
+- ✅ Reference materials from authoritative sources
 
-The `private/` directory is a **git submodule** pointing to a separate private repository:
-- **Repository:** [ClaudeSkillCollection-Private](https://github.com/diegocconsolini/ClaudeSkillCollection-Private) (private)
-- **Purpose:** Development workspace for unreleased plugins
-- **Access:** Repository owner and invited collaborators only
+### Code Quality
+- ✅ Production-ready Python scripts with error handling
+- ✅ Type hints and comprehensive docstrings
+- ✅ Defensive security practices only
+- ✅ Tested on real-world projects
+- ✅ Follows Claude Code plugin best practices
 
-**Contents:**
-- `drafts/` - Draft documentation and ideas
-- `research/` - Research materials and references
-- `wip-plugins/` - Work-in-progress plugins (not ready for release)
-- `test-data/` - Test datasets (sanitized)
-- `notes/` - Development notes and planning
+### Accuracy & Compliance
+- ✅ Information verified against primary sources
+  - **GDPR Auditor:** EUR-Lex official GDPR text, ICO guidance, EDPB guidelines
+  - **Policy Generator:** SANS policy templates, CIS Controls v8, ISO 27001, NIST CSF
+- ✅ No hallucinated facts or unverified claims
+- ✅ Regular updates to reflect current standards
+- ✅ Clear version tracking and changelog
 
-### How to Access (For Collaborators)
-
-If you have access to the private repository:
-
-```bash
-# Clone with submodule
-git clone --recurse-submodules https://github.com/diegocconsolini/ClaudeSkillCollection.git
-
-# Or if already cloned
-git submodule init
-git submodule update
-```
-
-### For Public Users
-
-Public visitors will see the `private/` submodule reference in the repository, but **cannot access** the contents. This is intentional - it allows development work to happen privately before plugins are ready for public release.
+### Plugin Design Principles
+- ✅ Produces tangible deliverables (reports, documents, policies)
+- ✅ Works with static files (no live system scanning)
+- ✅ Based on objective criteria (regulations, standards, frameworks)
+- ✅ Includes comprehensive reference materials
+- ✅ Follows systematic, reproducible workflows
 
 ---
 
-## How Skills Work
+## Roadmap
 
-Claude Code skills are specialized prompts with supporting materials that give Claude domain expertise. When you invoke a skill:
+### Upcoming Plugins
 
-1. **Automatic Loading:** Mention the skill's domain (e.g., "GDPR compliance") or explicitly call it
-2. **Context Injection:** Claude loads the skill's knowledge and workflow instructions
-3. **Tool Access:** Claude can use skill-specific scripts and reference materials
-4. **Guided Workflow:** Claude follows the skill's methodology for thorough analysis
+**Data Privacy & Security:**
+- [ ] **CCPA Compliance Auditor** - California Consumer Privacy Act compliance
+- [ ] **HIPAA Privacy Auditor** - Healthcare privacy and security compliance
+- [ ] **PCI DSS Auditor** - Payment Card Industry security standards
 
-### Example: GDPR Auditor Workflow
+**Security Assessment:**
+- [ ] **OWASP Top 10 Scanner** - Web application security vulnerability analysis
+- [ ] **API Security Auditor** - REST/GraphQL security assessment
+- [ ] **Container Security Scanner** - Docker and Kubernetes security audit
 
-```
-User: "Audit my app for GDPR compliance"
-  ↓
-Claude loads gdpr-auditor skill
-  ↓
-Skill guides Claude through:
-  1. Identify scope and data types
-  2. Run automated scanners
-  3. Consult GDPR reference materials
-  4. Analyze code and configurations
-  5. Generate compliance report
-  ↓
-Professional audit report with specific findings
-```
+**Governance & Documentation:**
+- [ ] **Privacy Policy Generator** - GDPR, CCPA-compliant privacy policies
+- [ ] **Security Documentation Generator** - Technical security documentation
+- [ ] **Compliance Evidence Generator** - Audit evidence and attestations
 
----
+**Code Quality:**
+- [ ] **Accessibility Auditor** - WCAG 2.1 AA/AAA compliance checking
+- [ ] **Infrastructure as Code Reviewer** - Terraform/CloudFormation security review
 
-## Use Cases by Skill
-
-### GDPR Auditor
-
-**Best For:**
-- Pre-launch compliance checks
-- Regular compliance audits
-- Privacy policy development
-- Data protection impact assessments (DPIA)
-- Security reviews
-- Third-party vendor assessments
-
-**Who Should Use:**
-- Web application developers
-- DevOps teams
-- Privacy officers
-- Security consultants
-- Startup founders
-- Legal/compliance teams
-
----
-
-## Planned Skills (Roadmap)
-
-### Data Privacy & Security
-- [ ] **CCPA Compliance Auditor** - California Consumer Privacy Act
-- [ ] **Security Vulnerability Scanner** - OWASP Top 10 analysis
-- [ ] **API Security Auditor** - REST/GraphQL security review
-
-### Code Quality & Architecture
-- [ ] **Accessibility Auditor** - WCAG 2.1 compliance
-- [ ] **Performance Analyzer** - Bottleneck detection
-- [ ] **Code Documentation Generator** - Auto-generate docs
-
-### DevOps & Infrastructure
-- [ ] **Infrastructure as Code Reviewer** - Terraform/CloudFormation
-- [ ] **Container Security Scanner** - Docker/K8s security
-- [ ] **CI/CD Pipeline Optimizer** - Build optimization
-
-### Specialized Domains
-- [ ] **Healthcare Compliance (HIPAA)** - US healthcare privacy
-- [ ] **Financial Services (PCI DSS)** - Payment card security
-- [ ] **AI Ethics Reviewer** - AI bias and fairness analysis
-
-Vote for next skills or suggest new ones in [Issues](https://github.com/diegocconsolini/ClaudeSkillCollection/issues)!
+[Vote for next plugins](https://github.com/diegocconsolini/ClaudeSkillCollection/issues) or suggest new ones!
 
 ---
 
 ## Contributing
 
-We welcome contributions! Whether you want to:
-- Report a bug or issue
-- Improve existing skills
-- Create a new skill
-- Fix documentation
+We welcome contributions from the security and compliance community!
+
+**Ways to Contribute:**
+- Report bugs or suggest improvements
+- Enhance existing plugins
+- Create new plugins
+- Improve documentation
 - Share usage examples
 
-Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+**Contribution Process:**
+1. Review [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines
+2. Check existing issues and pull requests
+3. Follow plugin quality standards
+4. Submit pull request with clear description
 
-### Skill Submission Checklist
-
-To submit a new skill, ensure:
+**Plugin Submission Checklist:**
 - [ ] Comprehensive SKILL.md with clear workflow
-- [ ] Supporting scripts/tools are production-ready
+- [ ] Production-ready scripts with error handling
 - [ ] Reference materials from authoritative sources
-- [ ] README with installation and usage instructions
+- [ ] Complete README with installation and usage guide
 - [ ] Working examples and test cases
-- [ ] Follows repository standards
-- [ ] No malicious code (defensive security only)
+- [ ] Follows defensive security principles
+- [ ] No malicious code or unethical use cases
 
 ---
 
-## Quality Assurance
+## Support
 
-### Testing
-Each skill is tested on real-world projects before release. Test results are documented in the skill's `tests/` directory.
+**Getting Help:**
+- **Documentation:** Check plugin README files and docs/
+- **Issues:** [Open a GitHub issue](https://github.com/diegocconsolini/ClaudeSkillCollection/issues)
+- **Discussions:** [Join GitHub Discussions](https://github.com/diegocconsolini/ClaudeSkillCollection/discussions)
 
-### Accuracy
-All reference materials are verified against primary sources:
-- **GDPR Auditor:** EUR-Lex official GDPR text, ICO guidance
-- Future skills will cite their authoritative sources
+**Reporting Issues:**
 
-### Maintenance
-Skills are actively maintained with:
-- Regular updates for new regulations/standards
-- Bug fixes and improvements
-- Community feedback integration
-- Version tracking
-
----
-
-## 📦 Plugin Marketplace
-
-This repository is also a **Claude Code Plugin Marketplace**! You can add it to your Claude Code instance to browse and install plugins easily.
-
-### Why Use the Marketplace?
-
-**Easy Installation:**
-- One-command plugin installation
-- Automatic plugin discovery
-- Centralized management
-
-**Automatic Updates:**
-- Keep plugins up-to-date with `/plugin update`
-- Get notified of new releases
-- Seamless version management
-
-**Professional Quality:**
-- Curated, production-ready plugins only
-- Verified against authoritative sources
-- Regular security audits
-- Comprehensive documentation
-
-### Marketplace Features
-
-- **Specialization:** Community marketplace focused on security, privacy, and compliance
-- **Quality Assurance:** All plugins production-tested
-- **Ethical Focus:** Defensive security only (no offensive tools)
-- **Professional Support:** Dedicated security expertise
-- **Regular Updates:** Active maintenance and improvements
-
-[→ Full Marketplace Documentation](./MARKETPLACE.md)
-
----
-
-## Support & Community
-
-### Getting Help
-- **Documentation:** Check the skill's README and docs/
-- **Issues:** Open a GitHub issue with details
-- **Discussions:** Join GitHub Discussions for Q&A
-
-### Reporting Issues
-When reporting issues, include:
+Please include:
 1. Claude Code version
-2. Skill name and version
+2. Plugin name and version
 3. Steps to reproduce
 4. Expected vs actual behavior
-5. Relevant code snippets (if applicable)
+5. Relevant code snippets (sanitized)
 
 ---
 
 ## License
 
-This project is licensed under the **MIT License** - see [LICENSE](./LICENSE) file for details.
+MIT License - See [LICENSE](./LICENSE) for details
 
-### What This Means
-✅ Free to use commercially
-✅ Modify and distribute
-✅ Private use
-❗ No warranty provided
-❗ Include original license and copyright
+**What this means:**
+- ✅ Free for commercial use
+- ✅ Modify and distribute freely
+- ✅ Private use allowed
+- ⚠️ No warranty provided
+- ⚠️ Must include original license and copyright notice
 
 ---
 
 ## Disclaimer
 
-### Scope of Skills
-These skills are **tools to assist analysis** - they do not replace professional advice:
-- **Legal Compliance:** Consult qualified legal counsel for compliance matters
-- **Security Audits:** Professional security audits still recommended
-- **Privacy Assessments:** Work with certified privacy professionals
+**These plugins are analysis tools** - they do not replace professional advice:
 
-### Accuracy
-While we strive for accuracy:
-- Skills provide guidance based on current information
+- **Legal Compliance:** Consult qualified legal counsel for compliance matters
+- **Security Audits:** Professional security assessments still recommended
+- **Privacy Assessments:** Work with certified privacy professionals
+- **Framework Certification:** Plugins support but don't guarantee certification
+
+**Accuracy:**
+- Plugins provide guidance based on current information
 - Regulations and standards change over time
 - Always verify findings with authoritative sources
-- No liability for errors or omissions
+- No liability for errors, omissions, or consequences of use
 
-### Defensive Security Only
-All tools are designed for **defensive security purposes**:
-- Identifying vulnerabilities to fix them
-- Improving compliance and security posture
-- NOT for exploitation or malicious use
-
----
-
-## Acknowledgments
-
-### Inspiration
-This collection was inspired by the Claude Code skills system and the need for high-quality, domain-specific analysis tools.
-
-### Data Sources
-- **GDPR:** EUR-Lex, ICO, EDPB guidelines
-- **Security Standards:** OWASP, NIST, CIS Benchmarks
-- **Best Practices:** Industry-standard frameworks and methodologies
-
-### Community
-Thanks to all contributors and users who help improve these skills!
+**Ethical Use Only:**
+All plugins are designed for **defensive security purposes**:
+- ✅ Identifying vulnerabilities to remediate them
+- ✅ Improving compliance and security posture
+- ✅ Protecting user privacy and data
+- ❌ NOT for exploitation, malicious use, or unethical purposes
 
 ---
 
 ## Changelog
 
 ### Version 1.1.0 (2025-10-19)
-- **Released Cybersecurity Policy Generator plugin** (v1.0.0)
+**New Plugin Release:**
+- Released **Cybersecurity Policy Generator** v1.0.0
   - 51 professional policy templates (SANS + CIS Controls)
-  - 320KB reference data with compliance framework mappings (ISO 27001, SOC 2, NIST CSF, CIS Controls v8, GDPR)
-  - Interactive AskUserQuestion workflow for beautiful UX
+  - 320KB reference data with compliance framework mappings
+  - Interactive AskUserQuestion workflow
   - Multi-format generation (Markdown, Word, HTML, PDF)
-  - 15 security policy categories covering all InfoSec domains
-  - Production-tested with real organization (8 foundational policies generated)
-  - Proper skill delegation architecture using Task tool
-  - 4 automated policy generation scripts
-  - Comprehensive reference materials and examples
-- Updated repository structure with second public plugin
+  - 15 security policy categories
+  - Production-tested with real organization
+
+**Improvements:**
 - Enhanced marketplace with security governance capabilities
+- Updated repository structure and documentation
+- Improved installation instructions
 
 ### Version 1.0.0 (2025-10-18)
-- Initial release
-- GDPR Auditor skill v1.0.0
-  - 8 comprehensive reference documents
-  - 5 automated scanning tools
-  - Complete audit workflow
-  - Tested on real-world applications
+**Initial Release:**
+- Released **GDPR Auditor** v1.0.0
+  - 8 comprehensive GDPR reference documents
+  - 5 automated static code scanning tools
+  - Complete compliance audit workflow
+  - Production-tested on real applications
 
 ---
 
-## Contact
+## Acknowledgments
 
-- **Issues:** [GitHub Issues](https://github.com/diegocconsolini/ClaudeSkillCollection/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/diegocconsolini/ClaudeSkillCollection/discussions)
-- **Email:** your.email@example.com
+**Inspiration:**
+This marketplace was created to provide high-quality, domain-specific security and compliance tools for the Claude Code ecosystem.
+
+**Data Sources:**
+- **GDPR Auditor:** EUR-Lex (Official EU Law), ICO Guidance, EDPB Guidelines
+- **Policy Generator:** SANS Institute Policy Templates, CIS Controls v8, ISO 27001, NIST Cybersecurity Framework, SOC 2 Trust Service Criteria
+- **Best Practices:** OWASP, NIST, CIS Benchmarks, industry-standard frameworks
+
+**Community:**
+Thanks to all contributors, testers, and users who help improve these plugins!
 
 ---
 
-**Claude Skills Collection** - Empowering Claude Code with specialized domain expertise.
+**Security & Compliance Marketplace** - Professional plugins for Claude Code
