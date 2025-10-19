@@ -1,0 +1,51 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "incident-response-playbook-creator",
+  "version": "1.0.0",
+  "description": "Generate comprehensive incident response playbooks from authoritative templates (NIST SP 800-61r3, CISA). Creates customized IR documentation for 8 scenarios including ransomware, data breach, and AI/ML security incidents with GDPR/HIPAA compliance.",
+  "author": {
+    "name": "Diego Consolini",
+    "email": "diego@diegocon.nl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection-Private/tree/main/wip-plugins/incident-response-playbook-creator",
+  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection-Private",
+  "category": "security",
+  "keywords": [
+    "incident-response",
+    "playbook",
+    "nist-800-61",
+    "cisa",
+    "ransomware",
+    "data-breach",
+    "gdpr-notification",
+    "hipaa-breach",
+    "ai-security",
+    "supply-chain-security",
+    "cloud-security",
+    "incident-management",
+    "security-operations",
+    "soc",
+    "csirt"
+  ],
+  "requirements": {
+    "python": ">=3.8",
+    "dependencies": [
+      "jinja2>=3.0.0",
+      "pyyaml>=6.0",
+      "pandas>=1.3.0",
+      "openpyxl>=3.0.0"
+    ]
+  },
+  "agents": [
+    {
+      "name": "incident-response-playbook-creator",
+      "description": "Incident response playbook generator that creates customized IR documentation from NIST SP 800-61r3 templates with GDPR/HIPAA compliance",
+      "prompt": "./SKILL.md"
+    }
+  ],
+  "scripts": {
+    "browse": "python3 scripts/browse_scenarios.py",
+    "generate": "python3 scripts/generate_playbook_markdown.py"
+  }
+}

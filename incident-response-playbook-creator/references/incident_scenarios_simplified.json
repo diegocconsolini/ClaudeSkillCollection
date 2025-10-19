@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "source": "NIST SP 800-61r3 (April 2025)",
+    "version": "1.0.0",
+    "last_updated": "2025-10-19",
+    "description": "Incident response scenarios - simplified for testing"
+  },
+  "scenarios": [
+    {
+      "id": "ransomware",
+      "name": "Ransomware Attack",
+      "category": "malware",
+      "severity": "critical",
+      "description": "Ransomware deployment preventing system use and potentially causing data breaches",
+      "nist_example": "Attacker deploying ransomware to prevent use of systems and cause data breaches by copying files",
+      "indicators": {
+        "technical": [
+          "Files renamed with extensions: .locked, .crypto, .enc",
+          "Ransom notes: HELP_DECRYPT, README files",
+          "Volume Shadow Copies deleted",
+          "Unusual network traffic to C2 servers"
+        ],
+        "behavioral": [
+          "Users cannot open previously accessible files",
+          "Desktop wallpaper changed to ransom message",
+          "Shared drives inaccessible"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-09: Monitor endpoint activity for ransomware behavior",
+          "DE.CM-01: Monitor network for C2 communication"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze alerts for ransomware indicators",
+          "DE.AE-04: Determine scope and affected systems"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Validate ransomware detection",
+          "Identify patient zero and initial infection vector"
+        ],
+        "containment": [
+          "Isolate affected systems from network",
+          "Disable compromised accounts",
+          "Block C2 domains at firewall"
+        ],
+        "eradication": [
+          "Remove ransomware from systems",
+          "Patch vulnerabilities exploited",
+          "Reset all potentially compromised credentials"
+        ]
+      },
+      "recovery_actions": [
+        "Restore systems from clean backups",
+        "Verify backup integrity before restoration",
+        "Implement enhanced monitoring"
+      ],
+      "communication_requirements": {
+        "internal": ["Executive leadership", "IT team", "Legal"],
+        "external": ["Law enforcement if payment considered", "Cyber insurance"],
+        "public": ["Customer notification if data exfiltrated"]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Overall response coordination",
+        "IT Security: Technical containment and eradication",
+        "Legal: Payment decision guidance, regulatory compliance",
+        "Communications: Internal and external messaging"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "Yes, if personal data exfiltrated",
+        "article_33_timeline": "72 hours to supervisory authority",
+        "article_34_required": "If high risk to individuals",
+        "risk_factors": ["Data encryption affecting availability", "Potential data exfiltration"]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "Yes, if PHI encrypted without HIPAA-compliant encryption",
+        "notification_timeline": "60 days from discovery",
+        "risk_assessment_factors": ["PHI encryption status", "Evidence of exfiltration"]
+      }
+    },
+    {
+      "id": "data_breach",
+      "name": "Data Breach / Exfiltration",
+      "category": "data-breach",
+      "severity": "critical",
+      "description": "Unauthorized access and exfiltration of sensitive data",
+      "nist_example": "Attacker gaining unauthorized access to databases containing personal information",
+      "indicators": {
+        "technical": [
+          "Unusual database queries or exports",
+          "Large outbound data transfers",
+          "Access from unauthorized IP addresses",
+          "Failed authentication followed by success"
+        ],
+        "behavioral": [
+          "Off-hours database access",
+          "Access to databases outside normal job function",
+          "Multiple users reporting account compromises"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-03: Monitor user activity for anomalies",
+          "DE.CM-01: Monitor network for data exfiltration"
+        ],
+        "analysis": [
+          "DE.AE-03: Correlate multiple data sources",
+          "DE.AE-08: Determine data types and volumes affected"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Identify affected data types and volume",
+          "Determine unauthorized access method"
+        ],
+        "containment": [
+          "Revoke compromised credentials",
+          "Block attacker IP addresses",
+          "Implement additional access controls"
+        ],
+        "investigation": [
+          "Forensic analysis of affected systems",
+          "Review access logs for full timeline",
+          "Identify all data accessed or exfiltrated"
+        ]
+      },
+      "recovery_actions": [
+        "Restore proper access controls",
+        "Implement enhanced monitoring on affected systems",
+        "Review and update data classification"
+      ],
+      "communication_requirements": {
+        "internal": ["Executive leadership", "Legal", "Privacy Officer"],
+        "external": ["Regulatory authorities", "Affected individuals"],
+        "public": ["Media statement if public disclosure required"]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Response coordination",
+        "Forensics Team: Investigation and evidence collection",
+        "Legal/Privacy: Regulatory notification and compliance",
+        "Communications: Breach notification letters"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "Yes",
+        "article_33_timeline": "72 hours to supervisory authority",
+        "article_34_required": "Depends on data sensitivity and risk",
+        "risk_factors": ["Type of personal data", "Volume of records", "Data sensitivity"]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "Yes, unauthorized disclosure of PHI",
+        "notification_timeline": "60 days to affected individuals",
+        "risk_assessment_factors": ["Types of PHI exposed", "Likelihood of re-identification"]
+      }
+    },
+    {
+      "id": "phishing",
+      "name": "Phishing / Business Email Compromise",
+      "category": "social-engineering",
+      "severity": "high",
+      "description": "Email-based attack to compromise credentials or conduct fraud",
+      "nist_example": "Attacker sending phishing emails to harvest credentials or conduct wire fraud",
+      "indicators": {
+        "technical": [
+          "Emails from spoofed domains",
+          "Suspicious links or attachments",
+          "Multiple failed login attempts followed by success",
+          "Email forwarding rules created"
+        ],
+        "behavioral": [
+          "Users reporting suspicious emails",
+          "Unexpected password reset requests",
+          "Unusual wire transfer requests",
+          "Complaints of unauthorized email sends"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-03: Monitor email gateway for phishing indicators",
+          "DE.CM-01: Monitor for credential harvesting attempts"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze reported phishing emails",
+          "DE.AE-03: Correlate with authentication logs"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Validate phishing report",
+          "Identify number of recipients and clickers"
+        ],
+        "containment": [
+          "Remove phishing emails from all mailboxes",
+          "Block sender domains and malicious URLs",
+          "Reset credentials for affected accounts"
+        ],
+        "eradication": [
+          "Remove email forwarding rules",
+          "Revoke OAuth tokens if applicable",
+          "Update email filtering rules"
+        ]
+      },
+      "recovery_actions": [
+        "Restore normal email operations",
+        "Conduct user awareness training",
+        "Implement MFA if not already in place"
+      ],
+      "communication_requirements": {
+        "internal": ["All users - phishing warning", "IT team", "Management"],
+        "external": ["Law enforcement if fraud occurred"],
+        "public": ["Customer notification if credentials exposed"]
+      },
+      "roles_responsibilities": [
+        "IT Security: Email removal and account security",
+        "Identity Management: Credential resets",
+        "HR: User awareness training",
+        "Finance: Transaction verification if BEC"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "If credentials compromised and personal data accessed",
+        "article_33_timeline": "72 hours if breach confirmed",
+        "article_34_required": "Depends on data accessed",
+        "risk_factors": ["Email account contents", "Credential exposure"]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If PHI in compromised email accounts",
+        "notification_timeline": "60 days if breach confirmed",
+        "risk_assessment_factors": ["Email account purpose", "PHI volume in emails"]
+      }
+    }
+  ]
+}
