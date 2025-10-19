@@ -3,8 +3,8 @@
 **Professional Security and Compliance Plugins for Claude Code**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
-[![Plugins](https://img.shields.io/badge/plugins-2-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
+[![Plugins](https://img.shields.io/badge/plugins-3-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
 
 A curated collection of production-ready security and compliance plugins for Claude Code. The only marketplace dedicated exclusively to privacy regulations, security auditing, and compliance automation.
 
@@ -17,6 +17,7 @@ A curated collection of production-ready security and compliance plugins for Cla
 # Install plugins
 /plugin install gdpr-auditor@security-compliance-marketplace
 /plugin install cybersecurity-policy-generator@security-compliance-marketplace
+/plugin install incident-response-playbook-creator@security-compliance-marketplace
 ```
 
 ---
@@ -97,6 +98,59 @@ Professional cybersecurity policy document generator using 51 industry-standard 
 - Organizations pursuing ISO 27001, SOC 2, or NIST compliance
 
 [→ View Cybersecurity Policy Generator Documentation](./cybersecurity-policy-generator/README.md)
+
+---
+
+### 3. Incident Response Playbook Creator
+**Production Ready** • **v1.0.0** • **Incident Response & Security Operations**
+
+Professional incident response playbook generator based on NIST SP 800-61r3 (April 2025). Creates comprehensive, customized IR documentation for multiple incident scenarios with built-in GDPR and HIPAA compliance guidance.
+
+**Key Features:**
+- 3 incident scenarios: Ransomware Attack, Data Breach/Exfiltration, Phishing/BEC
+- Based on NIST SP 800-61r3 (April 2025 revision) with CSF 2.0 integration
+- GDPR Article 33/34 breach notification requirements (72-hour timeline)
+- HIPAA Breach Notification Rule guidance (60-day timeline)
+- NIST Cybersecurity Framework 2.0 function mapping (DE, RS, RC)
+- Interactive AskUserQuestion workflow for organization customization
+- 110KB of authoritative reference data (no mock content)
+- Professional Markdown playbook output ready for your security team
+
+**Each Playbook Includes:**
+- **Detection & Indicators** - Technical and behavioral IOCs mapped to NIST CSF 2.0
+- **Response Procedures** - Step-by-step actions (Triage → Containment → Eradication)
+- **Recovery Actions** - System restoration with validation checklists
+- **Communication Templates** - Internal, external, and regulatory notifications
+- **Compliance Guidance** - GDPR Article 33/34 and HIPAA Breach Notification Rule
+- **Roles & Responsibilities** - Clear team structure and escalation criteria
+- **Post-Incident Activities** - Lessons learned and documentation requirements
+
+**Use Cases:**
+- Building your first incident response program
+- Updating IR playbooks to NIST SP 800-61r3 (April 2025)
+- Preparing for compliance audits (GDPR, HIPAA)
+- Creating scenario-specific response procedures
+- Training security operations teams
+- Meeting cyber insurance requirements
+- Tabletop exercise preparation
+
+**Who Should Use:**
+- Security Operations Centers (SOC) and CSIRT teams
+- Incident Response managers and coordinators
+- CISOs establishing IR programs
+- Compliance officers (GDPR, HIPAA)
+- MSPs and MSSPs serving clients
+- IT managers preparing for security incidents
+- Organizations in regulated industries (healthcare, finance)
+
+**Data Sources:**
+- NIST SP 800-61r3 - Computer Security Incident Handling Guide (April 2025)
+- NIST Cybersecurity Framework 2.0 (February 2024)
+- CISA Federal Incident Response Playbooks (August 2024)
+- GDPR (EU Regulation 2016/679) - Official EUR-Lex text
+- HIPAA Breach Notification Rule (45 CFR 164.400-414)
+
+[→ View Incident Response Playbook Creator Documentation](./incident-response-playbook-creator/README.md)
 
 ---
 
