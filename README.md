@@ -15,6 +15,7 @@ A curated collection of professional, production-ready security and compliance p
 ```bash
 /plugin marketplace add diegocconsolini/ClaudeSkillCollection
 /plugin install gdpr-auditor@security-compliance-marketplace
+/plugin install cybersecurity-policy-generator@security-compliance-marketplace
 ```
 
 **Alternative: Traditional Skills Installation** (see below)
@@ -53,8 +54,8 @@ Comprehensive GDPR compliance auditing plugin that analyzes static code files, d
 [→ Read GDPR Auditor Documentation](./gdpr-auditor/README.md)
 
 ### 2. Cybersecurity Policy Generator
-**Status:** Work in Progress (Private Development)
-**Version:** 0.9.0 (Beta)
+**Status:** Production Ready
+**Version:** 1.0.0
 **Category:** Security Governance & Compliance
 
 Professional cybersecurity policy document generator using 51 industry-standard templates from SANS and CIS Controls. Creates complete, framework-compliant policy documents customized for your organization in multiple formats.
@@ -83,7 +84,7 @@ Professional cybersecurity policy document generator using 51 industry-standard 
 - Creating incident response, data protection, or access control policies
 - Building policy documentation for framework compliance
 
-**Note:** This plugin is currently in private development and will be released publicly once testing is complete. It has been production-tested with Guatemaltek generating 8 foundational policies across all formats.
+[→ Read Cybersecurity Policy Generator Documentation](./cybersecurity-policy-generator/README.md)
 
 ---
 
@@ -267,18 +268,19 @@ ClaudeSkillCollection/
 │   ├── references/                 # GDPR reference materials (8 docs)
 │   └── examples/                   # Usage examples and demos
 │
+├── cybersecurity-policy-generator/ # Cybersecurity Policy Generator Plugin
+│   ├── README.md                   # Plugin documentation
+│   ├── SKILL.md                    # Plugin workflow and instructions
+│   ├── plugin.json                 # Plugin manifest
+│   ├── scripts/                    # Policy generation scripts (4 tools)
+│   ├── references/                 # 320KB policy templates and frameworks
+│   ├── output/                     # Output directory for generated policies
+│   └── examples/                   # Customization examples
+│
 ├── private/                        # Private development workspace (submodule)
-│   ├── wip-plugins/                # Work-in-progress plugins
-│   │   └── cybersecurity-policy-generator/  # Policy generator (in development)
-│   │       ├── SKILL.md            # Plugin workflow and instructions
-│   │       ├── README.md           # Plugin documentation
-│   │       ├── plugin.json         # Plugin manifest
-│   │       ├── scripts/            # Policy generation scripts (4 tools)
-│   │       ├── references/         # 320KB policy templates and frameworks
-│   │       ├── output/             # Generated policies (production-tested)
-│   │       └── examples/           # Customization examples
 │   ├── drafts/                     # Draft documentation
 │   ├── research/                   # Research materials
+│   ├── wip-plugins/                # Work-in-progress plugins
 │   ├── test-data/                  # Test datasets
 │   └── notes/                      # Development notes
 │
@@ -385,7 +387,6 @@ Professional audit report with specific findings
 ## Planned Skills (Roadmap)
 
 ### Data Privacy & Security
-- [🔄] **Cybersecurity Policy Generator** - In development (private workspace)
 - [ ] **CCPA Compliance Auditor** - California Consumer Privacy Act
 - [ ] **Security Vulnerability Scanner** - OWASP Top 10 analysis
 - [ ] **API Security Auditor** - REST/GraphQL security review
@@ -557,15 +558,18 @@ Thanks to all contributors and users who help improve these skills!
 ## Changelog
 
 ### Version 1.1.0 (2025-10-19)
-- Added Cybersecurity Policy Generator to private development workspace
+- **Released Cybersecurity Policy Generator plugin** (v1.0.0)
   - 51 professional policy templates (SANS + CIS Controls)
-  - 320KB reference data with compliance framework mappings
-  - Interactive AskUserQuestion workflow
+  - 320KB reference data with compliance framework mappings (ISO 27001, SOC 2, NIST CSF, CIS Controls v8, GDPR)
+  - Interactive AskUserQuestion workflow for beautiful UX
   - Multi-format generation (Markdown, Word, HTML, PDF)
-  - Production-tested with Guatemaltek (8 foundational policies)
-  - Improved SKILL.md with proper skill delegation architecture
-- Updated repository structure documentation
-- Enhanced marketplace capabilities
+  - 15 security policy categories covering all InfoSec domains
+  - Production-tested with real organization (8 foundational policies generated)
+  - Proper skill delegation architecture using Task tool
+  - 4 automated policy generation scripts
+  - Comprehensive reference materials and examples
+- Updated repository structure with second public plugin
+- Enhanced marketplace with security governance capabilities
 
 ### Version 1.0.0 (2025-10-18)
 - Initial release
