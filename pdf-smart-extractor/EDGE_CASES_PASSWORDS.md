@@ -4,6 +4,8 @@
 **Date:** October 20, 2025
 **Status:** PRODUCTION READY with documented edge cases
 
+⚠️ **Security Note:** All passwords shown in this document are examples for testing purposes only. They do not protect any real sensitive files.
+
 ---
 
 ## Edge Case #1: Special Characters in Passwords
@@ -14,11 +16,11 @@ Passwords with special shell characters ($, !, #, |, [, ], etc.) fail when passe
 
 ### Example
 
-**Password:** `~e$0CA,]OmcX!(M!:t#a|zC/q=IITW`
+**Password:** `P@ssw0rd!2024#Test$`
 
 **Attempted CLI usage:**
 ```bash
-python3 extract_pdf.py file.pdf --password '~e$0CA,]OmcX!(M!:t#a|zC/q=IITW'
+python3 extract_pdf.py file.pdf --password 'P@ssw0rd!2024#Test$'
 # Result: ❌ Password authentication fails
 ```
 
@@ -49,7 +51,7 @@ python3 extract_pdf.py file.pdf
 from extract_pdf import PDFExtractor
 
 extractor = PDFExtractor()
-password = '~e$0CA,]OmcX!(M!:t#a|zC/q=IITW'  # No escaping needed in Python
+password = 'P@ssw0rd!2024#Test$'  # No escaping needed in Python
 result = extractor.extract_full_pdf('file.pdf', password=password)
 ```
 
@@ -134,7 +136,7 @@ python3 extract_pdf.py encrypted.pdf --force
 
 2. ✅ **Complex passwords via Python API** - Works perfectly
    ```python
-   extractor.extract_full_pdf('file.pdf', password='~e$0CA,]OmcX!(M!:t#a|zC/q=IITW')
+   extractor.extract_full_pdf('file.pdf', password='P@ssw0rd!2024#Test$')
    ```
 
 3. ✅ **Real-world password-protected PDFs** - Large technical document (140 pages, 8.39MB)
