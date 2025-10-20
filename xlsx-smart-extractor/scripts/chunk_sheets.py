@@ -175,26 +175,12 @@ def chunk_workbook(cache_key):
     total_tokens = sum(chunk["tokens"] for chunk in all_chunks)
     avg_tokens = total_tokens // len(all_chunks) if all_chunks else 0
 
-    # Calculate content preservation
-    original_chars = sum(
-        len(json.dumps(sheet["cells"], ensure_ascii=False))
-        for sheet in workbook_data["sheets"]
-    )
-
-    chunked_chars = sum(
-        len(json.dumps(chunk["data"], ensure_ascii=False))
-        for chunk in all_chunks
-    )
-
-    preservation_rate = (chunked_chars / original_chars * 100) if original_chars > 0 else 100
-
     # Create chunk index
     chunk_index = {
         "cache_key": cache_key,
         "total_chunks": len(all_chunks),
         "total_tokens": total_tokens,
         "avg_tokens_per_chunk": avg_tokens,
-        "content_preservation": f"{preservation_rate:.2f}%",
         "chunk_types": dict(chunk_stats),
         "chunks": [
             {
@@ -217,7 +203,6 @@ def chunk_workbook(cache_key):
     print(f"Total chunks: {len(all_chunks)}")
     print(f"Total tokens: {total_tokens:,}")
     print(f"Avg tokens/chunk: {avg_tokens}")
-    print(f"Content preservation: {preservation_rate:.2f}%")
     print(f"\nChunk types:")
     for chunk_type, count in chunk_stats.items():
         print(f"  - {chunk_type}: {count}")
