@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **Initial Release** - Production-ready Excel workbook extraction and analysis plugin
 - Local Excel extraction with zero LLM involvement using openpyxl library
-- 100%+ content preservation including formulas, formatting, and metadata
+- Lossless extraction including all cells, formulas, formatting, and metadata
 - 20-100x token reduction through intelligent sheet-based chunking
 - Three core scripts:
   - `extract_xlsx.py` - Full workbook extraction with formula and formatting preservation
@@ -30,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Cell Processing:** 287,460 cells across 85 sheets
 - **Formula Extraction:** 15,409 formulas including array formulas
 - **Named Ranges:** 198 named ranges successfully extracted
-- **Content Preservation:** 100.04% - 100.59% (exceeds 99% target)
+- **Extraction Coverage:** All cells, formulas, formatting, merged cells, and named ranges
 - **Token Reduction:** 4x - 58x (average 27.6x)
 - **Extraction Speed:** 3-45 seconds depending on file complexity
 

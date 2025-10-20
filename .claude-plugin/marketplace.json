@@ -123,7 +123,7 @@
     },
     {
       "name": "xlsx-smart-extractor",
-      "description": "Extract and analyze large Excel workbooks (1MB-50MB+) with minimal token usage. Preserves 100% of formulas, cell formatting, and complex table structures while achieving 20-100x token reduction through local extraction, semantic chunking, and intelligent caching. Perfect for compliance matrices, financial models, security audit logs, and data tables. Tested with 287K cells and 15K formulas.",
+      "description": "Extract and analyze large Excel workbooks (1MB-50MB+) with minimal token usage. Lossless extraction of all formulas, cell formatting, and complex table structures while achieving 20-100x token reduction through local extraction, semantic chunking, and intelligent caching. Perfect for compliance matrices, financial models, security audit logs, and data tables. Tested with 287K cells and 15K formulas.",
       "source": "./xlsx-smart-extractor",
       "version": "1.0.0",
       "author": {
