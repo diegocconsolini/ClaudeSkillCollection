@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "agents": [
+    {
+      "name": "pdf-smart-extractor",
+      "description": "Extract and query large PDFs with minimal token usage. Preserves 100% content while achieving 12-25x token reduction through semantic chunking and intelligent caching.",
+      "prompt": "./SKILL.md"
+    }
+  ]
+}
