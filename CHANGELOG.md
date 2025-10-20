@@ -16,6 +16,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.3.1] - 2025-10-20
+
+### Fixed - PDF Smart Extractor
+
+#### Critical Bug Fix
+- Fixed `ValueError: document closed` in extraction script
+- Changed lines 126 and 138 to use `metadata['page_count']` instead of `len(doc)` after document closure
+- Official plugin script already used correct pattern (line 200)
+
+#### Testing & Validation
+- Comprehensive test suite with 7 test cases completed
+- Large PDF support validated (up to 35.46MB, 414 pages)
+- Edge cases tested: cache reuse, error handling, document structure variation
+- All tests passed with 99.76-99.81% content preservation
+
+#### Documentation
+- Added PLUGIN_STRUCTURE_GUIDE.md (comprehensive official Claude Code plugin structure guide)
+- Added TEST_RESULTS.md (complete test report with validated metrics)
+- Updated README.md with October 2025 test results
+- Anonymized test document names for privacy
+
+#### Performance Metrics (Validated)
+- Technical Standards Document (8.2MB, 316 pages): 60.2x token reduction, 99.76% preservation
+- Large Technical Book (35.46MB, 414 pages): 400 chunks, 99.81% preservation
+- Cache reuse: < 1 second retrieval time
+- Query functionality: 3,085 tokens vs 185,792 full document
+
+### Changed - Plugin Structure
+
+#### All Plugins (Structure Compliance)
+- Fixed all 4 plugins to comply with official Claude Code plugin structure
+- Changed `agents` field from fabricated object array to official string path format
+- Created `agents/` directories in all plugins
+- Moved SKILL.md files to `agents/{plugin-name}.md`
+- Added proper frontmatter (description + capabilities) to all agent files
+
+#### Plugins Updated
+1. pdf-smart-extractor - agents structure corrected
+2. gdpr-auditor - agents structure corrected
+3. cybersecurity-policy-generator - agents structure corrected
+4. incident-response-playbook-creator - agents structure corrected
+
+#### Documentation Reference
+- All structures now follow https://docs.claude.com/en/docs/claude-code/plugins-reference
+- No fabricated or invented plugin structures
+- Agent invocation format: `plugin-name:agent-name`
+
+---
+
 ## [1.1.0] - 2025-10-19
 
 ### Added - Marketplace Support
