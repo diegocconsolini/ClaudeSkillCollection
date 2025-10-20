@@ -1,0 +1,1311 @@
+{
+  "name": "Consensus Assessments Initiative Questionnaire",
+  "version": "4.0.3",
+  "questions": [
+    {
+      "id": "A&A-01.1",
+      "control_id": "A&A-01",
+      "body": "Are audit and assurance policies, procedures, and standards established, documented,\napproved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "A&A-01.2",
+      "control_id": "A&A-01",
+      "body": "Are audit and assurance policies, procedures, and standards reviewed and updated\nat least annually?\n"
+    },
+    {
+      "id": "A&A-02.1",
+      "control_id": "A&A-02",
+      "body": "Are independent audit and assurance assessments conducted according to relevant\nstandards at least annually?\n"
+    },
+    {
+      "id": "A&A-03.1",
+      "control_id": "A&A-03",
+      "body": "Are independent audit and assurance assessments performed according to risk-based\nplans and policies?\n"
+    },
+    {
+      "id": "A&A-04.1",
+      "control_id": "A&A-04",
+      "body": "Is compliance verified regarding all relevant standards, regulations, legal/contractual,\nand statutory requirements applicable to the audit?\n"
+    },
+    {
+      "id": "A&A-05.1",
+      "control_id": "A&A-05",
+      "body": "Is an audit management process defined and implemented to support audit planning,\nrisk analysis, security control assessments, conclusions, remediation schedules,\nreport generation, and reviews of past reports and supporting evidence?\n"
+    },
+    {
+      "id": "A&A-06.1",
+      "control_id": "A&A-06",
+      "body": "Is a risk-based corrective action plan to remediate audit findings established,\ndocumented, approved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "A&A-06.2",
+      "control_id": "A&A-06",
+      "body": "Is the remediation status of audit findings reviewed and reported to relevant\nstakeholders?\n"
+    },
+    {
+      "id": "AIS-01.1",
+      "control_id": "AIS-01",
+      "body": "Are application security policies and procedures established, documented,\napproved, communicated, applied, evaluated, and maintained to guide appropriate\nplanning, delivery, and support of the organization's application security capabilities?\n"
+    },
+    {
+      "id": "AIS-01.2",
+      "control_id": "AIS-01",
+      "body": "Are application security policies and procedures reviewed and updated at least\nannually?\n"
+    },
+    {
+      "id": "AIS-02.1",
+      "control_id": "AIS-02",
+      "body": "Are baseline requirements to secure different applications established, documented,\nand maintained?\n"
+    },
+    {
+      "id": "AIS-03.1",
+      "control_id": "AIS-03",
+      "body": "Are technical and operational metrics defined and implemented according to\nbusiness objectives, security requirements, and compliance obligations?\n"
+    },
+    {
+      "id": "AIS-04.1",
+      "control_id": "AIS-04",
+      "body": "Is an SDLC process defined and implemented for application design, development,\ndeployment, and operation per organizationally designed security requirements?\n"
+    },
+    {
+      "id": "AIS-05.1",
+      "control_id": "AIS-05",
+      "body": "Does the testing strategy outline criteria to accept new information systems,\nupgrades, and new versions while ensuring application security, compliance adherence,\nand organizational speed of delivery goals?\n"
+    },
+    {
+      "id": "AIS-05.2",
+      "control_id": "AIS-05",
+      "body": "Is testing automated when applicable and possible?\n"
+    },
+    {
+      "id": "AIS-06.1",
+      "control_id": "AIS-06",
+      "body": "Are strategies and capabilities established and implemented to deploy application\ncode in a secure, standardized, and compliant manner?\n"
+    },
+    {
+      "id": "AIS-06.2",
+      "control_id": "AIS-06",
+      "body": "Is the deployment and integration of application code automated where possible?\n"
+    },
+    {
+      "id": "AIS-07.1",
+      "control_id": "AIS-07",
+      "body": "Are application security vulnerabilities remediated following defined processes?\n"
+    },
+    {
+      "id": "AIS-07.2",
+      "control_id": "AIS-07",
+      "body": "Is the remediation of application security vulnerabilities automated when\npossible?\n"
+    },
+    {
+      "id": "BCR-01.1",
+      "control_id": "BCR-01",
+      "body": "Are business continuity management and operational resilience policies and\nprocedures established, documented, approved, communicated, applied, evaluated,\nand maintained?\n"
+    },
+    {
+      "id": "BCR-01.2",
+      "control_id": "BCR-01",
+      "body": "Are the policies and procedures reviewed and updated at least annually?\n"
+    },
+    {
+      "id": "BCR-02.1",
+      "control_id": "BCR-02",
+      "body": "Are criteria for developing business continuity and operational resiliency\nstrategies and capabilities established based on business disruption and risk\nimpacts?\n"
+    },
+    {
+      "id": "BCR-03.1",
+      "control_id": "BCR-03",
+      "body": "Are strategies developed to reduce the impact of, withstand, and recover from\nbusiness disruptions in accordance with risk appetite?\n"
+    },
+    {
+      "id": "BCR-04.1",
+      "control_id": "BCR-04",
+      "body": "Are operational resilience strategies and capability results incorporated\nto establish, document, approve, communicate, apply, evaluate, and maintain a\nbusiness continuity plan?\n"
+    },
+    {
+      "id": "BCR-05.1",
+      "control_id": "BCR-05",
+      "body": "Is relevant documentation developed, identified, and acquired to support business\ncontinuity and operational resilience plans?\n"
+    },
+    {
+      "id": "BCR-05.2",
+      "control_id": "BCR-05",
+      "body": "Is business continuity and operational resilience documentation available\nto authorized stakeholders?\n"
+    },
+    {
+      "id": "BCR-05.3",
+      "control_id": "BCR-05",
+      "body": "Is business continuity and operational resilience documentation reviewed periodically?\n"
+    },
+    {
+      "id": "BCR-06.1",
+      "control_id": "BCR-06",
+      "body": "Are the business continuity and operational resilience plans exercised and\ntested at least annually and when significant changes occur?\n"
+    },
+    {
+      "id": "BCR-07.1",
+      "control_id": "BCR-07",
+      "body": "Do business continuity and resilience procedures establish communication with\nstakeholders and participants?\n"
+    },
+    {
+      "id": "BCR-08.1",
+      "control_id": "BCR-08",
+      "body": "Is cloud data periodically backed up?\n"
+    },
+    {
+      "id": "BCR-08.2",
+      "control_id": "BCR-08",
+      "body": "Is the confidentiality, integrity, and availability of backup data ensured?\n"
+    },
+    {
+      "id": "BCR-08.3",
+      "control_id": "BCR-08",
+      "body": "Can backups be restored appropriately for resiliency?\n"
+    },
+    {
+      "id": "BCR-09.1",
+      "control_id": "BCR-09",
+      "body": "Is a disaster response plan established, documented, approved, applied, evaluated,\nand maintained to ensure recovery from natural and man-made disasters?\n"
+    },
+    {
+      "id": "BCR-09.2",
+      "control_id": "BCR-09",
+      "body": "Is the disaster response plan updated at least annually, and when significant\nchanges occur?\n"
+    },
+    {
+      "id": "BCR-10.1",
+      "control_id": "BCR-10",
+      "body": "Is the disaster response plan exercised annually or when significant changes\noccur?\n"
+    },
+    {
+      "id": "BCR-10.2",
+      "control_id": "BCR-10",
+      "body": "Are local emergency authorities included, if possible, in the exercise?\n"
+    },
+    {
+      "id": "BCR-11.1",
+      "control_id": "BCR-11",
+      "body": "Is business-critical equipment supplemented with redundant equipment independently\nlocated at a reasonable minimum distance in accordance with applicable industry\nstandards?\n"
+    },
+    {
+      "id": "CCC-01.1",
+      "control_id": "CCC-01",
+      "body": "Are risk management policies and procedures associated with changing organizational\nassets including applications, systems, infrastructure, configuration, etc., established,\ndocumented, approved, communicated, applied, evaluated and maintained (regardless\nof whether asset management is internal or external)?\n"
+    },
+    {
+      "id": "CCC-01.2",
+      "control_id": "CCC-01",
+      "body": "Are the policies and procedures reviewed and updated at least annually?\n"
+    },
+    {
+      "id": "CCC-02.1",
+      "control_id": "CCC-02",
+      "body": "Is a defined quality change control, approval and testing process (with established\nbaselines, testing, and release standards) followed?\n"
+    },
+    {
+      "id": "CCC-03.1",
+      "control_id": "CCC-03",
+      "body": "Are risks associated with changing organizational assets (including applications,\nsystems, infrastructure, configuration, etc.) managed, regardless of whether asset\nmanagement occurs internally or externally (i.e., outsourced)?\n"
+    },
+    {
+      "id": "CCC-04.1",
+      "control_id": "CCC-04",
+      "body": "Is the unauthorized addition, removal, update, and management of organization\nassets restricted?\n"
+    },
+    {
+      "id": "CCC-05.1",
+      "control_id": "CCC-05",
+      "body": "Are provisions to limit changes that directly impact CSC-owned environments\nand require tenants to authorize requests explicitly included within the service\nlevel agreements (SLAs) between CSPs and CSCs?\n"
+    },
+    {
+      "id": "CCC-06.1",
+      "control_id": "CCC-06",
+      "body": "Are change management baselines established for all relevant authorized changes\non organizational assets?\n"
+    },
+    {
+      "id": "CCC-07.1",
+      "control_id": "CCC-07",
+      "body": "Are detection measures implemented with proactive notification if changes\ndeviate from established baselines?\n"
+    },
+    {
+      "id": "CCC-08.1",
+      "control_id": "CCC-08",
+      "body": "Is a procedure implemented to manage exceptions, including emergencies, in\nthe change and configuration process?\n"
+    },
+    {
+      "id": "CCC-08.2",
+      "control_id": "CCC-08",
+      "body": "'Is the procedure aligned with the requirements of the GRC-04: Policy Exception\nProcess?'\n"
+    },
+    {
+      "id": "CCC-09.1",
+      "control_id": "CCC-09",
+      "body": "Is a process to proactively roll back changes to a previously known \"good\nstate\" defined and implemented in case of errors or security concerns?\n"
+    },
+    {
+      "id": "CEK-01.1",
+      "control_id": "CEK-01",
+      "body": "Are cryptography, encryption, and key management policies and procedures established,\ndocumented, approved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "CEK-01.2",
+      "control_id": "CEK-01",
+      "body": "Are cryptography, encryption, and key management policies and procedures reviewed\nand updated at least annually?\n"
+    },
+    {
+      "id": "CEK-02.1",
+      "control_id": "CEK-02",
+      "body": "Are cryptography, encryption, and key management roles and responsibilities\ndefined and implemented?\n"
+    },
+    {
+      "id": "CEK-03.1",
+      "control_id": "CEK-03",
+      "body": "Are data at-rest and in-transit cryptographically protected using cryptographic\nlibraries certified to approved standards?\n"
+    },
+    {
+      "id": "CEK-04.1",
+      "control_id": "CEK-04",
+      "body": "Are appropriate data protection encryption algorithms used that consider data\nclassification, associated risks, and encryption technology usability?\n"
+    },
+    {
+      "id": "CEK-05.1",
+      "control_id": "CEK-05",
+      "body": "Are standard change management procedures established to review, approve,\nimplement and communicate cryptography, encryption, and key management technology\nchanges that accommodate internal and external sources?\n"
+    },
+    {
+      "id": "CEK-06.1",
+      "control_id": "CEK-06",
+      "body": "Are changes to cryptography-, encryption- and key management-related systems,\npolicies, and procedures, managed and adopted in a manner that fully accounts\nfor downstream effects of proposed changes, including residual risk, cost, and\nbenefits analysis?\n"
+    },
+    {
+      "id": "CEK-07.1",
+      "control_id": "CEK-07",
+      "body": "Is a cryptography, encryption, and key management risk program established\nand maintained that includes risk assessment, risk treatment, risk context, monitoring,\nand feedback provisions?\n"
+    },
+    {
+      "id": "CEK-08.1",
+      "control_id": "CEK-08",
+      "body": "Are CSPs providing CSCs with the capacity to manage their own data encryption\nkeys?\n"
+    },
+    {
+      "id": "CEK-09.1",
+      "control_id": "CEK-09",
+      "body": "Are encryption and key management systems, policies, and processes audited\nwith a frequency proportional to the system's risk exposure, and after any security\nevent?\n"
+    },
+    {
+      "id": "CEK-09.2",
+      "control_id": "CEK-09",
+      "body": "Are encryption and key management systems, policies, and processes audited\n(preferably continuously but at least annually)?\n"
+    },
+    {
+      "id": "CEK-10.1",
+      "control_id": "CEK-10",
+      "body": "Are cryptographic keys generated using industry-accepted and approved cryptographic\nlibraries that specify algorithm strength and random number generator specifications?\n"
+    },
+    {
+      "id": "CEK-11.1",
+      "control_id": "CEK-11",
+      "body": "Are private keys provisioned for a unique purpose managed, and is cryptography\nsecret?\n"
+    },
+    {
+      "id": "CEK-12.1",
+      "control_id": "CEK-12",
+      "body": "Are cryptographic keys rotated based on a cryptoperiod calculated while considering\ninformation disclosure risks and legal and regulatory requirements?\n"
+    },
+    {
+      "id": "CEK-13.1",
+      "control_id": "CEK-13",
+      "body": "Are cryptographic keys revoked and removed before the end of the established\ncryptoperiod (when a key is compromised, or an entity is no longer part of the\norganization) per defined, implemented, and evaluated processes, procedures, and\ntechnical measures to include legal and regulatory requirement provisions?\n"
+    },
+    {
+      "id": "CEK-14.1",
+      "control_id": "CEK-14",
+      "body": "Are processes, procedures and technical measures to destroy unneeded keys\ndefined, implemented and evaluated to address key destruction outside secure environments,\nrevocation of keys stored in hardware security modules (HSMs), and include applicable\nlegal and regulatory requirement provisions?\n"
+    },
+    {
+      "id": "CEK-15.1",
+      "control_id": "CEK-15",
+      "body": "Are processes, procedures, and technical measures to create keys in a pre-activated\nstate (i.e., when they have been generated but not authorized for use) being defined,\nimplemented, and evaluated to include legal and regulatory requirement provisions?\n"
+    },
+    {
+      "id": "CEK-16.1",
+      "control_id": "CEK-16",
+      "body": "Are processes, procedures, and technical measures to monitor, review and approve\nkey transitions (e.g., from any state to/from suspension) being defined, implemented,\nand evaluated to include legal and regulatory requirement provisions?\n"
+    },
+    {
+      "id": "CEK-17.1",
+      "control_id": "CEK-17",
+      "body": "Are processes, procedures, and technical measures to deactivate keys (at the\ntime of their expiration date) being defined, implemented, and evaluated to include\nlegal and regulatory requirement provisions?\n"
+    },
+    {
+      "id": "CEK-18.1",
+      "control_id": "CEK-18",
+      "body": "Are processes, procedures, and technical measures to manage archived keys\nin a secure repository (requiring least privilege access) being defined, implemented,\nand evaluated to include legal and regulatory requirement provisions?\n"
+    },
+    {
+      "id": "CEK-19.1",
+      "control_id": "CEK-19",
+      "body": "Are processes, procedures, and technical measures to use compromised keys to\nencrypt information in specific scenarios (e.g., only in controlled circumstances\nand thereafter only for data decryption and never for encryption) defined,\nimplemented, and evaluated to include legal and regulatory requirement provisions?\n"
+    },
+    {
+      "id": "CEK-20.1",
+      "control_id": "CEK-20",
+      "body": "Are processes, procedures, and technical measures to assess operational continuity\nrisks (versus the risk of losing control of keying material and exposing protected\ndata) being defined, implemented, and evaluated to include legal and regulatory\nrequirement provisions?\n"
+    },
+    {
+      "id": "CEK-21.1",
+      "control_id": "CEK-21",
+      "body": "Are key management system processes, procedures, and technical measures being\ndefined, implemented, and evaluated to track and report all cryptographic materials\nand status changes that include legal and regulatory requirements provisions?\n"
+    },
+    {
+      "id": "DCS-01.1",
+      "control_id": "DCS-01",
+      "body": "Are policies and procedures for the secure disposal of equipment used outside\nthe organization's premises established, documented, approved, communicated, enforced,\nand maintained?\n"
+    },
+    {
+      "id": "DCS-01.2",
+      "control_id": "DCS-01",
+      "body": "Is a data destruction procedure applied that renders information recovery\ninformation impossible if equipment is not physically destroyed?\n"
+    },
+    {
+      "id": "DCS-01.3",
+      "control_id": "DCS-01",
+      "body": "Are policies and procedures for the secure disposal of equipment used outside\nthe organization's premises reviewed and updated at least annually?\n"
+    },
+    {
+      "id": "DCS-02.1",
+      "control_id": "DCS-02",
+      "body": "Are policies and procedures for the relocation or transfer of hardware, software,\nor data/information to an offsite or alternate location established, documented,\napproved, communicated, implemented, enforced, maintained?\n"
+    },
+    {
+      "id": "DCS-02.2",
+      "control_id": "DCS-02",
+      "body": "Does a relocation or transfer request require written or cryptographically\nverifiable authorization?\n"
+    },
+    {
+      "id": "DCS-02.3",
+      "control_id": "DCS-02",
+      "body": "Are policies and procedures for the relocation or transfer of hardware, software,\nor data/information to an offsite or alternate location reviewed and updated at\nleast annually?\n"
+    },
+    {
+      "id": "DCS-03.1",
+      "control_id": "DCS-03",
+      "body": "Are policies and procedures for maintaining a safe and secure working environment\n(in offices, rooms, and facilities) established, documented, approved, communicated,\nenforced, and maintained?\n"
+    },
+    {
+      "id": "DCS-03.2",
+      "control_id": "DCS-03",
+      "body": "Are policies and procedures for maintaining safe, secure working environments\n(e.g., offices, rooms) reviewed and updated at least annually?\n"
+    },
+    {
+      "id": "DCS-04.1",
+      "control_id": "DCS-04",
+      "body": "Are policies and procedures for the secure transportation of physical media\nestablished, documented, approved, communicated, enforced, evaluated, and maintained?\n"
+    },
+    {
+      "id": "DCS-04.2",
+      "control_id": "DCS-04",
+      "body": "Are policies and procedures for the secure transportation of physical media\nreviewed and updated at least annually?\n"
+    },
+    {
+      "id": "DCS-05.1",
+      "control_id": "DCS-05",
+      "body": "Is the classification and documentation of physical and logical assets based\non the organizational business risk?\n"
+    },
+    {
+      "id": "DCS-06.1",
+      "control_id": "DCS-06",
+      "body": "Are all relevant physical and logical assets at all CSP sites cataloged and\ntracked within a secured system?\n"
+    },
+    {
+      "id": "DCS-07.1",
+      "control_id": "DCS-07",
+      "body": "Are physical security perimeters implemented to safeguard personnel, data,\nand information systems?\n"
+    },
+    {
+      "id": "DCS-07.2",
+      "control_id": "DCS-07",
+      "body": "Are physical security perimeters established between administrative and business\nareas, data storage, and processing facilities?\n"
+    },
+    {
+      "id": "DCS-08.1",
+      "control_id": "DCS-08",
+      "body": "Is equipment identification used as a method for connection authentication?\n"
+    },
+    {
+      "id": "DCS-09.1",
+      "control_id": "DCS-09",
+      "body": "Are solely authorized personnel able to access secure areas, with all ingress\nand egress areas restricted, documented, and monitored by physical access control\nmechanisms?\n"
+    },
+    {
+      "id": "DCS-09.2",
+      "control_id": "DCS-09",
+      "body": "Are access control records retained periodically, as deemed appropriate by\nthe organization?\n"
+    },
+    {
+      "id": "DCS-10.1",
+      "control_id": "DCS-10",
+      "body": "Are external perimeter datacenter surveillance systems and surveillance systems\nat all ingress and egress points implemented, maintained, and operated?\n"
+    },
+    {
+      "id": "DCS-11.1",
+      "control_id": "DCS-11",
+      "body": "Are datacenter personnel trained to respond to unauthorized access or egress\nattempts?\n"
+    },
+    {
+      "id": "DCS-12.1",
+      "control_id": "DCS-12",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to ensure risk-based protection of power and telecommunication cables\nfrom interception, interference, or damage threats at all facilities, offices,\nand rooms?\n"
+    },
+    {
+      "id": "DCS-13.1",
+      "control_id": "DCS-13",
+      "body": "Are data center environmental control systems designed to monitor, maintain,\nand test that on-site temperature and humidity conditions fall within accepted\nindustry standards effectively implemented and maintained?\n"
+    },
+    {
+      "id": "DCS-14.1",
+      "control_id": "DCS-14",
+      "body": "Are utility services secured, monitored, maintained, and tested at planned\nintervals for continual effectiveness?\n"
+    },
+    {
+      "id": "DCS-15.1",
+      "control_id": "DCS-15",
+      "body": "Is business-critical equipment segregated from locations subject to a high\nprobability of environmental risk events?\n"
+    },
+    {
+      "id": "DSP-01.1",
+      "control_id": "DSP-01",
+      "body": "Are policies and procedures established, documented, approved, communicated,\nenforced, evaluated, and maintained for the classification, protection, and handling\nof data throughout its lifecycle according to all applicable laws and regulations,\nstandards, and risk level?\n"
+    },
+    {
+      "id": "DSP-01.2",
+      "control_id": "DSP-01",
+      "body": "Are data security and privacy policies and procedures reviewed and updated\nat least annually?\n"
+    },
+    {
+      "id": "DSP-02.1",
+      "control_id": "DSP-02",
+      "body": "Are industry-accepted methods applied for secure data disposal from storage\nmedia so information is not recoverable by any forensic means?\n"
+    },
+    {
+      "id": "DSP-03.1",
+      "control_id": "DSP-03",
+      "body": "Is a data inventory created and maintained for sensitive and personal information\n(at a minimum)?\n"
+    },
+    {
+      "id": "DSP-04.1",
+      "control_id": "DSP-04",
+      "body": "Is data classified according to type and sensitivity levels?\n"
+    },
+    {
+      "id": "DSP-05.1",
+      "control_id": "DSP-05",
+      "body": "Is data flow documentation created to identify what data is processed and\nwhere it is stored and transmitted?\n"
+    },
+    {
+      "id": "DSP-05.2",
+      "control_id": "DSP-05",
+      "body": "Is data flow documentation reviewed at defined intervals, at least annually,\nand after any change?\n"
+    },
+    {
+      "id": "DSP-06.1",
+      "control_id": "DSP-06",
+      "body": "Is the ownership and stewardship of all relevant personal and sensitive data\ndocumented?\n"
+    },
+    {
+      "id": "DSP-06.2",
+      "control_id": "DSP-06",
+      "body": "Is data ownership and stewardship documentation reviewed at least annually?\n"
+    },
+    {
+      "id": "DSP-07.1",
+      "control_id": "DSP-07",
+      "body": "Are systems, products, and business practices based on security principles\nby design and per industry best practices?\n"
+    },
+    {
+      "id": "DSP-08.1",
+      "control_id": "DSP-08",
+      "body": "Are systems, products, and business practices based on privacy principles\nby design and according to industry best practices?\n"
+    },
+    {
+      "id": "DSP-08.2",
+      "control_id": "DSP-08",
+      "body": "Are systems' privacy settings configured by default and according to all applicable\nlaws and regulations?\n"
+    },
+    {
+      "id": "DSP-09.1",
+      "control_id": "DSP-09",
+      "body": "Is a data protection impact assessment (DPIA) conducted when processing personal\ndata and evaluating the origin, nature, particularity, and severity of risks according\nto any applicable laws, regulations and industry best practices?\n"
+    },
+    {
+      "id": "DSP-10.1",
+      "control_id": "DSP-10",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to ensure any transfer of personal or sensitive data is protected from\nunauthorized access and only processed within scope (as permitted by respective\nlaws and regulations)?\n"
+    },
+    {
+      "id": "DSP-11.1",
+      "control_id": "DSP-11",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to enable data subjects to request access to, modify, or delete personal\ndata (per applicable laws and regulations)?\n"
+    },
+    {
+      "id": "DSP-12.1",
+      "control_id": "DSP-12",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to ensure personal data is processed (per applicable laws and regulations\nand for the purposes declared to the data subject)?\n"
+    },
+    {
+      "id": "DSP-13.1",
+      "control_id": "DSP-13",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated for the transfer and sub-processing of personal data within the service\nsupply chain (according to any applicable laws and regulations)?\n"
+    },
+    {
+      "id": "DSP-14.1",
+      "control_id": "DSP-14",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to disclose details to the data owner of any personal or sensitive data\naccess by sub-processors before processing initiation?\n"
+    },
+    {
+      "id": "DSP-15.1",
+      "control_id": "DSP-15",
+      "body": "Is authorization from data owners obtained, and the associated risk managed,\nbefore replicating or using production data in non-production environments?\n"
+    },
+    {
+      "id": "DSP-16.1",
+      "control_id": "DSP-16",
+      "body": "Do data retention, archiving, and deletion practices follow business requirements,\napplicable laws, and regulations?\n"
+    },
+    {
+      "id": "DSP-17.1",
+      "control_id": "DSP-17",
+      "body": "Are processes, procedures, and technical measures defined and implemented\nto protect sensitive data throughout its lifecycle?\n"
+    },
+    {
+      "id": "DSP-18.1",
+      "control_id": "DSP-18",
+      "body": "Does the CSP have in place, and describe to CSCs, the procedure to manage\nand respond to requests for disclosure of Personal Data by Law Enforcement Authorities\naccording to applicable laws and regulations?\n"
+    },
+    {
+      "id": "DSP-18.2",
+      "control_id": "DSP-18",
+      "body": "Does the CSP give special attention to the notification procedure to interested\nCSCs, unless otherwise prohibited, such as a prohibition under criminal law to\npreserve confidentiality of a law enforcement investigation?\n"
+    },
+    {
+      "id": "DSP-19.1",
+      "control_id": "DSP-19",
+      "body": "Are processes, procedures, and technical measures defined and implemented\nto specify and document physical data locations, including locales where data\nis processed or backed up?\n"
+    },
+    {
+      "id": "GRC-01.1",
+      "control_id": "GRC-01",
+      "body": "Are information governance program policies and procedures sponsored by organizational\nleadership established, documented, approved, communicated, applied, evaluated,\nand maintained?\n"
+    },
+    {
+      "id": "GRC-01.2",
+      "control_id": "GRC-01",
+      "body": "Are the policies and procedures reviewed and updated at least annually?\n"
+    },
+    {
+      "id": "GRC-02.1",
+      "control_id": "GRC-02",
+      "body": "Is there an established formal, documented, and leadership-sponsored enterprise\nrisk management (ERM) program that includes policies and procedures for identification,\nevaluation, ownership, treatment, and acceptance of cloud security and privacy\nrisks?\n"
+    },
+    {
+      "id": "GRC-03.1",
+      "control_id": "GRC-03",
+      "body": "Are all relevant organizational policies and associated procedures reviewed\nat least annually, or when a substantial organizational change occurs?\n"
+    },
+    {
+      "id": "GRC-04.1",
+      "control_id": "GRC-04",
+      "body": "Is an approved exception process mandated by the governance program established\nand followed whenever a deviation from an established policy occurs?\n"
+    },
+    {
+      "id": "GRC-05.1",
+      "control_id": "GRC-05",
+      "body": "Has an information security program (including programs of all relevant CCM\ndomains) been developed and implemented?\n"
+    },
+    {
+      "id": "GRC-06.1",
+      "control_id": "GRC-06",
+      "body": "Are roles and responsibilities for planning, implementing, operating, assessing,\nand improving governance programs defined and documented?\n"
+    },
+    {
+      "id": "GRC-07.1",
+      "control_id": "GRC-07",
+      "body": "Are all relevant standards, regulations, legal/contractual, and statutory\nrequirements applicable to your organization identified and documented?\n"
+    },
+    {
+      "id": "GRC-08.1",
+      "control_id": "GRC-08",
+      "body": "Is contact established and maintained with cloud-related special interest\ngroups and other relevant entities?\n"
+    },
+    {
+      "id": "HRS-01.1",
+      "control_id": "HRS-01",
+      "body": "Are background verification policies and procedures of all new employees (including\nbut not limited to remote employees, contractors, and third parties) established,\ndocumented, approved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "HRS-01.2",
+      "control_id": "HRS-01",
+      "body": "Are background verification policies and procedures designed according to\nlocal laws, regulations, ethics, and contractual constraints and proportional\nto the data classification to be accessed, business requirements, and acceptable\nrisk?\n"
+    },
+    {
+      "id": "HRS-01.3",
+      "control_id": "HRS-01",
+      "body": "Are background verification policies and procedures reviewed and updated at\nleast annually?\n"
+    },
+    {
+      "id": "HRS-02.1",
+      "control_id": "HRS-02",
+      "body": "Are policies and procedures for defining allowances and conditions for the\nacceptable use of organizationally-owned or managed assets established, documented,\napproved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "HRS-02.2",
+      "control_id": "HRS-02",
+      "body": "Are the policies and procedures for defining allowances and conditions for\nthe acceptable use of organizationally-owned or managed assets reviewed and updated\nat least annually?\n"
+    },
+    {
+      "id": "HRS-03.1",
+      "control_id": "HRS-03",
+      "body": "Are policies and procedures requiring unattended workspaces to conceal confidential\ndata established, documented, approved, communicated, applied, evaluated, and\nmaintained?\n"
+    },
+    {
+      "id": "HRS-03.2",
+      "control_id": "HRS-03",
+      "body": "Are policies and procedures requiring unattended workspaces to conceal confidential\ndata reviewed and updated at least annually?\n"
+    },
+    {
+      "id": "HRS-04.1",
+      "control_id": "HRS-04",
+      "body": "Are policies and procedures to protect information accessed, processed, or\nstored at remote sites and locations established, documented, approved, communicated,\napplied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "HRS-04.2",
+      "control_id": "HRS-04",
+      "body": "Are policies and procedures to protect information accessed, processed, or\nstored at remote sites and locations reviewed and updated at least annually?\n"
+    },
+    {
+      "id": "HRS-05.1",
+      "control_id": "HRS-05",
+      "body": "Are return procedures of organizationally-owned assets by terminated employees\nestablished and documented?\n"
+    },
+    {
+      "id": "HRS-06.1",
+      "control_id": "HRS-06",
+      "body": "Are procedures outlining the roles and responsibilities concerning changes\nin employment established, documented, and communicated to all personnel?\n"
+    },
+    {
+      "id": "HRS-07.1",
+      "control_id": "HRS-07",
+      "body": "Are employees required to sign an employment agreement before gaining access\nto organizational information systems, resources, and assets?\n"
+    },
+    {
+      "id": "HRS-08.1",
+      "control_id": "HRS-08",
+      "body": "Are provisions and/or terms for adherence to established information governance\nand security policies included within employment agreements?\n"
+    },
+    {
+      "id": "HRS-09.1",
+      "control_id": "HRS-09",
+      "body": "Are employee roles and responsibilities relating to information assets and\nsecurity documented and communicated?\n"
+    },
+    {
+      "id": "HRS-10.1",
+      "control_id": "HRS-10",
+      "body": "Are requirements for non-disclosure/confidentiality agreements reflecting\norganizational data protection needs and operational details identified, documented,\nand reviewed at planned intervals?\n"
+    },
+    {
+      "id": "HRS-11.1",
+      "control_id": "HRS-11",
+      "body": "Is a security awareness training program for all employees of the organization\nestablished, documented, approved, communicated, applied, evaluated and maintained?\n"
+    },
+    {
+      "id": "HRS-11.2",
+      "control_id": "HRS-11",
+      "body": "Are regular security awareness training updates provided?\n"
+    },
+    {
+      "id": "HRS-12.1",
+      "control_id": "HRS-12",
+      "body": "Are all employees granted access to sensitive organizational and personal\ndata provided with appropriate security awareness training?\n"
+    },
+    {
+      "id": "HRS-12.2",
+      "control_id": "HRS-12",
+      "body": "Are all employees granted access to sensitive organizational and personal\ndata provided with regular updates in procedures, processes, and policies relating\nto their professional function?\n"
+    },
+    {
+      "id": "HRS-13.1",
+      "control_id": "HRS-13",
+      "body": "Are employees notified of their roles and responsibilities to maintain awareness\nand compliance with established policies, procedures, and applicable legal, statutory,\nor regulatory compliance obligations?\n"
+    },
+    {
+      "id": "IAM-01.1",
+      "control_id": "IAM-01",
+      "body": "Are identity and access management policies and procedures established, documented,\napproved, communicated, implemented, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "IAM-01.2",
+      "control_id": "IAM-01",
+      "body": "Are identity and access management policies and procedures reviewed and updated\nat least annually?\n"
+    },
+    {
+      "id": "IAM-02.1",
+      "control_id": "IAM-02",
+      "body": "Are strong password policies and procedures established, documented, approved,\ncommunicated, implemented, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "IAM-02.2",
+      "control_id": "IAM-02",
+      "body": "Are strong password policies and procedures reviewed and updated at least\nannually?\n"
+    },
+    {
+      "id": "IAM-03.1",
+      "control_id": "IAM-03",
+      "body": "Is system identity information and levels of access managed, stored, and reviewed?\n"
+    },
+    {
+      "id": "IAM-04.1",
+      "control_id": "IAM-04",
+      "body": "Is the separation of duties principle employed when implementing information\nsystem access?\n"
+    },
+    {
+      "id": "IAM-05.1",
+      "control_id": "IAM-05",
+      "body": "Is the least privilege principle employed when implementing information system\naccess?\n"
+    },
+    {
+      "id": "IAM-06.1",
+      "control_id": "IAM-06",
+      "body": "Is a user access provisioning process defined and implemented which authorizes,\nrecords, and communicates data and assets access changes?\n"
+    },
+    {
+      "id": "IAM-07.1",
+      "control_id": "IAM-07",
+      "body": "Is a process in place to de-provision or modify the access, in a timely manner,\nof movers / leavers or system identity changes, to effectively adopt and communicate\nidentity and access management policies?\n"
+    },
+    {
+      "id": "IAM-08.1",
+      "control_id": "IAM-08",
+      "body": "Are reviews and revalidation of user access for least privilege and separation\nof duties completed with a frequency commensurate with organizational risk tolerance?\n"
+    },
+    {
+      "id": "IAM-09.1",
+      "control_id": "IAM-09",
+      "body": "Are processes, procedures, and technical measures for the segregation of privileged\naccess roles defined, implemented, and evaluated such that administrative data\naccess, encryption, key management capabilities, and logging capabilities are\ndistinct and separate?\n"
+    },
+    {
+      "id": "IAM-10.1",
+      "control_id": "IAM-10",
+      "body": "Is an access process defined and implemented to ensure privileged access roles\nand rights are granted for a limited period?\n"
+    },
+    {
+      "id": "IAM-10.2",
+      "control_id": "IAM-10",
+      "body": "Are procedures implemented to prevent the culmination of segregated privileged\naccess?\n"
+    },
+    {
+      "id": "IAM-11.1",
+      "control_id": "IAM-11",
+      "body": "Are processes and procedures for customers to participate, where applicable,\nin granting access for agreed, high risk as (defined by the organizational risk\nassessment) privileged access roles defined, implemented and evaluated?\n"
+    },
+    {
+      "id": "IAM-12.1",
+      "control_id": "IAM-12",
+      "body": "Are processes, procedures, and technical measures to ensure the logging infrastructure\nis \"read-only\" for all with write access (including privileged access roles) defined,\nimplemented, and evaluated?\n"
+    },
+    {
+      "id": "IAM-12.2",
+      "control_id": "IAM-12",
+      "body": "Is the ability to disable the \"read-only\" configuration of logging infrastructure\ncontrolled through a procedure that ensures the segregation of duties and break\nglass procedures?\n"
+    },
+    {
+      "id": "IAM-13.1",
+      "control_id": "IAM-13",
+      "body": "Are processes, procedures, and technical measures that ensure users are identifiable\nthrough unique identification (or can associate individuals with user identification\nusage) defined, implemented, and evaluated?\n"
+    },
+    {
+      "id": "IAM-14.1",
+      "control_id": "IAM-14",
+      "body": "Are processes, procedures, and technical measures for authenticating access\nto systems, application, and data assets including multifactor authentication\nfor a least-privileged user and sensitive data access defined, implemented, and\nevaluated?\n"
+    },
+    {
+      "id": "IAM-14.2",
+      "control_id": "IAM-14",
+      "body": "Are digital certificates or alternatives that achieve an equivalent security\nlevel for system identities adopted?\n"
+    },
+    {
+      "id": "IAM-15.1",
+      "control_id": "IAM-15",
+      "body": "Are processes, procedures, and technical measures for the secure management\nof passwords defined, implemented, and evaluated?\n"
+    },
+    {
+      "id": "IAM-16.1",
+      "control_id": "IAM-16",
+      "body": "Are processes, procedures, and technical measures to verify access to data\nand system functions authorized, defined, implemented, and evaluated?\n"
+    },
+    {
+      "id": "IPY-01.1",
+      "control_id": "IPY-01",
+      "body": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained for communications between application services\n(e.g., APIs)?\n"
+    },
+    {
+      "id": "IPY-01.2",
+      "control_id": "IPY-01",
+      "body": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained for information processing interoperability?\n"
+    },
+    {
+      "id": "IPY-01.3",
+      "control_id": "IPY-01",
+      "body": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained for application development portability?\n"
+    },
+    {
+      "id": "IPY-01.4",
+      "control_id": "IPY-01",
+      "body": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained for information/data exchange, usage, portability,\nintegrity, and persistence?\n"
+    },
+    {
+      "id": "IPY-01.5",
+      "control_id": "IPY-01",
+      "body": "Are interoperability and portability policies and procedures reviewed and\nupdated at least annually?\n"
+    },
+    {
+      "id": "IPY-02.1",
+      "control_id": "IPY-02",
+      "body": "Are CSCs able to programmatically retrieve their data via an application interface(s)\nto enable interoperability and portability?\n"
+    },
+    {
+      "id": "IPY-03.1",
+      "control_id": "IPY-03",
+      "body": "Are cryptographically secure and standardized network protocols implemented\nfor the management, import, and export of data?\n"
+    },
+    {
+      "id": "IPY-04.1",
+      "control_id": "IPY-04",
+      "body": "Do agreements include provisions specifying CSC data access upon contract termination, and have the following?\na. Data format\nb. Duration data will be stored\nc. Scope of the data retained and made available to the CSCs\nd. Data deletion policy\n"
+    },
+    {
+      "id": "IVS-01.1",
+      "control_id": "IVS-01",
+      "body": "Are infrastructure and virtualization security policies and procedures established,\ndocumented, approved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "IVS-01.2",
+      "control_id": "IVS-01",
+      "body": "Are infrastructure and virtualization security policies and procedures reviewed\nand updated at least annually?\n"
+    },
+    {
+      "id": "IVS-02.1",
+      "control_id": "IVS-02",
+      "body": "Is resource availability, quality, and capacity planned and monitored in a\nway that delivers required system performance, as determined by the business?\n"
+    },
+    {
+      "id": "IVS-03.1",
+      "control_id": "IVS-03",
+      "body": "Are communications between environments monitored?\n"
+    },
+    {
+      "id": "IVS-03.2",
+      "control_id": "IVS-03",
+      "body": "Are communications between environments encrypted?\n"
+    },
+    {
+      "id": "IVS-03.3",
+      "control_id": "IVS-03",
+      "body": "Are communications between environments restricted to only authenticated and\nauthorized connections, as justified by the business?\n"
+    },
+    {
+      "id": "IVS-03.4",
+      "control_id": "IVS-03",
+      "body": "Are network configurations reviewed at least annually?\n"
+    },
+    {
+      "id": "IVS-03.5",
+      "control_id": "IVS-03",
+      "body": "Are network configurations supported by the documented justification of all\nallowed services, protocols, ports, and compensating controls?\n"
+    },
+    {
+      "id": "IVS-04.1",
+      "control_id": "IVS-04",
+      "body": "Is every host and guest OS, hypervisor, or infrastructure control plane hardened\n(according to their respective best practices) and supported by technical controls\nas part of a security baseline?\n"
+    },
+    {
+      "id": "IVS-05.1",
+      "control_id": "IVS-05",
+      "body": "Are production and non-production environments separated?\n"
+    },
+    {
+      "id": "IVS-06.1",
+      "control_id": "IVS-06",
+      "body": "Are applications and infrastructures designed, developed, deployed, and configured\nsuch that CSP and CSC (tenant) user access and intra-tenant access is appropriately\nsegmented, segregated, monitored, and restricted from other tenants?\n"
+    },
+    {
+      "id": "IVS-07.1",
+      "control_id": "IVS-07",
+      "body": "Are secure and encrypted communication channels including only up-to-date\nand approved protocols used when migrating servers, services, applications, or\ndata to cloud environments?\n"
+    },
+    {
+      "id": "IVS-08.1",
+      "control_id": "IVS-08",
+      "body": "Are high-risk environments identified and documented?\n"
+    },
+    {
+      "id": "IVS-09.1",
+      "control_id": "IVS-09",
+      "body": "Are processes, procedures, and defense-in-depth techniques defined, implemented,\nand evaluated for protection, detection, and timely response to network-based\nattacks?\n"
+    },
+    {
+      "id": "LOG-01.1",
+      "control_id": "LOG-01",
+      "body": "Are logging and monitoring policies and procedures established, documented,\napproved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "LOG-01.2",
+      "control_id": "LOG-01",
+      "body": "Are policies and procedures reviewed and updated at least annually?\n"
+    },
+    {
+      "id": "LOG-02.1",
+      "control_id": "LOG-02",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to ensure audit log security and retention?\n"
+    },
+    {
+      "id": "LOG-03.1",
+      "control_id": "LOG-03",
+      "body": "Are security-related events identified and monitored within applications and\nthe underlying infrastructure?\n"
+    },
+    {
+      "id": "LOG-03.2",
+      "control_id": "LOG-03",
+      "body": "Is a system defined and implemented to generate alerts to responsible stakeholders\nbased on security events and their corresponding metrics?\n"
+    },
+    {
+      "id": "LOG-04.1",
+      "control_id": "LOG-04",
+      "body": "Is access to audit logs restricted to authorized personnel, and are records\nmaintained to provide unique access accountability?\n"
+    },
+    {
+      "id": "LOG-05.1",
+      "control_id": "LOG-05",
+      "body": "Are security audit logs monitored to detect activity outside of typical or\nexpected patterns?\n"
+    },
+    {
+      "id": "LOG-05.2",
+      "control_id": "LOG-05",
+      "body": "Is a process established and followed to review and take appropriate and timely\nactions on detected anomalies?\n"
+    },
+    {
+      "id": "LOG-06.1",
+      "control_id": "LOG-06",
+      "body": "Is a reliable time source being used across all relevant information processing\nsystems?\n"
+    },
+    {
+      "id": "LOG-07.1",
+      "control_id": "LOG-07",
+      "body": "Are logging requirements for information meta/data system events established,\ndocumented, and implemented?\n"
+    },
+    {
+      "id": "LOG-07.2",
+      "control_id": "LOG-07",
+      "body": "Is the scope reviewed and updated at least annually, or whenever there is\na change in the threat environment?\n"
+    },
+    {
+      "id": "LOG-08.1",
+      "control_id": "LOG-08",
+      "body": "Are audit records generated, and do they contain relevant security information?\n"
+    },
+    {
+      "id": "LOG-09.1",
+      "control_id": "LOG-09",
+      "body": "Does the information system protect audit records from unauthorized access,\nmodification, and deletion?\n"
+    },
+    {
+      "id": "LOG-10.1",
+      "control_id": "LOG-10",
+      "body": "Are monitoring and internal reporting capabilities established to report on\ncryptographic operations, encryption, and key management policies, processes,\nprocedures, and controls?\n"
+    },
+    {
+      "id": "LOG-11.1",
+      "control_id": "LOG-11",
+      "body": "Are key lifecycle management events logged and monitored to enable auditing\nand reporting on cryptographic keys' usage?\n"
+    },
+    {
+      "id": "LOG-12.1",
+      "control_id": "LOG-12",
+      "body": "Is physical access logged and monitored using an auditable access control\nsystem?\n"
+    },
+    {
+      "id": "LOG-13.1",
+      "control_id": "LOG-13",
+      "body": "Are processes and technical measures for reporting monitoring system anomalies\nand failures defined, implemented, and evaluated?\n"
+    },
+    {
+      "id": "LOG-13.2",
+      "control_id": "LOG-13",
+      "body": "Are accountable parties immediately notified about anomalies and failures?\n"
+    },
+    {
+      "id": "SEF-01.1",
+      "control_id": "SEF-01",
+      "body": "Are policies and procedures for security incident management, e-discovery,\nand cloud forensics established, documented, approved, communicated, applied,\nevaluated, and maintained?\n"
+    },
+    {
+      "id": "SEF-01.2",
+      "control_id": "SEF-01",
+      "body": "Are policies and procedures reviewed and updated annually?\n"
+    },
+    {
+      "id": "SEF-02.1",
+      "control_id": "SEF-02",
+      "body": "Are policies and procedures for timely management of security incidents established,\ndocumented, approved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "SEF-02.2",
+      "control_id": "SEF-02",
+      "body": "Are policies and procedures for timely management of security incidents reviewed\nand updated at least annually?\n"
+    },
+    {
+      "id": "SEF-03.1",
+      "control_id": "SEF-03",
+      "body": "Is a security incident response plan that includes relevant internal departments,\nimpacted CSCs, and other business-critical relationships (such as supply-chain)\nestablished, documented, approved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "SEF-04.1",
+      "control_id": "SEF-04",
+      "body": "Is the security incident response plan tested and updated for effectiveness,\nas necessary, at planned intervals or upon significant organizational or environmental\nchanges?\n"
+    },
+    {
+      "id": "SEF-05.1",
+      "control_id": "SEF-05",
+      "body": "Are information security incident metrics established and monitored?\n"
+    },
+    {
+      "id": "SEF-06.1",
+      "control_id": "SEF-06",
+      "body": "Are processes, procedures, and technical measures supporting business processes\nto triage security-related events defined, implemented, and evaluated?\n"
+    },
+    {
+      "id": "SEF-07.1",
+      "control_id": "SEF-07",
+      "body": "Are processes, procedures, and technical measures for security breach notifications\ndefined and implemented?\n"
+    },
+    {
+      "id": "SEF-07.2",
+      "control_id": "SEF-07",
+      "body": "Are security breaches and assumed security breaches reported (including any\nrelevant supply chain breaches) as per applicable SLAs, laws, and regulations?\n"
+    },
+    {
+      "id": "SEF-08.1",
+      "control_id": "SEF-08",
+      "body": "Are points of contact maintained for applicable regulation authorities, national\nand local law enforcement, and other legal jurisdictional authorities?\n"
+    },
+    {
+      "id": "STA-01.1",
+      "control_id": "STA-01",
+      "body": "Are policies and procedures implementing the shared security responsibility\nmodel (SSRM) within the organization established, documented, approved, communicated,\napplied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "STA-01.2",
+      "control_id": "STA-01",
+      "body": "Are the policies and procedures that apply the SSRM reviewed and updated annually?\n"
+    },
+    {
+      "id": "STA-02.1",
+      "control_id": "STA-02",
+      "body": "Is the SSRM applied, documented, implemented, and managed throughout the supply\nchain for the cloud service offering?\n"
+    },
+    {
+      "id": "STA-03.1",
+      "control_id": "STA-03",
+      "body": "Is the CSC given SSRM guidance detailing information about SSRM applicability\nthroughout the supply chain?\n"
+    },
+    {
+      "id": "STA-04.1",
+      "control_id": "STA-04",
+      "body": "Is the shared ownership and applicability of all CSA CCM controls delineated\naccording to the SSRM for the cloud service offering?\n"
+    },
+    {
+      "id": "STA-05.1",
+      "control_id": "STA-05",
+      "body": "Is SSRM documentation for all cloud services the organization uses reviewed\nand validated?\n"
+    },
+    {
+      "id": "STA-06.1",
+      "control_id": "STA-06",
+      "body": "Are the portions of the SSRM the organization is responsible for implemented,\noperated, audited, or assessed?\n"
+    },
+    {
+      "id": "STA-07.1",
+      "control_id": "STA-07",
+      "body": "Is an inventory of all supply chain relationships developed and maintained?\n"
+    },
+    {
+      "id": "STA-08.1",
+      "control_id": "STA-08",
+      "body": "Are risk factors associated with all organizations within the supply chain\nperiodically reviewed by CSPs?\n"
+    },
+    {
+      "id": "STA-09.1",
+      "control_id": "STA-09",
+      "body": "Do service agreements between CSPs and CSCs (tenants) incorporate at least the following mutually agreed upon provisions and/or terms?\n• Scope, characteristics, and location of business relationship and services offered\n• Information security requirements (including SSRM)\n• Change management process\n• Logging and monitoring capability\n• Incident management and communication procedures\n• Right to audit and third-party assessment\n• Service termination\n• Interoperability and portability requirements\n• Data privacy\n"
+    },
+    {
+      "id": "STA-10.1",
+      "control_id": "STA-10",
+      "body": "Are supply chain agreements between CSPs and CSCs reviewed at least annually?\n"
+    },
+    {
+      "id": "STA-11.1",
+      "control_id": "STA-11",
+      "body": "Is there a process for conducting internal assessments at least annually to\nconfirm the conformance and effectiveness of standards, policies, procedures,\nand SLA activities?\n"
+    },
+    {
+      "id": "STA-12.1",
+      "control_id": "STA-12",
+      "body": "Are policies that require all supply chain CSPs to comply with information\nsecurity, confidentiality, access control, privacy, audit, personnel policy, and\nservice level requirements and standards implemented?\n"
+    },
+    {
+      "id": "STA-13.1",
+      "control_id": "STA-13",
+      "body": "Are supply chain partner IT governance policies and procedures reviewed periodically?\n"
+    },
+    {
+      "id": "STA-14.1",
+      "control_id": "STA-14",
+      "body": "Is a process to conduct periodic security assessments for all supply chain\norganizations defined and implemented?\n"
+    },
+    {
+      "id": "TVM-01.1",
+      "control_id": "TVM-01",
+      "body": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained to identify, report, and prioritize the remediation\nof vulnerabilities to protect systems against vulnerability exploitation?\n"
+    },
+    {
+      "id": "TVM-01.2",
+      "control_id": "TVM-01",
+      "body": "Are threat and vulnerability management policies and procedures reviewed and\nupdated at least annually?\n"
+    },
+    {
+      "id": "TVM-02.1",
+      "control_id": "TVM-02",
+      "body": "Are policies and procedures to protect against malware on managed assets established,\ndocumented, approved, communicated, applied, evaluated, and maintained?\n"
+    },
+    {
+      "id": "TVM-02.2",
+      "control_id": "TVM-02",
+      "body": "Are asset management and malware protection policies and procedures reviewed\nand updated at least annually?\n"
+    },
+    {
+      "id": "TVM-03.1",
+      "control_id": "TVM-03",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to enable scheduled and emergency responses to vulnerability identifications\n(based on the identified risk)?\n"
+    },
+    {
+      "id": "TVM-04.1",
+      "control_id": "TVM-04",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to update detection tools, threat signatures, and compromise indicators\nweekly (or more frequent) basis?\n"
+    },
+    {
+      "id": "TVM-05.1",
+      "control_id": "TVM-05",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to identify updates for applications that use third-party or open-source\nlibraries (according to the organization's vulnerability management policy)?\n"
+    },
+    {
+      "id": "TVM-06.1",
+      "control_id": "TVM-06",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated for periodic, independent, third-party penetration testing?\n"
+    },
+    {
+      "id": "TVM-07.1",
+      "control_id": "TVM-07",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated for vulnerability detection on organizationally managed assets at least\nmonthly?\n"
+    },
+    {
+      "id": "TVM-08.1",
+      "control_id": "TVM-08",
+      "body": "Is vulnerability remediation prioritized using a risk-based model from an\nindustry-recognized framework?\n"
+    },
+    {
+      "id": "TVM-09.1",
+      "control_id": "TVM-09",
+      "body": "Is a process defined and implemented to track and report vulnerability identification\nand remediation activities that include stakeholder notification?\n"
+    },
+    {
+      "id": "TVM-10.1",
+      "control_id": "TVM-10",
+      "body": "Are metrics for vulnerability identification and remediation established,\nmonitored, and reported at defined intervals?\n"
+    },
+    {
+      "id": "UEM-01.1",
+      "control_id": "UEM-01",
+      "body": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained for all endpoints?\n"
+    },
+    {
+      "id": "UEM-01.2",
+      "control_id": "UEM-01",
+      "body": "Are universal endpoint management policies and procedures reviewed and updated\nat least annually?\n"
+    },
+    {
+      "id": "UEM-02.1",
+      "control_id": "UEM-02",
+      "body": "Is there a defined, documented, applicable and evaluated list containing approved\nservices, applications, and the sources of applications (stores) acceptable for\nuse by endpoints when accessing or storing organization-managed data?\n"
+    },
+    {
+      "id": "UEM-03.1",
+      "control_id": "UEM-03",
+      "body": "Is a process defined and implemented to validate endpoint device compatibility\nwith operating systems and applications?\n"
+    },
+    {
+      "id": "UEM-04.1",
+      "control_id": "UEM-04",
+      "body": "Is an inventory of all endpoints used and maintained to store and access company\ndata?\n"
+    },
+    {
+      "id": "UEM-05.1",
+      "control_id": "UEM-05",
+      "body": "Are processes, procedures, and technical measures defined, implemented and\nevaluated, to enforce policies and controls for all endpoints permitted to access\nsystems and/or store, transmit, or process organizational data?\n"
+    },
+    {
+      "id": "UEM-06.1",
+      "control_id": "UEM-06",
+      "body": "Are all relevant interactive-use endpoints configured to require an automatic\nlock screen?\n"
+    },
+    {
+      "id": "UEM-07.1",
+      "control_id": "UEM-07",
+      "body": "Are changes to endpoint operating systems, patch levels, and/or applications\nmanaged through the organizational change management process?\n"
+    },
+    {
+      "id": "UEM-08.1",
+      "control_id": "UEM-08",
+      "body": "Is information protected from unauthorized disclosure on managed endpoints\nwith storage encryption?\n"
+    },
+    {
+      "id": "UEM-09.1",
+      "control_id": "UEM-09",
+      "body": "Are anti-malware detection and prevention technology services configured on\nmanaged endpoints?\n"
+    },
+    {
+      "id": "UEM-10.1",
+      "control_id": "UEM-10",
+      "body": "Are software firewalls configured on managed endpoints?\n"
+    },
+    {
+      "id": "UEM-11.1",
+      "control_id": "UEM-11",
+      "body": "Are managed endpoints configured with data loss prevention (DLP) technologies\nand rules per a risk assessment?\n"
+    },
+    {
+      "id": "UEM-12.1",
+      "control_id": "UEM-12",
+      "body": "Are remote geolocation capabilities enabled for all managed mobile endpoints?\n"
+    },
+    {
+      "id": "UEM-13.1",
+      "control_id": "UEM-13",
+      "body": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to enable remote company data deletion on managed endpoint devices?\n"
+    },
+    {
+      "id": "UEM-14.1",
+      "control_id": "UEM-14",
+      "body": "Are processes, procedures, and technical and/or contractual measures defined,\nimplemented, and evaluated to maintain proper security of third-party endpoints\nwith access to organizational assets?\n"
+    }
+  ]
+}

@@ -1,0 +1,1189 @@
+[
+  {
+    "name": "ISF SOGP 2022",
+    "mappings": [
+      {
+        "control_id": "A&A-01",
+        "references": ["AS1.1", "AS2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP:\n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "A&A-02",
+        "references": ["AS1.1", "AS2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'conduct independent audit at least annually'."
+      },
+      {
+        "control_id": "A&A-03",
+        "references": ["AS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-04",
+        "references": ["AS1.1", "AS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-05",
+        "references": ["AS1.1", "AS2.1", "AS2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-06",
+        "references": ["AS2.4", "AS2.5"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-01",
+        "references": ["SD1.1", "SD1.2", "BA1.1", "BA1.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP:\n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "AIS-02",
+        "references": ["SD2.1", "BA1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-03",
+        "references": ["AS1.1", "AS1.3", "SD2.9", "SM2.5"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-04",
+        "references": ["SD1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-05",
+        "references": ["SD2.3", "SD2.5"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'Automate when applicable and possible'. "
+      },
+      {
+        "control_id": "AIS-06",
+        "references": ["SD2.7", "SD2.8"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'Automate where possible'."
+      },
+      {
+        "control_id": "AIS-07",
+        "references": ["TM1.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'automating remediation where possible'."
+      },
+      {
+        "control_id": "BCR-01",
+        "references": ["BC1.1", "BC2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "BCR-02",
+        "references": ["BC1.2", "BC2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-03",
+        "references": ["BC1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-04",
+        "references": ["BC2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-05",
+        "references": ["BC2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-06",
+        "references": ["BC2.1", "BC2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-07",
+        "references": ["BC1.2", "BC2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-08",
+        "references": ["SY2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-09",
+        "references": ["BC1.4", "BC2.1", "BC2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-10",
+        "references": ["BC2.3"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'exercise the disaster response plan upon significant changes'.\n'including local emergency authorities (if possible)'."
+      },
+      {
+        "control_id": "BCR-11",
+        "references": ["BC1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-01",
+        "references": ["SY2.4"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "CCC-02",
+        "references": ["SY2.4", "SD1.4", "SD2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'defined quality change control testing process'."
+      },
+      {
+        "control_id": "CCC-03",
+        "references": ["SY2.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-04",
+        "references": ["SY2.4", "SM2.6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-05",
+        "references": ["SY2.1", "SC1.3"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped SOGP controls cover in part the CCM control objective."
+      },
+      {
+        "control_id": "CCC-06",
+        "references": ["SY2.4", "SM2.6"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'Establish change management baselines'."
+      },
+      {
+        "control_id": "CCC-07",
+        "references": ["SY2.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-08",
+        "references": ["TM2.3", "SM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-09",
+        "references": ["SY2.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-01",
+        "references": ["TS2.1", "TS2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "CEK-02",
+        "references": ["TS2.1", "TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-03",
+        "references": ["TS2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-04",
+        "references": ["TS2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-05",
+        "references": ["TS2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-06",
+        "references": ["TS2.1", "TS2.2", "SY2.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-07",
+        "references": ["TS2.1", "TS2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP:\n'Establish and maintain an encryption and key management risk program'."
+      },
+      {
+        "control_id": "CEK-08",
+        "references": ["TS2.2", "SC2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped SOGP controls cover in part the CCM control objective."
+      },
+      {
+        "control_id": "CEK-09",
+        "references": ["AS2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP:\n'Audit encryption and key management systems, policies, and processes'."
+      },
+      {
+        "control_id": "CEK-10",
+        "references": ["TS2.2", "TS2.3", "SY1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-11",
+        "references": ["TS2.1", "TS2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP:\n'(Manage) keys that are provisioned for a unique purpose'."
+      },
+      {
+        "control_id": "CEK-12",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-13",
+        "references": ["TS2.2", "TS2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-14",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-15",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-16",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-17",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-18",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-19",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-20",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-21",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-01",
+        "references": ["PA1.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'.\n'document policies and procedures for the secure disposal of equipment'.\n'equipment used outside the organization's premises'.                                                          "
+      },
+      {
+        "control_id": "DCS-02",
+        "references": ["SC1.3", "PA1.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'.\n'The relocation or transfer request requires the written or cryptographically verifiable authorization'."
+      },
+      {
+        "control_id": "DCS-03",
+        "references": ["PE1.1", "PE2.3"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "DCS-04",
+        "references": ["IM2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "DCS-05",
+        "references": ["SM1.1", "SM2.6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-06",
+        "references": ["SM2.6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-07",
+        "references": ["PE1.1", "PE1.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'safeguard personnel'."
+      },
+      {
+        "control_id": "DCS-08",
+        "references": ["NC1.4"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped SOGP controls cover in part the CCM control objective (Scope of equipment is in SOGP is limited to computer and network names only)."
+      },
+      {
+        "control_id": "DCS-09",
+        "references": ["PE1.2", "PE2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-10",
+        "references": ["PE1.2", "PE2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-11",
+        "references": ["PM2.1", "PM2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-12",
+        "references": ["PE1.3", "NC1.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'protection of power and telecommunication cables from a threat of interception'."
+      },
+      {
+        "control_id": "DCS-13",
+        "references": ["PE1.4"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'monitor, maintain and test for continual effectiveness the temperature and humidity conditions'."
+      },
+      {
+        "control_id": "DCS-14",
+        "references": ["PE1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-15",
+        "references": ["PE1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-01",
+        "references": ["IM1.1", "IM1.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "DSP-02",
+        "references": ["IM1.1", "IM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-03",
+        "references": ["IM1.1", "IM2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-04",
+        "references": ["IM1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-05",
+        "references": ["IM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-06",
+        "references": ["IM1.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'Perform review at least annually'."
+      },
+      {
+        "control_id": "DSP-07",
+        "references": ["SD2.2", "IM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-08",
+        "references": ["IM1.3", "SD2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-09",
+        "references": ["IM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-10",
+        "references": ["IM1.4", "IM2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-11",
+        "references": ["IM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-12",
+        "references": ["IM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-13",
+        "references": ["IM1.3", "IM1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-14",
+        "references": ["IM1.3", "IM1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-15",
+        "references": ["SD2.5", "IM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-16",
+        "references": ["IM1.1", "IM2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-17",
+        "references": ["IM1.1", "IM2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-18",
+        "references": ["IM1.3"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped SOGP controls cover in part the CCM control objective."
+      },
+      {
+        "control_id": "DSP-19",
+        "references": ["IM1.1", "IM1.3", "SC2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-01",
+        "references": ["SG1.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "GRC-02",
+        "references": ["IR1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-03",
+        "references": ["SM1.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'Review all relevant organizational policies and associated procedures at least annually'."
+      },
+      {
+        "control_id": "GRC-04",
+        "references": ["SM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-05",
+        "references": ["SG2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'programs for all the relevant domains of the CCM'."
+      },
+      {
+        "control_id": "GRC-06",
+        "references": ["SG1.1", "SG2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-07",
+        "references": ["SM2.5"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-08",
+        "references": ["SM2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-01",
+        "references": ["PM1.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "HRS-02",
+        "references": ["SM1.1", "SM1.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "HRS-03",
+        "references": ["PM2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "HRS-04",
+        "references": ["PM1.5"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "HRS-05",
+        "references": ["PM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-06",
+        "references": ["PM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-07",
+        "references": ["PM1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-08",
+        "references": ["PM1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-09",
+        "references": ["PM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-10",
+        "references": ["PM1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-11",
+        "references": ["PM2.1", "PM2.2", "PM2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-12",
+        "references": ["PM2.1", "PM2.2", "PM2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-13",
+        "references": ["PM2.1", "PM2.2", "PM2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-01",
+        "references": ["SA1.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "IAM-02",
+        "references": ["SA1.1", "SA1.5"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "IAM-03",
+        "references": ["SA1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-04",
+        "references": ["SA1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-05",
+        "references": ["SA1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-06",
+        "references": ["SA1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-07",
+        "references": ["SA1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-08",
+        "references": ["SA1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-09",
+        "references": ["SA1.3"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped SOGP controls cover in part the CCM control objective."
+      },
+      {
+        "control_id": "IAM-10",
+        "references": ["SA1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-11",
+        "references": ["SA2.1", "SA2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-12",
+        "references": ["TM1.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped SOGP controls cover in part the CCM control objective."
+      },
+      {
+        "control_id": "IAM-13",
+        "references": ["SA1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-14",
+        "references": ["SA1.3", "SA1.4", "SA1.8"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-15",
+        "references": ["SA1.5"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-16",
+        "references": ["SA1.3", "SA1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IPY-01",
+        "references": ["SD2.1", "SC1.1", "SY1.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'.\n'Application development portability'."
+      },
+      {
+        "control_id": "IPY-02",
+        "references": ["SY1.2", "SD2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped SOGP controls cover in part the CCM control objective."
+      },
+      {
+        "control_id": "IPY-03",
+        "references": ["SY1.1", "SY1.2", "NC1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IPY-04",
+        "references": ["SC1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-01",
+        "references": ["SY1.3"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "IVS-02",
+        "references": ["SY2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-03",
+        "references": ["NC1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-04",
+        "references": ["SY1.1", "SY1.3", "SY1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-05",
+        "references": ["SD1.3", "SY1.1", "TS1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-06",
+        "references": ["SC2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'CSP and CSC (tenant) user access and intra-tenant access is appropriately segmented and segregated'"
+      },
+      {
+        "control_id": "IVS-07",
+        "references": ["IM1.4", "IM1.4", "NC1.4", "SC2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-08",
+        "references": ["NC1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-09",
+        "references": ["NC1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-01",
+        "references": ["TM1.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "LOG-02",
+        "references": ["TM1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-03",
+        "references": ["TM1.2", "TM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-04",
+        "references": ["TM1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-05",
+        "references": ["TM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-06",
+        "references": ["TM1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-07",
+        "references": ["TM1.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'Review and update the scope at least annually or whenever there is a change in the threat environment'."
+      },
+      {
+        "control_id": "LOG-08",
+        "references": ["TM1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-09",
+        "references": ["TM1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-10",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-11",
+        "references": ["TS2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-12",
+        "references": ["PE2.3", "TM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-13",
+        "references": ["TM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-01",
+        "references": ["TM2.1", "TM2.4"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "SEF-02",
+        "references": ["TM2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "SEF-03",
+        "references": ["TM2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-04",
+        "references": ["TM2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-05",
+        "references": ["TM1.3", "TM2.1", "TM2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-06",
+        "references": ["TM1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-07",
+        "references": ["IM1.3", "TM2.1", "SC1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-08",
+        "references": ["SM2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-01",
+        "references": ["SC1.1", "SC2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "STA-02",
+        "references": ["SC1.1", "SC2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-03",
+        "references": ["SC1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-04",
+        "references": ["SC2.1", "SC2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'of all CSA CCM controls'."
+      },
+      {
+        "control_id": "STA-05",
+        "references": ["SC1.1", "SC2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-06",
+        "references": ["SC1.4", "SC2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'portions of the SSRM which the organization is responsible for'."
+      },
+      {
+        "control_id": "STA-07",
+        "references": ["SC1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-08",
+        "references": ["SC1.1", "SC1.4"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review risk factors'."
+      },
+      {
+        "control_id": "STA-09",
+        "references": ["SC1.3", "SY2.1"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'Logging and monitoring capability, Interoperability and portability requirements'."
+      },
+      {
+        "control_id": "STA-10",
+        "references": ["SC1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-11",
+        "references": ["SC1.1", "SC1.4", "SC2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-12",
+        "references": ["SC1.1", "SC1.3", "SC1.4", "SC2.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-13",
+        "references": ["SC1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-14",
+        "references": ["SC1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-01",
+        "references": ["TM1.1", "SC2.2"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "TVM-02",
+        "references": ["TS1.2", "TS1.3"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "TVM-03",
+        "references": ["TM1.1", "TM2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-04",
+        "references": ["TS1.3", "TS1.4", "TM1.3", "TM1.4", "IM1.5"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-05",
+        "references": ["TM1.1", "SD2.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-06",
+        "references": ["AS1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-07",
+        "references": ["TM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-08",
+        "references": ["TM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-09",
+        "references": ["TM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-10",
+        "references": ["TM1.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-01",
+        "references": ["PA1.2", "PA1.3", "PA1.5", "PA2.1", "PM1.4"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'review and update the policies and procedures at least annually'."
+      },
+      {
+        "control_id": "UEM-02",
+        "references": ["PA1.2", "PA1.3", "PA2.1", "PA2.2", "PA2.3", "PM1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-03",
+        "references": ["PA1.2", "PA2.1", "PA2.3", "SD2.5"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped SOGP controls cover in part the CCM control objective."
+      },
+      {
+        "control_id": "UEM-04",
+        "references": ["SM2.6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-05",
+        "references": ["PA1.2", "PA1.3", "PA1.5", "PA2.1", "PM1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-06",
+        "references": ["PA1.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-07",
+        "references": ["PA1.2", "TM1.1", "SY2.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-08",
+        "references": ["PA1.2", "PA1.3", "PA1.5", "PA2.2", "PM1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-09",
+        "references": ["PA1.2", "PA1.5", "PM1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-10",
+        "references": ["PA1.2", "PA1.3", "PM1.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-11",
+        "references": ["IM1.5", "PA2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-12",
+        "references": ["PA2.1", "PA2.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-13",
+        "references": ["PA2.1", "PA2.2", "PM1.4"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in SOGP: \n'enable the deletion of company data remotely on managed endpoint devices'.\nNote: UEM-13 scope extends beyond employee owned mobile devices."
+      },
+      {
+        "control_id": "UEM-14",
+        "references": ["PA1.2", "PA1.3", "PA1.5", "PA2.1", "PM1.4", "SC1.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      }
+    ]
+  }
+]

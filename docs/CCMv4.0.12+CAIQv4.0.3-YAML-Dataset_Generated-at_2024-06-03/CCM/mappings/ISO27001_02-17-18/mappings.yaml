@@ -1,0 +1,2183 @@
+- name: 'ISO/IEC 27001:2013,27002:2013,27017:2015,27018:2019'
+  mappings:
+    - control_id: A&A-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.2'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'at least annually' in last sentence.
+    - control_id: A&A-02
+      references:
+        - '27001: A.18.2.1'
+        - '27002: 18.2.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Terms 'audit and assurance' and 'at least annually' are not specifically called out.
+    - control_id: A&A-03
+      references:
+        - '27001: 9.3.2'
+        - '27001: A.18.2.1'
+        - '27002: 18.2.1'
+        - '27018: 18.2.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: A&A-04
+      references:
+        - '27001: 9.3.2'
+        - '27001: A.18.2.2'
+        - '27002: 18.2.2'
+        - '27001: A.18.2.3'
+        - '27002: 18.2.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: A&A-05
+      references:
+        - '27001: 9.2'
+        - '27001: 9.3'
+        - '27001: A.18.2.2'
+        - '27002: 18.2.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: A&A-06
+      references:
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 8.2'
+        - '27001: 8.3'
+        - '27001: 9.3.2.d'
+        - '27001: 10'
+        - '27001: A.18.2.2'
+        - '27002: 18.2.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Establish, document, approve, communicate, apply, evaluate and maintain a risk-based corrective action plan to remediate audit findings'.
+    - control_id: AIS-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.14.2.1'
+        - '27002: 14.2.1'
+        - '27017: 14.2.1'
+        - '27001: A.14.2.5'
+        - '27001: 14.2.5'
+        - '27017: 14.2.5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'to review and update the policies and procedures at least annually.'
+    - control_id: AIS-02
+      references:
+        - '27001: A.5.1.1'
+        - '27017: 5.1.1'
+        - '27001: A.7.2.2'
+        - '27002: 7.2.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        ISO does not explicitly stipulate baseline requirements for securing different applications.
+    - control_id: AIS-03
+      references:
+        - '27001: 9.1'
+        - '27001: A.18.2.2'
+        - '27002: 18.2.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        ISO does not explicitly specify the need to implement technical and operational metrics in alignment with business objectives, security requirements, and compliance obligations.
+    - control_id: AIS-04
+      references:
+        - '27001: A.14.1.1'
+        - '27002: 14.1.1'
+        - '27017: 14.1.1'
+        - '27001: A.14.1.2'
+        - '27002: 14.1.2'
+        - '27017: 14.1.2'
+        - '27001: A.14.2.1'
+        - '27002: 14.2.1'
+        - '27017: 14.2.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: AIS-05
+      references:
+        - '27001: A.14.2.8'
+        - '27001: A.14.2.9'
+        - '27001: A.12.1.2'
+        - '27002: 12.1.2'
+        - '27001: A.14.1.1'
+        - '27002: 14.1.1'
+        - '27001: A.14.2.2'
+        - '27002: 14.2.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: AIS-06
+      references:
+        - No mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: AIS-07
+      references:
+        - '27001: A.16.1.5'
+        - '27002: 16.1.5'
+        - '27017: 16.1.5'
+        - '27001: A.12.6.1'
+        - '27002: 12.6.1'
+        - '27017: 12.6.1'
+        - '27018: 12.6.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.7.2.1'
+        - '27001: A.17.1.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        The requirement to provide a framework for setting business continuity objectives.
+    - control_id: BCR-02
+      references:
+        - '27001: 4.2'
+        - '27001: 6.1.2'
+        - '27001: 6.1.3'
+        - '27001: 8.2'
+        - '27001: 8.3'
+        - '27001: A.16.1.6'
+        - '27001: A.17.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        The specific references to a BIA.
+    - control_id: BCR-03
+      references:
+        - '27001: 6.1.1'
+        - '27001: A.17.1.1'
+        - '27001: A.17.1.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        No reference to Business Continuity Strategies
+    - control_id: BCR-04
+      references:
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: A.17.1.1'
+        - '27001: A.17.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        No reference to Business Continuity Strategies
+    - control_id: BCR-05
+      references:
+        - '27001: 7.4'
+        - '27001: 7.5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        No reference to Business Continuity Strategies
+    - control_id: BCR-06
+      references:
+        - '27001: A.17.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Table Top Exercises'
+    - control_id: BCR-07
+      references:
+        - '27001: 7.4'
+      gap_level: Partial Gap
+      addendum: |-
+      Missing specification(s) in ISOs: No reference of communication 'in the course of business continuity and resilience procedures'.
+    - control_id: BCR-08
+      references:
+        - '27001: A.12.3'
+        - '27017: 12.3'
+        - '27018: 12.3.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        ISO does not specify the need to verify data restoration from backup for resiliency.
+    - control_id: BCR-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: BCR-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: BCR-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: CCC-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 8.1'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.12.1.1'
+        - '27001: A.12.1.2'
+        - '27002: 12.1.2'
+        - '27017: 12.1.2'
+        - '27001: A.14.2.2'
+        - '27001: A.14.2.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Review and update the policies and procedures at least annually.'
+    - control_id: CCC-02
+      references:
+        - '27001: A.14.2.2'
+        - '27002: 14.2.2'
+        - '27017: 14.2.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Quality and baselines'
+    - control_id: CCC-03
+      references:
+        - 27001:A.5.1.1
+        - '27017: 5.1.1'
+        - '27001: A.12.1.2'
+        - '27002: 12.1.2'
+        - '27001: A.12.1.4'
+        - '27001: A.14.2.3'
+        - '27001: A.15.2.2'
+        - '27002: 15.2.2'
+        - '27001: A.14.2.6'
+        - '27002: 14.2.6'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-04
+      references:
+        - '27001: A.12.1.4'
+        - '27002: 12.1.4'
+        - '27001: A.12.4.2'
+        - '27002: 12.4.2'
+        - '27001: A.14.2.2'
+        - '27017: 14.2.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-05
+      references:
+        - '27001:  A.15.2.2'
+        - '27001: A.14.2.2'
+        - '27002: 14.2.2'
+        - '27001: A.12.1.2'
+        - '27017: 12.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-06
+      references:
+        - '27001: A.12.1.1'
+        - '27002: 12.1.1'
+        - '27001: 14.2.2'
+        - '27002: 14.2.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Establish change management baselines'
+    - control_id: CCC-07
+      references:
+        - '27001: A.14.2.2'
+        - '27001: A.14.2.4'
+        - '27001: A.12.4.1'
+        - '27002: 12.4.1 (g)'
+        - '27001: A.5.1.1'
+        - '27017: 5.1.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-08
+      references:
+        - '27001: A.12.1.2'
+        - '27002: 12.1.2 (h)'
+        - '27017: 12.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-09
+      references:
+        - '27001: A.12.1.2'
+        - '27002: 12.1.2 (g)'
+        - '27001: A.12.5.1'
+        - '27002: 12.5.1 (e)'
+        - '27001: A.12.3.1'
+        - '27017: 12.3.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.6.1.1'
+        - '27002  6.1.1'
+        - '27001: A.6.1.2'
+        - '27002: 6.1.2'
+        - '27001: A.16'
+        - '27002: 16'
+        - '27001: A.16.1'
+        - '27001: A.10'
+        - '27002: 10'
+        - '27001: A.10.1.1'
+        - '27001: A.10.1.2'
+        - '27017: 10.1.2'
+        - '27001: A.12.4'
+        - '27002: 12.4'
+        - '27001: A.12.7'
+        - '27002: 12.7'
+        - '27017: 12.7'
+        - '27001: A.18.1.1-to-5'
+        - '27001: A.12.1.2'
+        - '27002: 12.1.2'
+        - '27001: A.12.3.1'
+        - '27017: 12.3.1'
+        - '27001: A.15.1.2'
+        - '27017: 15.1.2'
+        - '27001: A.18.1.1'
+        - '27017: 18.1.1'
+        - '27001: A.18.1.5'
+        - '27017: 18.1.5'
+        - '27001: A.18'
+        - '27002: 18'
+        - '27001: A.18.2'
+        - '27002: 18.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-02
+      references:
+        - '27001: 5.3'
+        - '27001: A.5.1.1'
+        - '27002: 5.1.1'
+        - '27001: A.6.1.1'
+        - '27002: 6.1.1'
+        - '27017: 6.1.1'
+        - '27001: A.6.1.2'
+        - '27017: 6.1.2'
+        - '27001: A.9.1'
+        - '27002: 9.1'
+        - '27001: A.10.1.1'
+        - '27002: 10.1.1'
+        - '27001: A.15.1.2'
+        - '27017: 15.1.2'
+        - '27001: A.13.1.3'
+        - '27017: 13.1.3'
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2'
+        - '27017: 10.1.2'
+        - '27017: CLD 6.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-03
+      references:
+        - '27001: A.18.1.1'
+        - '27001: A.18.1.2'
+        - '27001: A.18.1.3'
+        - '27001: A.18.1.4'
+        - '27001: A.18.1.5'
+        - '27001: A.10.1'
+        - '27002: 10.1'
+        - '27001: A.13.2.1'
+        - '27002: 13.2.1'
+        - '27001: A.18'
+        - '27002: 18'
+        - '27001: A.14.1.2'
+        - '27002: 14.1.2'
+        - '27001: A.14.1.3'
+        - 27002 14.1.3 c)
+        - 27001 - A.10.1.1
+        - 27017 - 10.1.1
+        - 27001 - A.10.1.2
+        - 27017 - 10.1.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-04
+      references:
+        - '27001: 6.1.2'
+        - '27001: 6.1.3'
+        - '27001: A.8.2'
+        - '27002: 8.2'
+        - '27001: A.8.3'
+        - '27001: A.10.1.1'
+        - '27002: 10.1.1 (b)'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-05
+      references:
+        - '27001: A.12.1.2'
+        - '27002: 12.1.2'
+        - '27017: 12.1.2'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 e)'
+        - '27001: A.14.2.2'
+        - '27002: 14.2.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-06
+      references:
+        - '27001: 8'
+        - '27001: A.12.1.2'
+        - '27002: 12.1.2'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 e)'
+        - '27017: 10.1.2'
+        - '27001: A.10.1.1'
+        - '27002: 10.1.1'
+        - '27017: 10.1.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-07
+      references:
+        - '27001: 8'
+        - '27001: A.10.1.1'
+        - '27002: 10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27017: 10.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-08
+      references:
+        - '27001: A.10.1'
+        - '27017: 10.1'
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27017: 10.1.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'The cloud service provider should provide capabilities to permit the cloud service customer to independently store and manage encryption keys used for protection of any data owned or managed by the cloud service customer'
+    - control_id: CEK-09
+      references:
+        - '27001: 9.2'
+        - '27001: A.18.2.1'
+        - '27001: A.18.2.2'
+        - '27001: A.12.7'
+        - '27002: 12.7'
+        - '27017: 12.7'
+        - '27001: A.10.1.2'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 k)'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-10
+      references:
+        - '27001: A.10.1.1'
+        - '27002: 10.1.1 (e)'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2'
+        - '27002: 10.1.2 (a)'
+        - '27017: 10.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-11
+      references:
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 (c)'
+        - '27017: 10.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-12
+      references:
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 e)'
+        - '27017: 10.1.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Keys Rotation' requirement not mentioned
+    - control_id: CEK-13
+      references:
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 (g),(f)'
+        - '27017: 10.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-14
+      references:
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27017: 10.1.2'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 (j)'
+        - '27001: A.18.1.3'
+        - '27002: 18.1.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-15
+      references:
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 a)'
+        - '27017: 10.1.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Keys Pre-Activation' requirement not mentioned
+    - control_id: CEK-16
+      references:
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27017: 10.1.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Keys Suspension' requirement not mentioned
+    - control_id: CEK-17
+      references:
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2'
+        - '27017: 10.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-18
+      references:
+        - '27001: A.10.1.1'
+        - '27017: 10.1.1'
+        - '27001: A.10.1.2'
+        - '27017: 10.1.2'
+        - '27002: 10.1.2 (i)'
+        - '27001: 9.0'
+        - '27002: 9.0'
+        - '27017: 9.0'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'secure repository requiring least privileged access'
+    - control_id: CEK-19
+      references:
+        - '27001: A.10.1.1'
+        - '27002: 10.1.1 (d)'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 (f),(g)'
+        - '27001: A.18.1.5'
+        - '27001: A.18.1.3'
+        - '27002: 18.1.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-20
+      references:
+        - '27001: 8.2'
+        - '27001: 8.3'
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2 (h)'
+        - '27001: A.18.1.5'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-21
+      references:
+        - '27001: A.10.1.2'
+        - '27002: 10.1.2'
+        - '27017: 10.1.2'
+        - '27001: A.18.1.5'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.11.2.7'
+        - '27002: 11.2.7'
+        - '27017: 11.2.7'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-02
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.11.2.5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Apply and maintain policies and procedures for the relocation or transfer of hardware, software, or data/information to an offsite or alternate location'
+        'relocation requires the cryptographically verifiable authorization.'
+    - control_id: DCS-03
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.11.1.3'
+        - '27002: 11.1.3'
+        - '27017: 11.1.3'
+        - '27001: A.11.1.5'
+        - '27002: 11.1.5'
+        - '27017: 11.1.5'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-04
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.8.3.3'
+        - '27002: 8.3.3'
+        - '27017: 8.3.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-05
+      references:
+        - '27001: A.8.2.1'
+        - '27002: 8.2.1'
+        - '27017: 8.2.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'classify physical assets'
+    - control_id: DCS-06
+      references:
+        - '27001: A.8.1.1'
+        - '27002: 8.1.1'
+        - '27017: 8.1.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'classify physical assets'
+    - control_id: DCS-07
+      references:
+        - '27001: A.11.1.1'
+        - '27002: 11.1.1'
+        - '27017: 11.1.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: DCS-09
+      references:
+        - '27001: A.11.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: DCS-11
+      references:
+        - '27001: 7.2'
+        - '27001: A.16.1.1'
+        - '27001: A.16.1.2'
+        - '27001: A.16.1.3'
+        - '27001: A.7.2.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'datacenter personnel' (training)'
+    - control_id: DCS-12
+      references:
+        - '27001: A.11.2.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-13
+      references:
+        - '27001: A.11'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-14
+      references:
+        - '27001: A.17.1.3'
+        - '27001: A.11.2.1'
+        - '27001: A.11.2.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        No requirements to exercise environmental controls
+    - control_id: DCS-15
+      references:
+        - '27001: A.11.2.1'
+        - '27002: 11.2.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.8.2.1'
+        - '27001: A.12.1'
+        - '27002: 12.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to review and update the policies and procedures at least annually.
+    - control_id: DSP-02
+      references:
+        - '27001: A.8.3.2'
+        - '27002: 8.3.2'
+        - '27001: A.11.2.7'
+        - '27002: 11.2.7'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to ensure that data is not recoverable by any forensic means.
+    - control_id: DSP-03
+      references:
+        - '27001: A.8.1.1'
+        - '27002: 8.1.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement for maintaining an inventory for personal data
+    - control_id: DSP-04
+      references:
+        - '27001: A.8.2.1'
+        - '27002: 8.2.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: DSP-06
+      references:
+        - '27001: A.8.1.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to perform a review at least annually.
+    - control_id: DSP-07
+      references:
+        - '27001: A.14.1.1'
+        - 27002:14.1.1
+        - '27001: A.14.2.5'
+        - 27002:14.2.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        incorporating security requirements at the design stage
+    - control_id: DSP-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: DSP-09
+      references:
+        - '27001: 6.1.1'
+        - '27001: 6.1.2'
+        - '27001: 6.1.3'
+        - '27001: A.18.1.4'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Conduct a Data Protection Impact Assessment (DPIA)'.
+    - control_id: DSP-10
+      references:
+        - '27001: A.13.2.1'
+        - '27002: 13.2.1'
+        - '27001: A.8.3.3'
+        - '27002: 8.3.3'
+        - '27001: A.13.2.3'
+        - '27002: 13.2.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to ensure information is only processed within scope as permitted by the respective laws and regulations.
+    - control_id: DSP-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: DSP-12
+      references:
+        - '27001: A.18.1.4'
+        - '27002: 18.1.4'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Processing personal data as per the purpose declared to the data subject
+    - control_id: DSP-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: DSP-14
+      references:
+        - '27018: A.6.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to disclose the details of any personal or sensitive data access by sub-processors to the data owner prior to initiation of that processing.
+    - control_id: DSP-15
+      references:
+        - '27001: A.14.3.1'
+        - '27002: 14.3.1'
+        - '27001: A.12.1.4'
+        - '27002: 12.1.4'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Obtain explicit authorization from data owners
+    - control_id: DSP-16
+      references:
+        - '27001: A.18.1.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-17
+      references:
+        - '27001: A.18.1.3'
+        - '27002: 18.1.3'
+        - 27001:A.18.1.4
+        - 27002:18.1.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-18
+      references:
+        - '27018: A.6.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-19
+      references:
+        - '27001: A.8.1.1'
+        - '27002: 8.1.1'
+        - '27017: 8.1.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 5.3'
+        - '27001: A.5'
+        - '27002: 5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing in the ISOs:
+        'policies and procedures for an information governance program'
+        'Review and update the policies and procedures at least annually.'
+    - control_id: GRC-02
+      references:
+        - '27001: 6.1'
+        - '27001: 6.2'
+        - '27001: A.6.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-03
+      references:
+        - '27001: 7.5.2 (c)'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'at least annually'
+    - control_id: GRC-04
+      references:
+        - '27001: A.5.1.1'
+        - '27002: 5.1.1 (c)'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-05
+      references:
+        - '27001: 4.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'domains of the CCMv4.0' missing from ISOs
+    - control_id: GRC-06
+      references:
+        - '27001: 5.1'
+        - '27001: 5.3'
+        - '27001: A.6.1.1'
+        - '27002: 6.1.1'
+        - '27001: A.7.2.1'
+        - '27002: 7.2.1'
+        - '27018:  5.1.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing in the ISOs:
+        'for planning, implementing, operating, assessing, and improving governance programs.'
+        'document roles and responsibilities'
+    - control_id: GRC-07
+      references:
+        - '27001: 4.2'
+        - '27001: A.18.1'
+        - '27001: A.18.2.2'
+        - '27018: A.18.1'
+        - '27018: A.18.2.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-08
+      references:
+        - '27001: A.6.1.4'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.7.1.1'
+        - '27002: 7.1.1'
+        - '27017: 7.1.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        requirement to review and update the policies and procedures at least annually.
+    - control_id: HRS-02
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.8.1.3'
+        - '27002: 8.1.3'
+        - '27017: 8.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        requirement to review and update the policies and procedures at least annually.
+    - control_id: HRS-03
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.11.2.8'
+        - '27002: 11.2.8'
+        - '27017: 11.2.8'
+        - '27001: A.11.2.9'
+        - '27002: 11.2.9'
+        - '27017: 11.2.9'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        requirement to review and update the policies and procedures at least annually.
+    - control_id: HRS-04
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.6.2.2'
+        - '27002: 6.2.2'
+        - '27001: A.11.2.6'
+        - '27002: 11.2.6'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        requirement to review and update the policies and procedures at least annually.
+    - control_id: HRS-05
+      references:
+        - '27001: A.8.1.4'
+        - '27002: 8.1.4'
+        - '27017: 8.1.4'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-06
+      references:
+        - '27001: A.7.3.1'
+        - '27002: 7.3.1'
+        - '27017: 7.3.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: HRS-08
+      references:
+        - '27001: 7.3'
+        - '27001: A.7.1.2'
+        - '27002: 7.1.2'
+        - '27017: 7.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-09
+      references:
+        - '27001: 7.4'
+        - '27001: A.6.1.1'
+        - '27002: 6.1.1'
+        - '27017: 6.1.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-10
+      references:
+        - '27001: A.7.1.2'
+        - '27002: 7.1.2'
+        - '27017: 7.1.2'
+        - '27001: A.13.2.4'
+        - '27002: 13.2.4'
+        - '27017: 13.2.4'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-11
+      references:
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: A.7.2.2'
+        - '27002: 7.2.2'
+        - '27017: 7.2.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-12
+      references:
+        - '27001: 7.3'
+        - '27001: A.7.2.2'
+        - '27002: 7.2.2'
+        - '27017: 7.2.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to focus training on 'sensitive organizational and personal data'
+    - control_id: HRS-13
+      references:
+        - '27001: 5.1'
+        - '27001: 7.3'
+        - '27001: A.7.2.1'
+        - '27002: 7.2.1'
+        - '27017: 7.2.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        requirement to focus on 'applicable legal, statutory, or regulatory compliance obligations.'
+    - control_id: IAM-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.9.1.1'
+        - '27002: 9.1.1'
+        - '27001: A.5'
+        - '27002: 5'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-02
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.9.4.3'
+        - '27002: 9.4.3'
+        - '27017: 9.4.3'
+        - '27018: 9.4.3'
+        - '27001: A.9.2.4'
+        - '27002: 9.2.4'
+        - '27017: 9.2.4'
+        - '27001: A.7.2.2'
+        - '27002: 7.2.2'
+        - '27001: A.9.2.6'
+        - '27002: 9.2.6'
+        - '27001: A.9.2.3'
+        - '27002: 9.2.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to review and update the policies and procedures at least annually.
+    - control_id: IAM-03
+      references:
+        - '27001: 9.2 (c)'
+        - '27001: A.8.1.1'
+        - '27002: 8.1.1'
+        - '27001: A.9.4.1'
+        - '27002: 9.4.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        ISO partially addressed Identity Inventory under asset management
+    - control_id: IAM-04
+      references:
+        - '27001: A.6.1.2'
+        - '27002: 6.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-05
+      references:
+        - '27001: A.9.1.1'
+        - '27002: 9.1.1'
+        - '27001: A.9.1.2'
+        - '27002: 9.1.2'
+        - '27001: A.9.2.3'
+        - '27002: 9.2.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from ISOs and has to be
+        used to close the gap.
+    - control_id: IAM-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from ISOs and has to be
+        used to close the gap.
+    - control_id: IAM-08
+      references:
+        - '27001: A.9.2.5'
+        - '27001: A.9.2.6'
+        - '27001: A.9.4.1'
+        - '27017: 9.4.1'
+        - '27001: A.6.1.2'
+        - '27001: A 9.2.5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of separation of duties in reviewing of user access rights.
+    - control_id: IAM-09
+      references:
+        - '27001: A.9.2.3'
+        - '27002: 9.2.3'
+        - '27017: 9.2.3'
+        - '27018: 9.2.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-10
+      references:
+        - '27001: A.9.2.3'
+        - '27002: 9.2.3'
+        - '27017: 9.2.3'
+        - '27018: 9.2.3'
+        - '27001: A.9.4.4'
+        - '27002: 9.4.4'
+        - '27017: 9.4.4'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to prevent the culmination of segregated privileged access.
+    - control_id: IAM-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: N/A
+    - control_id: IAM-12
+      references:
+        - '27001: A.12.4.1'
+        - '27002: 12.4.1'
+        - '27017: 12.4.1'
+        - '27018: 12.4.1'
+        - '27001: A.12.4.2'
+        - '27002: 12.4.2'
+        - '27017: 12.4.2'
+        - '27018: 12.4.2'
+        - '27001: A.12.4.3'
+        - '27002: 12.4.3'
+        - '27017: 12.4.3'
+        - '27018: 12.4.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to control the ability to disable logs through a procedure that ensures the segregation of duties and break glass procedures.
+    - control_id: IAM-13
+      references:
+        - '27001: A.9.2.1'
+        - '27002: 9.2.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-14
+      references:
+        - '27001: A.9.1.2'
+        - '27002: 9.1.2'
+        - '27017: 9.1.2'
+        - '27001: A.9.2.4'
+        - '27002: 9.2.4'
+        - '27017: 9.2.4'
+        - '27001: A.9.4.2'
+        - '27002: 9.4.2'
+        - '27017: 9.4.2'
+        - '27018: 9.4.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to include multifactor authentication for at least privileged user and sensitive data access.
+    - control_id: IAM-15
+      references:
+        - '27001: A.9.2.4'
+        - '27002: 9.2.4'
+        - '27017: 9.2.4'
+        - '27018: 9.2.4'
+        - '27001: A.9.3.1'
+        - '27002: 9.3.1'
+        - '27017: 9.3.1'
+        - '27018: 9.3.1'
+        - '27001: A.9.4.3'
+        - '27002: 9.4.3'
+        - '27017: 9.4.3'
+        - '27018: 9.4.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-16
+      references:
+        - '27001: A.9.2.5'
+        - '27002: 9.2.5'
+        - '27017: 9.2.5'
+        - '27018: 9.2.5'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.14.1.1'
+        - '27017: 14.1.1'
+        - '27001: A.14.1.2'
+        - '27002: 14.1.2'
+        - '27017: 14.1.2'
+        - '27001: A.14.2'
+        - '27002: 14.2'
+        - '27001: A.14.2.1'
+        - '27017: 14.2.1'
+        - '27001: A.14.2.5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of communications between application services (APIs)
+    - control_id: IPY-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: IPY-03
+      references:
+        - '27001: A.18.1'
+        - '27001: A.15.1.1'
+        - '27002: 15.1.1'
+        - '27017: 15.1.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: IVS-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27017: 5'
+        - '27018: 5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'Infrastructure & Virtualization Security'
+    - control_id: IVS-02
+      references:
+        - '27001: 5.3'
+        - '27001: 6.1'
+        - '27001: 9.1'
+        - '27001: A.12.1.3'
+        - '27002: 12.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'Infrastructure & Virtualization Security'
+    - control_id: IVS-03
+      references:
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: A.13.1.1'
+        - '27002: 13.1.1'
+        - '27001: A.13.1.2'
+        - '27002: 13.1.2'
+        - '27001: A.13.1.3'
+        - '27002: 13.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'Infrastructure & Virtualization Security'
+    - control_id: IVS-04
+      references:
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: A.14.2.2'
+        - '27002: 14.2.2'
+        - '27001: A.14.2.3'
+        - 27001 A.14.2.4
+        - '27018: 12.1.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'Infrastructure & Virtualization Security'
+    - control_id: IVS-05
+      references:
+        - '27001: 8.1'
+        - '27001 A.12.1.4'
+        - '27002 12.1.4'
+        - '27017 12.1.4'
+        - '27018 12.1.4'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'Infrastructure & Virtualization Security'
+    - control_id: IVS-06
+      references:
+        - '27001: 9.1'
+        - '27001: A.13.1.3'
+        - '27002: 13.1.3'
+        - '27017: 13.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'Design, develop, deploy and configure applications and infrastructures'
+        'monitored and restricted from other tenants.'
+    - control_id: IVS-07
+      references:
+        - '27001: A.13.1.1'
+        - '27002: 13.1.1'
+        - '27017: 13.1.1'
+        - '27018: 13.1.1'
+        - '27001: A.13.1.2'
+        - '27002: 13.1.2'
+        - '27017: 13.1.2'
+        - '27018: 13.1.2'
+        - '27001: A.13.1.3'
+        - '27002: 13.1.3'
+        - '27017: 13.1.3'
+        - '27018: 13.1.3'
+        - '27001: A.13.2.1'
+        - '27002: 13.2.1'
+        - '27017: 13.2.1'
+        - '27018: 13.2.1'
+        - '27001: A.13.2.2'
+        - '27002: 13.2.2'
+        - '27017: 13.2.2'
+        - '27018: 13.2.2'
+        - '27001: A.13.2.3'
+        - '27002: 13.2.3'
+        - '27017: 13.2.3'
+        - '27018: 13.2.3'
+        - '27001: A.13.2.4'
+        - '27002: 13.2.4'
+        - '27017: 13.2.4'
+        - '27018: 13.2.4'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'Infrastructure & Virtualization Security'
+    - control_id: IVS-08
+      references:
+        - '27001: 6.1.2'
+        - '27001: 7.5'
+        - '27001: A.9.1.2'
+        - '27002: 9.1.2'
+        - '27017: 9.1.2'
+        - '27001: A.9.4.2'
+        - '27002: 9.4.2'
+        - '27017: 9.4.2'
+        - '27018: 9.4.2'
+        - '27001: A.14.2.5'
+        - '27002: 14.2.5'
+        - '27017: 14.2.5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'Infrastructure & Virtualization Security'
+    - control_id: IVS-09
+      references:
+        - '27001: 6.1'
+        - '27001: 6.2'
+        - '27001: A.14.1.2'
+        - '27002: 14.1.2'
+        - '27017: 14.1.2'
+        - '27001: A.11.1.4'
+        - '27002: 11.1.4'
+        - '27017: 11.1.4'
+        - '27018: 16.1.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of Infrastructure & Virtualization Security
+        Requirement for defense-in-depth approach
+    - control_id: LOG-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.12.4.1'
+        - '27001: A.12.4.2'
+        - '27001: A.12.4.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'at least annually (Review)'.
+    - control_id: LOG-02
+      references:
+        - '27001: A.18.1.3'
+        - '27002: 18.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement for the review and update of policies and procedures.
+    - control_id: LOG-03
+      references:
+        - '27001: A.12.4.1'
+        - '27002: 12.4.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to generate alerts to responsible stakeholders.
+    - control_id: LOG-04
+      references:
+        - '27001: A.12.4.2'
+        - '27001: A.12.4.1'
+        - '27002: 12.4.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-05
+      references:
+        - '27001: A.12.4.3'
+        - '27002: 12.4.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-06
+      references:
+        - '27001: A.12.4.4'
+        - '27002: 12.4.4'
+        - '27017: 12.4.4'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-07
+      references:
+        - '27001: 7.5.3'
+        - '27001: A.12.4.1'
+        - '27002: 12.4.1'
+        - '27017: 12.4.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-08
+      references:
+        - '27001: A.12.4.1'
+        - '27002: 12.4.1'
+        - '27017: 12.4.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-09
+      references:
+        - '27001: A.12.4.2'
+        - '27002: 12.4.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-10
+      references:
+        - '27001: A.10.1'
+        - '27002: 10.1'
+        - '27001: A.10.1.2'
+        - '27017: 10.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-11
+      references:
+        - '27001: A.10.1.2'
+        - '27017: 10.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-12
+      references:
+        - '27001: A.11.1.2'
+        - '27002: 11.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-13
+      references:
+        - '27001: A.16.1.1'
+        - '27002: 16.1.1'
+        - '27001: A.16.1.2'
+        - '27017: 16.1.2'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.16.1'
+        - '27002: 16.1'
+        - '27017: 16.1'
+        - '27018: 16.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to review and update the policies and procedures at least annually.
+    - control_id: SEF-02
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.16.1.2'
+        - '27002: 16.1.2'
+        - '27017: 16.1.2'
+        - '27018: 16.1.2'
+        - '27001: A.16.1.5'
+        - '27002: 16.1.5'
+        - '27017: 16.1.5'
+        - '27018: 16.1.5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to review and update the policies and procedures at least annually.
+    - control_id: SEF-03
+      references:
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: A.16.1.5'
+        - '27002: 16.1.5'
+        - '27017: 16.1.5'
+        - '27017: CLD.12.1.5'
+        - '27018: 16.1.5'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-04
+      references:
+        - '27001: A.18.2.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        'incident response plans'.
+    - control_id: SEF-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: SEF-06
+      references:
+        - '27001: A.16.1.4'
+        - '27002: 16.1.4'
+        - '27017: 16.1.4'
+        - '27018: 16.1.4'
+        - '27001: A.16.1.5'
+        - '27002: 16.1.5'
+        - '27017: 16.1.5'
+        - '27018: 16.1.5'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-07
+      references:
+        - '27001: A.16.1.1'
+        - '27002: 16.1.1'
+        - '27017: 16.1.1'
+        - '27018: 16.1.1'
+        - '27001: A.16.1.2'
+        - '27002: 16.1.2'
+        - '27017: 16.1.2'
+        - '27018: 16.1.2'
+        - '27001: A.16.1.5'
+        - '27002: 16.1.5'
+        - '27017: 16.1.5'
+        - '27018: 16.1.5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement to report relevant supply chain breaches.
+        Requirement to report as per applicable SLAs, laws and regulations.
+    - control_id: SEF-08
+      references:
+        - '27001: 4.2'
+        - '27001: A.6.1.3'
+        - '27002: 6.1.3'
+        - '27017: 6.1.3'
+        - '27018: 6.1.3'
+        - '27001: A.16.1.1'
+        - '27002: 16.1.1'
+        - '27001: A.18.1.1'
+        - '27002: 18.1.1'
+        - '27017: 18.1.1'
+        - '27018: 18.1.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.15.1.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-02
+      references:
+        - '27001: 6.2'
+        - '27001: 7.1'
+        - '27001: 8.1'
+        - '27001: 8.2'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.15.1'
+        - '27001: A.15.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-03
+      references:
+        - '27001: 7.4'
+        - '27001: 9.1'
+        - '27001: A.15.1.2'
+        - '27001: A.15.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-04
+      references:
+        - '27001: 6.2'
+        - '27001: 7.4'
+        - '27001: 9.1'
+        - '27001: A.15.1.2'
+        - '27001: A.15.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-05
+      references:
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.15.1.2'
+        - '27001: A.15.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-06
+      references:
+        - '27001: 8.1'
+        - '27001: A.15.1.2'
+        - '27001: A.15.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-07
+      references:
+        - '27001: 8.1'
+        - '27001: A.15.1.2'
+        - '27001: A.15.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-08
+      references:
+        - '27001: 6.1.1'
+        - '27001: 6.1.2'
+        - '27001: 6.1.3'
+        - '27001: 6.2'
+        - '27001: 8.1'
+        - '27001: A.15.1.2'
+        - '27001: A.15.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-09
+      references:
+        - '27001: 8.1'
+        - '27001: A.15.1.2'
+        - '27001: A.15.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-10
+      references:
+        - '27001: A.15.1'
+        - '27001: A.15.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-11
+      references:
+        - '27001: A.15.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-12
+      references:
+        - '27001: 5.2'
+        - '27001: A.5.1'
+        - '27001: A.7.2.1'
+        - '27001: A.15.1.2'
+        - '27001: A.15.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-13
+      references:
+        - '27001: 8.1'
+        - '27001: 9.2'
+        - '27001: 9.3'
+        - '27001: A.15.1.2'
+        - '27001: A.15.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: STA-14
+      references:
+        - '27001: 6.1.1'
+        - '27001: 6.1.2'
+        - '27001: 8.1'
+        - '27001: 8.2'
+        - '27001: A.15.1.2'
+        - '27001: A.15.1.3'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of a Shared Security Responsibility Model (SSRM).
+    - control_id: TVM-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-02
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.12.2.1'
+        - '27001: A.6.2.1'
+        - '27002: 6.2.1 (h)'
+        - '27001: A.6.2.2'
+        - '27002: 6.2.2 (j)'
+        - '27001: A.7.2.2'
+        - '27002: 7.2.2 (d)'
+        - '27001: A.10.1.1'
+        - '27002: 10.1.1 (g)'
+        - '27001: A.13.2.1'
+        - '27002: 13.2.1 (b)'
+        - '27001: A.15.1.2'
+        - '27017: 15.1.2'
+        - '27001: A.12.2.1'
+        - '27002: 12.2.1 (a),(d)'
+        - '27017: CLD.9.5.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'malware policy and procedures'
+    - control_id: TVM-03
+      references:
+        - '27001: 6.1.3'
+        - '27001: A.12.2.1'
+        - '27001: A.12.6.1'
+        - '27002: 12.6.1(c)(d)(j)'
+        - '27018: 12.6.1(k)(i)'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-04
+      references:
+        - '27001: 6.1.3'
+        - '27001: A.5.1.1'
+        - '27002: 5.1.1 (h)'
+        - '27001: A.12.6.1'
+        - '27002: 12.6.1 (b),(c)'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'detection tools and or a specific time frame for updates as well as no mention of IOC's'
+    - control_id: TVM-05
+      references:
+        - '27001: 6.1.3'
+        - '27001: A.12.6.2'
+        - '27002: 12.6.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'for applications which use...open source libraries according to the organization's vulnerability management standard.'
+    - control_id: TVM-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: TVM-07
+      references:
+        - '27001: A.12.6'
+        - '27001: A.12.6.1'
+        - '27002: 12.6.1'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-08
+      references:
+        - '27001: 8.2'
+        - '27001: 8.3'
+        - '27001: A.12.5.1'
+        - '27001: A.12.6.1'
+        - '27001: A.12.6.1'
+        - '27001: A.18.2.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-09
+      references:
+        - '27001: 7.4'
+        - '27001: A.16.1.2'
+        - '27002: 16.1.2'
+        - '27001: A.16.1.3'
+        - '27002: 16.1.3'
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-10
+      references:
+        - '27001: 5.3'
+        - '27001: 9.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Requirement of 'vulnerability remediation'
+    - control_id: UEM-01
+      references:
+        - '27001: 5.1'
+        - '27001: 5.2'
+        - '27001: 7.3'
+        - '27001: 7.4'
+        - '27001: 7.5'
+        - '27001: 9.1'
+        - '27001: 9.3'
+        - '27001: A.5'
+        - '27002: 5'
+        - '27001: A.6.2.1'
+        - '27002: 6.2.1'
+        - '27017: 6.2.1'
+        - '27018: 6.2.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-02
+      references:
+        - '27001: A.9.1.1'
+        - '27002: 9.1.1'
+        - '27001: A.9.2.2'
+        - '27002: 9.2.2'
+        - '27001: A.12.1.2'
+        - '27002: 12.1.2'
+        - '27001: A.12.5'
+        - '27002: 12.5'
+        - '27001: A.13.2.3'
+        - '27002: 13.2.3'
+        - '27001: A.14.2.2'
+        - 27002:14.2.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-03
+      references:
+        - '27001: A.14.2.4'
+        - '27002: 14.2.4'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-04
+      references:
+        - '27001: A.8.1.1'
+        - '27002: 8.1.1'
+        - '27017: 8.1.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-05
+      references:
+        - '27001: A.12.6.2'
+        - 27002:12.6.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from the ISOs and has to
+        be used to close the gap.
+    - control_id: UEM-07
+      references:
+        - '27001: A.14.2'
+        - '27001: A.14.2.2'
+        - '27002: 14.2.2'
+        - '27001: A.14.2.3'
+        - '27001: A.14.2.4'
+        - '27018: 12.1.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-08
+      references:
+        - '27001: A.11.2.7'
+        - '27002: 11.2.7'
+        - '27001: A.18.1.1'
+        - '27017: 18.1.1'
+        - '27001: A.12.3.1'
+        - '27017: 12.3.1'
+        - '27018: A.11.4'
+        - '27018: A.11.5'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-09
+      references:
+        - '27001: A.12.2'
+        - '27002: 12.2'
+        - '27017: 12.2'
+        - '27018: 12.2'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-10
+      references:
+        - '27001: A.12.6.1'
+        - '27002: 12.6.1'
+        - '27001: A.13.1.2'
+        - '27002: 13.1.2'
+        - '27001: A.6.2.2'
+        - '27002: 6.2.2'
+        - '27018: 16.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-11
+      references:
+        - '27001: A.12.3'
+        - '27002: 12.3'
+        - '27001: A.8.3.1'
+        - '27002: 8.3.1'
+        - '27001: A.12.2'
+        - '27002: 12.2'
+        - '27001: A.18.1.3'
+        - '27002: 18.1.3'
+        - '27001: A.6.1.1'
+        - '27017: 6.1.1'
+        - '27018: 12.3.1'
+        - '27018: 10.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-12
+      references:
+        - '27001: A.6.2.1'
+        - '27002: 6.2.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-13
+      references:
+        - '27001: A.6.2.1'
+        - '27002: 6.2.1'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device
+    - control_id: UEM-14
+      references:
+        - '27001: A.15.1.1'
+        - '27002: 15.1.1'
+        - '27001: A.14.1.2'
+        - '27002: 14.1.2'
+        - '27001: A.6.1.1'
+        - '27017: 6.1.1'
+        - '27001: A.9.2.2'
+        - '27017: 9.2.2'
+        - '27001: A.9.2.4'
+        - '27017: 9.2.4'
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in ISOs:
+        Term 'endpoint' device

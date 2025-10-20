@@ -1,0 +1,1499 @@
+- name: AICPA TSC 2017
+  mappings:
+    - control_id: A&A-01
+      references:
+        - CC2.2
+        - CC2.3
+        - CC3.2
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Review and update the policies and procedures at least annually'.
+    - control_id: A&A-02
+      references:
+        - CC4.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'at least annually'.
+    - control_id: A&A-03
+      references:
+        - CC4.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: A&A-04
+      references:
+        - CC3.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: A&A-05
+      references:
+        - CC3.1
+        - CC3.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'audit planning, security control assessment, conclusion,
+        remediation schedules, report generation, and review of past reports and
+        supporting evidence'.
+    - control_id: A&A-06
+      references:
+        - CC3.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC3.2) 'Determines How to Respond to Risks'.
+    - control_id: AIS-01
+      references:
+        - CC2.2
+        - CC2.3
+        - CC5.3
+        - CC7.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Review and update the policies and procedures at least annually'.
+    - control_id: AIS-02
+      references:
+        - CC8.1
+        - CC4.1
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        Requirements to 'document baseline requirements for securing different
+        applications'.
+    - control_id: AIS-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: AIS-04
+      references:
+        - CC6.8
+        - CC8.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        Requirement 'at least annually' is not covered.
+    - control_id: AIS-05
+      references:
+        - CC6.8
+        - CC8.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'criteria for acceptance of new information systems, upgrades and new
+        versions'
+        'application security assurance and (testing strategy) maintains
+        compliance'
+        'Automate when applicable and possible'.
+    - control_id: AIS-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: AIS-07
+      references:
+        - CC7.1
+        - CC7.4
+        - CC8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-01
+      references:
+        - CC5.3
+        - CC9.1
+        - A1.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Establish, document, approve, communicate, apply, evaluate and maintain
+        policies and procedures'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: BCR-02
+      references:
+        - CC3.1
+        - CC3.2
+        - A1.2
+        - CC7.3
+        - CC7.4
+        - CC7.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-03
+      references:
+        - CC7.3
+        - CC7.4
+        - CC7.5
+        - A1.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Establish strategies', 'risk appetite'.
+    - control_id: BCR-04
+      references:
+        - CC7.5
+        - A1.2
+        - A1.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'operational resilience strategies'.
+    - control_id: BCR-05
+      references:
+        - CC2.1
+        - PI1.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'documentation to support business continuity and operational resilience
+        programs'.
+    - control_id: BCR-06
+      references:
+        - A1.3
+        - CC7.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Exercise and test operational resilience plans'
+        Requirement of testing the plans 'at least annually'.
+    - control_id: BCR-07
+      references:
+        - CC2.3
+        - CC7.5
+        - CC9.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Establish communication in the course of business continuity'.
+    - control_id: BCR-08
+      references:
+        - A1.2
+        - A1.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-09
+      references:
+        - A1.2
+        - CC3.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'to recover from man-made disasters'.
+    - control_id: BCR-10
+      references:
+        - A1.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-11
+      references:
+        - A1.2
+        - CC3.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-01
+      references:
+        - CC8.1
+        - CC5.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-02
+      references:
+        - CC8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-03
+      references:
+        - CC8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-04
+      references:
+        - CC8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-05
+      references:
+        - CC8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-06
+      references:
+        - CC8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-07
+      references:
+        - CC8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-08
+      references:
+        - CC7.4
+        - CC7.5
+        - CC8.1
+        - CC9.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Implement a procedure for the management of exceptions'.
+    - control_id: CCC-09
+      references:
+        - CC8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-01
+      references:
+        - CC5.3
+        - CC6.1
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC6.1) 'Protects Encryption Keys', 'Uses Encryption to Protect Data'
+        (CC6.7) 'Uses Encryption Technologies or Secure Communication Channels to
+        Protect Data'
+        (CC5.3) 'Establishes Policies and Procedures to Support Deployment of
+        Management’s Directives', 'Reassesses Policies and Procedures'.
+    - control_id: CEK-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-03
+      references:
+        - CC6.1
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Cryptographic libraries certified to approved standards'.
+    - control_id: CEK-04
+      references:
+        - CC6.1
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'considering the classification of data', 'usability of encryption
+        technology'.
+    - control_id: CEK-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-16
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-17
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-18
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-19
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-20
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: CEK-21
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: DCS-01
+      references:
+        - P5.1
+        - CC5.3
+        - CC6.5
+        - CC3.3
+        - P1.1
+        - P2.1
+        - P4.0
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Establish, document, approve, communicate, apply, evaluate and maintain
+        policies and procedures'
+        'If the equipment is not physically destroyed a data destruction
+        procedure that renders recovery of information impossible must be
+        applied'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: DCS-02
+      references:
+        - A1.2
+        - CC5.3
+        - CC6.1
+      gap_level: No Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'policies and procedures for the relocation or transfer of hardware,
+        software, or data/information to an offsite or alternate location'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: DCS-03
+      references:
+        - CC3.4
+        - CC5.3
+        - CC6.4
+        - CC6.5
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'policies and procedures for maintaining a safe and secure working
+        environment in offices, rooms, and facilities'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: DCS-04
+      references:
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'policies and procedures for the secure transportation of physical media'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: DCS-05
+      references:
+        - CC6.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'document the physical and logical assets'
+        'based on the organizational business risk'.
+    - control_id: DCS-06
+      references:
+        - CC6.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'track the physical and logical assets'
+        'located at all of the CSPs sites'.
+    - control_id: DCS-07
+      references:
+        - CC3.4
+        - CC6.4
+        - CC6.5
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Establish physical security perimeters between the administrative and
+        business areas and the data storage and processing facilities areas'.
+    - control_id: DCS-08
+      references:
+        - CC6.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Use equipment identification as a method for connection authentication'.
+    - control_id: DCS-09
+      references:
+        - CC3.4
+        - CC6.4
+        - CC6.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'retain access control records on a periodic basis as deemed appropriate
+        by the organization'.
+    - control_id: DCS-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: DCS-11
+      references:
+        - CC1.4
+        - CC6.4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC1.4) 'Provides Training to Maintain Technical Competencies'
+        (CC6.4) 'Creates or Modifies Physical Access'.
+    - control_id: DCS-12
+      references:
+        - A1.2
+      gap_level: Full Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (A1.2) 'Identifies Environmental Threats', 'Implements and Maintains
+        Environmental Protection Mechanisms'.
+    - control_id: DCS-13
+      references:
+        - A1.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'temperature and humidity conditions within accepted industry standards'.
+    - control_id: DCS-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: DCS-15
+      references:
+        - A1.2
+        - CC3.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (A1.2) 'Identifying Environmental Threats'
+        (CC3.2)  'Analyzes Internal and External Factors', 'Identifies and
+        Assesses Criticality of Information Assets and Identifies Threats and
+        Vulnerabilities'.
+    - control_id: DSP-01
+      references:
+        - PI1.1
+        - PI1.5
+        - P4.1
+        - P4.2
+        - P4.3
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'data classification policies and procedures'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: DSP-02
+      references:
+        - CC6.1
+        - CC6.2
+        - CC6.3
+        - CC6.4
+        - CC6.5
+        - CC6.7
+        - P4.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'disposal of data from storage media is not recoverable by any forensic
+        means'.
+    - control_id: DSP-03
+      references:
+        - CC6.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-04
+      references:
+        - CC6.1
+        - C1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: DSP-06
+      references:
+        - CC1.1
+        - CC1.3
+        - CC1.5
+        - P2.1
+        - P3.2
+        - P6.7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-07
+      references:
+        - PI1.2
+        - PI1.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'security by design'.
+    - control_id: DSP-08
+      references:
+        - P1.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'privacy settings are configured by default'.
+    - control_id: DSP-09
+      references:
+        - CC3.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Data Protection Impact Assessment (DPIA)'.
+    - control_id: DSP-10
+      references:
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'transfer of personal data is protected'.
+    - control_id: DSP-11
+      references:
+        - P2.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'according to any applicable laws and regulations'.
+    - control_id: DSP-12
+      references:
+        - P2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-13
+      references:
+        - P2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-14
+      references:
+        - P6.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: DSP-16
+      references:
+        - C1.1
+        - C1.2
+        - CC3.1
+        - P4.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-17
+      references:
+        - CC2.1
+        - CC6.1
+        - CC6.3
+        - CC6.7
+        - CC8.1
+        - C1.1
+        - P2.0
+        - P3.0
+        - P4.0
+        - P5.0
+        - P6.0
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-18
+      references:
+        - P4.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-19
+      references:
+        - A1.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'document the physical locations of data'.
+    - control_id: GRC-01
+      references:
+        - CC1.3
+        - CC1.4
+        - CC5.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-02
+      references:
+        - CC3.1
+        - CC3.2
+        - CC5.1
+        - A1.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-03
+      references:
+        - CC5.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-04
+      references:
+        - CC1.1
+        - CC9.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'deviation from an established policy' (There is no reference to handling
+        exceptions/deviations related to policies).
+    - control_id: GRC-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: GRC-06
+      references:
+        - CC1.3
+        - CC1.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-07
+      references:
+        - CC3.4
+        - CC7.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: HRS-01
+      references:
+        - CC1.4
+        - CC9.2
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Review and update the policies and procedures at least annually'.
+    - control_id: HRS-02
+      references:
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'policies and procedures for defining allowances and conditions for the
+        acceptable use of organizationally-owned or managed assets.'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: HRS-03
+      references:
+        - CC2.2
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'policies and procedures that require unattended workspaces to not have
+        openly visible confidential data'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: HRS-04
+      references:
+        - CC2.2
+        - CC6.1
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'information processed or stored at remote locations.'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: HRS-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: HRS-06
+      references:
+        - CC2.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-07
+      references:
+        - CC1.1
+        - CC1.4
+        - CC2.2
+        - CC5.2
+        - CC5.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-08
+      references:
+        - CC1.1
+        - CC1.4
+        - CC2.2
+        - CC5.2
+        - CC5.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-09
+      references:
+        - CC1.3
+        - CC1.4
+        - CC1.5
+        - CC2.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-10
+      references:
+        - CC9.2
+        - P6.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-11
+      references:
+        - CC2.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'provide regular training updates'.
+    - control_id: HRS-12
+      references:
+        - CC2.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'sensitive organizational and personal data with appropriate security
+        awareness training'.
+    - control_id: HRS-13
+      references:
+        - CC1.3
+        - CC1.5
+        - CC2.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-01
+      references:
+        - CC5.3
+        - CC6.1
+        - CC6.2
+        - CC6.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: IAM-03
+      references:
+        - CC6.1
+        - CC6.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-04
+      references:
+        - CC1.3
+        - CC5.1
+        - CC6.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-05
+      references:
+        - CC6.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-06
+      references:
+        - CC6.3
+        - CC8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-07
+      references:
+        - CC5.3
+        - CC6.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-08
+      references:
+        - CC6.2
+        - CC6.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'for least privilege and separation of duties with a frequency that is
+        commensurate with organizational risk tolerance'.
+    - control_id: IAM-09
+      references:
+        - CC5.1
+        - CC6.1
+        - CC6.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'segregation of privileged access roles pertaining to administrative
+        access to data, encryption and key management capabilities and logging
+        capabilities'.
+    - control_id: IAM-10
+      references:
+        - CC6.1
+        - CC6.2
+        - CC6.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'privileged access roles and rights are granted for a time limited
+        period'.
+    - control_id: IAM-11
+      references:
+        - CC3.2
+        - CC6.1
+        - CC6.3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC3.2) 'Identifies and Assesses Criticality of Information Assets and
+        Identifies Threats and Vulnerabilities', 'Analyzes Threats and
+        Vulnerabilities From Vendors, Business Partners, and Other Parties',
+        'Considers the Significance of the Risk'
+        (CC6.1) 'Restricts Logical Access'
+        (CC6.3) 'Reviews Access Roles and Rules'.
+    - control_id: IAM-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: IAM-13
+      references:
+        - CC6.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'unique IDs or which can associate individuals to the usage of user IDs'.
+    - control_id: IAM-14
+      references:
+        - CC6.1
+        - CC6.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'multi-factor authentication'.
+    - control_id: IAM-15
+      references:
+        - CC6.1
+        - CC6.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-16
+      references:
+        - CC6.1
+        - CC6.2
+        - CC6.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-01
+      references:
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC5.3) 'Establishes Policies and Procedures to Support Deployment of
+        Management’s Directives', 'Reassesses Policies and Procedures'.
+    - control_id: IPY-02
+      references:
+        - PI1.1
+        - PI1.2
+        - PI1.3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (PI1.1) All points of focus
+        (PI1.3) 'Defines Processing Specifications'.
+    - control_id: IPY-03
+      references:
+        - CC6.7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-04
+      references:
+        - PI1.1
+        - PI1.2
+        - PI1.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'a. Data format
+        b. Length of time the data will be stored
+        c. Scope of the data retained and made available to the CSCs
+        d. Data deletion policy'.
+    - control_id: IVS-01
+      references:
+        - CC3.1
+        - CC5.2
+        - CC5.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Review and update the policies and procedures at least annually'.
+    - control_id: IVS-02
+      references:
+        - A1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-03
+      references:
+        - CC6.1
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Review these configurations at least annually, and support them by
+        a documented justification of all allowed services, protocols, ports, and
+        compensating controls'.
+    - control_id: IVS-04
+      references:
+        - CC6.1
+        - CC6.8
+        - CC7.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'security baseline'.
+    - control_id: IVS-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: IVS-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: IVS-07
+      references:
+        - CC6.1
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC6.1) 'Uses Encryption to Protect Data'
+        (CC6.7) 'Uses Encryption Technologies or Secure Communication Channels to
+        Protect Data'.
+    - control_id: IVS-08
+      references:
+        - CC3.2
+        - CC6.1
+        - CC7.1
+        - CC7.2
+        - CC7.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-09
+      references:
+        - CC6.6
+        - CC6.8
+        - CC7.1
+        - CC7.2
+        - CC7.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-01
+      references:
+        - CC5.3
+        - CC7.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Review and update the policies and procedures at least annually'.
+    - control_id: LOG-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: LOG-03
+      references:
+        - CC6.8
+        - CC7.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'generate alerts to responsible stakeholders based on corresponding
+        metrics'.
+    - control_id: LOG-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: LOG-05
+      references:
+        - CC7.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: LOG-07
+      references:
+        - CC7.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-08
+      references:
+        - CC7.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: LOG-10
+      references:
+        - CC6.1
+        - CC7.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC6.1) 'Uses Encryption to Protect Data'
+        (CC7.2) ''Implements Detection Policies, Procedures, and Tools',
+        'Monitors Detection Tools for Effective Operation'.
+    - control_id: LOG-11
+      references:
+        - CC6.1
+        - CC7.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC6.1) 'Uses Encryption to Protect Data'
+        (CC7.2) ''Implements Detection Policies, Procedures, and Tools',
+        'Monitors Detection Tools for Effective Operation'.
+    - control_id: LOG-12
+      references:
+        - CC6.4
+        - CC7.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-13
+      references:
+        - CC2.3
+        - CC7.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-01
+      references:
+        - CC5.3
+        - CC7.3
+        - CC7.4
+        - CC7.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Cloud Forensics'
+        'Review and update the policies and procedures at least annually'.
+    - control_id: SEF-02
+      references:
+        - CC5.3
+        - CC7.3
+        - CC7.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'Review and update the policies and procedures at least annually'.
+    - control_id: SEF-03
+      references:
+        - CC7.2
+        - CC7.3
+        - CC7.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'business critical relationships (such as supply-chain) that may be
+        impacted'.
+    - control_id: SEF-04
+      references:
+        - CC7.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-05
+      references:
+        - CC7.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-06
+      references:
+        - CC7.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-07
+      references:
+        - CC7.4
+        - CC7.5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC7.4) 'Develops and Implements Communication Protocols for Security
+        Incidents'
+        (CC7.5) 'Communicates Information About the Event'.
+    - control_id: SEF-08
+      references:
+        - CC2.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-01
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: STA-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: STA-03
+      references:
+        - CC2.3
+        - CC9.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'SSRM' (Mapped controls don't specifically call out SSRM).
+    - control_id: STA-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: STA-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: STA-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: STA-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: STA-08
+      references:
+        - CC9.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-09
+      references:
+        - CC9.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        • Scope, characteristics and location of business relationship and
+          services offered
+        • Information security requirements (including SSRM)
+        • Change management process
+        • Logging and monitoring capability
+        • Incident management and communication procedures
+        • Right to audit and third party assessment
+        • Service termination
+        • Interoperability and portability requirements
+        • Data privacy.
+    - control_id: STA-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: STA-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: STA-12
+      references:
+        - CC9.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-13
+      references:
+        - CC3.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-14
+      references:
+        - CC3.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-01
+      references:
+        - CC3.2
+        - CC5.3
+        - CC6.6
+        - CC7.1
+        - CC7.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-02
+      references:
+        - CC5.3
+        - CC6.8
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-03
+      references:
+        - CC5.3
+        - CC7.1
+        - CC7.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'responses to vulnerability identifications, based on the identified
+        risk'.
+    - control_id: TVM-04
+      references:
+        - CC7.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'on a weekly. or more frequent basis'.
+    - control_id: TVM-05
+      references:
+        - CC3.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        "third party or open source libraries" and "according to the
+        organization's vulnerability management policy".
+    - control_id: TVM-06
+      references:
+        - CC4.1
+        - CC7.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (CC4.1) 'Considers Different Types of Ongoing and Separate Evaluations'
+        - 'including penetration testing'
+        (CC 7.1) 'Conducts Vulnerability Scans' - 'The entity conducts
+        vulnerability scans designed to identify potential vulnerabilities'.
+    - control_id: TVM-07
+      references:
+        - CC7.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        'at least monthly'.
+    - control_id: TVM-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: TVM-09
+      references:
+        - CC2.2
+        - CC7.3
+        - CC7.4
+        - CC7.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: UEM-01
+      references:
+        - CC5.3
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        Requirement on 'endpoint' systems (AICPA TSC CC6.7 has reference to
+        "Protect Mobile Devices" only whereas CCM control refers to endpoint
+        devices such as: mobile devices, servers, desktops, IoT, virtual etc.)
+        'Review the policies and procedures at least annually'.
+    - control_id: UEM-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: UEM-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: UEM-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: UEM-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: UEM-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: UEM-07
+      references:
+        - CC3.4
+        - CC8.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        Requirement on 'endpoint' systems.
+    - control_id: UEM-08
+      references:
+        - CC6.1
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        Requirement on 'endpoint' systems.
+    - control_id: UEM-09
+      references:
+        - CC6.8
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        Requirement on 'endpoint' systems.
+    - control_id: UEM-10
+      references:
+        - CC6.6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        Requirement on 'endpoint' systems.
+    - control_id: UEM-11
+      references:
+        - CC6.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in TSC 2017:
+        Requirement on 'endpoint' systems.
+    - control_id: UEM-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: UEM-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.
+    - control_id: UEM-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from TSC 2017 and
+        has to be used to close the gap.

@@ -1,0 +1,1860 @@
+[
+  {
+    "name": "ISO/IEC 27001:2022, 27002:2022",
+    "mappings": [
+      {
+        "control_id": "A&A-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.2",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "A&A-02",
+        "references": ["27001: A.5.35", "27001: A.5.36"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually'."
+      },
+      {
+        "control_id": "A&A-03",
+        "references": ["27001: 9.3.2", "27001: A.5.35", "27001: A.5.36"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-04",
+        "references": [
+          "27001: 9.3.2",
+          "27001: A.5.31",
+          "27001: A.5.32",
+          "27001: A.5.33",
+          "27001: A.5.34",
+          "27001: A.5.36"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-05",
+        "references": ["27001: 9.2", "27001: 9.3", "27001: A.5.36"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-06",
+        "references": [
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 8.2",
+          "27001: 8.3",
+          "27001: 9.3.2.d",
+          "27001: 10",
+          "27001: A.5.36",
+          "27001: A.5.37",
+          "27002: 5.36"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37",
+          "27001: A.8.25",
+          "27001: A.8.27",
+          "27001: A.8.28",
+          "27001: A.8.29"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "AIS-02",
+        "references": ["27001: A.5.1", "27001: A.8.25", "27001: A.8.26", "27002: 5.1 (l)", "27002: 8.25 (c)"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'baseline requirements (for securing applications)'."
+      },
+      {
+        "control_id": "AIS-03",
+        "references": ["27001: 9.1", "27001: A.8.25", "27001: A.5.36", "27002: 8.25 (d)"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'Define and implement technical and operational metrics'."
+      },
+      {
+        "control_id": "AIS-04",
+        "references": ["27001: A.5.8", "27001: A.8.25", "27001: A.8.26", "27001: A.8.28"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-05",
+        "references": ["27001: A.8.25", "27001: A.8.29", "27001: A.8.32", "27002: 8.25 (e)", "27002: 8.32 (d)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-06",
+        "references": ["27001: A.8.25", "27001: A.8.32", "27002: 8.32 (e)"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'compliant application deployment'.\n'Automate where possible'."
+      },
+      {
+        "control_id": "AIS-07",
+        "references": ["27001: A.5.26", "27001: A.8.8", "27002: 5.26 (j)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.29",
+          "27001: A.5.30",
+          "27001: A.5.36",
+          "27001: A.5.37",
+          "27002: 5.29",
+          "27002: 5.30"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "BCR-02",
+        "references": [
+          "27001: 4.2",
+          "27001: 6.1.2",
+          "27001: 6.1.3",
+          "27001: 8.2",
+          "27001: 8.3",
+          "27001: A.5.29",
+          "27001: A.5.30",
+          "27002: 5.29",
+          "27002: 5.30"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-03",
+        "references": ["27001: 6.1.1", "27001: A.5.29", "27001: A.5.30", "27002: 5.29", "27002: 5.30"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-04",
+        "references": [
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: A.5.29",
+          "27001: A.5.30",
+          "27002: 5.29",
+          "27002: 5.30"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-05",
+        "references": ["27001: 7.4", "27001: 7.5", "27001: A.5.37", "27002: 5.37"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-06",
+        "references": ["27001: A.5.30", "27002: 5.30"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-07",
+        "references": ["27001: 7.4", "27001: A.5.30", "27002: 5.30 other information (c)"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped ISO controls cover in part but inadequately the CCM   control objective."
+      },
+      {
+        "control_id": "BCR-08",
+        "references": ["27001: A.8.13", "27001: A.5.23", "27001: A.5.30", "27002: 8.13", "27002: 5.23 2nd (i)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-09",
+        "references": ["27001: A.5.29", "27001: A.5.30", "27002: 5.29", "27002: 5.30"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-10",
+        "references": ["27001: A.5.5", "27001: A.5.30", "27002: 5.30 (b)(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-11",
+        "references": ["27001: A.5.20", "27001: A.7.11", "27001: A.8.14", "27002: 5.20 (t)", "27002: 8.14 (c)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 8.1",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37",
+          "27001: A.8.9",
+          "27001: A.8.32"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "CCC-02",
+        "references": ["27001: A.8.32", "27001: A.8.29"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-03",
+        "references": ["27001: A.5.22", "27001: A.8.9", "27001: A.8.29", "27001: A.8.31", "27001: A.8.32"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-04",
+        "references": ["27001: A.8.3", "27001: A.8.4", "27001: A.8.15", "27001: A.8.31", "27001: A.8.32"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-05",
+        "references": ["27001: A.5.22", "27001: A.5.23", "27002: A.5.23 (7th paragraph,a,b,c)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-06",
+        "references": ["27001: A.8.9", "27001: A.8.32", "27002: 8.32 (a-i)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-07",
+        "references": ["27001: A.8.9", "27001: A.8.15", "27002: 8.9"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-08",
+        "references": [
+          "27001: A.5.1",
+          "27001: A.8.9",
+          "27001: A.8.15",
+          "27001: A.5.37",
+          "27002: 5.1 (g)",
+          "27002: 5.37 (f)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-09",
+        "references": ["27001: A.8.19", "27001: A.8.32", "27002: 8.19 (f)", "27002: 8.32 (f)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37",
+          "27001: A.8.24",
+          "27002: A.5.1 (i)",
+          "27002: 8.24 (a)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "CEK-02",
+        "references": ["27001: 5.3", "27001: A.5.2", "27001: A.8.24", "27002: 8.24 (e)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-03",
+        "references": ["27001: A.5.14", "27001: A.8.24", "27002: 8.24 Other Information (a)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-04",
+        "references": [
+          "27001: 6.1.2",
+          "27001: 6.1.3",
+          "27001: A.8.24",
+          "27001: A.5.12",
+          "27001: A.5.13",
+          "27002: 8.24 General (b)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-05",
+        "references": ["27001: A.8.24", "27001: A.8.32"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-06",
+        "references": ["27001: 8", "27001: A.8.24", "27001: A.8.32"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'that fully account for downstream effects of proposed changes, including residual risk, cost, and benefits analysis'."
+      },
+      {
+        "control_id": "CEK-07",
+        "references": ["27001: 8", "27001: A.8.24"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-08",
+        "references": ["27001: A.5.23", "27001: A.8.24"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped ISO controls cover in part but inadequately the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-09",
+        "references": ["27001: 9.2", "27001: A.8.24", "27001: A.8.34", "27001: A.5.35", "27001: A.5.36"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-10",
+        "references": ["27001: A.8.24", "27002: 8.24 (d), Key management (a)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-11",
+        "references": ["27001: A.5.10", "27001: A.8.24"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped ISO controls cover in part but inadequately the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-12",
+        "references": [
+          "27001: A.5.31",
+          "27001: A.8.24",
+          "27002: 5.31 Cryptography",
+          "27002: 8.24 Key management (e,m)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-13",
+        "references": [
+          "27001: A.5.31",
+          "27001: A.8.24",
+          "27002: 5.31 Cryptography",
+          "27002: 8.24 Key management (g,m)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-14",
+        "references": [
+          "27001: A.5.31",
+          "27001: A.8.24",
+          "27002: 5.31 Cryptography",
+          "27002: 8.24 Key management (j,m)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-15",
+        "references": [
+          "27001: A.5.31",
+          "27001: A.8.24",
+          "27002: 5.31 Cryptography",
+          "27002: 8.24 Key management (l,m)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-16",
+        "references": ["27001: A.5.31", "27001: A.8.24", "27002: 5.31 Cryptography"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'from any state to/from suspension'."
+      },
+      {
+        "control_id": "CEK-17",
+        "references": [
+          "27001: A.5.31",
+          "27001: A.8.24",
+          "27002: 5.31 Cryptography",
+          "27002: 8.24 Key management (l,m)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-18",
+        "references": [
+          "27001: A.5.31",
+          "27001: A.8.24",
+          "27002: 5.31 Cryptography",
+          "27002: 8.24 Key management (c,d,i,m)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-19",
+        "references": [
+          "27001: A.5.31",
+          "27001: A.8.24",
+          "27002: 5.31 Cryptography",
+          "27002: 8.24 Key management (f,m)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-20",
+        "references": [
+          "27001: 8.2",
+          "27001: 8.3",
+          "27001: A.5.31",
+          "27001: A.8.24",
+          "27002: 5.31 Cryptography",
+          "27002: 8.24 (d), Key management (h,m)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-21",
+        "references": [
+          "27001: A.5.9",
+          "27001: A.5.31",
+          "27001: A.8.24",
+          "27001: A.8.32",
+          "27002: 5.31 Cryptography",
+          "27002: 8.24 Key management (m)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37",
+          "27001: A.7.10",
+          "27001: A.7.14",
+          "27001: A.8.10",
+          "27002: 5.1 (b,c)",
+          "27002: 7.10 (a)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "DCS-02",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.14",
+          "27001: A.5.37",
+          "27001: A.7.1",
+          "27002: 5.1",
+          "27002: 5.14",
+          "27002: 5.1 (b,c)",
+          "27002: 7.1"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "DCS-03",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.14",
+          "27001: A.5.37",
+          "27001: A.7.3",
+          "27001: A.7.6",
+          "27002: 5.1 (b,c)",
+          "27002: 7.3",
+          "27002: 7.6"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "DCS-04",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.14",
+          "27001: A.5.37",
+          "27001: A.7.10",
+          "27002: 5.1",
+          "27002: 5.14",
+          "27002: 5.1 (b,c)",
+          "27002: 7.10 (a)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "DCS-05",
+        "references": ["27001: A.5.12", "27001: A.5.37"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-06",
+        "references": ["27001: A.5.9"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-07",
+        "references": ["27001: A.7.1", "27002: 7.1 Other Information"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-08",
+        "references": ["No Mapping"],
+        "gap_level": "Full Gap",
+        "addendum": "The full CCM control specification is missing from the ISOs and has to be used to close the gap."
+      },
+      {
+        "control_id": "DCS-09",
+        "references": ["27001: A.7.2", "27002: 7.2 (a,b)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-10",
+        "references": ["27001: A.7.4", "27002: 7.4 (a)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-11",
+        "references": [
+          "27001: 7.2",
+          "27001: A.5.24",
+          "27001: A.6.3",
+          "27001: A.6.8",
+          "27002: 5.24 (d,e)",
+          "27002: 6.8 (e)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'datacenter personnel' (training)'"
+      },
+      {
+        "control_id": "DCS-12",
+        "references": ["27001: A.7.12"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-13",
+        "references": ["27001: A.7.8", "27001: A.7.9", "27002: 7.8 (c, e)", "27002: 7.9 (b)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-14",
+        "references": ["27001: A.7.11", "27002: 7.11 (a - g)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-15",
+        "references": ["27001: A.7.5", "27001: A.7.8"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.10",
+          "27001: A.5.12",
+          "27001: A.5.34",
+          "27001: A.5.37",
+          "27002: 5.1 (j)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "DSP-02",
+        "references": ["27001: A.7.10", "27001: A.7.14", "27001: A.8.10", "27002: 7.10 (Secure reuse or disposal)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-03",
+        "references": ["27001: A.5.9", "27001: A.8.12"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-04",
+        "references": ["27001: A.5.12"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-05",
+        "references": ["No Mapping"],
+        "gap_level": "Full Gap",
+        "addendum": "The full CCM control specification is missing from the ISOs and has to be used to close the gap."
+      },
+      {
+        "control_id": "DSP-06",
+        "references": ["27001: A.5.9"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "DSP-07",
+        "references": [
+          "27001: A.8.27",
+          "27001: A.8.28",
+          "27001: A.8.29",
+          "27002: 5.8 (Information security requirements a-i)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-08",
+        "references": ["27001: A.8.11"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped ISO controls cover in part but inadequately the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-09",
+        "references": ["27001: 6.1.1", "27001: 6.1.2", "27001: 6.1.3", "27001: A.5.34"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'Conduct a Data Protection Impact Assessment (DPIA)'."
+      },
+      {
+        "control_id": "DSP-10",
+        "references": ["27001: A.5.14", "27001: A.7.10"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-11",
+        "references": ["27001: A.5.34"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped ISO controls cover in part but inadequately the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-12",
+        "references": ["27001: A.5.34"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-13",
+        "references": ["27001:  A.5.14", "27001: A.5.20"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-14",
+        "references": ["27001: A.5.20"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-15",
+        "references": ["27001: A.8.31", "27001: A.8.33"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-16",
+        "references": ["27001: A.5.33", "27001: A.8.10", "27002: 5.33 (b)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-17",
+        "references": ["27001: A.8.11", "27001: A.8.12"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-18",
+        "references": ["27001: A.5.34", "27001: A.6.8", "27002: 6.8"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped ISO controls cover in part but inadequately the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-19",
+        "references": ["27001: A.5.9", "27001: A.8.12", "27001: A.8.13"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "GRC-02",
+        "references": ["27001: 6.1", "27001: 6.2", "27001: A.5.23"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-03",
+        "references": ["27001: 7.5.2 (c)", "27001: A.5.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-04",
+        "references": ["27001: A.5.1", "27002: 5.1 (g)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-05",
+        "references": ["27001: 4.3"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'includes programs for all the relevant domains of the CCM'.\n(Note: CSA's STAR level-2 certification covers the missing CCM requirement)"
+      },
+      {
+        "control_id": "GRC-06",
+        "references": ["27001: 5.1", "27001: 5.3", "27001: A.5.1", "27001: A.5.2", "27001: A.5.4", "27002: 5.1 (f)"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing in ISOs:\n'planning, operating, assessing and improving governance programs'."
+      },
+      {
+        "control_id": "GRC-07",
+        "references": ["27001: 4.2", "27001: A.5.31", "27001: A.5.32", "27001: A.5.33", "27001: A.5.34"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-08",
+        "references": ["27001: A.5.6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37",
+          "27001: A.6.1"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "HRS-02",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.10",
+          "27001: A.5.37"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "HRS-03",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37",
+          "27001: A.7.7"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "HRS-04",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37",
+          "27001: A.6.7",
+          "27001: A.7.9"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "HRS-05",
+        "references": ["27001: A.5.11"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-06",
+        "references": ["27001: A.6.5"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-07",
+        "references": ["27001: A.6.2", "27002: 6.2 (a)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-08",
+        "references": ["27001: 7.3", "27001: A.6.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-09",
+        "references": ["27001: 7.4", "27001: A.5.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-10",
+        "references": ["27001: A.6.2", "27001: A.6.6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-11",
+        "references": ["27001: 7.3", "27001: 7.4", "27001: A.5.37", "27001: A.6.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-12",
+        "references": ["27001: 7.3", "27001: A.6.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-13",
+        "references": ["27001: 5.1", "27001: 7.3", "27001: A.5.4", "27001: A.6.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.15",
+          "27001: A.5.16",
+          "27001: A.5.17",
+          "27001: A.5.18",
+          "27001: A.5.37"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "IAM-02",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.17",
+          "27001: A.6.3",
+          "27001: A.8.5",
+          "27001: A.5.37"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "IAM-03",
+        "references": [
+          "27001: 9.2 (c)",
+          "27001: A.5.15",
+          "27001: A.5.16",
+          "27001: A.5.18",
+          "27001: A.7.4",
+          "27001: A.8.15",
+          "27001: A.8.2",
+          "27001: A.8.3"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-04",
+        "references": ["27001: A.5.15", "27001: A.5.18", "27001: A.5.3", "27001: A.8.2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-05",
+        "references": ["27001: A.5.15", "27001: A.8.2", "27002:  5.15 (Other information 2nd (a))"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-06",
+        "references": ["27001: A.5.15", "27001: A.5.16", "27001: A.5.18"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-07",
+        "references": ["27001: A.5.15", "27001: A.5.18"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-08",
+        "references": ["27001: A.5.3", "27001: A.5.18", "27001: A.8.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-09",
+        "references": ["27001: A.8.2", "27001: A.8.18", "27002: 8.2 (j)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-10",
+        "references": ["27001: A.8.2", "27001: A.8.18", "27002: 8.2 (i)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-11",
+        "references": ["27001: A.5.19", "27001: A.5.22"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped ISO controls cover in part but inadequately the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "IAM-12",
+        "references": ["27001: A.8.15", "27001: A.8.18", "27002: 8.15 Protection of Logs"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-13",
+        "references": ["27001: A.5.16"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-14",
+        "references": [
+          "27001: A.5.15",
+          "27001: A.5.17",
+          "27001: A.8.5",
+          "27001: A.8.24",
+          "27002: 8.5",
+          "27002: 8.24 other information (d)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-15",
+        "references": ["27001: A.5.17"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-16",
+        "references": ["27001: A.5.18"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IPY-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.23",
+          "27001: A.8.25",
+          "27001: A.8.26",
+          "27001: A.8.27",
+          "27001: A.5.37"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "IPY-02",
+        "references": ["27001: A.5.23", "27001: A.8.26"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped ISO controls cover in part but inadequately the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "IPY-03",
+        "references": [
+          "27001: A.5.19",
+          "27001: A.5.23",
+          "27001: A.5.31",
+          "27001: A.5.32",
+          "27001: A.5.33",
+          "27001: A.5.34"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IPY-04",
+        "references": ["27001: A.5.9", "27001: A.5.20", "27001: A.5.23"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.23",
+          "27001: A.5.37"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'policies and procedures for virtualization security'.\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "IVS-02",
+        "references": ["27001: 5.3 (b)", "27001: 6.1", "27001: 9.1", "27001: A.8.6", "27001: A.8.14"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-03",
+        "references": [
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: A.5.15",
+          "27001: A.5.37",
+          "27001: A.8.5",
+          "27001: A.8.9",
+          "27001: A.8.16",
+          "27001: A.8.20",
+          "27001: A.8.21",
+          "27001: A.8.22",
+          "27001: A.8.24",
+          "27002: A.5.15 2nd c)",
+          "27002: 8.20",
+          "27002: 8.21",
+          "27002: 8.22",
+          "27002: 8.24"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "IVS-04",
+        "references": [
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: A.5.37",
+          "27001: A.8.5",
+          "27001: A.8.9",
+          "27001: A.8.16",
+          "27001: A.8.20",
+          "27001: A.8.22",
+          "27001: A.8.24",
+          "27002: 8.20",
+          "27002: 8.22",
+          "27002: 8.24"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped ISO controls cover in part but inadequately the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "IVS-05",
+        "references": ["27001: 8.1", "27001: A.8.22", "27001: A.8.31"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-06",
+        "references": [
+          "27001: 9.1",
+          "27001: A.5.15",
+          "27001: A.5.20",
+          "27001: A.8.3",
+          "27001: A.8.9",
+          "27001: A.8.16",
+          "27001: A.8.22",
+          "27002: 5.15 (b)",
+          "27002: 8.3 (b)",
+          "27002: 8.16 (b)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'CSP and CSC (tenant) and intra-tenant access is appropriately segmented and segregated'."
+      },
+      {
+        "control_id": "IVS-07",
+        "references": [
+          "27001: A.5.14",
+          "27001: A.8.20",
+          "27001: A.8.24",
+          "27002: 8.20 (e)",
+          "27002: 8.24 Guidance (b,f), other information (a)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'(secure and encrypted communication channels when) migrating servers, services, applications, or data to cloud environments'."
+      },
+      {
+        "control_id": "IVS-08",
+        "references": [
+          "27001: 6.1.2",
+          "27001: 7.5",
+          "27001: A.5.37",
+          "27001: A.8.20",
+          "27001: A.8.22",
+          "27002: 8.20 (c)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-09",
+        "references": [
+          "27001: 6.1",
+          "27001: 6.2",
+          "27001: A.5.24",
+          "27001: A.5.26",
+          "27001: A.8.8",
+          "27001: A.8.16",
+          "27001: A.8.20",
+          "27001: A.8.21",
+          "27001: A.8.22",
+          "27001: A.8.26",
+          "27002: 8.8 (i)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37",
+          "27001: A.8.15"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "LOG-02",
+        "references": ["27001: A.5.28", "27001: A.5.33", "27001: A.8.15"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-03",
+        "references": ["27001: A.5.28", "27001: A.8.15"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-04",
+        "references": ["27001: A.5.33", "27001: A.8.15"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-05",
+        "references": ["27001: A.8.15", "27001: A.8.16"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-06",
+        "references": ["27001: A.8.17"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-07",
+        "references": ["27001: 7.5.3", "27001: A.8.15"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-08",
+        "references": ["27001: A.8.15"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-09",
+        "references": ["27001: A.8.15"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-10",
+        "references": ["27001: A.8.24"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'Establish and maintain a monitoring and internal reporting capability (for crypto operations)'."
+      },
+      {
+        "control_id": "LOG-11",
+        "references": ["27001: A.8.24"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-12",
+        "references": ["27001: A.7.2", "27001: A.7.4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-13",
+        "references": ["27001: A.5.24", "27001: A.6.8", "27002: 6.8 (g)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.6.8",
+          "27001: A.5.24",
+          "27001: A.5.25",
+          "27001: A.5.26",
+          "27001: A.5.27",
+          "27001: A.5.28",
+          "27001: A.5.37"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "SEF-02",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.26",
+          "27001: A.5.37",
+          "27001: A.6.8"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "SEF-03",
+        "references": ["27001: 5.2", "27001: 7.3", "27001: 7.4", "27001: 7.5", "27001: A.5.26", "27002: 5.26 (e,f)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-04",
+        "references": ["27001: A.5.36", "27002: 5.36"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'incident response plans'."
+      },
+      {
+        "control_id": "SEF-05",
+        "references": ["27001: A.5.24", "27002: 5.24 (b)"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'incident metrics'."
+      },
+      {
+        "control_id": "SEF-06",
+        "references": ["27001: A.5.25"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-07",
+        "references": [
+          "27001: A.5.19",
+          "27001: A.5.22",
+          "27001: A.5.23",
+          "27001: A.5.24",
+          "27001: A.5.26",
+          "27001: A.6.8",
+          "27002: 5.19 (f)",
+          "27002: 5.22 (f,g,h,i)",
+          "27002: 5.23 (h)",
+          "27002: 5.26 (e)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-08",
+        "references": ["27001: A.5.5", "27001: A.5.24", "27002: 5.24 Incident management procedure (d)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.23",
+          "27001: A.5.37",
+          "27002: 5.23 (d)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "STA-02",
+        "references": ["27001: A.5.20", "27001: A.5.22", "27001: A 5.23", "27002: 5.23 (d)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-03",
+        "references": [
+          "27001: 7.4",
+          "27001: 9.1",
+          "27001: A.5.20",
+          "27001: A.5.21",
+          "27001: A.5.23",
+          "27002: 5.20 (a-z)",
+          "27002: 5.21 (a-m)",
+          "27002: 5.23 (d)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-04",
+        "references": ["27001: A.5.23", "27002: 5.23 (d)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-05",
+        "references": ["27001: 9.1", "27001: 9.3", "27001: A.5.20", "27001: A.5.23", "27002: 5.23 (d)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-06",
+        "references": [
+          "27001: 8.1",
+          "27001: A.5.20",
+          "27001: A.5.21",
+          "27001: A.5.22",
+          "27001: A.5.23",
+          "27002: 5.23 (d)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-07",
+        "references": ["27001: A.5.20", "27001: A.5.21", "27002: 5.20 Guidance last paragraph", "27002: 5.21 (g-h)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-08",
+        "references": [
+          "27001: 6.1.1",
+          "27001: 6.1.2",
+          "27001: 6.1.3",
+          "27001: 6.2",
+          "27001: 8.1",
+          "27001: A.5.20",
+          "27001: A.5.21",
+          "27001: A.5.23",
+          "27002: 5.21 (f)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-09",
+        "references": ["27001: A.5.19", "27001: A.5.20", "27002: 5.19 (m4)", "27002: 5.20 (a-d,u,e,j,o,p,x,y,z)"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'interoperability requirements' (In SLAs)."
+      },
+      {
+        "control_id": "STA-10",
+        "references": ["27001: A.5.20"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "STA-11",
+        "references": ["27001: A.5.22"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually'."
+      },
+      {
+        "control_id": "STA-12",
+        "references": ["27001: 5.2", "27001: A.5.19", "27001: A.5.20", "27001: A.5.21", "27001: A.5.22"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-13",
+        "references": [
+          "27001: 8.1",
+          "27001: 9.2",
+          "27001: 9.3",
+          "27001: A.5.19",
+          "27001: A.5.21",
+          "27001: A.5.22",
+          "27002: 5.19 (g)",
+          "27002: 5.21 (f)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-14",
+        "references": [
+          "27001: 6.1.1",
+          "27001: 6.1.2",
+          "27001: 8.1",
+          "27001: 8.2",
+          "27001: A.5.19",
+          "27001: A.5.20",
+          "27001: A.5.21",
+          "27001: A.5.23",
+          "27002: 5.19 (g)",
+          "27002: 5.20 (q)",
+          "27002: 5.21 (f)",
+          "27002: 5.23 (f,i)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.37",
+          "27002: 5.1 (k)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "TVM-02",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.5.7",
+          "27001: A.5.37",
+          "27001: A.8.7",
+          "27002: 5.7 (b)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "TVM-03",
+        "references": [
+          "27001: 6.1.3",
+          "27001: A.8.7",
+          "27001: A.8.8",
+          "27001: A.8.32",
+          "27002: 8.7",
+          "27002: 8.8",
+          "27002: 8.32"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-04",
+        "references": [
+          "27001: 6.1.3",
+          "27001: A.5.1",
+          "27001: A.8.8",
+          "27001: A.8.15",
+          "27001: A.8.16",
+          "27002: 5.1",
+          "27002: 5.37",
+          "27002: 8.8",
+          "27002: 8.15 (d)",
+          "27002: 8.16 (d,e)",
+          "27002: 8.31 2nd (a)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'on a weekly, or more frequent basis'."
+      },
+      {
+        "control_id": "TVM-05",
+        "references": [
+          "27001: 6.1.3",
+          "27001: A 5.6",
+          "27001: A.8.19",
+          "27001: A.8.8",
+          "27001: A.8.28",
+          "27001: A.8.31",
+          "27002: 5.6 (c)",
+          "27001: 8.19",
+          "27001: 8.8",
+          "27001: 8.28",
+          "27001: 8.31"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-06",
+        "references": [
+          "27001: A.8.8",
+          "27001: A.8.16",
+          "27001:A. 8.25",
+          "27001: A.8.29",
+          "27002: 8.8 (e)",
+          "27002: 8.16 3rd (d)",
+          "27002: 8.25 (e)",
+          "27002: 8.29 3rd (c)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-07",
+        "references": ["27001: A.8.8", "27002: 8.8"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-08",
+        "references": ["27001: 8.2", "27001: 8.3", "27001: A.8.8", "27001: A.8.19", "27002: 8.8", "27002: 8.19"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-09",
+        "references": ["27001: 7.4", "27001: A.6.8", "27002: 6.8"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-10",
+        "references": ["27001: 5.3", "27001: 9.1", "27001: A.6.8", "27001: A.8.8", "27002: 6.8 (i)", "27002: 8.8"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-01",
+        "references": [
+          "27001: 5.1",
+          "27001: 5.2",
+          "27001: 7.3",
+          "27001: 7.4",
+          "27001: 7.5",
+          "27001: 9.1",
+          "27001: 9.3",
+          "27001: A.5.1",
+          "27001: A.5.4",
+          "27001: A.8.1",
+          "27001: A.5.37",
+          "27002: A.5.1 (e)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in ISOs:\n'at least annually (Review)'."
+      },
+      {
+        "control_id": "UEM-02",
+        "references": [
+          "27001: A.5.9",
+          "27001: A.8.1",
+          "27001: A.8.3",
+          "27001: A.8.19",
+          "27001: A.8.27",
+          "27002: A.8.1 (d)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-03",
+        "references": ["27001: A.8.19", "27001: A.8.29", "27001: A.8.32"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-04",
+        "references": ["27001: A.5.9", "27001: A.8.1", "27002: A.8.1 (b)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-05",
+        "references": ["27001: A.8.3", "27001: A.8.19"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-06",
+        "references": ["27001: A.7.7", "27001: A.8.1", "27002: A.8.1 (j)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-07",
+        "references": ["27001: A.8.1", "27001: A.8.32", "27002: A.8.1 (e)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-08",
+        "references": ["27001: A.8.1", "27002: 8.1 (h)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-09",
+        "references": ["27001: A.8.1", "27001: A.8.7", "27002: A.8.1 (i)", "27002: 8.7 (f)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-10",
+        "references": ["27001: A.8.1", "27001: A.8.20", "27002: 8.20 (i)", "27002: 8.1 (f)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-11",
+        "references": ["27001: A.5.12", "27001: A.8.3"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-12",
+        "references": ["27001: A.8.1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-13",
+        "references": ["27001: A.8.1", "27002: 8.1 (j)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-14",
+        "references": ["27001: A.8.1", "27001: A.5.14", "27001: A.5.21", "27001: A.5.22"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      }
+    ]
+  }
+]

@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "source": "NIST SP 800-61r3 (April 2025)",
-    "version": "1.0.0",
-    "last_updated": "2025-10-19",
-    "description": "Incident response scenarios - simplified for testing"
+    "source": "NIST SP 800-61r3 (April 2025), NIST AI 100-2 E2025, MITRE ATLAS, OWASP Top 10 LLM 2025",
+    "version": "1.1.0",
+    "last_updated": "2025-10-20",
+    "description": "Incident response scenarios including AI/ML security incidents"
   },
   "scenarios": [
     {
@@ -227,6 +227,100 @@
         "breach_determination": "If PHI in compromised email accounts",
         "notification_timeline": "60 days if breach confirmed",
         "risk_assessment_factors": ["Email account purpose", "PHI volume in emails"]
+      }
+    },
+    {
+      "id": "ai_ml_attack",
+      "name": "AI/ML Security Incident",
+      "category": "adversarial-ai",
+      "severity": "high",
+      "description": "Adversarial attacks targeting AI/ML systems including prompt injection, model poisoning, data poisoning, and model extraction",
+      "nist_example": "Attacker manipulating AI model inputs, training data, or extracting proprietary models (NIST AI 100-2 E2025, MITRE ATLAS)",
+      "indicators": {
+        "technical": [
+          "Unusual model predictions or outputs (MITRE ATLAS: AML.T0043)",
+          "Anomalous input patterns or adversarial examples",
+          "Unexpected model behavior after training updates",
+          "Large-scale model queries for extraction attempts",
+          "Prompt injection attempts in LLM logs (OWASP LLM01:2025)",
+          "Data poisoning indicators in training pipelines",
+          "Model performance degradation over time"
+        ],
+        "behavioral": [
+          "Users reporting incorrect or biased AI predictions",
+          "Sudden increase in model API requests",
+          "Unexpected jailbreak or system prompt bypass",
+          "Model generating harmful or inappropriate content",
+          "Reports of sensitive data leakage from model outputs"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-07: Monitor ML model inputs for adversarial patterns",
+          "DE.CM-01: Monitor API access patterns for model extraction",
+          "DE.CM-09: Monitor training data integrity and provenance",
+          "Monitor LLM outputs for prompt injection indicators"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze model prediction anomalies",
+          "DE.AE-04: Assess impact on model accuracy and reliability",
+          "DE.AE-08: Determine if sensitive data was exposed via model",
+          "Analyze training data for poisoning attempts"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Identify attack type: prompt injection, model poisoning, data poisoning, or extraction",
+          "Assess model degradation and impact on production systems",
+          "Determine if adversarial examples are evasion or poisoning attacks",
+          "Identify affected model versions and deployment scope"
+        ],
+        "containment": [
+          "Revert to last known good model version",
+          "Implement input validation and sanitization (OWASP LLM01 mitigation)",
+          "Rate-limit API access to prevent extraction attacks",
+          "Isolate affected training pipelines",
+          "Deploy adversarial detection filters",
+          "Disable compromised model endpoints"
+        ],
+        "eradication": [
+          "Remove poisoned training data from datasets",
+          "Retrain model with clean, validated data",
+          "Implement adversarial training techniques (NIST AI 100-2)",
+          "Update guardrails and semantic filters",
+          "Patch model vulnerabilities identified",
+          "Remove jailbreak prompts and injection vectors"
+        ]
+      },
+      "recovery_actions": [
+        "Deploy hardened model with adversarial defenses",
+        "Implement model monitoring and drift detection",
+        "Conduct adversarial testing and red-teaming (MITRE ATLAS)",
+        "Update model documentation and provenance records",
+        "Implement output validation and content filtering"
+      ],
+      "communication_requirements": {
+        "internal": ["AI/ML Engineering team", "Data Science team", "Security Operations", "Legal"],
+        "external": ["Model users/customers if output integrity affected", "Regulatory bodies if sensitive data exposed"],
+        "public": ["Disclosure if user safety impacted by model behavior"]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Overall AI security incident coordination",
+        "ML Security Team: Adversarial defense and model hardening",
+        "Data Engineering: Training data integrity and pipeline security",
+        "Red Team: Adversarial testing and attack simulation",
+        "Legal/Compliance: AI governance and regulatory obligations"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "If model exposed personal data or training data compromised",
+        "article_33_timeline": "72 hours if personal data breach confirmed",
+        "article_34_required": "If model outputs revealed individual data",
+        "risk_factors": ["Training data containing personal information", "Model memorization of sensitive data", "Data extraction via model inversion"]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If ML model trained on or exposed PHI",
+        "notification_timeline": "60 days if PHI disclosure confirmed",
+        "risk_assessment_factors": ["PHI in training datasets", "Model output revealing patient information", "Unauthorized model access to PHI"]
       }
     }
   ]

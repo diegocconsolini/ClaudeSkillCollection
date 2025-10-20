@@ -1,0 +1,4763 @@
+{
+  "name": "Architectural Relevance - Cloud Stack Components",
+  "content": [
+    {
+      "title": "Phys",
+      "content": [
+        {
+          "control_id": "A&A-01",
+          "value": true
+        },
+        {
+          "control_id": "A&A-02",
+          "value": true
+        },
+        {
+          "control_id": "A&A-03",
+          "value": true
+        },
+        {
+          "control_id": "A&A-04",
+          "value": true
+        },
+        {
+          "control_id": "A&A-05",
+          "value": true
+        },
+        {
+          "control_id": "A&A-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-01",
+          "value": true
+        },
+        {
+          "control_id": "AIS-02",
+          "value": true
+        },
+        {
+          "control_id": "AIS-03",
+          "value": true
+        },
+        {
+          "control_id": "AIS-04",
+          "value": true
+        },
+        {
+          "control_id": "AIS-05",
+          "value": true
+        },
+        {
+          "control_id": "AIS-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-01",
+          "value": true
+        },
+        {
+          "control_id": "BCR-02",
+          "value": true
+        },
+        {
+          "control_id": "BCR-03",
+          "value": true
+        },
+        {
+          "control_id": "BCR-04",
+          "value": true
+        },
+        {
+          "control_id": "BCR-05",
+          "value": true
+        },
+        {
+          "control_id": "BCR-06",
+          "value": true
+        },
+        {
+          "control_id": "BCR-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-08",
+          "value": false
+        },
+        {
+          "control_id": "BCR-09",
+          "value": true
+        },
+        {
+          "control_id": "BCR-10",
+          "value": true
+        },
+        {
+          "control_id": "BCR-11",
+          "value": true
+        },
+        {
+          "control_id": "CCC-01",
+          "value": true
+        },
+        {
+          "control_id": "CCC-02",
+          "value": true
+        },
+        {
+          "control_id": "CCC-03",
+          "value": true
+        },
+        {
+          "control_id": "CCC-04",
+          "value": true
+        },
+        {
+          "control_id": "CCC-05",
+          "value": true
+        },
+        {
+          "control_id": "CCC-06",
+          "value": true
+        },
+        {
+          "control_id": "CCC-07",
+          "value": true
+        },
+        {
+          "control_id": "CCC-08",
+          "value": true
+        },
+        {
+          "control_id": "CCC-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-01",
+          "value": true
+        },
+        {
+          "control_id": "CEK-02",
+          "value": true
+        },
+        {
+          "control_id": "CEK-03",
+          "value": true
+        },
+        {
+          "control_id": "CEK-04",
+          "value": true
+        },
+        {
+          "control_id": "CEK-05",
+          "value": true
+        },
+        {
+          "control_id": "CEK-06",
+          "value": true
+        },
+        {
+          "control_id": "CEK-07",
+          "value": true
+        },
+        {
+          "control_id": "CEK-08",
+          "value": true
+        },
+        {
+          "control_id": "CEK-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-10",
+          "value": true
+        },
+        {
+          "control_id": "CEK-11",
+          "value": true
+        },
+        {
+          "control_id": "CEK-12",
+          "value": true
+        },
+        {
+          "control_id": "CEK-13",
+          "value": true
+        },
+        {
+          "control_id": "CEK-14",
+          "value": true
+        },
+        {
+          "control_id": "CEK-15",
+          "value": true
+        },
+        {
+          "control_id": "CEK-16",
+          "value": true
+        },
+        {
+          "control_id": "CEK-17",
+          "value": true
+        },
+        {
+          "control_id": "CEK-18",
+          "value": true
+        },
+        {
+          "control_id": "CEK-19",
+          "value": true
+        },
+        {
+          "control_id": "CEK-20",
+          "value": true
+        },
+        {
+          "control_id": "CEK-21",
+          "value": true
+        },
+        {
+          "control_id": "DCS-01",
+          "value": true
+        },
+        {
+          "control_id": "DCS-02",
+          "value": true
+        },
+        {
+          "control_id": "DCS-03",
+          "value": false
+        },
+        {
+          "control_id": "DCS-04",
+          "value": false
+        },
+        {
+          "control_id": "DCS-05",
+          "value": true
+        },
+        {
+          "control_id": "DCS-06",
+          "value": true
+        },
+        {
+          "control_id": "DCS-07",
+          "value": false
+        },
+        {
+          "control_id": "DCS-08",
+          "value": true
+        },
+        {
+          "control_id": "DCS-09",
+          "value": false
+        },
+        {
+          "control_id": "DCS-10",
+          "value": false
+        },
+        {
+          "control_id": "DCS-11",
+          "value": false
+        },
+        {
+          "control_id": "DCS-12",
+          "value": true
+        },
+        {
+          "control_id": "DCS-13",
+          "value": true
+        },
+        {
+          "control_id": "DCS-14",
+          "value": true
+        },
+        {
+          "control_id": "DCS-15",
+          "value": true
+        },
+        {
+          "control_id": "DSP-01",
+          "value": true
+        },
+        {
+          "control_id": "DSP-02",
+          "value": true
+        },
+        {
+          "control_id": "DSP-03",
+          "value": true
+        },
+        {
+          "control_id": "DSP-04",
+          "value": false
+        },
+        {
+          "control_id": "DSP-05",
+          "value": true
+        },
+        {
+          "control_id": "DSP-06",
+          "value": false
+        },
+        {
+          "control_id": "DSP-07",
+          "value": true
+        },
+        {
+          "control_id": "DSP-08",
+          "value": true
+        },
+        {
+          "control_id": "DSP-09",
+          "value": false
+        },
+        {
+          "control_id": "DSP-10",
+          "value": false
+        },
+        {
+          "control_id": "DSP-11",
+          "value": false
+        },
+        {
+          "control_id": "DSP-12",
+          "value": true
+        },
+        {
+          "control_id": "DSP-13",
+          "value": true
+        },
+        {
+          "control_id": "DSP-14",
+          "value": false
+        },
+        {
+          "control_id": "DSP-15",
+          "value": false
+        },
+        {
+          "control_id": "DSP-16",
+          "value": false
+        },
+        {
+          "control_id": "DSP-17",
+          "value": false
+        },
+        {
+          "control_id": "DSP-18",
+          "value": false
+        },
+        {
+          "control_id": "DSP-19",
+          "value": true
+        },
+        {
+          "control_id": "GRC-01",
+          "value": true
+        },
+        {
+          "control_id": "GRC-02",
+          "value": true
+        },
+        {
+          "control_id": "GRC-03",
+          "value": true
+        },
+        {
+          "control_id": "GRC-04",
+          "value": true
+        },
+        {
+          "control_id": "GRC-05",
+          "value": true
+        },
+        {
+          "control_id": "GRC-06",
+          "value": true
+        },
+        {
+          "control_id": "GRC-07",
+          "value": true
+        },
+        {
+          "control_id": "GRC-08",
+          "value": true
+        },
+        {
+          "control_id": "HRS-01",
+          "value": false
+        },
+        {
+          "control_id": "HRS-02",
+          "value": true
+        },
+        {
+          "control_id": "HRS-03",
+          "value": true
+        },
+        {
+          "control_id": "HRS-04",
+          "value": true
+        },
+        {
+          "control_id": "HRS-05",
+          "value": true
+        },
+        {
+          "control_id": "HRS-06",
+          "value": true
+        },
+        {
+          "control_id": "HRS-07",
+          "value": true
+        },
+        {
+          "control_id": "HRS-08",
+          "value": false
+        },
+        {
+          "control_id": "HRS-09",
+          "value": false
+        },
+        {
+          "control_id": "HRS-10",
+          "value": false
+        },
+        {
+          "control_id": "HRS-11",
+          "value": false
+        },
+        {
+          "control_id": "HRS-12",
+          "value": false
+        },
+        {
+          "control_id": "HRS-13",
+          "value": false
+        },
+        {
+          "control_id": "IAM-01",
+          "value": true
+        },
+        {
+          "control_id": "IAM-02",
+          "value": true
+        },
+        {
+          "control_id": "IAM-03",
+          "value": true
+        },
+        {
+          "control_id": "IAM-04",
+          "value": true
+        },
+        {
+          "control_id": "IAM-05",
+          "value": true
+        },
+        {
+          "control_id": "IAM-06",
+          "value": true
+        },
+        {
+          "control_id": "IAM-07",
+          "value": true
+        },
+        {
+          "control_id": "IAM-08",
+          "value": true
+        },
+        {
+          "control_id": "IAM-09",
+          "value": true
+        },
+        {
+          "control_id": "IAM-10",
+          "value": true
+        },
+        {
+          "control_id": "IAM-11",
+          "value": true
+        },
+        {
+          "control_id": "IAM-12",
+          "value": true
+        },
+        {
+          "control_id": "IAM-13",
+          "value": true
+        },
+        {
+          "control_id": "IAM-14",
+          "value": true
+        },
+        {
+          "control_id": "IAM-15",
+          "value": true
+        },
+        {
+          "control_id": "IAM-16",
+          "value": true
+        },
+        {
+          "control_id": "IPY-01",
+          "value": true
+        },
+        {
+          "control_id": "IPY-02",
+          "value": true
+        },
+        {
+          "control_id": "IPY-03",
+          "value": true
+        },
+        {
+          "control_id": "IPY-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-01",
+          "value": true
+        },
+        {
+          "control_id": "IVS-02",
+          "value": true
+        },
+        {
+          "control_id": "IVS-03",
+          "value": true
+        },
+        {
+          "control_id": "IVS-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-05",
+          "value": false
+        },
+        {
+          "control_id": "IVS-06",
+          "value": true
+        },
+        {
+          "control_id": "IVS-07",
+          "value": true
+        },
+        {
+          "control_id": "IVS-08",
+          "value": true
+        },
+        {
+          "control_id": "IVS-09",
+          "value": false
+        },
+        {
+          "control_id": "LOG-01",
+          "value": true
+        },
+        {
+          "control_id": "LOG-02",
+          "value": true
+        },
+        {
+          "control_id": "LOG-03",
+          "value": true
+        },
+        {
+          "control_id": "LOG-04",
+          "value": true
+        },
+        {
+          "control_id": "LOG-05",
+          "value": true
+        },
+        {
+          "control_id": "LOG-06",
+          "value": true
+        },
+        {
+          "control_id": "LOG-07",
+          "value": true
+        },
+        {
+          "control_id": "LOG-08",
+          "value": true
+        },
+        {
+          "control_id": "LOG-09",
+          "value": true
+        },
+        {
+          "control_id": "LOG-10",
+          "value": true
+        },
+        {
+          "control_id": "LOG-11",
+          "value": true
+        },
+        {
+          "control_id": "LOG-12",
+          "value": true
+        },
+        {
+          "control_id": "LOG-13",
+          "value": true
+        },
+        {
+          "control_id": "SEF-01",
+          "value": true
+        },
+        {
+          "control_id": "SEF-02",
+          "value": true
+        },
+        {
+          "control_id": "SEF-03",
+          "value": true
+        },
+        {
+          "control_id": "SEF-04",
+          "value": true
+        },
+        {
+          "control_id": "SEF-05",
+          "value": true
+        },
+        {
+          "control_id": "SEF-06",
+          "value": true
+        },
+        {
+          "control_id": "SEF-07",
+          "value": true
+        },
+        {
+          "control_id": "SEF-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-01",
+          "value": true
+        },
+        {
+          "control_id": "STA-02",
+          "value": true
+        },
+        {
+          "control_id": "STA-03",
+          "value": true
+        },
+        {
+          "control_id": "STA-04",
+          "value": true
+        },
+        {
+          "control_id": "STA-05",
+          "value": true
+        },
+        {
+          "control_id": "STA-06",
+          "value": true
+        },
+        {
+          "control_id": "STA-07",
+          "value": true
+        },
+        {
+          "control_id": "STA-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-09",
+          "value": true
+        },
+        {
+          "control_id": "STA-10",
+          "value": true
+        },
+        {
+          "control_id": "STA-11",
+          "value": true
+        },
+        {
+          "control_id": "STA-12",
+          "value": true
+        },
+        {
+          "control_id": "STA-13",
+          "value": true
+        },
+        {
+          "control_id": "STA-14",
+          "value": true
+        },
+        {
+          "control_id": "TVM-01",
+          "value": true
+        },
+        {
+          "control_id": "TVM-02",
+          "value": true
+        },
+        {
+          "control_id": "TVM-03",
+          "value": true
+        },
+        {
+          "control_id": "TVM-04",
+          "value": true
+        },
+        {
+          "control_id": "TVM-05",
+          "value": true
+        },
+        {
+          "control_id": "TVM-06",
+          "value": true
+        },
+        {
+          "control_id": "TVM-07",
+          "value": true
+        },
+        {
+          "control_id": "TVM-08",
+          "value": true
+        },
+        {
+          "control_id": "TVM-09",
+          "value": true
+        },
+        {
+          "control_id": "TVM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-01",
+          "value": true
+        },
+        {
+          "control_id": "UEM-02",
+          "value": false
+        },
+        {
+          "control_id": "UEM-03",
+          "value": false
+        },
+        {
+          "control_id": "UEM-04",
+          "value": false
+        },
+        {
+          "control_id": "UEM-05",
+          "value": false
+        },
+        {
+          "control_id": "UEM-06",
+          "value": false
+        },
+        {
+          "control_id": "UEM-07",
+          "value": false
+        },
+        {
+          "control_id": "UEM-08",
+          "value": false
+        },
+        {
+          "control_id": "UEM-09",
+          "value": false
+        },
+        {
+          "control_id": "UEM-10",
+          "value": false
+        },
+        {
+          "control_id": "UEM-11",
+          "value": false
+        },
+        {
+          "control_id": "UEM-12",
+          "value": false
+        },
+        {
+          "control_id": "UEM-13",
+          "value": false
+        },
+        {
+          "control_id": "UEM-14",
+          "value": false
+        }
+      ]
+    },
+    {
+      "title": "Network",
+      "content": [
+        {
+          "control_id": "A&A-01",
+          "value": false
+        },
+        {
+          "control_id": "A&A-02",
+          "value": true
+        },
+        {
+          "control_id": "A&A-03",
+          "value": true
+        },
+        {
+          "control_id": "A&A-04",
+          "value": true
+        },
+        {
+          "control_id": "A&A-05",
+          "value": true
+        },
+        {
+          "control_id": "A&A-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-01",
+          "value": true
+        },
+        {
+          "control_id": "AIS-02",
+          "value": true
+        },
+        {
+          "control_id": "AIS-03",
+          "value": true
+        },
+        {
+          "control_id": "AIS-04",
+          "value": true
+        },
+        {
+          "control_id": "AIS-05",
+          "value": true
+        },
+        {
+          "control_id": "AIS-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-01",
+          "value": true
+        },
+        {
+          "control_id": "BCR-02",
+          "value": true
+        },
+        {
+          "control_id": "BCR-03",
+          "value": true
+        },
+        {
+          "control_id": "BCR-04",
+          "value": true
+        },
+        {
+          "control_id": "BCR-05",
+          "value": true
+        },
+        {
+          "control_id": "BCR-06",
+          "value": true
+        },
+        {
+          "control_id": "BCR-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-08",
+          "value": false
+        },
+        {
+          "control_id": "BCR-09",
+          "value": true
+        },
+        {
+          "control_id": "BCR-10",
+          "value": true
+        },
+        {
+          "control_id": "BCR-11",
+          "value": true
+        },
+        {
+          "control_id": "CCC-01",
+          "value": true
+        },
+        {
+          "control_id": "CCC-02",
+          "value": true
+        },
+        {
+          "control_id": "CCC-03",
+          "value": true
+        },
+        {
+          "control_id": "CCC-04",
+          "value": true
+        },
+        {
+          "control_id": "CCC-05",
+          "value": true
+        },
+        {
+          "control_id": "CCC-06",
+          "value": true
+        },
+        {
+          "control_id": "CCC-07",
+          "value": true
+        },
+        {
+          "control_id": "CCC-08",
+          "value": true
+        },
+        {
+          "control_id": "CCC-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-01",
+          "value": true
+        },
+        {
+          "control_id": "CEK-02",
+          "value": true
+        },
+        {
+          "control_id": "CEK-03",
+          "value": true
+        },
+        {
+          "control_id": "CEK-04",
+          "value": true
+        },
+        {
+          "control_id": "CEK-05",
+          "value": true
+        },
+        {
+          "control_id": "CEK-06",
+          "value": true
+        },
+        {
+          "control_id": "CEK-07",
+          "value": true
+        },
+        {
+          "control_id": "CEK-08",
+          "value": true
+        },
+        {
+          "control_id": "CEK-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-10",
+          "value": true
+        },
+        {
+          "control_id": "CEK-11",
+          "value": true
+        },
+        {
+          "control_id": "CEK-12",
+          "value": true
+        },
+        {
+          "control_id": "CEK-13",
+          "value": true
+        },
+        {
+          "control_id": "CEK-14",
+          "value": true
+        },
+        {
+          "control_id": "CEK-15",
+          "value": true
+        },
+        {
+          "control_id": "CEK-16",
+          "value": true
+        },
+        {
+          "control_id": "CEK-17",
+          "value": true
+        },
+        {
+          "control_id": "CEK-18",
+          "value": true
+        },
+        {
+          "control_id": "CEK-19",
+          "value": true
+        },
+        {
+          "control_id": "CEK-20",
+          "value": true
+        },
+        {
+          "control_id": "CEK-21",
+          "value": true
+        },
+        {
+          "control_id": "DCS-01",
+          "value": true
+        },
+        {
+          "control_id": "DCS-02",
+          "value": true
+        },
+        {
+          "control_id": "DCS-03",
+          "value": true
+        },
+        {
+          "control_id": "DCS-04",
+          "value": false
+        },
+        {
+          "control_id": "DCS-05",
+          "value": true
+        },
+        {
+          "control_id": "DCS-06",
+          "value": true
+        },
+        {
+          "control_id": "DCS-07",
+          "value": false
+        },
+        {
+          "control_id": "DCS-08",
+          "value": true
+        },
+        {
+          "control_id": "DCS-09",
+          "value": false
+        },
+        {
+          "control_id": "DCS-10",
+          "value": false
+        },
+        {
+          "control_id": "DCS-11",
+          "value": false
+        },
+        {
+          "control_id": "DCS-12",
+          "value": true
+        },
+        {
+          "control_id": "DCS-13",
+          "value": false
+        },
+        {
+          "control_id": "DCS-14",
+          "value": true
+        },
+        {
+          "control_id": "DCS-15",
+          "value": true
+        },
+        {
+          "control_id": "DSP-01",
+          "value": true
+        },
+        {
+          "control_id": "DSP-02",
+          "value": true
+        },
+        {
+          "control_id": "DSP-03",
+          "value": true
+        },
+        {
+          "control_id": "DSP-04",
+          "value": false
+        },
+        {
+          "control_id": "DSP-05",
+          "value": true
+        },
+        {
+          "control_id": "DSP-06",
+          "value": false
+        },
+        {
+          "control_id": "DSP-07",
+          "value": true
+        },
+        {
+          "control_id": "DSP-08",
+          "value": true
+        },
+        {
+          "control_id": "DSP-09",
+          "value": false
+        },
+        {
+          "control_id": "DSP-10",
+          "value": true
+        },
+        {
+          "control_id": "DSP-11",
+          "value": false
+        },
+        {
+          "control_id": "DSP-12",
+          "value": true
+        },
+        {
+          "control_id": "DSP-13",
+          "value": true
+        },
+        {
+          "control_id": "DSP-14",
+          "value": false
+        },
+        {
+          "control_id": "DSP-15",
+          "value": false
+        },
+        {
+          "control_id": "DSP-16",
+          "value": false
+        },
+        {
+          "control_id": "DSP-17",
+          "value": false
+        },
+        {
+          "control_id": "DSP-18",
+          "value": false
+        },
+        {
+          "control_id": "DSP-19",
+          "value": true
+        },
+        {
+          "control_id": "GRC-01",
+          "value": true
+        },
+        {
+          "control_id": "GRC-02",
+          "value": true
+        },
+        {
+          "control_id": "GRC-03",
+          "value": true
+        },
+        {
+          "control_id": "GRC-04",
+          "value": true
+        },
+        {
+          "control_id": "GRC-05",
+          "value": true
+        },
+        {
+          "control_id": "GRC-06",
+          "value": true
+        },
+        {
+          "control_id": "GRC-07",
+          "value": true
+        },
+        {
+          "control_id": "GRC-08",
+          "value": true
+        },
+        {
+          "control_id": "HRS-01",
+          "value": true
+        },
+        {
+          "control_id": "HRS-02",
+          "value": true
+        },
+        {
+          "control_id": "HRS-03",
+          "value": false
+        },
+        {
+          "control_id": "HRS-04",
+          "value": true
+        },
+        {
+          "control_id": "HRS-05",
+          "value": false
+        },
+        {
+          "control_id": "HRS-06",
+          "value": false
+        },
+        {
+          "control_id": "HRS-07",
+          "value": false
+        },
+        {
+          "control_id": "HRS-08",
+          "value": false
+        },
+        {
+          "control_id": "HRS-09",
+          "value": false
+        },
+        {
+          "control_id": "HRS-10",
+          "value": false
+        },
+        {
+          "control_id": "HRS-11",
+          "value": false
+        },
+        {
+          "control_id": "HRS-12",
+          "value": false
+        },
+        {
+          "control_id": "HRS-13",
+          "value": false
+        },
+        {
+          "control_id": "IAM-01",
+          "value": true
+        },
+        {
+          "control_id": "IAM-02",
+          "value": true
+        },
+        {
+          "control_id": "IAM-03",
+          "value": true
+        },
+        {
+          "control_id": "IAM-04",
+          "value": true
+        },
+        {
+          "control_id": "IAM-05",
+          "value": true
+        },
+        {
+          "control_id": "IAM-06",
+          "value": true
+        },
+        {
+          "control_id": "IAM-07",
+          "value": true
+        },
+        {
+          "control_id": "IAM-08",
+          "value": true
+        },
+        {
+          "control_id": "IAM-09",
+          "value": true
+        },
+        {
+          "control_id": "IAM-10",
+          "value": true
+        },
+        {
+          "control_id": "IAM-11",
+          "value": true
+        },
+        {
+          "control_id": "IAM-12",
+          "value": true
+        },
+        {
+          "control_id": "IAM-13",
+          "value": true
+        },
+        {
+          "control_id": "IAM-14",
+          "value": true
+        },
+        {
+          "control_id": "IAM-15",
+          "value": true
+        },
+        {
+          "control_id": "IAM-16",
+          "value": true
+        },
+        {
+          "control_id": "IPY-01",
+          "value": true
+        },
+        {
+          "control_id": "IPY-02",
+          "value": true
+        },
+        {
+          "control_id": "IPY-03",
+          "value": true
+        },
+        {
+          "control_id": "IPY-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-01",
+          "value": true
+        },
+        {
+          "control_id": "IVS-02",
+          "value": true
+        },
+        {
+          "control_id": "IVS-03",
+          "value": true
+        },
+        {
+          "control_id": "IVS-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-05",
+          "value": false
+        },
+        {
+          "control_id": "IVS-06",
+          "value": true
+        },
+        {
+          "control_id": "IVS-07",
+          "value": true
+        },
+        {
+          "control_id": "IVS-08",
+          "value": true
+        },
+        {
+          "control_id": "IVS-09",
+          "value": true
+        },
+        {
+          "control_id": "LOG-01",
+          "value": true
+        },
+        {
+          "control_id": "LOG-02",
+          "value": true
+        },
+        {
+          "control_id": "LOG-03",
+          "value": true
+        },
+        {
+          "control_id": "LOG-04",
+          "value": true
+        },
+        {
+          "control_id": "LOG-05",
+          "value": true
+        },
+        {
+          "control_id": "LOG-06",
+          "value": true
+        },
+        {
+          "control_id": "LOG-07",
+          "value": true
+        },
+        {
+          "control_id": "LOG-08",
+          "value": true
+        },
+        {
+          "control_id": "LOG-09",
+          "value": true
+        },
+        {
+          "control_id": "LOG-10",
+          "value": true
+        },
+        {
+          "control_id": "LOG-11",
+          "value": true
+        },
+        {
+          "control_id": "LOG-12",
+          "value": true
+        },
+        {
+          "control_id": "LOG-13",
+          "value": true
+        },
+        {
+          "control_id": "SEF-01",
+          "value": true
+        },
+        {
+          "control_id": "SEF-02",
+          "value": true
+        },
+        {
+          "control_id": "SEF-03",
+          "value": true
+        },
+        {
+          "control_id": "SEF-04",
+          "value": true
+        },
+        {
+          "control_id": "SEF-05",
+          "value": true
+        },
+        {
+          "control_id": "SEF-06",
+          "value": true
+        },
+        {
+          "control_id": "SEF-07",
+          "value": true
+        },
+        {
+          "control_id": "SEF-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-01",
+          "value": true
+        },
+        {
+          "control_id": "STA-02",
+          "value": true
+        },
+        {
+          "control_id": "STA-03",
+          "value": true
+        },
+        {
+          "control_id": "STA-04",
+          "value": true
+        },
+        {
+          "control_id": "STA-05",
+          "value": true
+        },
+        {
+          "control_id": "STA-06",
+          "value": true
+        },
+        {
+          "control_id": "STA-07",
+          "value": true
+        },
+        {
+          "control_id": "STA-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-09",
+          "value": true
+        },
+        {
+          "control_id": "STA-10",
+          "value": true
+        },
+        {
+          "control_id": "STA-11",
+          "value": true
+        },
+        {
+          "control_id": "STA-12",
+          "value": true
+        },
+        {
+          "control_id": "STA-13",
+          "value": true
+        },
+        {
+          "control_id": "STA-14",
+          "value": true
+        },
+        {
+          "control_id": "TVM-01",
+          "value": true
+        },
+        {
+          "control_id": "TVM-02",
+          "value": true
+        },
+        {
+          "control_id": "TVM-03",
+          "value": true
+        },
+        {
+          "control_id": "TVM-04",
+          "value": true
+        },
+        {
+          "control_id": "TVM-05",
+          "value": true
+        },
+        {
+          "control_id": "TVM-06",
+          "value": true
+        },
+        {
+          "control_id": "TVM-07",
+          "value": true
+        },
+        {
+          "control_id": "TVM-08",
+          "value": true
+        },
+        {
+          "control_id": "TVM-09",
+          "value": true
+        },
+        {
+          "control_id": "TVM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-01",
+          "value": true
+        },
+        {
+          "control_id": "UEM-02",
+          "value": true
+        },
+        {
+          "control_id": "UEM-03",
+          "value": true
+        },
+        {
+          "control_id": "UEM-04",
+          "value": true
+        },
+        {
+          "control_id": "UEM-05",
+          "value": true
+        },
+        {
+          "control_id": "UEM-06",
+          "value": true
+        },
+        {
+          "control_id": "UEM-07",
+          "value": true
+        },
+        {
+          "control_id": "UEM-08",
+          "value": true
+        },
+        {
+          "control_id": "UEM-09",
+          "value": true
+        },
+        {
+          "control_id": "UEM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-11",
+          "value": true
+        },
+        {
+          "control_id": "UEM-12",
+          "value": true
+        },
+        {
+          "control_id": "UEM-13",
+          "value": true
+        },
+        {
+          "control_id": "UEM-14",
+          "value": true
+        }
+      ]
+    },
+    {
+      "title": "Compute",
+      "content": [
+        {
+          "control_id": "A&A-01",
+          "value": false
+        },
+        {
+          "control_id": "A&A-02",
+          "value": true
+        },
+        {
+          "control_id": "A&A-03",
+          "value": true
+        },
+        {
+          "control_id": "A&A-04",
+          "value": true
+        },
+        {
+          "control_id": "A&A-05",
+          "value": true
+        },
+        {
+          "control_id": "A&A-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-01",
+          "value": true
+        },
+        {
+          "control_id": "AIS-02",
+          "value": true
+        },
+        {
+          "control_id": "AIS-03",
+          "value": true
+        },
+        {
+          "control_id": "AIS-04",
+          "value": true
+        },
+        {
+          "control_id": "AIS-05",
+          "value": true
+        },
+        {
+          "control_id": "AIS-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-01",
+          "value": true
+        },
+        {
+          "control_id": "BCR-02",
+          "value": true
+        },
+        {
+          "control_id": "BCR-03",
+          "value": true
+        },
+        {
+          "control_id": "BCR-04",
+          "value": true
+        },
+        {
+          "control_id": "BCR-05",
+          "value": true
+        },
+        {
+          "control_id": "BCR-06",
+          "value": true
+        },
+        {
+          "control_id": "BCR-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-08",
+          "value": false
+        },
+        {
+          "control_id": "BCR-09",
+          "value": true
+        },
+        {
+          "control_id": "BCR-10",
+          "value": true
+        },
+        {
+          "control_id": "BCR-11",
+          "value": true
+        },
+        {
+          "control_id": "CCC-01",
+          "value": true
+        },
+        {
+          "control_id": "CCC-02",
+          "value": true
+        },
+        {
+          "control_id": "CCC-03",
+          "value": true
+        },
+        {
+          "control_id": "CCC-04",
+          "value": true
+        },
+        {
+          "control_id": "CCC-05",
+          "value": true
+        },
+        {
+          "control_id": "CCC-06",
+          "value": true
+        },
+        {
+          "control_id": "CCC-07",
+          "value": true
+        },
+        {
+          "control_id": "CCC-08",
+          "value": true
+        },
+        {
+          "control_id": "CCC-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-01",
+          "value": true
+        },
+        {
+          "control_id": "CEK-02",
+          "value": true
+        },
+        {
+          "control_id": "CEK-03",
+          "value": true
+        },
+        {
+          "control_id": "CEK-04",
+          "value": true
+        },
+        {
+          "control_id": "CEK-05",
+          "value": true
+        },
+        {
+          "control_id": "CEK-06",
+          "value": true
+        },
+        {
+          "control_id": "CEK-07",
+          "value": true
+        },
+        {
+          "control_id": "CEK-08",
+          "value": true
+        },
+        {
+          "control_id": "CEK-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-10",
+          "value": true
+        },
+        {
+          "control_id": "CEK-11",
+          "value": true
+        },
+        {
+          "control_id": "CEK-12",
+          "value": true
+        },
+        {
+          "control_id": "CEK-13",
+          "value": true
+        },
+        {
+          "control_id": "CEK-14",
+          "value": true
+        },
+        {
+          "control_id": "CEK-15",
+          "value": true
+        },
+        {
+          "control_id": "CEK-16",
+          "value": true
+        },
+        {
+          "control_id": "CEK-17",
+          "value": true
+        },
+        {
+          "control_id": "CEK-18",
+          "value": true
+        },
+        {
+          "control_id": "CEK-19",
+          "value": true
+        },
+        {
+          "control_id": "CEK-20",
+          "value": true
+        },
+        {
+          "control_id": "CEK-21",
+          "value": true
+        },
+        {
+          "control_id": "DCS-01",
+          "value": true
+        },
+        {
+          "control_id": "DCS-02",
+          "value": true
+        },
+        {
+          "control_id": "DCS-03",
+          "value": false
+        },
+        {
+          "control_id": "DCS-04",
+          "value": false
+        },
+        {
+          "control_id": "DCS-05",
+          "value": true
+        },
+        {
+          "control_id": "DCS-06",
+          "value": true
+        },
+        {
+          "control_id": "DCS-07",
+          "value": false
+        },
+        {
+          "control_id": "DCS-08",
+          "value": true
+        },
+        {
+          "control_id": "DCS-09",
+          "value": false
+        },
+        {
+          "control_id": "DCS-10",
+          "value": false
+        },
+        {
+          "control_id": "DCS-11",
+          "value": false
+        },
+        {
+          "control_id": "DCS-12",
+          "value": true
+        },
+        {
+          "control_id": "DCS-13",
+          "value": false
+        },
+        {
+          "control_id": "DCS-14",
+          "value": false
+        },
+        {
+          "control_id": "DCS-15",
+          "value": true
+        },
+        {
+          "control_id": "DSP-01",
+          "value": true
+        },
+        {
+          "control_id": "DSP-02",
+          "value": true
+        },
+        {
+          "control_id": "DSP-03",
+          "value": true
+        },
+        {
+          "control_id": "DSP-04",
+          "value": false
+        },
+        {
+          "control_id": "DSP-05",
+          "value": true
+        },
+        {
+          "control_id": "DSP-06",
+          "value": false
+        },
+        {
+          "control_id": "DSP-07",
+          "value": true
+        },
+        {
+          "control_id": "DSP-08",
+          "value": true
+        },
+        {
+          "control_id": "DSP-09",
+          "value": false
+        },
+        {
+          "control_id": "DSP-10",
+          "value": true
+        },
+        {
+          "control_id": "DSP-11",
+          "value": false
+        },
+        {
+          "control_id": "DSP-12",
+          "value": true
+        },
+        {
+          "control_id": "DSP-13",
+          "value": true
+        },
+        {
+          "control_id": "DSP-14",
+          "value": false
+        },
+        {
+          "control_id": "DSP-15",
+          "value": false
+        },
+        {
+          "control_id": "DSP-16",
+          "value": false
+        },
+        {
+          "control_id": "DSP-17",
+          "value": false
+        },
+        {
+          "control_id": "DSP-18",
+          "value": false
+        },
+        {
+          "control_id": "DSP-19",
+          "value": true
+        },
+        {
+          "control_id": "GRC-01",
+          "value": true
+        },
+        {
+          "control_id": "GRC-02",
+          "value": true
+        },
+        {
+          "control_id": "GRC-03",
+          "value": true
+        },
+        {
+          "control_id": "GRC-04",
+          "value": true
+        },
+        {
+          "control_id": "GRC-05",
+          "value": true
+        },
+        {
+          "control_id": "GRC-06",
+          "value": true
+        },
+        {
+          "control_id": "GRC-07",
+          "value": true
+        },
+        {
+          "control_id": "GRC-08",
+          "value": true
+        },
+        {
+          "control_id": "HRS-01",
+          "value": false
+        },
+        {
+          "control_id": "HRS-02",
+          "value": true
+        },
+        {
+          "control_id": "HRS-03",
+          "value": false
+        },
+        {
+          "control_id": "HRS-04",
+          "value": true
+        },
+        {
+          "control_id": "HRS-05",
+          "value": false
+        },
+        {
+          "control_id": "HRS-06",
+          "value": false
+        },
+        {
+          "control_id": "HRS-07",
+          "value": false
+        },
+        {
+          "control_id": "HRS-08",
+          "value": false
+        },
+        {
+          "control_id": "HRS-09",
+          "value": false
+        },
+        {
+          "control_id": "HRS-10",
+          "value": false
+        },
+        {
+          "control_id": "HRS-11",
+          "value": false
+        },
+        {
+          "control_id": "HRS-12",
+          "value": false
+        },
+        {
+          "control_id": "HRS-13",
+          "value": false
+        },
+        {
+          "control_id": "IAM-01",
+          "value": true
+        },
+        {
+          "control_id": "IAM-02",
+          "value": true
+        },
+        {
+          "control_id": "IAM-03",
+          "value": true
+        },
+        {
+          "control_id": "IAM-04",
+          "value": true
+        },
+        {
+          "control_id": "IAM-05",
+          "value": true
+        },
+        {
+          "control_id": "IAM-06",
+          "value": true
+        },
+        {
+          "control_id": "IAM-07",
+          "value": true
+        },
+        {
+          "control_id": "IAM-08",
+          "value": true
+        },
+        {
+          "control_id": "IAM-09",
+          "value": true
+        },
+        {
+          "control_id": "IAM-10",
+          "value": true
+        },
+        {
+          "control_id": "IAM-11",
+          "value": true
+        },
+        {
+          "control_id": "IAM-12",
+          "value": true
+        },
+        {
+          "control_id": "IAM-13",
+          "value": true
+        },
+        {
+          "control_id": "IAM-14",
+          "value": true
+        },
+        {
+          "control_id": "IAM-15",
+          "value": true
+        },
+        {
+          "control_id": "IAM-16",
+          "value": true
+        },
+        {
+          "control_id": "IPY-01",
+          "value": true
+        },
+        {
+          "control_id": "IPY-02",
+          "value": true
+        },
+        {
+          "control_id": "IPY-03",
+          "value": true
+        },
+        {
+          "control_id": "IPY-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-01",
+          "value": true
+        },
+        {
+          "control_id": "IVS-02",
+          "value": true
+        },
+        {
+          "control_id": "IVS-03",
+          "value": false
+        },
+        {
+          "control_id": "IVS-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-05",
+          "value": false
+        },
+        {
+          "control_id": "IVS-06",
+          "value": true
+        },
+        {
+          "control_id": "IVS-07",
+          "value": true
+        },
+        {
+          "control_id": "IVS-08",
+          "value": true
+        },
+        {
+          "control_id": "IVS-09",
+          "value": false
+        },
+        {
+          "control_id": "LOG-01",
+          "value": true
+        },
+        {
+          "control_id": "LOG-02",
+          "value": true
+        },
+        {
+          "control_id": "LOG-03",
+          "value": true
+        },
+        {
+          "control_id": "LOG-04",
+          "value": true
+        },
+        {
+          "control_id": "LOG-05",
+          "value": true
+        },
+        {
+          "control_id": "LOG-06",
+          "value": true
+        },
+        {
+          "control_id": "LOG-07",
+          "value": true
+        },
+        {
+          "control_id": "LOG-08",
+          "value": true
+        },
+        {
+          "control_id": "LOG-09",
+          "value": true
+        },
+        {
+          "control_id": "LOG-10",
+          "value": true
+        },
+        {
+          "control_id": "LOG-11",
+          "value": true
+        },
+        {
+          "control_id": "LOG-12",
+          "value": true
+        },
+        {
+          "control_id": "LOG-13",
+          "value": true
+        },
+        {
+          "control_id": "SEF-01",
+          "value": true
+        },
+        {
+          "control_id": "SEF-02",
+          "value": true
+        },
+        {
+          "control_id": "SEF-03",
+          "value": true
+        },
+        {
+          "control_id": "SEF-04",
+          "value": true
+        },
+        {
+          "control_id": "SEF-05",
+          "value": true
+        },
+        {
+          "control_id": "SEF-06",
+          "value": true
+        },
+        {
+          "control_id": "SEF-07",
+          "value": true
+        },
+        {
+          "control_id": "SEF-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-01",
+          "value": true
+        },
+        {
+          "control_id": "STA-02",
+          "value": true
+        },
+        {
+          "control_id": "STA-03",
+          "value": true
+        },
+        {
+          "control_id": "STA-04",
+          "value": true
+        },
+        {
+          "control_id": "STA-05",
+          "value": true
+        },
+        {
+          "control_id": "STA-06",
+          "value": true
+        },
+        {
+          "control_id": "STA-07",
+          "value": true
+        },
+        {
+          "control_id": "STA-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-09",
+          "value": true
+        },
+        {
+          "control_id": "STA-10",
+          "value": true
+        },
+        {
+          "control_id": "STA-11",
+          "value": true
+        },
+        {
+          "control_id": "STA-12",
+          "value": true
+        },
+        {
+          "control_id": "STA-13",
+          "value": true
+        },
+        {
+          "control_id": "STA-14",
+          "value": true
+        },
+        {
+          "control_id": "TVM-01",
+          "value": true
+        },
+        {
+          "control_id": "TVM-02",
+          "value": true
+        },
+        {
+          "control_id": "TVM-03",
+          "value": true
+        },
+        {
+          "control_id": "TVM-04",
+          "value": true
+        },
+        {
+          "control_id": "TVM-05",
+          "value": true
+        },
+        {
+          "control_id": "TVM-06",
+          "value": true
+        },
+        {
+          "control_id": "TVM-07",
+          "value": true
+        },
+        {
+          "control_id": "TVM-08",
+          "value": true
+        },
+        {
+          "control_id": "TVM-09",
+          "value": true
+        },
+        {
+          "control_id": "TVM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-01",
+          "value": true
+        },
+        {
+          "control_id": "UEM-02",
+          "value": true
+        },
+        {
+          "control_id": "UEM-03",
+          "value": true
+        },
+        {
+          "control_id": "UEM-04",
+          "value": true
+        },
+        {
+          "control_id": "UEM-05",
+          "value": true
+        },
+        {
+          "control_id": "UEM-06",
+          "value": true
+        },
+        {
+          "control_id": "UEM-07",
+          "value": true
+        },
+        {
+          "control_id": "UEM-08",
+          "value": true
+        },
+        {
+          "control_id": "UEM-09",
+          "value": true
+        },
+        {
+          "control_id": "UEM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-11",
+          "value": true
+        },
+        {
+          "control_id": "UEM-12",
+          "value": true
+        },
+        {
+          "control_id": "UEM-13",
+          "value": true
+        },
+        {
+          "control_id": "UEM-14",
+          "value": true
+        }
+      ]
+    },
+    {
+      "title": "Storage",
+      "content": [
+        {
+          "control_id": "A&A-01",
+          "value": false
+        },
+        {
+          "control_id": "A&A-02",
+          "value": true
+        },
+        {
+          "control_id": "A&A-03",
+          "value": true
+        },
+        {
+          "control_id": "A&A-04",
+          "value": true
+        },
+        {
+          "control_id": "A&A-05",
+          "value": true
+        },
+        {
+          "control_id": "A&A-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-01",
+          "value": true
+        },
+        {
+          "control_id": "AIS-02",
+          "value": true
+        },
+        {
+          "control_id": "AIS-03",
+          "value": true
+        },
+        {
+          "control_id": "AIS-04",
+          "value": true
+        },
+        {
+          "control_id": "AIS-05",
+          "value": true
+        },
+        {
+          "control_id": "AIS-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-01",
+          "value": true
+        },
+        {
+          "control_id": "BCR-02",
+          "value": true
+        },
+        {
+          "control_id": "BCR-03",
+          "value": true
+        },
+        {
+          "control_id": "BCR-04",
+          "value": true
+        },
+        {
+          "control_id": "BCR-05",
+          "value": true
+        },
+        {
+          "control_id": "BCR-06",
+          "value": true
+        },
+        {
+          "control_id": "BCR-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-08",
+          "value": true
+        },
+        {
+          "control_id": "BCR-09",
+          "value": true
+        },
+        {
+          "control_id": "BCR-10",
+          "value": true
+        },
+        {
+          "control_id": "BCR-11",
+          "value": true
+        },
+        {
+          "control_id": "CCC-01",
+          "value": true
+        },
+        {
+          "control_id": "CCC-02",
+          "value": true
+        },
+        {
+          "control_id": "CCC-03",
+          "value": true
+        },
+        {
+          "control_id": "CCC-04",
+          "value": true
+        },
+        {
+          "control_id": "CCC-05",
+          "value": true
+        },
+        {
+          "control_id": "CCC-06",
+          "value": true
+        },
+        {
+          "control_id": "CCC-07",
+          "value": true
+        },
+        {
+          "control_id": "CCC-08",
+          "value": true
+        },
+        {
+          "control_id": "CCC-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-01",
+          "value": true
+        },
+        {
+          "control_id": "CEK-02",
+          "value": true
+        },
+        {
+          "control_id": "CEK-03",
+          "value": true
+        },
+        {
+          "control_id": "CEK-04",
+          "value": true
+        },
+        {
+          "control_id": "CEK-05",
+          "value": true
+        },
+        {
+          "control_id": "CEK-06",
+          "value": true
+        },
+        {
+          "control_id": "CEK-07",
+          "value": true
+        },
+        {
+          "control_id": "CEK-08",
+          "value": true
+        },
+        {
+          "control_id": "CEK-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-10",
+          "value": true
+        },
+        {
+          "control_id": "CEK-11",
+          "value": true
+        },
+        {
+          "control_id": "CEK-12",
+          "value": true
+        },
+        {
+          "control_id": "CEK-13",
+          "value": true
+        },
+        {
+          "control_id": "CEK-14",
+          "value": true
+        },
+        {
+          "control_id": "CEK-15",
+          "value": true
+        },
+        {
+          "control_id": "CEK-16",
+          "value": true
+        },
+        {
+          "control_id": "CEK-17",
+          "value": true
+        },
+        {
+          "control_id": "CEK-18",
+          "value": true
+        },
+        {
+          "control_id": "CEK-19",
+          "value": true
+        },
+        {
+          "control_id": "CEK-20",
+          "value": true
+        },
+        {
+          "control_id": "CEK-21",
+          "value": true
+        },
+        {
+          "control_id": "DCS-01",
+          "value": true
+        },
+        {
+          "control_id": "DCS-02",
+          "value": true
+        },
+        {
+          "control_id": "DCS-03",
+          "value": false
+        },
+        {
+          "control_id": "DCS-04",
+          "value": false
+        },
+        {
+          "control_id": "DCS-05",
+          "value": true
+        },
+        {
+          "control_id": "DCS-06",
+          "value": true
+        },
+        {
+          "control_id": "DCS-07",
+          "value": false
+        },
+        {
+          "control_id": "DCS-08",
+          "value": true
+        },
+        {
+          "control_id": "DCS-09",
+          "value": false
+        },
+        {
+          "control_id": "DCS-10",
+          "value": false
+        },
+        {
+          "control_id": "DCS-11",
+          "value": false
+        },
+        {
+          "control_id": "DCS-12",
+          "value": true
+        },
+        {
+          "control_id": "DCS-13",
+          "value": false
+        },
+        {
+          "control_id": "DCS-14",
+          "value": false
+        },
+        {
+          "control_id": "DCS-15",
+          "value": true
+        },
+        {
+          "control_id": "DSP-01",
+          "value": true
+        },
+        {
+          "control_id": "DSP-02",
+          "value": true
+        },
+        {
+          "control_id": "DSP-03",
+          "value": true
+        },
+        {
+          "control_id": "DSP-04",
+          "value": false
+        },
+        {
+          "control_id": "DSP-05",
+          "value": true
+        },
+        {
+          "control_id": "DSP-06",
+          "value": false
+        },
+        {
+          "control_id": "DSP-07",
+          "value": true
+        },
+        {
+          "control_id": "DSP-08",
+          "value": true
+        },
+        {
+          "control_id": "DSP-09",
+          "value": false
+        },
+        {
+          "control_id": "DSP-10",
+          "value": false
+        },
+        {
+          "control_id": "DSP-11",
+          "value": false
+        },
+        {
+          "control_id": "DSP-12",
+          "value": true
+        },
+        {
+          "control_id": "DSP-13",
+          "value": true
+        },
+        {
+          "control_id": "DSP-14",
+          "value": false
+        },
+        {
+          "control_id": "DSP-15",
+          "value": false
+        },
+        {
+          "control_id": "DSP-16",
+          "value": true
+        },
+        {
+          "control_id": "DSP-17",
+          "value": false
+        },
+        {
+          "control_id": "DSP-18",
+          "value": false
+        },
+        {
+          "control_id": "DSP-19",
+          "value": true
+        },
+        {
+          "control_id": "GRC-01",
+          "value": true
+        },
+        {
+          "control_id": "GRC-02",
+          "value": true
+        },
+        {
+          "control_id": "GRC-03",
+          "value": true
+        },
+        {
+          "control_id": "GRC-04",
+          "value": true
+        },
+        {
+          "control_id": "GRC-05",
+          "value": true
+        },
+        {
+          "control_id": "GRC-06",
+          "value": true
+        },
+        {
+          "control_id": "GRC-07",
+          "value": true
+        },
+        {
+          "control_id": "GRC-08",
+          "value": true
+        },
+        {
+          "control_id": "HRS-01",
+          "value": true
+        },
+        {
+          "control_id": "HRS-02",
+          "value": true
+        },
+        {
+          "control_id": "HRS-03",
+          "value": false
+        },
+        {
+          "control_id": "HRS-04",
+          "value": true
+        },
+        {
+          "control_id": "HRS-05",
+          "value": true
+        },
+        {
+          "control_id": "HRS-06",
+          "value": true
+        },
+        {
+          "control_id": "HRS-07",
+          "value": true
+        },
+        {
+          "control_id": "HRS-08",
+          "value": false
+        },
+        {
+          "control_id": "HRS-09",
+          "value": false
+        },
+        {
+          "control_id": "HRS-10",
+          "value": false
+        },
+        {
+          "control_id": "HRS-11",
+          "value": false
+        },
+        {
+          "control_id": "HRS-12",
+          "value": false
+        },
+        {
+          "control_id": "HRS-13",
+          "value": false
+        },
+        {
+          "control_id": "IAM-01",
+          "value": true
+        },
+        {
+          "control_id": "IAM-02",
+          "value": true
+        },
+        {
+          "control_id": "IAM-03",
+          "value": true
+        },
+        {
+          "control_id": "IAM-04",
+          "value": true
+        },
+        {
+          "control_id": "IAM-05",
+          "value": true
+        },
+        {
+          "control_id": "IAM-06",
+          "value": true
+        },
+        {
+          "control_id": "IAM-07",
+          "value": true
+        },
+        {
+          "control_id": "IAM-08",
+          "value": true
+        },
+        {
+          "control_id": "IAM-09",
+          "value": true
+        },
+        {
+          "control_id": "IAM-10",
+          "value": true
+        },
+        {
+          "control_id": "IAM-11",
+          "value": true
+        },
+        {
+          "control_id": "IAM-12",
+          "value": true
+        },
+        {
+          "control_id": "IAM-13",
+          "value": true
+        },
+        {
+          "control_id": "IAM-14",
+          "value": true
+        },
+        {
+          "control_id": "IAM-15",
+          "value": true
+        },
+        {
+          "control_id": "IAM-16",
+          "value": true
+        },
+        {
+          "control_id": "IPY-01",
+          "value": true
+        },
+        {
+          "control_id": "IPY-02",
+          "value": true
+        },
+        {
+          "control_id": "IPY-03",
+          "value": true
+        },
+        {
+          "control_id": "IPY-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-01",
+          "value": true
+        },
+        {
+          "control_id": "IVS-02",
+          "value": true
+        },
+        {
+          "control_id": "IVS-03",
+          "value": false
+        },
+        {
+          "control_id": "IVS-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-05",
+          "value": false
+        },
+        {
+          "control_id": "IVS-06",
+          "value": true
+        },
+        {
+          "control_id": "IVS-07",
+          "value": true
+        },
+        {
+          "control_id": "IVS-08",
+          "value": true
+        },
+        {
+          "control_id": "IVS-09",
+          "value": false
+        },
+        {
+          "control_id": "LOG-01",
+          "value": true
+        },
+        {
+          "control_id": "LOG-02",
+          "value": true
+        },
+        {
+          "control_id": "LOG-03",
+          "value": true
+        },
+        {
+          "control_id": "LOG-04",
+          "value": true
+        },
+        {
+          "control_id": "LOG-05",
+          "value": true
+        },
+        {
+          "control_id": "LOG-06",
+          "value": true
+        },
+        {
+          "control_id": "LOG-07",
+          "value": true
+        },
+        {
+          "control_id": "LOG-08",
+          "value": true
+        },
+        {
+          "control_id": "LOG-09",
+          "value": true
+        },
+        {
+          "control_id": "LOG-10",
+          "value": true
+        },
+        {
+          "control_id": "LOG-11",
+          "value": true
+        },
+        {
+          "control_id": "LOG-12",
+          "value": true
+        },
+        {
+          "control_id": "LOG-13",
+          "value": true
+        },
+        {
+          "control_id": "SEF-01",
+          "value": true
+        },
+        {
+          "control_id": "SEF-02",
+          "value": true
+        },
+        {
+          "control_id": "SEF-03",
+          "value": true
+        },
+        {
+          "control_id": "SEF-04",
+          "value": true
+        },
+        {
+          "control_id": "SEF-05",
+          "value": true
+        },
+        {
+          "control_id": "SEF-06",
+          "value": true
+        },
+        {
+          "control_id": "SEF-07",
+          "value": true
+        },
+        {
+          "control_id": "SEF-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-01",
+          "value": true
+        },
+        {
+          "control_id": "STA-02",
+          "value": true
+        },
+        {
+          "control_id": "STA-03",
+          "value": true
+        },
+        {
+          "control_id": "STA-04",
+          "value": true
+        },
+        {
+          "control_id": "STA-05",
+          "value": true
+        },
+        {
+          "control_id": "STA-06",
+          "value": true
+        },
+        {
+          "control_id": "STA-07",
+          "value": true
+        },
+        {
+          "control_id": "STA-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-09",
+          "value": true
+        },
+        {
+          "control_id": "STA-10",
+          "value": true
+        },
+        {
+          "control_id": "STA-11",
+          "value": true
+        },
+        {
+          "control_id": "STA-12",
+          "value": true
+        },
+        {
+          "control_id": "STA-13",
+          "value": true
+        },
+        {
+          "control_id": "STA-14",
+          "value": true
+        },
+        {
+          "control_id": "TVM-01",
+          "value": true
+        },
+        {
+          "control_id": "TVM-02",
+          "value": true
+        },
+        {
+          "control_id": "TVM-03",
+          "value": true
+        },
+        {
+          "control_id": "TVM-04",
+          "value": true
+        },
+        {
+          "control_id": "TVM-05",
+          "value": true
+        },
+        {
+          "control_id": "TVM-06",
+          "value": true
+        },
+        {
+          "control_id": "TVM-07",
+          "value": true
+        },
+        {
+          "control_id": "TVM-08",
+          "value": true
+        },
+        {
+          "control_id": "TVM-09",
+          "value": true
+        },
+        {
+          "control_id": "TVM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-01",
+          "value": true
+        },
+        {
+          "control_id": "UEM-02",
+          "value": false
+        },
+        {
+          "control_id": "UEM-03",
+          "value": true
+        },
+        {
+          "control_id": "UEM-04",
+          "value": true
+        },
+        {
+          "control_id": "UEM-05",
+          "value": true
+        },
+        {
+          "control_id": "UEM-06",
+          "value": true
+        },
+        {
+          "control_id": "UEM-07",
+          "value": true
+        },
+        {
+          "control_id": "UEM-08",
+          "value": true
+        },
+        {
+          "control_id": "UEM-09",
+          "value": true
+        },
+        {
+          "control_id": "UEM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-11",
+          "value": true
+        },
+        {
+          "control_id": "UEM-12",
+          "value": true
+        },
+        {
+          "control_id": "UEM-13",
+          "value": true
+        },
+        {
+          "control_id": "UEM-14",
+          "value": true
+        }
+      ]
+    },
+    {
+      "title": "App",
+      "content": [
+        {
+          "control_id": "A&A-01",
+          "value": true
+        },
+        {
+          "control_id": "A&A-02",
+          "value": true
+        },
+        {
+          "control_id": "A&A-03",
+          "value": true
+        },
+        {
+          "control_id": "A&A-04",
+          "value": true
+        },
+        {
+          "control_id": "A&A-05",
+          "value": true
+        },
+        {
+          "control_id": "A&A-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-01",
+          "value": true
+        },
+        {
+          "control_id": "AIS-02",
+          "value": true
+        },
+        {
+          "control_id": "AIS-03",
+          "value": true
+        },
+        {
+          "control_id": "AIS-04",
+          "value": true
+        },
+        {
+          "control_id": "AIS-05",
+          "value": true
+        },
+        {
+          "control_id": "AIS-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-01",
+          "value": true
+        },
+        {
+          "control_id": "BCR-02",
+          "value": true
+        },
+        {
+          "control_id": "BCR-03",
+          "value": true
+        },
+        {
+          "control_id": "BCR-04",
+          "value": true
+        },
+        {
+          "control_id": "BCR-05",
+          "value": true
+        },
+        {
+          "control_id": "BCR-06",
+          "value": true
+        },
+        {
+          "control_id": "BCR-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-08",
+          "value": false
+        },
+        {
+          "control_id": "BCR-09",
+          "value": true
+        },
+        {
+          "control_id": "BCR-10",
+          "value": true
+        },
+        {
+          "control_id": "BCR-11",
+          "value": false
+        },
+        {
+          "control_id": "CCC-01",
+          "value": true
+        },
+        {
+          "control_id": "CCC-02",
+          "value": true
+        },
+        {
+          "control_id": "CCC-03",
+          "value": true
+        },
+        {
+          "control_id": "CCC-04",
+          "value": true
+        },
+        {
+          "control_id": "CCC-05",
+          "value": true
+        },
+        {
+          "control_id": "CCC-06",
+          "value": true
+        },
+        {
+          "control_id": "CCC-07",
+          "value": true
+        },
+        {
+          "control_id": "CCC-08",
+          "value": true
+        },
+        {
+          "control_id": "CCC-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-01",
+          "value": true
+        },
+        {
+          "control_id": "CEK-02",
+          "value": true
+        },
+        {
+          "control_id": "CEK-03",
+          "value": true
+        },
+        {
+          "control_id": "CEK-04",
+          "value": true
+        },
+        {
+          "control_id": "CEK-05",
+          "value": true
+        },
+        {
+          "control_id": "CEK-06",
+          "value": true
+        },
+        {
+          "control_id": "CEK-07",
+          "value": true
+        },
+        {
+          "control_id": "CEK-08",
+          "value": true
+        },
+        {
+          "control_id": "CEK-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-10",
+          "value": true
+        },
+        {
+          "control_id": "CEK-11",
+          "value": true
+        },
+        {
+          "control_id": "CEK-12",
+          "value": true
+        },
+        {
+          "control_id": "CEK-13",
+          "value": true
+        },
+        {
+          "control_id": "CEK-14",
+          "value": true
+        },
+        {
+          "control_id": "CEK-15",
+          "value": true
+        },
+        {
+          "control_id": "CEK-16",
+          "value": true
+        },
+        {
+          "control_id": "CEK-17",
+          "value": true
+        },
+        {
+          "control_id": "CEK-18",
+          "value": true
+        },
+        {
+          "control_id": "CEK-19",
+          "value": true
+        },
+        {
+          "control_id": "CEK-20",
+          "value": true
+        },
+        {
+          "control_id": "CEK-21",
+          "value": true
+        },
+        {
+          "control_id": "DCS-01",
+          "value": true
+        },
+        {
+          "control_id": "DCS-02",
+          "value": true
+        },
+        {
+          "control_id": "DCS-03",
+          "value": false
+        },
+        {
+          "control_id": "DCS-04",
+          "value": false
+        },
+        {
+          "control_id": "DCS-05",
+          "value": true
+        },
+        {
+          "control_id": "DCS-06",
+          "value": true
+        },
+        {
+          "control_id": "DCS-07",
+          "value": false
+        },
+        {
+          "control_id": "DCS-08",
+          "value": true
+        },
+        {
+          "control_id": "DCS-09",
+          "value": false
+        },
+        {
+          "control_id": "DCS-10",
+          "value": false
+        },
+        {
+          "control_id": "DCS-11",
+          "value": false
+        },
+        {
+          "control_id": "DCS-12",
+          "value": false
+        },
+        {
+          "control_id": "DCS-13",
+          "value": false
+        },
+        {
+          "control_id": "DCS-14",
+          "value": false
+        },
+        {
+          "control_id": "DCS-15",
+          "value": false
+        },
+        {
+          "control_id": "DSP-01",
+          "value": true
+        },
+        {
+          "control_id": "DSP-02",
+          "value": true
+        },
+        {
+          "control_id": "DSP-03",
+          "value": true
+        },
+        {
+          "control_id": "DSP-04",
+          "value": false
+        },
+        {
+          "control_id": "DSP-05",
+          "value": true
+        },
+        {
+          "control_id": "DSP-06",
+          "value": false
+        },
+        {
+          "control_id": "DSP-07",
+          "value": true
+        },
+        {
+          "control_id": "DSP-08",
+          "value": true
+        },
+        {
+          "control_id": "DSP-09",
+          "value": false
+        },
+        {
+          "control_id": "DSP-10",
+          "value": false
+        },
+        {
+          "control_id": "DSP-11",
+          "value": false
+        },
+        {
+          "control_id": "DSP-12",
+          "value": true
+        },
+        {
+          "control_id": "DSP-13",
+          "value": true
+        },
+        {
+          "control_id": "DSP-14",
+          "value": false
+        },
+        {
+          "control_id": "DSP-15",
+          "value": false
+        },
+        {
+          "control_id": "DSP-16",
+          "value": false
+        },
+        {
+          "control_id": "DSP-17",
+          "value": false
+        },
+        {
+          "control_id": "DSP-18",
+          "value": false
+        },
+        {
+          "control_id": "DSP-19",
+          "value": true
+        },
+        {
+          "control_id": "GRC-01",
+          "value": true
+        },
+        {
+          "control_id": "GRC-02",
+          "value": true
+        },
+        {
+          "control_id": "GRC-03",
+          "value": true
+        },
+        {
+          "control_id": "GRC-04",
+          "value": true
+        },
+        {
+          "control_id": "GRC-05",
+          "value": true
+        },
+        {
+          "control_id": "GRC-06",
+          "value": true
+        },
+        {
+          "control_id": "GRC-07",
+          "value": true
+        },
+        {
+          "control_id": "GRC-08",
+          "value": true
+        },
+        {
+          "control_id": "HRS-01",
+          "value": true
+        },
+        {
+          "control_id": "HRS-02",
+          "value": true
+        },
+        {
+          "control_id": "HRS-03",
+          "value": false
+        },
+        {
+          "control_id": "HRS-04",
+          "value": true
+        },
+        {
+          "control_id": "HRS-05",
+          "value": true
+        },
+        {
+          "control_id": "HRS-06",
+          "value": true
+        },
+        {
+          "control_id": "HRS-07",
+          "value": true
+        },
+        {
+          "control_id": "HRS-08",
+          "value": false
+        },
+        {
+          "control_id": "HRS-09",
+          "value": false
+        },
+        {
+          "control_id": "HRS-10",
+          "value": false
+        },
+        {
+          "control_id": "HRS-11",
+          "value": false
+        },
+        {
+          "control_id": "HRS-12",
+          "value": false
+        },
+        {
+          "control_id": "HRS-13",
+          "value": false
+        },
+        {
+          "control_id": "IAM-01",
+          "value": true
+        },
+        {
+          "control_id": "IAM-02",
+          "value": true
+        },
+        {
+          "control_id": "IAM-03",
+          "value": true
+        },
+        {
+          "control_id": "IAM-04",
+          "value": true
+        },
+        {
+          "control_id": "IAM-05",
+          "value": true
+        },
+        {
+          "control_id": "IAM-06",
+          "value": true
+        },
+        {
+          "control_id": "IAM-07",
+          "value": true
+        },
+        {
+          "control_id": "IAM-08",
+          "value": true
+        },
+        {
+          "control_id": "IAM-09",
+          "value": true
+        },
+        {
+          "control_id": "IAM-10",
+          "value": true
+        },
+        {
+          "control_id": "IAM-11",
+          "value": true
+        },
+        {
+          "control_id": "IAM-12",
+          "value": true
+        },
+        {
+          "control_id": "IAM-13",
+          "value": true
+        },
+        {
+          "control_id": "IAM-14",
+          "value": true
+        },
+        {
+          "control_id": "IAM-15",
+          "value": true
+        },
+        {
+          "control_id": "IAM-16",
+          "value": true
+        },
+        {
+          "control_id": "IPY-01",
+          "value": true
+        },
+        {
+          "control_id": "IPY-02",
+          "value": true
+        },
+        {
+          "control_id": "IPY-03",
+          "value": true
+        },
+        {
+          "control_id": "IPY-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-01",
+          "value": false
+        },
+        {
+          "control_id": "IVS-02",
+          "value": false
+        },
+        {
+          "control_id": "IVS-03",
+          "value": false
+        },
+        {
+          "control_id": "IVS-04",
+          "value": false
+        },
+        {
+          "control_id": "IVS-05",
+          "value": true
+        },
+        {
+          "control_id": "IVS-06",
+          "value": false
+        },
+        {
+          "control_id": "IVS-07",
+          "value": true
+        },
+        {
+          "control_id": "IVS-08",
+          "value": true
+        },
+        {
+          "control_id": "IVS-09",
+          "value": false
+        },
+        {
+          "control_id": "LOG-01",
+          "value": true
+        },
+        {
+          "control_id": "LOG-02",
+          "value": true
+        },
+        {
+          "control_id": "LOG-03",
+          "value": true
+        },
+        {
+          "control_id": "LOG-04",
+          "value": true
+        },
+        {
+          "control_id": "LOG-05",
+          "value": true
+        },
+        {
+          "control_id": "LOG-06",
+          "value": true
+        },
+        {
+          "control_id": "LOG-07",
+          "value": true
+        },
+        {
+          "control_id": "LOG-08",
+          "value": true
+        },
+        {
+          "control_id": "LOG-09",
+          "value": true
+        },
+        {
+          "control_id": "LOG-10",
+          "value": true
+        },
+        {
+          "control_id": "LOG-11",
+          "value": true
+        },
+        {
+          "control_id": "LOG-12",
+          "value": true
+        },
+        {
+          "control_id": "LOG-13",
+          "value": true
+        },
+        {
+          "control_id": "SEF-01",
+          "value": true
+        },
+        {
+          "control_id": "SEF-02",
+          "value": true
+        },
+        {
+          "control_id": "SEF-03",
+          "value": true
+        },
+        {
+          "control_id": "SEF-04",
+          "value": true
+        },
+        {
+          "control_id": "SEF-05",
+          "value": true
+        },
+        {
+          "control_id": "SEF-06",
+          "value": true
+        },
+        {
+          "control_id": "SEF-07",
+          "value": true
+        },
+        {
+          "control_id": "SEF-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-01",
+          "value": true
+        },
+        {
+          "control_id": "STA-02",
+          "value": true
+        },
+        {
+          "control_id": "STA-03",
+          "value": true
+        },
+        {
+          "control_id": "STA-04",
+          "value": true
+        },
+        {
+          "control_id": "STA-05",
+          "value": true
+        },
+        {
+          "control_id": "STA-06",
+          "value": true
+        },
+        {
+          "control_id": "STA-07",
+          "value": true
+        },
+        {
+          "control_id": "STA-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-09",
+          "value": true
+        },
+        {
+          "control_id": "STA-10",
+          "value": true
+        },
+        {
+          "control_id": "STA-11",
+          "value": true
+        },
+        {
+          "control_id": "STA-12",
+          "value": true
+        },
+        {
+          "control_id": "STA-13",
+          "value": true
+        },
+        {
+          "control_id": "STA-14",
+          "value": true
+        },
+        {
+          "control_id": "TVM-01",
+          "value": true
+        },
+        {
+          "control_id": "TVM-02",
+          "value": true
+        },
+        {
+          "control_id": "TVM-03",
+          "value": true
+        },
+        {
+          "control_id": "TVM-04",
+          "value": true
+        },
+        {
+          "control_id": "TVM-05",
+          "value": true
+        },
+        {
+          "control_id": "TVM-06",
+          "value": true
+        },
+        {
+          "control_id": "TVM-07",
+          "value": true
+        },
+        {
+          "control_id": "TVM-08",
+          "value": true
+        },
+        {
+          "control_id": "TVM-09",
+          "value": true
+        },
+        {
+          "control_id": "TVM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-01",
+          "value": true
+        },
+        {
+          "control_id": "UEM-02",
+          "value": true
+        },
+        {
+          "control_id": "UEM-03",
+          "value": true
+        },
+        {
+          "control_id": "UEM-04",
+          "value": true
+        },
+        {
+          "control_id": "UEM-05",
+          "value": true
+        },
+        {
+          "control_id": "UEM-06",
+          "value": true
+        },
+        {
+          "control_id": "UEM-07",
+          "value": true
+        },
+        {
+          "control_id": "UEM-08",
+          "value": true
+        },
+        {
+          "control_id": "UEM-09",
+          "value": true
+        },
+        {
+          "control_id": "UEM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-11",
+          "value": true
+        },
+        {
+          "control_id": "UEM-12",
+          "value": true
+        },
+        {
+          "control_id": "UEM-13",
+          "value": true
+        },
+        {
+          "control_id": "UEM-14",
+          "value": true
+        }
+      ]
+    },
+    {
+      "title": "Data",
+      "content": [
+        {
+          "control_id": "A&A-01",
+          "value": true
+        },
+        {
+          "control_id": "A&A-02",
+          "value": true
+        },
+        {
+          "control_id": "A&A-03",
+          "value": true
+        },
+        {
+          "control_id": "A&A-04",
+          "value": true
+        },
+        {
+          "control_id": "A&A-05",
+          "value": true
+        },
+        {
+          "control_id": "A&A-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-01",
+          "value": true
+        },
+        {
+          "control_id": "AIS-02",
+          "value": true
+        },
+        {
+          "control_id": "AIS-03",
+          "value": true
+        },
+        {
+          "control_id": "AIS-04",
+          "value": true
+        },
+        {
+          "control_id": "AIS-05",
+          "value": true
+        },
+        {
+          "control_id": "AIS-06",
+          "value": true
+        },
+        {
+          "control_id": "AIS-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-01",
+          "value": true
+        },
+        {
+          "control_id": "BCR-02",
+          "value": true
+        },
+        {
+          "control_id": "BCR-03",
+          "value": true
+        },
+        {
+          "control_id": "BCR-04",
+          "value": true
+        },
+        {
+          "control_id": "BCR-05",
+          "value": true
+        },
+        {
+          "control_id": "BCR-06",
+          "value": true
+        },
+        {
+          "control_id": "BCR-07",
+          "value": true
+        },
+        {
+          "control_id": "BCR-08",
+          "value": true
+        },
+        {
+          "control_id": "BCR-09",
+          "value": true
+        },
+        {
+          "control_id": "BCR-10",
+          "value": true
+        },
+        {
+          "control_id": "BCR-11",
+          "value": false
+        },
+        {
+          "control_id": "CCC-01",
+          "value": true
+        },
+        {
+          "control_id": "CCC-02",
+          "value": true
+        },
+        {
+          "control_id": "CCC-03",
+          "value": true
+        },
+        {
+          "control_id": "CCC-04",
+          "value": true
+        },
+        {
+          "control_id": "CCC-05",
+          "value": true
+        },
+        {
+          "control_id": "CCC-06",
+          "value": true
+        },
+        {
+          "control_id": "CCC-07",
+          "value": true
+        },
+        {
+          "control_id": "CCC-08",
+          "value": true
+        },
+        {
+          "control_id": "CCC-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-01",
+          "value": true
+        },
+        {
+          "control_id": "CEK-02",
+          "value": true
+        },
+        {
+          "control_id": "CEK-03",
+          "value": true
+        },
+        {
+          "control_id": "CEK-04",
+          "value": true
+        },
+        {
+          "control_id": "CEK-05",
+          "value": true
+        },
+        {
+          "control_id": "CEK-06",
+          "value": true
+        },
+        {
+          "control_id": "CEK-07",
+          "value": true
+        },
+        {
+          "control_id": "CEK-08",
+          "value": true
+        },
+        {
+          "control_id": "CEK-09",
+          "value": true
+        },
+        {
+          "control_id": "CEK-10",
+          "value": true
+        },
+        {
+          "control_id": "CEK-11",
+          "value": true
+        },
+        {
+          "control_id": "CEK-12",
+          "value": true
+        },
+        {
+          "control_id": "CEK-13",
+          "value": true
+        },
+        {
+          "control_id": "CEK-14",
+          "value": true
+        },
+        {
+          "control_id": "CEK-15",
+          "value": true
+        },
+        {
+          "control_id": "CEK-16",
+          "value": true
+        },
+        {
+          "control_id": "CEK-17",
+          "value": true
+        },
+        {
+          "control_id": "CEK-18",
+          "value": true
+        },
+        {
+          "control_id": "CEK-19",
+          "value": true
+        },
+        {
+          "control_id": "CEK-20",
+          "value": true
+        },
+        {
+          "control_id": "CEK-21",
+          "value": true
+        },
+        {
+          "control_id": "DCS-01",
+          "value": true
+        },
+        {
+          "control_id": "DCS-02",
+          "value": true
+        },
+        {
+          "control_id": "DCS-03",
+          "value": false
+        },
+        {
+          "control_id": "DCS-04",
+          "value": false
+        },
+        {
+          "control_id": "DCS-05",
+          "value": true
+        },
+        {
+          "control_id": "DCS-06",
+          "value": true
+        },
+        {
+          "control_id": "DCS-07",
+          "value": false
+        },
+        {
+          "control_id": "DCS-08",
+          "value": true
+        },
+        {
+          "control_id": "DCS-09",
+          "value": false
+        },
+        {
+          "control_id": "DCS-10",
+          "value": false
+        },
+        {
+          "control_id": "DCS-11",
+          "value": false
+        },
+        {
+          "control_id": "DCS-12",
+          "value": false
+        },
+        {
+          "control_id": "DCS-13",
+          "value": false
+        },
+        {
+          "control_id": "DCS-14",
+          "value": false
+        },
+        {
+          "control_id": "DCS-15",
+          "value": false
+        },
+        {
+          "control_id": "DSP-01",
+          "value": true
+        },
+        {
+          "control_id": "DSP-02",
+          "value": true
+        },
+        {
+          "control_id": "DSP-03",
+          "value": true
+        },
+        {
+          "control_id": "DSP-04",
+          "value": true
+        },
+        {
+          "control_id": "DSP-05",
+          "value": true
+        },
+        {
+          "control_id": "DSP-06",
+          "value": true
+        },
+        {
+          "control_id": "DSP-07",
+          "value": true
+        },
+        {
+          "control_id": "DSP-08",
+          "value": true
+        },
+        {
+          "control_id": "DSP-09",
+          "value": true
+        },
+        {
+          "control_id": "DSP-10",
+          "value": true
+        },
+        {
+          "control_id": "DSP-11",
+          "value": true
+        },
+        {
+          "control_id": "DSP-12",
+          "value": true
+        },
+        {
+          "control_id": "DSP-13",
+          "value": true
+        },
+        {
+          "control_id": "DSP-14",
+          "value": true
+        },
+        {
+          "control_id": "DSP-15",
+          "value": true
+        },
+        {
+          "control_id": "DSP-16",
+          "value": true
+        },
+        {
+          "control_id": "DSP-17",
+          "value": true
+        },
+        {
+          "control_id": "DSP-18",
+          "value": true
+        },
+        {
+          "control_id": "DSP-19",
+          "value": true
+        },
+        {
+          "control_id": "GRC-01",
+          "value": true
+        },
+        {
+          "control_id": "GRC-02",
+          "value": true
+        },
+        {
+          "control_id": "GRC-03",
+          "value": true
+        },
+        {
+          "control_id": "GRC-04",
+          "value": true
+        },
+        {
+          "control_id": "GRC-05",
+          "value": true
+        },
+        {
+          "control_id": "GRC-06",
+          "value": true
+        },
+        {
+          "control_id": "GRC-07",
+          "value": true
+        },
+        {
+          "control_id": "GRC-08",
+          "value": true
+        },
+        {
+          "control_id": "HRS-01",
+          "value": true
+        },
+        {
+          "control_id": "HRS-02",
+          "value": true
+        },
+        {
+          "control_id": "HRS-03",
+          "value": false
+        },
+        {
+          "control_id": "HRS-04",
+          "value": true
+        },
+        {
+          "control_id": "HRS-05",
+          "value": true
+        },
+        {
+          "control_id": "HRS-06",
+          "value": true
+        },
+        {
+          "control_id": "HRS-07",
+          "value": true
+        },
+        {
+          "control_id": "HRS-08",
+          "value": false
+        },
+        {
+          "control_id": "HRS-09",
+          "value": false
+        },
+        {
+          "control_id": "HRS-10",
+          "value": false
+        },
+        {
+          "control_id": "HRS-11",
+          "value": false
+        },
+        {
+          "control_id": "HRS-12",
+          "value": false
+        },
+        {
+          "control_id": "HRS-13",
+          "value": false
+        },
+        {
+          "control_id": "IAM-01",
+          "value": true
+        },
+        {
+          "control_id": "IAM-02",
+          "value": true
+        },
+        {
+          "control_id": "IAM-03",
+          "value": true
+        },
+        {
+          "control_id": "IAM-04",
+          "value": true
+        },
+        {
+          "control_id": "IAM-05",
+          "value": true
+        },
+        {
+          "control_id": "IAM-06",
+          "value": true
+        },
+        {
+          "control_id": "IAM-07",
+          "value": true
+        },
+        {
+          "control_id": "IAM-08",
+          "value": true
+        },
+        {
+          "control_id": "IAM-09",
+          "value": true
+        },
+        {
+          "control_id": "IAM-10",
+          "value": true
+        },
+        {
+          "control_id": "IAM-11",
+          "value": true
+        },
+        {
+          "control_id": "IAM-12",
+          "value": true
+        },
+        {
+          "control_id": "IAM-13",
+          "value": true
+        },
+        {
+          "control_id": "IAM-14",
+          "value": true
+        },
+        {
+          "control_id": "IAM-15",
+          "value": true
+        },
+        {
+          "control_id": "IAM-16",
+          "value": true
+        },
+        {
+          "control_id": "IPY-01",
+          "value": true
+        },
+        {
+          "control_id": "IPY-02",
+          "value": true
+        },
+        {
+          "control_id": "IPY-03",
+          "value": true
+        },
+        {
+          "control_id": "IPY-04",
+          "value": true
+        },
+        {
+          "control_id": "IVS-01",
+          "value": false
+        },
+        {
+          "control_id": "IVS-02",
+          "value": false
+        },
+        {
+          "control_id": "IVS-03",
+          "value": false
+        },
+        {
+          "control_id": "IVS-04",
+          "value": false
+        },
+        {
+          "control_id": "IVS-05",
+          "value": false
+        },
+        {
+          "control_id": "IVS-06",
+          "value": false
+        },
+        {
+          "control_id": "IVS-07",
+          "value": true
+        },
+        {
+          "control_id": "IVS-08",
+          "value": false
+        },
+        {
+          "control_id": "IVS-09",
+          "value": false
+        },
+        {
+          "control_id": "LOG-01",
+          "value": true
+        },
+        {
+          "control_id": "LOG-02",
+          "value": true
+        },
+        {
+          "control_id": "LOG-03",
+          "value": true
+        },
+        {
+          "control_id": "LOG-04",
+          "value": true
+        },
+        {
+          "control_id": "LOG-05",
+          "value": true
+        },
+        {
+          "control_id": "LOG-06",
+          "value": true
+        },
+        {
+          "control_id": "LOG-07",
+          "value": true
+        },
+        {
+          "control_id": "LOG-08",
+          "value": true
+        },
+        {
+          "control_id": "LOG-09",
+          "value": true
+        },
+        {
+          "control_id": "LOG-10",
+          "value": true
+        },
+        {
+          "control_id": "LOG-11",
+          "value": true
+        },
+        {
+          "control_id": "LOG-12",
+          "value": true
+        },
+        {
+          "control_id": "LOG-13",
+          "value": true
+        },
+        {
+          "control_id": "SEF-01",
+          "value": true
+        },
+        {
+          "control_id": "SEF-02",
+          "value": true
+        },
+        {
+          "control_id": "SEF-03",
+          "value": true
+        },
+        {
+          "control_id": "SEF-04",
+          "value": true
+        },
+        {
+          "control_id": "SEF-05",
+          "value": true
+        },
+        {
+          "control_id": "SEF-06",
+          "value": true
+        },
+        {
+          "control_id": "SEF-07",
+          "value": true
+        },
+        {
+          "control_id": "SEF-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-01",
+          "value": true
+        },
+        {
+          "control_id": "STA-02",
+          "value": true
+        },
+        {
+          "control_id": "STA-03",
+          "value": true
+        },
+        {
+          "control_id": "STA-04",
+          "value": true
+        },
+        {
+          "control_id": "STA-05",
+          "value": true
+        },
+        {
+          "control_id": "STA-06",
+          "value": true
+        },
+        {
+          "control_id": "STA-07",
+          "value": true
+        },
+        {
+          "control_id": "STA-08",
+          "value": true
+        },
+        {
+          "control_id": "STA-09",
+          "value": true
+        },
+        {
+          "control_id": "STA-10",
+          "value": true
+        },
+        {
+          "control_id": "STA-11",
+          "value": true
+        },
+        {
+          "control_id": "STA-12",
+          "value": true
+        },
+        {
+          "control_id": "STA-13",
+          "value": true
+        },
+        {
+          "control_id": "STA-14",
+          "value": true
+        },
+        {
+          "control_id": "TVM-01",
+          "value": true
+        },
+        {
+          "control_id": "TVM-02",
+          "value": true
+        },
+        {
+          "control_id": "TVM-03",
+          "value": true
+        },
+        {
+          "control_id": "TVM-04",
+          "value": true
+        },
+        {
+          "control_id": "TVM-05",
+          "value": true
+        },
+        {
+          "control_id": "TVM-06",
+          "value": true
+        },
+        {
+          "control_id": "TVM-07",
+          "value": true
+        },
+        {
+          "control_id": "TVM-08",
+          "value": true
+        },
+        {
+          "control_id": "TVM-09",
+          "value": true
+        },
+        {
+          "control_id": "TVM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-01",
+          "value": true
+        },
+        {
+          "control_id": "UEM-02",
+          "value": true
+        },
+        {
+          "control_id": "UEM-03",
+          "value": false
+        },
+        {
+          "control_id": "UEM-04",
+          "value": true
+        },
+        {
+          "control_id": "UEM-05",
+          "value": true
+        },
+        {
+          "control_id": "UEM-06",
+          "value": false
+        },
+        {
+          "control_id": "UEM-07",
+          "value": false
+        },
+        {
+          "control_id": "UEM-08",
+          "value": true
+        },
+        {
+          "control_id": "UEM-09",
+          "value": true
+        },
+        {
+          "control_id": "UEM-10",
+          "value": true
+        },
+        {
+          "control_id": "UEM-11",
+          "value": true
+        },
+        {
+          "control_id": "UEM-12",
+          "value": true
+        },
+        {
+          "control_id": "UEM-13",
+          "value": true
+        },
+        {
+          "control_id": "UEM-14",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

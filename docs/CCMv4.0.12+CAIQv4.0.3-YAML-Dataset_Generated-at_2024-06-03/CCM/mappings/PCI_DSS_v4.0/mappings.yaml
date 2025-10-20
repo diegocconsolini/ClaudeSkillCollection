@@ -1,0 +1,1531 @@
+- name: PCI DSS v4.0
+  mappings:
+    - control_id: A&A-01
+      references:
+        - 12.1.1
+        - 12.1.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'approve audit and assurance policies and procedures and standards'.
+    - control_id: A&A-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: A&A-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: A&A-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: A&A-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: A&A-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: AIS-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 6.1.1
+        - 6.2.1
+        - 6.2.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: AIS-02
+      references:
+        - 6.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: AIS-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: AIS-04
+      references:
+        - 6.2.1
+        - 6.2.3
+        - 6.5.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: AIS-05
+      references:
+        - 6.2.4
+        - 6.4.1
+        - 6.4.2
+        - 6.5.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'Automate when applicable and possible'.
+    - control_id: AIS-06
+      references:
+        - 6.5.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'Automate where possible'.
+    - control_id: AIS-07
+      references:
+        - 6.3.1
+        - 11.3.1
+        - 11.3.1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-01
+      references:
+        - 12.1.1
+        - 12.1.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: BCR-02
+      references:
+        - 12.3.1
+        - 12.10.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: BCR-03
+      references:
+        - 12.3.1
+        - 12.10.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-04
+      references:
+        - 12.10.1
+        - 12.10.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-05
+      references:
+        - 12.10.1
+        - 12.10.2
+        - 12.10.6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'operational resilience programs'.
+    - control_id: BCR-06
+      references:
+        - 12.10.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        '(exercise and test BCP) upon significant changes'.
+    - control_id: BCR-07
+      references:
+        - 12.10.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-08
+      references:
+        - 12.10.1
+        - 10.3.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'Periodically backup data stored in the cloud'.
+        'verify data restoration from backup for resiliency'.
+    - control_id: BCR-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: BCR-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: BCR-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CCC-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 6.1.1
+        - 6.5.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'policies and procedures for managing the risks associated with applying changes
+        to organization assets'.
+    - control_id: CCC-02
+      references:
+        - 6.5.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control covers in part the high specificity of the CCM control
+        objective.
+    - control_id: CCC-03
+      references:
+        - 12.3.1
+        - 6.5.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-04
+      references:
+        - 6.5.1
+        - 6.5.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-05
+      references:
+        - No mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CCC-06
+      references:
+        - No mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CCC-07
+      references:
+        - 11.5.2
+        - 11.6.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'changes deviating from the established baseline'.
+    - control_id: CCC-08
+      references:
+        - No mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CCC-09
+      references:
+        - 6.5.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 3.1.1
+        - 3.6.1
+        - 3.7.8
+        - 4.1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-02
+      references:
+        - 3.1.2
+        - 3.7.8
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-03
+      references:
+        - 2.2.7
+        - 3.5.1
+        - 4.2.1
+        - 4.2.1.2
+        - 4.2.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-04
+      references:
+        - 2.2.7
+        - 3.5.1
+        - 4.2.1
+        - 4.2.1.2
+        - 4.2.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-05
+      references:
+        - 3.7.9
+        - 6.5.1
+        - 12.3.3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS controls cover in part the high specificity of the CCM control
+        objective.
+    - control_id: CEK-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CEK-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CEK-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CEK-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CEK-10
+      references:
+        - 3.6.1
+        - 3.6.1.1
+        - 3.7.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'using industry accepted cryptographic libraries'.
+    - control_id: CEK-11
+      references:
+        - 2.2.7
+        - 3.6.1
+        - 3.6.1.2
+        - 3.7.1
+        - 3.7.2
+        - 3.7.4
+        - 3.7.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'provisioned for a unique purpose'.
+    - control_id: CEK-12
+      references:
+        - 3.7.4
+        - 3.7.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'which includes provisions for considering the risk of information disclosure
+        and legal and regulatory requirements'.
+    - control_id: CEK-13
+      references:
+        - 3.7.4
+        - 3.7.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-14
+      references:
+        - 3.7.4
+        - 3.7.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CEK-16
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CEK-17
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: CEK-18
+      references:
+        - 3.6.1
+        - 3.6.1.3
+        - 3.6.1.4
+        - 3.7.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'manage archived keys in a secure repository requiring least privilege access'.
+    - control_id: CEK-19
+      references:
+        - 3.7.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-20
+      references:
+        - 3.7.5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: CEK-21
+      references:
+        - 3.6.1
+        - 3.6.1.1
+        - 4.2.1.1
+        - 12.3.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 9.1.1
+        - 9.4.7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-02
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 9.1.1
+        - 9.4.3
+        - 9.4.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-03
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 9.3.1
+        - 9.3.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-04
+      references:
+        - 9.1.1
+        - 9.4.3
+        - 9.4.4
+        - 12.1.1
+        - 12.1.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-05
+      references:
+        - 9.4.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-06
+      references:
+        - 3.6.1.1
+        - 6.3.2
+        - 9.4.2
+        - 9.4.3
+        - 12.5.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-07
+      references:
+        - 9.2.1
+        - 9.2.1.1
+        - 9.2.2
+        - 9.2.3
+        - 9.2.4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS controls cover in part the high specificity of the CCM control
+        objective.
+    - control_id: DCS-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: DCS-09
+      references:
+        - 9.2.1
+        - 9.2.1.1
+        - 9.3.1
+        - 9.3.1.1
+        - 9.3.2
+        - 9.3.3
+        - 9.3.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-10
+      references:
+        - 9.2.1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-11
+      references:
+        - 12.6.3.1
+        - 12.10.4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: DCS-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: DCS-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: DCS-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: DCS-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: DSP-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 12.1.3
+        - 12.1.4
+        - 12.3.1
+        - 12.3.2
+        - 12.4.1
+        - 12.10.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-02
+      references:
+        - 3.2.1
+        - 3.7.5
+        - 9.4.7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-03
+      references:
+        - 3.2.1
+        - 9.4.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'data inventory for personal data'.
+    - control_id: DSP-04
+      references:
+        - 9.4.2
+        - 9.4.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-05
+      references:
+        - 1.2.4
+        - 12.5.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-06
+      references:
+        - 3.1.1
+        - 3.2.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: DSP-07
+      references:
+        - 6.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: DSP-09
+      references:
+        - 3.2.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'Conduct a Data Protection Impact Assessment (DPIA)'.
+    - control_id: DSP-10
+      references:
+        - 4.1.1
+        - 4.2.1
+        - 4.2.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: DSP-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: DSP-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: DSP-13
+      references:
+        - 12.8.2
+        - 12.9.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'sub-processing of personal data within the service supply chain'.
+    - control_id: DSP-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: DSP-15
+      references:
+        - 6.5.5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: DSP-16
+      references:
+        - 3.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-17
+      references:
+        - 3.1.1
+        - 4.1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-18
+      references:
+        - 12.10.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: DSP-19
+      references:
+        - 12.5.2
+        - A3.2.1
+        - A3.2.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 12.1.3
+        - 12.1.4
+        - A3.1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-02
+      references:
+        - 12.3.1
+        - 12.3.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: GRC-03
+      references:
+        - 12.1.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: GRC-05
+      references:
+        - 12.4.1
+        - A3.1.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: GRC-06
+      references:
+        - 1.1.2
+        - 2.1.2
+        - 3.1.2
+        - 4.1.2
+        - 5.1.2
+        - 6.1.2
+        - 7.1.2
+        - 8.1.2
+        - 9.1.2
+        - 10.1.2
+        - 11.1.2
+        - 12.4.1
+        - A3.1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: GRC-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: HRS-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 12.7.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'policies and procedures for background verification of all new employees'.
+    - control_id: HRS-02
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 12.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-03
+      references:
+        - 12.1.1
+        - 12.1.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'policies and procedures that require unattended workspaces to not have openly
+        visible confidential data'.
+    - control_id: HRS-04
+      references:
+        - 12.1.1
+        - 12.1.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'policies and procedures to protect information accessed, processed or stored
+        at remote sites and locations'.
+    - control_id: HRS-05
+      references:
+        - 8.2.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'Establish and document procedures for the return of organization-owned assets'.
+    - control_id: HRS-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: HRS-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: HRS-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: HRS-09
+      references:
+        - 12.1.3
+        - 1.1.2
+        - 2.1.2
+        - 3.1.2
+        - 3.7.8
+        - 4.1.2
+        - 5.1.2
+        - 6.1.2
+        - 7.1.2
+        - 8.1.2
+        - 9.1.2
+        - 10.1.2
+        - 11.1.2
+        - A3.1.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: HRS-11
+      references:
+        - 12.6.1
+        - 12.6.2
+        - 12.6.3
+        - 12.6.3.1
+        - 12.6.3.2
+        - A3.1.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-12
+      references:
+        - 12.6.1
+        - 12.6.2
+        - 12.6.3
+        - 12.6.3.1
+        - 12.6.3.2
+        - A3.1.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        '(awareness training for) employees with access to sensitive organizational and
+        personal data'.
+    - control_id: HRS-13
+      references:
+        - 12.6.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'maintaining awareness and compliance with applicable legal, statutory, or regulatory
+        compliance obligations'.
+    - control_id: IAM-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 7.1.1
+        - 8.1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-02
+      references:
+        - 8.1.1
+        - 8.3.8
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: IAM-03
+      references:
+        - 7.2.5
+        - 7.2.5.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'system identities'.
+    - control_id: IAM-04
+      references:
+        - 6.5.3
+        - 6.5.4
+        - 7.2.1
+        - 7.2.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-05
+      references:
+        - 7.2.1
+        - 7.2.2
+        - 7.2.5
+        - 7.2.6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-06
+      references:
+        - 7.2.2
+        - 7.2.3
+        - 8.2.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'communicates access changes to data and assets'.
+    - control_id: IAM-07
+      references:
+        - 8.2.5
+        - 8.2.6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-08
+      references:
+        - 7.2.5.1
+        - 7.2.5
+        - 7.2.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-09
+      references:
+        - 3.6.1
+        - 3.7.6
+        - 6.5.3
+        - 6.5.4
+        - 7.2.1
+        - 7.2.2
+        - 10.3.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: IAM-10
+      references:
+        - 7.2.1
+        - 7.2.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: IAM-11
+      references:
+        - 7.2.3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: IAM-12
+      references:
+        - 10.3.1
+        - 10.3.2
+        - 10.3.3
+        - 10.3.4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: IAM-13
+      references:
+        - 8.2.1
+        - 8.2.2
+        - 8.2.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-14
+      references:
+        - 7.2.1
+        - 8.3.1
+        - 8.3.2
+        - 8.4.1
+        - 8.4.2
+        - 8.4.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-15
+      references:
+        - 2.2.2
+        - 2.3.1
+        - 8.3.5
+        - 8.3.6
+        - 8.3.7
+        - 8.3.8
+        - 8.3.9
+        - 8.3.10
+        - 8.3.10.1
+        - 8.6.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-16
+      references:
+        - 7.2.4
+        - 7.2.3
+        - 7.2.5.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-01
+      references:
+        - 12.1.1
+        - 12.1.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'policies and procedures for interoperability and portability including requirements
+        for:
+        a. Communications between application interfaces
+        b. Information processing interoperability
+        c. Application development portability
+        d. Information/Data exchange, usage, portability, integrity, and persistence'.
+    - control_id: IPY-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: IPY-03
+      references:
+        - 1.2.1
+        - 1.2.5
+        - 1.2.6
+        - 2.2.4
+        - 2.2.5
+        - 2.2.7
+        - 4.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-04
+      references:
+        - 12.8.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: IVS-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 2.1.1
+        - 2.2.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'policies and procedures for infrastructure and virtualization security'.
+    - control_id: IVS-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: IVS-03
+      references:
+        - 1.2.5
+        - 1.2.6
+        - 1.2.7
+        - 1.4.2
+        - 2.2.4
+        - 2.2.5
+        - 2.2.7
+        - 4.2.1
+        - 10.1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-04
+      references:
+        - 2.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-05
+      references:
+        - 6.5.3
+        - 6.5.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-06
+      references:
+        - A1.1.1
+        - A1.1.2
+        - A1.1.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-07
+      references:
+        - 4.2.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: IVS-08
+      references:
+        - 1.2.3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'high-risk (network environments)'.
+    - control_id: IVS-09
+      references:
+        - 1.1.1
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4
+        - 1.4.5
+        - 1.5.1
+        - 12.10.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 10.1.1
+        - 10.4.1
+        - 10.4.2
+        - 10.4.3
+        - 10.5.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-02
+      references:
+        - 10.3.1
+        - 10.3.2
+        - 10.3.3
+        - 10.3.4
+        - 10.5.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-03
+      references:
+        - 10.2.1
+        - 10.2.2
+        - 10.4.1.1
+        - 10.4.2.1
+        - 10.4.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-04
+      references:
+        - 10.2.1.3
+        - 10.3.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-05
+      references:
+        - 10.4.1.1
+        - 10.4.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-06
+      references:
+        - 10.6.1
+        - 10.6.2
+        - 10.6.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-07
+      references:
+        - 10.2.1
+        - 10.2.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: LOG-08
+      references:
+        - 10.2.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-09
+      references:
+        - 10.3.1
+        - 10.3.2
+        - 10.3.3
+        - 10.3.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-10
+      references:
+        - 10.1.1
+        - 10.2.1
+        - 10.4.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: LOG-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: LOG-12
+      references:
+        - 9.2.1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-13
+      references:
+        - 10.4.3
+        - 10.7.1
+        - 10.7.2
+        - 10.7.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 12.10.1
+        - 12.10.2
+        - 12.10.6
+        - 12.10.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'policies and procedures for Security Incident Management, E-Discovery, and Cloud
+        Forensics'.
+    - control_id: SEF-02
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 12.10.1
+        - 12.10.2
+        - 12.10.3
+        - 12.10.6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'policies and procedures for the timely management of security incidents'.
+    - control_id: SEF-03
+      references:
+        - 12.10.1
+        - 12.10.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'document, approve a security incident response plan'
+        'impacted CSCs, and other business critical relationships (such as supply-chain)
+        that may be impacted'.
+    - control_id: SEF-04
+      references:
+        - 12.10.2
+        - 12.10.6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: SEF-06
+      references:
+        - 12.10.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-07
+      references:
+        - 12.10.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: SEF-08
+      references:
+        - 12.10.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'regulation authorities, national and local law enforcement, and other legal
+        jurisdictional authorities'.
+    - control_id: STA-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 12.8.1
+        - 12.8.2
+        - 12.8.3
+        - 12.8.4
+        - 12.8.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'policies and procedures for the application of the Shared Security Responsibility
+        Model (SSRM)'.
+    - control_id: STA-02
+      references:
+        - 12.8.3
+        - 12.8.4
+        - 12.8.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-03
+      references:
+        - 12.8.5
+        - 12.9.1
+        - 12.9.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-04
+      references:
+        - 12.8.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-05
+      references:
+        - 12.1.1
+        - 12.2.1
+        - 12.8.4
+        - 12.8.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-06
+      references:
+        - 12.8.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-07
+      references:
+        - 12.5.1
+        - 12.8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-08
+      references:
+        - 12.8.3
+        - 12.8.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'review risk factors...within their supply chain'.
+    - control_id: STA-09
+      references:
+        - 12.8.2
+        - 12.9.1
+        - 12.9.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: STA-10
+      references:
+        - 12.8.2
+        - 12.8.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: STA-12
+      references:
+        - 12.8.3
+        - 12.8.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-13
+      references:
+        - 12.8.3
+        - 12.8.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-14
+      references:
+        - 12.8.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 6.1.1
+        - 6.3.1
+        - 6.3.2
+        - 6.3.3
+        - 11.3.1
+        - 11.3.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-02
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 5.1.1
+        - 5.3.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-03
+      references:
+        - 6.1.1
+        - 6.3.1
+        - 6.3.2
+        - 6.3.3
+        - 12.10.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-04
+      references:
+        - 5.3.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'indicators of compromise'.
+    - control_id: TVM-05
+      references:
+        - 6.3.1
+        - 6.3.2
+        - 6.3.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-06
+      references:
+        - 11.4.1
+        - 11.4.2
+        - 11.4.3
+        - 11.4.4
+        - 11.4.5
+        - 11.4.6
+        - 11.4.7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-07
+      references:
+        - 6.3.1
+        - 6.3.2
+        - 6.3.3
+        - 11.3.2
+        - 11.3.2.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'at least monthly'.
+    - control_id: TVM-08
+      references:
+        - 11.3.1.1
+        - 11.3.1.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-09
+      references:
+        - 6.3.1
+        - 6.3.2
+        - 6.6.6
+        - 11.3.1
+        - 11.3.1.1
+        - 11.3.1.3
+        - 11.3.2
+        - 11.3.2.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'that includes stakeholder notification'.
+    - control_id: TVM-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: UEM-01
+      references:
+        - 12.1.1
+        - 12.1.2
+        - 2.1.1
+        - 2.2.1
+        - 12.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-02
+      references:
+        - 2.2.4
+        - 2.2.5
+        - 12.2.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: UEM-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: UEM-04
+      references:
+        - 12.2.1
+        - 12.5.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-05
+      references:
+        - 2.1.1
+        - 2.2.1
+        - 12.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-06
+      references:
+        - 8.2.8
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-07
+      references:
+        - 6.5.1
+        - 6.3.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-08
+      references:
+        - 3.5.1
+        - 3.6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-09
+      references:
+        - 5.2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-10
+      references:
+        - 1.5.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap.
+        The mapped PCI DSS control cover in part the high specificity of the CCM control
+        objective.
+    - control_id: UEM-11
+      references:
+        - A3.2.6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in PCI DSS:
+        'in accordance with a risk assessment'.
+    - control_id: UEM-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: UEM-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.
+    - control_id: UEM-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the PCI DSS and has
+        to be used to close the gap.

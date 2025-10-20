@@ -1,0 +1,1185 @@
+{
+  "name": "Cloud Controls Matrix",
+  "version": "4.0.12",
+  "url": "https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4/",
+  "domains": [
+    {
+      "id": "A&A",
+      "title": "Audit & Assurance",
+      "controls": [
+        {
+          "id": "A&A-01",
+          "title": "Audit and Assurance Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\naudit and assurance policies and procedures and standards. Review and update\nthe policies and procedures at least annually.\n"
+        },
+        {
+          "id": "A&A-02",
+          "title": "Independent Assessments",
+          "specification": "Conduct independent audit and assurance assessments according to\nrelevant standards at least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "A&A-03",
+          "title": "Risk Based Planning Assessment",
+          "specification": "Perform independent audit and assurance assessments according to\nrisk-based plans and policies.\n",
+          "is_lite": true
+        },
+        {
+          "id": "A&A-04",
+          "title": "Requirements Compliance",
+          "specification": "Verify compliance with all relevant standards, regulations, legal/contractual,\nand statutory requirements applicable to the audit.\n",
+          "is_lite": true
+        },
+        {
+          "id": "A&A-05",
+          "title": "Audit Management Process",
+          "specification": "Define and implement an Audit Management process to support audit\nplanning, risk analysis, security control assessment, conclusion, remediation\nschedules, report generation, and review of past reports and supporting evidence.\n"
+        },
+        {
+          "id": "A&A-06",
+          "title": "Remediation",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\na risk-based corrective action plan to remediate audit findings, review and\nreport remediation status to relevant stakeholders.\n",
+          "is_lite": true
+        }
+      ]
+    },
+    {
+      "id": "AIS",
+      "title": "Application & Interface Security",
+      "controls": [
+        {
+          "id": "AIS-01",
+          "title": "Application and Interface Security Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for application security to provide guidance to the\nappropriate planning, delivery and support of the organization's application\nsecurity capabilities. Review and update the policies and procedures at least\nannually.\n"
+        },
+        {
+          "id": "AIS-02",
+          "title": "Application Security Baseline Requirements",
+          "specification": "Establish, document and maintain baseline requirements for securing\ndifferent applications.\n",
+          "is_lite": true
+        },
+        {
+          "id": "AIS-03",
+          "title": "Application Security Metrics",
+          "specification": "Define and implement technical and operational metrics in alignment\nwith business objectives, security requirements, and compliance obligations.\n"
+        },
+        {
+          "id": "AIS-04",
+          "title": "Secure Application Design and Development",
+          "specification": "Define and implement a SDLC process for application design, development,\ndeployment, and operation in accordance with security requirements defined by\nthe organization.\n",
+          "is_lite": true
+        },
+        {
+          "id": "AIS-05",
+          "title": "Automated Application Security Testing",
+          "specification": "Implement a testing strategy, including criteria for acceptance of\nnew information systems, upgrades and new versions, which provides application\nsecurity assurance and maintains compliance while enabling organizational speed\nof delivery goals. Automate when applicable and possible.\n"
+        },
+        {
+          "id": "AIS-06",
+          "title": "Automated Secure Application Deployment",
+          "specification": "Establish and implement strategies and capabilities for secure, standardized,\nand compliant application deployment. Automate where possible.\n",
+          "is_lite": true
+        },
+        {
+          "id": "AIS-07",
+          "title": "Application Vulnerability Remediation",
+          "specification": "Define and implement a process to remediate application security\nvulnerabilities, automating remediation when possible.\n",
+          "is_lite": true
+        }
+      ]
+    },
+    {
+      "id": "BCR",
+      "title": "Business Continuity Management and Operational Resilience",
+      "controls": [
+        {
+          "id": "BCR-01",
+          "title": "Business Continuity Management Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\nbusiness continuity management and operational resilience policies and procedures.\nReview and update the policies and procedures at least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "BCR-02",
+          "title": "Risk Assessment and Impact Analysis",
+          "specification": "Determine the impact of business disruptions and risks to establish\ncriteria for developing business continuity and operational resilience strategies\nand capabilities.\n",
+          "is_lite": true
+        },
+        {
+          "id": "BCR-03",
+          "title": "Business Continuity Strategy",
+          "specification": "Establish strategies to reduce the impact of, withstand, and recover\nfrom business disruptions within risk appetite.\n",
+          "is_lite": true
+        },
+        {
+          "id": "BCR-04",
+          "title": "Business Continuity Planning",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\na business continuity plan based on the results of the operational resilience\nstrategies and capabilities.\n"
+        },
+        {
+          "id": "BCR-05",
+          "title": "Documentation",
+          "specification": "Develop, identify, and acquire documentation that is relevant to\nsupport the business continuity and operational resilience programs. Make the\ndocumentation available to authorized stakeholders and review periodically.\n"
+        },
+        {
+          "id": "BCR-06",
+          "title": "Business Continuity Exercises",
+          "specification": "Exercise and test business continuity and operational resilience\nplans at least annually or upon significant changes.\n"
+        },
+        {
+          "id": "BCR-07",
+          "title": "Communication",
+          "specification": "Establish communication with stakeholders and participants in the\ncourse of business continuity and resilience procedures.\n"
+        },
+        {
+          "id": "BCR-08",
+          "title": "Backup",
+          "specification": "Periodically backup data stored in the cloud. Ensure the confidentiality,\nintegrity and availability of the backup, and verify data restoration from backup\nfor resiliency.\n",
+          "is_lite": true
+        },
+        {
+          "id": "BCR-09",
+          "title": "Disaster Response Plan",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\na disaster response plan to recover from natural and man-made disasters. Update\nthe plan at least annually or upon significant changes.\n",
+          "is_lite": true
+        },
+        {
+          "id": "BCR-10",
+          "title": "Response Plan Exercise",
+          "specification": "Exercise the disaster response plan annually or upon significant\nchanges, including if possible local emergency authorities.\n"
+        },
+        {
+          "id": "BCR-11",
+          "title": "Equipment Redundancy",
+          "specification": "Supplement business-critical equipment with redundant equipment independently\nlocated at a reasonable minimum distance in accordance with applicable industry\nstandards.\n"
+        }
+      ]
+    },
+    {
+      "id": "CCC",
+      "title": "Change Control and Configuration Management",
+      "controls": [
+        {
+          "id": "CCC-01",
+          "title": "Change Management Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for managing the risks associated with applying changes\nto organization assets, including application, systems, infrastructure, configuration,\netc., regardless of whether the assets are managed internally or externally\n(i.e., outsourced). Review and update the policies and procedures at least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CCC-02",
+          "title": "Quality Testing",
+          "specification": "Follow a defined quality change control, approval and testing process\nwith established baselines, testing, and release standards.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CCC-03",
+          "title": "Change Management Technology",
+          "specification": "Manage the risks associated with applying changes to organization\nassets, including application, systems, infrastructure, configuration, etc.,\nregardless of whether the assets are managed internally or externally (i.e.,\noutsourced).\n"
+        },
+        {
+          "id": "CCC-04",
+          "title": "Unauthorized Change Protection",
+          "specification": "Restrict the unauthorized addition, removal, update, and management\nof organization assets.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CCC-05",
+          "title": "Change Agreements",
+          "specification": "Include provisions limiting changes directly impacting CSCs owned\nenvironments/tenants to explicitly authorized requests within service level\nagreements between CSPs and CSCs.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CCC-06",
+          "title": "Change Management Baseline",
+          "specification": "Establish change management baselines for all relevant authorized\nchanges on organization assets.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CCC-07",
+          "title": "Detection of Baseline Deviation",
+          "specification": "Implement detection measures with proactive notification in case\nof changes deviating from the established baseline.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CCC-08",
+          "title": "Exception Management",
+          "specification": "'Implement a procedure for the management of exceptions, including\nemergencies, in the change and configuration process. Align the procedure with\nthe requirements of GRC-04: Policy Exception Process.'\n"
+        },
+        {
+          "id": "CCC-09",
+          "title": "Change Restoration",
+          "specification": "Define and implement a process to proactively roll back changes to\na previous known good state in case of errors or security concerns.\n",
+          "is_lite": true
+        }
+      ]
+    },
+    {
+      "id": "CEK",
+      "title": "Cryptography, Encryption & Key Management",
+      "controls": [
+        {
+          "id": "CEK-01",
+          "title": "Encryption and Key Management Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for Cryptography, Encryption and Key Management. Review\nand update the policies and procedures at least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CEK-02",
+          "title": "CEK Roles and Responsibilities",
+          "specification": "Define and implement cryptographic, encryption and key management\nroles and responsibilities.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CEK-03",
+          "title": "Data Encryption",
+          "specification": "Provide cryptographic protection to data at-rest and in-transit,\nusing cryptographic libraries certified to approved standards.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CEK-04",
+          "title": "Encryption Algorithm",
+          "specification": "Use encryption algorithms that are appropriate for data protection,\nconsidering the classification of data, associated risks, and usability of the\nencryption technology.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CEK-05",
+          "title": "Encryption Change Management",
+          "specification": "Establish a standard change management procedure, to accommodate\nchanges from internal and external sources, for review, approval, implementation\nand communication of cryptographic, encryption and key management technology\nchanges.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CEK-06",
+          "title": "Encryption Change Cost Benefit Analysis",
+          "specification": "Manage and adopt changes to cryptography-, encryption-, and key management-related\nsystems (including policies and procedures) that fully account for downstream\neffects of proposed changes, including residual risk, cost, and benefits analysis.\n"
+        },
+        {
+          "id": "CEK-07",
+          "title": "Encryption Risk Management",
+          "specification": "Establish and maintain an encryption and key management risk program\nthat includes provisions for risk assessment, risk treatment, risk context,\nmonitoring, and feedback.\n"
+        },
+        {
+          "id": "CEK-08",
+          "title": "CSC Key Management Capability",
+          "specification": "CSPs must provide the capability for CSCs to manage their own data\nencryption keys.\n"
+        },
+        {
+          "id": "CEK-09",
+          "title": "Encryption and Key Management Audit",
+          "specification": "Audit encryption and key management systems, policies, and processes\nwith a frequency that is proportional to the risk exposure of the system with\naudit occurring preferably continuously but at least annually and after any\nsecurity event(s).\n"
+        },
+        {
+          "id": "CEK-10",
+          "title": "Key Generation",
+          "specification": "Generate Cryptographic keys using industry accepted cryptographic\nlibraries specifying the algorithm strength and the random number generator\nused.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CEK-11",
+          "title": "Key Purpose",
+          "specification": "Manage cryptographic secret and private keys that are provisioned\nfor a unique purpose.\n"
+        },
+        {
+          "id": "CEK-12",
+          "title": "Key Rotation",
+          "specification": "Rotate cryptographic keys in accordance with the calculated cryptoperiod,\nwhich includes provisions for considering the risk of information disclosure\nand legal and regulatory requirements.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CEK-13",
+          "title": "Key Revocation",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to revoke and remove cryptographic keys prior to the end of its established\ncryptoperiod, when a key is compromised, or an entity is no longer part of the\norganization, which include provisions for legal and regulatory requirements.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CEK-14",
+          "title": "Key Destruction",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to destroy keys stored outside a secure environment and revoke keys\nstored in Hardware Security Modules (HSMs) when they are no longer needed, which\ninclude provisions for legal and regulatory requirements.\n",
+          "is_lite": true
+        },
+        {
+          "id": "CEK-15",
+          "title": "Key Activation",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to create keys in a pre-activated state when they have been generated\nbut not authorized for use, which include provisions for legal and regulatory\nrequirements.\n"
+        },
+        {
+          "id": "CEK-16",
+          "title": "Key Suspension",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to monitor, review and approve key transitions from any state to/from\nsuspension, which include provisions for legal and regulatory requirements.\n"
+        },
+        {
+          "id": "CEK-17",
+          "title": "Key Deactivation",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to deactivate keys at the time of their expiration date, which include\nprovisions for legal and regulatory requirements.\n"
+        },
+        {
+          "id": "CEK-18",
+          "title": "Key Archival",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to manage archived keys in a secure repository requiring least privilege\naccess, which include provisions for legal and regulatory requirements.\n"
+        },
+        {
+          "id": "CEK-19",
+          "title": "Key Compromise",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to use compromised keys to encrypt information only in controlled circumstance,\nand thereafter exclusively for decrypting data and never for encrypting data,\nwhich include provisions for legal and regulatory requirements.\n"
+        },
+        {
+          "id": "CEK-20",
+          "title": "Key Recovery",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to assess the risk to operational continuity versus the risk of the\nkeying material and the information it protects being exposed if control of\nthe keying material is lost, which include provisions for legal and regulatory\nrequirements.\n"
+        },
+        {
+          "id": "CEK-21",
+          "title": "Key Inventory Management",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures in order for the key management system to track and report all cryptographic\nmaterials and changes in status, which include provisions for legal and regulatory\nrequirements.\n"
+        }
+      ]
+    },
+    {
+      "id": "DCS",
+      "title": "Datacenter Security",
+      "controls": [
+        {
+          "id": "DCS-01",
+          "title": "Off-Site Equipment Disposal Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for the secure disposal of equipment used outside the\norganization's premises. If the equipment is not physically destroyed a data\ndestruction procedure that renders recovery of information impossible must be\napplied. Review and update the policies and procedures at least annually.\n"
+        },
+        {
+          "id": "DCS-02",
+          "title": "Off-Site Transfer Authorization Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for the relocation or transfer of hardware, software,\nor data/information to an offsite or alternate location. The relocation or transfer\nrequest requires the written or cryptographically verifiable authorization.\nReview and update the policies and procedures at least annually.\n"
+        },
+        {
+          "id": "DCS-03",
+          "title": "Secure Area Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for maintaining a safe and secure working environment\nin offices, rooms, and facilities. Review and update the policies and procedures\nat least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DCS-04",
+          "title": "Secure Media Transportation Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for the secure transportation of physical media. Review\nand update the policies and procedures at least annually.\n"
+        },
+        {
+          "id": "DCS-05",
+          "title": "Assets Classification",
+          "specification": "Classify and document the physical, and logical assets (e.g., applications)\nbased on the organizational business risk.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DCS-06",
+          "title": "Assets Cataloguing and Tracking",
+          "specification": "Catalogue and track all relevant physical and logical assets located\nat all of the CSP's sites within a secured system.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DCS-07",
+          "title": "Controlled Access Points",
+          "specification": "Implement physical security perimeters to safeguard personnel, data,\nand information systems. Establish physical security perimeters between the\nadministrative and business areas and the data storage and processing facilities\nareas.\n"
+        },
+        {
+          "id": "DCS-08",
+          "title": "Equipment Identification",
+          "specification": "Use equipment identification as a method for connection authentication.\n"
+        },
+        {
+          "id": "DCS-09",
+          "title": "Secure Area Authorization",
+          "specification": "Allow only authorized personnel access to secure areas, with all\ningress and egress points restricted, documented, and monitored by physical\naccess control mechanisms. Retain access control records on a periodic basis\nas deemed appropriate by the organization.\n"
+        },
+        {
+          "id": "DCS-10",
+          "title": "Surveillance System",
+          "specification": "Implement, maintain, and operate datacenter surveillance systems\nat the external perimeter and at all the ingress and egress points to detect\nunauthorized ingress and egress attempts.\n"
+        },
+        {
+          "id": "DCS-11",
+          "title": "Unauthorized Access Response Training",
+          "specification": "Train datacenter personnel to respond to unauthorized ingress or\negress attempts.\n"
+        },
+        {
+          "id": "DCS-12",
+          "title": "Cabling Security",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures that ensure a risk-based protection of power and telecommunication\ncables from a threat of interception, interference or damage at all facilities,\noffices and rooms.\n"
+        },
+        {
+          "id": "DCS-13",
+          "title": "Environmental Systems",
+          "specification": "Implement and maintain data center environmental control systems\nthat monitor, maintain and test for continual effectiveness the temperature\nand humidity conditions within accepted industry standards.\n"
+        },
+        {
+          "id": "DCS-14",
+          "title": "Secure Utilities",
+          "specification": "Secure, monitor, maintain, and test utilities services for continual\neffectiveness at planned intervals.\n"
+        },
+        {
+          "id": "DCS-15",
+          "title": "Equipment Location",
+          "specification": "Keep business-critical equipment away from locations subject to high\nprobability for environmental risk events.\n"
+        }
+      ]
+    },
+    {
+      "id": "DSP",
+      "title": "Data Security and Privacy Lifecycle Management",
+      "controls": [
+        {
+          "id": "DSP-01",
+          "title": "Security and Privacy Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for the classification, protection and handling of data\nthroughout its lifecycle, and according to all applicable laws and regulations,\nstandards, and risk level. Review and update the policies and procedures at\nleast annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-02",
+          "title": "Secure Disposal",
+          "specification": "Apply industry accepted methods for the secure disposal of data from\nstorage media such that data is not recoverable by any forensic means.\n"
+        },
+        {
+          "id": "DSP-03",
+          "title": "Data Inventory",
+          "specification": "Create and maintain a data inventory, at least for any sensitive\ndata and personal data.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-04",
+          "title": "Data Classification",
+          "specification": "Classify data according to its type and sensitivity level.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-05",
+          "title": "Data Flow Documentation",
+          "specification": "Create data flow documentation to identify what data is processed,\nstored or transmitted where. Review data flow documentation at defined intervals,\nat least annually, and after any change.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-06",
+          "title": "Data Ownership and Stewardship",
+          "specification": "Document ownership and stewardship of all relevant documented personal\nand sensitive data. Perform review at least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-07",
+          "title": "Data Protection by Design and Default",
+          "specification": "Develop systems, products, and business practices based upon a principle\nof security by design and industry best practices.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-08",
+          "title": "Data Privacy by Design and Default",
+          "specification": "Develop systems, products, and business practices based upon a principle\nof privacy by design and industry best practices. Ensure that systems' privacy\nsettings are configured by default, according to all applicable laws and regulations.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-09",
+          "title": "Data Protection Impact Assessment",
+          "specification": "Conduct a Data Protection Impact Assessment (DPIA) to evaluate the\norigin, nature, particularity and severity of the risks upon the processing\nof personal data, according to any applicable laws, regulations and industry\nbest practices.\n"
+        },
+        {
+          "id": "DSP-10",
+          "title": "Sensitive Data Transfer",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures that ensure any transfer of personal or sensitive data is protected\nfrom unauthorized access and only processed within scope as permitted by the\nrespective laws and regulations.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-11",
+          "title": "Personal Data Access, Reversal, Rectification and Deletion",
+          "specification": "Define and implement, processes, procedures and technical measures\nto enable data subjects to request access to, modification, or deletion of their\npersonal data, according to any applicable laws and regulations.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-12",
+          "title": "Limitation of Purpose in Personal Data Processing",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to ensure that personal data is processed according to any applicable\nlaws and regulations and for the purposes declared to the data subject.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-13",
+          "title": "Personal Data Sub-processing",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures for the transfer and sub-processing of personal data within the service\nsupply chain, according to any applicable laws and regulations.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-14",
+          "title": "Disclosure of Data Sub-processors",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to disclose the details of any personal or sensitive data access by\nsub-processors to the data owner prior to initiation of that processing.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-15",
+          "title": "Limitation of Production Data Use",
+          "specification": "Obtain authorization from data owners, and manage associated risk\nbefore replicating or using production data in non-production environments.\n"
+        },
+        {
+          "id": "DSP-16",
+          "title": "Data Retention and Deletion",
+          "specification": "Data retention, archiving and deletion is managed in accordance with\nbusiness requirements, applicable laws and regulations.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-17",
+          "title": "Sensitive Data Protection",
+          "specification": "Define and implement, processes, procedures and technical measures\nto protect sensitive data throughout it's lifecycle.\n",
+          "is_lite": true
+        },
+        {
+          "id": "DSP-18",
+          "title": "Disclosure Notification",
+          "specification": "The CSP must have in place, and describe to CSCs the procedure to\nmanage and respond to requests for disclosure of Personal Data by Law Enforcement\nAuthorities according to applicable laws and regulations. The CSP must give\nspecial attention to the notification procedure to interested CSCs, unless otherwise\nprohibited, such as a prohibition under criminal law to preserve confidentiality\nof a law enforcement investigation.\n"
+        },
+        {
+          "id": "DSP-19",
+          "title": "Data Location",
+          "specification": "Define and implement, processes, procedures and technical measures\nto specify and document the physical locations of data, including any locations\nin which data is processed or backed up.\n",
+          "is_lite": true
+        }
+      ]
+    },
+    {
+      "id": "GRC",
+      "title": "Governance, Risk and Compliance",
+      "controls": [
+        {
+          "id": "GRC-01",
+          "title": "Governance Program Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for an information governance program, which is sponsored\nby the leadership of the organization. Review and update the policies and procedures\nat least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "GRC-02",
+          "title": "Risk Management Program",
+          "specification": "Establish a formal, documented, and leadership-sponsored Enterprise\nRisk Management (ERM) program that includes policies and procedures for identification,\nevaluation, ownership, treatment, and acceptance of cloud security and privacy\nrisks.\n",
+          "is_lite": true
+        },
+        {
+          "id": "GRC-03",
+          "title": "Organizational Policy Reviews",
+          "specification": "Review all relevant organizational policies and associated procedures\nat least annually or when a substantial change occurs within the organization.\n"
+        },
+        {
+          "id": "GRC-04",
+          "title": "Policy Exception Process",
+          "specification": "Establish and follow an approved exception process as mandated by\nthe governance program whenever a deviation from an established policy occurs.\n"
+        },
+        {
+          "id": "GRC-05",
+          "title": "Information Security Program",
+          "specification": "Develop and implement an Information Security Program, which includes\nprograms for all the relevant domains of the CCM.\n"
+        },
+        {
+          "id": "GRC-06",
+          "title": "Governance Responsibility Model",
+          "specification": "Define and document roles and responsibilities for planning, implementing,\noperating, assessing, and improving governance programs.\n",
+          "is_lite": true
+        },
+        {
+          "id": "GRC-07",
+          "title": "Information System Regulatory Mapping",
+          "specification": "Identify and document all relevant standards, regulations, legal/contractual,\nand statutory requirements, which are applicable to your organization.\n",
+          "is_lite": true
+        },
+        {
+          "id": "GRC-08",
+          "title": "Special Interest Groups",
+          "specification": "Establish and maintain contact with cloud-related special interest\ngroups and other relevant entities in line with business context.\n"
+        }
+      ]
+    },
+    {
+      "id": "HRS",
+      "title": "Human Resources",
+      "controls": [
+        {
+          "id": "HRS-01",
+          "title": "Background Screening Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for background verification of all new employees (including\nbut not limited to remote employees, contractors, and third parties) according\nto local laws, regulations, ethics, and contractual constraints and proportional\nto the data classification to be accessed, the business requirements, and acceptable\nrisk. Review and update the policies and procedures at least annually.\n"
+        },
+        {
+          "id": "HRS-02",
+          "title": "Acceptable Use of Technology Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for defining allowances and conditions for the acceptable\nuse of organizationally-owned or managed assets. Review and update the policies\nand procedures at least annually.\n"
+        },
+        {
+          "id": "HRS-03",
+          "title": "Clean Desk Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures that require unattended workspaces to not have openly\nvisible confidential data. Review and update the policies and procedures at\nleast annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "HRS-04",
+          "title": "Remote and Home Working Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures to protect information accessed, processed or stored\nat remote sites and locations. Review and update the policies and procedures\nat least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "HRS-05",
+          "title": "Asset returns",
+          "specification": "Establish and document procedures for the return of organization-owned\nassets by terminated employees.\n"
+        },
+        {
+          "id": "HRS-06",
+          "title": "Employment Termination",
+          "specification": "Establish, document, and communicate to all personnel the procedures\noutlining the roles and responsibilities concerning changes in employment.\n"
+        },
+        {
+          "id": "HRS-07",
+          "title": "Employment Agreement Process",
+          "specification": "Employees sign the employee agreement prior to being granted access\nto organizational information systems, resources and assets.\n"
+        },
+        {
+          "id": "HRS-08",
+          "title": "Employment Agreement Content",
+          "specification": "The organization includes within the employment agreements provisions\nand/or terms for adherence to established information governance and security\npolicies.\n"
+        },
+        {
+          "id": "HRS-09",
+          "title": "Personnel Roles and Responsibilities",
+          "specification": "Document and communicate roles and responsibilities of employees,\nas they relate to information assets and security.\n"
+        },
+        {
+          "id": "HRS-10",
+          "title": "Non-Disclosure Agreements",
+          "specification": "Identify, document, and review, at planned intervals, requirements\nfor non-disclosure/confidentiality agreements reflecting the organization's\nneeds for the protection of data and operational details.\n"
+        },
+        {
+          "id": "HRS-11",
+          "title": "Security Awareness Training",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\na security awareness training program for all employees of the organization\nand provide regular training updates.\n",
+          "is_lite": true
+        },
+        {
+          "id": "HRS-12",
+          "title": "Personal and Sensitive Data Awareness and Training",
+          "specification": "Provide all employees with access to sensitive organizational and\npersonal data with appropriate security awareness training and regular updates\nin organizational procedures, processes, and policies relating to their professional\nfunction relative to the organization.\n"
+        },
+        {
+          "id": "HRS-13",
+          "title": "Compliance User Responsibility",
+          "specification": "Make employees aware of their roles and responsibilities for maintaining\nawareness and compliance with established policies and procedures and applicable\nlegal, statutory, or regulatory compliance obligations.\n"
+        }
+      ]
+    },
+    {
+      "id": "IAM",
+      "title": "Identity & Access Management",
+      "controls": [
+        {
+          "id": "IAM-01",
+          "title": "Identity and Access Management Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, implement, apply, evaluate\nand maintain policies and procedures for identity and access management. Review\nand update the policies and procedures at least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-02",
+          "title": "Strong Password Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, implement, apply, evaluate\nand maintain strong password policies and procedures. Review and update the\npolicies and procedures at least annually.\n"
+        },
+        {
+          "id": "IAM-03",
+          "title": "Identity Inventory",
+          "specification": "Manage, store, and review the information of system identities, and\nlevel of access.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-04",
+          "title": "Separation of Duties",
+          "specification": "Employ the separation of duties principle when implementing information\nsystem access.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-05",
+          "title": "Least Privilege",
+          "specification": "Employ the least privilege principle when implementing information\nsystem access.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-06",
+          "title": "User Access Provisioning",
+          "specification": "Define and implement a user access provisioning process which authorizes,\nrecords, and communicates access changes to data and assets.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-07",
+          "title": "User Access Changes and Revocation",
+          "specification": "De-provision or respectively modify access of movers / leavers or\nsystem identity changes in a timely manner in order to effectively adopt and\ncommunicate identity and access management policies.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-08",
+          "title": "User Access Review",
+          "specification": "Review and revalidate user access for least privilege and separation\nof duties with a frequency that is commensurate with organizational risk tolerance.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-09",
+          "title": "Segregation of Privileged Access Roles",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures for the segregation of privileged access roles such that administrative\naccess to data, encryption and key management capabilities and logging capabilities\nare distinct and separated.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-10",
+          "title": "Management of Privileged Access Roles",
+          "specification": "Define and implement an access process to ensure privileged access\nroles and rights are granted for a time limited period, and implement procedures\nto prevent the culmination of segregated privileged access.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-11",
+          "title": "CSCs Approval for Agreed Privileged Access Roles",
+          "specification": "Define, implement and evaluate processes and procedures for customers\nto participate, where applicable, in the granting of access for agreed, high\nrisk (as defined by the organizational risk assessment) privileged access roles.\n"
+        },
+        {
+          "id": "IAM-12",
+          "title": "Safeguard Logs Integrity",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to ensure the logging infrastructure is read-only for all with write\naccess, including privileged access roles, and that the ability to disable it\nis controlled through a procedure that ensures the segregation of duties and\nbreak glass procedures.\n"
+        },
+        {
+          "id": "IAM-13",
+          "title": "Uniquely Identifiable Users",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures that ensure users are identifiable through unique IDs or which can\nassociate individuals to the usage of user IDs.\n"
+        },
+        {
+          "id": "IAM-14",
+          "title": "Strong Authentication",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures for authenticating access to systems, application and data assets,\nincluding multifactor authentication for at least privileged user and sensitive\ndata access. Adopt digital certificates or alternatives which achieve an equivalent\nlevel of security for system identities.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IAM-15",
+          "title": "Passwords Management",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures for the secure management of passwords.\n"
+        },
+        {
+          "id": "IAM-16",
+          "title": "Authorization Mechanisms",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to verify access to data and system functions is authorized.\n"
+        }
+      ]
+    },
+    {
+      "id": "IPY",
+      "title": "Interoperability & Portability",
+      "controls": [
+        {
+          "id": "IPY-01",
+          "title": "Interoperability and Portability Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for interoperability and portability including\nrequirements for:\na. Communications between application interfaces\nb. Information processing interoperability\nc. Application development portability\nd. Information/Data exchange, usage, portability, integrity, and persistence\nReview and update the policies and procedures at least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IPY-02",
+          "title": "Application Interface Availability",
+          "specification": "Provide application interface(s) to CSCs so that they programmatically\nretrieve their data to enable interoperability and portability.\n"
+        },
+        {
+          "id": "IPY-03",
+          "title": "Secure Interoperability and Portability Management",
+          "specification": "Implement cryptographically secure and standardized network protocols\nfor the management, import and export of data.\n"
+        },
+        {
+          "id": "IPY-04",
+          "title": "Data Portability Contractual Obligations",
+          "specification": "Agreements must include provisions specifying CSCs access to data\nupon contract termination and will include:\na. Data format\nb. Length of time the data will be stored\nc. Scope of the data retained and made available to the CSCs\nd. Data deletion policy\n"
+        }
+      ]
+    },
+    {
+      "id": "IVS",
+      "title": "Infrastructure & Virtualization Security",
+      "controls": [
+        {
+          "id": "IVS-01",
+          "title": "Infrastructure and Virtualization Security Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for infrastructure and virtualization security. Review\nand update the policies and procedures at least annually.\n"
+        },
+        {
+          "id": "IVS-02",
+          "title": "Capacity and Resource Planning",
+          "specification": "Plan and monitor the availability, quality, and adequate capacity\nof resources in order to deliver the required system performance as determined\nby the business.\n"
+        },
+        {
+          "id": "IVS-03",
+          "title": "Network Security",
+          "specification": "Monitor, encrypt and restrict communications between environments\nto only authenticated and authorized connections, as justified by the business.\nReview these configurations at least annually, and support them by a documented\njustification of all allowed services, protocols, ports, and compensating controls.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IVS-04",
+          "title": "OS Hardening and Base Controls",
+          "specification": "Harden host and guest OS, hypervisor or infrastructure control plane\naccording to their respective best practices, and supported by technical controls,\nas part of a security baseline.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IVS-05",
+          "title": "Production and Non-Production Environments",
+          "specification": "Separate production and non-production environments.\n"
+        },
+        {
+          "id": "IVS-06",
+          "title": "Segmentation and Segregation",
+          "specification": "Design, develop, deploy and configure applications and infrastructures\nsuch that CSP and CSC (tenant) user access and intra-tenant access is appropriately\nsegmented and segregated, monitored and restricted from other tenants.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IVS-07",
+          "title": "Migration to Cloud Environments",
+          "specification": "Use secure and encrypted communication channels when migrating servers,\nservices, applications, or data to cloud environments. Such channels must include\nonly up-to-date and approved protocols.\n",
+          "is_lite": true
+        },
+        {
+          "id": "IVS-08",
+          "title": "Network Architecture Documentation",
+          "specification": "Identify and document high-risk environments.\n"
+        },
+        {
+          "id": "IVS-09",
+          "title": "Network Defense",
+          "specification": "Define, implement and evaluate processes, procedures and defense-in-depth\ntechniques for protection, detection, and timely response to network-based attacks.\n",
+          "is_lite": true
+        }
+      ]
+    },
+    {
+      "id": "LOG",
+      "title": "Logging and Monitoring",
+      "controls": [
+        {
+          "id": "LOG-01",
+          "title": "Logging and Monitoring Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for logging and monitoring. Review and update the policies\nand procedures at least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "LOG-02",
+          "title": "Audit Logs Protection",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to ensure the security and retention of audit logs.\n"
+        },
+        {
+          "id": "LOG-03",
+          "title": "Security Monitoring and Alerting",
+          "specification": "Identify and monitor security-related events within applications\nand the underlying infrastructure. Define and implement a system to generate\nalerts to responsible stakeholders based on such events and corresponding metrics.\n"
+        },
+        {
+          "id": "LOG-04",
+          "title": "Audit Logs Access and Accountability",
+          "specification": "Restrict audit logs access to authorized personnel and maintain records\nthat provide unique access accountability.\n",
+          "is_lite": true
+        },
+        {
+          "id": "LOG-05",
+          "title": "Audit Logs Monitoring and Response",
+          "specification": "Monitor security audit logs to detect activity outside of typical\nor expected patterns. Establish and follow a defined process to review and take\nappropriate and timely actions on detected anomalies.\n",
+          "is_lite": true
+        },
+        {
+          "id": "LOG-06",
+          "title": "Clock Synchronization",
+          "specification": "Use a reliable time source across all relevant information processing\nsystems.\n"
+        },
+        {
+          "id": "LOG-07",
+          "title": "Logging Scope",
+          "specification": "Establish, document and implement which information meta/data system\nevents should be logged. Review and update the scope at least annually or whenever\nthere is a change in the threat environment.\n"
+        },
+        {
+          "id": "LOG-08",
+          "title": "Log Records",
+          "specification": "Generate audit records containing relevant security information.\n"
+        },
+        {
+          "id": "LOG-09",
+          "title": "Log Protection",
+          "specification": "The information system protects audit records from unauthorized access,\nmodification, and deletion.\n"
+        },
+        {
+          "id": "LOG-10",
+          "title": "Encryption Monitoring and Reporting",
+          "specification": "Establish and maintain a monitoring and internal reporting capability\nover the operations of cryptographic, encryption and key management policies,\nprocesses, procedures, and controls.\n"
+        },
+        {
+          "id": "LOG-11",
+          "title": "Transaction/Activity Logging",
+          "specification": "Log and monitor key lifecycle management events to enable auditing\nand reporting on usage of cryptographic keys.\n"
+        },
+        {
+          "id": "LOG-12",
+          "title": "Access Control Logs",
+          "specification": "Monitor and log physical access using an auditable access control\nsystem.\n"
+        },
+        {
+          "id": "LOG-13",
+          "title": "Failures and Anomalies Reporting",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures for the reporting of anomalies and failures of the monitoring system\nand provide immediate notification to the accountable party.\n"
+        }
+      ]
+    },
+    {
+      "id": "SEF",
+      "title": "Security Incident Management, E-Discovery, & Cloud Forensics",
+      "controls": [
+        {
+          "id": "SEF-01",
+          "title": "Security Incident Management Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for Security Incident Management, E-Discovery, and Cloud\nForensics. Review and update the policies and procedures at least annually.\n"
+        },
+        {
+          "id": "SEF-02",
+          "title": "Service Management Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for the timely management of security incidents. Review\nand update the policies and procedures at least annually.\n"
+        },
+        {
+          "id": "SEF-03",
+          "title": "Incident Response Plans",
+          "specification": "'Establish, document, approve, communicate, apply, evaluate and maintain\na security incident response plan, which includes but is not limited to: relevant\ninternal departments, impacted CSCs, and other business critical relationships\n(such as supply-chain) that may be impacted.'\n",
+          "is_lite": true
+        },
+        {
+          "id": "SEF-04",
+          "title": "Incident Response Testing",
+          "specification": "Test and update as necessary incident response plans at planned intervals\nor upon significant organizational or environmental changes for effectiveness.\n",
+          "is_lite": true
+        },
+        {
+          "id": "SEF-05",
+          "title": "Incident Response Metrics",
+          "specification": "Establish and monitor information security incident metrics.\n"
+        },
+        {
+          "id": "SEF-06",
+          "title": "Event Triage Processes",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures supporting business processes to triage security-related events.\n"
+        },
+        {
+          "id": "SEF-07",
+          "title": "Security Breach Notification",
+          "specification": "Define and implement, processes, procedures and technical measures\nfor security breach notifications. Report security breaches and assumed security\nbreaches including any relevant supply chain breaches, as per applicable SLAs,\nlaws and regulations.\n",
+          "is_lite": true
+        },
+        {
+          "id": "SEF-08",
+          "title": "Points of Contact Maintenance",
+          "specification": "Maintain points of contact for applicable regulation authorities,\nnational and local law enforcement, and other legal jurisdictional authorities.\n"
+        }
+      ]
+    },
+    {
+      "id": "STA",
+      "title": "Supply Chain Management, Transparency, and Accountability",
+      "controls": [
+        {
+          "id": "STA-01",
+          "title": "SSRM Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for the application of the Shared Security Responsibility\nModel (SSRM) within the organization. Review and update the policies and procedures\nat least annually.\n"
+        },
+        {
+          "id": "STA-02",
+          "title": "SSRM Supply Chain",
+          "specification": "Apply, document, implement and manage the SSRM throughout the supply\nchain for the cloud service offering.\n",
+          "is_lite": true
+        },
+        {
+          "id": "STA-03",
+          "title": "SSRM Guidance",
+          "specification": "Provide SSRM Guidance to the CSC detailing information about the\nSSRM applicability throughout the supply chain.\n"
+        },
+        {
+          "id": "STA-04",
+          "title": "SSRM Control Ownership",
+          "specification": "Delineate the shared ownership and applicability of all CSA CCM controls\naccording to the SSRM for the cloud service offering.\n",
+          "is_lite": true
+        },
+        {
+          "id": "STA-05",
+          "title": "SSRM Documentation Review",
+          "specification": "Review and validate SSRM documentation for all cloud services offerings\nthe organization uses.\n"
+        },
+        {
+          "id": "STA-06",
+          "title": "SSRM Control Implementation",
+          "specification": "Implement, operate, and audit or assess the portions of the SSRM\nwhich the organization is responsible for.\n"
+        },
+        {
+          "id": "STA-07",
+          "title": "Supply Chain Inventory",
+          "specification": "Develop and maintain an inventory of all supply chain relationships.\n",
+          "is_lite": true
+        },
+        {
+          "id": "STA-08",
+          "title": "Supply Chain Risk Management",
+          "specification": "CSPs periodically review risk factors associated with all organizations\nwithin their supply chain.\n"
+        },
+        {
+          "id": "STA-09",
+          "title": "Primary Service and Contractual Agreement",
+          "specification": "Service agreements between CSPs and CSCs (tenants) must incorporate at least the following mutually-agreed upon provisions and/or terms:\n• Scope, characteristics and location of business relationship and services offered\n• Information security requirements (including SSRM)\n• Change management process\n• Logging and monitoring capability\n• Incident management and communication procedures\n• Right to audit and third party assessment\n• Service termination\n• Interoperability and portability requirements\n• Data privacy\n"
+        },
+        {
+          "id": "STA-10",
+          "title": "Supply Chain Agreement Review",
+          "specification": "Review supply chain agreements between CSPs and CSCs at least annually.\n"
+        },
+        {
+          "id": "STA-11",
+          "title": "Internal Compliance Testing",
+          "specification": "Define and implement a process for conducting internal assessments\nto confirm conformance and effectiveness of standards, policies, procedures,\nand service level agreement activities at least annually.\n"
+        },
+        {
+          "id": "STA-12",
+          "title": "Supply Chain Service Agreement Compliance",
+          "specification": "Implement policies requiring all CSPs throughout the supply chain\nto comply with information security, confidentiality, access control, privacy,\naudit, personnel policy and service level requirements and standards.\n"
+        },
+        {
+          "id": "STA-13",
+          "title": "Supply Chain Governance Review",
+          "specification": "Periodically review the organization's supply chain partners' IT\ngovernance policies and procedures.\n"
+        },
+        {
+          "id": "STA-14",
+          "title": "Supply Chain Data Security Assessment",
+          "specification": "Define and implement a process for conducting security assessments\nperiodically for all organizations within the supply chain.\n"
+        }
+      ]
+    },
+    {
+      "id": "TVM",
+      "title": "Threat & Vulnerability Management",
+      "controls": [
+        {
+          "id": "TVM-01",
+          "title": "Threat and Vulnerability Management Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures to identify, report and prioritize the remediation of\nvulnerabilities, in order to protect systems against vulnerability exploitation.\nReview and update the policies and procedures at least annually.\n"
+        },
+        {
+          "id": "TVM-02",
+          "title": "Malware Protection Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures to protect against malware on managed assets. Review\nand update the policies and procedures at least annually.\n",
+          "is_lite": true
+        },
+        {
+          "id": "TVM-03",
+          "title": "Vulnerability Remediation Schedule",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to enable both scheduled and emergency responses to vulnerability identifications,\nbased on the identified risk.\n",
+          "is_lite": true
+        },
+        {
+          "id": "TVM-04",
+          "title": "Detection Updates",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to update detection tools, threat signatures, and indicators of compromise\non a weekly, or more frequent basis.\n",
+          "is_lite": true
+        },
+        {
+          "id": "TVM-05",
+          "title": "External Library Vulnerabilities",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to identify updates for applications which use third party or open\nsource libraries according to the organization's vulnerability management policy.\n"
+        },
+        {
+          "id": "TVM-06",
+          "title": "Penetration Testing",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures for the periodic performance of penetration testing by independent\nthird parties.\n"
+        },
+        {
+          "id": "TVM-07",
+          "title": "Vulnerability Identification",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures for the detection of vulnerabilities on organizationally managed assets\nat least monthly.\n",
+          "is_lite": true
+        },
+        {
+          "id": "TVM-08",
+          "title": "Vulnerability Prioritization",
+          "specification": "Use a risk-based model for effective prioritization of vulnerability\nremediation using an industry recognized framework.\n"
+        },
+        {
+          "id": "TVM-09",
+          "title": "Vulnerability Management Reporting",
+          "specification": "Define and implement a process for tracking and reporting vulnerability\nidentification and remediation activities that includes stakeholder notification.\n",
+          "is_lite": true
+        },
+        {
+          "id": "TVM-10",
+          "title": "Vulnerability Management Metrics",
+          "specification": "Establish, monitor and report metrics for vulnerability identification\nand remediation at defined intervals.\n"
+        }
+      ]
+    },
+    {
+      "id": "UEM",
+      "title": "Universal Endpoint Management",
+      "controls": [
+        {
+          "id": "UEM-01",
+          "title": "Endpoint Devices Policy and Procedures",
+          "specification": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for all endpoints. Review and update the policies and\nprocedures at least annually.\n"
+        },
+        {
+          "id": "UEM-02",
+          "title": "Application and Service Approval",
+          "specification": "Define, document, apply and evaluate a list of approved services,\napplications and sources of applications (stores) acceptable for use by endpoints\nwhen accessing or storing organization-managed data.\n",
+          "is_lite": true
+        },
+        {
+          "id": "UEM-03",
+          "title": "Compatibility",
+          "specification": "Define and implement a process for the validation of the endpoint\ndevice's compatibility with operating systems and applications.\n"
+        },
+        {
+          "id": "UEM-04",
+          "title": "Endpoint Inventory",
+          "specification": "Maintain an inventory of all endpoints used to store and access company\ndata.\n",
+          "is_lite": true
+        },
+        {
+          "id": "UEM-05",
+          "title": "Endpoint Management",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to enforce policies and controls for all endpoints permitted to access\nsystems and/or store, transmit, or process organizational data.\n",
+          "is_lite": true
+        },
+        {
+          "id": "UEM-06",
+          "title": "Automatic Lock Screen",
+          "specification": "Configure all relevant interactive-use endpoints to require an automatic\nlock screen.\n",
+          "is_lite": true
+        },
+        {
+          "id": "UEM-07",
+          "title": "Operating Systems",
+          "specification": "Manage changes to endpoint operating systems, patch levels, and/or\napplications through the company's change management processes.\n"
+        },
+        {
+          "id": "UEM-08",
+          "title": "Storage Encryption",
+          "specification": "Protect information from unauthorized disclosure on managed endpoint\ndevices with storage encryption.\n"
+        },
+        {
+          "id": "UEM-09",
+          "title": "Anti-Malware Detection and Prevention",
+          "specification": "Configure managed endpoints with anti-malware detection and prevention\ntechnology and services.\n",
+          "is_lite": true
+        },
+        {
+          "id": "UEM-10",
+          "title": "Software Firewall",
+          "specification": "Configure managed endpoints with properly configured software firewalls.\n",
+          "is_lite": true
+        },
+        {
+          "id": "UEM-11",
+          "title": "Data Loss Prevention",
+          "specification": "Configure managed endpoints with Data Loss Prevention (DLP) technologies\nand rules in accordance with a risk assessment.\n"
+        },
+        {
+          "id": "UEM-12",
+          "title": "Remote Locate",
+          "specification": "Enable remote geo-location capabilities for all managed mobile endpoints.\n"
+        },
+        {
+          "id": "UEM-13",
+          "title": "Remote Wipe",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nmeasures to enable the deletion of company data remotely on managed endpoint\ndevices.\n",
+          "is_lite": true
+        },
+        {
+          "id": "UEM-14",
+          "title": "Third-Party Endpoint Security Posture",
+          "specification": "Define, implement and evaluate processes, procedures and technical\nand/or contractual measures to maintain proper security of third-party endpoints\nwith access to organizational assets.\n"
+        }
+      ]
+    }
+  ]
+}

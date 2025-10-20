@@ -1,0 +1,1617 @@
+- name: NIST CSF v1.1
+  mappings:
+    - control_id: A&A-01
+      references:
+        - ID.GV-1
+        - ID.GV-3
+        - ID.GV-4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain audit and assurance policies and procedures and standards'.
+        'audit and assurance policies and procedures'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: A&A-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CSF and has to be used to close the gap.
+    - control_id: A&A-03
+      references:
+        - ID.GV-4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the CCM control objective.
+    - control_id: A&A-04
+      references:
+        - ID.GV-3
+        - DE.DP-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Verify compliance with all relevant standards'.
+    - control_id: A&A-05
+      references:
+        - PR.PT-1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF:
+        'Implement an Audit Management process to support audit planning, risk analysis, security control assessment, conclusion, remediation schedules, report generation, and review of past reports'.
+    - control_id: A&A-06
+      references:
+        - ID.RA-6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF:
+        'plan to report remediation status to relevant stakeholders'.
+    - control_id: AIS-01
+      references:
+        - ID.GV-1
+        - ID.GV-2
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures for application security'. 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: AIS-02
+      references:
+        - PR.IP-1
+        - PR.IP-2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: AIS-03
+      references:
+        - PR.IP-8
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Define and implement technical and operational metrics in alignment with compliance obligations'.
+    - control_id: AIS-04
+      references:
+        - PR.DS-6
+        - PR.DS-7
+        - PR.IP-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Define and implement a SDLC process in accordance with security requirements defined by the organization'.
+    - control_id: AIS-05
+      references:
+        - PR.IP-2
+        - PR.PT-3
+        - PR.IP-12
+        - DE.CM-8
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF:  
+        'including criteria for acceptance of new information systems'.
+        'Automate when applicable and possible'.
+    - control_id: AIS-06
+      references:
+        - PR.DS-6
+        - PR.DS-7
+        - PR.IP-1
+        - PR.IP-2
+        - PR.IP-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'secure, standardized, and compliant application deployment. Automate where possible'.
+    - control_id: AIS-07
+      references:
+        - PR.IP-2
+        - PR.IP-12
+        - DE.CM-8
+        - RS.AN-5
+        - RS.MI-3
+        - PR.DS-6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-01
+      references:
+        - ID.GV-1
+        - ID.GV-2
+        - ID.GV-3
+        - ID.BE-3
+        - ID.BE-5
+        - RC.RP-1
+        - RC.IM-1
+        - RC.IM-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: BCR-02
+      references:
+        - ID.RA-4
+        - ID.RA-5
+        - ID.BE-5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'operational resilience strategies and capabilities'.
+    - control_id: BCR-03
+      references:
+        - ID.RM-2
+        - ID.RM-3
+        - ID.BE-5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: BCR-04
+      references:
+        - PR.IP-9
+        - PR.IP-10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'document, approve, communicate, evaluate and maintain a business continuity plan'.
+        'based on the results of the operational resilience strategies and capabilities'.
+    - control_id: BCR-05
+      references:
+        - PR.IP-9
+        - PR.IP-10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification in the CSF: 
+        'Make the documentation available to authorized stakeholders and review periodically'.
+    - control_id: BCR-06
+      references:
+        - PR.IP-10
+        - PR.IP-4
+        - ID.SC-5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'at least annually or upon significant changes'.
+    - control_id: BCR-07
+      references:
+        - ID.BE-3
+        - ID.SC-5
+        - RS.CO-4
+        - RC.CO-3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-08
+      references:
+        - PR.IP-4
+        - PR.DS-1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        '(backup data stored) in the cloud'.
+    - control_id: BCR-09
+      references:
+        - PR.IP-9
+        - PR.IP-10
+        - RC.IM-1
+        - RC.IM-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Update the plan at least annually or upon significant changes'.
+    - control_id: BCR-10
+      references:
+        - PR.IP-10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        (exercise plan) 'annually'.
+        'local emergency authorities'.
+    - control_id: BCR-11
+      references:
+        - ID.BE-4
+        - ID.BE-5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CCC-01
+      references:
+        - ID.GV-1
+        - PR.IP-1
+        - PR.IP-2
+        - PR.IP-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: CCC-02
+      references:
+        - PR.IP-2
+        - PR.IP-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CCC-03
+      references:
+        - PR.IP-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'changes to organization assets, including application, systems, infrastructure'.
+    - control_id: CCC-04
+      references:
+        - ID.AM-1
+        - ID.AM-2
+        - ID.AM-4
+        - PR.MA-1
+        - PR.MA-2
+        - PR.AC-1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CCC-05
+      references:
+        - ID.SC-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CCC-06
+      references:
+        - PR.IP-1
+        - PR.IP-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'change management baselines'.
+    - control_id: CCC-07
+      references:
+        - PR.MA-1
+        - PR.IP-1
+        - DE.DP-4
+        - PR.IP-3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CSF and has to be used to close the gap.
+    - control_id: CCC-09
+      references:
+        - PR.IP-2
+        - PR.IP-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CEK-01
+      references:
+        - ID.GV-1
+        - PR.DS-1
+        - PR.DS-2
+        - PR.AC-1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures for Cryptography, Encryption and Key Management'. 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: CEK-02
+      references:
+        - ID.AM-6
+        - ID.GV-2
+        - PR.AT-2
+        - PR.AT-5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CEK-03
+      references:
+        - PR.DS-1
+        - PR.DS-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'using cryptographic libraries certified to approved standards'.
+    - control_id: CEK-04
+      references:
+        - PR.DS-1
+        - PR.DS-2
+        - ID.AM-5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CEK-05
+      references:
+        - PR.IP-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'for review, approval, implementation and communication of cryptographic, encryption and key management technology changes'.
+    - control_id: CEK-06
+      references:
+        - PR.DS-1
+        - PR.DS-2
+        - ID.RA-4
+        - ID.RA-6
+        - PR.IP-3
+        - PR.IP-7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'cost, and benefits analysis'.
+    - control_id: CEK-07
+      references:
+        - ID.RM-1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CEK-08
+      references:
+        - ID.SC-3
+        - ID.AM-6
+        - PR.AC-1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CEK-09
+      references:
+        - PR.PT-1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CEK-10
+      references:
+        - PR.AC-1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CEK-11
+      references:
+        - PR.AC-1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: CEK-12
+      references:
+        - PR.AC-1
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Rotate cryptographic keys in accordance with the calculated cryptoperiod, which includes provisions for considering the risk of information disclosure'.
+    - control_id: CEK-13
+      references:
+        - RS.RP-1
+        - PR.AC-1
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'revoke and remove cryptographic keys prior to the end of its established cryptoperiod, when a key is compromised, or an entity is no longer part of the organization'.
+    - control_id: CEK-14
+      references:
+        - PR.AC-1
+        - PR.IP-6
+        - ID.GV-3
+        - PR.DS-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'destroy keys stored outside a secure environment and revoke keys stored in Hardware Security Modules (HSMs) when they are no longer needed'.
+    - control_id: CEK-15
+      references:
+        - PR.AC-1
+        - PR.IP-3
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'create keys in a pre-activated state when they have been generated but not authorized for use'.
+    - control_id: CEK-16
+      references:
+        - PR.AC-1
+        - PR.IP-3
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'monitor, review and approve key transitions from any state to/from suspension'.
+    - control_id: CEK-17
+      references:
+        - PR.AC-1
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'deactivate keys at the time of their expiration date'.
+    - control_id: CEK-18
+      references:
+        - PR.AC-1
+        - PR.IP-4
+        - PR.AC-4
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'manage archived keys in a secure repository requiring least privilege access'.
+    - control_id: CEK-19
+      references:
+        - PR.AC-1
+        - PR.DS-1
+        - PR.DS-2
+        - ID.GV-3
+        - RS.MI-1
+        - RS.MI-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'use compromised keys to encrypt information only in controlled circumstance, and thereafter exclusively for decrypting data and never for encrypting data'.
+    - control_id: CEK-20
+      references:
+        - PR.AC-1
+        - PR.IP-9
+        - PR.IP-4
+        - ID.RA-5
+        - ID.RA-4
+        - RS.MI-1
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'assess the risk to operational continuity versus the risk of the keying material and the information it protects being exposed if control of the keying material is lost'.
+    - control_id: CEK-21
+      references:
+        - PR.AC-1
+        - PR.IP-1
+        - PR.IP-3
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'the key management system to track and report all cryptographic materials and changes in status'.
+    - control_id: DCS-01
+      references:
+        - ID.GV-1
+        - PR.IP-6
+        - PR.DS-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'policies and procedures for the secure disposal of equipment'.
+        'a data destruction procedure that renders recovery of information impossible must be applied'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: DCS-02
+      references:
+        - ID.GV-1
+        - PR.DS-3
+        - PR.MA-1
+        - PR.PT-2
+        - PR.PT-5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'policies and procedures for the relocation or transfer of hardware, software, or data/information to an offsite or alternate location'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: DCS-03
+      references:
+        - ID.GV-1
+        - PR.IP-5
+        - PR.AC-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'policies and procedures for maintaining a safe and secure working environment in offices, rooms, and facilities'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: DCS-04
+      references:
+        - ID.GV-1
+        - PR.PT-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: DCS-05
+      references:
+        - ID.AM-1
+        - ID.AM-2
+        - ID.AM-4
+        - ID-AM-5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-06
+      references:
+        - ID.AM-1
+        - ID.AM-2
+        - ID.AM-4
+        - PR.AC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-07
+      references:
+        - PR.AC-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Implement physical security perimeters'.
+        'Establish physical security perimeters between the administrative and business areas and the data storage and processing facilities areas'.
+    - control_id: DCS-08
+      references:
+        - PR.AC-1
+        - PR.AC-7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-09
+      references:
+        - PR.AC-2
+        - DE.CM-2
+        - DE.CM-7
+        - PR.PT-1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Retain access control records on a periodic basis as deemed appropriate by the organization'.
+        'all ingress and egress points documented'.
+    - control_id: DCS-10
+      references:
+        - PR.AC-2
+        - DE.CM-2
+        - DE.CM-3
+        - DE.CM-6
+        - DE.CM-7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-11
+      references:
+        - RS.CO-1
+        - PR.AT-1
+        - PR.AT-5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-12
+      references:
+        - PR.AC-2
+        - PR.PT-4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'ensure a risk-based protection of power and telecommunication cables'.
+    - control_id: DCS-13
+      references:
+        - PR.IP-5
+        - DE.CM-2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: DCS-14
+      references:
+        - PR.AC-2
+        - DE.CM-2
+        - PR.IP-5
+        - ID.SC-5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: DCS-15
+      references:
+        - PR.IP-5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: DSP-01
+      references:
+        - ID.GV-1
+        - ID.GV-3
+        - ID.AM-5
+        - PR.IP-6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'review and update the policies and procedures at least annually'.
+    - control_id: DSP-02
+      references:
+        - PR.IP-6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        '(disposal of data from storage media) data is not recoverable by any forensic means'.
+    - control_id: DSP-03
+      references:
+        - ID.AM-5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-04
+      references:
+        - ID.AM-5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-05
+      references:
+        - ID.AM-3
+        - DE.AE-1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'at least annually, and after any change'.
+    - control_id: DSP-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: DSP-07
+      references:
+        - PR.IP-2
+        - PR.PT-3
+        - PR.AC-4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: DSP-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: DSP-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: DSP-10
+      references:
+        - PR.DS-2
+        - PR.DS-5
+        - PR.PT-4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: DSP-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: DSP-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: DSP-13
+      references:
+        - ID.SC-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: DSP-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: DSP-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: DSP-16
+      references:
+        - PR.DS-3
+        - PR.IP-6
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Data retention, archiving'.
+        'in accordance with applicable laws and regulations'.
+    - control_id: DSP-17
+      references:
+        - PR.DS-1
+        - PR.DS-2
+        - PR.DS-5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF:
+        'protect sensitive data throughout it's lifecycle'.
+    - control_id: DSP-18
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: DSP-19
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: GRC-01
+      references:
+        - ID.GV-1
+        - ID.GV-4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: GRC-02
+      references:
+        - ID.GV-4
+        - ID.RA-1
+        - ID.RA-2
+        - ID.RA-3
+        - ID.RA-4
+        - ID.RA-5
+        - ID.RA-6
+        - ID.RM-1
+        - ID.RM-2
+        - ID.RM-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'leadership-sponsored Enterprise Risk Management (ERM) program'.
+        'policies and procedures for identification, evaluation, ownership, treatment, and acceptance of privacy risks'.
+    - control_id: GRC-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: GRC-04
+      references:
+        - ID.GV-4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: GRC-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: GRC-06
+      references:
+        - ID.GV-2
+        - ID.AM-6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'planning, implementing, operating, assessing, and improving governance programs'.
+    - control_id: GRC-07
+      references:
+        - ID.GV-3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: HRS-01
+      references:
+        - ID.GV-1
+        - PR.IP-11
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures for background verification'.
+        'according to local laws, regulations, ethics, and contractual constraints and proportional to the data classification to be accessed, the business requirements, and acceptable risk'. 
+        'review and update the policies and procedures at least annually'.
+    - control_id: HRS-02
+      references:
+        - ID.GV-1
+        - PR.PT-2
+        - ID.AM-6
+        - PR.IP-5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures for defining allowances and conditions for the acceptable use of organizationally-owned or managed assets'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: HRS-03
+      references:
+        - ID.GV-1
+        - PR.DS-5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures that require unattended workspaces to not have openly visible confidential data'. 
+        'review and update the policies and procedures at least annually'.
+    - control_id: HRS-04
+      references:
+        - ID.GV-1
+        - PR.DS-1
+        - PR.DS-2
+        - PR.AC-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF:
+        'Document, approve, apply, evaluate and maintain policies and procedures'
+        'policies and procedures to protect information accessed, processed or stored at remote sites and locations'. 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: HRS-05
+      references:
+        - PR.DS-3
+        - PR.IP-11
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: HRS-06
+      references:
+        - PR.AT-5
+        - PR.IP-11
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: HRS-07
+      references:
+        - PR.IP-11
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: HRS-08
+      references:
+        - PR.AT-1
+        - PR.IP-11
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: HRS-09
+      references:
+        - ID.AM-6
+        - ID.GV-1
+        - ID.GV-2
+        - PR.AT-1
+        - PR.AT-2
+        - PR.AT-4
+        - PR.AT-5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-10
+      references:
+        - PR.IP-11
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: HRS-11
+      references:
+        - PR.AT-1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'regular training updates'.
+    - control_id: HRS-12
+      references:
+        - PR.AT-1
+        - PR.AT-2
+        - PR.AT-4
+        - PR.AT-5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: HRS-13
+      references:
+        - ID.AM-6
+        - PR.AT-1
+        - PR.AT-2
+        - PR.AT-4
+        - PR.AT-5
+        - ID.GV-1
+        - ID.GV-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'maintain awareness of compliance obligations'.
+        'maintain awareness of applicable legal, statutory, or regulatory compliance obligations'.
+    - control_id: IAM-01
+      references:
+        - ID.GV-1
+        - PR.AC-1
+        - PR.AC-4
+        - PR.AC-7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'document, approve, implement, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures for identity and access management'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: IAM-02
+      references:
+        - ID.GV-1
+        - PR.AC-1
+        - PR.AC-7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'document, approve, implement, apply, evaluate and maintain strong password policies and procedures'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: IAM-03
+      references:
+        - PR.AC-1
+        - PR.AC-6
+        - PR.AC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-04
+      references:
+        - PR.AC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-05
+      references:
+        - PR.AC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-06
+      references:
+        - PR.AC-1
+        - PR.PT-1
+        - PR.AC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-07
+      references:
+        - PR.AC-1
+        - PR.AC-4
+        - PR.IP-11
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: IAM-08
+      references:
+        - PR.AC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-09
+      references:
+        - PR.AC-1
+        - PR.AC-4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'the segregation of privileged access roles'.
+    - control_id: IAM-10
+      references:
+        - PR.AC-4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'ensure privileged access roles and rights are granted for a time limited period'.
+    - control_id: IAM-11
+      references:
+        - PR.AC-4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: IAM-12
+      references:
+        - PR.AC-4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: IAM-13
+      references:
+        - PR.AC-1
+        - PR.AC-6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'users are identifiable through unique IDs'.
+    - control_id: IAM-14
+      references:
+        - PR.AC-1
+        - PR.AC-6
+        - PR.AC-7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-15
+      references:
+        - PR.AC-1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-16
+      references:
+        - PR.AC-1
+        - PR.AC-4
+        - PR.AC-6
+        - PR.AC-7
+        - PR.PT-1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-01
+      references:
+        - ID.GV-1
+        - ID.AM-3
+        - PR.IP-2
+        - DE.AE-1
+        - PR.DS-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'b. Information processing interoperability
+        c. Application development portability'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: IPY-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: IPY-03
+      references:
+        - PR.DS-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'standardized network protocols'.
+    - control_id: IPY-04
+      references:
+        - PR.DS-1
+        - ID.SC-3
+        - PR.DS-3
+        - PR.IP-6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Agreements must include provisions specifying CSCs access to data upon contract termination'.
+    - control_id: IVS-01
+      references:
+        - ID.GV-1
+        - PR.IP-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'document, approve, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures for infrastructure and virtualization security'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: IVS-02
+      references:
+        - PR.DS-4
+        - ID.BE-5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: IVS-03
+      references:
+        - PR.AC-5
+        - PR.AC-7
+        - PR.PT-4
+        - DE.CM-1
+        - DE.CM-7
+        - PR.DS-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'restrict communications between environments to only authenticated and authorized connections, as justified by the business'.
+    - control_id: IVS-04
+      references:
+        - PR.IP-1
+        - PR.PT-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Harden host and guest OS, hypervisor or infrastructure control plane'.
+    - control_id: IVS-05
+      references:
+        - PR.DS-7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-06
+      references:
+        - PR.AC-4
+        - PR.AC-5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: IVS-07
+      references:
+        - PR.DS-2
+        - PR.PT-4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Such channels must include only up-to-date and approved protocols'.
+    - control_id: IVS-08
+      references:
+        - ID.RA-1
+        - ID.GV-4
+        - ID.RA-5
+        - ID.AM-1
+        - ID.AM-2
+        - ID.AM-3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-09
+      references:
+        - DE.AE-1
+        - DE.DP-1
+        - DE.CM-1
+        - DE.CM-7
+        - PR.AC-5
+        - RS.MI-2
+        - PR.DS-2
+        - RS.RP-1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-01
+      references:
+        - ID.GV-1
+        - ID.GV-3
+        - PR.PT-1
+        - PR.MA-1
+        - PR.MA-2
+        - DE.AE-3
+        - DE.AE-5
+        - DE.CM-1
+        - DE.CM-2
+        - DE.CM-3
+        - DE.CM-4
+        - DE.CM-5
+        - DE.CM-6
+        - DE.CM-7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'document, approve,  apply, evaluate and maintain policies and procedures'.
+        'policies and procedures for logging and monitoring'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: LOG-02
+      references:
+        - PR.AC-4
+        - PR.IP-4
+        - PR.IP-6
+        - PR.PT-1
+        - PR.DS-1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'retention of audit logs'.
+    - control_id: LOG-03
+      references:
+        - DE.AE-1
+        - DE.AE-2
+        - DE.AE-3
+        - DE.AE-5
+        - DE.CM-1
+        - DE.CM-2
+        - DE.CM-3
+        - DE.CM-4
+        - DE.CM-5
+        - DE.CM-6
+        - DE.CM-7
+        - DE.DP-1
+        - DE.DP-4
+        - DE.AE-4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'monitor security-related events within applications and the underlying infrastructure'.
+    - control_id: LOG-04
+      references:
+        - PR.AC-1
+        - PR.AC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-05
+      references:
+        - DE.AE-3
+        - PR.PT-1
+        - RS.AN-1
+        - RS.CO-1.
+        - DE.AE-1
+        - DE.AE-5
+        - DE.DP-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: LOG-07
+      references:
+        - ID.SC-3
+        - ID.SC-4
+        - PR.PT-1
+        - ID.GV-1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-08
+      references:
+        - PR.PT-1
+        - DE.AE-3
+        - DE.CM-1
+        - DE.CM-2
+        - DE.CM-3
+        - DE.CM-6
+        - DE.CM-7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-09
+      references:
+        - PR.AC-4
+        - PR.IP-4
+        - PR.IP-6
+        - PR.PT-1
+        - PR.DS-1
+        - PR.DS-6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-10
+      references:
+        - ID.GV-1
+        - PR.PT-1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: LOG-11
+      references:
+        - PR.PT-1
+        - DE.AE-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: LOG-12
+      references:
+        - PR.PT-1
+        - DE.CM-2
+        - PR.AC-2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-13
+      references:
+        - DE.DP-3
+        - DE.DP-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-01
+      references:
+        - ID.GV-1
+        - PR.IP-9
+        - PR.IP-10
+        - RS.CO-4
+        - RS.IM-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: SEF-02
+      references:
+        - ID.GV-1
+        - PR.IP-9
+        - DE.AE-5
+        - RS.CO-1
+        - RS.CO-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: SEF-03
+      references:
+        - RS.CO-1
+        - RS.CO-4
+        - ID.AM-6
+        - ID.GV-2
+        - ID.SC-5
+        - PR.IP-9
+        - PR.IP10
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-04
+      references:
+        - PR.IP-9
+        - PR.IP-10
+        - ID.SC-5
+        - RS.IM-1
+        - RS.IM-2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'at planned intervals or upon significant organizational or environmental changes'.
+    - control_id: SEF-05
+      references:
+        - RS.CO-2
+        - RS.CO-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: SEF-06
+      references:
+        - DE.AE-1
+        - DE.AE-2
+        - DE.AE-4
+        - RS.RP-1
+        - RS.AN-2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-07
+      references:
+        - RS.CO-2
+        - RS.CO-3
+        - RS.CO-4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'assumed security breaches'.
+        'relevant supply chain breaches, as per applicable SLAs, laws and regulations'.
+    - control_id: SEF-08
+      references:
+        - ID.GV-2
+        - RS.CO-3
+        - RS.CO-4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: STA-01
+      references:
+        - ID.GV-1
+        - ID.BE-1
+        - ID.AM-6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures for the application of the Shared Security Responsibility Model (SSRM) within the organization'. 
+        'Review and update the policies and procedures at least annually'.
+    - control_id: STA-02
+      references:
+        - ID.SC-1
+        - ID.SC-2
+        - ID.SC-3
+        - ID.GV-2
+        - ID.BE-1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-03
+      references:
+        - ID.SC-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: STA-04
+      references:
+        - ID.AM-6
+        - ID.BE-1
+        - ID.GV-2
+        - ID.SC-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: STA-05
+      references:
+        - ID.SC-1
+        - ID.SC-2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: STA-06
+      references:
+        - ID.SC-1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: STA-07
+      references:
+        - ID.SC-1
+        - ID.SC-2
+        - ID.AM-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-08
+      references:
+        - ID.SC-2
+        - ID.SC-3
+        - ID.SC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-09
+      references:
+        - ID.SC-3
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        '(itemized specific subjects in bullets to be covered in contractual agreement should be used to close the gap)'.
+    - control_id: STA-10
+      references:
+        - ID.SC-3
+        - ID.SC-4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: STA-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: STA-12
+      references:
+        - ID.SC-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: STA-13
+      references:
+        - ID.SC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-14
+      references:
+        - ID.SC-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-01
+      references:
+        - ID.GV-1
+        - PR.IP-12
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures to identify, report and prioritize the remediation of vulnerabilities'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: TVM-02
+      references:
+        - ID.GV-1
+        - DE.CM-4
+        - DE.CM-5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain policies and procedures'. 
+        'policies and procedures to protect against malware on managed assets'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: TVM-03
+      references:
+        - RS.AN-5
+        - PR.IP-12
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'scheduled and emergency responses to vulnerability identifications, based on the identified risk (gap due to reference of risk-based remediation scheduling)'.
+    - control_id: TVM-04
+      references:
+        - DE.DP-5
+        - PR.IP-12
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'on a weekly, or more frequent basis'.
+    - control_id: TVM-05
+      references:
+        - DE.DP-5
+        - PR.IP-12
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: TVM-06
+      references:
+        - ID.RA-1
+        - ID.RA-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: TVM-07
+      references:
+        - ID.RA-1
+        - DE.CM-8
+        - PR.IP-12
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'at least monthly'.
+    - control_id: TVM-08
+      references:
+        - ID.RA-5
+        - ID.RA-6
+        - PR.IP-12
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'using an industry recognized framework'.
+    - control_id: TVM-09
+      references:
+        - RS.MI-3
+        - PR.IP-12
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'reporting vulnerability identification and remediation activities that includes stakeholder notification'.
+    - control_id: TVM-10
+      references:
+        - PR.IP-12
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: UEM-01
+      references:
+        - ID.GV-1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in the CSF: 
+        'Document, approve, apply, evaluate and maintain policies and procedures'.
+        'policies and procedures for all endpoints'.
+        'Review and update the policies and procedures at least annually'.
+    - control_id: UEM-02
+      references:
+        - DE.CM-7
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: UEM-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: UEM-04
+      references:
+        - ID.AM-1
+        - ID.AM-2
+        - ID.AM-4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-05
+      references:
+        - ID.GV-1
+        - ID.GV-4
+        - ID.RM-1
+        - PR.AC-2
+        - PR.AC-3
+        - PR.AC-4
+        - PR.AC-7
+        - PR.DS-1
+        - PR.DS-2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-06
+      references:
+        - PR.AC-2
+        - PR.AC-7
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: UEM-07
+      references:
+        - PR.IP-3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: UEM-08
+      references:
+        - PR.DS-1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: UEM-09
+      references:
+        - DE.CM-4
+        - DE.CM-5
+        - DE.CM-7
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: UEM-10
+      references:
+        - DE.CM-1
+        - DE.CM-4
+        - DE.CM-5
+        - DE.CM-7
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: UEM-11
+      references:
+        - PR.DS-5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full CCM control specification is missing from the CSF and has to be used to close the gap.
+    - control_id: UEM-13
+      references:
+        - PR.IP-6
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective.
+    - control_id: UEM-14
+      references:
+        - ID.AM-6
+        - ID.SC-2
+        - ID.SC-3
+        - ID.SC-4
+        - ID.SC-5
+        - PR.AT-3
+        - PR.AC-1
+        - PR.AC-2
+        - PR.AC-3
+        - PR.AC-4
+        - PR.AC-6
+        - PR.AC-7
+      gap_level: No Gap
+      addendum: N/A

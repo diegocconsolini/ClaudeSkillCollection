@@ -1,0 +1,3470 @@
+---
+catalog:
+  uuid: 964e16fe-9a2f-47fe-86a7-c44e194850ab
+  metadata:
+    title: Cloud Controls Matrix Lite
+    published: '2024-06-03T17:19:24+00:00'
+    last-modified: '2024-06-03T17:19:24+00:00'
+    version: 4.0.12
+    oscal-version: 1.0.1
+    links:
+      - rel: reference
+        href: https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4/
+    roles:
+      - id: creator
+        title: Document creator
+      - id: contact
+        title: Contact
+    parties:
+      - type: organization
+        uuid: 1c353f40-c1ba-4730-80d7-1e6efa245dfe
+        name: Cloud Security Alliance
+        email-addresses:
+          - research@cloudsecurityalliance.org
+    responsible-parties:
+      - role-id: creator
+        party-uuids:
+          - 1c353f40-c1ba-4730-80d7-1e6efa245dfe
+      - role-id: contact
+        party-uuids:
+          - 1c353f40-c1ba-4730-80d7-1e6efa245dfe
+  groups:
+    - id: A_A
+      class: family
+      title: Audit & Assurance
+      props:
+        - name: label
+          value: A&A
+      controls:
+        - id: A_A-02
+          class: control
+          title: Independent Assessments
+          props:
+            - name: label
+              value: A&A-02
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: A_A-02_stm
+              name: statement
+              prose: |
+                Conduct independent audit and assurance assessments according to
+                relevant standards at least annually.
+            - id: A_A-02_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: A_A-02.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: A&A-02.1
+              parts:
+                - id: A_A-02.1_stm
+                  name: statement
+                  prose: |+
+                    Are independent audit and assurance assessments conducted according to relevant
+                    standards at least annually?
+
+        - id: A_A-03
+          class: control
+          title: Risk Based Planning Assessment
+          props:
+            - name: label
+              value: A&A-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: A_A-03_stm
+              name: statement
+              prose: |
+                Perform independent audit and assurance assessments according to
+                risk-based plans and policies.
+            - id: A_A-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: A_A-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: A&A-03.1
+              parts:
+                - id: A_A-03.1_stm
+                  name: statement
+                  prose: |+
+                    Are independent audit and assurance assessments performed according to risk-based
+                    plans and policies?
+
+        - id: A_A-04
+          class: control
+          title: Requirements Compliance
+          props:
+            - name: label
+              value: A&A-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: A_A-04_stm
+              name: statement
+              prose: |
+                Verify compliance with all relevant standards, regulations, legal/contractual,
+                and statutory requirements applicable to the audit.
+            - id: A_A-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: A_A-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: A&A-04.1
+              parts:
+                - id: A_A-04.1_stm
+                  name: statement
+                  prose: |+
+                    Is compliance verified regarding all relevant standards, regulations, legal/contractual,
+                    and statutory requirements applicable to the audit?
+
+        - id: A_A-06
+          class: control
+          title: Remediation
+          props:
+            - name: label
+              value: A&A-06
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: A_A-06_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                a risk-based corrective action plan to remediate audit findings, review and
+                report remediation status to relevant stakeholders.
+            - id: A_A-06_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: A_A-06.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: A&A-06.1
+              parts:
+                - id: A_A-06.1_stm
+                  name: statement
+                  prose: |+
+                    Is a risk-based corrective action plan to remediate audit findings established,
+                    documented, approved, communicated, applied, evaluated, and maintained?
+
+            - id: A_A-06.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: A&A-06.2
+              parts:
+                - id: A_A-06.2_stm
+                  name: statement
+                  prose: |+
+                    Is the remediation status of audit findings reviewed and reported to relevant
+                    stakeholders?
+
+    - id: AIS
+      class: family
+      title: Application & Interface Security
+      props:
+        - name: label
+          value: AIS
+      controls:
+        - id: AIS-02
+          class: control
+          title: Application Security Baseline Requirements
+          props:
+            - name: label
+              value: AIS-02
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: AIS-02_stm
+              name: statement
+              prose: |
+                Establish, document and maintain baseline requirements for securing
+                different applications.
+            - id: AIS-02_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: AIS-02.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: AIS-02.1
+              parts:
+                - id: AIS-02.1_stm
+                  name: statement
+                  prose: |+
+                    Are baseline requirements to secure different applications established, documented,
+                    and maintained?
+
+        - id: AIS-04
+          class: control
+          title: Secure Application Design and Development
+          props:
+            - name: label
+              value: AIS-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: AIS-04_stm
+              name: statement
+              prose: |
+                Define and implement a SDLC process for application design, development,
+                deployment, and operation in accordance with security requirements defined by
+                the organization.
+            - id: AIS-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: AIS-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: AIS-04.1
+              parts:
+                - id: AIS-04.1_stm
+                  name: statement
+                  prose: |+
+                    Is an SDLC process defined and implemented for application design, development,
+                    deployment, and operation per organizationally designed security requirements?
+
+        - id: AIS-06
+          class: control
+          title: Automated Secure Application Deployment
+          props:
+            - name: label
+              value: AIS-06
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: AIS-06_stm
+              name: statement
+              prose: |
+                Establish and implement strategies and capabilities for secure, standardized,
+                and compliant application deployment. Automate where possible.
+            - id: AIS-06_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: AIS-06.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: AIS-06.1
+              parts:
+                - id: AIS-06.1_stm
+                  name: statement
+                  prose: |+
+                    Are strategies and capabilities established and implemented to deploy application
+                    code in a secure, standardized, and compliant manner?
+
+            - id: AIS-06.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: AIS-06.2
+              parts:
+                - id: AIS-06.2_stm
+                  name: statement
+                  prose: "Is the deployment and integration of application code automated
+                    where possible?\n\n"
+        - id: AIS-07
+          class: control
+          title: Application Vulnerability Remediation
+          props:
+            - name: label
+              value: AIS-07
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: AIS-07_stm
+              name: statement
+              prose: |
+                Define and implement a process to remediate application security
+                vulnerabilities, automating remediation when possible.
+            - id: AIS-07_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: AIS-07.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: AIS-07.1
+              parts:
+                - id: AIS-07.1_stm
+                  name: statement
+                  prose: "Are application security vulnerabilities remediated following defined
+                    processes?\n\n"
+            - id: AIS-07.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: AIS-07.2
+              parts:
+                - id: AIS-07.2_stm
+                  name: statement
+                  prose: |+
+                    Is the remediation of application security vulnerabilities automated when
+                    possible?
+
+    - id: BCR
+      class: family
+      title: Business Continuity Management and Operational Resilience
+      props:
+        - name: label
+          value: BCR
+      controls:
+        - id: BCR-01
+          class: control
+          title: Business Continuity Management Policy and Procedures
+          props:
+            - name: label
+              value: BCR-01
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: BCR-01_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                business continuity management and operational resilience policies and procedures.
+                Review and update the policies and procedures at least annually.
+            - id: BCR-01_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: BCR-01.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: BCR-01.1
+              parts:
+                - id: BCR-01.1_stm
+                  name: statement
+                  prose: |+
+                    Are business continuity management and operational resilience policies and
+                    procedures established, documented, approved, communicated, applied, evaluated,
+                    and maintained?
+
+            - id: BCR-01.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: BCR-01.2
+              parts:
+                - id: BCR-01.2_stm
+                  name: statement
+                  prose: "Are the policies and procedures reviewed and updated at least annually?\n\n"
+        - id: BCR-02
+          class: control
+          title: Risk Assessment and Impact Analysis
+          props:
+            - name: label
+              value: BCR-02
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: BCR-02_stm
+              name: statement
+              prose: |
+                Determine the impact of business disruptions and risks to establish
+                criteria for developing business continuity and operational resilience strategies
+                and capabilities.
+            - id: BCR-02_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: BCR-02.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: BCR-02.1
+              parts:
+                - id: BCR-02.1_stm
+                  name: statement
+                  prose: |+
+                    Are criteria for developing business continuity and operational resiliency
+                    strategies and capabilities established based on business disruption and risk
+                    impacts?
+
+        - id: BCR-03
+          class: control
+          title: Business Continuity Strategy
+          props:
+            - name: label
+              value: BCR-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: BCR-03_stm
+              name: statement
+              prose: |
+                Establish strategies to reduce the impact of, withstand, and recover
+                from business disruptions within risk appetite.
+            - id: BCR-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: BCR-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: BCR-03.1
+              parts:
+                - id: BCR-03.1_stm
+                  name: statement
+                  prose: |+
+                    Are strategies developed to reduce the impact of, withstand, and recover from
+                    business disruptions in accordance with risk appetite?
+
+        - id: BCR-08
+          class: control
+          title: Backup
+          props:
+            - name: label
+              value: BCR-08
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: BCR-08_stm
+              name: statement
+              prose: |
+                Periodically backup data stored in the cloud. Ensure the confidentiality,
+                integrity and availability of the backup, and verify data restoration from backup
+                for resiliency.
+            - id: BCR-08_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: BCR-08.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: BCR-08.1
+              parts:
+                - id: BCR-08.1_stm
+                  name: statement
+                  prose: "Is cloud data periodically backed up?\n\n"
+            - id: BCR-08.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: BCR-08.2
+              parts:
+                - id: BCR-08.2_stm
+                  name: statement
+                  prose: "Is the confidentiality, integrity, and availability of backup data
+                    ensured?\n\n"
+            - id: BCR-08.3
+              class: caiq-question
+              title: CAI Question 3
+              props:
+                - name: label
+                  value: BCR-08.3
+              parts:
+                - id: BCR-08.3_stm
+                  name: statement
+                  prose: "Can backups be restored appropriately for resiliency?\n\n"
+        - id: BCR-09
+          class: control
+          title: Disaster Response Plan
+          props:
+            - name: label
+              value: BCR-09
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: BCR-09_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                a disaster response plan to recover from natural and man-made disasters. Update
+                the plan at least annually or upon significant changes.
+            - id: BCR-09_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: BCR-09.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: BCR-09.1
+              parts:
+                - id: BCR-09.1_stm
+                  name: statement
+                  prose: |+
+                    Is a disaster response plan established, documented, approved, applied, evaluated,
+                    and maintained to ensure recovery from natural and man-made disasters?
+
+            - id: BCR-09.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: BCR-09.2
+              parts:
+                - id: BCR-09.2_stm
+                  name: statement
+                  prose: |+
+                    Is the disaster response plan updated at least annually, and when significant
+                    changes occur?
+
+    - id: CCC
+      class: family
+      title: Change Control and Configuration Management
+      props:
+        - name: label
+          value: CCC
+      controls:
+        - id: CCC-01
+          class: control
+          title: Change Management Policy and Procedures
+          props:
+            - name: label
+              value: CCC-01
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CCC-01_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures for managing the risks associated with applying changes
+                to organization assets, including application, systems, infrastructure, configuration,
+                etc., regardless of whether the assets are managed internally or externally
+                (i.e., outsourced). Review and update the policies and procedures at least annually.
+            - id: CCC-01_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CCC-01.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CCC-01.1
+              parts:
+                - id: CCC-01.1_stm
+                  name: statement
+                  prose: |+
+                    Are risk management policies and procedures associated with changing organizational
+                    assets including applications, systems, infrastructure, configuration, etc., established,
+                    documented, approved, communicated, applied, evaluated and maintained (regardless
+                    of whether asset management is internal or external)?
+
+            - id: CCC-01.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: CCC-01.2
+              parts:
+                - id: CCC-01.2_stm
+                  name: statement
+                  prose: "Are the policies and procedures reviewed and updated at least annually?\n\n"
+        - id: CCC-02
+          class: control
+          title: Quality Testing
+          props:
+            - name: label
+              value: CCC-02
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CCC-02_stm
+              name: statement
+              prose: |
+                Follow a defined quality change control, approval and testing process
+                with established baselines, testing, and release standards.
+            - id: CCC-02_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CCC-02.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CCC-02.1
+              parts:
+                - id: CCC-02.1_stm
+                  name: statement
+                  prose: |+
+                    Is a defined quality change control, approval and testing process (with established
+                    baselines, testing, and release standards) followed?
+
+        - id: CCC-04
+          class: control
+          title: Unauthorized Change Protection
+          props:
+            - name: label
+              value: CCC-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CCC-04_stm
+              name: statement
+              prose: |
+                Restrict the unauthorized addition, removal, update, and management
+                of organization assets.
+            - id: CCC-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CCC-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CCC-04.1
+              parts:
+                - id: CCC-04.1_stm
+                  name: statement
+                  prose: |+
+                    Is the unauthorized addition, removal, update, and management of organization
+                    assets restricted?
+
+        - id: CCC-05
+          class: control
+          title: Change Agreements
+          props:
+            - name: label
+              value: CCC-05
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CCC-05_stm
+              name: statement
+              prose: |
+                Include provisions limiting changes directly impacting CSCs owned
+                environments/tenants to explicitly authorized requests within service level
+                agreements between CSPs and CSCs.
+            - id: CCC-05_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CCC-05.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CCC-05.1
+              parts:
+                - id: CCC-05.1_stm
+                  name: statement
+                  prose: |+
+                    Are provisions to limit changes that directly impact CSC-owned environments
+                    and require tenants to authorize requests explicitly included within the service
+                    level agreements (SLAs) between CSPs and CSCs?
+
+        - id: CCC-06
+          class: control
+          title: Change Management Baseline
+          props:
+            - name: label
+              value: CCC-06
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CCC-06_stm
+              name: statement
+              prose: |
+                Establish change management baselines for all relevant authorized
+                changes on organization assets.
+            - id: CCC-06_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CCC-06.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CCC-06.1
+              parts:
+                - id: CCC-06.1_stm
+                  name: statement
+                  prose: |+
+                    Are change management baselines established for all relevant authorized changes
+                    on organizational assets?
+
+        - id: CCC-07
+          class: control
+          title: Detection of Baseline Deviation
+          props:
+            - name: label
+              value: CCC-07
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CCC-07_stm
+              name: statement
+              prose: |
+                Implement detection measures with proactive notification in case
+                of changes deviating from the established baseline.
+            - id: CCC-07_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CCC-07.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CCC-07.1
+              parts:
+                - id: CCC-07.1_stm
+                  name: statement
+                  prose: |+
+                    Are detection measures implemented with proactive notification if changes
+                    deviate from established baselines?
+
+        - id: CCC-09
+          class: control
+          title: Change Restoration
+          props:
+            - name: label
+              value: CCC-09
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CCC-09_stm
+              name: statement
+              prose: |
+                Define and implement a process to proactively roll back changes to
+                a previous known good state in case of errors or security concerns.
+            - id: CCC-09_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CCC-09.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CCC-09.1
+              parts:
+                - id: CCC-09.1_stm
+                  name: statement
+                  prose: |+
+                    Is a process to proactively roll back changes to a previously known "good
+                    state" defined and implemented in case of errors or security concerns?
+
+    - id: CEK
+      class: family
+      title: Cryptography, Encryption & Key Management
+      props:
+        - name: label
+          value: CEK
+      controls:
+        - id: CEK-01
+          class: control
+          title: Encryption and Key Management Policy and Procedures
+          props:
+            - name: label
+              value: CEK-01
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CEK-01_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures for Cryptography, Encryption and Key Management. Review
+                and update the policies and procedures at least annually.
+            - id: CEK-01_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CEK-01.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CEK-01.1
+              parts:
+                - id: CEK-01.1_stm
+                  name: statement
+                  prose: |+
+                    Are cryptography, encryption, and key management policies and procedures established,
+                    documented, approved, communicated, applied, evaluated, and maintained?
+
+            - id: CEK-01.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: CEK-01.2
+              parts:
+                - id: CEK-01.2_stm
+                  name: statement
+                  prose: |+
+                    Are cryptography, encryption, and key management policies and procedures reviewed
+                    and updated at least annually?
+
+        - id: CEK-02
+          class: control
+          title: CEK Roles and Responsibilities
+          props:
+            - name: label
+              value: CEK-02
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CEK-02_stm
+              name: statement
+              prose: |
+                Define and implement cryptographic, encryption and key management
+                roles and responsibilities.
+            - id: CEK-02_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CEK-02.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CEK-02.1
+              parts:
+                - id: CEK-02.1_stm
+                  name: statement
+                  prose: |+
+                    Are cryptography, encryption, and key management roles and responsibilities
+                    defined and implemented?
+
+        - id: CEK-03
+          class: control
+          title: Data Encryption
+          props:
+            - name: label
+              value: CEK-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CEK-03_stm
+              name: statement
+              prose: |
+                Provide cryptographic protection to data at-rest and in-transit,
+                using cryptographic libraries certified to approved standards.
+            - id: CEK-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CEK-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CEK-03.1
+              parts:
+                - id: CEK-03.1_stm
+                  name: statement
+                  prose: |+
+                    Are data at-rest and in-transit cryptographically protected using cryptographic
+                    libraries certified to approved standards?
+
+        - id: CEK-04
+          class: control
+          title: Encryption Algorithm
+          props:
+            - name: label
+              value: CEK-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CEK-04_stm
+              name: statement
+              prose: |
+                Use encryption algorithms that are appropriate for data protection,
+                considering the classification of data, associated risks, and usability of the
+                encryption technology.
+            - id: CEK-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CEK-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CEK-04.1
+              parts:
+                - id: CEK-04.1_stm
+                  name: statement
+                  prose: |+
+                    Are appropriate data protection encryption algorithms used that consider data
+                    classification, associated risks, and encryption technology usability?
+
+        - id: CEK-05
+          class: control
+          title: Encryption Change Management
+          props:
+            - name: label
+              value: CEK-05
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CEK-05_stm
+              name: statement
+              prose: |
+                Establish a standard change management procedure, to accommodate
+                changes from internal and external sources, for review, approval, implementation
+                and communication of cryptographic, encryption and key management technology
+                changes.
+            - id: CEK-05_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CEK-05.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CEK-05.1
+              parts:
+                - id: CEK-05.1_stm
+                  name: statement
+                  prose: |+
+                    Are standard change management procedures established to review, approve,
+                    implement and communicate cryptography, encryption, and key management technology
+                    changes that accommodate internal and external sources?
+
+        - id: CEK-10
+          class: control
+          title: Key Generation
+          props:
+            - name: label
+              value: CEK-10
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CEK-10_stm
+              name: statement
+              prose: |
+                Generate Cryptographic keys using industry accepted cryptographic
+                libraries specifying the algorithm strength and the random number generator
+                used.
+            - id: CEK-10_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CEK-10.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CEK-10.1
+              parts:
+                - id: CEK-10.1_stm
+                  name: statement
+                  prose: |+
+                    Are cryptographic keys generated using industry-accepted and approved cryptographic
+                    libraries that specify algorithm strength and random number generator specifications?
+
+        - id: CEK-12
+          class: control
+          title: Key Rotation
+          props:
+            - name: label
+              value: CEK-12
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CEK-12_stm
+              name: statement
+              prose: |
+                Rotate cryptographic keys in accordance with the calculated cryptoperiod,
+                which includes provisions for considering the risk of information disclosure
+                and legal and regulatory requirements.
+            - id: CEK-12_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CEK-12.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CEK-12.1
+              parts:
+                - id: CEK-12.1_stm
+                  name: statement
+                  prose: |+
+                    Are cryptographic keys rotated based on a cryptoperiod calculated while considering
+                    information disclosure risks and legal and regulatory requirements?
+
+        - id: CEK-13
+          class: control
+          title: Key Revocation
+          props:
+            - name: label
+              value: CEK-13
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CEK-13_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures to revoke and remove cryptographic keys prior to the end of its established
+                cryptoperiod, when a key is compromised, or an entity is no longer part of the
+                organization, which include provisions for legal and regulatory requirements.
+            - id: CEK-13_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CEK-13.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CEK-13.1
+              parts:
+                - id: CEK-13.1_stm
+                  name: statement
+                  prose: |+
+                    Are cryptographic keys revoked and removed before the end of the established
+                    cryptoperiod (when a key is compromised, or an entity is no longer part of the
+                    organization) per defined, implemented, and evaluated processes, procedures, and
+                    technical measures to include legal and regulatory requirement provisions?
+
+        - id: CEK-14
+          class: control
+          title: Key Destruction
+          props:
+            - name: label
+              value: CEK-14
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: CEK-14_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures to destroy keys stored outside a secure environment and revoke keys
+                stored in Hardware Security Modules (HSMs) when they are no longer needed, which
+                include provisions for legal and regulatory requirements.
+            - id: CEK-14_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: CEK-14.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: CEK-14.1
+              parts:
+                - id: CEK-14.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures and technical measures to destroy unneeded keys
+                    defined, implemented and evaluated to address key destruction outside secure environments,
+                    revocation of keys stored in hardware security modules (HSMs), and include applicable
+                    legal and regulatory requirement provisions?
+
+    - id: DCS
+      class: family
+      title: Datacenter Security
+      props:
+        - name: label
+          value: DCS
+      controls:
+        - id: DCS-03
+          class: control
+          title: Secure Area Policy and Procedures
+          props:
+            - name: label
+              value: DCS-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DCS-03_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures for maintaining a safe and secure working environment
+                in offices, rooms, and facilities. Review and update the policies and procedures
+                at least annually.
+            - id: DCS-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DCS-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DCS-03.1
+              parts:
+                - id: DCS-03.1_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures for maintaining a safe and secure working environment
+                    (in offices, rooms, and facilities) established, documented, approved, communicated,
+                    enforced, and maintained?
+
+            - id: DCS-03.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: DCS-03.2
+              parts:
+                - id: DCS-03.2_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures for maintaining safe, secure working environments
+                    (e.g., offices, rooms) reviewed and updated at least annually?
+
+        - id: DCS-05
+          class: control
+          title: Assets Classification
+          props:
+            - name: label
+              value: DCS-05
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DCS-05_stm
+              name: statement
+              prose: |
+                Classify and document the physical, and logical assets (e.g., applications)
+                based on the organizational business risk.
+            - id: DCS-05_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DCS-05.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DCS-05.1
+              parts:
+                - id: DCS-05.1_stm
+                  name: statement
+                  prose: |+
+                    Is the classification and documentation of physical and logical assets based
+                    on the organizational business risk?
+
+        - id: DCS-06
+          class: control
+          title: Assets Cataloguing and Tracking
+          props:
+            - name: label
+              value: DCS-06
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DCS-06_stm
+              name: statement
+              prose: |
+                Catalogue and track all relevant physical and logical assets located
+                at all of the CSP's sites within a secured system.
+            - id: DCS-06_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DCS-06.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DCS-06.1
+              parts:
+                - id: DCS-06.1_stm
+                  name: statement
+                  prose: |+
+                    Are all relevant physical and logical assets at all CSP sites cataloged and
+                    tracked within a secured system?
+
+    - id: DSP
+      class: family
+      title: Data Security and Privacy Lifecycle Management
+      props:
+        - name: label
+          value: DSP
+      controls:
+        - id: DSP-01
+          class: control
+          title: Security and Privacy Policy and Procedures
+          props:
+            - name: label
+              value: DSP-01
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-01_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures for the classification, protection and handling of data
+                throughout its lifecycle, and according to all applicable laws and regulations,
+                standards, and risk level. Review and update the policies and procedures at
+                least annually.
+            - id: DSP-01_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-01.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-01.1
+              parts:
+                - id: DSP-01.1_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures established, documented, approved, communicated,
+                    enforced, evaluated, and maintained for the classification, protection, and handling
+                    of data throughout its lifecycle according to all applicable laws and regulations,
+                    standards, and risk level?
+
+            - id: DSP-01.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: DSP-01.2
+              parts:
+                - id: DSP-01.2_stm
+                  name: statement
+                  prose: |+
+                    Are data security and privacy policies and procedures reviewed and updated
+                    at least annually?
+
+        - id: DSP-03
+          class: control
+          title: Data Inventory
+          props:
+            - name: label
+              value: DSP-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-03_stm
+              name: statement
+              prose: |
+                Create and maintain a data inventory, at least for any sensitive
+                data and personal data.
+            - id: DSP-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-03.1
+              parts:
+                - id: DSP-03.1_stm
+                  name: statement
+                  prose: |+
+                    Is a data inventory created and maintained for sensitive and personal information
+                    (at a minimum)?
+
+        - id: DSP-04
+          class: control
+          title: Data Classification
+          props:
+            - name: label
+              value: DSP-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-04_stm
+              name: statement
+              prose: 'Classify data according to its type and sensitivity level.
+
+                '
+            - id: DSP-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-04.1
+              parts:
+                - id: DSP-04.1_stm
+                  name: statement
+                  prose: "Is data classified according to type and sensitivity levels?\n\n"
+        - id: DSP-05
+          class: control
+          title: Data Flow Documentation
+          props:
+            - name: label
+              value: DSP-05
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-05_stm
+              name: statement
+              prose: |
+                Create data flow documentation to identify what data is processed,
+                stored or transmitted where. Review data flow documentation at defined intervals,
+                at least annually, and after any change.
+            - id: DSP-05_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-05.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-05.1
+              parts:
+                - id: DSP-05.1_stm
+                  name: statement
+                  prose: |+
+                    Is data flow documentation created to identify what data is processed and
+                    where it is stored and transmitted?
+
+            - id: DSP-05.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: DSP-05.2
+              parts:
+                - id: DSP-05.2_stm
+                  name: statement
+                  prose: |+
+                    Is data flow documentation reviewed at defined intervals, at least annually,
+                    and after any change?
+
+        - id: DSP-06
+          class: control
+          title: Data Ownership and Stewardship
+          props:
+            - name: label
+              value: DSP-06
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-06_stm
+              name: statement
+              prose: |
+                Document ownership and stewardship of all relevant documented personal
+                and sensitive data. Perform review at least annually.
+            - id: DSP-06_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-06.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-06.1
+              parts:
+                - id: DSP-06.1_stm
+                  name: statement
+                  prose: |+
+                    Is the ownership and stewardship of all relevant personal and sensitive data
+                    documented?
+
+            - id: DSP-06.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: DSP-06.2
+              parts:
+                - id: DSP-06.2_stm
+                  name: statement
+                  prose: "Is data ownership and stewardship documentation reviewed at least
+                    annually?\n\n"
+        - id: DSP-07
+          class: control
+          title: Data Protection by Design and Default
+          props:
+            - name: label
+              value: DSP-07
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-07_stm
+              name: statement
+              prose: |
+                Develop systems, products, and business practices based upon a principle
+                of security by design and industry best practices.
+            - id: DSP-07_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-07.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-07.1
+              parts:
+                - id: DSP-07.1_stm
+                  name: statement
+                  prose: |+
+                    Are systems, products, and business practices based on security principles
+                    by design and per industry best practices?
+
+        - id: DSP-08
+          class: control
+          title: Data Privacy by Design and Default
+          props:
+            - name: label
+              value: DSP-08
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-08_stm
+              name: statement
+              prose: |
+                Develop systems, products, and business practices based upon a principle
+                of privacy by design and industry best practices. Ensure that systems' privacy
+                settings are configured by default, according to all applicable laws and regulations.
+            - id: DSP-08_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-08.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-08.1
+              parts:
+                - id: DSP-08.1_stm
+                  name: statement
+                  prose: |+
+                    Are systems, products, and business practices based on privacy principles
+                    by design and according to industry best practices?
+
+            - id: DSP-08.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: DSP-08.2
+              parts:
+                - id: DSP-08.2_stm
+                  name: statement
+                  prose: |+
+                    Are systems' privacy settings configured by default and according to all applicable
+                    laws and regulations?
+
+        - id: DSP-10
+          class: control
+          title: Sensitive Data Transfer
+          props:
+            - name: label
+              value: DSP-10
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-10_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures that ensure any transfer of personal or sensitive data is protected
+                from unauthorized access and only processed within scope as permitted by the
+                respective laws and regulations.
+            - id: DSP-10_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-10.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-10.1
+              parts:
+                - id: DSP-10.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented, and
+                    evaluated to ensure any transfer of personal or sensitive data is protected from
+                    unauthorized access and only processed within scope (as permitted by respective
+                    laws and regulations)?
+
+        - id: DSP-11
+          class: control
+          title: Personal Data Access, Reversal, Rectification and Deletion
+          props:
+            - name: label
+              value: DSP-11
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-11_stm
+              name: statement
+              prose: |
+                Define and implement, processes, procedures and technical measures
+                to enable data subjects to request access to, modification, or deletion of their
+                personal data, according to any applicable laws and regulations.
+            - id: DSP-11_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-11.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-11.1
+              parts:
+                - id: DSP-11.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented, and
+                    evaluated to enable data subjects to request access to, modify, or delete personal
+                    data (per applicable laws and regulations)?
+
+        - id: DSP-12
+          class: control
+          title: Limitation of Purpose in Personal Data Processing
+          props:
+            - name: label
+              value: DSP-12
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-12_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures to ensure that personal data is processed according to any applicable
+                laws and regulations and for the purposes declared to the data subject.
+            - id: DSP-12_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-12.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-12.1
+              parts:
+                - id: DSP-12.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented, and
+                    evaluated to ensure personal data is processed (per applicable laws and regulations
+                    and for the purposes declared to the data subject)?
+
+        - id: DSP-13
+          class: control
+          title: Personal Data Sub-processing
+          props:
+            - name: label
+              value: DSP-13
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-13_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures for the transfer and sub-processing of personal data within the service
+                supply chain, according to any applicable laws and regulations.
+            - id: DSP-13_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-13.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-13.1
+              parts:
+                - id: DSP-13.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented, and
+                    evaluated for the transfer and sub-processing of personal data within the service
+                    supply chain (according to any applicable laws and regulations)?
+
+        - id: DSP-14
+          class: control
+          title: Disclosure of Data Sub-processors
+          props:
+            - name: label
+              value: DSP-14
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-14_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures to disclose the details of any personal or sensitive data access by
+                sub-processors to the data owner prior to initiation of that processing.
+            - id: DSP-14_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-14.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-14.1
+              parts:
+                - id: DSP-14.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented, and
+                    evaluated to disclose details to the data owner of any personal or sensitive data
+                    access by sub-processors before processing initiation?
+
+        - id: DSP-16
+          class: control
+          title: Data Retention and Deletion
+          props:
+            - name: label
+              value: DSP-16
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-16_stm
+              name: statement
+              prose: |
+                Data retention, archiving and deletion is managed in accordance with
+                business requirements, applicable laws and regulations.
+            - id: DSP-16_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-16.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-16.1
+              parts:
+                - id: DSP-16.1_stm
+                  name: statement
+                  prose: |+
+                    Do data retention, archiving, and deletion practices follow business requirements,
+                    applicable laws, and regulations?
+
+        - id: DSP-17
+          class: control
+          title: Sensitive Data Protection
+          props:
+            - name: label
+              value: DSP-17
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-17_stm
+              name: statement
+              prose: |
+                Define and implement, processes, procedures and technical measures
+                to protect sensitive data throughout it's lifecycle.
+            - id: DSP-17_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-17.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-17.1
+              parts:
+                - id: DSP-17.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined and implemented
+                    to protect sensitive data throughout its lifecycle?
+
+        - id: DSP-19
+          class: control
+          title: Data Location
+          props:
+            - name: label
+              value: DSP-19
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: DSP-19_stm
+              name: statement
+              prose: |
+                Define and implement, processes, procedures and technical measures
+                to specify and document the physical locations of data, including any locations
+                in which data is processed or backed up.
+            - id: DSP-19_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: DSP-19.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: DSP-19.1
+              parts:
+                - id: DSP-19.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined and implemented
+                    to specify and document physical data locations, including locales where data
+                    is processed or backed up?
+
+    - id: GRC
+      class: family
+      title: Governance, Risk and Compliance
+      props:
+        - name: label
+          value: GRC
+      controls:
+        - id: GRC-01
+          class: control
+          title: Governance Program Policy and Procedures
+          props:
+            - name: label
+              value: GRC-01
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: GRC-01_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures for an information governance program, which is sponsored
+                by the leadership of the organization. Review and update the policies and procedures
+                at least annually.
+            - id: GRC-01_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: GRC-01.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: GRC-01.1
+              parts:
+                - id: GRC-01.1_stm
+                  name: statement
+                  prose: |+
+                    Are information governance program policies and procedures sponsored by organizational
+                    leadership established, documented, approved, communicated, applied, evaluated,
+                    and maintained?
+
+            - id: GRC-01.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: GRC-01.2
+              parts:
+                - id: GRC-01.2_stm
+                  name: statement
+                  prose: "Are the policies and procedures reviewed and updated at least annually?\n\n"
+        - id: GRC-02
+          class: control
+          title: Risk Management Program
+          props:
+            - name: label
+              value: GRC-02
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: GRC-02_stm
+              name: statement
+              prose: |
+                Establish a formal, documented, and leadership-sponsored Enterprise
+                Risk Management (ERM) program that includes policies and procedures for identification,
+                evaluation, ownership, treatment, and acceptance of cloud security and privacy
+                risks.
+            - id: GRC-02_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: GRC-02.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: GRC-02.1
+              parts:
+                - id: GRC-02.1_stm
+                  name: statement
+                  prose: |+
+                    Is there an established formal, documented, and leadership-sponsored enterprise
+                    risk management (ERM) program that includes policies and procedures for identification,
+                    evaluation, ownership, treatment, and acceptance of cloud security and privacy
+                    risks?
+
+        - id: GRC-06
+          class: control
+          title: Governance Responsibility Model
+          props:
+            - name: label
+              value: GRC-06
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: GRC-06_stm
+              name: statement
+              prose: |
+                Define and document roles and responsibilities for planning, implementing,
+                operating, assessing, and improving governance programs.
+            - id: GRC-06_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: GRC-06.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: GRC-06.1
+              parts:
+                - id: GRC-06.1_stm
+                  name: statement
+                  prose: |+
+                    Are roles and responsibilities for planning, implementing, operating, assessing,
+                    and improving governance programs defined and documented?
+
+        - id: GRC-07
+          class: control
+          title: Information System Regulatory Mapping
+          props:
+            - name: label
+              value: GRC-07
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: GRC-07_stm
+              name: statement
+              prose: |
+                Identify and document all relevant standards, regulations, legal/contractual,
+                and statutory requirements, which are applicable to your organization.
+            - id: GRC-07_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: GRC-07.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: GRC-07.1
+              parts:
+                - id: GRC-07.1_stm
+                  name: statement
+                  prose: |+
+                    Are all relevant standards, regulations, legal/contractual, and statutory
+                    requirements applicable to your organization identified and documented?
+
+    - id: HRS
+      class: family
+      title: Human Resources
+      props:
+        - name: label
+          value: HRS
+      controls:
+        - id: HRS-03
+          class: control
+          title: Clean Desk Policy and Procedures
+          props:
+            - name: label
+              value: HRS-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: HRS-03_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures that require unattended workspaces to not have openly
+                visible confidential data. Review and update the policies and procedures at
+                least annually.
+            - id: HRS-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: HRS-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: HRS-03.1
+              parts:
+                - id: HRS-03.1_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures requiring unattended workspaces to conceal confidential
+                    data established, documented, approved, communicated, applied, evaluated, and
+                    maintained?
+
+            - id: HRS-03.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: HRS-03.2
+              parts:
+                - id: HRS-03.2_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures requiring unattended workspaces to conceal confidential
+                    data reviewed and updated at least annually?
+
+        - id: HRS-04
+          class: control
+          title: Remote and Home Working Policy and Procedures
+          props:
+            - name: label
+              value: HRS-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: HRS-04_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures to protect information accessed, processed or stored
+                at remote sites and locations. Review and update the policies and procedures
+                at least annually.
+            - id: HRS-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: HRS-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: HRS-04.1
+              parts:
+                - id: HRS-04.1_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures to protect information accessed, processed, or
+                    stored at remote sites and locations established, documented, approved, communicated,
+                    applied, evaluated, and maintained?
+
+            - id: HRS-04.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: HRS-04.2
+              parts:
+                - id: HRS-04.2_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures to protect information accessed, processed, or
+                    stored at remote sites and locations reviewed and updated at least annually?
+
+        - id: HRS-11
+          class: control
+          title: Security Awareness Training
+          props:
+            - name: label
+              value: HRS-11
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: HRS-11_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                a security awareness training program for all employees of the organization
+                and provide regular training updates.
+            - id: HRS-11_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: HRS-11.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: HRS-11.1
+              parts:
+                - id: HRS-11.1_stm
+                  name: statement
+                  prose: |+
+                    Is a security awareness training program for all employees of the organization
+                    established, documented, approved, communicated, applied, evaluated and maintained?
+
+            - id: HRS-11.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: HRS-11.2
+              parts:
+                - id: HRS-11.2_stm
+                  name: statement
+                  prose: "Are regular security awareness training updates provided?\n\n"
+    - id: IAM
+      class: family
+      title: Identity & Access Management
+      props:
+        - name: label
+          value: IAM
+      controls:
+        - id: IAM-01
+          class: control
+          title: Identity and Access Management Policy and Procedures
+          props:
+            - name: label
+              value: IAM-01
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-01_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, implement, apply, evaluate
+                and maintain policies and procedures for identity and access management. Review
+                and update the policies and procedures at least annually.
+            - id: IAM-01_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-01.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-01.1
+              parts:
+                - id: IAM-01.1_stm
+                  name: statement
+                  prose: |+
+                    Are identity and access management policies and procedures established, documented,
+                    approved, communicated, implemented, applied, evaluated, and maintained?
+
+            - id: IAM-01.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: IAM-01.2
+              parts:
+                - id: IAM-01.2_stm
+                  name: statement
+                  prose: |+
+                    Are identity and access management policies and procedures reviewed and updated
+                    at least annually?
+
+        - id: IAM-03
+          class: control
+          title: Identity Inventory
+          props:
+            - name: label
+              value: IAM-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-03_stm
+              name: statement
+              prose: |
+                Manage, store, and review the information of system identities, and
+                level of access.
+            - id: IAM-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-03.1
+              parts:
+                - id: IAM-03.1_stm
+                  name: statement
+                  prose: "Is system identity information and levels of access managed, stored,
+                    and reviewed?\n\n"
+        - id: IAM-04
+          class: control
+          title: Separation of Duties
+          props:
+            - name: label
+              value: IAM-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-04_stm
+              name: statement
+              prose: |
+                Employ the separation of duties principle when implementing information
+                system access.
+            - id: IAM-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-04.1
+              parts:
+                - id: IAM-04.1_stm
+                  name: statement
+                  prose: |+
+                    Is the separation of duties principle employed when implementing information
+                    system access?
+
+        - id: IAM-05
+          class: control
+          title: Least Privilege
+          props:
+            - name: label
+              value: IAM-05
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-05_stm
+              name: statement
+              prose: |
+                Employ the least privilege principle when implementing information
+                system access.
+            - id: IAM-05_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-05.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-05.1
+              parts:
+                - id: IAM-05.1_stm
+                  name: statement
+                  prose: |+
+                    Is the least privilege principle employed when implementing information system
+                    access?
+
+        - id: IAM-06
+          class: control
+          title: User Access Provisioning
+          props:
+            - name: label
+              value: IAM-06
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-06_stm
+              name: statement
+              prose: |
+                Define and implement a user access provisioning process which authorizes,
+                records, and communicates access changes to data and assets.
+            - id: IAM-06_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-06.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-06.1
+              parts:
+                - id: IAM-06.1_stm
+                  name: statement
+                  prose: |+
+                    Is a user access provisioning process defined and implemented which authorizes,
+                    records, and communicates data and assets access changes?
+
+        - id: IAM-07
+          class: control
+          title: User Access Changes and Revocation
+          props:
+            - name: label
+              value: IAM-07
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-07_stm
+              name: statement
+              prose: |
+                De-provision or respectively modify access of movers / leavers or
+                system identity changes in a timely manner in order to effectively adopt and
+                communicate identity and access management policies.
+            - id: IAM-07_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-07.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-07.1
+              parts:
+                - id: IAM-07.1_stm
+                  name: statement
+                  prose: |+
+                    Is a process in place to de-provision or modify the access, in a timely manner,
+                    of movers / leavers or system identity changes, to effectively adopt and communicate
+                    identity and access management policies?
+
+        - id: IAM-08
+          class: control
+          title: User Access Review
+          props:
+            - name: label
+              value: IAM-08
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-08_stm
+              name: statement
+              prose: |
+                Review and revalidate user access for least privilege and separation
+                of duties with a frequency that is commensurate with organizational risk tolerance.
+            - id: IAM-08_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-08.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-08.1
+              parts:
+                - id: IAM-08.1_stm
+                  name: statement
+                  prose: |+
+                    Are reviews and revalidation of user access for least privilege and separation
+                    of duties completed with a frequency commensurate with organizational risk tolerance?
+
+        - id: IAM-09
+          class: control
+          title: Segregation of Privileged Access Roles
+          props:
+            - name: label
+              value: IAM-09
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-09_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures for the segregation of privileged access roles such that administrative
+                access to data, encryption and key management capabilities and logging capabilities
+                are distinct and separated.
+            - id: IAM-09_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-09.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-09.1
+              parts:
+                - id: IAM-09.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures for the segregation of privileged
+                    access roles defined, implemented, and evaluated such that administrative data
+                    access, encryption, key management capabilities, and logging capabilities are
+                    distinct and separate?
+
+        - id: IAM-10
+          class: control
+          title: Management of Privileged Access Roles
+          props:
+            - name: label
+              value: IAM-10
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-10_stm
+              name: statement
+              prose: |
+                Define and implement an access process to ensure privileged access
+                roles and rights are granted for a time limited period, and implement procedures
+                to prevent the culmination of segregated privileged access.
+            - id: IAM-10_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-10.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-10.1
+              parts:
+                - id: IAM-10.1_stm
+                  name: statement
+                  prose: |+
+                    Is an access process defined and implemented to ensure privileged access roles
+                    and rights are granted for a limited period?
+
+            - id: IAM-10.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: IAM-10.2
+              parts:
+                - id: IAM-10.2_stm
+                  name: statement
+                  prose: |+
+                    Are procedures implemented to prevent the culmination of segregated privileged
+                    access?
+
+        - id: IAM-14
+          class: control
+          title: Strong Authentication
+          props:
+            - name: label
+              value: IAM-14
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IAM-14_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures for authenticating access to systems, application and data assets,
+                including multifactor authentication for at least privileged user and sensitive
+                data access. Adopt digital certificates or alternatives which achieve an equivalent
+                level of security for system identities.
+            - id: IAM-14_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IAM-14.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IAM-14.1
+              parts:
+                - id: IAM-14.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures for authenticating access
+                    to systems, application, and data assets including multifactor authentication
+                    for a least-privileged user and sensitive data access defined, implemented, and
+                    evaluated?
+
+            - id: IAM-14.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: IAM-14.2
+              parts:
+                - id: IAM-14.2_stm
+                  name: statement
+                  prose: |+
+                    Are digital certificates or alternatives that achieve an equivalent security
+                    level for system identities adopted?
+
+    - id: IPY
+      class: family
+      title: Interoperability & Portability
+      props:
+        - name: label
+          value: IPY
+      controls:
+        - id: IPY-01
+          class: control
+          title: Interoperability and Portability Policy and Procedures
+          props:
+            - name: label
+              value: IPY-01
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IPY-01_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures for interoperability and portability including
+                requirements for:
+                a. Communications between application interfaces
+                b. Information processing interoperability
+                c. Application development portability
+                d. Information/Data exchange, usage, portability, integrity, and persistence
+                Review and update the policies and procedures at least annually.
+            - id: IPY-01_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IPY-01.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IPY-01.1
+              parts:
+                - id: IPY-01.1_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures established, documented, approved, communicated,
+                    applied, evaluated, and maintained for communications between application services
+                    (e.g., APIs)?
+
+            - id: IPY-01.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: IPY-01.2
+              parts:
+                - id: IPY-01.2_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures established, documented, approved, communicated,
+                    applied, evaluated, and maintained for information processing interoperability?
+
+            - id: IPY-01.3
+              class: caiq-question
+              title: CAI Question 3
+              props:
+                - name: label
+                  value: IPY-01.3
+              parts:
+                - id: IPY-01.3_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures established, documented, approved, communicated,
+                    applied, evaluated, and maintained for application development portability?
+
+            - id: IPY-01.4
+              class: caiq-question
+              title: CAI Question 4
+              props:
+                - name: label
+                  value: IPY-01.4
+              parts:
+                - id: IPY-01.4_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures established, documented, approved, communicated,
+                    applied, evaluated, and maintained for information/data exchange, usage, portability,
+                    integrity, and persistence?
+
+            - id: IPY-01.5
+              class: caiq-question
+              title: CAI Question 5
+              props:
+                - name: label
+                  value: IPY-01.5
+              parts:
+                - id: IPY-01.5_stm
+                  name: statement
+                  prose: |+
+                    Are interoperability and portability policies and procedures reviewed and
+                    updated at least annually?
+
+    - id: IVS
+      class: family
+      title: Infrastructure & Virtualization Security
+      props:
+        - name: label
+          value: IVS
+      controls:
+        - id: IVS-03
+          class: control
+          title: Network Security
+          props:
+            - name: label
+              value: IVS-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IVS-03_stm
+              name: statement
+              prose: |
+                Monitor, encrypt and restrict communications between environments
+                to only authenticated and authorized connections, as justified by the business.
+                Review these configurations at least annually, and support them by a documented
+                justification of all allowed services, protocols, ports, and compensating controls.
+            - id: IVS-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IVS-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IVS-03.1
+              parts:
+                - id: IVS-03.1_stm
+                  name: statement
+                  prose: "Are communications between environments monitored?\n\n"
+            - id: IVS-03.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: IVS-03.2
+              parts:
+                - id: IVS-03.2_stm
+                  name: statement
+                  prose: "Are communications between environments encrypted?\n\n"
+            - id: IVS-03.3
+              class: caiq-question
+              title: CAI Question 3
+              props:
+                - name: label
+                  value: IVS-03.3
+              parts:
+                - id: IVS-03.3_stm
+                  name: statement
+                  prose: |+
+                    Are communications between environments restricted to only authenticated and
+                    authorized connections, as justified by the business?
+
+            - id: IVS-03.4
+              class: caiq-question
+              title: CAI Question 4
+              props:
+                - name: label
+                  value: IVS-03.4
+              parts:
+                - id: IVS-03.4_stm
+                  name: statement
+                  prose: "Are network configurations reviewed at least annually?\n\n"
+            - id: IVS-03.5
+              class: caiq-question
+              title: CAI Question 5
+              props:
+                - name: label
+                  value: IVS-03.5
+              parts:
+                - id: IVS-03.5_stm
+                  name: statement
+                  prose: |+
+                    Are network configurations supported by the documented justification of all
+                    allowed services, protocols, ports, and compensating controls?
+
+        - id: IVS-04
+          class: control
+          title: OS Hardening and Base Controls
+          props:
+            - name: label
+              value: IVS-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IVS-04_stm
+              name: statement
+              prose: |
+                Harden host and guest OS, hypervisor or infrastructure control plane
+                according to their respective best practices, and supported by technical controls,
+                as part of a security baseline.
+            - id: IVS-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IVS-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IVS-04.1
+              parts:
+                - id: IVS-04.1_stm
+                  name: statement
+                  prose: |+
+                    Is every host and guest OS, hypervisor, or infrastructure control plane hardened
+                    (according to their respective best practices) and supported by technical controls
+                    as part of a security baseline?
+
+        - id: IVS-06
+          class: control
+          title: Segmentation and Segregation
+          props:
+            - name: label
+              value: IVS-06
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IVS-06_stm
+              name: statement
+              prose: |
+                Design, develop, deploy and configure applications and infrastructures
+                such that CSP and CSC (tenant) user access and intra-tenant access is appropriately
+                segmented and segregated, monitored and restricted from other tenants.
+            - id: IVS-06_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IVS-06.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IVS-06.1
+              parts:
+                - id: IVS-06.1_stm
+                  name: statement
+                  prose: |+
+                    Are applications and infrastructures designed, developed, deployed, and configured
+                    such that CSP and CSC (tenant) user access and intra-tenant access is appropriately
+                    segmented, segregated, monitored, and restricted from other tenants?
+
+        - id: IVS-07
+          class: control
+          title: Migration to Cloud Environments
+          props:
+            - name: label
+              value: IVS-07
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IVS-07_stm
+              name: statement
+              prose: |
+                Use secure and encrypted communication channels when migrating servers,
+                services, applications, or data to cloud environments. Such channels must include
+                only up-to-date and approved protocols.
+            - id: IVS-07_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IVS-07.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IVS-07.1
+              parts:
+                - id: IVS-07.1_stm
+                  name: statement
+                  prose: |+
+                    Are secure and encrypted communication channels including only up-to-date
+                    and approved protocols used when migrating servers, services, applications, or
+                    data to cloud environments?
+
+        - id: IVS-09
+          class: control
+          title: Network Defense
+          props:
+            - name: label
+              value: IVS-09
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: IVS-09_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and defense-in-depth
+                techniques for protection, detection, and timely response to network-based attacks.
+            - id: IVS-09_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: IVS-09.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: IVS-09.1
+              parts:
+                - id: IVS-09.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and defense-in-depth techniques defined, implemented,
+                    and evaluated for protection, detection, and timely response to network-based
+                    attacks?
+
+    - id: LOG
+      class: family
+      title: Logging and Monitoring
+      props:
+        - name: label
+          value: LOG
+      controls:
+        - id: LOG-01
+          class: control
+          title: Logging and Monitoring Policy and Procedures
+          props:
+            - name: label
+              value: LOG-01
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: LOG-01_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures for logging and monitoring. Review and update the policies
+                and procedures at least annually.
+            - id: LOG-01_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: LOG-01.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: LOG-01.1
+              parts:
+                - id: LOG-01.1_stm
+                  name: statement
+                  prose: |+
+                    Are logging and monitoring policies and procedures established, documented,
+                    approved, communicated, applied, evaluated, and maintained?
+
+            - id: LOG-01.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: LOG-01.2
+              parts:
+                - id: LOG-01.2_stm
+                  name: statement
+                  prose: "Are policies and procedures reviewed and updated at least annually?\n\n"
+        - id: LOG-04
+          class: control
+          title: Audit Logs Access and Accountability
+          props:
+            - name: label
+              value: LOG-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: LOG-04_stm
+              name: statement
+              prose: |
+                Restrict audit logs access to authorized personnel and maintain records
+                that provide unique access accountability.
+            - id: LOG-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: LOG-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: LOG-04.1
+              parts:
+                - id: LOG-04.1_stm
+                  name: statement
+                  prose: |+
+                    Is access to audit logs restricted to authorized personnel, and are records
+                    maintained to provide unique access accountability?
+
+        - id: LOG-05
+          class: control
+          title: Audit Logs Monitoring and Response
+          props:
+            - name: label
+              value: LOG-05
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: LOG-05_stm
+              name: statement
+              prose: |
+                Monitor security audit logs to detect activity outside of typical
+                or expected patterns. Establish and follow a defined process to review and take
+                appropriate and timely actions on detected anomalies.
+            - id: LOG-05_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: LOG-05.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: LOG-05.1
+              parts:
+                - id: LOG-05.1_stm
+                  name: statement
+                  prose: |+
+                    Are security audit logs monitored to detect activity outside of typical or
+                    expected patterns?
+
+            - id: LOG-05.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: LOG-05.2
+              parts:
+                - id: LOG-05.2_stm
+                  name: statement
+                  prose: |+
+                    Is a process established and followed to review and take appropriate and timely
+                    actions on detected anomalies?
+
+    - id: SEF
+      class: family
+      title: Security Incident Management, E-Discovery, & Cloud Forensics
+      props:
+        - name: label
+          value: SEF
+      controls:
+        - id: SEF-03
+          class: control
+          title: Incident Response Plans
+          props:
+            - name: label
+              value: SEF-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: SEF-03_stm
+              name: statement
+              prose: |
+                'Establish, document, approve, communicate, apply, evaluate and maintain
+                a security incident response plan, which includes but is not limited to: relevant
+                internal departments, impacted CSCs, and other business critical relationships
+                (such as supply-chain) that may be impacted.'
+            - id: SEF-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: SEF-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: SEF-03.1
+              parts:
+                - id: SEF-03.1_stm
+                  name: statement
+                  prose: |+
+                    Is a security incident response plan that includes relevant internal departments,
+                    impacted CSCs, and other business-critical relationships (such as supply-chain)
+                    established, documented, approved, communicated, applied, evaluated, and maintained?
+
+        - id: SEF-04
+          class: control
+          title: Incident Response Testing
+          props:
+            - name: label
+              value: SEF-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: SEF-04_stm
+              name: statement
+              prose: |
+                Test and update as necessary incident response plans at planned intervals
+                or upon significant organizational or environmental changes for effectiveness.
+            - id: SEF-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: SEF-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: SEF-04.1
+              parts:
+                - id: SEF-04.1_stm
+                  name: statement
+                  prose: |+
+                    Is the security incident response plan tested and updated for effectiveness,
+                    as necessary, at planned intervals or upon significant organizational or environmental
+                    changes?
+
+        - id: SEF-07
+          class: control
+          title: Security Breach Notification
+          props:
+            - name: label
+              value: SEF-07
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: SEF-07_stm
+              name: statement
+              prose: |
+                Define and implement, processes, procedures and technical measures
+                for security breach notifications. Report security breaches and assumed security
+                breaches including any relevant supply chain breaches, as per applicable SLAs,
+                laws and regulations.
+            - id: SEF-07_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: SEF-07.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: SEF-07.1
+              parts:
+                - id: SEF-07.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures for security breach notifications
+                    defined and implemented?
+
+            - id: SEF-07.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: SEF-07.2
+              parts:
+                - id: SEF-07.2_stm
+                  name: statement
+                  prose: |+
+                    Are security breaches and assumed security breaches reported (including any
+                    relevant supply chain breaches) as per applicable SLAs, laws, and regulations?
+
+    - id: STA
+      class: family
+      title: Supply Chain Management, Transparency, and Accountability
+      props:
+        - name: label
+          value: STA
+      controls:
+        - id: STA-02
+          class: control
+          title: SSRM Supply Chain
+          props:
+            - name: label
+              value: STA-02
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: STA-02_stm
+              name: statement
+              prose: |
+                Apply, document, implement and manage the SSRM throughout the supply
+                chain for the cloud service offering.
+            - id: STA-02_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: STA-02.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: STA-02.1
+              parts:
+                - id: STA-02.1_stm
+                  name: statement
+                  prose: |+
+                    Is the SSRM applied, documented, implemented, and managed throughout the supply
+                    chain for the cloud service offering?
+
+        - id: STA-04
+          class: control
+          title: SSRM Control Ownership
+          props:
+            - name: label
+              value: STA-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: STA-04_stm
+              name: statement
+              prose: |
+                Delineate the shared ownership and applicability of all CSA CCM controls
+                according to the SSRM for the cloud service offering.
+            - id: STA-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: STA-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: STA-04.1
+              parts:
+                - id: STA-04.1_stm
+                  name: statement
+                  prose: |+
+                    Is the shared ownership and applicability of all CSA CCM controls delineated
+                    according to the SSRM for the cloud service offering?
+
+        - id: STA-07
+          class: control
+          title: Supply Chain Inventory
+          props:
+            - name: label
+              value: STA-07
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: STA-07_stm
+              name: statement
+              prose: 'Develop and maintain an inventory of all supply chain relationships.
+
+                '
+            - id: STA-07_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: STA-07.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: STA-07.1
+              parts:
+                - id: STA-07.1_stm
+                  name: statement
+                  prose: "Is an inventory of all supply chain relationships developed and
+                    maintained?\n\n"
+    - id: TVM
+      class: family
+      title: Threat & Vulnerability Management
+      props:
+        - name: label
+          value: TVM
+      controls:
+        - id: TVM-02
+          class: control
+          title: Malware Protection Policy and Procedures
+          props:
+            - name: label
+              value: TVM-02
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: TVM-02_stm
+              name: statement
+              prose: |
+                Establish, document, approve, communicate, apply, evaluate and maintain
+                policies and procedures to protect against malware on managed assets. Review
+                and update the policies and procedures at least annually.
+            - id: TVM-02_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: TVM-02.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: TVM-02.1
+              parts:
+                - id: TVM-02.1_stm
+                  name: statement
+                  prose: |+
+                    Are policies and procedures to protect against malware on managed assets established,
+                    documented, approved, communicated, applied, evaluated, and maintained?
+
+            - id: TVM-02.2
+              class: caiq-question
+              title: CAI Question 2
+              props:
+                - name: label
+                  value: TVM-02.2
+              parts:
+                - id: TVM-02.2_stm
+                  name: statement
+                  prose: |+
+                    Are asset management and malware protection policies and procedures reviewed
+                    and updated at least annually?
+
+        - id: TVM-03
+          class: control
+          title: Vulnerability Remediation Schedule
+          props:
+            - name: label
+              value: TVM-03
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: TVM-03_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures to enable both scheduled and emergency responses to vulnerability identifications,
+                based on the identified risk.
+            - id: TVM-03_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: TVM-03.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: TVM-03.1
+              parts:
+                - id: TVM-03.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented, and
+                    evaluated to enable scheduled and emergency responses to vulnerability identifications
+                    (based on the identified risk)?
+
+        - id: TVM-04
+          class: control
+          title: Detection Updates
+          props:
+            - name: label
+              value: TVM-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: TVM-04_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures to update detection tools, threat signatures, and indicators of compromise
+                on a weekly, or more frequent basis.
+            - id: TVM-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: TVM-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: TVM-04.1
+              parts:
+                - id: TVM-04.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented, and
+                    evaluated to update detection tools, threat signatures, and compromise indicators
+                    weekly (or more frequent) basis?
+
+        - id: TVM-07
+          class: control
+          title: Vulnerability Identification
+          props:
+            - name: label
+              value: TVM-07
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: TVM-07_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures for the detection of vulnerabilities on organizationally managed assets
+                at least monthly.
+            - id: TVM-07_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: TVM-07.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: TVM-07.1
+              parts:
+                - id: TVM-07.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented, and
+                    evaluated for vulnerability detection on organizationally managed assets at least
+                    monthly?
+
+        - id: TVM-09
+          class: control
+          title: Vulnerability Management Reporting
+          props:
+            - name: label
+              value: TVM-09
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: TVM-09_stm
+              name: statement
+              prose: |
+                Define and implement a process for tracking and reporting vulnerability
+                identification and remediation activities that includes stakeholder notification.
+            - id: TVM-09_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: TVM-09.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: TVM-09.1
+              parts:
+                - id: TVM-09.1_stm
+                  name: statement
+                  prose: |+
+                    Is a process defined and implemented to track and report vulnerability identification
+                    and remediation activities that include stakeholder notification?
+
+    - id: UEM
+      class: family
+      title: Universal Endpoint Management
+      props:
+        - name: label
+          value: UEM
+      controls:
+        - id: UEM-02
+          class: control
+          title: Application and Service Approval
+          props:
+            - name: label
+              value: UEM-02
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: UEM-02_stm
+              name: statement
+              prose: |
+                Define, document, apply and evaluate a list of approved services,
+                applications and sources of applications (stores) acceptable for use by endpoints
+                when accessing or storing organization-managed data.
+            - id: UEM-02_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: UEM-02.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: UEM-02.1
+              parts:
+                - id: UEM-02.1_stm
+                  name: statement
+                  prose: |+
+                    Is there a defined, documented, applicable and evaluated list containing approved
+                    services, applications, and the sources of applications (stores) acceptable for
+                    use by endpoints when accessing or storing organization-managed data?
+
+        - id: UEM-04
+          class: control
+          title: Endpoint Inventory
+          props:
+            - name: label
+              value: UEM-04
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: UEM-04_stm
+              name: statement
+              prose: |
+                Maintain an inventory of all endpoints used to store and access company
+                data.
+            - id: UEM-04_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: UEM-04.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: UEM-04.1
+              parts:
+                - id: UEM-04.1_stm
+                  name: statement
+                  prose: |+
+                    Is an inventory of all endpoints used and maintained to store and access company
+                    data?
+
+        - id: UEM-05
+          class: control
+          title: Endpoint Management
+          props:
+            - name: label
+              value: UEM-05
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: UEM-05_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures to enforce policies and controls for all endpoints permitted to access
+                systems and/or store, transmit, or process organizational data.
+            - id: UEM-05_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: UEM-05.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: UEM-05.1
+              parts:
+                - id: UEM-05.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented and
+                    evaluated, to enforce policies and controls for all endpoints permitted to access
+                    systems and/or store, transmit, or process organizational data?
+
+        - id: UEM-06
+          class: control
+          title: Automatic Lock Screen
+          props:
+            - name: label
+              value: UEM-06
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: UEM-06_stm
+              name: statement
+              prose: |
+                Configure all relevant interactive-use endpoints to require an automatic
+                lock screen.
+            - id: UEM-06_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: UEM-06.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: UEM-06.1
+              parts:
+                - id: UEM-06.1_stm
+                  name: statement
+                  prose: |+
+                    Are all relevant interactive-use endpoints configured to require an automatic
+                    lock screen?
+
+        - id: UEM-09
+          class: control
+          title: Anti-Malware Detection and Prevention
+          props:
+            - name: label
+              value: UEM-09
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: UEM-09_stm
+              name: statement
+              prose: |
+                Configure managed endpoints with anti-malware detection and prevention
+                technology and services.
+            - id: UEM-09_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: UEM-09.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: UEM-09.1
+              parts:
+                - id: UEM-09.1_stm
+                  name: statement
+                  prose: |+
+                    Are anti-malware detection and prevention technology services configured on
+                    managed endpoints?
+
+        - id: UEM-10
+          class: control
+          title: Software Firewall
+          props:
+            - name: label
+              value: UEM-10
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: UEM-10_stm
+              name: statement
+              prose: 'Configure managed endpoints with properly configured software firewalls.
+
+                '
+            - id: UEM-10_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: UEM-10.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: UEM-10.1
+              parts:
+                - id: UEM-10.1_stm
+                  name: statement
+                  prose: "Are software firewalls configured on managed endpoints?\n\n"
+        - id: UEM-13
+          class: control
+          title: Remote Wipe
+          props:
+            - name: label
+              value: UEM-13
+            - name: is-lite
+              value: 'true'
+          parts:
+            - id: UEM-13_stm
+              name: statement
+              prose: |
+                Define, implement and evaluate processes, procedures and technical
+                measures to enable the deletion of company data remotely on managed endpoint
+                devices.
+            - id: UEM-13_imp_gui
+              name: guidance
+              prose: ''
+          controls:
+            - id: UEM-13.1
+              class: caiq-question
+              title: CAI Question 1
+              props:
+                - name: label
+                  value: UEM-13.1
+              parts:
+                - id: UEM-13.1_stm
+                  name: statement
+                  prose: |+
+                    Are processes, procedures, and technical measures defined, implemented, and
+                    evaluated to enable remote company data deletion on managed endpoint devices?
+

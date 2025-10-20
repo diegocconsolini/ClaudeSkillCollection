@@ -1,0 +1,1288 @@
+[
+  {
+    "name": "NIST CSF v2.0",
+    "mappings": [
+      {
+        "control_id": "A&A-01",
+        "references": ["GV.PO-01", "GV.PO-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'audit and assurance policies and procedures and standards'\n'at least annually'."
+      },
+      {
+        "control_id": "A&A-02",
+        "references": ["ID.IM-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF control(s) cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "A&A-03",
+        "references": ["ID.IM-01", "GV.RM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF control(s) cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "A&A-04",
+        "references": ["ID.IM-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF control(s) cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "A&A-05",
+        "references": ["ID.IM-01", "ID.RA-03", "ID.RA-04", "ID.RA-05", "ID.RA-06", "ID.RA-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF control(s) cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "A&A-06",
+        "references": ["ID.RA-6"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF:\n'plan to report remediation status to relevant stakeholders'."
+      },
+      {
+        "control_id": "AIS-01",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for application security'\n'at least annually'."
+      },
+      {
+        "control_id": "AIS-02",
+        "references": ["PR.PS-01", "ID.AM-08"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-03",
+        "references": ["ID.IM-03", "GV.OV-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'technical and operational metrics'."
+      },
+      {
+        "control_id": "AIS-04",
+        "references": ["ID.AM-08", "PR.IR-01", "PR.PS-01", "PR.PS-02", "PR.PS-06"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-05",
+        "references": ["ID.AM-08", "ID.RA-01", "PR.PS-01", "PR.PS-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF:  \n'including criteria for acceptance of new information systems'.\n'Automate when applicable and possible'. "
+      },
+      {
+        "control_id": "AIS-06",
+        "references": ["ID.AM-08", "ID.RA-07", "PR.IR-01", "PR.PS-01", "PR.PS-06"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-07",
+        "references": ["ID.AM-08", "ID.RA-01", "ID.RA-06", "ID.RA-08", "PR.PS-02", "PR.PS-06"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-01",
+        "references": ["GV.PO-01", "GV.PO-02", "GV.OC-01", "GV.OC-04", "RC.RP-01", "ID.IM-03", "ID.IM-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'business continuity management and operational resilience policies and procedures'\n'at least annually'."
+      },
+      {
+        "control_id": "BCR-02",
+        "references": ["ID.RA-04", "ID.RA-05", "GV.OC-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'operational resilience strategies and capabilities'."
+      },
+      {
+        "control_id": "BCR-03",
+        "references": ["GV.OC-04", "GV.RM-02", "GV.RM-04"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-04",
+        "references": ["ID.IM-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "BCR-05",
+        "references": ["ID.IM-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'Develop, identify, and acquire documentation that is relevant to support the business continuity and operational resilience programs'."
+      },
+      {
+        "control_id": "BCR-06",
+        "references": ["ID.IM-02", "GV.SC-08"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'at least annually or upon significant changes'."
+      },
+      {
+        "control_id": "BCR-07",
+        "references": ["GV.OC-01", "GV.SC-08", "ID.IM-02", "RS.CO-03", "RS.MA-01"],
+        "gap_level": "Νο Gap",
+        "addendum": "Ν/Α"
+      },
+      {
+        "control_id": "BCR-08",
+        "references": ["PR.DS-01", "PR.DS-11", "RC.RP-03"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-09",
+        "references": ["ID.IM-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "BCR-10",
+        "references": ["ID.IM-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n(exercise plan) 'annually'\n'including local emergency authorities'."
+      },
+      {
+        "control_id": "BCR-11",
+        "references": ["GV.OC-04", "GV.OC-05", "PR.IR-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CCC-01",
+        "references": ["GV.PO-01", "GV.PO-02", "PR.PS-01", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for managing the risks associated with applying changes to organization assets'\n'at least annually'."
+      },
+      {
+        "control_id": "CCC-02",
+        "references": ["ID.RA-07", "PR.PS-01"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-03",
+        "references": ["ID.RA-07"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-04",
+        "references": ["ID.AM-01", "ID.AM-02", "ID.AM-04", "ID.AM-08", "PR.PS-02", "PR.PS-03", "PR.PS-05", "PR.AA-05"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-05",
+        "references": ["GV.SC-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CCC-06",
+        "references": ["PR.PS-01", "ID.RA-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'change management baselines'"
+      },
+      {
+        "control_id": "CCC-07",
+        "references": ["PR.PS-01", "DE.CM-09", "DE.AE-06"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'detection of changes deviating from the established baseline'."
+      },
+      {
+        "control_id": "CCC-08",
+        "references": ["ID.RA-07"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-09",
+        "references": ["ID.RA-07", "PR.PS-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-01",
+        "references": ["GV.PO-01", "GV.PO-02", "PR.AA-01", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for Cryptography, Encryption and Key Management'\n'at least annually'."
+      },
+      {
+        "control_id": "CEK-02",
+        "references": ["GV.RR-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-03",
+        "references": ["PR.DS-01", "PR.DS-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF:\n'using cryptographic libraries certified to approved standards'."
+      },
+      {
+        "control_id": "CEK-04",
+        "references": ["PR.DS-01", "PR.DS-02", "ID.AM-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-05",
+        "references": ["ID.RA-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-06",
+        "references": ["ID.RA-04", "ID.RA-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'cost, and benefits analysis'."
+      },
+      {
+        "control_id": "CEK-07",
+        "references": ["GV.RM-01", "ID.RA-04", "ID.RA-05", "ID.RA-06"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-08",
+        "references": ["GV.SC-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-09",
+        "references": ["ID.IM-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-10",
+        "references": ["PR.AA-01", "PR.AA-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-11",
+        "references": ["PR.AA-01", "PR.AA-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "CEK-12",
+        "references": ["PR.AA-01", "PR.AA-05", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'Rotate cryptographic keys in accordance with the calculated cryptoperiod, which includes provisions for considering the risk of information disclosure'."
+      },
+      {
+        "control_id": "CEK-13",
+        "references": ["PR.AA-01", "PR.AA-05", "RS-MA-01", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'revoke and remove cryptographic keys prior to the end of its established cryptoperiod, when a key is compromised, or an entity is no longer part of the organization'."
+      },
+      {
+        "control_id": "CEK-14",
+        "references": ["PR.AA-01", "PR.AA-05", "ID.AM-08", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'destroy keys stored outside a secure environment and revoke keys stored in Hardware Security Modules (HSMs) when they are no longer needed'."
+      },
+      {
+        "control_id": "CEK-15",
+        "references": ["PR.AA-01", "PR.AA-05", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'create keys in a pre-activated state when they have been generated but not authorized for use'."
+      },
+      {
+        "control_id": "CEK-16",
+        "references": ["PR.AA-01", "PR.AA-05", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'monitor, review and approve key transitions from any state to/from suspension'."
+      },
+      {
+        "control_id": "CEK-17",
+        "references": ["PR.AA-01", "PR.AA-05", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'deactivate keys at the time of their expiration date'."
+      },
+      {
+        "control_id": "CEK-18",
+        "references": ["PR.AA-01", "PR.AA-05", "PR.DS-01", "PR.DS-11", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'manage archived keys in a secure repository requiring least privilege access'."
+      },
+      {
+        "control_id": "CEK-19",
+        "references": ["PR.AA-01", "PR.AA-05", "PR.DS-01", "PR.DS-02", "RS.MI-01", "RS.MI-02", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'use compromised keys to encrypt information only in controlled circumstance, and thereafter exclusively for decrypting data and never for encrypting data'."
+      },
+      {
+        "control_id": "CEK-20",
+        "references": ["PR.AA-01", "PR.AA-05", "ID.IM-04", "ID.RA-05", "ID.RA-04", "RS.MI-01", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'assess the risk to operational continuity versus the risk of the keying material and the information it protects being exposed if control of the keying material is lost'."
+      },
+      {
+        "control_id": "CEK-21",
+        "references": ["PR.AA-01", "PR.AA-05", "ID.AM-08", "GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'the key management system to track and report all cryptographic materials and changes in status'."
+      },
+      {
+        "control_id": "DCS-01",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.AM-08", "PR.PS-03", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for the secure disposal of equipment used outside the organization's premises'\n'a data destruction procedure that renders recovery of information impossible'\n'at least annually'.                                                        "
+      },
+      {
+        "control_id": "DCS-02",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.AM-08", "PR.DS-02", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for the relocation or transfer of hardware, software, or data/information to an offsite or alternate location'\n'The relocation or transfer request requires the written or cryptographically verifiable authorization'\n'at least annually'."
+      },
+      {
+        "control_id": "DCS-03",
+        "references": ["GV.PO-01", "GV.PO-02", "PR.IR-02", "PR.AA-06", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for maintaining a safe and secure working environment in offices, rooms, and facilities'\n'at least annually'."
+      },
+      {
+        "control_id": "DCS-04",
+        "references": ["GV.PO-01", "GV.PO-02", "PR.DS-01", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for the secure transportation of physical media'\n'at least annually'."
+      },
+      {
+        "control_id": "DCS-05",
+        "references": ["ID.AM-05"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-06",
+        "references": ["ID.AM-01", "ID.AM-02", "ID.AM-04"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-07",
+        "references": ["PR.AA-06"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DCS-08",
+        "references": ["PR.AA-01", "PR.AA-03"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-09",
+        "references": ["PR.AA-06", "DE.CM-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'all ingress and egress points documented'\n'Retain access control records on a periodic basis'."
+      },
+      {
+        "control_id": "DCS-10",
+        "references": ["PR.AA-06", "DE.CM-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'all ingress and egress points documented'\n'Retain access control records on a periodic basis as deemed appropriate by the organization'."
+      },
+      {
+        "control_id": "DCS-11",
+        "references": ["PR.AT-01", "PR.AT-02"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-12",
+        "references": ["PR.AA-06", "PR.IR-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'ensure a risk-based protection of power and telecommunication cables'."
+      },
+      {
+        "control_id": "DCS-13",
+        "references": ["PR.IR-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'monitor, maintain and test for continual effectiveness' (the temperature and humidity conditions) \n'within accepted industry standards'."
+      },
+      {
+        "control_id": "DCS-14",
+        "references": ["PR.AA-06", "DE.CM-02", "PR.IR-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'test utilities services for continual effectiveness at planned intervals'."
+      },
+      {
+        "control_id": "DCS-15",
+        "references": ["PR.IR-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-01",
+        "references": ["GV.PO-01", "GV.PO-02", "GV.OC-03", "ID.AM-07", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for the classification, protection and handling of data throughout its lifecycle'\n'at least annually'."
+      },
+      {
+        "control_id": "DSP-02",
+        "references": ["GV.SC-10", "PR.PS-02", "PR.PS-03", "ID.AM-08"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-03",
+        "references": ["ID.AM-07"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-04",
+        "references": ["ID.AM-05", "ID.AM-07"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-05",
+        "references": ["ID.AM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'at least annually, and after any change'."
+      },
+      {
+        "control_id": "DSP-06",
+        "references": ["ID.AM-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-07",
+        "references": ["ID.AM-08", "PR.PS-06"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'principle of security by design'."
+      },
+      {
+        "control_id": "DSP-08",
+        "references": ["No Mapping"],
+        "gap_level": "Full Gap",
+        "addendum": "The full CCM control specification is missing from the CSF and has to be used to close the gap."
+      },
+      {
+        "control_id": "DSP-09",
+        "references": ["No Mapping"],
+        "gap_level": "Full Gap",
+        "addendum": "The full CCM control specification is missing from the CSF and has to be used to close the gap."
+      },
+      {
+        "control_id": "DSP-10",
+        "references": ["PR.DS-02", "PR.IR-01", "ID.AM-03", "GV.OC-03", "ID.AM-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'transfer of personal data is protected from unauthorized access and only processed within scope as permitted by the respective laws and regulations'."
+      },
+      {
+        "control_id": "DSP-11",
+        "references": ["GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-12",
+        "references": ["GV.OC-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-13",
+        "references": ["GV.SC-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-14",
+        "references": ["GV.SC-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-15",
+        "references": ["PR.IR-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-16",
+        "references": ["ID.AM-08", "GV.OC-03", "GV.SC-10", "PR.DS-11"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-17",
+        "references": ["PR.DS-01", "PR.DS-02", "PR.DS-10"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-18",
+        "references": ["GV.OC-03", "GV.SC-08", "RS.CO-02", "RS.CO-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "DSP-19",
+        "references": ["PR.DS-11", "ID.AM-01", "ID.AM-02", "ID.AM-07", "ID.AM-08"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "GRC-01",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for an information governance program, which is sponsored by the leadership of the organization'\n'at least annually'."
+      },
+      {
+        "control_id": "GRC-02",
+        "references": ["GV.RM-01", "GV.RM-02", "GV.RM-03", "GV.RM-04", "GV.RM-05", "GV.RM-06", "GV.RM-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'leadership-sponsored Enterprise Risk Management (ERM) program'.\n'policies and procedures for identification, evaluation, ownership, treatment, and acceptance of privacy risks'."
+      },
+      {
+        "control_id": "GRC-03",
+        "references": ["GV.PO-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'at least annually or when a substantial change occurs within the organization'."
+      },
+      {
+        "control_id": "GRC-04",
+        "references": ["ID.RA-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "GRC-05",
+        "references": ["No Mapping"],
+        "gap_level": "Full Gap",
+        "addendum": "The full CCM control specification is missing from the CSF and has to be used to close the gap."
+      },
+      {
+        "control_id": "GRC-06",
+        "references": ["GV.RR-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'planning, implementing, operating, assessing, and improving governance programs'."
+      },
+      {
+        "control_id": "GRC-07",
+        "references": ["GV.OC-03"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-08",
+        "references": ["ID.RA-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "HRS-01",
+        "references": ["GV.PO-01", "GV.PO-02", "GV.RR-04", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for background verification of all new employees'\n'at least annually'."
+      },
+      {
+        "control_id": "HRS-02",
+        "references": ["GV.PO-01", "GV.PO-02", "GV.RR-02", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for defining allowances and conditions for the acceptable use of organizationally-owned or managed assets'\n'at least annually'."
+      },
+      {
+        "control_id": "HRS-03",
+        "references": ["GV.PO-01", "GV.PO-02", "GV.RR-02", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures that require unattended workspaces to not have openly visible confidential data'\n'at least annually'."
+      },
+      {
+        "control_id": "HRS-04",
+        "references": ["GV.PO-01", "GV.PO-02", "PR.DS-01", "PR.DS-02", "PR.DS-10", "PR.AA-06", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures to protect information accessed, processed or stored at remote sites and locations'\n'at least annually'."
+      },
+      {
+        "control_id": "HRS-05",
+        "references": ["GV.RR-04", "GV.SC-10", "ID.AM-08"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "HRS-06",
+        "references": ["GV.RR-02", "GV.RR-04"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-07",
+        "references": ["GV.RR-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "HRS-08",
+        "references": ["GV.RR-02", "GV.RR-04"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-09",
+        "references": ["PR.AT-01", "PR.AT-02", "GV.SC-02", "GV.RR-01", "GV.RR-02", "GV.PO-01"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-10",
+        "references": ["GV.RR-04", "GV.SC-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "HRS-11",
+        "references": ["PR.AT-01"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-12",
+        "references": ["PR.AT-01", "PR.AT-02"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-13",
+        "references": ["GV.RR-01", "GV.RR-02", "GV.SC-02", "PR.AT-01", "PR.AT-02", "GV.OC-03"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-01",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.IM-03", "PR.AA-01", "PR.AA-02", "PR.AA-03", "PR.AA-04", "PR.AA-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for identity and access management'\n'at least annually'."
+      },
+      {
+        "control_id": "IAM-02",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.IM-03", "PR.AA-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'strong password policies and procedures'\n'at least annually'."
+      },
+      {
+        "control_id": "IAM-03",
+        "references": ["PR.AA-01", "PR.AA-02", "PR.AA-04", "PR.AA-05"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-04",
+        "references": ["PR.AA-05"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-05",
+        "references": ["PR.AA-05"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-06",
+        "references": ["PR.AA-01", "PR.AA-05"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-07",
+        "references": ["GV.RR-04", "GV.SC-10", "PR.AA-01", "PR.AA-05"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-08",
+        "references": ["PR.AA-05"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-09",
+        "references": ["PR.AA-01", "PR.AA-05"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-10",
+        "references": ["PR.AA-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'ensure privileged access roles and rights are granted for a time limited period'."
+      },
+      {
+        "control_id": "IAM-11",
+        "references": ["PR.AA-05", "GV.SC-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "IAM-12",
+        "references": ["PR.AA-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "IAM-13",
+        "references": ["PR.AA-01", "PR.AA-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'technical measures that ensure users are identifiable through unique IDs'."
+      },
+      {
+        "control_id": "IAM-14",
+        "references": ["PR.AA-01", "PR.AA-02", "PR.AA-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specifications(s) in the CSF 2.0:\n'including multifactor authentication for at least privileged user and sensitive data access'\n'Adopt digital certificates or alternatives which achieve an equivalent level of security for system identities'."
+      },
+      {
+        "control_id": "IAM-15",
+        "references": ["PR.AA-01"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-16",
+        "references": ["PR.AA-01", "PR.AA-02", "PR.AA-03", "PR.AA-04", "PR.AA-05", "PR.PS-04"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IPY-01",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.IM-03", "ID.AM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for interoperability and portability including requirements for:\n a. Communications between application interfaces\n b. Information processing interoperability\n c. Application development portability\n d. Information/Data exchange, usage, portability, integrity, and persistence'\n'at least annually'."
+      },
+      {
+        "control_id": "IPY-02",
+        "references": ["No Mapping"],
+        "gap_level": "Full Gap",
+        "addendum": "The full CCM control specification is missing from the NIST CSF v2.0 and has to be used to close the gap."
+      },
+      {
+        "control_id": "IPY-03",
+        "references": ["PR.DS-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'cryptographically secure and standardized network protocols'."
+      },
+      {
+        "control_id": "IPY-04",
+        "references": ["GV.SC-05", "GV.SC-10"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "IVS-01",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.AM-08", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, and maintain policies and procedures'\n'policies and procedures for infrastructure and virtualization security'\n'at least annually'."
+      },
+      {
+        "control_id": "IVS-02",
+        "references": ["PR.IR-04", "GV.OC-04"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-03",
+        "references": ["PR.IR-01", "PR.AA-03", "PR.AA-05", "DE.CM-01", "PR.DS-02", "ID.AM-03"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-04",
+        "references": ["PR.PS-01"],
+        "gap_level": "No Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'Harden host and guest OS, hypervisor or infrastructure control plane'."
+      },
+      {
+        "control_id": "IVS-05",
+        "references": ["PR.IR-01"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-06",
+        "references": ["PR.AA-05", "PR.IR-01", "PR.PS-01", "PR.PS-06", "DE.CM-09"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "IVS-07",
+        "references": ["PR.DS-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'Such channels must include only up-to-date and approved protocols'."
+      },
+      {
+        "control_id": "IVS-08",
+        "references": ["GV.RM-02", "GV.RM-06"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "IVS-09",
+        "references": ["ID.AM-03", "DE.CM-01", "PR.IR-01", "RS.MA-01", "RS.MI-01", "RS.MI-02"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-01",
+        "references": [
+          "GV.PO-01",
+          "GV.PO-02",
+          "ID.IM-03",
+          "PR.PS-04",
+          "DE.CM-01",
+          "DE.CM-02",
+          "DE.CM-03",
+          "DE.CM-06",
+          "DE.CM-09"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, and maintain policies and procedures'\n'policies and procedures for infrastructure and virtualization security'\n'at least annually'."
+      },
+      {
+        "control_id": "LOG-02",
+        "references": ["PR.AA-05", "PR.DS-01", "PR.DS-02", "ID.AM-08", "PR.DS-11", "PR.PS-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'security and retention of audit logs'."
+      },
+      {
+        "control_id": "LOG-03",
+        "references": [
+          "PR.PS-04",
+          "DE.AE-02",
+          "DE.AE-03",
+          "DE.AE-04",
+          "DE.AE-06",
+          "DE.AE-07",
+          "DE.AE-08",
+          "DE.CM-01",
+          "DE.CM-02",
+          "DE.CM-03",
+          "DE.CM-06",
+          "DE.CM-09"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-04",
+        "references": ["PR.AA-05", "PR.PS-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "LOG-05",
+        "references": [
+          "ID.AM-03",
+          "PR.PS-04",
+          "DE.AE-02",
+          "DE.AE-03",
+          "DE.AE-06",
+          "DE.AE-07",
+          "DE.AE-08",
+          "DE.CM-01",
+          "DE.CM-02",
+          "DE.CM-03",
+          "DE.CM-06",
+          "DE.CM-09"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-06",
+        "references": ["ID.AM-08"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "LOG-07",
+        "references": ["PR.PS-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "LOG-08",
+        "references": ["PR.PS-04", "DE.CM-01", "DE.CM-02", "DE.CM-03", "DE.CM-06", "DE.CM-09"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-09",
+        "references": ["PR.AA-05", "PR.DS-01", "PR.DS-02", "PR.DS-11"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-10",
+        "references": ["PR.PS-04", "DE.CM-09"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "LOG-11",
+        "references": ["PR.PS-04", "DE.CM-09"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "LOG-12",
+        "references": ["PR.AA-06", "PR.PS-04", "DE.CM-02"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-13",
+        "references": ["PR.PS-04", "DE.AE-06"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "SEF-01",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.IM-02", "ID.IM-03", "ID.IM-04", "RS.MA-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, and maintain policies and procedures'\n'policies and procedures for Security Incident Management, E-Discovery, and Cloud Forensics'\n'at least annually'."
+      },
+      {
+        "control_id": "SEF-02",
+        "references": [
+          "GV.PO-01",
+          "GV.PO-02",
+          "ID.IM-03",
+          "ID.IM-04",
+          "RS.CO-02",
+          "RS.MA-05",
+          "PR.AT-01",
+          "RS.MA-03",
+          "RS.MA-04",
+          "RS.MI-01",
+          "RS.MI-02",
+          "DE.AE-08"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, and maintain policies and procedures'\n'policies and procedures for management of security incidents'\n'at least annually'."
+      },
+      {
+        "control_id": "SEF-03",
+        "references": ["PR.AT-01", "PR.AT-02", "RS.MA-01", "GV.SC-08", "ID.IM-02", "ID.IM-04", "RC.RP-01"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-04",
+        "references": ["ID.IM-01", "ID.IM-02", "ID.IM-03", "ID.IM-04", "GV.SC-08", "GV.SC-10"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'at planned intervals'."
+      },
+      {
+        "control_id": "SEF-05",
+        "references": ["DE.AE-02", "DE.AE-03", "DE.AE-04", "DE.AE-06", "ID.IM-01", "ID.IM-02", "ID.IM-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "SEF-06",
+        "references": [
+          "RS.MA-02",
+          "RS.MA-03",
+          "RS.AN-03",
+          "DE.AE-02",
+          "DE.AE-04",
+          "DE.AE-06",
+          "DE.AE-07",
+          "DE.AE-08",
+          "RS.MI-02",
+          "RC.RP-02"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-07",
+        "references": ["RS.CO-02", "RS.CO-03", "RS.MA-01", "DE.AE-08", "GV.SC-08"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-08",
+        "references": ["GV.RR-02", "RS.CO-02", "RS.CO-03"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-01",
+        "references": [
+          "GV.PO-01",
+          "GV.PO-02",
+          "ID.IM-03",
+          "GV.SC-01",
+          "GV.SC-02",
+          "GV.SC-03",
+          "GV.SC-06",
+          "GV.SC-07",
+          "GV.OC-05",
+          "GV.RM-04",
+          "GV.RM-05"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, and maintain policies and procedures'\n'policies and procedures for the application of the Shared Security Responsibility Model (SSRM)'\n'at least annually'."
+      },
+      {
+        "control_id": "STA-02",
+        "references": ["GV.SC-02", "GV.SC-05", "GV.RR-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "STA-03",
+        "references": ["GV.SC-02", "GV.SC-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "STA-04",
+        "references": ["GV.SC-02", "GV.SC-05", "GV.OC-05", "GV.RR-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "STA-05",
+        "references": ["GV.SC-02", "GV.OC-03", "GV.OC-04"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "STA-06",
+        "references": ["GV.SC-01", "GV.SC-02", "GV.SC-03", "ID.IM-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "STA-07",
+        "references": ["GV.SC-04", "ID.AM-04"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-08",
+        "references": ["GV.SC-01", "GV.SC-03", "GV.SC-05", "GV.SC-06", "GV.SC-07", "GV.OC-02", "GV.RM-05", "ID.RA-10"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-09",
+        "references": ["GV.SC-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'(itemized specific subjects in bullets to be covered in contractual agreement should be used to close the gap)'."
+      },
+      {
+        "control_id": "STA-10",
+        "references": ["GV.SC-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "STA-11",
+        "references": ["GV.SC-03", "GV.SC-06", "GV.SC-07", "GV.SC-09", "ID.IM-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "STA-12",
+        "references": ["GV.SC-02", "GV.SC-03", "GV.SC-05", "GV.SC-07", "GV.SC-09"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "STA-13",
+        "references": ["GV.SC-05", "GV.SC-07", "GV.OC-02", "GV.OC-03", "ID.IM-01"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-14",
+        "references": ["GV.SC-07", "ID.IM-02"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-01",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.IM-03", "ID.RA-01", "ID.RA-05", "ID.RA-06"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, and maintain policies and procedures'\n'policies and procedures to identify, report and prioritize the remediation of vulnerabilities'\n'at least annually'."
+      },
+      {
+        "control_id": "TVM-02",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.IM-03", "DE.CM-01", "DE.CM-09"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, and maintain policies and procedures'\n'policies and procedures to to protect against malware on managed assets'\n'at least annually'."
+      },
+      {
+        "control_id": "TVM-03",
+        "references": ["ID.RA-01", "ID.RA-06", "ID.RA-08", "PR.PS-02", "PR.PS-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'scheduled and emergency responses to vulnerability identifications, based on the identified risk' (gap due to reference of risk-based remediation scheduling)."
+      },
+      {
+        "control_id": "TVM-04",
+        "references": ["PR.PS-02", "ID.RA-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'on a weekly, or more frequent basis'."
+      },
+      {
+        "control_id": "TVM-05",
+        "references": ["ID.RA-01", "ID.RA-03", "PR.PS-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "TVM-06",
+        "references": ["ID.RA-01", "ID.IM-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'penetration testing by independent third parties'."
+      },
+      {
+        "control_id": "TVM-07",
+        "references": ["ID.RA-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'at least monthly'."
+      },
+      {
+        "control_id": "TVM-08",
+        "references": ["ID.RA-01", "ID.RA-05", "ID.RA-06", "PR.PS-02", "PR.PS-03", "GV.RM-06"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-09",
+        "references": ["ID.RA-01", "ID.RA-04", "ID.RA-06", "ID.RA-08"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'reporting vulnerability identification and remediation activities that includes stakeholder notification'."
+      },
+      {
+        "control_id": "TVM-10",
+        "references": ["ID.RA-01", "ID.RA-06", "DE.CM-01", "DE.CM-02", "DE.CM-03", "DE.CM-06", "DE.CM-09"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-01",
+        "references": ["GV.PO-01", "GV.PO-02", "ID.IM-03"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in the CSF: \n'document, approve, maintain policies and procedures'\n'policies and procedures for all endpoints'\n'at least annually'."
+      },
+      {
+        "control_id": "UEM-02",
+        "references": ["ID.AM-02", "ID.AM-04", "ID.AM-07", "PR.PS-02", "PR.PS-05"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that the full CCM control specification is to be used to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-03",
+        "references": ["ID.AM-08", "PR.PS-02"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-04",
+        "references": ["ID.AM-01", "ID.AM-02", "ID.AM-04"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-05",
+        "references": [
+          "GV.PO-01",
+          "GV.PO-02",
+          "ID.AM-08",
+          "PR.AA-03",
+          "PR.AA-05",
+          "PR.AA-06",
+          "PR.IR-01",
+          "PR.DS-01",
+          "PR.DS-02",
+          "PR.PS-01"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-06",
+        "references": ["PR.AA-06", "PR.AA-03", "PR.PS-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-07",
+        "references": ["PR.PS-01", "PR.PS-02", "ID.RA-07"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-08",
+        "references": ["PR.DS-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-09",
+        "references": ["DE.CM-09", "DE.AE-02", "RS.MI-01", "PR.PS-05", "PR.PS-01", "ID.AM-08"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-10",
+        "references": ["DE.CM-01", "DE.CM-09", "PR.PS-01", "ID.AM-08"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-11",
+        "references": ["PR.DS-02", "PR.DS-10", "PR.PS-01", "ID.AM-08", "DE.CM-09"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-12",
+        "references": ["PR.PS-01"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-13",
+        "references": ["PR.PS-01", "ID.AM-08"],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend that NIST CSF 2.0 use the full CCM control specification to close the gap. The mapped CSF controls cover in part the high specificity of the CCM control objective."
+      },
+      {
+        "control_id": "UEM-14",
+        "references": [
+          "GV.RR-02",
+          "GV.SC-02",
+          "GV.SC-03",
+          "GV.SC-05",
+          "GV.SC-07",
+          "GV.SC-08",
+          "ID.IM-02",
+          "PR.AT-01",
+          "PR.AT-02",
+          "PR.AA-01",
+          "PR.AA-02",
+          "PR.AA-03",
+          "PR.AA-05",
+          "PR.AA-06",
+          "PR.IR-01"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      }
+    ]
+  }
+]
