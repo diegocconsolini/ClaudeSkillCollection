@@ -4,6 +4,8 @@
 **Date:** October 20, 2025
 **Status:** TESTING IN PROGRESS
 
+⚠️ **Security Note:** All passwords shown in this document are examples for testing purposes only. They do not protect any real sensitive files.
+
 ---
 
 ## Changes Made
