@@ -8,6 +8,7 @@ import sys
 import os
 import hashlib
 import json
+import getpass
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 import pymupdf  # PyMuPDF
@@ -74,13 +75,14 @@ class PDFExtractor:
 
         return toc_data
 
-    def extract_full_pdf(self, pdf_path: str, force: bool = False) -> Dict:
+    def extract_full_pdf(self, pdf_path: str, force: bool = False, password: str = None) -> Dict:
         """
         Extract complete PDF content to cache
 
         Args:
             pdf_path: Path to PDF file
             force: Force re-extraction even if cached
+            password: Password for encrypted PDFs (if None, will prompt interactively)
 
         Returns:
             Dictionary with extraction results and cache location
@@ -115,7 +117,46 @@ class PDFExtractor:
         # Extract PDF
         print(f"Extracting PDF: {pdf_name} ({os.path.getsize(pdf_path) / 1024 / 1024:.2f} MB)")
 
+        # Open PDF (may be encrypted)
         doc = pymupdf.open(pdf_path)
+
+        # Handle password-protected PDFs
+        if doc.is_encrypted:
+            print("🔒 PDF is password protected")
+
+            max_attempts = 3
+            attempt = 0
+
+            while attempt < max_attempts:
+                # Use provided password or prompt interactively
+                if password is None:
+                    password_input = getpass.getpass("Enter password: ")
+                else:
+                    password_input = password
+
+                # Try to authenticate
+                auth_result = doc.authenticate(password_input)
+
+                if auth_result:
+                    print("✓ Password accepted")
+                    break
+                else:
+                    attempt += 1
+                    if password is not None:
+                        # If password was provided via CLI, don't retry
+                        doc.close()
+                        raise PermissionError(f"Invalid password for {pdf_name}")
+                    elif attempt < max_attempts:
+                        print(f"❌ Invalid password. Attempt {attempt}/{max_attempts}")
+                        password = None  # Reset for next attempt
+                    else:
+                        doc.close()
+                        raise PermissionError(f"Failed to unlock {pdf_name} after {max_attempts} attempts")
+
+            # Check if we have access after authentication
+            if doc.metadata is None:
+                doc.close()
+                raise PermissionError(f"PDF is encrypted but could not be unlocked: {pdf_name}")
 
         # Extract metadata
         metadata = self.extract_metadata(doc)
@@ -215,23 +256,43 @@ class PDFExtractor:
 def main():
     """Command-line interface"""
     if len(sys.argv) < 2:
-        print("Usage: python extract_pdf.py <pdf_path> [--force]")
+        print("Usage: python extract_pdf.py <pdf_path> [--force] [--password PASSWORD]")
         print("\nExtracts complete PDF content to cache for efficient processing")
         print("\nOptions:")
-        print("  --force    Force re-extraction even if cached")
+        print("  --force              Force re-extraction even if cached")
+        print("  --password PASSWORD  Password for encrypted PDFs (will prompt if not provided)")
         sys.exit(1)
 
     pdf_path = sys.argv[1]
     force = '--force' in sys.argv
 
+    # Extract password from arguments if provided
+    password = None
+    if '--password' in sys.argv:
+        password_index = sys.argv.index('--password')
+        if password_index + 1 < len(sys.argv):
+            password = sys.argv[password_index + 1]
+        else:
+            print("Error: --password requires a value")
+            sys.exit(1)
+
     extractor = PDFExtractor()
-    result = extractor.extract_full_pdf(pdf_path, force=force)
 
-    print(f"\n{result['message']}")
-    print(f"Cache key: {result['cache_key']}")
+    try:
+        result = extractor.extract_full_pdf(pdf_path, force=force, password=password)
 
-    if result['status'] == 'cached':
-        print("\n💡 Use --force to re-extract")
+        print(f"\n{result['message']}")
+        print(f"Cache key: {result['cache_key']}")
+
+        if result['status'] == 'cached':
+            print("\n💡 Use --force to re-extract")
+    except PermissionError as e:
+        print(f"\n❌ Error: {e}")
+        print("\n💡 Tip: Use --password <password> to provide password via command line")
+        sys.exit(1)
+    except Exception as e:
+        print(f"\n❌ Extraction failed: {e}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
