@@ -1,0 +1,5140 @@
+{
+  "catalog": {
+    "uuid": "964e16fe-9a2f-47fe-86a7-c44e194850ab",
+    "metadata": {
+      "title": "Cloud Controls Matrix Lite",
+      "published": "2024-06-03T17:19:24+00:00",
+      "last-modified": "2024-06-03T17:19:24+00:00",
+      "version": "4.0.12",
+      "oscal-version": "1.0.1",
+      "links": [
+        {
+          "rel": "reference",
+          "href": "https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4/"
+        }
+      ],
+      "roles": [
+        {
+          "id": "creator",
+          "title": "Document creator"
+        },
+        {
+          "id": "contact",
+          "title": "Contact"
+        }
+      ],
+      "parties": [
+        {
+          "type": "organization",
+          "uuid": "1c353f40-c1ba-4730-80d7-1e6efa245dfe",
+          "name": "Cloud Security Alliance",
+          "email-addresses": ["research@cloudsecurityalliance.org"]
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "creator",
+          "party-uuids": ["1c353f40-c1ba-4730-80d7-1e6efa245dfe"]
+        },
+        {
+          "role-id": "contact",
+          "party-uuids": ["1c353f40-c1ba-4730-80d7-1e6efa245dfe"]
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "A_A",
+        "class": "family",
+        "title": "Audit & Assurance",
+        "props": [
+          {
+            "name": "label",
+            "value": "A&A"
+          }
+        ],
+        "controls": [
+          {
+            "id": "A_A-02",
+            "class": "control",
+            "title": "Independent Assessments",
+            "props": [
+              {
+                "name": "label",
+                "value": "A&A-02"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "A_A-02_stm",
+                "name": "statement",
+                "prose": "Conduct independent audit and assurance assessments according to\nrelevant standards at least annually.\n"
+              },
+              {
+                "id": "A_A-02_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "A_A-02.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "A&A-02.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "A_A-02.1_stm",
+                    "name": "statement",
+                    "prose": "Are independent audit and assurance assessments conducted according to relevant\nstandards at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "A_A-03",
+            "class": "control",
+            "title": "Risk Based Planning Assessment",
+            "props": [
+              {
+                "name": "label",
+                "value": "A&A-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "A_A-03_stm",
+                "name": "statement",
+                "prose": "Perform independent audit and assurance assessments according to\nrisk-based plans and policies.\n"
+              },
+              {
+                "id": "A_A-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "A_A-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "A&A-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "A_A-03.1_stm",
+                    "name": "statement",
+                    "prose": "Are independent audit and assurance assessments performed according to risk-based\nplans and policies?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "A_A-04",
+            "class": "control",
+            "title": "Requirements Compliance",
+            "props": [
+              {
+                "name": "label",
+                "value": "A&A-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "A_A-04_stm",
+                "name": "statement",
+                "prose": "Verify compliance with all relevant standards, regulations, legal/contractual,\nand statutory requirements applicable to the audit.\n"
+              },
+              {
+                "id": "A_A-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "A_A-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "A&A-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "A_A-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is compliance verified regarding all relevant standards, regulations, legal/contractual,\nand statutory requirements applicable to the audit?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "A_A-06",
+            "class": "control",
+            "title": "Remediation",
+            "props": [
+              {
+                "name": "label",
+                "value": "A&A-06"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "A_A-06_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\na risk-based corrective action plan to remediate audit findings, review and\nreport remediation status to relevant stakeholders.\n"
+              },
+              {
+                "id": "A_A-06_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "A_A-06.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "A&A-06.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "A_A-06.1_stm",
+                    "name": "statement",
+                    "prose": "Is a risk-based corrective action plan to remediate audit findings established,\ndocumented, approved, communicated, applied, evaluated, and maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "A_A-06.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "A&A-06.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "A_A-06.2_stm",
+                    "name": "statement",
+                    "prose": "Is the remediation status of audit findings reviewed and reported to relevant\nstakeholders?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AIS",
+        "class": "family",
+        "title": "Application & Interface Security",
+        "props": [
+          {
+            "name": "label",
+            "value": "AIS"
+          }
+        ],
+        "controls": [
+          {
+            "id": "AIS-02",
+            "class": "control",
+            "title": "Application Security Baseline Requirements",
+            "props": [
+              {
+                "name": "label",
+                "value": "AIS-02"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "AIS-02_stm",
+                "name": "statement",
+                "prose": "Establish, document and maintain baseline requirements for securing\ndifferent applications.\n"
+              },
+              {
+                "id": "AIS-02_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "AIS-02.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "AIS-02.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "AIS-02.1_stm",
+                    "name": "statement",
+                    "prose": "Are baseline requirements to secure different applications established, documented,\nand maintained?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "AIS-04",
+            "class": "control",
+            "title": "Secure Application Design and Development",
+            "props": [
+              {
+                "name": "label",
+                "value": "AIS-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "AIS-04_stm",
+                "name": "statement",
+                "prose": "Define and implement a SDLC process for application design, development,\ndeployment, and operation in accordance with security requirements defined by\nthe organization.\n"
+              },
+              {
+                "id": "AIS-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "AIS-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "AIS-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "AIS-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is an SDLC process defined and implemented for application design, development,\ndeployment, and operation per organizationally designed security requirements?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "AIS-06",
+            "class": "control",
+            "title": "Automated Secure Application Deployment",
+            "props": [
+              {
+                "name": "label",
+                "value": "AIS-06"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "AIS-06_stm",
+                "name": "statement",
+                "prose": "Establish and implement strategies and capabilities for secure, standardized,\nand compliant application deployment. Automate where possible.\n"
+              },
+              {
+                "id": "AIS-06_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "AIS-06.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "AIS-06.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "AIS-06.1_stm",
+                    "name": "statement",
+                    "prose": "Are strategies and capabilities established and implemented to deploy application\ncode in a secure, standardized, and compliant manner?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "AIS-06.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "AIS-06.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "AIS-06.2_stm",
+                    "name": "statement",
+                    "prose": "Is the deployment and integration of application code automated where possible?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "AIS-07",
+            "class": "control",
+            "title": "Application Vulnerability Remediation",
+            "props": [
+              {
+                "name": "label",
+                "value": "AIS-07"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "AIS-07_stm",
+                "name": "statement",
+                "prose": "Define and implement a process to remediate application security\nvulnerabilities, automating remediation when possible.\n"
+              },
+              {
+                "id": "AIS-07_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "AIS-07.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "AIS-07.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "AIS-07.1_stm",
+                    "name": "statement",
+                    "prose": "Are application security vulnerabilities remediated following defined processes?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "AIS-07.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "AIS-07.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "AIS-07.2_stm",
+                    "name": "statement",
+                    "prose": "Is the remediation of application security vulnerabilities automated when\npossible?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BCR",
+        "class": "family",
+        "title": "Business Continuity Management and Operational Resilience",
+        "props": [
+          {
+            "name": "label",
+            "value": "BCR"
+          }
+        ],
+        "controls": [
+          {
+            "id": "BCR-01",
+            "class": "control",
+            "title": "Business Continuity Management Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "BCR-01"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "BCR-01_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\nbusiness continuity management and operational resilience policies and procedures.\nReview and update the policies and procedures at least annually.\n"
+              },
+              {
+                "id": "BCR-01_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "BCR-01.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "BCR-01.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "BCR-01.1_stm",
+                    "name": "statement",
+                    "prose": "Are business continuity management and operational resilience policies and\nprocedures established, documented, approved, communicated, applied, evaluated,\nand maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "BCR-01.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "BCR-01.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "BCR-01.2_stm",
+                    "name": "statement",
+                    "prose": "Are the policies and procedures reviewed and updated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "BCR-02",
+            "class": "control",
+            "title": "Risk Assessment and Impact Analysis",
+            "props": [
+              {
+                "name": "label",
+                "value": "BCR-02"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "BCR-02_stm",
+                "name": "statement",
+                "prose": "Determine the impact of business disruptions and risks to establish\ncriteria for developing business continuity and operational resilience strategies\nand capabilities.\n"
+              },
+              {
+                "id": "BCR-02_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "BCR-02.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "BCR-02.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "BCR-02.1_stm",
+                    "name": "statement",
+                    "prose": "Are criteria for developing business continuity and operational resiliency\nstrategies and capabilities established based on business disruption and risk\nimpacts?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "BCR-03",
+            "class": "control",
+            "title": "Business Continuity Strategy",
+            "props": [
+              {
+                "name": "label",
+                "value": "BCR-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "BCR-03_stm",
+                "name": "statement",
+                "prose": "Establish strategies to reduce the impact of, withstand, and recover\nfrom business disruptions within risk appetite.\n"
+              },
+              {
+                "id": "BCR-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "BCR-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "BCR-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "BCR-03.1_stm",
+                    "name": "statement",
+                    "prose": "Are strategies developed to reduce the impact of, withstand, and recover from\nbusiness disruptions in accordance with risk appetite?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "BCR-08",
+            "class": "control",
+            "title": "Backup",
+            "props": [
+              {
+                "name": "label",
+                "value": "BCR-08"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "BCR-08_stm",
+                "name": "statement",
+                "prose": "Periodically backup data stored in the cloud. Ensure the confidentiality,\nintegrity and availability of the backup, and verify data restoration from backup\nfor resiliency.\n"
+              },
+              {
+                "id": "BCR-08_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "BCR-08.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "BCR-08.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "BCR-08.1_stm",
+                    "name": "statement",
+                    "prose": "Is cloud data periodically backed up?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "BCR-08.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "BCR-08.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "BCR-08.2_stm",
+                    "name": "statement",
+                    "prose": "Is the confidentiality, integrity, and availability of backup data ensured?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "BCR-08.3",
+                "class": "caiq-question",
+                "title": "CAI Question 3",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "BCR-08.3"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "BCR-08.3_stm",
+                    "name": "statement",
+                    "prose": "Can backups be restored appropriately for resiliency?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "BCR-09",
+            "class": "control",
+            "title": "Disaster Response Plan",
+            "props": [
+              {
+                "name": "label",
+                "value": "BCR-09"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "BCR-09_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\na disaster response plan to recover from natural and man-made disasters. Update\nthe plan at least annually or upon significant changes.\n"
+              },
+              {
+                "id": "BCR-09_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "BCR-09.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "BCR-09.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "BCR-09.1_stm",
+                    "name": "statement",
+                    "prose": "Is a disaster response plan established, documented, approved, applied, evaluated,\nand maintained to ensure recovery from natural and man-made disasters?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "BCR-09.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "BCR-09.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "BCR-09.2_stm",
+                    "name": "statement",
+                    "prose": "Is the disaster response plan updated at least annually, and when significant\nchanges occur?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CCC",
+        "class": "family",
+        "title": "Change Control and Configuration Management",
+        "props": [
+          {
+            "name": "label",
+            "value": "CCC"
+          }
+        ],
+        "controls": [
+          {
+            "id": "CCC-01",
+            "class": "control",
+            "title": "Change Management Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "CCC-01"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CCC-01_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for managing the risks associated with applying changes\nto organization assets, including application, systems, infrastructure, configuration,\netc., regardless of whether the assets are managed internally or externally\n(i.e., outsourced). Review and update the policies and procedures at least annually.\n"
+              },
+              {
+                "id": "CCC-01_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CCC-01.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CCC-01.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CCC-01.1_stm",
+                    "name": "statement",
+                    "prose": "Are risk management policies and procedures associated with changing organizational\nassets including applications, systems, infrastructure, configuration, etc., established,\ndocumented, approved, communicated, applied, evaluated and maintained (regardless\nof whether asset management is internal or external)?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "CCC-01.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CCC-01.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CCC-01.2_stm",
+                    "name": "statement",
+                    "prose": "Are the policies and procedures reviewed and updated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CCC-02",
+            "class": "control",
+            "title": "Quality Testing",
+            "props": [
+              {
+                "name": "label",
+                "value": "CCC-02"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CCC-02_stm",
+                "name": "statement",
+                "prose": "Follow a defined quality change control, approval and testing process\nwith established baselines, testing, and release standards.\n"
+              },
+              {
+                "id": "CCC-02_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CCC-02.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CCC-02.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CCC-02.1_stm",
+                    "name": "statement",
+                    "prose": "Is a defined quality change control, approval and testing process (with established\nbaselines, testing, and release standards) followed?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CCC-04",
+            "class": "control",
+            "title": "Unauthorized Change Protection",
+            "props": [
+              {
+                "name": "label",
+                "value": "CCC-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CCC-04_stm",
+                "name": "statement",
+                "prose": "Restrict the unauthorized addition, removal, update, and management\nof organization assets.\n"
+              },
+              {
+                "id": "CCC-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CCC-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CCC-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CCC-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is the unauthorized addition, removal, update, and management of organization\nassets restricted?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CCC-05",
+            "class": "control",
+            "title": "Change Agreements",
+            "props": [
+              {
+                "name": "label",
+                "value": "CCC-05"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CCC-05_stm",
+                "name": "statement",
+                "prose": "Include provisions limiting changes directly impacting CSCs owned\nenvironments/tenants to explicitly authorized requests within service level\nagreements between CSPs and CSCs.\n"
+              },
+              {
+                "id": "CCC-05_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CCC-05.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CCC-05.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CCC-05.1_stm",
+                    "name": "statement",
+                    "prose": "Are provisions to limit changes that directly impact CSC-owned environments\nand require tenants to authorize requests explicitly included within the service\nlevel agreements (SLAs) between CSPs and CSCs?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CCC-06",
+            "class": "control",
+            "title": "Change Management Baseline",
+            "props": [
+              {
+                "name": "label",
+                "value": "CCC-06"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CCC-06_stm",
+                "name": "statement",
+                "prose": "Establish change management baselines for all relevant authorized\nchanges on organization assets.\n"
+              },
+              {
+                "id": "CCC-06_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CCC-06.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CCC-06.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CCC-06.1_stm",
+                    "name": "statement",
+                    "prose": "Are change management baselines established for all relevant authorized changes\non organizational assets?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CCC-07",
+            "class": "control",
+            "title": "Detection of Baseline Deviation",
+            "props": [
+              {
+                "name": "label",
+                "value": "CCC-07"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CCC-07_stm",
+                "name": "statement",
+                "prose": "Implement detection measures with proactive notification in case\nof changes deviating from the established baseline.\n"
+              },
+              {
+                "id": "CCC-07_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CCC-07.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CCC-07.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CCC-07.1_stm",
+                    "name": "statement",
+                    "prose": "Are detection measures implemented with proactive notification if changes\ndeviate from established baselines?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CCC-09",
+            "class": "control",
+            "title": "Change Restoration",
+            "props": [
+              {
+                "name": "label",
+                "value": "CCC-09"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CCC-09_stm",
+                "name": "statement",
+                "prose": "Define and implement a process to proactively roll back changes to\na previous known good state in case of errors or security concerns.\n"
+              },
+              {
+                "id": "CCC-09_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CCC-09.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CCC-09.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CCC-09.1_stm",
+                    "name": "statement",
+                    "prose": "Is a process to proactively roll back changes to a previously known \"good\nstate\" defined and implemented in case of errors or security concerns?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CEK",
+        "class": "family",
+        "title": "Cryptography, Encryption & Key Management",
+        "props": [
+          {
+            "name": "label",
+            "value": "CEK"
+          }
+        ],
+        "controls": [
+          {
+            "id": "CEK-01",
+            "class": "control",
+            "title": "Encryption and Key Management Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "CEK-01"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CEK-01_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for Cryptography, Encryption and Key Management. Review\nand update the policies and procedures at least annually.\n"
+              },
+              {
+                "id": "CEK-01_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CEK-01.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-01.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-01.1_stm",
+                    "name": "statement",
+                    "prose": "Are cryptography, encryption, and key management policies and procedures established,\ndocumented, approved, communicated, applied, evaluated, and maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "CEK-01.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-01.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-01.2_stm",
+                    "name": "statement",
+                    "prose": "Are cryptography, encryption, and key management policies and procedures reviewed\nand updated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CEK-02",
+            "class": "control",
+            "title": "CEK Roles and Responsibilities",
+            "props": [
+              {
+                "name": "label",
+                "value": "CEK-02"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CEK-02_stm",
+                "name": "statement",
+                "prose": "Define and implement cryptographic, encryption and key management\nroles and responsibilities.\n"
+              },
+              {
+                "id": "CEK-02_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CEK-02.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-02.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-02.1_stm",
+                    "name": "statement",
+                    "prose": "Are cryptography, encryption, and key management roles and responsibilities\ndefined and implemented?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CEK-03",
+            "class": "control",
+            "title": "Data Encryption",
+            "props": [
+              {
+                "name": "label",
+                "value": "CEK-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CEK-03_stm",
+                "name": "statement",
+                "prose": "Provide cryptographic protection to data at-rest and in-transit,\nusing cryptographic libraries certified to approved standards.\n"
+              },
+              {
+                "id": "CEK-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CEK-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-03.1_stm",
+                    "name": "statement",
+                    "prose": "Are data at-rest and in-transit cryptographically protected using cryptographic\nlibraries certified to approved standards?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CEK-04",
+            "class": "control",
+            "title": "Encryption Algorithm",
+            "props": [
+              {
+                "name": "label",
+                "value": "CEK-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CEK-04_stm",
+                "name": "statement",
+                "prose": "Use encryption algorithms that are appropriate for data protection,\nconsidering the classification of data, associated risks, and usability of the\nencryption technology.\n"
+              },
+              {
+                "id": "CEK-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CEK-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-04.1_stm",
+                    "name": "statement",
+                    "prose": "Are appropriate data protection encryption algorithms used that consider data\nclassification, associated risks, and encryption technology usability?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CEK-05",
+            "class": "control",
+            "title": "Encryption Change Management",
+            "props": [
+              {
+                "name": "label",
+                "value": "CEK-05"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CEK-05_stm",
+                "name": "statement",
+                "prose": "Establish a standard change management procedure, to accommodate\nchanges from internal and external sources, for review, approval, implementation\nand communication of cryptographic, encryption and key management technology\nchanges.\n"
+              },
+              {
+                "id": "CEK-05_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CEK-05.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-05.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-05.1_stm",
+                    "name": "statement",
+                    "prose": "Are standard change management procedures established to review, approve,\nimplement and communicate cryptography, encryption, and key management technology\nchanges that accommodate internal and external sources?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CEK-10",
+            "class": "control",
+            "title": "Key Generation",
+            "props": [
+              {
+                "name": "label",
+                "value": "CEK-10"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CEK-10_stm",
+                "name": "statement",
+                "prose": "Generate Cryptographic keys using industry accepted cryptographic\nlibraries specifying the algorithm strength and the random number generator\nused.\n"
+              },
+              {
+                "id": "CEK-10_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CEK-10.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-10.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-10.1_stm",
+                    "name": "statement",
+                    "prose": "Are cryptographic keys generated using industry-accepted and approved cryptographic\nlibraries that specify algorithm strength and random number generator specifications?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CEK-12",
+            "class": "control",
+            "title": "Key Rotation",
+            "props": [
+              {
+                "name": "label",
+                "value": "CEK-12"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CEK-12_stm",
+                "name": "statement",
+                "prose": "Rotate cryptographic keys in accordance with the calculated cryptoperiod,\nwhich includes provisions for considering the risk of information disclosure\nand legal and regulatory requirements.\n"
+              },
+              {
+                "id": "CEK-12_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CEK-12.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-12.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-12.1_stm",
+                    "name": "statement",
+                    "prose": "Are cryptographic keys rotated based on a cryptoperiod calculated while considering\ninformation disclosure risks and legal and regulatory requirements?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CEK-13",
+            "class": "control",
+            "title": "Key Revocation",
+            "props": [
+              {
+                "name": "label",
+                "value": "CEK-13"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CEK-13_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures to revoke and remove cryptographic keys prior to the end of its established\ncryptoperiod, when a key is compromised, or an entity is no longer part of the\norganization, which include provisions for legal and regulatory requirements.\n"
+              },
+              {
+                "id": "CEK-13_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CEK-13.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-13.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-13.1_stm",
+                    "name": "statement",
+                    "prose": "Are cryptographic keys revoked and removed before the end of the established\ncryptoperiod (when a key is compromised, or an entity is no longer part of the\norganization) per defined, implemented, and evaluated processes, procedures, and\ntechnical measures to include legal and regulatory requirement provisions?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "CEK-14",
+            "class": "control",
+            "title": "Key Destruction",
+            "props": [
+              {
+                "name": "label",
+                "value": "CEK-14"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "CEK-14_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures to destroy keys stored outside a secure environment and revoke keys\nstored in Hardware Security Modules (HSMs) when they are no longer needed, which\ninclude provisions for legal and regulatory requirements.\n"
+              },
+              {
+                "id": "CEK-14_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "CEK-14.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "CEK-14.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "CEK-14.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures and technical measures to destroy unneeded keys\ndefined, implemented and evaluated to address key destruction outside secure environments,\nrevocation of keys stored in hardware security modules (HSMs), and include applicable\nlegal and regulatory requirement provisions?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DCS",
+        "class": "family",
+        "title": "Datacenter Security",
+        "props": [
+          {
+            "name": "label",
+            "value": "DCS"
+          }
+        ],
+        "controls": [
+          {
+            "id": "DCS-03",
+            "class": "control",
+            "title": "Secure Area Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "DCS-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DCS-03_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for maintaining a safe and secure working environment\nin offices, rooms, and facilities. Review and update the policies and procedures\nat least annually.\n"
+              },
+              {
+                "id": "DCS-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DCS-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DCS-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DCS-03.1_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures for maintaining a safe and secure working environment\n(in offices, rooms, and facilities) established, documented, approved, communicated,\nenforced, and maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "DCS-03.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DCS-03.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DCS-03.2_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures for maintaining safe, secure working environments\n(e.g., offices, rooms) reviewed and updated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DCS-05",
+            "class": "control",
+            "title": "Assets Classification",
+            "props": [
+              {
+                "name": "label",
+                "value": "DCS-05"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DCS-05_stm",
+                "name": "statement",
+                "prose": "Classify and document the physical, and logical assets (e.g., applications)\nbased on the organizational business risk.\n"
+              },
+              {
+                "id": "DCS-05_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DCS-05.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DCS-05.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DCS-05.1_stm",
+                    "name": "statement",
+                    "prose": "Is the classification and documentation of physical and logical assets based\non the organizational business risk?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DCS-06",
+            "class": "control",
+            "title": "Assets Cataloguing and Tracking",
+            "props": [
+              {
+                "name": "label",
+                "value": "DCS-06"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DCS-06_stm",
+                "name": "statement",
+                "prose": "Catalogue and track all relevant physical and logical assets located\nat all of the CSP's sites within a secured system.\n"
+              },
+              {
+                "id": "DCS-06_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DCS-06.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DCS-06.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DCS-06.1_stm",
+                    "name": "statement",
+                    "prose": "Are all relevant physical and logical assets at all CSP sites cataloged and\ntracked within a secured system?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DSP",
+        "class": "family",
+        "title": "Data Security and Privacy Lifecycle Management",
+        "props": [
+          {
+            "name": "label",
+            "value": "DSP"
+          }
+        ],
+        "controls": [
+          {
+            "id": "DSP-01",
+            "class": "control",
+            "title": "Security and Privacy Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-01"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-01_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for the classification, protection and handling of data\nthroughout its lifecycle, and according to all applicable laws and regulations,\nstandards, and risk level. Review and update the policies and procedures at\nleast annually.\n"
+              },
+              {
+                "id": "DSP-01_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-01.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-01.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-01.1_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures established, documented, approved, communicated,\nenforced, evaluated, and maintained for the classification, protection, and handling\nof data throughout its lifecycle according to all applicable laws and regulations,\nstandards, and risk level?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "DSP-01.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-01.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-01.2_stm",
+                    "name": "statement",
+                    "prose": "Are data security and privacy policies and procedures reviewed and updated\nat least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-03",
+            "class": "control",
+            "title": "Data Inventory",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-03_stm",
+                "name": "statement",
+                "prose": "Create and maintain a data inventory, at least for any sensitive\ndata and personal data.\n"
+              },
+              {
+                "id": "DSP-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-03.1_stm",
+                    "name": "statement",
+                    "prose": "Is a data inventory created and maintained for sensitive and personal information\n(at a minimum)?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-04",
+            "class": "control",
+            "title": "Data Classification",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-04_stm",
+                "name": "statement",
+                "prose": "Classify data according to its type and sensitivity level.\n"
+              },
+              {
+                "id": "DSP-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is data classified according to type and sensitivity levels?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-05",
+            "class": "control",
+            "title": "Data Flow Documentation",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-05"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-05_stm",
+                "name": "statement",
+                "prose": "Create data flow documentation to identify what data is processed,\nstored or transmitted where. Review data flow documentation at defined intervals,\nat least annually, and after any change.\n"
+              },
+              {
+                "id": "DSP-05_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-05.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-05.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-05.1_stm",
+                    "name": "statement",
+                    "prose": "Is data flow documentation created to identify what data is processed and\nwhere it is stored and transmitted?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "DSP-05.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-05.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-05.2_stm",
+                    "name": "statement",
+                    "prose": "Is data flow documentation reviewed at defined intervals, at least annually,\nand after any change?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-06",
+            "class": "control",
+            "title": "Data Ownership and Stewardship",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-06"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-06_stm",
+                "name": "statement",
+                "prose": "Document ownership and stewardship of all relevant documented personal\nand sensitive data. Perform review at least annually.\n"
+              },
+              {
+                "id": "DSP-06_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-06.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-06.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-06.1_stm",
+                    "name": "statement",
+                    "prose": "Is the ownership and stewardship of all relevant personal and sensitive data\ndocumented?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "DSP-06.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-06.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-06.2_stm",
+                    "name": "statement",
+                    "prose": "Is data ownership and stewardship documentation reviewed at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-07",
+            "class": "control",
+            "title": "Data Protection by Design and Default",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-07"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-07_stm",
+                "name": "statement",
+                "prose": "Develop systems, products, and business practices based upon a principle\nof security by design and industry best practices.\n"
+              },
+              {
+                "id": "DSP-07_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-07.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-07.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-07.1_stm",
+                    "name": "statement",
+                    "prose": "Are systems, products, and business practices based on security principles\nby design and per industry best practices?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-08",
+            "class": "control",
+            "title": "Data Privacy by Design and Default",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-08"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-08_stm",
+                "name": "statement",
+                "prose": "Develop systems, products, and business practices based upon a principle\nof privacy by design and industry best practices. Ensure that systems' privacy\nsettings are configured by default, according to all applicable laws and regulations.\n"
+              },
+              {
+                "id": "DSP-08_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-08.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-08.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-08.1_stm",
+                    "name": "statement",
+                    "prose": "Are systems, products, and business practices based on privacy principles\nby design and according to industry best practices?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "DSP-08.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-08.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-08.2_stm",
+                    "name": "statement",
+                    "prose": "Are systems' privacy settings configured by default and according to all applicable\nlaws and regulations?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-10",
+            "class": "control",
+            "title": "Sensitive Data Transfer",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-10"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-10_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures that ensure any transfer of personal or sensitive data is protected\nfrom unauthorized access and only processed within scope as permitted by the\nrespective laws and regulations.\n"
+              },
+              {
+                "id": "DSP-10_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-10.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-10.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-10.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to ensure any transfer of personal or sensitive data is protected from\nunauthorized access and only processed within scope (as permitted by respective\nlaws and regulations)?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-11",
+            "class": "control",
+            "title": "Personal Data Access, Reversal, Rectification and Deletion",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-11"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-11_stm",
+                "name": "statement",
+                "prose": "Define and implement, processes, procedures and technical measures\nto enable data subjects to request access to, modification, or deletion of their\npersonal data, according to any applicable laws and regulations.\n"
+              },
+              {
+                "id": "DSP-11_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-11.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-11.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-11.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to enable data subjects to request access to, modify, or delete personal\ndata (per applicable laws and regulations)?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-12",
+            "class": "control",
+            "title": "Limitation of Purpose in Personal Data Processing",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-12"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-12_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures to ensure that personal data is processed according to any applicable\nlaws and regulations and for the purposes declared to the data subject.\n"
+              },
+              {
+                "id": "DSP-12_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-12.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-12.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-12.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to ensure personal data is processed (per applicable laws and regulations\nand for the purposes declared to the data subject)?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-13",
+            "class": "control",
+            "title": "Personal Data Sub-processing",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-13"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-13_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures for the transfer and sub-processing of personal data within the service\nsupply chain, according to any applicable laws and regulations.\n"
+              },
+              {
+                "id": "DSP-13_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-13.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-13.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-13.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated for the transfer and sub-processing of personal data within the service\nsupply chain (according to any applicable laws and regulations)?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-14",
+            "class": "control",
+            "title": "Disclosure of Data Sub-processors",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-14"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-14_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures to disclose the details of any personal or sensitive data access by\nsub-processors to the data owner prior to initiation of that processing.\n"
+              },
+              {
+                "id": "DSP-14_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-14.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-14.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-14.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to disclose details to the data owner of any personal or sensitive data\naccess by sub-processors before processing initiation?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-16",
+            "class": "control",
+            "title": "Data Retention and Deletion",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-16"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-16_stm",
+                "name": "statement",
+                "prose": "Data retention, archiving and deletion is managed in accordance with\nbusiness requirements, applicable laws and regulations.\n"
+              },
+              {
+                "id": "DSP-16_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-16.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-16.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-16.1_stm",
+                    "name": "statement",
+                    "prose": "Do data retention, archiving, and deletion practices follow business requirements,\napplicable laws, and regulations?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-17",
+            "class": "control",
+            "title": "Sensitive Data Protection",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-17"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-17_stm",
+                "name": "statement",
+                "prose": "Define and implement, processes, procedures and technical measures\nto protect sensitive data throughout it's lifecycle.\n"
+              },
+              {
+                "id": "DSP-17_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-17.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-17.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-17.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined and implemented\nto protect sensitive data throughout its lifecycle?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "DSP-19",
+            "class": "control",
+            "title": "Data Location",
+            "props": [
+              {
+                "name": "label",
+                "value": "DSP-19"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "DSP-19_stm",
+                "name": "statement",
+                "prose": "Define and implement, processes, procedures and technical measures\nto specify and document the physical locations of data, including any locations\nin which data is processed or backed up.\n"
+              },
+              {
+                "id": "DSP-19_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "DSP-19.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "DSP-19.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "DSP-19.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined and implemented\nto specify and document physical data locations, including locales where data\nis processed or backed up?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GRC",
+        "class": "family",
+        "title": "Governance, Risk and Compliance",
+        "props": [
+          {
+            "name": "label",
+            "value": "GRC"
+          }
+        ],
+        "controls": [
+          {
+            "id": "GRC-01",
+            "class": "control",
+            "title": "Governance Program Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "GRC-01"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "GRC-01_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for an information governance program, which is sponsored\nby the leadership of the organization. Review and update the policies and procedures\nat least annually.\n"
+              },
+              {
+                "id": "GRC-01_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "GRC-01.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "GRC-01.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "GRC-01.1_stm",
+                    "name": "statement",
+                    "prose": "Are information governance program policies and procedures sponsored by organizational\nleadership established, documented, approved, communicated, applied, evaluated,\nand maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "GRC-01.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "GRC-01.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "GRC-01.2_stm",
+                    "name": "statement",
+                    "prose": "Are the policies and procedures reviewed and updated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "GRC-02",
+            "class": "control",
+            "title": "Risk Management Program",
+            "props": [
+              {
+                "name": "label",
+                "value": "GRC-02"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "GRC-02_stm",
+                "name": "statement",
+                "prose": "Establish a formal, documented, and leadership-sponsored Enterprise\nRisk Management (ERM) program that includes policies and procedures for identification,\nevaluation, ownership, treatment, and acceptance of cloud security and privacy\nrisks.\n"
+              },
+              {
+                "id": "GRC-02_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "GRC-02.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "GRC-02.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "GRC-02.1_stm",
+                    "name": "statement",
+                    "prose": "Is there an established formal, documented, and leadership-sponsored enterprise\nrisk management (ERM) program that includes policies and procedures for identification,\nevaluation, ownership, treatment, and acceptance of cloud security and privacy\nrisks?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "GRC-06",
+            "class": "control",
+            "title": "Governance Responsibility Model",
+            "props": [
+              {
+                "name": "label",
+                "value": "GRC-06"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "GRC-06_stm",
+                "name": "statement",
+                "prose": "Define and document roles and responsibilities for planning, implementing,\noperating, assessing, and improving governance programs.\n"
+              },
+              {
+                "id": "GRC-06_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "GRC-06.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "GRC-06.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "GRC-06.1_stm",
+                    "name": "statement",
+                    "prose": "Are roles and responsibilities for planning, implementing, operating, assessing,\nand improving governance programs defined and documented?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "GRC-07",
+            "class": "control",
+            "title": "Information System Regulatory Mapping",
+            "props": [
+              {
+                "name": "label",
+                "value": "GRC-07"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "GRC-07_stm",
+                "name": "statement",
+                "prose": "Identify and document all relevant standards, regulations, legal/contractual,\nand statutory requirements, which are applicable to your organization.\n"
+              },
+              {
+                "id": "GRC-07_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "GRC-07.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "GRC-07.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "GRC-07.1_stm",
+                    "name": "statement",
+                    "prose": "Are all relevant standards, regulations, legal/contractual, and statutory\nrequirements applicable to your organization identified and documented?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HRS",
+        "class": "family",
+        "title": "Human Resources",
+        "props": [
+          {
+            "name": "label",
+            "value": "HRS"
+          }
+        ],
+        "controls": [
+          {
+            "id": "HRS-03",
+            "class": "control",
+            "title": "Clean Desk Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "HRS-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "HRS-03_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures that require unattended workspaces to not have openly\nvisible confidential data. Review and update the policies and procedures at\nleast annually.\n"
+              },
+              {
+                "id": "HRS-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "HRS-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "HRS-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "HRS-03.1_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures requiring unattended workspaces to conceal confidential\ndata established, documented, approved, communicated, applied, evaluated, and\nmaintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "HRS-03.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "HRS-03.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "HRS-03.2_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures requiring unattended workspaces to conceal confidential\ndata reviewed and updated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "HRS-04",
+            "class": "control",
+            "title": "Remote and Home Working Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "HRS-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "HRS-04_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures to protect information accessed, processed or stored\nat remote sites and locations. Review and update the policies and procedures\nat least annually.\n"
+              },
+              {
+                "id": "HRS-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "HRS-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "HRS-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "HRS-04.1_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures to protect information accessed, processed, or\nstored at remote sites and locations established, documented, approved, communicated,\napplied, evaluated, and maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "HRS-04.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "HRS-04.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "HRS-04.2_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures to protect information accessed, processed, or\nstored at remote sites and locations reviewed and updated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "HRS-11",
+            "class": "control",
+            "title": "Security Awareness Training",
+            "props": [
+              {
+                "name": "label",
+                "value": "HRS-11"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "HRS-11_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\na security awareness training program for all employees of the organization\nand provide regular training updates.\n"
+              },
+              {
+                "id": "HRS-11_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "HRS-11.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "HRS-11.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "HRS-11.1_stm",
+                    "name": "statement",
+                    "prose": "Is a security awareness training program for all employees of the organization\nestablished, documented, approved, communicated, applied, evaluated and maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "HRS-11.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "HRS-11.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "HRS-11.2_stm",
+                    "name": "statement",
+                    "prose": "Are regular security awareness training updates provided?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "IAM",
+        "class": "family",
+        "title": "Identity & Access Management",
+        "props": [
+          {
+            "name": "label",
+            "value": "IAM"
+          }
+        ],
+        "controls": [
+          {
+            "id": "IAM-01",
+            "class": "control",
+            "title": "Identity and Access Management Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-01"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-01_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, implement, apply, evaluate\nand maintain policies and procedures for identity and access management. Review\nand update the policies and procedures at least annually.\n"
+              },
+              {
+                "id": "IAM-01_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-01.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-01.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-01.1_stm",
+                    "name": "statement",
+                    "prose": "Are identity and access management policies and procedures established, documented,\napproved, communicated, implemented, applied, evaluated, and maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IAM-01.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-01.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-01.2_stm",
+                    "name": "statement",
+                    "prose": "Are identity and access management policies and procedures reviewed and updated\nat least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IAM-03",
+            "class": "control",
+            "title": "Identity Inventory",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-03_stm",
+                "name": "statement",
+                "prose": "Manage, store, and review the information of system identities, and\nlevel of access.\n"
+              },
+              {
+                "id": "IAM-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-03.1_stm",
+                    "name": "statement",
+                    "prose": "Is system identity information and levels of access managed, stored, and reviewed?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IAM-04",
+            "class": "control",
+            "title": "Separation of Duties",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-04_stm",
+                "name": "statement",
+                "prose": "Employ the separation of duties principle when implementing information\nsystem access.\n"
+              },
+              {
+                "id": "IAM-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is the separation of duties principle employed when implementing information\nsystem access?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IAM-05",
+            "class": "control",
+            "title": "Least Privilege",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-05"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-05_stm",
+                "name": "statement",
+                "prose": "Employ the least privilege principle when implementing information\nsystem access.\n"
+              },
+              {
+                "id": "IAM-05_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-05.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-05.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-05.1_stm",
+                    "name": "statement",
+                    "prose": "Is the least privilege principle employed when implementing information system\naccess?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IAM-06",
+            "class": "control",
+            "title": "User Access Provisioning",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-06"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-06_stm",
+                "name": "statement",
+                "prose": "Define and implement a user access provisioning process which authorizes,\nrecords, and communicates access changes to data and assets.\n"
+              },
+              {
+                "id": "IAM-06_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-06.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-06.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-06.1_stm",
+                    "name": "statement",
+                    "prose": "Is a user access provisioning process defined and implemented which authorizes,\nrecords, and communicates data and assets access changes?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IAM-07",
+            "class": "control",
+            "title": "User Access Changes and Revocation",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-07"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-07_stm",
+                "name": "statement",
+                "prose": "De-provision or respectively modify access of movers / leavers or\nsystem identity changes in a timely manner in order to effectively adopt and\ncommunicate identity and access management policies.\n"
+              },
+              {
+                "id": "IAM-07_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-07.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-07.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-07.1_stm",
+                    "name": "statement",
+                    "prose": "Is a process in place to de-provision or modify the access, in a timely manner,\nof movers / leavers or system identity changes, to effectively adopt and communicate\nidentity and access management policies?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IAM-08",
+            "class": "control",
+            "title": "User Access Review",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-08"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-08_stm",
+                "name": "statement",
+                "prose": "Review and revalidate user access for least privilege and separation\nof duties with a frequency that is commensurate with organizational risk tolerance.\n"
+              },
+              {
+                "id": "IAM-08_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-08.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-08.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-08.1_stm",
+                    "name": "statement",
+                    "prose": "Are reviews and revalidation of user access for least privilege and separation\nof duties completed with a frequency commensurate with organizational risk tolerance?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IAM-09",
+            "class": "control",
+            "title": "Segregation of Privileged Access Roles",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-09"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-09_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures for the segregation of privileged access roles such that administrative\naccess to data, encryption and key management capabilities and logging capabilities\nare distinct and separated.\n"
+              },
+              {
+                "id": "IAM-09_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-09.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-09.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-09.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures for the segregation of privileged\naccess roles defined, implemented, and evaluated such that administrative data\naccess, encryption, key management capabilities, and logging capabilities are\ndistinct and separate?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IAM-10",
+            "class": "control",
+            "title": "Management of Privileged Access Roles",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-10"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-10_stm",
+                "name": "statement",
+                "prose": "Define and implement an access process to ensure privileged access\nroles and rights are granted for a time limited period, and implement procedures\nto prevent the culmination of segregated privileged access.\n"
+              },
+              {
+                "id": "IAM-10_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-10.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-10.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-10.1_stm",
+                    "name": "statement",
+                    "prose": "Is an access process defined and implemented to ensure privileged access roles\nand rights are granted for a limited period?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IAM-10.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-10.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-10.2_stm",
+                    "name": "statement",
+                    "prose": "Are procedures implemented to prevent the culmination of segregated privileged\naccess?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IAM-14",
+            "class": "control",
+            "title": "Strong Authentication",
+            "props": [
+              {
+                "name": "label",
+                "value": "IAM-14"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IAM-14_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures for authenticating access to systems, application and data assets,\nincluding multifactor authentication for at least privileged user and sensitive\ndata access. Adopt digital certificates or alternatives which achieve an equivalent\nlevel of security for system identities.\n"
+              },
+              {
+                "id": "IAM-14_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IAM-14.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-14.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-14.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures for authenticating access\nto systems, application, and data assets including multifactor authentication\nfor a least-privileged user and sensitive data access defined, implemented, and\nevaluated?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IAM-14.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IAM-14.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IAM-14.2_stm",
+                    "name": "statement",
+                    "prose": "Are digital certificates or alternatives that achieve an equivalent security\nlevel for system identities adopted?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "IPY",
+        "class": "family",
+        "title": "Interoperability & Portability",
+        "props": [
+          {
+            "name": "label",
+            "value": "IPY"
+          }
+        ],
+        "controls": [
+          {
+            "id": "IPY-01",
+            "class": "control",
+            "title": "Interoperability and Portability Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "IPY-01"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IPY-01_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for interoperability and portability including\nrequirements for:\na. Communications between application interfaces\nb. Information processing interoperability\nc. Application development portability\nd. Information/Data exchange, usage, portability, integrity, and persistence\nReview and update the policies and procedures at least annually.\n"
+              },
+              {
+                "id": "IPY-01_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IPY-01.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IPY-01.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IPY-01.1_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained for communications between application services\n(e.g., APIs)?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IPY-01.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IPY-01.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IPY-01.2_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained for information processing interoperability?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IPY-01.3",
+                "class": "caiq-question",
+                "title": "CAI Question 3",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IPY-01.3"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IPY-01.3_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained for application development portability?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IPY-01.4",
+                "class": "caiq-question",
+                "title": "CAI Question 4",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IPY-01.4"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IPY-01.4_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures established, documented, approved, communicated,\napplied, evaluated, and maintained for information/data exchange, usage, portability,\nintegrity, and persistence?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IPY-01.5",
+                "class": "caiq-question",
+                "title": "CAI Question 5",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IPY-01.5"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IPY-01.5_stm",
+                    "name": "statement",
+                    "prose": "Are interoperability and portability policies and procedures reviewed and\nupdated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "IVS",
+        "class": "family",
+        "title": "Infrastructure & Virtualization Security",
+        "props": [
+          {
+            "name": "label",
+            "value": "IVS"
+          }
+        ],
+        "controls": [
+          {
+            "id": "IVS-03",
+            "class": "control",
+            "title": "Network Security",
+            "props": [
+              {
+                "name": "label",
+                "value": "IVS-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IVS-03_stm",
+                "name": "statement",
+                "prose": "Monitor, encrypt and restrict communications between environments\nto only authenticated and authorized connections, as justified by the business.\nReview these configurations at least annually, and support them by a documented\njustification of all allowed services, protocols, ports, and compensating controls.\n"
+              },
+              {
+                "id": "IVS-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IVS-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IVS-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IVS-03.1_stm",
+                    "name": "statement",
+                    "prose": "Are communications between environments monitored?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IVS-03.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IVS-03.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IVS-03.2_stm",
+                    "name": "statement",
+                    "prose": "Are communications between environments encrypted?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IVS-03.3",
+                "class": "caiq-question",
+                "title": "CAI Question 3",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IVS-03.3"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IVS-03.3_stm",
+                    "name": "statement",
+                    "prose": "Are communications between environments restricted to only authenticated and\nauthorized connections, as justified by the business?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IVS-03.4",
+                "class": "caiq-question",
+                "title": "CAI Question 4",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IVS-03.4"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IVS-03.4_stm",
+                    "name": "statement",
+                    "prose": "Are network configurations reviewed at least annually?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "IVS-03.5",
+                "class": "caiq-question",
+                "title": "CAI Question 5",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IVS-03.5"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IVS-03.5_stm",
+                    "name": "statement",
+                    "prose": "Are network configurations supported by the documented justification of all\nallowed services, protocols, ports, and compensating controls?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IVS-04",
+            "class": "control",
+            "title": "OS Hardening and Base Controls",
+            "props": [
+              {
+                "name": "label",
+                "value": "IVS-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IVS-04_stm",
+                "name": "statement",
+                "prose": "Harden host and guest OS, hypervisor or infrastructure control plane\naccording to their respective best practices, and supported by technical controls,\nas part of a security baseline.\n"
+              },
+              {
+                "id": "IVS-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IVS-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IVS-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IVS-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is every host and guest OS, hypervisor, or infrastructure control plane hardened\n(according to their respective best practices) and supported by technical controls\nas part of a security baseline?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IVS-06",
+            "class": "control",
+            "title": "Segmentation and Segregation",
+            "props": [
+              {
+                "name": "label",
+                "value": "IVS-06"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IVS-06_stm",
+                "name": "statement",
+                "prose": "Design, develop, deploy and configure applications and infrastructures\nsuch that CSP and CSC (tenant) user access and intra-tenant access is appropriately\nsegmented and segregated, monitored and restricted from other tenants.\n"
+              },
+              {
+                "id": "IVS-06_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IVS-06.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IVS-06.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IVS-06.1_stm",
+                    "name": "statement",
+                    "prose": "Are applications and infrastructures designed, developed, deployed, and configured\nsuch that CSP and CSC (tenant) user access and intra-tenant access is appropriately\nsegmented, segregated, monitored, and restricted from other tenants?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IVS-07",
+            "class": "control",
+            "title": "Migration to Cloud Environments",
+            "props": [
+              {
+                "name": "label",
+                "value": "IVS-07"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IVS-07_stm",
+                "name": "statement",
+                "prose": "Use secure and encrypted communication channels when migrating servers,\nservices, applications, or data to cloud environments. Such channels must include\nonly up-to-date and approved protocols.\n"
+              },
+              {
+                "id": "IVS-07_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IVS-07.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IVS-07.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IVS-07.1_stm",
+                    "name": "statement",
+                    "prose": "Are secure and encrypted communication channels including only up-to-date\nand approved protocols used when migrating servers, services, applications, or\ndata to cloud environments?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "IVS-09",
+            "class": "control",
+            "title": "Network Defense",
+            "props": [
+              {
+                "name": "label",
+                "value": "IVS-09"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "IVS-09_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and defense-in-depth\ntechniques for protection, detection, and timely response to network-based attacks.\n"
+              },
+              {
+                "id": "IVS-09_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "IVS-09.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "IVS-09.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "IVS-09.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and defense-in-depth techniques defined, implemented,\nand evaluated for protection, detection, and timely response to network-based\nattacks?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "LOG",
+        "class": "family",
+        "title": "Logging and Monitoring",
+        "props": [
+          {
+            "name": "label",
+            "value": "LOG"
+          }
+        ],
+        "controls": [
+          {
+            "id": "LOG-01",
+            "class": "control",
+            "title": "Logging and Monitoring Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "LOG-01"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "LOG-01_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures for logging and monitoring. Review and update the policies\nand procedures at least annually.\n"
+              },
+              {
+                "id": "LOG-01_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "LOG-01.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "LOG-01.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "LOG-01.1_stm",
+                    "name": "statement",
+                    "prose": "Are logging and monitoring policies and procedures established, documented,\napproved, communicated, applied, evaluated, and maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "LOG-01.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "LOG-01.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "LOG-01.2_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures reviewed and updated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "LOG-04",
+            "class": "control",
+            "title": "Audit Logs Access and Accountability",
+            "props": [
+              {
+                "name": "label",
+                "value": "LOG-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "LOG-04_stm",
+                "name": "statement",
+                "prose": "Restrict audit logs access to authorized personnel and maintain records\nthat provide unique access accountability.\n"
+              },
+              {
+                "id": "LOG-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "LOG-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "LOG-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "LOG-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is access to audit logs restricted to authorized personnel, and are records\nmaintained to provide unique access accountability?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "LOG-05",
+            "class": "control",
+            "title": "Audit Logs Monitoring and Response",
+            "props": [
+              {
+                "name": "label",
+                "value": "LOG-05"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "LOG-05_stm",
+                "name": "statement",
+                "prose": "Monitor security audit logs to detect activity outside of typical\nor expected patterns. Establish and follow a defined process to review and take\nappropriate and timely actions on detected anomalies.\n"
+              },
+              {
+                "id": "LOG-05_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "LOG-05.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "LOG-05.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "LOG-05.1_stm",
+                    "name": "statement",
+                    "prose": "Are security audit logs monitored to detect activity outside of typical or\nexpected patterns?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "LOG-05.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "LOG-05.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "LOG-05.2_stm",
+                    "name": "statement",
+                    "prose": "Is a process established and followed to review and take appropriate and timely\nactions on detected anomalies?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SEF",
+        "class": "family",
+        "title": "Security Incident Management, E-Discovery, & Cloud Forensics",
+        "props": [
+          {
+            "name": "label",
+            "value": "SEF"
+          }
+        ],
+        "controls": [
+          {
+            "id": "SEF-03",
+            "class": "control",
+            "title": "Incident Response Plans",
+            "props": [
+              {
+                "name": "label",
+                "value": "SEF-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "SEF-03_stm",
+                "name": "statement",
+                "prose": "'Establish, document, approve, communicate, apply, evaluate and maintain\na security incident response plan, which includes but is not limited to: relevant\ninternal departments, impacted CSCs, and other business critical relationships\n(such as supply-chain) that may be impacted.'\n"
+              },
+              {
+                "id": "SEF-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "SEF-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "SEF-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "SEF-03.1_stm",
+                    "name": "statement",
+                    "prose": "Is a security incident response plan that includes relevant internal departments,\nimpacted CSCs, and other business-critical relationships (such as supply-chain)\nestablished, documented, approved, communicated, applied, evaluated, and maintained?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "SEF-04",
+            "class": "control",
+            "title": "Incident Response Testing",
+            "props": [
+              {
+                "name": "label",
+                "value": "SEF-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "SEF-04_stm",
+                "name": "statement",
+                "prose": "Test and update as necessary incident response plans at planned intervals\nor upon significant organizational or environmental changes for effectiveness.\n"
+              },
+              {
+                "id": "SEF-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "SEF-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "SEF-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "SEF-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is the security incident response plan tested and updated for effectiveness,\nas necessary, at planned intervals or upon significant organizational or environmental\nchanges?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "SEF-07",
+            "class": "control",
+            "title": "Security Breach Notification",
+            "props": [
+              {
+                "name": "label",
+                "value": "SEF-07"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "SEF-07_stm",
+                "name": "statement",
+                "prose": "Define and implement, processes, procedures and technical measures\nfor security breach notifications. Report security breaches and assumed security\nbreaches including any relevant supply chain breaches, as per applicable SLAs,\nlaws and regulations.\n"
+              },
+              {
+                "id": "SEF-07_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "SEF-07.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "SEF-07.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "SEF-07.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures for security breach notifications\ndefined and implemented?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "SEF-07.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "SEF-07.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "SEF-07.2_stm",
+                    "name": "statement",
+                    "prose": "Are security breaches and assumed security breaches reported (including any\nrelevant supply chain breaches) as per applicable SLAs, laws, and regulations?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "STA",
+        "class": "family",
+        "title": "Supply Chain Management, Transparency, and Accountability",
+        "props": [
+          {
+            "name": "label",
+            "value": "STA"
+          }
+        ],
+        "controls": [
+          {
+            "id": "STA-02",
+            "class": "control",
+            "title": "SSRM Supply Chain",
+            "props": [
+              {
+                "name": "label",
+                "value": "STA-02"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "STA-02_stm",
+                "name": "statement",
+                "prose": "Apply, document, implement and manage the SSRM throughout the supply\nchain for the cloud service offering.\n"
+              },
+              {
+                "id": "STA-02_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "STA-02.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "STA-02.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "STA-02.1_stm",
+                    "name": "statement",
+                    "prose": "Is the SSRM applied, documented, implemented, and managed throughout the supply\nchain for the cloud service offering?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "STA-04",
+            "class": "control",
+            "title": "SSRM Control Ownership",
+            "props": [
+              {
+                "name": "label",
+                "value": "STA-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "STA-04_stm",
+                "name": "statement",
+                "prose": "Delineate the shared ownership and applicability of all CSA CCM controls\naccording to the SSRM for the cloud service offering.\n"
+              },
+              {
+                "id": "STA-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "STA-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "STA-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "STA-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is the shared ownership and applicability of all CSA CCM controls delineated\naccording to the SSRM for the cloud service offering?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "STA-07",
+            "class": "control",
+            "title": "Supply Chain Inventory",
+            "props": [
+              {
+                "name": "label",
+                "value": "STA-07"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "STA-07_stm",
+                "name": "statement",
+                "prose": "Develop and maintain an inventory of all supply chain relationships.\n"
+              },
+              {
+                "id": "STA-07_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "STA-07.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "STA-07.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "STA-07.1_stm",
+                    "name": "statement",
+                    "prose": "Is an inventory of all supply chain relationships developed and maintained?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TVM",
+        "class": "family",
+        "title": "Threat & Vulnerability Management",
+        "props": [
+          {
+            "name": "label",
+            "value": "TVM"
+          }
+        ],
+        "controls": [
+          {
+            "id": "TVM-02",
+            "class": "control",
+            "title": "Malware Protection Policy and Procedures",
+            "props": [
+              {
+                "name": "label",
+                "value": "TVM-02"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "TVM-02_stm",
+                "name": "statement",
+                "prose": "Establish, document, approve, communicate, apply, evaluate and maintain\npolicies and procedures to protect against malware on managed assets. Review\nand update the policies and procedures at least annually.\n"
+              },
+              {
+                "id": "TVM-02_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "TVM-02.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "TVM-02.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "TVM-02.1_stm",
+                    "name": "statement",
+                    "prose": "Are policies and procedures to protect against malware on managed assets established,\ndocumented, approved, communicated, applied, evaluated, and maintained?\n\n"
+                  }
+                ]
+              },
+              {
+                "id": "TVM-02.2",
+                "class": "caiq-question",
+                "title": "CAI Question 2",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "TVM-02.2"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "TVM-02.2_stm",
+                    "name": "statement",
+                    "prose": "Are asset management and malware protection policies and procedures reviewed\nand updated at least annually?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "TVM-03",
+            "class": "control",
+            "title": "Vulnerability Remediation Schedule",
+            "props": [
+              {
+                "name": "label",
+                "value": "TVM-03"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "TVM-03_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures to enable both scheduled and emergency responses to vulnerability identifications,\nbased on the identified risk.\n"
+              },
+              {
+                "id": "TVM-03_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "TVM-03.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "TVM-03.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "TVM-03.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to enable scheduled and emergency responses to vulnerability identifications\n(based on the identified risk)?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "TVM-04",
+            "class": "control",
+            "title": "Detection Updates",
+            "props": [
+              {
+                "name": "label",
+                "value": "TVM-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "TVM-04_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures to update detection tools, threat signatures, and indicators of compromise\non a weekly, or more frequent basis.\n"
+              },
+              {
+                "id": "TVM-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "TVM-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "TVM-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "TVM-04.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to update detection tools, threat signatures, and compromise indicators\nweekly (or more frequent) basis?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "TVM-07",
+            "class": "control",
+            "title": "Vulnerability Identification",
+            "props": [
+              {
+                "name": "label",
+                "value": "TVM-07"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "TVM-07_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures for the detection of vulnerabilities on organizationally managed assets\nat least monthly.\n"
+              },
+              {
+                "id": "TVM-07_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "TVM-07.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "TVM-07.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "TVM-07.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated for vulnerability detection on organizationally managed assets at least\nmonthly?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "TVM-09",
+            "class": "control",
+            "title": "Vulnerability Management Reporting",
+            "props": [
+              {
+                "name": "label",
+                "value": "TVM-09"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "TVM-09_stm",
+                "name": "statement",
+                "prose": "Define and implement a process for tracking and reporting vulnerability\nidentification and remediation activities that includes stakeholder notification.\n"
+              },
+              {
+                "id": "TVM-09_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "TVM-09.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "TVM-09.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "TVM-09.1_stm",
+                    "name": "statement",
+                    "prose": "Is a process defined and implemented to track and report vulnerability identification\nand remediation activities that include stakeholder notification?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "UEM",
+        "class": "family",
+        "title": "Universal Endpoint Management",
+        "props": [
+          {
+            "name": "label",
+            "value": "UEM"
+          }
+        ],
+        "controls": [
+          {
+            "id": "UEM-02",
+            "class": "control",
+            "title": "Application and Service Approval",
+            "props": [
+              {
+                "name": "label",
+                "value": "UEM-02"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "UEM-02_stm",
+                "name": "statement",
+                "prose": "Define, document, apply and evaluate a list of approved services,\napplications and sources of applications (stores) acceptable for use by endpoints\nwhen accessing or storing organization-managed data.\n"
+              },
+              {
+                "id": "UEM-02_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "UEM-02.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "UEM-02.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "UEM-02.1_stm",
+                    "name": "statement",
+                    "prose": "Is there a defined, documented, applicable and evaluated list containing approved\nservices, applications, and the sources of applications (stores) acceptable for\nuse by endpoints when accessing or storing organization-managed data?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "UEM-04",
+            "class": "control",
+            "title": "Endpoint Inventory",
+            "props": [
+              {
+                "name": "label",
+                "value": "UEM-04"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "UEM-04_stm",
+                "name": "statement",
+                "prose": "Maintain an inventory of all endpoints used to store and access company\ndata.\n"
+              },
+              {
+                "id": "UEM-04_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "UEM-04.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "UEM-04.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "UEM-04.1_stm",
+                    "name": "statement",
+                    "prose": "Is an inventory of all endpoints used and maintained to store and access company\ndata?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "UEM-05",
+            "class": "control",
+            "title": "Endpoint Management",
+            "props": [
+              {
+                "name": "label",
+                "value": "UEM-05"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "UEM-05_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures to enforce policies and controls for all endpoints permitted to access\nsystems and/or store, transmit, or process organizational data.\n"
+              },
+              {
+                "id": "UEM-05_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "UEM-05.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "UEM-05.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "UEM-05.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented and\nevaluated, to enforce policies and controls for all endpoints permitted to access\nsystems and/or store, transmit, or process organizational data?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "UEM-06",
+            "class": "control",
+            "title": "Automatic Lock Screen",
+            "props": [
+              {
+                "name": "label",
+                "value": "UEM-06"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "UEM-06_stm",
+                "name": "statement",
+                "prose": "Configure all relevant interactive-use endpoints to require an automatic\nlock screen.\n"
+              },
+              {
+                "id": "UEM-06_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "UEM-06.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "UEM-06.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "UEM-06.1_stm",
+                    "name": "statement",
+                    "prose": "Are all relevant interactive-use endpoints configured to require an automatic\nlock screen?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "UEM-09",
+            "class": "control",
+            "title": "Anti-Malware Detection and Prevention",
+            "props": [
+              {
+                "name": "label",
+                "value": "UEM-09"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "UEM-09_stm",
+                "name": "statement",
+                "prose": "Configure managed endpoints with anti-malware detection and prevention\ntechnology and services.\n"
+              },
+              {
+                "id": "UEM-09_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "UEM-09.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "UEM-09.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "UEM-09.1_stm",
+                    "name": "statement",
+                    "prose": "Are anti-malware detection and prevention technology services configured on\nmanaged endpoints?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "UEM-10",
+            "class": "control",
+            "title": "Software Firewall",
+            "props": [
+              {
+                "name": "label",
+                "value": "UEM-10"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "UEM-10_stm",
+                "name": "statement",
+                "prose": "Configure managed endpoints with properly configured software firewalls.\n"
+              },
+              {
+                "id": "UEM-10_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "UEM-10.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "UEM-10.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "UEM-10.1_stm",
+                    "name": "statement",
+                    "prose": "Are software firewalls configured on managed endpoints?\n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "UEM-13",
+            "class": "control",
+            "title": "Remote Wipe",
+            "props": [
+              {
+                "name": "label",
+                "value": "UEM-13"
+              },
+              {
+                "name": "is-lite",
+                "value": "true"
+              }
+            ],
+            "parts": [
+              {
+                "id": "UEM-13_stm",
+                "name": "statement",
+                "prose": "Define, implement and evaluate processes, procedures and technical\nmeasures to enable the deletion of company data remotely on managed endpoint\ndevices.\n"
+              },
+              {
+                "id": "UEM-13_imp_gui",
+                "name": "guidance",
+                "prose": ""
+              }
+            ],
+            "controls": [
+              {
+                "id": "UEM-13.1",
+                "class": "caiq-question",
+                "title": "CAI Question 1",
+                "props": [
+                  {
+                    "name": "label",
+                    "value": "UEM-13.1"
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "UEM-13.1_stm",
+                    "name": "statement",
+                    "prose": "Are processes, procedures, and technical measures defined, implemented, and\nevaluated to enable remote company data deletion on managed endpoint devices?\n\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

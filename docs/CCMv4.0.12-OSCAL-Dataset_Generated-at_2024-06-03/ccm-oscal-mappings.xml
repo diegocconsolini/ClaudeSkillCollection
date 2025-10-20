@@ -1,0 +1,3203 @@
+<?xml version="1.0"?>
+<mapping-collection xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="496496f0-f601-4f7c-8676-291865d80938">
+  <metadata>
+    <title>Mapping of the CCM to other standards</title>
+    <published>2024-06-03T17:19:24+00:00</published>
+    <last-modified>2024-06-03T17:19:24+00:00</last-modified>
+    <version>4.0.12</version>
+    <oscal-version>1.0.5</oscal-version>
+    <party type="organization" uuid="1c353f40-c1ba-4730-80d7-1e6efa245dfe">
+      <name>Cloud Security Alliance</name>
+      <email-address>research@cloudsecurityalliance.org</email-address>
+    </party>
+    <responsible-party role-id="creator">
+      <party-uuid>1c353f40-c1ba-4730-80d7-1e6efa245dfe</party-uuid>
+    </responsible-party>
+    <responsible-party role-id="contact">
+      <party-uuid>1c353f40-c1ba-4730-80d7-1e6efa245dfe</party-uuid>
+    </responsible-party>
+  </metadata>
+  <mapping uuid="ad89d9a4-b792-4a20-8136-e5a820be4f65">
+    <source-resource type="catalog" href="https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4/?uuid=964e16fe-9a2f-47fe-86a7-c44e194850ab"/>
+    <target-resource type="catalog" href="https://raw.githubusercontent.com/CISecurity/CISControls_OSCAL/main/src/catalogs/xml/cis-controls-v8_OSCAL-1.0.xml"/>
+    <map uuid="50e7b554-7642-4801-80ad-19765aef1d55">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="A_A-01"/>
+      <target type="control" id-ref="cisc-8.1"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(8.1) 'Establish and maintain an audit log management process','Review and update documentation annually'.</p>
+</remarks>
+    </map>
+    <map uuid="b038b315-400a-4f03-8407-a1b65889e1a1">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="A_A-03"/>
+      <target type="control" id-ref="cisc-7.2"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control: (7.2) 'Establish and maintaina risk-based remediation strategy'.</p>
+</remarks>
+    </map>
+    <map uuid="2d84fc4a-8df4-4c5a-8abe-600276e127aa">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="AIS-01"/>
+      <target type="control" id-ref="cisc-16.1"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Establish, document, approve, communicate, apply, evaluate and maintainpolicies and procedures for application security'.</p>
+</remarks>
+    </map>
+    <map uuid="db64f869-132e-4091-8493-fe4c05150eb2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="AIS-02"/>
+      <target type="control" id-ref="cisc-16.7"/>
+    </map>
+    <map uuid="de831304-74ab-48ba-8c10-6f9beb58a306">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="AIS-03"/>
+      <target type="control" id-ref="cisc-16.2"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'metrics in alignment with business objectives'.</p>
+</remarks>
+    </map>
+    <map uuid="bc3215ba-e60d-4c06-8e62-156162c3177e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="AIS-04"/>
+      <target type="control" id-ref="cisc-16.1"/>
+    </map>
+    <map uuid="1228ee3e-7899-4e3d-8e42-f848d95f86ed">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="AIS-05"/>
+      <target type="control" id-ref="cisc-16.12"/>
+      <target type="control" id-ref="cisc-16.13"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(16.12) 'Implement Code-Level Security Checks' (as part of AIS-05 testingstrategy)(16.13) 'Conduct Application Penetration Testing' (as part of AIS-05testing strategy).</p>
+</remarks>
+    </map>
+    <map uuid="dce5d18e-7e17-4072-818c-98221f62a27c">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="AIS-07"/>
+      <target type="control" id-ref="cisc-16.2"/>
+      <target type="control" id-ref="cisc-16.6"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Automating remediation when possible'.</p>
+</remarks>
+    </map>
+    <map uuid="f5dcf9b4-7b4f-473e-8056-8b9ffeaaf712">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="BCR-08"/>
+      <target type="control" id-ref="cisc-11.1"/>
+      <target type="control" id-ref="cisc-11.2"/>
+      <target type="control" id-ref="cisc-11.3"/>
+      <target type="control" id-ref="cisc-11.4"/>
+      <target type="control" id-ref="cisc-11.5"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Periodically backup data stored in the cloud'</p>
+</remarks>
+    </map>
+    <map uuid="4ad14872-67e1-42be-876d-cf1d46e1f3c3">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="CCC-01"/>
+      <target type="control" id-ref="cisc-4.1"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(4.1) 'Establish and maintain a secure configuration process forenterprise assets', 'Review and update documentation annually'.</p>
+</remarks>
+    </map>
+    <map uuid="1ad7c9a5-7095-4afe-81e8-a0f230125888">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="CEK-03"/>
+      <target type="control" id-ref="cisc-3.6"/>
+      <target type="control" id-ref="cisc-3.1"/>
+      <target type="control" id-ref="cisc-3.11"/>
+      <target type="control" id-ref="cisc-11.3"/>
+      <target type="control" id-ref="cisc-16.11"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'using cryptographic libraries certified to approved standards.'</p>
+</remarks>
+    </map>
+    <map uuid="9383aa00-7273-4642-83a0-46cadd5dc210">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="CEK-04"/>
+      <target type="control" id-ref="cisc-16.11"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'considering the classification of data, associated risks, and usabilityof the encryption technology.'</p>
+</remarks>
+    </map>
+    <map uuid="106742f9-76f6-4166-8195-0f936637ea1a">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="CEK-10"/>
+      <target type="control" id-ref="cisc-16.11"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'libraries specifying the algorithm strength and the random numbergenerator used.'</p>
+</remarks>
+    </map>
+    <map uuid="27edca6a-26a3-4761-886f-48f34b0450b5">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="DCS-01"/>
+      <target type="control" id-ref="cisc-3.1"/>
+      <target type="control" id-ref="cisc-3.5"/>
+      <remarks><p>Missing specifications in CISv8.0:</p>
+<p>"Establish, document, approve, communicate, apply, evaluate and maintainpolicies and procedures for the secure disposal of equipment used outsidethe organization's premises".</p>
+</remarks>
+    </map>
+    <map uuid="99210045-db4a-460a-8a20-4dc16d17ae52">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-06"/>
+      <target type="control" id-ref="cisc-1.1"/>
+      <target type="control" id-ref="cisc-2.1"/>
+    </map>
+    <map uuid="25e5fc70-b8df-428c-8bd1-9f5762061a8f">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-08"/>
+      <target type="control" id-ref="cisc-1.3"/>
+      <target type="control" id-ref="cisc-1.5"/>
+    </map>
+    <map uuid="7cb15604-0c36-4aec-894b-ba57de320e3c">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="DCS-11"/>
+      <target type="control" id-ref="cisc-14.6"/>
+      <remarks><p>Missing specifications in CISv8.0:</p>
+<p>'Train datacenter personnel.'</p>
+</remarks>
+    </map>
+    <map uuid="014c44d6-364b-4699-8cc2-ee174ecf4907">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-01"/>
+      <target type="control" id-ref="cisc-3.1"/>
+    </map>
+    <map uuid="aec264c0-7423-4fde-8d2e-4235a43c50c2">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="DSP-02"/>
+      <target type="control" id-ref="cisc-3.5"/>
+      <remarks><p>Missing specifications in CISv8.0:</p>
+<p>'data is not recoverable by any forensic means.'</p>
+</remarks>
+    </map>
+    <map uuid="07365f23-c57c-4296-8f3f-628aea88962d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-03"/>
+      <target type="control" id-ref="cisc-3.2"/>
+    </map>
+    <map uuid="680cff3f-d803-4a5a-88ad-476c99b27e98">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-04"/>
+      <target type="control" id-ref="cisc-3.7"/>
+    </map>
+    <map uuid="9e2d0dc0-07f5-4d7a-8c03-f62bbd24cab2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-05"/>
+      <target type="control" id-ref="cisc-3.8"/>
+    </map>
+    <map uuid="c174d70f-7587-4b45-889e-321b7b955d87">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-06"/>
+      <target type="control" id-ref="cisc-3.1"/>
+    </map>
+    <map uuid="c674dcf8-725c-4ba1-8a8d-9bb826fba52c">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="DSP-07"/>
+      <target type="control" id-ref="cisc-16.1"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(16.1) 'Establish and maintain a secure application development process.In the process, address such items as: secure application designstandards, secure coding practices'.</p>
+</remarks>
+    </map>
+    <map uuid="6b009b96-3636-4d4a-8ace-8ba14336c224">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="DSP-10"/>
+      <target type="control" id-ref="cisc-3.1"/>
+      <target type="control" id-ref="cisc-3.12"/>
+      <target type="control" id-ref="cisc-3.13"/>
+      <remarks><p>Missing specification(s) in CISv8.0:</p>
+<p>'transfer of personal data is protected'.</p>
+</remarks>
+    </map>
+    <map uuid="aaf79c3a-803d-47c4-8919-ccf5932aadea">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="DSP-16"/>
+      <target type="control" id-ref="cisc-3.4"/>
+      <target type="control" id-ref="cisc-3.5"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'in accordance with applicable laws and regulations'.</p>
+</remarks>
+    </map>
+    <map uuid="d6b59450-82af-49ae-8636-67ea0ce408e0">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-17"/>
+      <target type="control" id-ref="cisc-3.1"/>
+      <target type="control" id-ref="cisc-3.1"/>
+      <target type="control" id-ref="cisc-3.14"/>
+    </map>
+    <map uuid="38dbccb8-d54c-4ffe-8c09-387be71094ff">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="GRC-01"/>
+      <target type="control" id-ref="cisc-3.1"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(3.1) 'Establish and maintain a data management process'.</p>
+</remarks>
+    </map>
+    <map uuid="48e2d6c6-20f0-4667-8f78-a970128df200">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="GRC-03"/>
+      <target type="control" id-ref="cisc-3.1"/>
+      <target type="control" id-ref="cisc-3.8"/>
+      <target type="control" id-ref="cisc-4.1"/>
+      <target type="control" id-ref="cisc-4.2"/>
+      <target type="control" id-ref="cisc-7.1"/>
+      <target type="control" id-ref="cisc-8.1"/>
+      <target type="control" id-ref="cisc-9.1"/>
+      <target type="control" id-ref="cisc-11.1"/>
+      <target type="control" id-ref="cisc-12.4"/>
+      <target type="control" id-ref="cisc-16.1"/>
+      <target type="control" id-ref="cisc-16.2"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>'Review and update documentation annually, or when significant enterprisechanges occur that could impact this Safeguard' (3.1, 3.8, 4.1, 4.2, 7.1,8.1, 9.1, 11.1, 12.4, 16.1, 16.2).</p>
+</remarks>
+    </map>
+    <map uuid="d27cd11c-70a4-4110-86bd-7701380f6042">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="GRC-05"/>
+      <target type="control" id-ref="cisc-14.1"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(14.1) 'Establish and maintain a security awareness program'.</p>
+</remarks>
+    </map>
+    <map uuid="8d4f34df-8bab-452d-8ecf-5da6b153e552">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="HRS-03"/>
+      <target type="control" id-ref="cisc-14.4"/>
+      <remarks><p>Missing specifications in CISv8.0:</p>
+<p>'Establish, document, approve, communicate, apply, evaluate and maintainpolicies and procedures' 'Review and update the policies and proceduresat least annually'.</p>
+</remarks>
+    </map>
+    <map uuid="92ac58ee-624d-4508-8e6f-4adac70fa043">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="HRS-04"/>
+      <target type="control" id-ref="cisc-13.5"/>
+      <target type="control" id-ref="cisc-14.8"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(13.5) 'Manage access control for assets remotely connecting toenterprise resources.' (14.8) 'all users securely configure their homenetwork infrastructure'.</p>
+</remarks>
+    </map>
+    <map uuid="3caea2fa-3a55-44b0-8645-32012ac95c71">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="HRS-06"/>
+      <target type="control" id-ref="cisc-6.1"/>
+      <target type="control" id-ref="cisc-6.2"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(6.1) 'Establish and follow a process, preferably automated, for grantingaccess to enterprise assets upon new hire, rights grant, or role changeof a user.' (6.2) 'revoking access to enterprise assets, throughdisabling accounts immediately upon termination, rights revocation, orrole change of a user'.</p>
+</remarks>
+    </map>
+    <map uuid="3ac31da7-0c01-470f-85e4-7ebf6fcd8541">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-09"/>
+      <target type="control" id-ref="cisc-14.1"/>
+      <target type="control" id-ref="cisc-14.2"/>
+      <target type="control" id-ref="cisc-14.3"/>
+      <target type="control" id-ref="cisc-14.4"/>
+      <target type="control" id-ref="cisc-14.5"/>
+      <target type="control" id-ref="cisc-14.6"/>
+      <target type="control" id-ref="cisc-14.7"/>
+      <target type="control" id-ref="cisc-14.8"/>
+      <target type="control" id-ref="cisc-14.9"/>
+    </map>
+    <map uuid="f7be4b6a-9e8a-43eb-8eb4-d5a780dd5e53">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-11"/>
+      <target type="control" id-ref="cisc-14"/>
+    </map>
+    <map uuid="214a8f9b-d2bf-45e0-82f2-119063470142">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="HRS-12"/>
+      <target type="control" id-ref="cisc-14.1"/>
+      <target type="control" id-ref="cisc-14.9"/>
+      <remarks><p>Missing specifications in CISv8.0:</p>
+<p>'Provide all employees with access to personal data with appropriatesecurity awareness training'</p>
+</remarks>
+    </map>
+    <map uuid="2387bb0b-513e-49c1-8231-78f41d9f3e3e">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="IAM-01"/>
+      <target type="control" id-ref="cisc-6.1"/>
+      <target type="control" id-ref="cisc-6.2"/>
+      <target type="control" id-ref="cisc-6.6"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>6.1 'Establish an Access Granting Process'6.2 'Establish an Access Revoking Process'6.6 'Establish and Maintain an Inventory of Authentication andAuthorization Systems'.</p>
+</remarks>
+    </map>
+    <map uuid="b008b7ca-7f11-4b6d-8069-5c28baccfaa9">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-02"/>
+      <target type="control" id-ref="cisc-5.2"/>
+    </map>
+    <map uuid="f32aeff1-622a-4c9d-8dec-256ddb1ef5f5">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-03"/>
+      <target type="control" id-ref="cisc-5.1"/>
+      <target type="control" id-ref="cisc-5.2"/>
+    </map>
+    <map uuid="c9ba6672-476a-48d7-82f7-3ee58c6a3eb7">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-04"/>
+      <target type="control" id-ref="cisc-6.8"/>
+    </map>
+    <map uuid="fa587635-2452-4d4d-8aa8-bdde6cba9b5e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-05"/>
+      <target type="control" id-ref="cisc-6.8"/>
+    </map>
+    <map uuid="7ccd9c6f-0cc7-4e96-8937-20c24d2e231b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-06"/>
+      <target type="control" id-ref="cisc-6.1"/>
+    </map>
+    <map uuid="e2e23068-9950-4fc4-8a73-7e54d0e32803">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-07"/>
+      <target type="control" id-ref="cisc-5.3"/>
+      <target type="control" id-ref="cisc-6.2"/>
+    </map>
+    <map uuid="84fd4773-32d0-427e-87df-1892b5b7357a">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="IAM-08"/>
+      <target type="control" id-ref="cisc-5.1"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Review and revalidate user access for separation of duties'.</p>
+</remarks>
+    </map>
+    <map uuid="5ef78088-d31f-4ad0-8db8-b298bc847f9d">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="IAM-09"/>
+      <target type="control" id-ref="cisc-5.4"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (5.4) 'Restrict Administrator Privileges to Dedicated AdministratorAccounts: Restrict administrator privileges to dedicated administratoraccounts on enterprise assets'.</p>
+</remarks>
+    </map>
+    <map uuid="d7eb1c68-5154-4a2b-89fe-eb096fecba5d">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="IAM-10"/>
+      <target type="control" id-ref="cisc-5.1"/>
+      <target type="control" id-ref="cisc-6.5"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'roles and rights are granted for a time limited period'</p>
+</remarks>
+    </map>
+    <map uuid="6b320816-8439-4073-8189-f96f405148db">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="IAM-12"/>
+      <target type="control" id-ref="cisc-3.3"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(3.3) 'Configure Data Access Control Lists'.</p>
+</remarks>
+    </map>
+    <map uuid="de4b82a3-a5d9-4851-8acb-14677c142207">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="IAM-14"/>
+      <target type="control" id-ref="cisc-6.3"/>
+      <target type="control" id-ref="cisc-6.5"/>
+      <target type="control" id-ref="cisc-12.5"/>
+      <target type="control" id-ref="cisc-12.7"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Adopt digital certificates or alternatives which achieve an equivalentlevel of security for system identities'.</p>
+</remarks>
+    </map>
+    <map uuid="4eb1cb69-12c2-4361-899f-0f68c954c737">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-16"/>
+      <target type="control" id-ref="cisc-5.1"/>
+    </map>
+    <map uuid="efa53efc-2120-423d-8d28-fcc0382a9810">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-03"/>
+      <target type="control" id-ref="cisc-3.8"/>
+      <target type="control" id-ref="cisc-3.1"/>
+      <target type="control" id-ref="cisc-12.2"/>
+      <target type="control" id-ref="cisc-13.6"/>
+      <target type="control" id-ref="cisc-13.9"/>
+    </map>
+    <map uuid="dc9bb4f9-26a1-44a3-8279-f27f55fce849">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-04"/>
+      <target type="control" id-ref="cisc-4.1"/>
+      <target type="control" id-ref="cisc-4.2"/>
+    </map>
+    <map uuid="dd72cf6f-7d04-44d8-84c1-6e936aeb62af">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-05"/>
+      <target type="control" id-ref="cisc-16.8"/>
+    </map>
+    <map uuid="d5e00095-4062-44ad-819b-d3c99201230e">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="IVS-09"/>
+      <target type="control" id-ref="cisc-13.3"/>
+      <target type="control" id-ref="cisc-13.8"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'protection and timely response to network-based attacks'.</p>
+</remarks>
+    </map>
+    <map uuid="660aa461-30eb-4060-8f52-255d6a2c6b7d">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="LOG-01"/>
+      <target type="control" id-ref="cisc-8.1"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'approve, communicate, apply, evaluate'.</p>
+</remarks>
+    </map>
+    <map uuid="8bbaf8c1-d309-44df-807f-dba13808b937">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="LOG-02"/>
+      <target type="control" id-ref="cisc-8.1"/>
+      <target type="control" id-ref="cisc-8.9"/>
+      <target type="control" id-ref="cisc-8.1"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Define, technical measures to ensure the security of audit logs'.</p>
+</remarks>
+    </map>
+    <map uuid="c3b5d3d1-49fe-41da-84ab-43f5aa176cf9">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="LOG-03"/>
+      <target type="control" id-ref="cisc-8.5"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Define and implement a system to generate alerts to responsiblestakeholders based on such events and corresponding metrics'.</p>
+</remarks>
+    </map>
+    <map uuid="cff66bd3-c330-4b23-8b60-75fb1e8d666f">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="LOG-04"/>
+      <target type="control" id-ref="cisc-3.14"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'maintain records that provide unique access accountability'.</p>
+</remarks>
+    </map>
+    <map uuid="4aa29bac-7092-44c3-8449-8c63f7cd76e3">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-05"/>
+      <target type="control" id-ref="cisc-8.8"/>
+      <target type="control" id-ref="cisc-8.11"/>
+    </map>
+    <map uuid="d4a9572b-76b9-44dd-8ba1-49fc60bee0d3">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-06"/>
+      <target type="control" id-ref="cisc-8.4"/>
+    </map>
+    <map uuid="f117f971-2aec-432d-8b11-a5e1e34c4f3d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-07"/>
+      <target type="control" id-ref="cisc-8.1"/>
+    </map>
+    <map uuid="de0d099d-5a0d-4e20-82a3-7487a67639a2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-08"/>
+      <target type="control" id-ref="cisc-8.2"/>
+    </map>
+    <map uuid="d6c9b178-389b-4361-8e0d-9c6c2117f86a">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="SEF-01"/>
+      <target type="control" id-ref="cisc-17.4"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Establish, document, approve, communicate, apply, evaluate and maintainpolicies and procedures for E-Discovery, and Cloud Forensics.'</p>
+</remarks>
+    </map>
+    <map uuid="fdf82772-f22c-4369-8358-b44b1a112d3f">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-02"/>
+      <target type="control" id-ref="cisc-17.4"/>
+    </map>
+    <map uuid="309a1697-ed40-4f27-8ee1-3cc7753bc6c7">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-03"/>
+      <target type="control" id-ref="cisc-17.2"/>
+      <target type="control" id-ref="cisc-17.4"/>
+    </map>
+    <map uuid="43c93ad5-0df4-4690-895c-dfaabc56eb67">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="SEF-04"/>
+      <target type="control" id-ref="cisc-17.7"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'(Test) upon significant organizational or environmental changes foreffectiveness.'</p>
+</remarks>
+    </map>
+    <map uuid="6ccea7f6-27d1-4c12-8f79-35210ec0b6f9">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-05"/>
+      <target type="control" id-ref="cisc-17.9"/>
+    </map>
+    <map uuid="3a55508b-da1e-49ab-8d45-898b477de547">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="SEF-07"/>
+      <target type="control" id-ref="cisc-17.2"/>
+      <target type="control" id-ref="cisc-17.3"/>
+      <target type="control" id-ref="cisc-17.4"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Report security breaches and assumed security breaches including anyrelevant supply chain breaches, as per applicable SLAs, laws andregulations'</p>
+</remarks>
+    </map>
+    <map uuid="e045685d-f181-40e3-80b6-f0c579ea7274">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-08"/>
+      <target type="control" id-ref="cisc-17.2"/>
+    </map>
+    <map uuid="b0547f2e-1292-4741-86b8-d3652b2287eb">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-07"/>
+      <target type="control" id-ref="cisc-15.1"/>
+    </map>
+    <map uuid="8a3efff4-8c7d-48c4-8926-87d16c7d362e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-08"/>
+      <target type="control" id-ref="cisc-15.3"/>
+    </map>
+    <map uuid="cc779e0e-d7c1-43a8-8308-9a53d85630ca">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="STA-09"/>
+      <target type="control" id-ref="cisc-15.4"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+
+<ul>
+  <li>Scope, characteristics and location of business relationship andservices offered</li>
+  <li>SSRM requirements</li>
+  <li>Change management process</li>
+  <li>Logging and monitoring capability</li>
+  <li>Right to audit and third party assessment</li>
+  <li>Service termination</li>
+  <li>Interoperability and portability requirements</li>
+</ul>
+</remarks>
+    </map>
+    <map uuid="fe119939-b214-418b-88b1-631bf2181be7">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-10"/>
+      <target type="control" id-ref="cisc-15.4"/>
+    </map>
+    <map uuid="02b6cf69-4b7a-4f24-8f80-8f40ebd387b8">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="STA-12"/>
+      <target type="control" id-ref="cisc-15.5"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (15.5) 'Assess Service Providers'</p>
+</remarks>
+    </map>
+    <map uuid="a830220e-db05-4bdd-8131-77d8d4543ff8">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-13"/>
+      <target type="control" id-ref="cisc-15.5"/>
+    </map>
+    <map uuid="2e14e4c0-4b37-4560-8317-153ab99dd712">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-14"/>
+      <target type="control" id-ref="cisc-15.6"/>
+    </map>
+    <map uuid="83579e38-196f-4715-8dde-65c30e234f62">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-01"/>
+      <target type="control" id-ref="cisc-7.1"/>
+    </map>
+    <map uuid="1d308819-c96e-4d84-86a8-83af50dfa5bb">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="TVM-02"/>
+      <target type="control" id-ref="cisc-9.7"/>
+      <target type="control" id-ref="cisc-10.1"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Review and update the policies and procedures at least annually.'</p>
+</remarks>
+    </map>
+    <map uuid="238c25fb-476b-43b3-846e-adb1524c5022">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-03"/>
+      <target type="control" id-ref="cisc-7.2"/>
+      <target type="control" id-ref="cisc-7.7"/>
+      <target type="control" id-ref="cisc-17.9"/>
+    </map>
+    <map uuid="ca7b1ea3-4935-4893-8b0f-c5595426e3cf">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-04"/>
+      <target type="control" id-ref="cisc-10.2"/>
+    </map>
+    <map uuid="69570fb6-59f7-475d-8c60-de150b8cee2b">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="TVM-05"/>
+      <target type="control" id-ref="cisc-2.6"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'Define, implement and evaluate processes, procedures and technicalmeasures to identify updates'</p>
+</remarks>
+    </map>
+    <map uuid="76d9e433-7afc-404d-86b7-5a66d3fd54da">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-06"/>
+      <target type="control" id-ref="cisc-18.1"/>
+      <target type="control" id-ref="cisc-18.2"/>
+    </map>
+    <map uuid="ebbe36ac-76b5-4e23-8477-376cece3bfbe">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-07"/>
+      <target type="control" id-ref="cisc-7.1"/>
+      <target type="control" id-ref="cisc-7.5"/>
+      <target type="control" id-ref="cisc-7.6"/>
+    </map>
+    <map uuid="58cbcd99-2d31-4a2b-8a0d-8defb69f8c1b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-08"/>
+      <target type="control" id-ref="cisc-7.2"/>
+      <target type="control" id-ref="cisc-18.3"/>
+      <target type="control" id-ref="cisc-16.6"/>
+    </map>
+    <map uuid="d94cef90-802b-4daf-8b37-98a54004a8c6">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="TVM-09"/>
+      <target type="control" id-ref="cisc-7.1"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'reporting vulnerability identification and remediation activities thatincludes stakeholder notification.'</p>
+</remarks>
+    </map>
+    <map uuid="212275cc-5312-4e8c-834a-f138b660cbd4">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="TVM-10"/>
+      <target type="control" id-ref="cisc-7.2"/>
+      <remarks><p>Missing specification(s) in CISv8:</p>
+<p>'report metrics for vulnerability identification'</p>
+</remarks>
+    </map>
+    <map uuid="3209d1bc-ab2d-431a-8a6b-5e11c4edae6b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-04"/>
+      <target type="control" id-ref="cisc-1.1"/>
+    </map>
+    <map uuid="50e737fe-916e-4778-8152-dd2c807469d9">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="UEM-05"/>
+      <target type="control" id-ref="cisc-1.3"/>
+      <target type="control" id-ref="cisc-1.4"/>
+      <target type="control" id-ref="cisc-1.5"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(1.3) 'Utilize an Active Discovery Tool'(1.4) 'Use Dynamic Host Configuration Protocol (DHCP) Logging to UpdateEnterprise Asset Inventory'(1.5) 'Use a Passive Asset Discovery Tool'</p>
+</remarks>
+    </map>
+    <map uuid="2de401a6-2d9e-45e5-8eba-4b97bb68460d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-06"/>
+      <target type="control" id-ref="cisc-4.3"/>
+    </map>
+    <map uuid="82cc338c-218c-459d-8ba1-321cb1921212">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-08"/>
+      <target type="control" id-ref="cisc-3.6"/>
+    </map>
+    <map uuid="41431229-6adb-4164-8b9d-8a79db43c3d3">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-09"/>
+      <target type="control" id-ref="cisc-9.7"/>
+      <target type="control" id-ref="cisc-10.1"/>
+    </map>
+    <map uuid="093e46cc-fcb2-4c4f-8382-bd9cdc326158">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-10"/>
+      <target type="control" id-ref="cisc-4.4"/>
+      <target type="control" id-ref="cisc-4.5"/>
+    </map>
+    <map uuid="1ba17da0-97f6-42a9-843c-b231cc3f6c87">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-11"/>
+      <target type="control" id-ref="cisc-3.13"/>
+    </map>
+    <map uuid="13169aea-a31c-496f-8008-5d5cbfa71643">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-13"/>
+      <target type="control" id-ref="cisc-4.11"/>
+    </map>
+    <map uuid="91c61f1d-b06f-4fe0-88da-cd001c32d6b9">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="UEM-14"/>
+      <target type="control" id-ref="cisc-15.4"/>
+      <remarks><p>Recommend the full V4 control specification to be used to close the gap.Portion in the mapped control(s) contributing to the partial gap, thatis, covering in part the V4 control:</p>
+<p>(15.4) 'Ensure Service Provider Contracts Include Security Requirements'</p>
+</remarks>
+    </map>
+  </mapping>
+  <mapping uuid="431db0ac-3414-46fd-8b4f-e13eff76449a">
+    <source-resource type="catalog" href="https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4/?uuid=964e16fe-9a2f-47fe-86a7-c44e194850ab"/>
+    <target-resource type="catalog" href="https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/xml/NIST_SP-800-53_rev5_catalog.xml"/>
+    <map uuid="fa92a52f-95f8-4521-84b7-568b52d91dae">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="A_A-01"/>
+      <target type="control" id-ref="ca-1"/>
+    </map>
+    <map uuid="0f2009a6-f9c7-47f6-81e6-185b26ef5c98">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="A_A-02"/>
+      <target type="control" id-ref="ca-2"/>
+      <target type="control" id-ref="ca-2.1"/>
+      <target type="control" id-ref="ca-2.2"/>
+      <target type="control" id-ref="ca-7"/>
+      <target type="control" id-ref="ca-7.1"/>
+    </map>
+    <map uuid="a1e6e5a0-760f-46bf-8153-353d7250a278">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="A_A-03"/>
+      <target type="control" id-ref="ca-2"/>
+      <target type="control" id-ref="ca-2.1"/>
+      <target type="control" id-ref="ca-2.2"/>
+      <target type="control" id-ref="ca-2.3"/>
+      <target type="control" id-ref="pl-10"/>
+      <target type="control" id-ref="pl-11"/>
+    </map>
+    <map uuid="97aa24a1-a1fe-4969-8d1e-fc3b87be0235">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="A_A-04"/>
+      <target type="control" id-ref="ca-1"/>
+    </map>
+    <map uuid="31770c0a-c575-4328-8b9b-7b7064d31552">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="A_A-05"/>
+      <target type="control" id-ref="ca-1"/>
+      <target type="control" id-ref="ca-2"/>
+      <target type="control" id-ref="pm-4"/>
+    </map>
+    <map uuid="6aabc013-7702-4303-8a74-df8a2031872e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="A_A-06"/>
+      <target type="control" id-ref="ca-5"/>
+      <target type="control" id-ref="ca-5.1"/>
+      <target type="control" id-ref="pm-4"/>
+    </map>
+    <map uuid="352dcec7-dcc5-4f5d-8c2f-b824cfb47d6d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="AIS-01"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.2"/>
+      <target type="control" id-ref="pm-20"/>
+      <target type="control" id-ref="pm-20.1"/>
+      <target type="control" id-ref="sa-1"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.29"/>
+      <target type="control" id-ref="sa-8.30"/>
+      <target type="control" id-ref="sa-8.31"/>
+      <target type="control" id-ref="sa-8.32"/>
+      <target type="control" id-ref="sa-8.33"/>
+      <target type="control" id-ref="si-17"/>
+    </map>
+    <map uuid="4f04858c-7294-464c-8953-42a11a2a0828">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="AIS-02"/>
+      <target type="control" id-ref="cm-2"/>
+      <target type="control" id-ref="cm-2.2"/>
+      <target type="control" id-ref="cm-2.3"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.8"/>
+      <target type="control" id-ref="sa-8.14"/>
+      <target type="control" id-ref="sa-8.23"/>
+      <target type="control" id-ref="sa-8.29"/>
+      <target type="control" id-ref="sa-8.31"/>
+    </map>
+    <map uuid="a8f7fb6f-3ace-4f60-8a71-5e4b59b4b43e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="AIS-03"/>
+      <target type="control" id-ref="sa-15"/>
+      <target type="control" id-ref="sa-15.1"/>
+    </map>
+    <map uuid="f4980e6c-0c4d-489d-81ac-f56a7678fe29">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="AIS-04"/>
+      <target type="control" id-ref="pl-2"/>
+      <target type="control" id-ref="pl-8"/>
+      <target type="control" id-ref="pl-8.1"/>
+      <target type="control" id-ref="sa-3"/>
+      <target type="control" id-ref="sa-3.1"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sa-4.2"/>
+      <target type="control" id-ref="sa-4.3"/>
+      <target type="control" id-ref="sa-4.8"/>
+      <target type="control" id-ref="sa-4.9"/>
+      <target type="control" id-ref="sa-5"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.1"/>
+      <target type="control" id-ref="sa-8.2"/>
+      <target type="control" id-ref="sa-8.3"/>
+      <target type="control" id-ref="sa-8.4"/>
+      <target type="control" id-ref="sa-8.5"/>
+      <target type="control" id-ref="sa-8.6"/>
+      <target type="control" id-ref="sa-8.7"/>
+      <target type="control" id-ref="sa-8.9"/>
+      <target type="control" id-ref="sa-8.10"/>
+      <target type="control" id-ref="sa-8.11"/>
+      <target type="control" id-ref="sa-8.12"/>
+      <target type="control" id-ref="sa-8.13"/>
+      <target type="control" id-ref="sa-8.15"/>
+      <target type="control" id-ref="sa-8.16"/>
+      <target type="control" id-ref="sa-8.17"/>
+      <target type="control" id-ref="sa-8.18"/>
+      <target type="control" id-ref="sa-8.19"/>
+      <target type="control" id-ref="sa-8.20"/>
+      <target type="control" id-ref="sa-8.22"/>
+      <target type="control" id-ref="sa-8.24"/>
+      <target type="control" id-ref="sa-8.25"/>
+      <target type="control" id-ref="sa-8.26"/>
+      <target type="control" id-ref="sa-8.27"/>
+      <target type="control" id-ref="sa-8.28"/>
+      <target type="control" id-ref="sa-8.30"/>
+      <target type="control" id-ref="sa-8.31"/>
+      <target type="control" id-ref="sa-8.32"/>
+      <target type="control" id-ref="sa-8.33"/>
+      <target type="control" id-ref="sa-17"/>
+      <target type="control" id-ref="sa-17.1"/>
+      <target type="control" id-ref="sa-17.2"/>
+      <target type="control" id-ref="sa-17.3"/>
+      <target type="control" id-ref="sa-17.4"/>
+      <target type="control" id-ref="sa-17.5"/>
+      <target type="control" id-ref="sa-17.6"/>
+      <target type="control" id-ref="sa-17.7"/>
+      <target type="control" id-ref="sa-17.8"/>
+      <target type="control" id-ref="sa-17.9"/>
+    </map>
+    <map uuid="a7cde8ca-9869-4d70-8295-01b1f9b1caab">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="AIS-05"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.1"/>
+      <target type="control" id-ref="sa-11.2"/>
+      <target type="control" id-ref="sa-11.3"/>
+      <target type="control" id-ref="sa-11.4"/>
+      <target type="control" id-ref="sa-11.5"/>
+      <target type="control" id-ref="sa-11.6"/>
+      <target type="control" id-ref="sa-11.7"/>
+      <target type="control" id-ref="sa-11.8"/>
+      <target type="control" id-ref="sa-11.9"/>
+      <target type="control" id-ref="si-6"/>
+      <target type="control" id-ref="si-6.2"/>
+      <target type="control" id-ref="si-6.3"/>
+      <target type="control" id-ref="si-10"/>
+      <target type="control" id-ref="si-10.1"/>
+      <target type="control" id-ref="si-10.2"/>
+      <target type="control" id-ref="si-10.3"/>
+      <target type="control" id-ref="si-10.4"/>
+      <target type="control" id-ref="si-10.5"/>
+      <target type="control" id-ref="si-10.6"/>
+    </map>
+    <map uuid="7e46530f-6857-46e8-8d77-1d72afac823b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="AIS-06"/>
+      <target type="control" id-ref="sa-3"/>
+      <target type="control" id-ref="sa-3.2"/>
+      <target type="control" id-ref="sa-3.3"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sa-4.3"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.31"/>
+      <target type="control" id-ref="sa-16"/>
+      <target type="control" id-ref="sr-9"/>
+      <target type="control" id-ref="sr-9.1"/>
+    </map>
+    <map uuid="4c617572-a988-4035-89d2-86b183e36a52">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="AIS-07"/>
+      <target type="control" id-ref="si-2"/>
+      <target type="control" id-ref="si-2.2"/>
+      <target type="control" id-ref="si-2.3"/>
+      <target type="control" id-ref="si-2.4"/>
+      <target type="control" id-ref="si-2.5"/>
+      <target type="control" id-ref="si-2.6"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.2"/>
+      <target type="control" id-ref="sa-15"/>
+      <target type="control" id-ref="sa-15.1"/>
+      <target type="control" id-ref="sa-15.2"/>
+      <target type="control" id-ref="sa-15.3"/>
+      <target type="control" id-ref="sa-15.5"/>
+      <target type="control" id-ref="sa-15.6"/>
+      <target type="control" id-ref="sa-15.7"/>
+      <target type="control" id-ref="sa-15.8"/>
+      <target type="control" id-ref="sa-15.10"/>
+      <target type="control" id-ref="sa-15.11"/>
+      <target type="control" id-ref="sa-15.12"/>
+    </map>
+    <map uuid="2552bc6c-5c09-49f6-86a4-0ca2eb114eaa">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-01"/>
+      <target type="control" id-ref="cp-1"/>
+      <target type="control" id-ref="cp-2"/>
+      <target type="control" id-ref="pl-2"/>
+    </map>
+    <map uuid="bae79005-f5d3-4e08-8a79-1f595436af0b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-02"/>
+      <target type="control" id-ref="cp-2"/>
+      <target type="control" id-ref="pm-8"/>
+      <target type="control" id-ref="pm-9"/>
+    </map>
+    <map uuid="29ac9d37-d8ff-4084-8245-07e2779fd245">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-03"/>
+      <target type="control" id-ref="cp-1"/>
+      <target type="control" id-ref="cp-2"/>
+      <target type="control" id-ref="cp-2.1"/>
+      <target type="control" id-ref="cp-2.2"/>
+      <target type="control" id-ref="cp-2.5"/>
+      <target type="control" id-ref="cp-2.7"/>
+    </map>
+    <map uuid="d1393557-a341-42b0-8bdd-687dfeae7a6a">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-04"/>
+      <target type="control" id-ref="cp-2"/>
+      <target type="control" id-ref="cp-4"/>
+      <target type="control" id-ref="pm-8"/>
+    </map>
+    <map uuid="5c1e90ad-99ac-49a2-8727-82f61dc1179c">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-05"/>
+      <target type="control" id-ref="cp-1"/>
+      <target type="control" id-ref="cp-2"/>
+      <target type="control" id-ref="cp-4"/>
+    </map>
+    <map uuid="47ef05ca-5dae-4f4a-8a54-59c149295d45">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-06"/>
+      <target type="control" id-ref="at-3"/>
+      <target type="control" id-ref="at-3.3"/>
+      <target type="control" id-ref="cp-3"/>
+      <target type="control" id-ref="cp-3.1"/>
+      <target type="control" id-ref="cp-4"/>
+      <target type="control" id-ref="cp-4.4"/>
+      <target type="control" id-ref="ir-4"/>
+      <target type="control" id-ref="ir-4.3"/>
+    </map>
+    <map uuid="264acd2c-2ad1-4b50-878b-54c3637eb72f">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-07"/>
+      <target type="control" id-ref="cp-2"/>
+      <target type="control" id-ref="cp-2.1"/>
+    </map>
+    <map uuid="90f6f87c-84c5-42f6-8fcf-b7271324b960">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-08"/>
+      <target type="control" id-ref="cp-4"/>
+      <target type="control" id-ref="cp-4.4"/>
+      <target type="control" id-ref="cp-6"/>
+      <target type="control" id-ref="cp-6.1"/>
+      <target type="control" id-ref="cp-6.2"/>
+      <target type="control" id-ref="cp-6.3"/>
+      <target type="control" id-ref="cp-9"/>
+      <target type="control" id-ref="cp-9.1"/>
+      <target type="control" id-ref="cp-9.2"/>
+      <target type="control" id-ref="cp-10"/>
+      <target type="control" id-ref="cp-10.2"/>
+      <target type="control" id-ref="cp-10.4"/>
+    </map>
+    <map uuid="43d89ac6-12c2-46b1-8891-bb7a4a4ed265">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-09"/>
+      <target type="control" id-ref="cp-2.1"/>
+      <target type="control" id-ref="cp-2.2"/>
+      <target type="control" id-ref="cp-2.3"/>
+      <target type="control" id-ref="cp-2.5"/>
+      <target type="control" id-ref="cp-2.6"/>
+      <target type="control" id-ref="cp-2.7"/>
+      <target type="control" id-ref="cp-2.8"/>
+      <target type="control" id-ref="pe-13"/>
+      <target type="control" id-ref="pe-13.1"/>
+      <target type="control" id-ref="pe-13.2"/>
+      <target type="control" id-ref="pe-13.4"/>
+    </map>
+    <map uuid="becbe13a-368c-4baf-8b5e-30a0a2dd5d58">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-10"/>
+      <target type="control" id-ref="at-2"/>
+      <target type="control" id-ref="at-2.1"/>
+      <target type="control" id-ref="at-3"/>
+      <target type="control" id-ref="at-3.3"/>
+      <target type="control" id-ref="at-4"/>
+      <target type="control" id-ref="cp-3"/>
+      <target type="control" id-ref="cp-3.1"/>
+      <target type="control" id-ref="ir-3"/>
+      <target type="control" id-ref="ir-3.2"/>
+      <target type="control" id-ref="ir-3.3"/>
+      <target type="control" id-ref="ir-9"/>
+      <target type="control" id-ref="ir-9.2"/>
+    </map>
+    <map uuid="1fbfcae1-4064-4707-8f4a-769ec589488f">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="BCR-11"/>
+      <target type="control" id-ref="cp-2"/>
+      <target type="control" id-ref="cp-2.2"/>
+      <target type="control" id-ref="cp-4.3"/>
+      <target type="control" id-ref="cp-6"/>
+      <target type="control" id-ref="cp-6.1"/>
+      <target type="control" id-ref="cp-7"/>
+      <target type="control" id-ref="cp-8"/>
+      <target type="control" id-ref="cp-8.1"/>
+      <target type="control" id-ref="cp-8.2"/>
+      <target type="control" id-ref="cp-8.3"/>
+      <target type="control" id-ref="cp-9"/>
+      <target type="control" id-ref="cp-9.6"/>
+    </map>
+    <map uuid="cd4ea858-5c58-425f-8d13-0aba73f9e3db">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CCC-01"/>
+      <target type="control" id-ref="cm-1"/>
+      <target type="control" id-ref="cm-9"/>
+      <target type="control" id-ref="cm-9.1"/>
+      <target type="control" id-ref="cm-10"/>
+      <target type="control" id-ref="cm-10.1"/>
+      <target type="control" id-ref="cm-11"/>
+      <target type="control" id-ref="pm-9"/>
+      <target type="control" id-ref="ps-8"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.1"/>
+      <target type="control" id-ref="sa-8.24"/>
+      <target type="control" id-ref="si-12"/>
+    </map>
+    <map uuid="5c5c9790-695a-458e-80fe-f22f1438b5d2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CCC-02"/>
+      <target type="control" id-ref="cm-2"/>
+      <target type="control" id-ref="cm-2.2"/>
+      <target type="control" id-ref="cm-2.6"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.2"/>
+      <target type="control" id-ref="cm-3.7"/>
+      <target type="control" id-ref="cm-4"/>
+      <target type="control" id-ref="cm-4.1"/>
+      <target type="control" id-ref="cm-4.2"/>
+    </map>
+    <map uuid="64c6c59b-021a-4044-814d-791eba3d12e4">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CCC-03"/>
+      <target type="control" id-ref="cm-2"/>
+      <target type="control" id-ref="cm-2.2"/>
+      <target type="control" id-ref="cm-2.3"/>
+      <target type="control" id-ref="cm-2.7"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.2"/>
+      <target type="control" id-ref="cm-3.3"/>
+      <target type="control" id-ref="cm-3.5"/>
+      <target type="control" id-ref="cm-3.6"/>
+      <target type="control" id-ref="cm-4"/>
+      <target type="control" id-ref="cm-4.1"/>
+      <target type="control" id-ref="cm-5"/>
+      <target type="control" id-ref="cm-5.5"/>
+      <target type="control" id-ref="cm-5.6"/>
+      <target type="control" id-ref="cm-7"/>
+      <target type="control" id-ref="cm-7.2"/>
+      <target type="control" id-ref="cm-7.3"/>
+      <target type="control" id-ref="cm-7.4"/>
+      <target type="control" id-ref="cm-7.5"/>
+      <target type="control" id-ref="cm-7.6"/>
+      <target type="control" id-ref="cm-7.7"/>
+      <target type="control" id-ref="cm-11"/>
+      <target type="control" id-ref="cm-11.2"/>
+      <target type="control" id-ref="cm-14"/>
+      <target type="control" id-ref="sa-10"/>
+      <target type="control" id-ref="sa-10.7"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.9"/>
+    </map>
+    <map uuid="e98ebaaa-6336-4e5f-845b-4a6dd13ca43b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CCC-04"/>
+      <target type="control" id-ref="ca-7"/>
+      <target type="control" id-ref="ca-7.4"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.1"/>
+      <target type="control" id-ref="cm-3.5"/>
+      <target type="control" id-ref="cm-3.7"/>
+      <target type="control" id-ref="cm-3.8"/>
+      <target type="control" id-ref="cm-5"/>
+      <target type="control" id-ref="cm-5.1"/>
+      <target type="control" id-ref="cm-5.4"/>
+      <target type="control" id-ref="cm-5.5"/>
+      <target type="control" id-ref="cm-6"/>
+      <target type="control" id-ref="cm-6.1"/>
+      <target type="control" id-ref="cm-6.2"/>
+      <target type="control" id-ref="cm-7"/>
+      <target type="control" id-ref="cm-7.1"/>
+      <target type="control" id-ref="cm-7.4"/>
+      <target type="control" id-ref="cm-7.5"/>
+      <target type="control" id-ref="cm-7.9"/>
+    </map>
+    <map uuid="a9f6673d-f6d2-4dcc-861c-9496d9edf9ee">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CCC-05"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.1"/>
+      <target type="control" id-ref="cm-3.2"/>
+    </map>
+    <map uuid="400beb3e-c89c-4dff-8d4a-d407da56ce15">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CCC-06"/>
+      <target type="control" id-ref="cm-2"/>
+      <target type="control" id-ref="cm-2.3"/>
+      <target type="control" id-ref="cm-5"/>
+      <target type="control" id-ref="cm-5.6"/>
+      <target type="control" id-ref="cm-8"/>
+      <target type="control" id-ref="cm-8.1"/>
+      <target type="control" id-ref="cm-8.2"/>
+      <target type="control" id-ref="cm-8.3"/>
+      <target type="control" id-ref="cm-8.4"/>
+      <target type="control" id-ref="cm-8.5"/>
+      <target type="control" id-ref="cm-8.6"/>
+      <target type="control" id-ref="cm-8.7"/>
+      <target type="control" id-ref="cm-8.8"/>
+      <target type="control" id-ref="cm-8.9"/>
+      <target type="control" id-ref="cm-9"/>
+      <target type="control" id-ref="cm-9.1"/>
+      <target type="control" id-ref="cm-14"/>
+    </map>
+    <map uuid="285310bc-b71e-481f-8a19-4668c6ee5455">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CCC-07"/>
+      <target type="control" id-ref="cm-6"/>
+      <target type="control" id-ref="cm-6.2"/>
+      <target type="control" id-ref="si-2"/>
+      <target type="control" id-ref="si-2.2"/>
+      <target type="control" id-ref="si-2.3"/>
+      <target type="control" id-ref="si-2.4"/>
+      <target type="control" id-ref="si-2.5"/>
+      <target type="control" id-ref="si-2.6"/>
+    </map>
+    <map uuid="91448b68-5e6d-4429-83ee-2294b9d20120">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CCC-08"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.1"/>
+    </map>
+    <map uuid="61c4152f-e7fa-4f33-8e1d-25300d0c7a9c">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CCC-09"/>
+      <target type="control" id-ref="cm-2"/>
+      <target type="control" id-ref="cm-2.3"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.3"/>
+      <target type="control" id-ref="cm-3.7"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.24"/>
+    </map>
+    <map uuid="41a09273-339f-41a7-8520-4c40637c8760">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-01"/>
+      <target type="control" id-ref="sc-1"/>
+      <target type="control" id-ref="sa-9"/>
+      <target type="control" id-ref="sa-9.6"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+    </map>
+    <map uuid="f8b8b845-39c7-4e4f-89bf-bae130af40a6">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-02"/>
+      <target type="control" id-ref="ia-7"/>
+      <target type="control" id-ref="ia-8"/>
+      <target type="control" id-ref="ia-8.5"/>
+      <target type="control" id-ref="sa-9"/>
+      <target type="control" id-ref="sa-9.1"/>
+      <target type="control" id-ref="sa-9.6"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.6"/>
+      <target type="control" id-ref="sc-13"/>
+    </map>
+    <map uuid="237edb79-ab4e-4182-8886-2020eaa6a7fc">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-03"/>
+      <target type="control" id-ref="ac-19"/>
+      <target type="control" id-ref="ac-19.5"/>
+      <target type="control" id-ref="sc-8"/>
+      <target type="control" id-ref="sc-8.1"/>
+      <target type="control" id-ref="sc-8.3"/>
+      <target type="control" id-ref="sc-8.4"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+      <target type="control" id-ref="sc-28"/>
+      <target type="control" id-ref="sc-28.1"/>
+      <target type="control" id-ref="sc-28.2"/>
+      <target type="control" id-ref="sc-28.3"/>
+      <target type="control" id-ref="si-4"/>
+      <target type="control" id-ref="si-4.10"/>
+      <target type="control" id-ref="si-7"/>
+      <target type="control" id-ref="si-7.6"/>
+    </map>
+    <map uuid="4bb3972f-bdf7-46b0-82fe-bd84064315a8">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-04"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+      <target type="control" id-ref="sc-28"/>
+      <target type="control" id-ref="sc-28.1"/>
+    </map>
+    <map uuid="29f2ad55-59ac-4b91-82e6-1c6cc2b66bb6">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-05"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.6"/>
+      <target type="control" id-ref="si-7"/>
+      <target type="control" id-ref="si-7.6"/>
+    </map>
+    <map uuid="13dd1a22-5577-45aa-8d14-35b44ae22afc">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-06"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.6"/>
+      <target type="control" id-ref="pl-2"/>
+    </map>
+    <map uuid="1227c86b-aa79-4aea-8509-06951592f3a1">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-07"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.6"/>
+      <target type="control" id-ref="pm-31"/>
+      <target type="control" id-ref="sc-28"/>
+      <target type="control" id-ref="sc-28.1"/>
+      <target type="control" id-ref="sc-28.3"/>
+    </map>
+    <map uuid="1d8e2832-d6d1-4a3b-8cc0-b2805d9e052d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-08"/>
+      <target type="control" id-ref="cp-9"/>
+      <target type="control" id-ref="cp-9.8"/>
+      <target type="control" id-ref="sa-9"/>
+      <target type="control" id-ref="sa-9.6"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.6"/>
+    </map>
+    <map uuid="d152a078-a268-4536-8b01-7c09fb7fd632">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-09"/>
+      <target type="control" id-ref="au-9"/>
+      <target type="control" id-ref="au-9.3"/>
+      <target type="control" id-ref="pm-31"/>
+    </map>
+    <map uuid="a7db7a86-9f17-47f8-8748-028b46d4568e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-10"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+      <target type="control" id-ref="sc-13"/>
+    </map>
+    <map uuid="2cc8eaa2-b46b-41f7-8d9d-9c56d8b86539">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-11"/>
+      <target type="control" id-ref="ia-5"/>
+      <target type="control" id-ref="ia-5.2"/>
+      <target type="control" id-ref="pm-32"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+      <target type="control" id-ref="sc-13"/>
+    </map>
+    <map uuid="dc4fd073-0853-433a-85eb-84332213681a">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-12"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+      <target type="control" id-ref="sc-13"/>
+    </map>
+    <map uuid="e3bc0c8b-40ca-40d6-8587-39091269b39a">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-13"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+    </map>
+    <map uuid="1f358aea-5556-4ce5-88be-736514e9455d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-14"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+    </map>
+    <map uuid="5a5dac59-2fa0-44fb-896d-936b0ae80072">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-15"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+      <target type="control" id-ref="sc-13"/>
+    </map>
+    <map uuid="49bc3bcb-d1e4-4c4d-8653-b3567720b768">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-16"/>
+      <target type="control" id-ref="pm-31"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+      <target type="control" id-ref="sc-13"/>
+    </map>
+    <map uuid="8f44c630-c3e6-4bbf-84d2-aabc92e1e368">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-17"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+    </map>
+    <map uuid="d7987d77-7b7f-4e8b-8b88-61ad753c4e1d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-18"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.1"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+      <target type="control" id-ref="sc-28"/>
+      <target type="control" id-ref="sc-28.3"/>
+    </map>
+    <map uuid="c6195aa5-8b1e-487d-8c43-89826d8aceea">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-19"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.1"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+    </map>
+    <map uuid="cfc25e12-44cb-4eeb-845a-35c45ee22bb3">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-20"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-3.6"/>
+      <target type="control" id-ref="cp-9"/>
+      <target type="control" id-ref="cp-9.8"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.1"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+    </map>
+    <map uuid="b1ca9adf-813a-4a16-85e7-731d2a011120">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="CEK-21"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-12.1"/>
+      <target type="control" id-ref="sc-12.2"/>
+      <target type="control" id-ref="sc-12.3"/>
+      <target type="control" id-ref="sc-12.6"/>
+    </map>
+    <map uuid="ad252b64-72a5-4def-8868-ae5fa253fb7b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-01"/>
+      <target type="control" id-ref="mp-6"/>
+      <target type="control" id-ref="mp-6.1"/>
+      <target type="control" id-ref="mp-6.2"/>
+      <target type="control" id-ref="mp-6.3"/>
+      <target type="control" id-ref="mp-6.8"/>
+      <target type="control" id-ref="mp-7.2"/>
+      <target type="control" id-ref="mp-8"/>
+    </map>
+    <map uuid="032b2fc3-4f70-480c-8403-dc377655bfe3">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="DCS-02"/>
+      <target type="control" id-ref="ac-1"/>
+      <target type="control" id-ref="ac-4"/>
+      <target type="control" id-ref="ca-3"/>
+      <target type="control" id-ref="mp-5"/>
+      <target type="control" id-ref="mp-5.3"/>
+      <target type="control" id-ref="sc-4"/>
+      <target type="control" id-ref="sc-4.2"/>
+      <remarks><p>Missing specification(s) in NIST 800-53:</p>
+<p>'The relocation or transfer request requires the written or cryptographically verifiable authorization'.</p>
+</remarks>
+    </map>
+    <map uuid="533ebab5-ac68-4e04-8e57-f7a1ba78e091">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-03"/>
+      <target type="control" id-ref="pe-1"/>
+      <target type="control" id-ref="pe-6"/>
+      <target type="control" id-ref="pe-6.1"/>
+      <target type="control" id-ref="pe-6.2"/>
+      <target type="control" id-ref="pe-6.3"/>
+      <target type="control" id-ref="pe-6.4"/>
+      <target type="control" id-ref="sc-15"/>
+      <target type="control" id-ref="sc-15.1"/>
+      <target type="control" id-ref="sc-15.3"/>
+      <target type="control" id-ref="sc-15.4"/>
+    </map>
+    <map uuid="9c866ed5-556f-4b62-8aed-e080e7d21aa9">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-04"/>
+      <target type="control" id-ref="mp-1"/>
+      <target type="control" id-ref="mp-5"/>
+      <target type="control" id-ref="mp-5.3"/>
+    </map>
+    <map uuid="d558799b-5430-4682-819e-ff0f90c4e4ab">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-05"/>
+      <target type="control" id-ref="cm-8"/>
+      <target type="control" id-ref="cm-8.1"/>
+      <target type="control" id-ref="cm-8.2"/>
+      <target type="control" id-ref="cm-8.4"/>
+      <target type="control" id-ref="cm-8.6"/>
+      <target type="control" id-ref="cm-8.7"/>
+      <target type="control" id-ref="cm-8.9"/>
+      <target type="control" id-ref="pm-5"/>
+      <target type="control" id-ref="pm-5.1"/>
+      <target type="control" id-ref="pe-20"/>
+    </map>
+    <map uuid="466f2ca6-269c-4551-8132-434d3aa240dc">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-06"/>
+      <target type="control" id-ref="cm-8"/>
+      <target type="control" id-ref="cm-8.1"/>
+      <target type="control" id-ref="cm-8.2"/>
+      <target type="control" id-ref="cm-8.4"/>
+      <target type="control" id-ref="cm-8.7"/>
+      <target type="control" id-ref="cm-8.8"/>
+    </map>
+    <map uuid="e75bf5ae-0e38-4139-8f41-ce27446290cb">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-07"/>
+      <target type="control" id-ref="at-3.2"/>
+      <target type="control" id-ref="pe-2"/>
+      <target type="control" id-ref="pe-2.1"/>
+      <target type="control" id-ref="pe-2.3"/>
+      <target type="control" id-ref="pe-3"/>
+      <target type="control" id-ref="pe-3.2"/>
+      <target type="control" id-ref="pe-3.3"/>
+      <target type="control" id-ref="pe-3.4"/>
+      <target type="control" id-ref="pe-3.5"/>
+      <target type="control" id-ref="pe-3.7"/>
+      <target type="control" id-ref="pe-3.8"/>
+      <target type="control" id-ref="pe-6"/>
+      <target type="control" id-ref="pe-6.1"/>
+      <target type="control" id-ref="pe-6.2"/>
+      <target type="control" id-ref="pe-6.3"/>
+      <target type="control" id-ref="pe-6.4"/>
+      <target type="control" id-ref="pe-8"/>
+      <target type="control" id-ref="pe-8.1"/>
+    </map>
+    <map uuid="8d45ff01-dc3e-4ab9-8ef9-3c49e3b6800b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-08"/>
+      <target type="control" id-ref="ac-18"/>
+      <target type="control" id-ref="ac-18.1"/>
+      <target type="control" id-ref="ia-3"/>
+      <target type="control" id-ref="ia-3.3"/>
+      <target type="control" id-ref="ia-3.4"/>
+    </map>
+    <map uuid="857fda87-46f2-432a-82bc-418ce1e0db96">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-09"/>
+      <target type="control" id-ref="mp-4.2"/>
+      <target type="control" id-ref="pe-3"/>
+      <target type="control" id-ref="pe-3.8"/>
+      <target type="control" id-ref="pe-5"/>
+      <target type="control" id-ref="pe-6"/>
+      <target type="control" id-ref="pe-6.1"/>
+      <target type="control" id-ref="pe-6.2"/>
+      <target type="control" id-ref="pe-6.3"/>
+      <target type="control" id-ref="pe-6.4"/>
+      <target type="control" id-ref="pe-18"/>
+      <target type="control" id-ref="sc-42"/>
+    </map>
+    <map uuid="004acb6e-ff35-4cc4-8ff8-4f5bae158d0c">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-10"/>
+      <target type="control" id-ref="pe-6"/>
+      <target type="control" id-ref="pe-6.1"/>
+      <target type="control" id-ref="pe-6.2"/>
+      <target type="control" id-ref="pe-6.3"/>
+    </map>
+    <map uuid="1e301364-b43c-41a7-8a40-1e5bc37e1f98">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-11"/>
+      <target type="control" id-ref="at-3"/>
+      <target type="control" id-ref="at-3.2"/>
+      <target type="control" id-ref="ir-2"/>
+      <target type="control" id-ref="ir-2.1"/>
+      <target type="control" id-ref="ir-2.2"/>
+      <target type="control" id-ref="ir-2.3"/>
+    </map>
+    <map uuid="d2e00d36-f7db-4d4c-8e84-461eda6b6ed8">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-12"/>
+      <target type="control" id-ref="pe-9"/>
+      <target type="control" id-ref="pe-9.1"/>
+      <target type="control" id-ref="pe-9.2"/>
+      <target type="control" id-ref="pe-19"/>
+      <target type="control" id-ref="pe-19.1"/>
+    </map>
+    <map uuid="3a12f3c1-61e7-4f53-8a6b-56abb940982a">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-13"/>
+      <target type="control" id-ref="ma-6"/>
+      <target type="control" id-ref="ma-6.1"/>
+      <target type="control" id-ref="ma-6.2"/>
+      <target type="control" id-ref="pe-13"/>
+      <target type="control" id-ref="pe-13.1"/>
+      <target type="control" id-ref="pe-13.4"/>
+      <target type="control" id-ref="pe-14"/>
+      <target type="control" id-ref="pe-14.1"/>
+      <target type="control" id-ref="pe-15"/>
+      <target type="control" id-ref="pe-15.1"/>
+    </map>
+    <map uuid="fdd55cbf-d1e6-4caf-8b52-9292e561a906">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-14"/>
+      <target type="control" id-ref="ma-6"/>
+      <target type="control" id-ref="ma-6.1"/>
+      <target type="control" id-ref="ma-6.2"/>
+    </map>
+    <map uuid="9b6e4a8f-19d3-4d6b-851b-6b59536eba4e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DCS-15"/>
+      <target type="control" id-ref="pe-18"/>
+      <target type="control" id-ref="pe-23"/>
+    </map>
+    <map uuid="b0f8c41e-d77e-446e-89c4-507fcd1fbb18">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-01"/>
+      <target type="control" id-ref="pl-2"/>
+      <target type="control" id-ref="pl-7"/>
+      <target type="control" id-ref="pm-17"/>
+      <target type="control" id-ref="pm-18"/>
+      <target type="control" id-ref="pm-19"/>
+      <target type="control" id-ref="pm-20"/>
+      <target type="control" id-ref="pm-20.1"/>
+      <target type="control" id-ref="pm-23"/>
+      <target type="control" id-ref="pm-24"/>
+      <target type="control" id-ref="pm-26"/>
+      <target type="control" id-ref="pt-1"/>
+      <target type="control" id-ref="pt-5"/>
+      <target type="control" id-ref="pt-5.2"/>
+      <target type="control" id-ref="pt-6"/>
+      <target type="control" id-ref="pt-6.1"/>
+      <target type="control" id-ref="pt-7"/>
+      <target type="control" id-ref="pt-7.2"/>
+    </map>
+    <map uuid="e1870c68-c90e-4049-80b0-0436b922737a">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-02"/>
+      <target type="control" id-ref="pm-22"/>
+      <target type="control" id-ref="si-12"/>
+      <target type="control" id-ref="si-12.3"/>
+      <target type="control" id-ref="si-18"/>
+      <target type="control" id-ref="si-18.1"/>
+      <target type="control" id-ref="si-18.4"/>
+      <target type="control" id-ref="si-18.5"/>
+    </map>
+    <map uuid="870e578b-8878-44b0-8aae-1a7da4798aa9">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-03"/>
+      <target type="control" id-ref="cm-12"/>
+      <target type="control" id-ref="cm-12.1"/>
+      <target type="control" id-ref="pm-5"/>
+      <target type="control" id-ref="pm-5.1"/>
+      <target type="control" id-ref="si-12"/>
+      <target type="control" id-ref="si-12.1"/>
+      <target type="control" id-ref="si-19"/>
+      <target type="control" id-ref="si-19.1"/>
+      <target type="control" id-ref="si-19.2"/>
+    </map>
+    <map uuid="944df62f-7181-450e-89ee-b56f617ecafa">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-04"/>
+      <target type="control" id-ref="ac-16"/>
+      <target type="control" id-ref="ac-16.9"/>
+      <target type="control" id-ref="pm-22"/>
+      <target type="control" id-ref="pm-23"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.1"/>
+      <target type="control" id-ref="si-18"/>
+      <target type="control" id-ref="si-18.2"/>
+      <target type="control" id-ref="si-19"/>
+      <target type="control" id-ref="si-19.6"/>
+    </map>
+    <map uuid="8095f146-177d-4bbe-85d7-527b06303810">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-05"/>
+      <target type="control" id-ref="ac-4"/>
+      <target type="control" id-ref="ac-4.1"/>
+      <target type="control" id-ref="ac-4.2"/>
+      <target type="control" id-ref="ac-4.3"/>
+      <target type="control" id-ref="ac-4.5"/>
+      <target type="control" id-ref="ac-4.6"/>
+      <target type="control" id-ref="ac-4.7"/>
+      <target type="control" id-ref="ac-4.8"/>
+      <target type="control" id-ref="ac-4.10"/>
+      <target type="control" id-ref="ac-4.12"/>
+      <target type="control" id-ref="ac-16"/>
+      <target type="control" id-ref="ac-16.3"/>
+      <target type="control" id-ref="ac-16.7"/>
+      <target type="control" id-ref="ac-16.8"/>
+      <target type="control" id-ref="ac-4.13"/>
+      <target type="control" id-ref="ac-4.19"/>
+      <target type="control" id-ref="sa-5"/>
+      <target type="control" id-ref="sa-17"/>
+      <target type="control" id-ref="sa-17.3"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.24"/>
+    </map>
+    <map uuid="442a7e2a-14c2-4483-8eb2-1c1b58a36db6">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-06"/>
+      <target type="control" id-ref="pm-18"/>
+      <target type="control" id-ref="pm-19"/>
+      <target type="control" id-ref="pm-22"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.1"/>
+      <target type="control" id-ref="ps-6"/>
+      <target type="control" id-ref="ps-6.2"/>
+      <target type="control" id-ref="si-12"/>
+      <target type="control" id-ref="si-12.1"/>
+    </map>
+    <map uuid="6e03e854-146a-4e09-8c27-472b66e0ddcf">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-07"/>
+      <target type="control" id-ref="pm-17"/>
+      <target type="control" id-ref="pm-24"/>
+      <target type="control" id-ref="pm-25"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.2"/>
+      <target type="control" id-ref="sa-3"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sa-5"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.9"/>
+      <target type="control" id-ref="sa-8.13"/>
+      <target type="control" id-ref="sa-8.18"/>
+      <target type="control" id-ref="sa-8.20"/>
+      <target type="control" id-ref="sa-8.22"/>
+      <target type="control" id-ref="sa-8.23"/>
+      <target type="control" id-ref="sa-8.33"/>
+      <target type="control" id-ref="sa-15"/>
+      <target type="control" id-ref="sa-15.12"/>
+      <target type="control" id-ref="sc-3"/>
+      <target type="control" id-ref="sc-3.3"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.24"/>
+      <target type="control" id-ref="sc-8"/>
+      <target type="control" id-ref="sc-8.1"/>
+      <target type="control" id-ref="sc-8.2"/>
+      <target type="control" id-ref="sc-8.3"/>
+      <target type="control" id-ref="sc-8.4"/>
+      <target type="control" id-ref="sc-28"/>
+      <target type="control" id-ref="sc-28.1"/>
+      <target type="control" id-ref="si-12"/>
+      <target type="control" id-ref="si-12.1"/>
+      <target type="control" id-ref="si-12.2"/>
+      <target type="control" id-ref="si-12.3"/>
+    </map>
+    <map uuid="05773547-3dce-482d-804c-e51376c35fb3">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-08"/>
+      <target type="control" id-ref="pm-22"/>
+      <target type="control" id-ref="pm-24"/>
+      <target type="control" id-ref="pt-1"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.1"/>
+      <target type="control" id-ref="pt-5"/>
+      <target type="control" id-ref="pt-5.1"/>
+      <target type="control" id-ref="pt-5.2"/>
+      <target type="control" id-ref="pt-6"/>
+      <target type="control" id-ref="pt-8"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.3"/>
+      <target type="control" id-ref="si-18"/>
+      <target type="control" id-ref="si-18.3"/>
+      <target type="control" id-ref="sa-19"/>
+      <target type="control" id-ref="si-19.1"/>
+      <target type="control" id-ref="si-19.5"/>
+      <target type="control" id-ref="si-19.6"/>
+      <target type="control" id-ref="si-19.8"/>
+    </map>
+    <map uuid="5dd7e4f4-e1a4-4787-8cbf-1da81b578795">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-09"/>
+      <target type="control" id-ref="cm-4"/>
+      <target type="control" id-ref="cm-4.1"/>
+      <target type="control" id-ref="cm-4.2"/>
+      <target type="control" id-ref="pt-3"/>
+      <target type="control" id-ref="ra-8"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sa-9"/>
+      <target type="control" id-ref="sa-9.1"/>
+    </map>
+    <map uuid="c1587820-7387-40e6-80f5-bf98a85ec09a">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-10"/>
+      <target type="control" id-ref="ac-4"/>
+      <target type="control" id-ref="ac-4.23"/>
+      <target type="control" id-ref="ac-4.24"/>
+      <target type="control" id-ref="ac-4.25"/>
+      <target type="control" id-ref="ca-3"/>
+      <target type="control" id-ref="ca-3.6"/>
+      <target type="control" id-ref="ca-6"/>
+      <target type="control" id-ref="ca-6.1"/>
+      <target type="control" id-ref="ca-6.2"/>
+      <target type="control" id-ref="sc-4"/>
+      <target type="control" id-ref="sc-4.2"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.10"/>
+      <target type="control" id-ref="sc-7.24"/>
+      <target type="control" id-ref="sc-8"/>
+      <target type="control" id-ref="sc-8.1"/>
+      <target type="control" id-ref="sc-8.2"/>
+      <target type="control" id-ref="sc-8.3"/>
+      <target type="control" id-ref="sc-8.4"/>
+      <target type="control" id-ref="sc-8.5"/>
+      <target type="control" id-ref="sc-16"/>
+      <target type="control" id-ref="sc-16.1"/>
+      <target type="control" id-ref="sc-16.2"/>
+      <target type="control" id-ref="sc-16.3"/>
+    </map>
+    <map uuid="f33f24bd-376c-4567-8446-78c4c7686974">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-11"/>
+      <target type="control" id-ref="pm-22"/>
+      <target type="control" id-ref="pm-24"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.1"/>
+      <target type="control" id-ref="pt-4"/>
+      <target type="control" id-ref="pt-4.1"/>
+      <target type="control" id-ref="pt-4.3"/>
+      <target type="control" id-ref="pt-6"/>
+      <target type="control" id-ref="pt-6.2"/>
+      <target type="control" id-ref="pt-7"/>
+      <target type="control" id-ref="pt-7.2"/>
+      <target type="control" id-ref="si-12"/>
+      <target type="control" id-ref="si-12.1"/>
+      <target type="control" id-ref="si-19"/>
+      <target type="control" id-ref="si-19.1"/>
+      <target type="control" id-ref="si-19.7"/>
+    </map>
+    <map uuid="deb31099-f2bb-46c9-897b-831d7f0e23f8">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-12"/>
+      <target type="control" id-ref="pm-23"/>
+      <target type="control" id-ref="pm-27"/>
+      <target type="control" id-ref="pm-32"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.1"/>
+      <target type="control" id-ref="pt-3"/>
+      <target type="control" id-ref="pt-3.1"/>
+      <target type="control" id-ref="pt-3.2"/>
+      <target type="control" id-ref="pt-4"/>
+      <target type="control" id-ref="pt-4.2"/>
+      <target type="control" id-ref="pt-4.3"/>
+      <target type="control" id-ref="pt-6"/>
+      <target type="control" id-ref="pt-6.1"/>
+      <target type="control" id-ref="pt-6.2"/>
+      <target type="control" id-ref="si-12"/>
+      <target type="control" id-ref="si-12.1"/>
+      <target type="control" id-ref="si-19"/>
+      <target type="control" id-ref="si-19.1"/>
+    </map>
+    <map uuid="c28f5bb4-6dcf-44be-8ffa-c274963b3953">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-13"/>
+      <target type="control" id-ref="cm-13"/>
+      <target type="control" id-ref="pt-3"/>
+      <target type="control" id-ref="pt-3.1"/>
+      <target type="control" id-ref="sa-9"/>
+      <target type="control" id-ref="sa-9.1"/>
+      <target type="control" id-ref="sa-9.3"/>
+      <target type="control" id-ref="sa-9.5"/>
+      <target type="control" id-ref="sr-3"/>
+      <target type="control" id-ref="sr-3.3"/>
+      <target type="control" id-ref="sr-4"/>
+      <target type="control" id-ref="sr-4.1"/>
+    </map>
+    <map uuid="cf802868-d5cf-46cb-8939-31103a30a503">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-14"/>
+      <target type="control" id-ref="pm-22"/>
+      <target type="control" id-ref="pt-6"/>
+      <target type="control" id-ref="pt-6.1"/>
+      <target type="control" id-ref="pt-6.2"/>
+      <target type="control" id-ref="pt-8"/>
+      <target type="control" id-ref="sr-4"/>
+      <target type="control" id-ref="sr-4.1"/>
+    </map>
+    <map uuid="495a1b0d-1bec-45fd-85a2-c85fa55dd15f">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-15"/>
+      <target type="control" id-ref="sa-3"/>
+      <target type="control" id-ref="sa-3.2"/>
+      <target type="control" id-ref="si-19"/>
+      <target type="control" id-ref="si-19.3"/>
+    </map>
+    <map uuid="66a24a89-01f7-4b8f-855f-398a310d3fcb">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-16"/>
+      <target type="control" id-ref="si-12"/>
+      <target type="control" id-ref="si-12.1"/>
+      <target type="control" id-ref="si-12.2"/>
+      <target type="control" id-ref="si-12.3"/>
+      <target type="control" id-ref="si-18"/>
+      <target type="control" id-ref="si-18.1"/>
+      <target type="control" id-ref="si-18.4"/>
+      <target type="control" id-ref="si-18.5"/>
+      <target type="control" id-ref="si-19"/>
+      <target type="control" id-ref="si-19.2"/>
+    </map>
+    <map uuid="d25ee9d0-c5a7-473f-8ffa-3582efde9bcb">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-17"/>
+      <target type="control" id-ref="pl-2"/>
+      <target type="control" id-ref="pm-22"/>
+      <target type="control" id-ref="pm-24"/>
+      <target type="control" id-ref="pt-7"/>
+      <target type="control" id-ref="pt-7.1"/>
+      <target type="control" id-ref="pt-7.2"/>
+      <target type="control" id-ref="pt-8"/>
+      <target type="control" id-ref="sc-8"/>
+      <target type="control" id-ref="sc-8.1"/>
+      <target type="control" id-ref="sc-8.2"/>
+      <target type="control" id-ref="sc-8.3"/>
+      <target type="control" id-ref="sc-8.4"/>
+      <target type="control" id-ref="sc-8.5"/>
+      <target type="control" id-ref="sc-28"/>
+      <target type="control" id-ref="sc-28.1"/>
+    </map>
+    <map uuid="ff74755b-45d3-4ec5-8894-2e3d9a6c5be1">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-18"/>
+      <target type="control" id-ref="ir-6"/>
+      <target type="control" id-ref="ir-6.3"/>
+      <target type="control" id-ref="pm-21"/>
+      <target type="control" id-ref="sr-8"/>
+    </map>
+    <map uuid="d33ef1c0-371a-4095-8c6c-ac202ed8fb82">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="DSP-19"/>
+      <target type="control" id-ref="ca-3"/>
+      <target type="control" id-ref="ca-3.6"/>
+      <target type="control" id-ref="cm-8"/>
+      <target type="control" id-ref="cm-8.8"/>
+      <target type="control" id-ref="cm-12"/>
+      <target type="control" id-ref="cm-12.1"/>
+      <target type="control" id-ref="pm-5"/>
+      <target type="control" id-ref="pm-5.1"/>
+      <target type="control" id-ref="pm-22"/>
+      <target type="control" id-ref="pm-24"/>
+      <target type="control" id-ref="sa-9"/>
+      <target type="control" id-ref="sa-9.5"/>
+      <target type="control" id-ref="sa-9.8"/>
+    </map>
+    <map uuid="33dcd932-2865-48bc-86c9-449f30992fcb">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="GRC-01"/>
+      <target type="control" id-ref="pl-1"/>
+      <target type="control" id-ref="pm-1"/>
+      <target type="control" id-ref="pm-17"/>
+      <target type="control" id-ref="ac-1"/>
+      <target type="control" id-ref="at-1"/>
+      <target type="control" id-ref="au-1"/>
+      <target type="control" id-ref="ca-1"/>
+      <target type="control" id-ref="cm-1"/>
+      <target type="control" id-ref="cp-1"/>
+      <target type="control" id-ref="ia-1"/>
+      <target type="control" id-ref="ir-1"/>
+      <target type="control" id-ref="ma-1"/>
+      <target type="control" id-ref="mp-1"/>
+      <target type="control" id-ref="pe-1"/>
+      <target type="control" id-ref="ps-1"/>
+      <target type="control" id-ref="pt-1"/>
+      <target type="control" id-ref="ra-1"/>
+      <target type="control" id-ref="sa-1"/>
+      <target type="control" id-ref="sc-1"/>
+      <target type="control" id-ref="si-1"/>
+      <target type="control" id-ref="sr-1"/>
+    </map>
+    <map uuid="4125a3bc-c656-448a-88be-875a8570f937">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="GRC-02"/>
+      <target type="control" id-ref="pl-1"/>
+      <target type="control" id-ref="pl-2"/>
+      <target type="control" id-ref="pm-4"/>
+      <target type="control" id-ref="pm-9"/>
+      <target type="control" id-ref="pm-10"/>
+      <target type="control" id-ref="pm-28"/>
+    </map>
+    <map uuid="cd81dced-171e-4689-8af2-060407bbbe20">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="GRC-03"/>
+      <target type="control" id-ref="pl-1"/>
+      <target type="control" id-ref="pm-1"/>
+      <target type="control" id-ref="pm-14"/>
+      <target type="control" id-ref="pm-17"/>
+    </map>
+    <map uuid="682b6a91-89a3-4990-821b-54ed4eae456e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="GRC-04"/>
+      <target type="control" id-ref="cm-6"/>
+    </map>
+    <map uuid="fdf214af-4347-430a-8f4e-a09296267b32">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="GRC-05"/>
+      <target type="control" id-ref="pm-1"/>
+      <target type="control" id-ref="pm-3"/>
+      <target type="control" id-ref="pm-14"/>
+      <target type="control" id-ref="pl-2"/>
+      <target type="control" id-ref="pm-18"/>
+      <target type="control" id-ref="pm-31"/>
+    </map>
+    <map uuid="32391727-b197-4757-8454-f3d3d29cfaed">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="GRC-06"/>
+      <target type="control" id-ref="pm-29"/>
+    </map>
+    <map uuid="d164afba-8134-4429-8080-62cc0fbcc6d7">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="GRC-07"/>
+      <target type="control" id-ref="pl-1"/>
+    </map>
+    <map uuid="94db24a6-6b5e-42bc-812a-8035f73af4b0">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="GRC-08"/>
+      <target type="control" id-ref="pm-15"/>
+    </map>
+    <map uuid="579f4b81-cb1e-4ca5-829d-2fb173da7950">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-01"/>
+      <target type="control" id-ref="ia-12"/>
+      <target type="control" id-ref="ia-12.2"/>
+      <target type="control" id-ref="ia-12.3"/>
+      <target type="control" id-ref="ma-5"/>
+      <target type="control" id-ref="ma-5.2"/>
+      <target type="control" id-ref="ma-5.3"/>
+      <target type="control" id-ref="ma-5.4"/>
+      <target type="control" id-ref="ps-1"/>
+      <target type="control" id-ref="ps-2"/>
+      <target type="control" id-ref="ps-3"/>
+      <target type="control" id-ref="ps-3.1"/>
+      <target type="control" id-ref="ps-3.2"/>
+      <target type="control" id-ref="ps-3.4"/>
+    </map>
+    <map uuid="e449c2c0-cf39-46c9-83f5-e4e8320d1c81">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-02"/>
+      <target type="control" id-ref="pl-4"/>
+      <target type="control" id-ref="pl-4.1"/>
+      <target type="control" id-ref="ps-1"/>
+      <target type="control" id-ref="ps-6"/>
+      <target type="control" id-ref="ps-6.2"/>
+    </map>
+    <map uuid="4291577d-42db-45da-8433-85a393d35bad">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-03"/>
+      <target type="control" id-ref="ac-11"/>
+      <target type="control" id-ref="ac-11.1"/>
+      <target type="control" id-ref="mp-4"/>
+      <target type="control" id-ref="ps-1"/>
+    </map>
+    <map uuid="306eb850-185f-4c4a-8a41-7d6eabf33a3e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-04"/>
+      <target type="control" id-ref="ac-17"/>
+      <target type="control" id-ref="ac-17.6"/>
+      <target type="control" id-ref="ac-17.9"/>
+      <target type="control" id-ref="ac-20"/>
+      <target type="control" id-ref="ac-20.1"/>
+      <target type="control" id-ref="ac-20.2"/>
+      <target type="control" id-ref="ac-20.3"/>
+      <target type="control" id-ref="ac-20.4"/>
+      <target type="control" id-ref="ac-20.5"/>
+      <target type="control" id-ref="pe-17"/>
+      <target type="control" id-ref="ps-1"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.7"/>
+    </map>
+    <map uuid="a6ddf6cd-01c3-4f36-8b92-dd5db8aea1c2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-05"/>
+      <target type="control" id-ref="ps-1"/>
+      <target type="control" id-ref="ps-4"/>
+      <target type="control" id-ref="ps-4.1"/>
+      <target type="control" id-ref="ps-6"/>
+      <target type="control" id-ref="ps-6.3"/>
+    </map>
+    <map uuid="46416ae4-0d02-41b5-88f4-de38fbdc39e9">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-06"/>
+      <target type="control" id-ref="ac-17"/>
+      <target type="control" id-ref="ac-17.9"/>
+      <target type="control" id-ref="ps-1"/>
+      <target type="control" id-ref="ps-4"/>
+      <target type="control" id-ref="ps-4.1"/>
+      <target type="control" id-ref="ps-4.2"/>
+      <target type="control" id-ref="ps-5"/>
+      <target type="control" id-ref="ps-6"/>
+      <target type="control" id-ref="ps-6.3"/>
+      <target type="control" id-ref="si-4"/>
+      <target type="control" id-ref="si-4.19"/>
+      <target type="control" id-ref="si-4.21"/>
+    </map>
+    <map uuid="1bd181b3-9cc5-4627-8cac-49cfcc072e5a">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-07"/>
+      <target type="control" id-ref="pe-3"/>
+      <target type="control" id-ref="pe-3.1"/>
+      <target type="control" id-ref="ps-6"/>
+      <target type="control" id-ref="ps-6.2"/>
+      <target type="control" id-ref="ps-9"/>
+    </map>
+    <map uuid="7f10cffb-592a-4137-85b6-239c0b8e8d6f">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-08"/>
+      <target type="control" id-ref="pl-4"/>
+      <target type="control" id-ref="pl-4.1"/>
+      <target type="control" id-ref="ps-6"/>
+      <target type="control" id-ref="ps-6.2"/>
+      <target type="control" id-ref="ps-6.3"/>
+      <target type="control" id-ref="ps-7"/>
+    </map>
+    <map uuid="fcab44a7-df2d-45a4-8c25-cccd8fd21fe2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-09"/>
+      <target type="control" id-ref="ac-1"/>
+      <target type="control" id-ref="at-1"/>
+      <target type="control" id-ref="ps-1"/>
+    </map>
+    <map uuid="c6f34b0b-85c2-41e3-820b-e519d66517d3">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-10"/>
+      <target type="control" id-ref="pl-4"/>
+      <target type="control" id-ref="ps-6"/>
+      <target type="control" id-ref="ps-6.2"/>
+    </map>
+    <map uuid="7f334ac6-765a-40ac-8a85-218d3c4dc16b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-11"/>
+      <target type="control" id-ref="at-1"/>
+      <target type="control" id-ref="at-2"/>
+      <target type="control" id-ref="at-2.1"/>
+      <target type="control" id-ref="at-2.2"/>
+      <target type="control" id-ref="at-2.3"/>
+      <target type="control" id-ref="at-2.4"/>
+      <target type="control" id-ref="at-2.5"/>
+      <target type="control" id-ref="at-2.6"/>
+      <target type="control" id-ref="at-4"/>
+      <target type="control" id-ref="at-6"/>
+    </map>
+    <map uuid="d5d5c728-2947-4c67-804f-9488d6abf6e2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-12"/>
+      <target type="control" id-ref="at-3"/>
+      <target type="control" id-ref="at-3.1"/>
+      <target type="control" id-ref="at-3.2"/>
+      <target type="control" id-ref="at-3.3"/>
+      <target type="control" id-ref="at-3.5"/>
+      <target type="control" id-ref="at-4"/>
+      <target type="control" id-ref="at-6"/>
+      <target type="control" id-ref="ir-9"/>
+      <target type="control" id-ref="ir-9.2"/>
+      <target type="control" id-ref="pm-12"/>
+      <target type="control" id-ref="pm-16"/>
+      <target type="control" id-ref="sr-11"/>
+      <target type="control" id-ref="sr-11.1"/>
+    </map>
+    <map uuid="495d835a-681f-42fe-8526-4c46ccc98bec">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="HRS-13"/>
+      <target type="control" id-ref="pl-4"/>
+      <target type="control" id-ref="pl-4.1"/>
+      <target type="control" id-ref="ps-1"/>
+      <target type="control" id-ref="ps-6"/>
+      <target type="control" id-ref="ps-6.2"/>
+    </map>
+    <map uuid="52e3ec43-200e-4cba-8846-f994764ed420">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-01"/>
+      <target type="control" id-ref="ac-1"/>
+      <target type="control" id-ref="ac-2"/>
+      <target type="control" id-ref="ac-2.3"/>
+      <target type="control" id-ref="ac-2.9"/>
+      <target type="control" id-ref="ac-2.11"/>
+      <target type="control" id-ref="ac-16"/>
+      <target type="control" id-ref="ac-16.1"/>
+      <target type="control" id-ref="ac-16.6"/>
+      <target type="control" id-ref="ia-4"/>
+      <target type="control" id-ref="ia-4.5"/>
+      <target type="control" id-ref="ia-4.6"/>
+      <target type="control" id-ref="ia-5"/>
+      <target type="control" id-ref="ia-5.16"/>
+      <target type="control" id-ref="ia-8"/>
+      <target type="control" id-ref="ia-8.4"/>
+      <target type="control" id-ref="ia-12"/>
+      <target type="control" id-ref="ia-12.2"/>
+      <target type="control" id-ref="ia-12.3"/>
+      <target type="control" id-ref="ia-12.4"/>
+      <target type="control" id-ref="ia-12.5"/>
+      <target type="control" id-ref="ia-12.6"/>
+    </map>
+    <map uuid="7a7ff347-30ed-42db-86d1-7587242eb5cc">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-02"/>
+      <target type="control" id-ref="ac-2"/>
+      <target type="control" id-ref="ac-2.3"/>
+      <target type="control" id-ref="ac-2.11"/>
+      <target type="control" id-ref="ac-3"/>
+      <target type="control" id-ref="ac-3.3"/>
+      <target type="control" id-ref="ac-12"/>
+      <target type="control" id-ref="ac-12.1"/>
+      <target type="control" id-ref="ia-2"/>
+      <target type="control" id-ref="ia-2.10"/>
+      <target type="control" id-ref="ia-5"/>
+      <target type="control" id-ref="ia-5.1"/>
+      <target type="control" id-ref="ia-5.18"/>
+    </map>
+    <map uuid="8c66da3a-0999-44f4-8f53-a7eaa75319d8">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-03"/>
+      <target type="control" id-ref="au-10"/>
+      <target type="control" id-ref="au-10.1"/>
+      <target type="control" id-ref="au-10.2"/>
+      <target type="control" id-ref="au-16"/>
+      <target type="control" id-ref="au-16.1"/>
+      <target type="control" id-ref="ia-4"/>
+      <target type="control" id-ref="ia-4.8"/>
+      <target type="control" id-ref="ia-4.9"/>
+      <target type="control" id-ref="ia-5"/>
+      <target type="control" id-ref="ia-5.5"/>
+      <target type="control" id-ref="ia-8"/>
+      <target type="control" id-ref="ia-8.4"/>
+      <target type="control" id-ref="pm-5.1"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.22"/>
+    </map>
+    <map uuid="5b46600d-a7c1-453a-8f50-b9738ad0d6f7">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-04"/>
+      <target type="control" id-ref="ac-2"/>
+      <target type="control" id-ref="ac-2.3"/>
+      <target type="control" id-ref="ac-2.11"/>
+      <target type="control" id-ref="ac-6"/>
+      <target type="control" id-ref="ac-6.1"/>
+      <target type="control" id-ref="ac-6.2"/>
+      <target type="control" id-ref="ac-6.3"/>
+      <target type="control" id-ref="ac-6.4"/>
+      <target type="control" id-ref="ac-6.5"/>
+      <target type="control" id-ref="ac-6.6"/>
+      <target type="control" id-ref="ac-6.7"/>
+      <target type="control" id-ref="ac-6.8"/>
+      <target type="control" id-ref="ac-6.9"/>
+      <target type="control" id-ref="ac-6.10"/>
+    </map>
+    <map uuid="e196d856-a801-46b3-85e2-99c1a0db552c">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-05"/>
+      <target type="control" id-ref="ac-6"/>
+      <target type="control" id-ref="ac-6.4"/>
+      <target type="control" id-ref="ia-12"/>
+      <target type="control" id-ref="ia-12.2"/>
+      <target type="control" id-ref="ia-12.3"/>
+    </map>
+    <map uuid="4ddf9c7c-9187-418a-8d0d-8566e602a899">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-06"/>
+      <target type="control" id-ref="ac-3"/>
+      <target type="control" id-ref="ac-16"/>
+      <target type="control" id-ref="ac-16.2"/>
+      <target type="control" id-ref="ac-16.4"/>
+      <target type="control" id-ref="ac-16.10"/>
+      <target type="control" id-ref="ia-12"/>
+      <target type="control" id-ref="ia-12.1"/>
+    </map>
+    <map uuid="cfc33daf-9ad0-40b3-8bee-008a33655ba0">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-07"/>
+      <target type="control" id-ref="ac-2"/>
+      <target type="control" id-ref="ac-2.1"/>
+      <target type="control" id-ref="ac-2.2"/>
+      <target type="control" id-ref="ac-2.6"/>
+      <target type="control" id-ref="ac-2.8"/>
+      <target type="control" id-ref="ac-3"/>
+      <target type="control" id-ref="ac-3.8"/>
+      <target type="control" id-ref="ac-6"/>
+      <target type="control" id-ref="ac-6.7"/>
+      <target type="control" id-ref="au-10"/>
+      <target type="control" id-ref="au-10.4"/>
+      <target type="control" id-ref="au-16"/>
+      <target type="control" id-ref="au-16.1"/>
+      <target type="control" id-ref="cm-7"/>
+      <target type="control" id-ref="cm-7.1"/>
+    </map>
+    <map uuid="b0835230-ce01-4bee-8c2e-d7784df062b0">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-08"/>
+      <target type="control" id-ref="ac-6"/>
+      <target type="control" id-ref="ac-6.4"/>
+      <target type="control" id-ref="ac-6.8"/>
+      <target type="control" id-ref="ia-8"/>
+      <target type="control" id-ref="ia-8.4"/>
+    </map>
+    <map uuid="8860b7f8-7188-47cb-81a8-1a62f50872bd">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-09"/>
+      <target type="control" id-ref="ac-6"/>
+      <target type="control" id-ref="ac-3.7"/>
+      <target type="control" id-ref="ac-6.4"/>
+      <target type="control" id-ref="ac-6.8"/>
+      <target type="control" id-ref="ia-5"/>
+      <target type="control" id-ref="ia-5.6"/>
+      <target type="control" id-ref="ia-8"/>
+      <target type="control" id-ref="ia-8.4"/>
+    </map>
+    <map uuid="f3c1b3f1-dcc5-45f5-82e0-70b21b4e7c59">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-10"/>
+      <target type="control" id-ref="ac-2"/>
+      <target type="control" id-ref="ac-2.7"/>
+      <target type="control" id-ref="ac-3"/>
+      <target type="control" id-ref="ac-3.4"/>
+      <target type="control" id-ref="ac-3.11"/>
+      <target type="control" id-ref="ac-3.13"/>
+      <target type="control" id-ref="ac-3.14"/>
+      <target type="control" id-ref="ac-6"/>
+      <target type="control" id-ref="ac-6.4"/>
+      <target type="control" id-ref="ac-6.5"/>
+      <target type="control" id-ref="ac-6.8"/>
+      <target type="control" id-ref="ac-12"/>
+      <target type="control" id-ref="ac-12.3"/>
+      <target type="control" id-ref="ac-17"/>
+      <target type="control" id-ref="ac-17.4"/>
+      <target type="control" id-ref="ia-8"/>
+      <target type="control" id-ref="ia-8.4"/>
+    </map>
+    <map uuid="d7a632b7-fea9-4681-82ba-edc5ef8099b8">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-11"/>
+      <target type="control" id-ref="ac-6"/>
+      <target type="control" id-ref="ac-6.4"/>
+      <target type="control" id-ref="ac-6.6"/>
+      <target type="control" id-ref="au-10"/>
+      <target type="control" id-ref="au-10.4"/>
+      <target type="control" id-ref="ca-6"/>
+      <target type="control" id-ref="ca-6.2"/>
+      <target type="control" id-ref="ia-2"/>
+      <target type="control" id-ref="ia-2.1"/>
+      <target type="control" id-ref="ia-2.2"/>
+      <target type="control" id-ref="ia-2.12"/>
+      <target type="control" id-ref="ia-12"/>
+      <target type="control" id-ref="ia-12.2"/>
+      <target type="control" id-ref="ia-12.4"/>
+    </map>
+    <map uuid="050a02c5-3fb1-4fb5-83e9-2fa5ab5a6438">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-12"/>
+      <target type="control" id-ref="ac-2"/>
+      <target type="control" id-ref="ac-2.11"/>
+      <target type="control" id-ref="ac-2.12"/>
+      <target type="control" id-ref="ia-8"/>
+      <target type="control" id-ref="ia-8.4"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.22"/>
+      <target type="control" id-ref="sc-34"/>
+      <target type="control" id-ref="sc-34.1"/>
+      <target type="control" id-ref="sc-34.2"/>
+      <target type="control" id-ref="sc-36"/>
+      <target type="control" id-ref="si-4"/>
+      <target type="control" id-ref="si-4.5"/>
+    </map>
+    <map uuid="effb4b14-2004-4bc1-8834-f03db88e62e4">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-13"/>
+      <target type="control" id-ref="ac-3"/>
+      <target type="control" id-ref="ac-3.14"/>
+      <target type="control" id-ref="ac-24"/>
+      <target type="control" id-ref="ac-24.2"/>
+      <target type="control" id-ref="au-10"/>
+      <target type="control" id-ref="au-10.1"/>
+      <target type="control" id-ref="ia-2"/>
+      <target type="control" id-ref="ia-2.1"/>
+      <target type="control" id-ref="ia-2.2"/>
+      <target type="control" id-ref="ia-2.12"/>
+      <target type="control" id-ref="ia-4"/>
+      <target type="control" id-ref="ia-4.1"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.22"/>
+      <target type="control" id-ref="sc-23"/>
+      <target type="control" id-ref="sc-23.3"/>
+      <target type="control" id-ref="sc-40.4"/>
+    </map>
+    <map uuid="68e2fe92-e2a5-4477-8e42-b178b06a92b2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-14"/>
+      <target type="control" id-ref="ac-6"/>
+      <target type="control" id-ref="ac-6.5"/>
+      <target type="control" id-ref="ac-7"/>
+      <target type="control" id-ref="ac-7.4"/>
+      <target type="control" id-ref="au-10"/>
+      <target type="control" id-ref="au-10.2"/>
+      <target type="control" id-ref="ia-2"/>
+      <target type="control" id-ref="ia-2.1"/>
+      <target type="control" id-ref="ia-2.2"/>
+      <target type="control" id-ref="ia-2.8"/>
+      <target type="control" id-ref="ia-2.12"/>
+      <target type="control" id-ref="ia-3"/>
+      <target type="control" id-ref="ia-3.1"/>
+      <target type="control" id-ref="ia-5"/>
+      <target type="control" id-ref="ia-5.2"/>
+      <target type="control" id-ref="ia-5.7"/>
+      <target type="control" id-ref="ia-5.9"/>
+      <target type="control" id-ref="ia-5.10"/>
+      <target type="control" id-ref="ia-5.12"/>
+      <target type="control" id-ref="ia-5.14"/>
+      <target type="control" id-ref="ia-5.15"/>
+      <target type="control" id-ref="ia-5.16"/>
+      <target type="control" id-ref="ia-8"/>
+      <target type="control" id-ref="ia-8.1"/>
+      <target type="control" id-ref="ia-8.6"/>
+      <target type="control" id-ref="sc-23"/>
+      <target type="control" id-ref="sc-23.3"/>
+    </map>
+    <map uuid="77917373-4f35-451f-8cd9-96b1d88ca3c4">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-15"/>
+      <target type="control" id-ref="ia-4"/>
+      <target type="control" id-ref="ia-4.8"/>
+      <target type="control" id-ref="ia-5"/>
+      <target type="control" id-ref="ia-5.1"/>
+      <target type="control" id-ref="ia-5.8"/>
+      <target type="control" id-ref="ia-5.18"/>
+    </map>
+    <map uuid="3575e595-1458-4313-8cbf-f1311a9e9f2d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IAM-16"/>
+      <target type="control" id-ref="ac-3"/>
+      <target type="control" id-ref="ac-3.5"/>
+      <target type="control" id-ref="ac-4"/>
+      <target type="control" id-ref="ac-4.17"/>
+      <target type="control" id-ref="ac-4.21"/>
+      <target type="control" id-ref="ac-4.22"/>
+      <target type="control" id-ref="ac-6"/>
+      <target type="control" id-ref="ac-6.8"/>
+      <target type="control" id-ref="ac-6.9"/>
+      <target type="control" id-ref="ac-12"/>
+      <target type="control" id-ref="ac-12.1"/>
+      <target type="control" id-ref="ac-20"/>
+      <target type="control" id-ref="ac-20.1"/>
+      <target type="control" id-ref="au-10"/>
+      <target type="control" id-ref="au-10.1"/>
+      <target type="control" id-ref="au-10.2"/>
+      <target type="control" id-ref="ia-2"/>
+      <target type="control" id-ref="ia-2.1"/>
+      <target type="control" id-ref="ia-2.2"/>
+      <target type="control" id-ref="ia-2.12"/>
+      <target type="control" id-ref="ia-3"/>
+      <target type="control" id-ref="ia-3.1"/>
+      <target type="control" id-ref="ia-5.1"/>
+      <target type="control" id-ref="ia-5.2"/>
+      <target type="control" id-ref="ia-5.5"/>
+      <target type="control" id-ref="ia-5.8"/>
+      <target type="control" id-ref="ia-5.10"/>
+      <target type="control" id-ref="ia-5.12"/>
+      <target type="control" id-ref="ia-8"/>
+      <target type="control" id-ref="ia-8.1"/>
+      <target type="control" id-ref="ia-8.2"/>
+    </map>
+    <map uuid="586d3be2-eb1d-461f-81cb-0c7f3d7a5cff">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IPY-01"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.1"/>
+      <target type="control" id-ref="pt-3"/>
+      <target type="control" id-ref="pt-3.1"/>
+      <target type="control" id-ref="sc-1"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.8"/>
+      <target type="control" id-ref="sc-27"/>
+      <target type="control" id-ref="sc-29"/>
+      <target type="control" id-ref="sc-29.1"/>
+    </map>
+    <map uuid="0355368e-12cc-4f7a-8b4d-62f7873d0bf1">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IPY-02"/>
+      <target type="control" id-ref="cm-13"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.1"/>
+      <target type="control" id-ref="pt-2.2"/>
+      <target type="control" id-ref="pt-3"/>
+      <target type="control" id-ref="pt-3.1"/>
+      <target type="control" id-ref="pt-3.2"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.20"/>
+    </map>
+    <map uuid="aaabcdb9-af21-47d2-8529-a7c3b1b9a1e6">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IPY-03"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.2"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sc-16"/>
+      <target type="control" id-ref="sc-16.3"/>
+    </map>
+    <map uuid="088df5bf-219f-4a06-8a50-6f11484d10b4">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="IPY-04"/>
+      <target type="control" id-ref="pt-2"/>
+      <target type="control" id-ref="pt-2.1"/>
+      <target type="control" id-ref="pt-3"/>
+      <target type="control" id-ref="pt-3.1"/>
+      <target type="control" id-ref="pt-4.3"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sa-4.11"/>
+      <target type="control" id-ref="sa-4.12"/>
+      <target type="control" id-ref="si-12"/>
+      <target type="control" id-ref="si-12.3"/>
+      <remarks><p>Recommend adding the full V4 control specification to the NIST 800-53r5 addendum.</p>
+</remarks>
+    </map>
+    <map uuid="73feea67-9b7f-4622-8d7b-469af604ea5a">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="IVS-01"/>
+      <target type="control" id-ref="ac-1"/>
+      <target type="control" id-ref="cm-1"/>
+      <target type="control" id-ref="ia-1"/>
+      <target type="control" id-ref="ra-1"/>
+      <target type="control" id-ref="sa-1"/>
+      <target type="control" id-ref="sc-1"/>
+      <target type="control" id-ref="si-1"/>
+      <target type="control" id-ref="sc-46"/>
+      <target type="control" id-ref="sc-49"/>
+      <target type="control" id-ref="sc-50"/>
+      <remarks><p>Missing specification(s) in NIST 800-53:</p>
+<p>'policies and procedures for virtualization security'.</p>
+</remarks>
+    </map>
+    <map uuid="0223d3c3-53ec-4fd0-807a-9343a3369b6c">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-02"/>
+      <target type="control" id-ref="cp-2"/>
+      <target type="control" id-ref="cp-2.2"/>
+      <target type="control" id-ref="sc-5"/>
+      <target type="control" id-ref="sc-5.2"/>
+      <target type="control" id-ref="sc-4"/>
+      <target type="control" id-ref="si-4"/>
+    </map>
+    <map uuid="f9573f90-18e7-43a6-84d4-37995a53b979">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-03"/>
+      <target type="control" id-ref="sc-1"/>
+      <target type="control" id-ref="sc-4"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.4"/>
+      <target type="control" id-ref="sc-7.5"/>
+      <target type="control" id-ref="sc-7.8"/>
+      <target type="control" id-ref="sc-7.9"/>
+      <target type="control" id-ref="sc-7.11"/>
+      <target type="control" id-ref="sc-8"/>
+      <target type="control" id-ref="sc-8.1"/>
+      <target type="control" id-ref="sc-11"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-16"/>
+      <target type="control" id-ref="sc-23"/>
+      <target type="control" id-ref="sc-29"/>
+      <target type="control" id-ref="sc-29.1"/>
+    </map>
+    <map uuid="755d0e95-2e52-4706-88cb-f2c405cb0932">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-04"/>
+      <target type="control" id-ref="cm-6"/>
+      <target type="control" id-ref="cm-6.1"/>
+      <target type="control" id-ref="sc-29"/>
+      <target type="control" id-ref="sc-29.1"/>
+      <target type="control" id-ref="sc-2"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.12"/>
+      <target type="control" id-ref="sc-30"/>
+      <target type="control" id-ref="sc-34"/>
+      <target type="control" id-ref="sc-35"/>
+      <target type="control" id-ref="sc-39"/>
+      <target type="control" id-ref="sc-44"/>
+    </map>
+    <map uuid="40b2670d-916a-4fbc-81bb-7bb67d940f9a">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-05"/>
+      <target type="control" id-ref="cm-2"/>
+      <target type="control" id-ref="cm-2.6"/>
+      <target type="control" id-ref="cm-5"/>
+      <target type="control" id-ref="cm-5.5"/>
+      <target type="control" id-ref="sa-3"/>
+      <target type="control" id-ref="sa-3.1"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.1"/>
+      <target type="control" id-ref="sa-8.2"/>
+      <target type="control" id-ref="sa-8.3"/>
+      <target type="control" id-ref="sa-8.6"/>
+      <target type="control" id-ref="sc-3"/>
+      <target type="control" id-ref="sc-3.2"/>
+    </map>
+    <map uuid="b2342ec0-9178-462f-8f65-1754beba6d5b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-06"/>
+      <target type="control" id-ref="sc-3"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.20"/>
+    </map>
+    <map uuid="e80c215b-9615-4397-81a7-72a7d5ec0330">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-07"/>
+      <target type="control" id-ref="ac-17"/>
+      <target type="control" id-ref="ac-20"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.28"/>
+      <target type="control" id-ref="sc-8"/>
+      <target type="control" id-ref="sc-8.1"/>
+      <target type="control" id-ref="sc-12"/>
+      <target type="control" id-ref="sc-23"/>
+      <target type="control" id-ref="sc-29"/>
+      <target type="control" id-ref="si-7"/>
+      <target type="control" id-ref="si-7.1"/>
+      <target type="control" id-ref="si-7.2"/>
+      <target type="control" id-ref="si-7.3"/>
+      <target type="control" id-ref="si-7.5"/>
+      <target type="control" id-ref="si-7.6"/>
+      <target type="control" id-ref="si-7.7"/>
+      <target type="control" id-ref="si-7.8"/>
+      <target type="control" id-ref="si-7.9"/>
+      <target type="control" id-ref="si-7.10"/>
+      <target type="control" id-ref="si-7.12"/>
+    </map>
+    <map uuid="b1830ba3-80ba-4ac8-88f4-f57c8f6cd277">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-08"/>
+      <target type="control" id-ref="pl-8"/>
+      <target type="control" id-ref="pl-8.1"/>
+      <target type="control" id-ref="sa-8"/>
+      <target type="control" id-ref="sa-8.3"/>
+      <target type="control" id-ref="sa-8.17"/>
+    </map>
+    <map uuid="4060c623-ddba-4b01-8fa8-5dbcfa65e896">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="IVS-09"/>
+      <target type="control" id-ref="pl-8"/>
+      <target type="control" id-ref="pl-8.1"/>
+      <target type="control" id-ref="sc-5"/>
+      <target type="control" id-ref="sc-5.1"/>
+      <target type="control" id-ref="sc-5.3"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.13"/>
+    </map>
+    <map uuid="3899a571-0cf8-4b32-80ce-9286476cde67">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-01"/>
+      <target type="control" id-ref="au-1"/>
+    </map>
+    <map uuid="f11b8022-8c3d-4208-8813-a4cb049cc695">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-02"/>
+      <target type="control" id-ref="au-4"/>
+      <target type="control" id-ref="au-11"/>
+    </map>
+    <map uuid="363ae6ea-6138-401b-872c-cfb5b91d1950">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-03"/>
+      <target type="control" id-ref="au-5"/>
+      <target type="control" id-ref="au-5.2"/>
+      <target type="control" id-ref="au-13"/>
+    </map>
+    <map uuid="e95572f5-43c9-40da-8eb4-a0dc552379fc">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-04"/>
+      <target type="control" id-ref="au-9"/>
+      <target type="control" id-ref="au-9.4"/>
+      <target type="control" id-ref="au-9.6"/>
+      <target type="control" id-ref="au-10"/>
+    </map>
+    <map uuid="5daabf22-31de-4150-8fb2-88068f31386d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-05"/>
+      <target type="control" id-ref="au-6"/>
+      <target type="control" id-ref="au-6.1"/>
+      <target type="control" id-ref="au-6.5"/>
+    </map>
+    <map uuid="5679d456-c3bc-45b7-8d25-628e1aff6745">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-06"/>
+      <target type="control" id-ref="au-8"/>
+    </map>
+    <map uuid="b616ca5b-4325-4746-8b7b-e43c42b0e0e7">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-07"/>
+      <target type="control" id-ref="au-1"/>
+      <target type="control" id-ref="au-14"/>
+      <target type="control" id-ref="au-16"/>
+    </map>
+    <map uuid="40d3ee35-013c-49f0-8b22-e526125a706c">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-08"/>
+      <target type="control" id-ref="au-3"/>
+      <target type="control" id-ref="au-3.1"/>
+      <target type="control" id-ref="au-3.3"/>
+      <target type="control" id-ref="au-6"/>
+      <target type="control" id-ref="au-6.8"/>
+      <target type="control" id-ref="au-12"/>
+      <target type="control" id-ref="au-12.1"/>
+      <target type="control" id-ref="au-12.2"/>
+      <target type="control" id-ref="au-12.3"/>
+    </map>
+    <map uuid="57757c2d-2e99-4033-8084-b1ea76591c50">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-09"/>
+      <target type="control" id-ref="au-9"/>
+      <target type="control" id-ref="au-9.2"/>
+      <target type="control" id-ref="au-9.3"/>
+      <target type="control" id-ref="au-9.4"/>
+      <target type="control" id-ref="au-12.3"/>
+      <target type="control" id-ref="au-12.3"/>
+    </map>
+    <map uuid="776f3664-07f4-447a-8716-59c6245d7d16">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-10"/>
+      <target type="control" id-ref="au-1"/>
+      <target type="control" id-ref="au-9"/>
+      <target type="control" id-ref="au-9.3"/>
+    </map>
+    <map uuid="04ce2a54-0f7a-4273-883d-fdd18da4f13e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-11"/>
+      <target type="control" id-ref="au-9"/>
+      <target type="control" id-ref="au-9.3"/>
+    </map>
+    <map uuid="0d3efea4-5037-4fdb-8da4-cd06cadc78a2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-12"/>
+      <target type="control" id-ref="au-6"/>
+      <target type="control" id-ref="au-6.6"/>
+      <target type="control" id-ref="au-14"/>
+    </map>
+    <map uuid="0a882f3b-023b-4daf-81b3-147fe89adae1">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="LOG-13"/>
+      <target type="control" id-ref="au-5"/>
+      <target type="control" id-ref="au-5.2"/>
+      <target type="control" id-ref="au-6"/>
+      <target type="control" id-ref="au-6.3"/>
+      <target type="control" id-ref="au-6.4"/>
+      <target type="control" id-ref="au-6.5"/>
+      <target type="control" id-ref="au-16"/>
+    </map>
+    <map uuid="106f970b-c48c-477b-8fa9-4c86222b196a">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="SEF-01"/>
+      <target type="control" id-ref="ir-1"/>
+      <target type="control" id-ref="ir-2"/>
+      <target type="control" id-ref="ir-2.1"/>
+      <target type="control" id-ref="ir-4"/>
+      <target type="control" id-ref="ir-4.12"/>
+      <target type="control" id-ref="ir-4.14"/>
+      <target type="control" id-ref="pm-1"/>
+      <target type="control" id-ref="pm-12"/>
+      <remarks><p>Missing specification(s) in NIST 800-53:</p>
+<p>'policies and procedures for E-Discovery'.</p>
+</remarks>
+    </map>
+    <map uuid="b1a72f8c-63cc-4c0d-8015-46a73832aae2">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-02"/>
+      <target type="control" id-ref="pm-1"/>
+      <target type="control" id-ref="pm-6"/>
+      <target type="control" id-ref="ir-4"/>
+      <target type="control" id-ref="ir-4.6"/>
+      <target type="control" id-ref="ir-4.9"/>
+      <target type="control" id-ref="ir-4.14"/>
+    </map>
+    <map uuid="d0137dd2-b9ac-45ad-8c7e-dd6d2ea531ac">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-03"/>
+      <target type="control" id-ref="ir-1"/>
+      <target type="control" id-ref="ir-2"/>
+      <target type="control" id-ref="ir-2.1"/>
+      <target type="control" id-ref="ir-2.2"/>
+      <target type="control" id-ref="ir-2.3"/>
+      <target type="control" id-ref="ir-3"/>
+      <target type="control" id-ref="ir-3.1"/>
+      <target type="control" id-ref="ir-3.2"/>
+      <target type="control" id-ref="ir-3.3"/>
+      <target type="control" id-ref="ir-4"/>
+      <target type="control" id-ref="ir-4.1"/>
+      <target type="control" id-ref="ir-4.2"/>
+      <target type="control" id-ref="ir-4.3"/>
+      <target type="control" id-ref="ir-4.4"/>
+      <target type="control" id-ref="ir-4.5"/>
+      <target type="control" id-ref="ir-4.6"/>
+      <target type="control" id-ref="ir-4.7"/>
+      <target type="control" id-ref="ir-4.8"/>
+      <target type="control" id-ref="ir-4.9"/>
+      <target type="control" id-ref="ir-4.10"/>
+      <target type="control" id-ref="ir-4.11"/>
+      <target type="control" id-ref="ir-4.12"/>
+      <target type="control" id-ref="ir-4.13"/>
+      <target type="control" id-ref="ir-4.14"/>
+      <target type="control" id-ref="ir-4.15"/>
+      <target type="control" id-ref="ir-5"/>
+      <target type="control" id-ref="ir-5.1"/>
+      <target type="control" id-ref="ir-6"/>
+      <target type="control" id-ref="ir-6.1"/>
+      <target type="control" id-ref="ir-6.2"/>
+      <target type="control" id-ref="ir-6.3"/>
+      <target type="control" id-ref="ir-7"/>
+      <target type="control" id-ref="ir-7.1"/>
+      <target type="control" id-ref="ir-7.2"/>
+      <target type="control" id-ref="ir-8"/>
+      <target type="control" id-ref="ir-8.1"/>
+      <target type="control" id-ref="ir-9"/>
+      <target type="control" id-ref="ir-9.1"/>
+      <target type="control" id-ref="ir-9.2"/>
+      <target type="control" id-ref="ir-9.3"/>
+      <target type="control" id-ref="ir-9.4"/>
+      <target type="control" id-ref="pm-12"/>
+    </map>
+    <map uuid="2a7d7bf0-0e31-4c85-8e2c-9d175ec30f66">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-04"/>
+      <target type="control" id-ref="ir-2"/>
+      <target type="control" id-ref="ir-2.1"/>
+      <target type="control" id-ref="ir-2.2"/>
+      <target type="control" id-ref="ir-2.3"/>
+      <target type="control" id-ref="ir-3"/>
+      <target type="control" id-ref="ir-3.1"/>
+      <target type="control" id-ref="ir-3.2"/>
+      <target type="control" id-ref="ir-3.3"/>
+      <target type="control" id-ref="ir-8"/>
+      <target type="control" id-ref="ir-9"/>
+      <target type="control" id-ref="ir-9.2"/>
+    </map>
+    <map uuid="871db82b-6527-430a-854c-d2ca06c7df56">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-05"/>
+      <target type="control" id-ref="ca-7"/>
+      <target type="control" id-ref="ca-7.3"/>
+      <target type="control" id-ref="ca-7.4"/>
+      <target type="control" id-ref="ir-5"/>
+      <target type="control" id-ref="ir-4"/>
+      <target type="control" id-ref="ir-6"/>
+      <target type="control" id-ref="ir-6.2"/>
+      <target type="control" id-ref="ir-6.3"/>
+      <target type="control" id-ref="pm-6"/>
+      <target type="control" id-ref="pm-31"/>
+    </map>
+    <map uuid="41644c8e-d9ac-4519-8534-e8644c116c20">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-06"/>
+      <target type="control" id-ref="ca-7"/>
+      <target type="control" id-ref="ca-7.3"/>
+      <target type="control" id-ref="ca-7.4"/>
+      <target type="control" id-ref="ca-7.5"/>
+      <target type="control" id-ref="ca-7.6"/>
+      <target type="control" id-ref="ir-4"/>
+      <target type="control" id-ref="ir-4.1"/>
+      <target type="control" id-ref="ir-4.3"/>
+      <target type="control" id-ref="ir-4.4"/>
+    </map>
+    <map uuid="0e498f2a-f137-4f1b-8b45-5932c4e3a98e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-07"/>
+      <target type="control" id-ref="au-13"/>
+      <target type="control" id-ref="au-13.1"/>
+      <target type="control" id-ref="au-13.2"/>
+      <target type="control" id-ref="au-13.3"/>
+      <target type="control" id-ref="ir-4"/>
+      <target type="control" id-ref="ir-4.15"/>
+      <target type="control" id-ref="ir-6"/>
+      <target type="control" id-ref="ir-6.1"/>
+      <target type="control" id-ref="ir-6.2"/>
+      <target type="control" id-ref="ir-6.3"/>
+      <target type="control" id-ref="pm-21"/>
+      <target type="control" id-ref="pm-23"/>
+    </map>
+    <map uuid="7cac452e-ee7f-487c-8346-71b39045a338">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="SEF-08"/>
+      <target type="control" id-ref="ir-4"/>
+      <target type="control" id-ref="ir-4.8"/>
+      <target type="control" id-ref="ir-6"/>
+      <target type="control" id-ref="ir-6.3"/>
+      <target type="control" id-ref="ir-7"/>
+      <target type="control" id-ref="ir-7.2"/>
+      <target type="control" id-ref="pm-21"/>
+      <target type="control" id-ref="pm-23"/>
+      <target type="control" id-ref="pm-26"/>
+    </map>
+    <map uuid="ba594e61-33e3-4f80-8633-b04582fcda80">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="STA-01"/>
+      <target type="control" id-ref="sr-1"/>
+      <target type="control" id-ref="sr-2"/>
+      <target type="control" id-ref="sr-3"/>
+      <target type="control" id-ref="sr-5"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sa-4.1"/>
+      <target type="control" id-ref="sa-4.2"/>
+      <target type="control" id-ref="sa-4.5"/>
+      <target type="control" id-ref="sa-4.9"/>
+      <target type="control" id-ref="sa-4.10"/>
+      <target type="control" id-ref="pm-30"/>
+      <remarks><p>Missing specification(s) in NIST 800-53:</p>
+<p>'policies and procedures for the application of the Shared Security Responsibility Model (SSRM) within the organization'.</p>
+</remarks>
+    </map>
+    <map uuid="19db6eb6-583a-480a-849d-5cb8f542fd92">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="STA-02"/>
+      <target type="control" id-ref="sr-1"/>
+      <target type="control" id-ref="sr-2"/>
+      <target type="control" id-ref="sr-3"/>
+      <target type="control" id-ref="sr-3.1"/>
+      <target type="control" id-ref="sr-3.2"/>
+      <target type="control" id-ref="sr-3.3"/>
+      <target type="control" id-ref="sr-5"/>
+      <target type="control" id-ref="pm-30"/>
+      <remarks><p>Missing specification(s) in NIST 800-53:</p>
+<p>'SSRM'.</p>
+</remarks>
+    </map>
+    <map uuid="e49f45f9-b383-4431-8fb5-dbe058dccfe1">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="STA-05"/>
+      <target type="control" id-ref="sr-1"/>
+      <target type="control" id-ref="sr-2"/>
+      <target type="control" id-ref="sr-3"/>
+      <target type="control" id-ref="sr-6"/>
+      <target type="control" id-ref="sr-6.1"/>
+      <remarks><p>Missing specification(s) in NIST 800-53:</p>
+<p>'SSRM'.</p>
+</remarks>
+    </map>
+    <map uuid="ef3eb6d7-4428-4b4a-8175-b2997011f572">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="STA-06"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sa-4.11"/>
+      <target type="control" id-ref="sr-1"/>
+      <target type="control" id-ref="sr-2"/>
+      <target type="control" id-ref="sr-3"/>
+      <target type="control" id-ref="sr-5"/>
+      <target type="control" id-ref="sr-6"/>
+      <remarks><p>Missing specification(s) in NIST 800-53:</p>
+<p>'SSRM'.</p>
+</remarks>
+    </map>
+    <map uuid="fa316777-7e60-4d78-8fed-b0bef1d9ce5a">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-07"/>
+      <target type="control" id-ref="cm-8"/>
+      <target type="control" id-ref="cm-8.4"/>
+      <target type="control" id-ref="sr-4"/>
+      <target type="control" id-ref="sr-4.1"/>
+      <target type="control" id-ref="sr-4.2"/>
+      <target type="control" id-ref="sr-4.3"/>
+      <target type="control" id-ref="sr-4.4"/>
+    </map>
+    <map uuid="44effd6e-d03f-4ee4-87b8-b6fd07a28c0f">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-08"/>
+      <target type="control" id-ref="sr-2"/>
+      <target type="control" id-ref="sr-2.1"/>
+      <target type="control" id-ref="sr-4"/>
+      <target type="control" id-ref="sr-5"/>
+      <target type="control" id-ref="sr-5.1"/>
+      <target type="control" id-ref="sr-5.2"/>
+      <target type="control" id-ref="sr-6"/>
+    </map>
+    <map uuid="037af630-069b-4659-864f-b8b7611dd1b0">
+      <relationship>superset-of</relationship>
+      <source type="control" id-ref="STA-09"/>
+      <target type="control" id-ref="sa-4"/>
+      <target type="control" id-ref="sa-4.1"/>
+      <target type="control" id-ref="sa-4.2"/>
+      <target type="control" id-ref="sa-4.5"/>
+      <target type="control" id-ref="sa-4.9"/>
+      <target type="control" id-ref="sa-4.10"/>
+      <target type="control" id-ref="sr-8"/>
+      <remarks><p>Missing specification(s) in NIST 800-53:</p>
+<p>'Information security requirements (including SSRM)'</p>
+</remarks>
+    </map>
+    <map uuid="092a4d0a-52fe-4e47-807d-60f86b20cad1">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-10"/>
+      <target type="control" id-ref="pm-30"/>
+      <target type="control" id-ref="pm-30.1"/>
+      <target type="control" id-ref="sr-2"/>
+      <target type="control" id-ref="sr-6"/>
+    </map>
+    <map uuid="b3d8ede0-9084-4760-8806-559a0c746ccc">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-11"/>
+      <target type="control" id-ref="pm-30"/>
+      <target type="control" id-ref="pm-30.1"/>
+      <target type="control" id-ref="sr-6"/>
+      <target type="control" id-ref="sr-6.1"/>
+    </map>
+    <map uuid="ff3edab8-58d2-4d8d-8cfd-cf70e2841956">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-12"/>
+      <target type="control" id-ref="sa-9"/>
+      <target type="control" id-ref="sa-9.5"/>
+      <target type="control" id-ref="sr-6"/>
+    </map>
+    <map uuid="e790efb6-b578-47ce-8ddb-126c0207c73b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-13"/>
+      <target type="control" id-ref="sa-9"/>
+      <target type="control" id-ref="sa-9.1"/>
+      <target type="control" id-ref="sa-9.2"/>
+      <target type="control" id-ref="sa-9.3"/>
+      <target type="control" id-ref="sa-9.4"/>
+      <target type="control" id-ref="sa-9.5"/>
+      <target type="control" id-ref="sa-9.6"/>
+      <target type="control" id-ref="sa-9.7"/>
+      <target type="control" id-ref="sa-9.8"/>
+      <target type="control" id-ref="sr-2"/>
+      <target type="control" id-ref="sr-2.1"/>
+    </map>
+    <map uuid="8e858afc-7f8f-402c-8f8c-8fe2fdcb7479">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="STA-14"/>
+      <target type="control" id-ref="sa-9"/>
+      <target type="control" id-ref="sa-9.2"/>
+      <target type="control" id-ref="sr-4"/>
+      <target type="control" id-ref="sr-4.3"/>
+      <target type="control" id-ref="sr-6"/>
+      <target type="control" id-ref="sr-6.1"/>
+      <target type="control" id-ref="sr-7"/>
+      <target type="control" id-ref="sr-9"/>
+      <target type="control" id-ref="sr-9.1"/>
+      <target type="control" id-ref="sr-11"/>
+      <target type="control" id-ref="sr-11.1"/>
+      <target type="control" id-ref="sr-11.3"/>
+      <target type="control" id-ref="pm-23"/>
+      <target type="control" id-ref="pm-30"/>
+    </map>
+    <map uuid="5f3c2b07-a9e1-42d2-890d-daaa8337bdcf">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-01"/>
+      <target type="control" id-ref="pm-16"/>
+      <target type="control" id-ref="pm-16.1"/>
+      <target type="control" id-ref="pm-31"/>
+      <target type="control" id-ref="ra-5"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.2"/>
+      <target type="control" id-ref="sa-11.5"/>
+      <target type="control" id-ref="sa-15"/>
+      <target type="control" id-ref="sa-15.5"/>
+      <target type="control" id-ref="sa-15.8"/>
+    </map>
+    <map uuid="74dae6a6-590e-4b9b-88be-543d5c779e28">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-02"/>
+      <target type="control" id-ref="ra-3"/>
+      <target type="control" id-ref="ra-3.3"/>
+      <target type="control" id-ref="ra-5"/>
+      <target type="control" id-ref="ra-5.3"/>
+      <target type="control" id-ref="ra-5.5"/>
+      <target type="control" id-ref="si-3"/>
+      <target type="control" id-ref="si-3.4"/>
+      <target type="control" id-ref="si-3.10"/>
+    </map>
+    <map uuid="8f73435b-0891-4fed-8af7-a4c5b9aa3ebd">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-03"/>
+      <target type="control" id-ref="pm-31"/>
+      <target type="control" id-ref="ra-3"/>
+      <target type="control" id-ref="ra-3.1"/>
+      <target type="control" id-ref="ra-5"/>
+      <target type="control" id-ref="ra-5.2"/>
+      <target type="control" id-ref="ra-5.3"/>
+      <target type="control" id-ref="ra-5.4"/>
+      <target type="control" id-ref="ra-5.6"/>
+      <target type="control" id-ref="si-3"/>
+      <target type="control" id-ref="si-3.10"/>
+    </map>
+    <map uuid="c7c2ae69-7fed-4ed9-84e0-9856fbfe6918">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-04"/>
+      <target type="control" id-ref="cm-7"/>
+      <target type="control" id-ref="cm-7.4"/>
+      <target type="control" id-ref="ra-3"/>
+      <target type="control" id-ref="ra-3.3"/>
+      <target type="control" id-ref="ra-5.2"/>
+      <target type="control" id-ref="sa-10"/>
+      <target type="control" id-ref="sa-10.5"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.2"/>
+      <target type="control" id-ref="si-2"/>
+      <target type="control" id-ref="si-2.4"/>
+      <target type="control" id-ref="si-3"/>
+      <target type="control" id-ref="si-3.4"/>
+      <target type="control" id-ref="si-4"/>
+      <target type="control" id-ref="si-4.9"/>
+      <target type="control" id-ref="si-4.24"/>
+      <target type="control" id-ref="si-8"/>
+      <target type="control" id-ref="si-8.2"/>
+      <target type="control" id-ref="si-8.3"/>
+    </map>
+    <map uuid="170c7428-06a0-4e81-8b56-8b43ac04713b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-05"/>
+      <target type="control" id-ref="ra-5"/>
+      <target type="control" id-ref="ra-5.3"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.2"/>
+      <target type="control" id-ref="sa-11.5"/>
+    </map>
+    <map uuid="58f2f38f-b2cb-499a-8b69-8fa6e473da03">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-06"/>
+      <target type="control" id-ref="ca-8"/>
+      <target type="control" id-ref="ca-8.1"/>
+      <target type="control" id-ref="ca-8.2"/>
+      <target type="control" id-ref="ca-8.3"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.5"/>
+    </map>
+    <map uuid="3845a47d-a5af-4752-8335-075cb1c30979">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-07"/>
+      <target type="control" id-ref="ra-5"/>
+      <target type="control" id-ref="ra-5.4"/>
+      <target type="control" id-ref="ra-5.5"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.5"/>
+      <target type="control" id-ref="sa-15.5"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.10"/>
+      <target type="control" id-ref="si-3.8"/>
+      <target type="control" id-ref="si-3.10"/>
+      <target type="control" id-ref="si-7"/>
+      <target type="control" id-ref="si-7.9"/>
+    </map>
+    <map uuid="30a81587-7ea3-4cd7-85bb-0ad4bd61e2d7">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-08"/>
+      <target type="control" id-ref="ra-2"/>
+      <target type="control" id-ref="ra-2.1"/>
+      <target type="control" id-ref="sa-11"/>
+      <target type="control" id-ref="sa-11.1"/>
+      <target type="control" id-ref="sa-15"/>
+      <target type="control" id-ref="sa-15.8"/>
+      <target type="control" id-ref="si-2"/>
+      <target type="control" id-ref="si-2.2"/>
+      <target type="control" id-ref="si-3"/>
+      <target type="control" id-ref="si-3.10"/>
+    </map>
+    <map uuid="e556e622-d00a-4a25-8afb-16eaeb4fb5b5">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-09"/>
+      <target type="control" id-ref="ra-5"/>
+      <target type="control" id-ref="ra-5.8"/>
+      <target type="control" id-ref="ra-5.11"/>
+      <target type="control" id-ref="sa-15"/>
+      <target type="control" id-ref="sa-15.1"/>
+    </map>
+    <map uuid="49e197dc-0700-440c-8aa1-fc770dc4c4e7">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="TVM-10"/>
+      <target type="control" id-ref="pm-31"/>
+      <target type="control" id-ref="ra-5"/>
+      <target type="control" id-ref="ra-5.6"/>
+      <target type="control" id-ref="ra-5.8"/>
+      <target type="control" id-ref="ra-5.10"/>
+      <target type="control" id-ref="sa-15"/>
+      <target type="control" id-ref="sa-15.1"/>
+      <target type="control" id-ref="si-2"/>
+      <target type="control" id-ref="si-2.3"/>
+    </map>
+    <map uuid="7224b4fe-05ca-45f0-8750-e5f67038e16b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-01"/>
+      <target type="control" id-ref="cm-1"/>
+      <target type="control" id-ref="cm-11"/>
+      <target type="control" id-ref="ac-19"/>
+    </map>
+    <map uuid="27b15dcc-fc18-44b8-8787-2e10d7566d92">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-02"/>
+      <target type="control" id-ref="cm-7"/>
+      <target type="control" id-ref="cm-7.6"/>
+      <target type="control" id-ref="cm-8.3"/>
+      <target type="control" id-ref="cm-11"/>
+      <target type="control" id-ref="sc-18"/>
+      <target type="control" id-ref="sc-18.2"/>
+      <target type="control" id-ref="sc-18.3"/>
+    </map>
+    <map uuid="9e7b2a3d-5072-461e-8123-501db40bfb15">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-03"/>
+      <target type="control" id-ref="ac-19"/>
+      <target type="control" id-ref="cm-1"/>
+      <target type="control" id-ref="cm-2"/>
+      <target type="control" id-ref="cm-2.2"/>
+      <target type="control" id-ref="cm-6"/>
+      <target type="control" id-ref="cm-8.3"/>
+      <target type="control" id-ref="si-7"/>
+    </map>
+    <map uuid="bef5153a-b53e-42aa-8b6f-685efdb84658">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-04"/>
+      <target type="control" id-ref="cm-8"/>
+      <target type="control" id-ref="cm-8.7"/>
+    </map>
+    <map uuid="98088e2d-de8f-4d77-8038-34ba0f82c060">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-05"/>
+      <target type="control" id-ref="au-6"/>
+      <target type="control" id-ref="ac-19"/>
+      <target type="control" id-ref="ac-24"/>
+      <target type="control" id-ref="cm-2"/>
+      <target type="control" id-ref="cm-2.2"/>
+      <target type="control" id-ref="cm-8.3"/>
+      <target type="control" id-ref="sc-1"/>
+    </map>
+    <map uuid="20035427-944b-46d1-8976-3ce895cb97d7">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-06"/>
+      <target type="control" id-ref="ac-11"/>
+      <target type="control" id-ref="ac-11.1"/>
+    </map>
+    <map uuid="2f10914e-f4bd-45af-82dc-58ba87d3aaff">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-07"/>
+      <target type="control" id-ref="cm-1"/>
+      <target type="control" id-ref="cm-3"/>
+      <target type="control" id-ref="cm-4"/>
+      <target type="control" id-ref="cm-8"/>
+      <target type="control" id-ref="cm-8.3"/>
+      <target type="control" id-ref="cm-9"/>
+      <target type="control" id-ref="cm-9.1"/>
+      <target type="control" id-ref="cm-11"/>
+      <target type="control" id-ref="si-7"/>
+    </map>
+    <map uuid="9d7a8731-a163-4c27-8759-69c8e4b4f26e">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-08"/>
+      <target type="control" id-ref="ac-19.5"/>
+      <target type="control" id-ref="sc-28"/>
+      <target type="control" id-ref="sc-28.1"/>
+    </map>
+    <map uuid="e17259bf-84e2-4838-8a73-1cdd85724415">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-09"/>
+      <target type="control" id-ref="ir-1"/>
+      <target type="control" id-ref="si-17"/>
+      <target type="control" id-ref="si-7.17"/>
+    </map>
+    <map uuid="dde7b495-1476-4d81-8ec5-03c116e11f41">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-10"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.12"/>
+      <target type="control" id-ref="sc-7.17"/>
+    </map>
+    <map uuid="2a9248fb-6be8-4472-8a0b-55eb92b7b09b">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-11"/>
+      <target type="control" id-ref="sc-7"/>
+      <target type="control" id-ref="sc-7.10"/>
+    </map>
+    <map uuid="ed5dab23-314e-4480-8210-c3f4e191581d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-12"/>
+      <target type="control" id-ref="cm-8"/>
+      <target type="control" id-ref="cm-8.8"/>
+    </map>
+    <map uuid="702ea677-6434-4919-80f8-a191a4a6735d">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-13"/>
+      <target type="control" id-ref="ac-7"/>
+      <target type="control" id-ref="ac-7.2"/>
+      <target type="control" id-ref="mp-6"/>
+      <target type="control" id-ref="mp-6.8"/>
+    </map>
+    <map uuid="e28c9551-cd7b-40dc-8cf1-0118cc730fd3">
+      <relationship>equivalent-to</relationship>
+      <source type="control" id-ref="UEM-14"/>
+      <target type="control" id-ref="sr-5"/>
+      <target type="control" id-ref="sr-5.2"/>
+      <target type="control" id-ref="sr-6"/>
+      <target type="control" id-ref="sr-6.1"/>
+    </map>
+  </mapping>
+</mapping-collection>

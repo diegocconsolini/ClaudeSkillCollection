@@ -1,0 +1,1328 @@
+- name: CIS v8.0
+  mappings:
+    - control_id: A&A-01
+      references:
+        - 8.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (8.1) 'Establish and maintain an audit log management process',
+        'Review and update documentation annually'.
+    - control_id: A&A-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: A&A-03
+      references:
+        - 7.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control: (7.2) 'Establish and maintain
+        a risk-based remediation strategy'.
+    - control_id: A&A-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: A&A-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: A&A-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: AIS-01
+      references:
+        - 16.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Establish, document, approve, communicate, apply, evaluate and maintain
+        policies and procedures for application security'.
+    - control_id: AIS-02
+      references:
+        - 16.7
+      gap_level: No Gap
+      addendum: 'N/A'
+    - control_id: AIS-03
+      references:
+        - 16.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'metrics in alignment with business objectives'.
+    - control_id: AIS-04
+      references:
+        - 16.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: AIS-05
+      references:
+        - 16.12
+        - 16.13
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (16.12) 'Implement Code-Level Security Checks' (as part of AIS-05 testing
+        strategy)
+        (16.13) 'Conduct Application Penetration Testing' (as part of AIS-05
+        testing strategy).
+    - control_id: AIS-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: AIS-07
+      references:
+        - 16.2
+        - 16.6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Automating remediation when possible'.
+    - control_id: BCR-01
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: BCR-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: BCR-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: BCR-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: BCR-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: BCR-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: BCR-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: BCR-08
+      references:
+        - 11.1
+        - 11.2
+        - 11.3
+        - 11.4
+        - 11.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Periodically backup data stored in the cloud'
+    - control_id: BCR-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: BCR-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: BCR-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CCC-01
+      references:
+        - 4.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (4.1) 'Establish and maintain a secure configuration process for
+        enterprise assets', 'Review and update documentation annually'.
+    - control_id: CCC-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CCC-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CCC-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CCC-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CCC-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CCC-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CCC-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CCC-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-01
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-03
+      references:
+        - 3.6
+        - 3.10
+        - 3.11
+        - 11.3
+        - 16.11
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'using cryptographic libraries certified to approved standards.'
+    - control_id: CEK-04
+      references:
+        - 16.11
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'considering the classification of data, associated risks, and usability
+        of the encryption technology.'
+    - control_id: CEK-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-10
+      references:
+        - 16.11
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'libraries specifying the algorithm strength and the random number
+        generator used.'
+    - control_id: CEK-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-16
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-17
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-18
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-19
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-20
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: CEK-21
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-01
+      references:
+        - 3.1
+        - 3.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specifications in CISv8.0:
+        "Establish, document, approve, communicate, apply, evaluate and maintain
+        policies and procedures for the secure disposal of equipment used outside
+        the organization's premises".
+    - control_id: DCS-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-06
+      references:
+        - 1.1
+        - 2.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-08
+      references:
+        - 1.3
+        - 1.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-11
+      references:
+        - 14.6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specifications in CISv8.0:
+        'Train datacenter personnel.'
+    - control_id: DCS-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DCS-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DSP-01
+      references:
+        - 3.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-02
+      references:
+        - 3.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specifications in CISv8.0:
+        'data is not recoverable by any forensic means.'
+    - control_id: DSP-03
+      references:
+        - 3.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-04
+      references:
+        - 3.7
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-05
+      references:
+        - 3.8
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-06
+      references:
+        - 3.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-07
+      references:
+        - 16.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (16.1) 'Establish and maintain a secure application development process.
+        In the process, address such items as: secure application design
+        standards, secure coding practices'.
+    - control_id: DSP-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DSP-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DSP-10
+      references:
+        - 3.10
+        - 3.12
+        - 3.13
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8.0:
+        'transfer of personal data is protected'.
+    - control_id: DSP-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DSP-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DSP-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DSP-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DSP-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DSP-16
+      references:
+        - 3.4
+        - 3.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'in accordance with applicable laws and regulations'.
+    - control_id: DSP-17
+      references:
+        - 3.1
+        - 3.10
+        - 3.14
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-18
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: DSP-19
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: GRC-01
+      references:
+        - 3.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (3.1) 'Establish and maintain a data management process'.
+    - control_id: GRC-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: GRC-03
+      references:
+        - 3.1
+        - 3.8
+        - 4.1
+        - 4.2
+        - 7.1
+        - 8.1
+        - 9.1
+        - 11.1
+        - 12.4
+        - 16.1
+        - 16.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        'Review and update documentation annually, or when significant enterprise
+        changes occur that could impact this Safeguard' (3.1, 3.8, 4.1, 4.2, 7.1,
+        8.1, 9.1, 11.1, 12.4, 16.1, 16.2).
+    - control_id: GRC-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: GRC-05
+      references:
+        - 14.1
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (14.1) 'Establish and maintain a security awareness program'.
+    - control_id: GRC-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: GRC-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: GRC-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: HRS-01
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: HRS-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: HRS-03
+      references:
+        - 14.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specifications in CISv8.0:
+        'Establish, document, approve, communicate, apply, evaluate and maintain
+        policies and procedures' 'Review and update the policies and procedures
+        at least annually'.
+    - control_id: HRS-04
+      references:
+        - 13.5
+        - 14.8
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (13.5) 'Manage access control for assets remotely connecting to
+        enterprise resources.' (14.8) 'all users securely configure their home
+        network infrastructure'.
+    - control_id: HRS-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: HRS-06
+      references:
+        - 6.1
+        - 6.2
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (6.1) 'Establish and follow a process, preferably automated, for granting
+        access to enterprise assets upon new hire, rights grant, or role change
+        of a user.' (6.2) 'revoking access to enterprise assets, through
+        disabling accounts immediately upon termination, rights revocation, or
+        role change of a user'.
+    - control_id: HRS-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: HRS-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: HRS-09
+      references:
+        - 14.1
+        - 14.2
+        - 14.3
+        - 14.4
+        - 14.5
+        - 14.6
+        - 14.7
+        - 14.8
+        - 14.9
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: HRS-11
+      references:
+        - 14
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-12
+      references:
+        - 14.1
+        - 14.9
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specifications in CISv8.0:
+        'Provide all employees with access to personal data with appropriate
+        security awareness training'
+    - control_id: HRS-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IAM-01
+      references:
+        - 6.1
+        - 6.2
+        - 6.6
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        6.1 'Establish an Access Granting Process'
+        6.2 'Establish an Access Revoking Process'
+        6.6 'Establish and Maintain an Inventory of Authentication and
+        Authorization Systems'.
+    - control_id: IAM-02
+      references:
+        - 5.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-03
+      references:
+        - 5.1
+        - 5.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-04
+      references:
+        - 6.8
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-05
+      references:
+        - 6.8
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-06
+      references:
+        - 6.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-07
+      references:
+        - 5.3
+        - 6.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-08
+      references:
+        - 5.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Review and revalidate user access for separation of duties'.
+    - control_id: IAM-09
+      references:
+        - 5.4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: 
+        (5.4) 'Restrict Administrator Privileges to Dedicated Administrator
+        Accounts: Restrict administrator privileges to dedicated administrator
+        accounts on enterprise assets'.
+    - control_id: IAM-10
+      references:
+        - 5.1
+        - 6.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'roles and rights are granted for a time limited period'
+    - control_id: IAM-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IAM-12
+      references:
+        - 3.3
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (3.3) 'Configure Data Access Control Lists'.
+    - control_id: IAM-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IAM-14
+      references:
+        - 6.3
+        - 6.5
+        - 12.5
+        - 12.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Adopt digital certificates or alternatives which achieve an equivalent
+        level of security for system identities'.
+    - control_id: IAM-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IAM-16
+      references:
+        - 5.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-01
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IPY-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IPY-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IPY-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IVS-01
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IVS-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IVS-03
+      references:
+        - 3.8
+        - 3.10
+        - 12.2
+        - 13.6
+        - 13.9
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-04
+      references:
+        - 4.1
+        - 4.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-05
+      references:
+        - 16.8
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IVS-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IVS-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: IVS-09
+      references:
+        - 13.3
+        - 13.8
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'protection and timely response to network-based attacks'.
+    - control_id: LOG-01
+      references:
+        - 8.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'approve, communicate, apply, evaluate'.
+    - control_id: LOG-02
+      references:
+        - 8.1
+        - 8.9
+        - 8.10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Define, technical measures to ensure the security of audit logs'.
+    - control_id: LOG-03
+      references:
+        - 8.5
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Define and implement a system to generate alerts to responsible
+        stakeholders based on such events and corresponding metrics'.
+    - control_id: LOG-04
+      references:
+        - 3.14
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'maintain records that provide unique access accountability'.
+    - control_id: LOG-05
+      references:
+        - 8.8
+        - 8.11
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-06
+      references:
+        - 8.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-07
+      references:
+        - 8.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-08
+      references:
+        - 8.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: LOG-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: LOG-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: LOG-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: LOG-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: SEF-01
+      references:
+        - 17.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Establish, document, approve, communicate, apply, evaluate and maintain
+        policies and procedures for E-Discovery, and Cloud Forensics.'
+    - control_id: SEF-02
+      references:
+        - 17.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-03
+      references:
+        - 17.2
+        - 17.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-04
+      references:
+        - 17.7
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        '(Test) upon significant organizational or environmental changes for
+        effectiveness.'
+    - control_id: SEF-05
+      references:
+        - 17.9
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: SEF-07
+      references:
+        - 17.2
+        - 17.3
+        - 17.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Report security breaches and assumed security breaches including any
+        relevant supply chain breaches, as per applicable SLAs, laws and
+        regulations'
+    - control_id: SEF-08
+      references:
+        - 17.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-01
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: STA-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: STA-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: STA-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: STA-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: STA-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: STA-07
+      references:
+        - 15.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-08
+      references:
+        - 15.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-09
+      references:
+        - 15.4
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        • Scope, characteristics and location of business relationship and
+          services offered
+        • SSRM requirements
+        • Change management process
+        • Logging and monitoring capability
+        • Right to audit and third party assessment
+        • Service termination
+        • Interoperability and portability requirements
+    - control_id: STA-10
+      references:
+        - 15.4
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: STA-12
+      references:
+        - 15.5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: 
+        (15.5) 'Assess Service Providers'
+    - control_id: STA-13
+      references:
+        - 15.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-14
+      references:
+        - 15.6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-01
+      references:
+        - 7.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-02
+      references:
+        - 9.7
+        - 10.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Review and update the policies and procedures at least annually.'
+    - control_id: TVM-03
+      references:
+        - 7.2
+        - 7.7
+        - 17.9
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-04
+      references:
+        - 10.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-05
+      references:
+        - 2.6
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'Define, implement and evaluate processes, procedures and technical
+        measures to identify updates'
+    - control_id: TVM-06
+      references:
+        - 18.1
+        - 18.2
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-07
+      references:
+        - 7.1
+        - 7.5
+        - 7.6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-08
+      references:
+        - 7.2
+        - 18.3
+        - 16.6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-09
+      references:
+        - 7.1
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'reporting vulnerability identification and remediation activities that
+        includes stakeholder notification.'
+    - control_id: TVM-10
+      references:
+        - 7.2
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CISv8:
+        'report metrics for vulnerability identification'
+    - control_id: UEM-01
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: UEM-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: UEM-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: UEM-04
+      references:
+        - 1.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-05
+      references:
+        - 1.3
+        - 1.4
+        - 1.5
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (1.3) 'Utilize an Active Discovery Tool'
+        (1.4) 'Use Dynamic Host Configuration Protocol (DHCP) Logging to Update
+              Enterprise Asset Inventory'
+        (1.5) 'Use a Passive Asset Discovery Tool'
+    - control_id: UEM-06
+      references:
+        - 4.3
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: N/A
+    - control_id: UEM-08
+      references:
+        - 3.6
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-09
+      references:
+        - 9.7
+        - 10.1
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-10
+      references:
+        - 4.4
+        - 4.5
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-11
+      references:
+        - 3.13
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CISv8.0 and has
+        to be used to close the gap.
+    - control_id: UEM-13
+      references:
+        - 4.11
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: UEM-14
+      references:
+        - 15.4
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that
+        is, covering in part the V4 control:
+        (15.4) 'Ensure Service Provider Contracts Include Security Requirements'

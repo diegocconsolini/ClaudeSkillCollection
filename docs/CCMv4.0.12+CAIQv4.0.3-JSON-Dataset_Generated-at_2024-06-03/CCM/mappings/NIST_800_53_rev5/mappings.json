@@ -1,0 +1,1978 @@
+[
+  {
+    "name": "NIST 800-53 rev 5",
+    "mappings": [
+      {
+        "control_id": "A&A-01",
+        "references": ["CA-1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-02",
+        "references": ["CA-2", "CA-2(1)", "CA-2(2)", "CA-7", "CA-7(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-03",
+        "references": ["CA-2", "CA-2(1)-(3)", "PL-10", "PL-11"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-04",
+        "references": ["CA-1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-05",
+        "references": ["CA-1", "CA-2", "PM-4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "A&A-06",
+        "references": ["CA-5", "CA-5(1)", "PM-4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-01",
+        "references": ["CM-3", "CM-3(2)", "PM-20", "PM-20(1)", "SA-1", "SA-4", "SA-8", "SA-8(29)-(33)", "SI-17"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-02",
+        "references": ["CM-2", "CM-2(2)", "CM-2(3)", "SA-8", "SA-8(8)", "SA-8(14)", "SA-8(23)", "SA-8(29)", "SA-8(31)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-03",
+        "references": ["SA-15", "SA-15(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-04",
+        "references": [
+          "PL-2",
+          "PL-8",
+          "PL-8(1)",
+          "SA-3",
+          "SA-3(1)",
+          "SA-4",
+          "SA-4(2)",
+          "SA-4(3)",
+          "SA-4(8)",
+          "SA-4(9)",
+          "SA-5",
+          "SA-8",
+          "SA-8(1)-(7)",
+          "SA-8(9)-(13)",
+          "SA-8(15)-(20)",
+          "SA-8(22)",
+          "SA-8(24)-(28)",
+          "SA-8(30)-(33)",
+          "SA-17",
+          "SA-17(1)-(9)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-05",
+        "references": ["SA-11", "SA-11(1)-(9)", "SI-6", "SI-6(2)", "SI-6(3)", "SI-10", "SI-10(1)-(6)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-06",
+        "references": ["SA-3", "SA-3(2)", "SA-3(3)", "SA-4", "SA-4(3)", "SA-8", "SA-8(31)", "SA-16", "SR-9", "SR-9(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "AIS-07",
+        "references": [
+          "SI-2",
+          "SI-2(2)-(6)",
+          "SA-11",
+          "SA-11(2)",
+          "SA-15",
+          "SA-15(1)-(3)",
+          "SA-15(5)-(8)",
+          "SA-15(10)-(12)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-01",
+        "references": ["CP-1", "CP-2", "PL-2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-02",
+        "references": ["CP-2", "PM-8", "PM-9"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-03",
+        "references": ["CP-1", "CP-2", "CP-2(1)", "CP-2(2)", "CP-2(5)", "CP-2(7)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-04",
+        "references": ["CP-2", "CP-4", "PM-8"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-05",
+        "references": ["CP-1", "CP-2", "CP-4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-06",
+        "references": ["AT-3", "AT-3(3)", "CP-3", "CP-3(1)", "CP-4", "CP-4(4)", "IR-4", "IR-4(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-07",
+        "references": ["CP-2", "CP-2(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-08",
+        "references": [
+          "CP-4",
+          "CP-4(4)",
+          "CP-6",
+          "CP-6(1)-(3)",
+          "CP-9",
+          "CP-9(1)",
+          "CP-9(2)",
+          "CP-10",
+          "CP-10(2)",
+          "CP-10(4)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-09",
+        "references": [
+          "CP-2(1)",
+          "CP-2(2)",
+          "CP-2(3)",
+          "CP-2(5)",
+          "CP-2(6)",
+          "CP-2(7)",
+          "CP-2(8)",
+          "PE-13",
+          "PE-13(1)",
+          "PE-13(2)",
+          "PE-13(4)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-10",
+        "references": [
+          "AT-2",
+          "AT-2(1)",
+          "AT-3",
+          "AT-3(3)",
+          "AT-4",
+          "CP-3",
+          "CP-3(1)",
+          "IR-3",
+          "IR-3(2)",
+          "IR-3(3)",
+          "IR-9",
+          "IR-9(2)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "BCR-11",
+        "references": [
+          "CP-2",
+          "CP-2(2)",
+          "CP-4(3)",
+          "CP-6",
+          "CP-6(1)",
+          "CP-7",
+          "CP-8",
+          "CP-8(1)-(3)",
+          "CP-9",
+          "CP-9(6)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-01",
+        "references": [
+          "CM-1",
+          "CM-9",
+          "CM-9(1)",
+          "CM-10",
+          "CM-10(1)",
+          "CM-11",
+          "PM-9",
+          "PS-8",
+          "SA-8",
+          "SA-8(1)",
+          "SA-8(24)",
+          "SI-12"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-02",
+        "references": ["CM-2", "CM-2(2)", "CM-2(6)", "CM-3", "CM-3(2)", "CM-3(7)", "CM-4", "CM-4(1)", "CM-4(2)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-03",
+        "references": [
+          "CM-2",
+          "CM-2(2)",
+          "CM-2(3)",
+          "CM-2(7)",
+          "CM-3",
+          "CM-3(2)",
+          "CM-3(3)",
+          "CM-3(5)",
+          "CM-3(6)",
+          "CM-4",
+          "CM-4(1)",
+          "CM-5",
+          "CM-5(5)",
+          "CM-5(6)",
+          "CM-7",
+          "CM-7(2)-(7)",
+          "CM-11",
+          "CM-11(2)",
+          "CM-14",
+          "SA-10",
+          "SA-10(7)",
+          "SA-11",
+          "SA-11(9)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-04",
+        "references": [
+          "CA-7",
+          "CA-7(4)",
+          "CM-3",
+          "CM-3(1)",
+          "CM-3(5)",
+          "CM-3(7)",
+          "CM-3(8)",
+          "CM-5",
+          "CM-5(1)",
+          "CM-5(4)",
+          "CM-5(5)",
+          "CM-6",
+          "CM-6(1)",
+          "CM-6(2)",
+          "CM-7",
+          "CM-7(1)",
+          "CM-7(4)",
+          "CM-7(5)",
+          "CM-7(9)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-05",
+        "references": ["CM-3", "CM-3(1)", "CM-3(2)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-06",
+        "references": ["CM-2", "CM-2(3)", "CM-5", "CM-5(6)", "CM-8", "CM-8(1)-(9)", "CM-9", "CM-9(1)", "CM-14"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-07",
+        "references": ["CM-6", "CM-6(2)", "SI-2", "SI-2(2)-(6)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-08",
+        "references": ["CM-3", "CM-3(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CCC-09",
+        "references": ["CM-2", "CM-2(3)", "CM-3", "CM-3(3)", "CM-3(7)", "SA-8", "SA-8(24)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-01",
+        "references": ["SC-1", "SA-9", "SA-9(6)", "SC-12", "SC-12(2)", "SC-12(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-02",
+        "references": ["IA-7", "IA-8", "IA-8(5)", "SA-9", "SA-9(1)", "SA-9(6)", "SC-12", "SC-12(6)", "SC-13"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-03",
+        "references": [
+          "AC-19",
+          "AC-19(5)",
+          "SC-8",
+          "SC-8(1)",
+          "SC-8(3)",
+          "SC-8(4)",
+          "SC-12",
+          "SC-12(2)",
+          "SC-12(3)",
+          "SC-28",
+          "SC-28(1)-(3)",
+          "SI-4",
+          "SI-4(10)",
+          "SI-7",
+          "SI-7(6)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-04",
+        "references": ["SC-12", "SC-12(2)", "SC-12(3)", "SC-28", "SC-28(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-05",
+        "references": ["CM-3", "CM-3(6)", "SI-7", "SI-7(6)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-06",
+        "references": ["CM-3", "CM-3(6)", "PL-2"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-07",
+        "references": ["CM-3", "CM-3(6)", "PM-31", "SC-28", "SC-28(1)", "SC-28(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-08",
+        "references": ["CP-9", "CP-9(8)", "SA-9", "SA-9(6)", "SC-12", "SC-12(6)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-09",
+        "references": ["AU-9", "AU-9(3)", "PM-31"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-10",
+        "references": ["SC-12", "SC-12(2)", "SC-12(3)", "SC-13"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-11",
+        "references": ["IA-5", "IA-5(2)", "PM-32", "SC-12", "SC-12(2)", "SC-12(3)", "SC-13"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-12",
+        "references": ["SC-12", "SC-12(2)", "SC-12(3)", "SC-13"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-13",
+        "references": ["SC-12", "SC-12(2)", "SC-12(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-14",
+        "references": ["SC-12", "SC-12(2)", "SC-12(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-15",
+        "references": ["SC-12", "SC-12(2)", "SC-12(3)", "SC-13"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-16",
+        "references": ["PM-31", "SC-12", "SC-12(2)", "SC-12(3)", "SC-13"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-17",
+        "references": ["SC-12", "SC-12(2)", "SC-12(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-18",
+        "references": ["SC-12", "SC-12(1)-(3)", "SC-28", "SC-28(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-19",
+        "references": ["SC-12", "SC-12(1)-(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-20",
+        "references": ["CM-3", "CM-3(6)", "CP-9", "CP-9(8)", "SC-12", "SC-12(1)-(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "CEK-21",
+        "references": ["SC-12", "SC-12(1)-(3)", "SC-12(6)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-01",
+        "references": ["MP-6", "MP-6(1)-(3)", "MP-6(8)", "MP-7(2)", "MP-8"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-02",
+        "references": ["AC-1", "AC-4", "CA-3", "MP-5", "MP-5(3)", "SC-4", "SC-4(2)"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'The relocation or transfer request requires the written or cryptographically verifiable authorization'."
+      },
+      {
+        "control_id": "DCS-03",
+        "references": ["PE-1", "PE-6", "PE-6(1)-(4)", "SC-15", "SC-15(1)", "SC-15(3)", "SC-15(4)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-04",
+        "references": ["MP-1", "MP-5", "MP-5(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-05",
+        "references": [
+          "CM-8",
+          "CM-8(1)",
+          "CM-8(2)",
+          "CM-8(4)",
+          "CM-8(6)",
+          "CM-8(7)",
+          "CM-8(9)",
+          "PM-5",
+          "PM-5(1)",
+          "PE-20"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'based on the organizational business risk'."
+      },
+      {
+        "control_id": "DCS-06",
+        "references": ["CM-8", "CM-8(1)", "CM-8(2)", "CM-8(4)", "CM-8(7)", "CM-8(8)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-07",
+        "references": [
+          "AT-3(2)",
+          "PE-2",
+          "PE-2(1)",
+          "PE-2(3)",
+          "PE-3",
+          "PE-3(2)-(5)",
+          "PE-3(7)",
+          "PE-3(8)",
+          "PE-6",
+          "PE-6(1)-(4)",
+          "PE-8",
+          "PE-8(1)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-08",
+        "references": ["AC-18", "AC-18(1)", "IA-3", "IA-3(3)", "IA-3(4)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-09",
+        "references": ["MP-4(2)", "PE-3", "PE-3(8)", "PE-5", "PE-6", "PE-6(1)-(4)", "PE-18", "SC-42"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-10",
+        "references": ["PE-6", "PE-6(1)-(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-11",
+        "references": ["AT-3", "AT-3(2)", "IR-2", "IR-2(1)-(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-12",
+        "references": ["PE-9", "PE-9(1)", "PE-9(2)", "PE-19", "PE-19(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-13",
+        "references": [
+          "MA-6",
+          "MA-6(1)",
+          "MA-6(2)",
+          "PE-13",
+          "PE-13(1)",
+          "PE-13(4)",
+          "PE-14",
+          "PE-14(1)",
+          "PE-15",
+          "PE-15(1)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-14",
+        "references": ["MA-6", "MA-6(1)", "MA-6(2)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DCS-15",
+        "references": ["PE-18", "PE-23"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-01",
+        "references": [
+          "PL-2",
+          "PL-7",
+          "PM-17",
+          "PM-18",
+          "PM-19",
+          "PM-20",
+          "PM-20(1)",
+          "PM-23",
+          "PM-24",
+          "PM-26",
+          "PT-1",
+          "PT-5",
+          "PT-5(2)",
+          "PT-6",
+          "PT-6(1)",
+          "PT-7",
+          "PT-7(2)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-02",
+        "references": ["PM-22", "SI-12", "SI-12(3)", "SI-18", "SI-18(1)", "SI-18(4)", "SI-18(5)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-03",
+        "references": ["CM-12", "CM-12(1)", "PM-5", "PM-5(1)", "SI-12", "SI-12(1)", "SI-19", "SI-19(1)", "SI-19(2)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-04",
+        "references": [
+          "AC-16",
+          "AC-16(9)",
+          "PM-22",
+          "PM-23",
+          "PT-2",
+          "PT-2(1)",
+          "SI-18",
+          "SI-18(2)",
+          "SI-19",
+          "SI-19(6)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-05",
+        "references": [
+          "AC-4",
+          "AC-4(1)-(3)",
+          "AC-4(5)-(8)",
+          "AC-4(10)",
+          "AC-4(12)",
+          "AC-16",
+          "AC-16(3)",
+          "AC-16(7)",
+          "AC-16(8)",
+          "AC-4(13)",
+          "AC-4(19)",
+          "SA-5",
+          "SA-17",
+          "SA-17(3)",
+          "SC-7",
+          "SC-7(24)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-06",
+        "references": ["PM-18", "PM-19", "PM-22", "PT-2", "PT-2(1)", "PS-6", "PS-6(2)", "SI-12", "SI-12(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-07",
+        "references": [
+          "PM-17",
+          "PM-24",
+          "PM-25",
+          "PT-2",
+          "PT-2(2)",
+          "SA-3",
+          "SA-4",
+          "SA-5",
+          "SA-8",
+          "SA-8(9)",
+          "SA-8(13)",
+          "SA-8(18)",
+          "SA-8(20)",
+          "SA-8(22)",
+          "SA-8(23)",
+          "SA-8(33)",
+          "SA-15",
+          "SA-15(12)",
+          "SC-3",
+          "SC-3(3)",
+          "SC-7",
+          "SC-7(24)",
+          "SC-8",
+          "SC-8(1)-(4)",
+          "SC-28",
+          "SC-28(1)",
+          "SI-12",
+          "SI-12(1)-(3)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-08",
+        "references": [
+          "PM-22",
+          "PM-24",
+          "PT-1",
+          "PT-2",
+          "PT-2(1)",
+          "PT-5",
+          "PT-5(1)",
+          "PT-5(2)",
+          "PT-6",
+          "PT-8",
+          "SA-11",
+          "SA-11(3)",
+          "SI-18",
+          "SI-18(3)",
+          "SA-19",
+          "SI-19(1)",
+          "SI-19(5)",
+          "SI-19(6)",
+          "SI-19(8)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-09",
+        "references": ["CM-4", "CM-4(1)", "CM-4(2)", "PT-3", "RA-8", "SA-4", "SA-9", "SA-9(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-10",
+        "references": [
+          "AC-4",
+          "AC-4(23)-(25)",
+          "CA-3",
+          "CA-3(6)",
+          "CA-6",
+          "CA-6(1)",
+          "CA-6(2)",
+          "SC-4",
+          "SC-4(2)",
+          "SC-7",
+          "SC-7(10)",
+          "SC-7(24)",
+          "SC-8",
+          "SC-8(1)-(5)",
+          "SC-16",
+          "SC-16(1)-(3)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-11",
+        "references": [
+          "PM-22",
+          "PM-24",
+          "PT-2",
+          "PT-2(1)",
+          "PT-4",
+          "PT-4(1)",
+          "PT-4(3)",
+          "PT-6",
+          "PT-6(2)",
+          "PT-7",
+          "PT-7(2)",
+          "SI-12",
+          "SI-12(1)",
+          "SI-19",
+          "SI-19(1)",
+          "SI-19(7)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-12",
+        "references": [
+          "PM-23",
+          "PM-27",
+          "PM-32",
+          "PT-2",
+          "PT-2(1)",
+          "PT-3",
+          "PT-3(1)",
+          "PT-3(2)",
+          "PT-4",
+          "PT-4(2)",
+          "PT-4(3)",
+          "PT-6",
+          "PT-6(1)",
+          "PT-6(2)",
+          "SI-12",
+          "SI-12(1)",
+          "SI-19",
+          "SI-19(1)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-13",
+        "references": [
+          "CM-13",
+          "PT-3",
+          "PT-3(1)",
+          "SA-9",
+          "SA-9(1)",
+          "SA-9(3)",
+          "SA-9(5)",
+          "SR-3",
+          "SR-3(3)",
+          "SR-4",
+          "SR-4(1)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-14",
+        "references": ["PM-22", "PT-6", "PT-6(1)", "PT-6(2)", "PT-8", "SR-4", "SR-4(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-15",
+        "references": ["SA-3", "SA-3(2)", "SI-19", "SI-19(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-16",
+        "references": ["SI-12", "SI-12(1)-(3)", "SI-18", "SI-18(1)", "SI-18(4)", "SI-18(5)", "SI-19", "SI-19(2)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-17",
+        "references": [
+          "PL-2",
+          "PM-22",
+          "PM-24",
+          "PT-7",
+          "PT-7(1)",
+          "PT-7(2)",
+          "PT-8",
+          "SC-8",
+          "SC-8(1)-(5)",
+          "SC-28",
+          "SC-28(1)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-18",
+        "references": ["IR-6", "IR-6(3)", "PM-21", "SR-8"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "DSP-19",
+        "references": [
+          "CA-3",
+          "CA-3(6)",
+          "CM-8",
+          "CM-8(8)",
+          "CM-12",
+          "CM-12(1)",
+          "PM-5",
+          "PM-5(1)",
+          "PM-22",
+          "PM-24",
+          "SA-9",
+          "SA-9(5)",
+          "SA-9(8)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-01",
+        "references": [
+          "PL-1",
+          "PM-1",
+          "PM-17",
+          "AC-1",
+          "AT-1",
+          "AU-1",
+          "CA-1",
+          "CM-1",
+          "CP-1",
+          "IA-1",
+          "IR-1",
+          "MA-1",
+          "MP-1",
+          "PE-1",
+          "PS-1",
+          "PT-1",
+          "RA-1",
+          "SA-1",
+          "SC-1",
+          "SI-1",
+          "SR-1"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-02",
+        "references": ["PL-1", "PL-2", "PM-4", "PM-9", "PM-10", "PM-28"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-03",
+        "references": ["PL-1", "PM-1", "PM-14", "PM-17"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-04",
+        "references": ["CM-6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-05",
+        "references": ["PM-1", "PM-3", "PM-14", "PL-2", "PM-18", "PM-31"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-06",
+        "references": ["PM-29"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-07",
+        "references": ["PL-1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "GRC-08",
+        "references": ["PM-15"],
+        "gap_level": "No Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'cloud-related special interest groups'."
+      },
+      {
+        "control_id": "HRS-01",
+        "references": [
+          "IA-12",
+          "IA-12(2)",
+          "IA-12(3)",
+          "MA-5",
+          "MA-5(2)-(4)",
+          "PS-1",
+          "PS-2",
+          "PS-3",
+          "PS-3(1)",
+          "PS-3(2)",
+          "PS-3(4)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-02",
+        "references": ["PL-4", "PL-4(1)", "PS-1", "PS-6", "PS-6(2)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-03",
+        "references": ["AC-11", "AC-11(1)", "MP-4", "PS-1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-04",
+        "references": ["AC-17", "AC-17(6)", "AC-17(9)", "AC-20", "AC-20(1)-(5)", "PE-17", "PS-1", "SC-7", "SC-7(7)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-05",
+        "references": ["PS-1", "PS-4", "PS-4(1)", "PS-6", "PS-6(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-06",
+        "references": [
+          "AC-17",
+          "AC-17(9)",
+          "PS-1",
+          "PS-4",
+          "PS-4(1)",
+          "PS-4(2)",
+          "PS-5",
+          "PS-6",
+          "PS-6(3)",
+          "SI-4",
+          "SI-4(19)",
+          "SI-4(21)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-07",
+        "references": ["PE-3", "PE-3(1)", "PS-6", "PS-6(2)", "PS-9"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-08",
+        "references": ["PL-4", "PL-4(1)", "PS-6", "PS-6(2)", "PS-6(3)", "PS-7"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-09",
+        "references": ["AC-1", "AT-1", "PS-1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-10",
+        "references": ["PL-4", "PS-6", "PS-6(2)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-11",
+        "references": ["AT-1", "AT-2", "AT-2(1)-(6)", "AT-4", "AT-6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-12",
+        "references": [
+          "AT-3",
+          "AT-3(1)",
+          "AT-3(2)",
+          "AT-3(3)",
+          "AT-3(5)",
+          "AT-4",
+          "AT-6",
+          "IR-9",
+          "IR-9(2)",
+          "PM-12",
+          "PM-16",
+          "SR-11",
+          "SR-11(1)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "HRS-13",
+        "references": ["PL-4", "PL-4(1)", "PS-1", "PS-6", "PS-6(2)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-01",
+        "references": [
+          "AC-1",
+          "AC-2",
+          "AC-2(3)",
+          "AC-2(9)",
+          "AC-2(11)",
+          "AC-16",
+          "AC-16(1)",
+          "AC-16(6)",
+          "IA-4",
+          "IA-4(5)",
+          "IA-4(6)",
+          "IA-5",
+          "IA-5(16)",
+          "IA-8",
+          "IA-8(4)",
+          "IA-12",
+          "IA-12(2)-(6)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-02",
+        "references": [
+          "AC-2",
+          "AC-2(3)",
+          "AC-2(11)",
+          "AC-3",
+          "AC-3(3)",
+          "AC-12",
+          "AC-12(1)",
+          "IA-2",
+          "IA-2(10)",
+          "IA-5",
+          "IA-5(1)",
+          "IA-5(18)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-03",
+        "references": [
+          "AU-10",
+          "AU-10(1)",
+          "AU-10(2)",
+          "AU-16",
+          "AU-16(1)",
+          "IA-4",
+          "IA-4(8)",
+          "IA-4(9)",
+          "IA-5",
+          "IA-5(5)",
+          "IA-8",
+          "IA-8(4)",
+          "PM-5(1)",
+          "SA-8",
+          "SA-8(22)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-04",
+        "references": ["AC-2", "AC-2(3)", "AC-2(11)", "AC-6", "AC-6(1)-(10)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-05",
+        "references": ["AC-6", "AC-6(4)", "IA-12", "IA-12(2)", "IA-12(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-06",
+        "references": ["AC-3", "AC-16", "AC-16(2)", "AC-16(4)", "AC-16(10)", "IA-12", "IA-12(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-07",
+        "references": [
+          "AC-2",
+          "AC-2(1)",
+          "AC-2(2)",
+          "AC-2(6)",
+          "AC-2(8)",
+          "AC-3",
+          "AC-3(8)",
+          "AC-6",
+          "AC-6(7)",
+          "AU-10",
+          "AU-10(4)",
+          "AU-16",
+          "AU-16(1)",
+          "CM-7",
+          "CM-7(1)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-08",
+        "references": ["AC-6", "AC-6(4)", "AC-6(8)", "IA-8", "IA-8(4)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-09",
+        "references": ["AC-6", "AC-3(7)", "AC-6(4)", "AC-6(8)", "IA-5", "IA-5(6)", "IA-8", "IA-8(4)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-10",
+        "references": [
+          "AC-2",
+          "AC-2(7)",
+          "AC-3",
+          "AC-3(4)",
+          "AC-3(11)",
+          "AC-3(13)",
+          "AC-3(14)",
+          "AC-6",
+          "AC-6(4)",
+          "AC-6(5)",
+          "AC-6(8)",
+          "AC-12",
+          "AC-12(3)",
+          "AC-17",
+          "AC-17(4)",
+          "IA-8",
+          "IA-8(4)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-11",
+        "references": [
+          "AC-6",
+          "AC-6(4)",
+          "AC-6(6)",
+          "AU-10",
+          "AU-10(4)",
+          "CA-6",
+          "CA-6(2)",
+          "IA-2",
+          "IA-2(1)",
+          "IA-2(2)",
+          "IA-2(12)",
+          "IA-12",
+          "IA-12(2)",
+          "IA-12(4)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-12",
+        "references": [
+          "AC-2",
+          "AC-2(11)",
+          "AC-2(12)",
+          "IA-8",
+          "IA-8(4)",
+          "SA-8",
+          "SA-8(22)",
+          "SC-34",
+          "SC-34(1)",
+          "SC-34(2)",
+          "SC-36",
+          "SI-4",
+          "SI-4(5)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-13",
+        "references": [
+          "AC-3",
+          "AC-3(14)",
+          "AC-24",
+          "AC-24(2)",
+          "AU-10",
+          "AU-10(1)",
+          "IA-2",
+          "IA-2(1)",
+          "IA-2(2)",
+          "IA-2(12)",
+          "IA-4",
+          "IA-4(1)",
+          "SA-8",
+          "SA-8(22)",
+          "SC-23",
+          "SC-23(3)",
+          "SC-40(4)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-14",
+        "references": [
+          "AC-6",
+          "AC-6(5)",
+          "AC-7",
+          "AC-7(4)",
+          "AU-10",
+          "AU-10(2)",
+          "IA-2",
+          "IA-2(1)",
+          "IA-2(2)",
+          "IA-2(8)",
+          "IA-2(12)",
+          "IA-3",
+          "IA-3(1)",
+          "IA-5",
+          "IA-5(2)",
+          "IA-5(7)",
+          "IA-5(9)",
+          "IA-5(10)",
+          "IA-5(12)",
+          "IA-5(14)-(16)",
+          "IA-8",
+          "IA-8(1)",
+          "IA-8(6)",
+          "SC-23",
+          "SC-23(3)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-15",
+        "references": ["IA-4", "IA-4(8)", "IA-5", "IA-5(1)", "IA-5(8)", "IA-5(18)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IAM-16",
+        "references": [
+          "AC-3",
+          "AC-3(5)",
+          "AC-4",
+          "AC-4(17)",
+          "AC-4(21)",
+          "AC-4(22)",
+          "AC-6",
+          "AC-6(8)",
+          "AC-6(9)",
+          "AC-12",
+          "AC-12(1)",
+          "AC-20",
+          "AC-20(1)",
+          "AU-10",
+          "AU-10(1)",
+          "AU-10(2)",
+          "IA-2",
+          "IA-2(1)",
+          "IA-2(2)",
+          "IA-2(12)",
+          "IA-3",
+          "IA-3(1)",
+          "IA-5(1)",
+          "IA-5(2)",
+          "IA-5(5)",
+          "IA-5(8)",
+          "IA-5(10)",
+          "IA-5(12)",
+          "IA-8",
+          "IA-8(1)",
+          "IA-8(2)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IPY-01",
+        "references": ["PT-2", "PT-2(1)", "PT-3", "PT-3(1)", "SC-1", "SA-8", "SA-8(8)", "SC-27", "SC-29", "SC-29(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IPY-02",
+        "references": ["CM-13", "PT-2", "PT-2(1)", "PT-2(2)", "PT-3", "PT-3(1)", "PT-3(2)", "SA-8", "SA-8(20)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IPY-03",
+        "references": ["PT-2", "PT-2(2)", "SA-4", "SC-16", "SC-16(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IPY-04",
+        "references": [
+          "PT-2",
+          "PT-2(1)",
+          "PT-3",
+          "PT-3(1)",
+          "PT-4(3)",
+          "SA-4",
+          "SA-4(11)",
+          "SA-4(12)",
+          "SI-12",
+          "SI-12(3)"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Recommend adding the full V4 control specification to the NIST 800-53r5 addendum."
+      },
+      {
+        "control_id": "IVS-01",
+        "references": ["AC-1", "CM-1", "IA-1", "RA-1", "SA-1", "SC-1", "SI-1", "SC-46", "SC-49", "SC-50"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'policies and procedures for virtualization security'."
+      },
+      {
+        "control_id": "IVS-02",
+        "references": ["CP-2", "CP-2(2)", "SC-5", "SC-5(2)", "SC-4", "SI-4"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-03",
+        "references": [
+          "SC-1",
+          "SC-4",
+          "SC-7",
+          "SC-7(4)",
+          "SC-7(5)",
+          "SC-7(8)",
+          "SC-7(9)",
+          "SC-7(11)",
+          "SC-8",
+          "SC-8(1)",
+          "SC-11",
+          "SC-12",
+          "SC-16",
+          "SC-23",
+          "SC-29",
+          "SC-29(1)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-04",
+        "references": [
+          "CM-6",
+          "CM-6(1)",
+          "SC-29",
+          "SC-29(1)",
+          "SC-2",
+          "SC-7",
+          "SC-7(12)",
+          "SC-30",
+          "SC-34",
+          "SC-35",
+          "SC-39",
+          "SC-44"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-05",
+        "references": [
+          "CM-2",
+          "CM-2(6)",
+          "CM-5",
+          "CM-5(5)",
+          "SA-3",
+          "SA-3(1)",
+          "SA-8",
+          "SA-8(1)",
+          "SA-8(2)",
+          "SA-8(3)",
+          "SA-8(6)",
+          "SC-3",
+          "SC-3(2)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-06",
+        "references": ["SC-3", "SC-7", "SC-7(20)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-07",
+        "references": [
+          "AC-17",
+          "AC-20",
+          "SC-7",
+          "SC-7(28)",
+          "SC-8",
+          "SC-8(1)",
+          "SC-12",
+          "SC-23",
+          "SC-29",
+          "SI-7",
+          "SI-7(1)-(3)",
+          "SI-7(5)-(10)",
+          "SI-7(12)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-08",
+        "references": ["PL-8", "PL-8(1)", "SA-8", "SA-8(3)", "SA-8(17)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "IVS-09",
+        "references": ["PL-8", "PL-8(1)", "SC-5", "SC-5(1)", "SC-5(3)", "SC-7", "SC-7(13)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-01",
+        "references": ["AU-1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-02",
+        "references": ["AU-4", "AU-11"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-03",
+        "references": ["AU-5", "AU-5(2)", "AU-13"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-04",
+        "references": ["AU-9", "AU-9(4)", "AU-9(6)", "AU-10"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-05",
+        "references": ["AU-6", "AU-6(1)", "AU-6(5)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-06",
+        "references": ["AU-8"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-07",
+        "references": ["AU-1", "AU-14", "AU-16"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-08",
+        "references": ["AU-3", "AU-3(1)", "AU-3(3)", "AU-6", "AU-6(8)", "AU-12", "AU-12(1)", "AU-12(2)", "AU-12(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-09",
+        "references": ["AU-9", "AU-9(2)", "AU-9(3)", "AU-9(4)", "AU-12(3)", "AU-12(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-10",
+        "references": ["AU-1", "AU-9", "AU-9(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-11",
+        "references": ["AU-9", "AU-9(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-12",
+        "references": ["AU-6", "AU-6(6)", "AU-14"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "LOG-13",
+        "references": ["AU-5", "AU-5(2)", "AU-6", "AU-6(3)", "AU-6(4)", "AU-6(5)", "AU-16"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-01",
+        "references": ["IR-1", "IR-2", "IR-2(1)", "IR-4", "IR-4(12)", "IR-4(14)", "PM-1", "PM-12"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'policies and procedures for E-Discovery'."
+      },
+      {
+        "control_id": "SEF-02",
+        "references": ["PM-1", "PM-6", "IR-4", "IR-4(6)", "IR-4(9)", "IR-4(14)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-03",
+        "references": [
+          "IR-1",
+          "IR-2",
+          "IR-2(1)-(3)",
+          "IR-3",
+          "IR-3(1)-(3)",
+          "IR-4",
+          "IR-4(1)-(15)",
+          "IR-5",
+          "IR-5(1)",
+          "IR-6",
+          "IR-6(1)-(3)",
+          "IR-7",
+          "IR-7(1)",
+          "IR-7(2)",
+          "IR-8",
+          "IR-8(1)",
+          "IR-9",
+          "IR-9(1)-(4)",
+          "PM-12"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-04",
+        "references": ["IR-2", "IR-2(1)-(3)", "IR-3", "IR-3(1)-(3)", "IR-8", "IR-9", "IR-9(2)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-05",
+        "references": ["CA-7", "CA-7(3)", "CA-7(4)", "IR-5", "IR-4", "IR-6", "IR-6(2)", "IR-6(3)", "PM-6", "PM-31"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-06",
+        "references": ["CA-7", "CA-7(3)", "CA-7(4)", "CA-7(5)", "CA-7(6)", "IR-4", "IR-4(1)", "IR-4(3)", "IR-4(4)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-07",
+        "references": ["AU-13", "AU-13(1)-(3)", "IR-4", "IR-4(15)", "IR-6", "IR-6(1)-(3)", "PM-21", "PM-23"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "SEF-08",
+        "references": ["IR-4", "IR-4(8)", "IR-6", "IR-6(3)", "IR-7", "IR-7(2)", "PM-21", "PM-23", "PM-26"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-01",
+        "references": [
+          "SR-1",
+          "SR-2",
+          "SR-3",
+          "SR-5",
+          "SA-4",
+          "SA-4(1)",
+          "SA-4(2)",
+          "SA-4(5)",
+          "SA-4(9)",
+          "SA-4(10)",
+          "PM-30"
+        ],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'policies and procedures for the application of the Shared Security Responsibility Model (SSRM) within the organization'."
+      },
+      {
+        "control_id": "STA-02",
+        "references": ["SR-1", "SR-2", "SR-3", "SR-3(1)-(3)", "SR-5", "PM-30"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'SSRM'."
+      },
+      {
+        "control_id": "STA-03",
+        "references": ["No Mapping"],
+        "gap_level": "Full Gap",
+        "addendum": "The full V4 control specification is missing from NIST 800-53r5 and has to be used to close the gap."
+      },
+      {
+        "control_id": "STA-04",
+        "references": ["No Mapping"],
+        "gap_level": "Full Gap",
+        "addendum": "The full V4 control specification is missing from NIST 800-53r5 and has to be used to close the gap."
+      },
+      {
+        "control_id": "STA-05",
+        "references": ["SR-1", "SR-2", "SR-3", "SR-6", "SR-6(1)"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'SSRM'."
+      },
+      {
+        "control_id": "STA-06",
+        "references": ["SA-4", "SA-4(11)", "SR-1", "SR-2", "SR-3", "SR-5", "SR-6"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'SSRM'."
+      },
+      {
+        "control_id": "STA-07",
+        "references": ["CM-8", "CM-8(4)", "SR-4", "SR-4(1)-(4)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-08",
+        "references": ["SR-2", "SR-2(1)", "SR-4", "SR-5", "SR-5(1)", "SR-5(2)", "SR-6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-09",
+        "references": ["SA-4", "SA-4(1)", "SA-4(2)", "SA-4(5)", "SA-4(9)", "SA-4(10)", "SR-8"],
+        "gap_level": "Partial Gap",
+        "addendum": "Missing specification(s) in NIST 800-53:\n'Information security requirements (including SSRM)'"
+      },
+      {
+        "control_id": "STA-10",
+        "references": ["PM-30", "PM-30(1)", "SR-2", "SR-6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-11",
+        "references": ["PM-30", "PM-30(1)", "SR-6", "SR-6(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-12",
+        "references": ["SA-9", "SA-9(5)", "SR-6"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-13",
+        "references": ["SA-9", "SA-9(1)-(8)", "SR-2", "SR-2(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "STA-14",
+        "references": [
+          "SA-9",
+          "SA-9(2)",
+          "SR-4",
+          "SR-4(3)",
+          "SR-6",
+          "SR-6(1)",
+          "SR-7",
+          "SR-9",
+          "SR-9(1)",
+          "SR-11",
+          "SR-11(1)",
+          "SR-11(3)",
+          "PM-23",
+          "PM-30"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-01",
+        "references": [
+          "PM-16",
+          "PM-16(1)",
+          "PM-31",
+          "RA-5",
+          "SA-11",
+          "SA-11(2)",
+          "SA-11(5)",
+          "SA-15",
+          "SA-15(5)",
+          "SA-15(8)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-02",
+        "references": ["RA-3", "RA-3(3)", "RA-5", "RA-5(3)", "RA-5(5)", "SI-3", "SI-3(4)", "SI-3(10)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-03",
+        "references": ["PM-31", "RA-3", "RA-3(1)", "RA-5", "RA-5(2)-(4)", "RA-5(6)", "SI-3", "SI-3(10)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-04",
+        "references": [
+          "CM-7",
+          "CM-7(4)",
+          "RA-3",
+          "RA-3(3)",
+          "RA-5(2)",
+          "SA-10",
+          "SA-10(5)",
+          "SA-11",
+          "SA-11(2)",
+          "SI-2",
+          "SI-2(4)",
+          "SI-3",
+          "SI-3(4)",
+          "SI-4",
+          "SI-4(9)",
+          "SI-4(24)",
+          "SI-8",
+          "SI-8(2)",
+          "SI-8(3)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-05",
+        "references": ["RA-5", "RA-5(3)", "SA-11", "SA-11(2)", "SA-11(5)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-06",
+        "references": ["CA-8", "CA-8(1)-(3)", "SA-11", "SA-11(5)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-07",
+        "references": [
+          "RA-5",
+          "RA-5(4)",
+          "RA-5(5)",
+          "SA-11",
+          "SA-11(5)",
+          "SA-15(5)",
+          "SC-7",
+          "SC-7(10)",
+          "SI-3(8)",
+          "SI-3(10)",
+          "SI-7",
+          "SI-7(9)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-08",
+        "references": [
+          "RA-2",
+          "RA-2(1)",
+          "SA-11",
+          "SA-11(1)",
+          "SA-15",
+          "SA-15(8)",
+          "SI-2",
+          "SI-2(2)",
+          "SI-3",
+          "SI-3(10)"
+        ],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-09",
+        "references": ["RA-5", "RA-5(8)", "RA-5(11)", "SA-15", "SA-15(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "TVM-10",
+        "references": ["PM-31", "RA-5", "RA-5(6)", "RA-5(8)", "RA-5(10)", "SA-15", "SA-15(1)", "SI-2", "SI-2(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-01",
+        "references": ["CM-1", "CM-11", "AC-19"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-02",
+        "references": ["CM-7", "CM-7(6)", "CM-8(3)", "CM-11", "SC-18", "SC-18(2)", "SC-18(3)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-03",
+        "references": ["AC-19", "CM-1", "CM-2", "CM-2(2)", "CM-6", "CM-8(3)", "SI-7"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-04",
+        "references": ["CM-8", "CM-8(7)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-05",
+        "references": ["AU-6", "AC-19", "AC-24", "CM-2", "CM-2(2)", "CM-8(3)", "SC-1"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-06",
+        "references": ["AC-11", "AC-11(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-07",
+        "references": ["CM-1", "CM-3", "CM-4", "CM-8", "CM-8(3)", "CM-9", "CM-9(1)", "CM-11", "SI-7"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-08",
+        "references": ["AC-19(5)", "SC-28", "SC-28(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-09",
+        "references": ["IR-1", "SI-17", "SI-7(17)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-10",
+        "references": ["SC-7", "SC-7(12)", "SC-7(17)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-11",
+        "references": ["SC-7", "SC-7(10)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-12",
+        "references": ["CM-8", "CM-8(8)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-13",
+        "references": ["AC-7", "AC-7(2)", "MP-6", "MP-6(8)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      },
+      {
+        "control_id": "UEM-14",
+        "references": ["SR-5", "SR-5(2)", "SR-6", "SR-6(1)"],
+        "gap_level": "No Gap",
+        "addendum": "N/A"
+      }
+    ]
+  }
+]

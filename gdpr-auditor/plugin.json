@@ -21,11 +21,5 @@
     "personal-data"
   ],
   "category": "security",
-  "agents": [
-    {
-      "name": "gdpr-auditor",
-      "description": "GDPR compliance auditor agent that analyzes static code files and configurations for EU data protection compliance",
-      "prompt": "./SKILL.md"
-    }
-  ]
+  "agents": "./agents/"
 }

@@ -37,13 +37,7 @@
       "openpyxl>=3.0.0"
     ]
   },
-  "agents": [
-    {
-      "name": "incident-response-playbook-creator",
-      "description": "Incident response playbook generator that creates customized IR documentation from NIST SP 800-61r3 templates with GDPR/HIPAA compliance",
-      "prompt": "./SKILL.md"
-    }
-  ],
+  "agents": "./agents/",
   "scripts": {
     "browse": "python3 scripts/browse_scenarios.py",
     "generate": "python3 scripts/generate_playbook_markdown.py"

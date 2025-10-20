@@ -1,0 +1,1347 @@
+- name: CCM v3.0.1
+  mappings:
+    - control_id: A&A-01
+      references:
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply and evaluate audit and assurance policies, procedures and standards'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: A&A-02
+      references:
+        - AAC-02
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: A&A-03
+      references:
+        - AAC-01
+        - AAC-02
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: A&A-04
+      references:
+        - GRM-01
+        - GRM-03
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: A&A-05
+      references:
+        - AAC-01
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control:  (AAC-01) 'Audit plans shall be developed' and 'Auditing plans shall focus on reviewing the effectiveness of the implementation of security operations'.
+    - control_id: A&A-06
+      references:
+        - GRM-10
+        - GRM-11
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Establish, document, approve, communicate, apply, evaluate and maintain a risk-based corrective action plan'
+    - control_id: AIS-01
+      references:
+        - AIS-01
+        - AIS-04
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply, evaluate, maintain policies and procedures for application security'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: AIS-02
+      references:
+        - AIS-01
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: AIS-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: AIS-04
+      references:
+        - AIS-01
+        - AIS-03
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (AIS-01) 'Applications and programming interfaces (APIs) shall be designed, developed, deployed, and tested in accordance with leading industry standards'
+    - control_id: AIS-05
+      references:
+        - AIS-01
+        - AIS-03
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Automate when applicable and possible.'
+    - control_id: AIS-06
+      references:
+        - AIS-01
+        - AIS-03
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Automate where possible.'
+    - control_id: AIS-07
+      references:
+        - TVM-02
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Automating remediation when possible.'
+    - control_id: BCR-01
+      references:
+        - BCR-07
+        - BCR-10
+        - BCR-11
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        Requirement of 'at least annually' in last sentence.
+    - control_id: BCR-02
+      references:
+        - BCR-09
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-03
+      references:
+        - BCR-04
+        - BCR-06
+        - BCR-08
+        - BCR-09
+        - BCR-10
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-04
+      references:
+        - BCR-01
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-05
+      references:
+        - BCR-01
+        - BCR-04
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-06
+      references:
+        - BCR-02
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'at least annually'
+    - control_id: BCR-07
+      references:
+        - BCR-01
+        - BCR-02
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: BCR-08
+      references:
+        - BCR-11
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Ensure the confidentiality, integrity and availability of the backup'
+    - control_id: BCR-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: BCR-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: BCR-11
+      references:
+        - BCR-06
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-01
+      references:
+        - CCC-05
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply, evaluate policies and procedures for managing the risks associated with applying changes to organization assets'
+        'regardless of whether the assets are managed internally or externally (i.e., outsourced)'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: CCC-02
+      references:
+        - CCC-03
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-03
+      references:
+        - CCC-05
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'regardless of whether the assets are managed internally or externally (i.e., outsourced)'
+    - control_id: CCC-04
+      references:
+        - CCC-04
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'removal, update, and management of organization assets'
+    - control_id: CCC-05
+      references:
+        - CCC-05
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CCC-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CCC-07
+      references:
+        - GRM-01
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'detection measures with proactive notification'
+    - control_id: CCC-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CCC-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-01
+      references:
+        - EKM-01
+        - EKM-02
+        - EKM-03
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Apply and evaluate the policies and procedures for Cryptography, Encryption and Key Management'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: CEK-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-03
+      references:
+        - EKM-03
+        - EKM-04
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: CEK-04
+      references:
+        - EKM-04
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'considering the classification of data, associated risks, and usability of the encryption technology.'
+    - control_id: CEK-05
+      references:
+        - EKM-02
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (EKM-02) 'lifecycle management/replacement' and  'changes within the cryptosystem'
+    - control_id: CEK-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-10
+      references:
+        - EKM-04
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (EKM-04) 'open/validated formats and standard algorithms shall be required'.
+    - control_id: CEK-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-16
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-17
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-18
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-19
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-20
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: CEK-21
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DCS-01
+      references:
+        - DCS-05
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply and evaluate policies and procedures for the secure disposal of equipment used outside the organization's premises'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: DCS-02
+      references:
+        - DCS-04
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply and evaluate policies and procedures for the relocation or transfer of hardware, software, or data/information to an offsite or alternate location'
+        'or cryptographically verifiable authorization'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: DCS-03
+      references:
+        - DCS-06
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'evaluate (implementation of) policies and procedures'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: DCS-04
+      references:
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply and evaluate policies and procedures for the secure transportation of physical media.'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: DCS-05
+      references:
+        - DCS - 01
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-06
+      references:
+        - DCS - 01
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-07
+      references:
+        - DCS-02
+        - DCS-08
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-08
+      references:
+        - DCS - 03
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-09
+      references:
+        - DCS-07
+        - DCS-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'all ingress and egress points (are) documented'
+        'Retain access control records on a periodic basis as deemed appropriate by the organization.'
+    - control_id: DCS-10
+      references:
+        - DCS-02
+        - DCS-07
+        - DCS-08
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'maintain datacenter surveillance systems'
+    - control_id: DCS-11
+      references:
+        - HRS-09
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (HRS-09) 'All individuals with access to organizational data shall receive appropriate awareness training relating to their professional function relative to the organization.'
+    - control_id: DCS-12
+      references:
+        - BCR - 03
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Define, implement and evaluate processes, procedures and technical measures that ensure a risk-based protection of telecommunication cables'
+    - control_id: DCS-13
+      references:
+        - BCR - 03
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'within accepted industry standards'
+    - control_id: DCS-14
+      references:
+        - BCR - 03
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DCS-15
+      references:
+        - BCR - 06
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-01
+      references:
+        - DSI-04
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply and evaluate policies and procedures for the classification, protection and handling of data throughout its lifecycle and according to all applicable laws and regulations, standards, and risk level.'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: DSP-02
+      references:
+        - DSI-07
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Apply industry accepted methods for the secure disposal of data'
+    - control_id: DSP-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-04
+      references:
+        - DSI-01
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-05
+      references:
+        - DSI-02
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Review data flow documentation at defined intervals, at least annually, and after any change.'
+    - control_id: DSP-06
+      references:
+        - DSI-06
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Document ownership'
+        'all relevant documented personal data'
+        'Perform review at least annually'
+    - control_id: DSP-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-10
+      references:
+        - GRM-02
+        - EKM-03
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        The reference to personal data: 'transfer of personal data is protected from unauthorized access and only processed within scope as permitted by the respective laws and regulations'
+    - control_id: DSP-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-15
+      references:
+        - DSI-05
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-16
+      references:
+        - GRM-02
+        - BCR-11
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: DSP-17
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-18
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: DSP-19
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: GRC-01
+      references:
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply and evaluate policies and procedures for an information governance program'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: GRC-02
+      references:
+        - GRM-08
+        - GRM-10
+        - GRM-11
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Enterprise Risk Management (ERM) program (as it includes information security risks but is not limited to only those)'
+         '(ERM) program that includes policies and procedures for identification, evaluation, ownership, treatment, and acceptance of privacy risks' (focus is on missing requirement for risk management on privacy)
+    - control_id: GRC-03
+      references:
+        - GRM-09
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-04
+      references:
+        - GRM-01
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'deviation from an established policy'
+    - control_id: GRC-05
+      references:
+        - GRM-04
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'all the domains of the CCM' (i.e., reference to CCMv4.0)
+    - control_id: GRC-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: GRC-07
+      references:
+        - AAC-03
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: GRC-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: HRS-01
+      references:
+        - HRS-02
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply, evaluate, policies and procedures for background verification of all new employees'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: HRS-02
+      references:
+        - HRS-08
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        Requirement of 'at least annually' in last sentence.
+    - control_id: HRS-03
+      references:
+        - HRS-11
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply, evaluate, policies and procedures that require unattended workspaces to not have openly visible confidential data'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: HRS-04
+      references:
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply, evaluate, policies and procedures to protect information accessed, processed or stored at remote sites and locations'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: HRS-05
+      references:
+        - HRS-01
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Establish and document procedures'
+    - control_id: HRS-06
+      references:
+        - HRS-04
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-07
+      references:
+        - HRS-03
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-08
+      references:
+        - HRS-03
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-09
+      references:
+        - HRS-07
+        - HRS-10
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-10
+      references:
+        - HRS-06
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: HRS-11
+      references:
+        - HRS-09
+        - HRS-10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'approve, evaluate and maintain a security awareness training program'
+    - control_id: HRS-12
+      references:
+        - HRS-09
+        - HRS-10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Provide all employees with access to sensitive organizational and personal data with appropriate security
+        awareness training'
+    - control_id: HRS-13
+      references:
+        - HRS-10
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-01
+      references:
+        - IAM-02
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        Requirement of 'at least annually' in last sentence.
+    - control_id: IAM-02
+      references:
+        - IAM-02
+        - IAM-12
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        (If Password is equal to "authentication secrets" then)
+        Missing specification(s) in CCMv3.0.1:
+        Requirement of 'at least annually' in last sentence.
+    - control_id: IAM-03
+      references:
+        - IAM-04
+        - IAM-08
+        - IAM-10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'system identities'
+    - control_id: IAM-04
+      references:
+        - IAM-05
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-05
+      references:
+        - IAM-02
+        - IAM-06
+        - IVS-11
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-06
+      references:
+        - IAM-09
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-07
+      references:
+        - IAM-11
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IAM-08
+      references:
+        - IAM-10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Review and revalidate user access for separation of duties'
+        'a frequency that is commensurate with organizational risk tolerance'
+    - control_id: IAM-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: IAM-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: IAM-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: IAM-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: IAM-13
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: IAM-14
+      references:
+        - IAM-02
+        - IAM-05
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Adopt digital certificates or alternatives which achieve an equivalent level of security for system identities'
+    - control_id: IAM-15
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: IAM-16
+      references:
+        - IAM-02
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-01
+      references:
+        - IPY-03
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply and evaluate policies and procedures for interoperability and portability.'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: IPY-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: IPY-03
+      references:
+        - IPY-04
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IPY-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: IVS-01
+      references:
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply and evaluate policies and procedures for infrastructure and virtualization security.'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: IVS-02
+      references:
+        - IVS-04
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-03
+      references:
+        - IVS-06
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-04
+      references:
+        - IVS-07
+        - IVS-11
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-05
+      references:
+        - IVS-08
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-06
+      references:
+        - IVS-09
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-07
+      references:
+        - IVS-10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Such channels must include only up-to-date and approved protocols'.
+    - control_id: IVS-08
+      references:
+        - IVS-13
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: IVS-09
+      references:
+        - IVS-13
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-01
+      references:
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'apply and evaluate policies and procedures for logging and monitoring'
+        Requirement of 'at least annually' in last sentence.
+    - control_id: LOG-02
+      references:
+        - ''
+        - IVS-01
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Define, implement and evaluate processes, procedures and technical measures'
+    - control_id: LOG-03
+      references:
+        - SEF-03
+        - SEF-05
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Define and implement a system to generate alerts to responsible stakeholders based on such events and corresponding metrics.'
+    - control_id: LOG-04
+      references:
+        - IVS-01
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Restrict audit logs access to authorized personnel'
+    - control_id: LOG-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: LOG-06
+      references:
+        - IVS-03
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: LOG-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: LOG-08
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: LOG-09
+      references:
+        - GRM-04
+        - IVS-01
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (IVS-01) 'Higher levels of assurance are required for protection of audit logs',  (GRM-04) 'to protect assets and data from loss, misuse, unauthorized access, disclosure, alteration, and destruction'.
+    - control_id: LOG-10
+      references:
+        - EKM-02
+        - EKM-03
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (EKM-02) 'Policies and procedures shall be established for the management of cryptographic keys', (EKM-03) 'Policies and procedures shall be established, and supporting business processes and technical measures implemented, for the use of encryption protocols'.
+    - control_id: LOG-11
+      references:
+        - EKM-02
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (EKM-02) 'management of cryptographic keys in the service's cryptosystem'.
+    - control_id: LOG-12
+      references:
+        - DCS-08
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'log physical access using an auditable access control system.'
+    - control_id: LOG-13
+      references:
+        - SEF-03
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Define, implement and evaluate processes, procedures and technical measures for the reporting of anomalies and failures of the monitoring system'
+    - control_id: SEF-01
+      references:
+        - SEF-02
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'policies and procedures for E-Discovery and Cloud Forensics'.
+        Requirement of 'at least annually' in last sentence.
+    - control_id: SEF-02
+      references:
+        - SEF-02
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        Requirement of 'at least annually' in last sentence.
+    - control_id: SEF-03
+      references:
+        - BCR-02
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Establish, document, approve, communicate, apply,  a security incident response plan, which Include relevant internal departments'
+    - control_id: SEF-04
+      references:
+        - BCR-02
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-05
+      references:
+        - SEF-05
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-06
+      references:
+        - SEF-02
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: SEF-07
+      references:
+        - SEF-04
+        - STA-05
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Define and implement, processes, procedures and technical measures for security breach notifications'
+        'Report assumed security breaches'
+    - control_id: SEF-08
+      references:
+        - SEF-01
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-01
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: STA-02
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: STA-03
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: STA-04
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: STA-05
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: STA-06
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: STA-07
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: STA-08
+      references:
+        - STA-06
+        - STA-08
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-09
+      references:
+        - STA-05
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'Logging and monitoring capability'
+        'Data Privacy'
+    - control_id: STA-10
+      references:
+        - STA-07
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-11
+      references:
+        - STA-04
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-12
+      references:
+        - STA-01
+        - STA-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'to comply with privacy, personnel policy.'
+    - control_id: STA-13
+      references:
+        - STA-06
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: STA-14
+      references:
+        - STA-08
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-01
+      references:
+        - TVM-02
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        Requirement of 'at least annually' in last sentence.
+    - control_id: TVM-02
+      references:
+        - TVM-01
+        - GRM-06
+        - GRM-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        Requirement of 'at least annually' in last sentence.
+    - control_id: TVM-03
+      references:
+        - TVM-02
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-04
+      references:
+        - No mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: TVM-05
+      references:
+        - No mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: TVM-06
+      references:
+        - TVM-02
+      gap_level: Partial Gap
+      addendum: |-
+        Recommend the full V4 control specification to be used to close the gap.
+
+        Portion in the mapped control(s) contributing to the partial gap, that is, covering in part the V4 control: (TVM-02) 'supporting processes and technical measures implemented, for timely detection of vulnerabilities within organizationally-owned or managed applications, infrastructure network and system components (e.g., penetration testing)'
+    - control_id: TVM-07
+      references:
+        - TVM-02
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        Requirement of 'at least monthly'.
+    - control_id: TVM-08
+      references:
+        - TVM-02
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'vulnerability remediation using an industry recognized framework'.
+    - control_id: TVM-09
+      references:
+        - TVM-02
+      gap_level: No Gap
+      addendum: N/A
+    - control_id: TVM-10
+      references:
+        - No mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: UEM-01
+      references:
+        - GRM-06
+        - GRM-09
+        - MOS-03
+        - MOS-04
+        - MOS-05
+        - MOS-08
+        - MOS-11
+        - MOS-12
+        - MOS-13
+        - MOS-16
+        - MOS-17
+        - MOS-20
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'endpoints' (The term is missing from CCMv3.0.1 and MOS domain. Mobile device policies are a subset of endpoint devices policy).
+        'apply, evaluate policies and procedures for all endpoints'.
+        Requirement of 'at least annually' in last sentence.
+    - control_id: UEM-02
+      references:
+        - MOS-02
+        - MOS-03
+        - MOS-04
+        - MOS-06
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'endpoint'.
+        'Define, apply and evaluate a list'
+    - control_id: UEM-03
+      references:
+        - MOS-07
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'endpoint'.
+        'Define and implement a process'.
+    - control_id: UEM-04
+      references:
+        - MOS-09
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'endpoints'.
+    - control_id: UEM-05
+      references:
+        - MOS-10
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'endpoints'.
+        'Define, implement and evaluate processes, procedures and technical measures to enforce policies and controls for all endpoints'.
+    - control_id: UEM-06
+      references:
+        - MOS-14
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'endpoint'.
+    - control_id: UEM-07
+      references:
+        - MOS-15
+        - MOS-19
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'endpoint'.
+    - control_id: UEM-08
+      references:
+        - MOS-11
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'endpoint'.
+    - control_id: UEM-09
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: UEM-10
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: UEM-11
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: UEM-12
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.
+    - control_id: UEM-13
+      references:
+        - MOS-18
+      gap_level: Partial Gap
+      addendum: |-
+        Missing specification(s) in CCMv3.0.1:
+        'endpoint'.
+        'Define, implement and evaluate processes, procedures and technical measures'.
+    - control_id: UEM-14
+      references:
+        - No Mapping
+      gap_level: Full Gap
+      addendum: The full V4 control specification is missing from CCMv3.0.1 and has
+        to be used to close the gap.

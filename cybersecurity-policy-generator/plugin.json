@@ -27,11 +27,5 @@
     "audit"
   ],
   "category": "security",
-  "agents": [
-    {
-      "name": "cybersecurity-policy-generator",
-      "description": "Generate professional cybersecurity policies using 51 industry-standard templates from SANS and CIS Controls, customized for your organization and output in Markdown, Word, HTML, and PDF formats",
-      "prompt": "./SKILL.md"
-    }
-  ]
+  "agents": "./agents/"
 }
