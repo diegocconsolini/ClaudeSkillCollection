@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "security-compliance-marketplace",
-  "version": "1.3.0",
-  "description": "Professional security, privacy, and compliance plugins for Claude Code. Features GDPR compliance auditing, cybersecurity policy generation with 51 professional templates, incident response playbook creation based on NIST SP 800-61r3, and PDF Smart Extractor for analyzing large technical documents with minimal token usage. Production-ready tools for security governance, compliance frameworks (ISO 27001, SOC 2, NIST CSF), incident response, and defensive security analysis.",
+  "version": "1.4.0",
+  "description": "Professional security, privacy, and compliance plugins for Claude Code. Features GDPR compliance auditing, cybersecurity policy generation with 51 professional templates, incident response playbook creation based on NIST SP 800-61r3, PDF Smart Extractor for analyzing large technical documents, and Excel Smart Extractor for processing large spreadsheets with minimal token usage. Production-ready tools for security governance, compliance frameworks (ISO 27001, SOC 2, NIST CSF), incident response, document analysis, and defensive security operations.",
   "owner": {
     "name": "Diego Consolini",
     "email": "diego@diegocon.nl"
@@ -118,6 +118,36 @@
         "content-preservation"
       ],
       "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/pdf-smart-extractor",
+      "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+      "license": "MIT"
+    },
+    {
+      "name": "xlsx-smart-extractor",
+      "description": "Extract and analyze large Excel workbooks (1MB-50MB+) with minimal token usage. Preserves 100% of formulas, cell formatting, and complex table structures while achieving 20-100x token reduction through local extraction, semantic chunking, and intelligent caching. Perfect for compliance matrices, financial models, security audit logs, and data tables. Tested with 287K cells and 15K formulas.",
+      "source": "./xlsx-smart-extractor",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Consolini",
+        "email": "diego@diegocon.nl"
+      },
+      "category": "productivity",
+      "keywords": [
+        "excel",
+        "xlsx",
+        "spreadsheet",
+        "extraction",
+        "token-optimization",
+        "compliance-matrix",
+        "financial-model",
+        "data-analysis",
+        "openpyxl",
+        "formula-preservation",
+        "cell-formatting",
+        "table-analysis",
+        "cache",
+        "content-preservation"
+      ],
+      "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/xlsx-smart-extractor",
       "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
       "license": "MIT"
     }
