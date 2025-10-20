@@ -43,7 +43,7 @@ print(f"Total pages: {metadata['page_count']}")
 
 ### Test 1: Large PDF Extraction (Edge Case)
 
-**PDF:** `digitalforensicswithkalilinuxthirdedition.pdf`
+**PDF:** Large Technical Book
 **Size:** 35.46 MB
 **Pages:** 414
 **Status:** ✅ PASSED
@@ -51,7 +51,7 @@ print(f"Total pages: {metadata['page_count']}")
 **Results:**
 ```
 Extraction complete!
-Cache key: digitalforensicswithkalilinuxthirdedition_211a5ee5c5ca
+Cache key: [anonymized]
 Total pages: 414
 Total characters: 433,317
 TOC entries: 185
@@ -66,15 +66,15 @@ TOC entries: 185
 
 ### Test 2: Medium PDF Extraction + Cache Reuse
 
-**PDF:** `NIST.SP.800-82r3.pdf`
+**PDF:** Technical Standards Document (8.2MB)
 **Size:** 8.2 MB
 **Pages:** 316
 **Status:** ✅ PASSED
 
 **First Run (cached from previous session):**
 ```
-Using cached extraction for NIST.SP.800-82r3
-Cache key: NIST.SP.800-82r3_608f554514d38185
+Using cached extraction
+Cache key: [anonymized]
 ```
 
 **Cache Reuse Test:**
@@ -87,10 +87,10 @@ Cache key: NIST.SP.800-82r3_608f554514d38185
 
 ### Test 3: Semantic Chunking (Content Preservation)
 
-#### Test 3A: NIST SP 800-82r3 (8.2 MB)
+#### Test 3A: Technical Standards Document (8.2 MB)
 
 **Input:**
-- Cache key: `NIST.SP.800-82r3_608f554514d38185`
+- Cache key: [anonymized]
 - Total characters: 745,392
 
 **Output:**
@@ -113,10 +113,10 @@ Statistics:
 - ✅ Semantic boundaries detected: 315 sections
 - ✅ Chunk index and individual files created successfully
 
-#### Test 3B: Digital Forensics with Kali Linux (35.46 MB)
+#### Test 3B: Large Technical Book (35.46 MB)
 
 **Input:**
-- Cache key: `digitalforensicswithkalilinuxthirdedition_211a5ee5c5ca`
+- Cache key: [anonymized]
 - Total characters: 442,403 (from extract_pdf.py output: 433,317 - note: different counting method)
 
 **Output:**
@@ -145,34 +145,34 @@ Statistics:
 ### Test 4: Query Functionality (Token Reduction)
 
 **Test Query:** `"ransomware industrial control systems"`
-**Cache Key:** `NIST.SP.800-82r3_608f554514d38185`
+**Cache Key:** [anonymized]
 **Status:** ✅ PASSED
 
 **Results:**
 ```
-Found 5 result(s) for 'ransomware industrial control systems':
+Found 5 result(s) for query:
 
-1. Chunk 1 - NIST Special Publication
+1. Chunk 1 - Technical Document
    Relevance: 100.00%
    Matches: 1
    Tokens: 181
 
-2. Chunk 4 - NIST SP 800-82r3
+2. Chunk 4 - Technical Document
    Relevance: 100.00%
    Matches: 24
    Tokens: 563
 
-3. Chunk 5 - NIST SP 800-82r3
+3. Chunk 5 - Technical Document
    Relevance: 100.00%
    Matches: 7
    Tokens: 211
 
-4. Chunk 7 - NIST SP 800-82r3
+4. Chunk 7 - Technical Document
    Relevance: 100.00%
    Matches: 10
    Tokens: 1,047
 
-5. Chunk 10 - NIST SP 800-82r3
+5. Chunk 10 - Technical Document
    Relevance: 100.00%
    Matches: 5
    Tokens: 1,083
@@ -237,8 +237,8 @@ No results found for: test
 
 ## Performance Metrics Summary
 
-| Metric | NIST SP 800-82r3 (8.2MB) | Kali Linux Book (35.46MB) |
-|--------|--------------------------|---------------------------|
+| Metric | Technical Doc (8.2MB) | Large Book (35.46MB) |
+|--------|-----------------------|----------------------|
 | **Extraction Time** | Cached (< 1s) | ~5 minutes |
 | **Pages** | 316 | 414 |
 | **Total Tokens** | 185,792 | 110,235 |
@@ -270,8 +270,8 @@ No results found for: test
 - **No exception thrown**
 
 ### ✅ Edge Case 5: Document Structure Variation
-- **NIST doc:** Highly structured (315 sections)
-- **Kali book:** Mixed structure (380 sections + 20 paragraphs)
+- **Technical doc:** Highly structured (315 sections)
+- **Large book:** Mixed structure (380 sections + 20 paragraphs)
 - **Result:** Both handled correctly with high preservation rates
 
 ---
