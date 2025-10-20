@@ -1,6 +1,6 @@
 # Excel Smart Extractor - Claude Code Plugin
 
-**Extract and analyze large Excel workbooks with 100%+ content preservation and 20-100x token reduction**
+**Extract and analyze large Excel workbooks with complete content preservation and 20-100x token reduction**
 
 ## Overview
 
@@ -8,7 +8,7 @@ Excel Smart Extractor solves the "Excel too large" problem by extracting content
 
 ### Key Features
 
-- **100%+ Content Preservation** - Full local extraction including formulas and formatting
+- **Complete Content Preservation** - Full local extraction including formulas and formatting (100% of original content)
 - **20-100x Token Reduction** - Load only relevant sheets/ranges, not entire workbooks
 - **Formula Preservation** - Extract formulas as text (=SUM(A1:A10)), not just values
 - **Sheet-Based Chunking** - Intelligent splitting by worksheets, column groups, and row ranges
