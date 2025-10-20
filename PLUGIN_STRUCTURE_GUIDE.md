@@ -170,6 +170,76 @@ Provide usage examples...
 - **description** (required): Short description of agent's purpose
 - **capabilities** (required): Array of capability strings
 
+---
+
+## ⚠️ CRITICAL: Agent Frontmatter is MANDATORY
+
+**COMMON MISTAKE THAT BREAKS MARKETPLACE LOADING:**
+
+If you forget to add YAML frontmatter to your agent file, the plugin **will NOT appear** in Claude Code marketplace, even if:
+- plugin.json is valid
+- The plugin is committed and pushed to repository
+- All other files are correct
+- Marketplace.json includes the plugin entry
+
+**What happened with docx-smart-extractor (October 2025):**
+1. Created complete plugin with all scripts, README, plugin.json
+2. Committed and pushed to repository
+3. Added to marketplace.json v1.5.0
+4. Plugin did NOT appear in Claude Code (showed 4 plugins instead of 6)
+5. **Root cause:** Agent file started with `# DOCX Smart Extractor Agent` instead of frontmatter
+
+### ❌ WRONG - Missing Frontmatter (Plugin Won't Load)
+
+```markdown
+# DOCX Smart Extractor Agent
+
+## Overview
+
+The DOCX Smart Extractor enables efficient analysis...
+```
+
+**Result:** Plugin exists in repository but is invisible in Claude Code marketplace.
+
+### ✅ CORRECT - With Required Frontmatter
+
+```markdown
+---
+description: Extract and analyze Word documents (1MB-50MB+) with minimal token usage through local extraction, semantic chunking by headings, and intelligent caching.
+capabilities: ["word-extraction", "table-extraction", "heading-structure", "token-optimization", "document-analysis", "policy-documents", "contract-analysis", "technical-reports"]
+---
+
+# DOCX Smart Extractor Agent
+
+## Overview
+
+The DOCX Smart Extractor enables efficient analysis...
+```
+
+**Result:** Plugin loads correctly and appears in marketplace.
+
+### Validation Checklist Before Committing Agent Files
+
+**ALWAYS verify these steps before committing:**
+
+1. ✅ Agent file has YAML frontmatter block (starts with `---`)
+2. ✅ Frontmatter has `description` field (string, 1-2 sentences)
+3. ✅ Frontmatter has `capabilities` field (array of strings)
+4. ✅ Frontmatter closes with `---` on its own line
+5. ✅ Content starts AFTER the closing `---`
+6. ✅ No other content appears before the frontmatter
+
+**Quick validation command:**
+```bash
+# Check if agent file has frontmatter
+head -5 agents/your-agent.md | grep -c "^---$"
+# Should return "2" (opening and closing ---)
+```
+
+**If this returns 0 or 1, your agent file is missing frontmatter and the plugin will fail to load.**
+
+---
+
 **Verified Reality (as of October 20, 2025):**
 - All 4 working plugins use agent filenames matching plugin names
 - Example: `pdf-smart-extractor` plugin → `agents/pdf-smart-extractor.md` → invoked as `pdf-smart-extractor:pdf-smart-extractor`
