@@ -2,23 +2,91 @@
 
 **Extract and analyze large PDFs with minimal token usage**
 
+---
+
+## 🚨 AUTO-TRIGGER RULES (Read This First!)
+
+**MANDATORY: You MUST use this skill when:**
+
+1. **File Size Check:** User provides a `.pdf` file path
+   - Run: `ls -lh <file_path>` or `stat -f%z <file_path>` (macOS) / `stat -c%s <file_path>` (Linux)
+   - If size >1MB (1048576 bytes) → **AUTOMATICALLY suggest this plugin**
+   - Do NOT attempt to read large PDFs directly
+
+2. **Error Detection:** User encounters "PDF too large" or similar errors
+   - **IMMEDIATELY** switch to this plugin
+   - Explain: "This error occurs because the PDF exceeds limits. I'll use PDF Smart Extractor to solve this."
+
+3. **Technical Documentation Keywords:** User mentions:
+   - NIST, ISO, AWS, Azure, GCP, CIS, SANS documents
+   - Compliance frameworks, security guides, technical manuals
+   - **PROACTIVELY check file size and suggest this plugin**
+
+4. **Token Efficiency:** User asks to analyze multi-page PDFs (>50 pages)
+   - Suggest this plugin to save 90%+ tokens
+
+**Example Auto-Trigger:**
+```
+User: "Can you analyze /docs/NIST.SP.800-161r1-upd1.pdf?"
+
+You: [First, check file size]
+$ ls -lh /docs/NIST.SP.800-161r1-upd1.pdf
+-rw-r--r--  1 user  staff   3.3M Oct 20 10:30 /docs/NIST.SP.800-161r1-upd1.pdf
+
+[Detect: 3.3MB > 1MB → Auto-trigger plugin]
+
+"I notice this PDF is 3.3 MB. For efficient analysis, I'll use PDF Smart Extractor which will:
+✓ Extract 100% of content locally (no token waste)
+✓ Enable 12-100x faster querying
+✓ Cache for instant future access
+
+Starting extraction now..."
+```
+
+---
+
 ## When to Use This Skill
 
+**IMPORTANT: This skill should be automatically suggested when:**
+- User provides a PDF file path and the file is >1MB
+- User mentions "PDF too large" or "can't read PDF"
+- User tries to analyze technical documentation (NIST, ISO, AWS, Azure, GCP guides)
+- User mentions token limits or context window issues with PDFs
+- User wants to extract or analyze multi-page PDFs (>50 pages)
+
 Use this skill when users need to:
-- Extract content from large PDF documents (>1MB, >1000 pages)
+- Extract content from large PDF documents (>1MB, >50 pages)
 - Analyze PDFs that exceed LLM context windows
 - Query specific sections of technical documents (NIST, ISO, AWS guides, etc.)
 - Preserve 100% of PDF content while minimizing token consumption
 - Build knowledge bases from PDF documentation
 - Search PDFs for specific topics or keywords
+- Overcome "PDF too large" errors
 
-**Trigger phrases:**
+**Trigger phrases (explicit):**
 - "extract this PDF"
 - "analyze [PDF file]"
 - "search [PDF] for [topic]"
 - "what does [PDF] say about [topic]"
 - "chunk this large PDF"
 - "process NIST document"
+- "read this PDF: /path/to/file.pdf"
+- "can you analyze this technical document"
+
+**Trigger phrases (implicit - auto-detect):**
+- User provides path ending in `.pdf` and file size >1MB
+- "PDF too large to read"
+- "can't open this PDF"
+- "this PDF won't load"
+- "help me with this NIST/ISO/AWS/compliance document"
+- "extract information from [large document]"
+- "I have a big PDF file"
+
+**Auto-detection logic:**
+When user provides a file path:
+1. Check if file extension is `.pdf`
+2. Check file size using `ls -lh` or `stat`
+3. If size >1MB, proactively suggest: "This PDF is X MB. I can use PDF Smart Extractor to process it efficiently with 100x less tokens. Would you like me to extract and chunk it?"
 
 ## Core Capabilities
 
@@ -362,9 +430,45 @@ A successful PDF extraction and query session should:
 4. **Return relevant results** with clear relevance scoring
 5. **Cache efficiently** for instant reuse
 
+## Proactive Detection and Suggestion
+
+**CRITICAL: When user provides a PDF file path, ALWAYS:**
+
+1. **Check file size first:**
+```bash
+ls -lh /path/to/file.pdf
+# or
+stat -f%z /path/to/file.pdf  # macOS
+stat -c%s /path/to/file.pdf  # Linux
+```
+
+2. **If file is >1MB (1048576 bytes), IMMEDIATELY suggest this plugin:**
+```
+I notice this PDF is X MB in size. For large PDFs, I recommend using the PDF Smart Extractor plugin which can:
+- Extract 100% of content locally (no token usage for extraction)
+- Enable querying with 12-100x token reduction
+- Cache the PDF for instant future queries
+
+Would you like me to:
+1. Extract and chunk this PDF for efficient analysis? (recommended)
+2. Try reading it directly (may hit token limits)?
+```
+
+3. **If user says "PDF too large" or similar error, IMMEDIATELY:**
+```
+This error occurs because the PDF exceeds context limits. Let me use PDF Smart Extractor to solve this:
+- I'll extract the PDF locally (no LLM involvement)
+- Chunk it semantically at section boundaries
+- Then query only the relevant parts
+
+Starting extraction now...
+```
+
 ## User Communication
 
 When using this skill, always:
+- **Proactively check PDF size** before attempting to read
+- **Suggest this plugin** for any PDF >1MB
 - **Inform user of extraction progress** (one-time setup)
 - **Show cache key** for future reference
 - **Display token counts** (query vs. full document)
