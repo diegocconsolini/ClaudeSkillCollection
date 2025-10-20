@@ -169,9 +169,16 @@ Extract and analyze large PDF documents (3MB-10MB+) with 100% content preservati
 - **Fast Processing** - <2 minutes first extraction, <1 second subsequent queries
 - **PyMuPDF-Powered** - Lightweight, reliable PDF parsing
 
-**Real Performance (Tested):**
-- NIST SP 800-161r1 (3.3MB, 325 pages): 215,907 tokens → 1,864 tokens = **115.8x reduction**
-- NIST SP 800-82r3 (8.2MB, 316 pages): 186,348 tokens → 1,796 tokens = **103.7x reduction**
+**Real Performance (Comprehensive Testing - October 2025):**
+- NIST SP 800-161r1 (3.3MB, 325 pages): 215,907 tokens → 1,864 tokens = **115.8x reduction**, 99.81% preservation
+- NIST SP 800-82r3 (8.2MB, 316 pages): 186,348 tokens → 3,085 tokens = **60.2x reduction**, 99.76% preservation
+- Large Technical Book (35.46MB, 414 pages): 110,235 tokens, 400 chunks, **99.81% preservation**
+
+**October 2025 Update:**
+- Fixed critical bug: `ValueError: document closed` in extraction script
+- Comprehensive testing: Large PDFs (up to 35MB), cache reuse, error handling
+- All edge cases validated: Production ready with complete test suite
+- See [TEST_RESULTS.md](./pdf-smart-extractor/TEST_RESULTS.md) for full test report
 
 **Workflow:**
 1. **Extract PDF** - One-time local extraction with PyMuPDF
@@ -388,8 +395,9 @@ All plugins in this marketplace meet professional quality standards:
 - ✅ Production-ready Python scripts with error handling
 - ✅ Type hints and comprehensive docstrings
 - ✅ Defensive security practices only
-- ✅ Tested on real-world projects
-- ✅ Follows Claude Code plugin best practices
+- ✅ Tested on real-world projects (October 2025: PDF Smart Extractor tested with 35MB PDFs)
+- ✅ Follows Claude Code plugin best practices (official structure documented in PLUGIN_STRUCTURE_GUIDE.md)
+- ✅ Comprehensive test suites with edge case coverage
 
 ### Accuracy & Compliance
 - ✅ Information verified against primary sources
@@ -467,6 +475,7 @@ We welcome contributions from the security and compliance community!
 
 **Getting Help:**
 - **Documentation:** Check plugin README files and docs/
+- **Plugin Development:** See [PLUGIN_STRUCTURE_GUIDE.md](./PLUGIN_STRUCTURE_GUIDE.md) for official Claude Code plugin structure
 - **Issues:** [Open a GitHub issue](https://github.com/diegocconsolini/ClaudeSkillCollection/issues)
 - **Discussions:** [Join GitHub Discussions](https://github.com/diegocconsolini/ClaudeSkillCollection/discussions)
 
