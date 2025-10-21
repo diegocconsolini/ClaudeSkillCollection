@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "plugin-name",
+  "version": "1.0.0",
+  "description": "One-sentence description of what this plugin does and what deliverable it produces.",
+  "author": {
+    "name": "Diego Consolini",
+    "email": "diego@diegocon.nl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/plugin-name",
+  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "category": "security",
+  "agents": [
+    {
+      "name": "plugin-name",
+      "description": "Brief description of what this agent does",
+      "prompt": "./SKILL.md"
+    }
+  ]
+}

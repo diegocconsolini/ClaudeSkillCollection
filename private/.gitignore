@@ -1,0 +1,37 @@
+# Sensitive data (even in private repo, be careful)
+*.env
+.env.*
+credentials/
+secrets/
+api-keys/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Personal notes with sensitive info
+personal-notes/
+private-notes.md
