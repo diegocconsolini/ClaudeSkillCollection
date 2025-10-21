@@ -13,26 +13,19 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 import pymupdf  # PyMuPDF
 
+# Import shared smart cache
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / 'shared'))
+from smart_cache import SmartCache
+
 
 class PDFExtractor:
     """Extract complete PDF content locally without LLM"""
 
     def __init__(self, cache_dir: str = None):
         """Initialize extractor with cache directory"""
-        if cache_dir is None:
-            cache_dir = os.path.expanduser("~/.claude-pdf-cache")
-
-        self.cache_dir = Path(cache_dir)
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
-
-    def get_pdf_hash(self, pdf_path: str) -> str:
-        """Generate unique hash for PDF file"""
-        hasher = hashlib.sha256()
-        with open(pdf_path, 'rb') as f:
-            # Read in chunks for large files
-            for chunk in iter(lambda: f.read(8192), b''):
-                hasher.update(chunk)
-        return hasher.hexdigest()[:16]  # Use first 16 chars for filename
+        # Initialize SmartCache (SHAKE256 hashing with auto-migration from SHA-256)
+        self.smart_cache = SmartCache(doc_type='pdf', cache_dir=Path(cache_dir) if cache_dir else None)
+        self.cache_dir = self.smart_cache.cache_dir
 
     def extract_metadata(self, doc: pymupdf.Document) -> Dict:
         """Extract PDF metadata"""
@@ -92,13 +85,11 @@ class PDFExtractor:
         if not os.path.exists(pdf_path):
             raise FileNotFoundError(f"PDF not found: {pdf_path}")
 
-        # Generate cache key
-        pdf_hash = self.get_pdf_hash(pdf_path)
-        pdf_name = Path(pdf_path).stem
-        cache_key = f"{pdf_name}_{pdf_hash}"
-
-        cache_path = self.cache_dir / cache_key
+        # Generate cache key with SHAKE256 (auto-migrates from SHA-256 if needed)
+        cache_key, cache_path = self.smart_cache.get_cache_key(pdf_path)
         cache_path.mkdir(parents=True, exist_ok=True)
+
+        pdf_name = Path(pdf_path).stem
 
         # Check if already extracted
         manifest_path = cache_path / "manifest.json"
@@ -212,7 +203,7 @@ class PDFExtractor:
             'cache_key': cache_key,
             'original_path': pdf_path,
             'pdf_name': pdf_name,
-            'pdf_hash': pdf_hash,
+            'pdf_hash': cache_key.split('_')[-1],  # Extract hash from cache_key
             'extraction_date': str(Path(pdf_path).stat().st_mtime),
             'metadata': metadata,
             'statistics': {

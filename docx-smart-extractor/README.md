@@ -59,7 +59,7 @@ Extracting 245 paragraphs...
 
 Extraction complete!
 Cache key: InfoSecPolicy_a8f9e2c1
-Cache location: /Users/you/.claude-docx-cache/InfoSecPolicy_a8f9e2c1
+Cache location: /Users/you/.claude-cache/docx/InfoSecPolicy_a8f9e2c1
 Total paragraphs: 245
 Total tables: 12
 Total sections: 8
@@ -375,7 +375,7 @@ pip3 install python-docx
 ### "Permission denied" when creating cache
 
 ```bash
-chmod 755 ~/.claude-docx-cache/
+chmod 755 ~/.claude-cache/docx/
 ```
 
 ### "Document is password protected"
@@ -399,7 +399,7 @@ python-docx cannot open password-protected files. Remove protection first:
 ### Cache Location
 
 ```
-~/.claude-docx-cache/
+~/.claude-cache/docx/
   ├── DocumentName_a8f9e2c1/
   │   ├── metadata.json
   │   ├── manifest.json
@@ -420,10 +420,10 @@ python-docx cannot open password-protected files. Remove protection first:
 
 ```bash
 # Remove all caches
-rm -rf ~/.claude-docx-cache/
+rm -rf ~/.claude-cache/docx/
 
 # Remove specific cache
-rm -rf ~/.claude-docx-cache/DocumentName_a8f9e2c1/
+rm -rf ~/.claude-cache/docx/DocumentName_a8f9e2c1/
 ```
 
 ### Force Re-extraction
@@ -474,8 +474,23 @@ MIT License - see LICENSE file for details
 - **python-docx Documentation:** https://python-docx.readthedocs.io/
 - **Office Open XML (OOXML):** https://docs.microsoft.com/en-us/openspecs/office_standards/
 
-## Version
+## Version History
 
-**Version:** 1.0.0
+See [CHANGELOG.md](./CHANGELOG.md) for complete version history.
+
+### v2.0.0 (Current)
+- **Unified Caching System** - Integrated shared `smart_cache.py` library
+- **SHAKE256 hashing** (SHA-3 family) replacing MD5
+- **Automatic cache migration** from v1.x format
+- **New cache location**: `~/.claude-cache/docx/` (migrated from `~/.claude-docx-cache/`)
+- Consistent hashing across all smart-extractor plugins
+
+### v1.0.0
+- Initial release
+- Lossless extraction of Word documents (text, tables, formatting)
+- 10-50x token reduction through semantic chunking by headings
+- Persistent caching system
+- Support for .docx and .docm formats
+
 **Last Updated:** October 2025
 **Author:** Diego Consolini (diego@diegocon.nl)

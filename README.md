@@ -3,7 +3,7 @@
 **Professional Security, Compliance, and Productivity Plugins for Claude Code**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.5.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
 [![Plugins](https://img.shields.io/badge/plugins-6-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
 
 A curated collection of production-ready security, compliance, and productivity plugins for Claude Code. Built on authoritative sources and rigorously tested with real-world data.
@@ -36,13 +36,21 @@ Professional security and compliance plugins built from official regulatory text
 
 High-performance document extraction plugins that solve the "PDF/Excel/Word too large for LLM" problem through local extraction, semantic chunking, and intelligent caching.
 
-**How caching works:**
+**How caching works (v2.0.0 - Unified System):**
 1. **First extraction:** Processes document locally (PyMuPDF for PDF, openpyxl for Excel, python-docx for Word)
-2. **Persistent cache:** Stores extracted content in `~/.claude-{pdf|xlsx|docx}-cache/` with SHA-256 hash keys
+2. **Persistent cache:** Stores extracted content in `~/.claude-cache/{doc_type}/` with SHAKE256 hash keys (SHA-3 family)
 3. **Subsequent queries:** Instant - uses cached extraction, no re-processing needed
 4. **Token optimization:** 10-100x reduction by loading only relevant chunks, not entire documents
+5. **Automatic migration:** Old caches (SHA-256) automatically migrate to new format (SHAKE256)
 
-All three extractors share the same architecture: Local extraction → Semantic chunking → Persistent caching → Efficient querying
+All three extractors share unified caching: Local extraction → Semantic chunking → Persistent caching → Efficient querying
+
+**What's new in v2.0.0:**
+- Unified cache location: `~/.claude-cache/` (was `~/.claude-{type}-cache/`)
+- Modern hashing: SHAKE256 (was SHA-256)
+- Automatic migration from v1.x caches
+- Shared caching library for consistency
+- See `/shared/CACHE_STRATEGY.md` for details
 
 ---
 
@@ -901,6 +909,32 @@ All plugins are designed for **defensive security purposes**:
 ---
 
 ## 📋 Changelog
+
+### Version 2.0.0 (2025-10-21)
+**Unified Caching System - Breaking Internal Changes, Zero User Impact:**
+- **NEW:** Shared `smart_cache.py` library for all smart-extractors
+  - SHAKE256 hashing (SHA-3 family) replaces SHA-256
+  - Unified cache location: `~/.claude-cache/{doc_type}/` (was `~/.claude-{type}-cache/`)
+  - Automatic SHA-256 → SHAKE256 cache migration (transparent to users)
+  - Comprehensive documentation in `/shared/CACHE_STRATEGY.md` and `/shared/CHANGELOG.md`
+
+**Extractor Updates:**
+- **PDF Smart Extractor** v2.0.0 - Unified caching, tested with 316-page documents (8.2MB)
+- **Excel Smart Extractor** v2.0.0 - Unified caching, tested with 19K cell workbooks
+- **Word Smart Extractor** v2.0.0 - Unified caching, tested with policy documents
+
+**Technical Improvements:**
+- Zero external dependencies for caching (Python stdlib only)
+- Bloom filter support for O(1) cache existence checks (optional)
+- Future-ready for environment variable configuration (v2.1.0)
+- LaTeX migration: Old caches automatically migrate on first access
+
+**User Impact:**
+- ✅ Zero breaking changes - everything works as before
+- ✅ Automatic cache migration - no manual action needed
+- ✅ Cleaner home directory - one `.claude-cache/` instead of three separate dirs
+
+---
 
 ### Version 1.5.0 (2025-10-20)
 **New Plugins:**
