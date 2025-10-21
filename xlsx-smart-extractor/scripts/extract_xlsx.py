@@ -6,18 +6,13 @@ Excel Workbook Analyzer - Extract full Excel content locally with zero LLM invol
 import openpyxl
 from openpyxl.utils import get_column_letter, column_index_from_string
 import json
-import hashlib
 import sys
 from pathlib import Path
 from datetime import datetime, time, date
 
-def get_file_hash(filepath):
-    """Generate SHA256 hash of file for cache key"""
-    sha256_hash = hashlib.sha256()
-    with open(filepath, "rb") as f:
-        for byte_block in iter(lambda: f.read(4096), b""):
-            sha256_hash.update(byte_block)
-    return sha256_hash.hexdigest()[:12]
+# Import shared smart cache
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / 'shared'))
+from smart_cache import SmartCache
 
 def serialize_cell_value(value):
     """Convert cell value to JSON-serializable format"""
@@ -109,18 +104,16 @@ def extract_workbook(xlsx_path, force=False):
         print(f"Error: Excel file not found: {xlsx_path}")
         return None
 
-    # Create cache directory
-    cache_base = Path.home() / ".claude-xlsx-cache"
-    cache_base.mkdir(exist_ok=True)
+    # Initialize SmartCache (SHAKE256 hashing with auto-migration from SHA-256)
+    smart_cache = SmartCache(doc_type='xlsx')
 
-    # Generate cache key
-    file_hash = get_file_hash(xlsx_path)
-    xlsx_name = xlsx_path.stem
-    cache_key = f"{xlsx_name}_{file_hash}"
-    cache_dir = cache_base / cache_key
+    # Generate cache key with SHAKE256 (auto-migrates from SHA-256 if needed)
+    cache_key, cache_dir = smart_cache.get_cache_key(str(xlsx_path))
+    cache_dir.mkdir(parents=True, exist_ok=True)
 
     # Check if already cached
-    if cache_dir.exists() and not force:
+    manifest_path = cache_dir / "manifest.json"
+    if manifest_path.exists() and not force:
         print(f"Workbook already cached: {cache_key}")
         print(f"Cache location: {cache_dir}")
         print("Use --force to re-extract")
@@ -263,7 +256,7 @@ def extract_workbook(xlsx_path, force=False):
         "cache_key": cache_key,
         "xlsx_name": xlsx_path.name,
         "xlsx_path": str(xlsx_path),
-        "file_hash": file_hash,
+        "file_hash": cache_key.split('_')[-1],  # Extract hash from cache_key
         "sheet_count": metadata["sheet_count"],
         "total_cells": total_cells,
         "formula_count": len(all_formulas),

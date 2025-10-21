@@ -5,6 +5,36 @@ All notable changes to the Excel Smart Extractor plugin will be documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2025-10-21
+
+### Changed
+- **Unified Caching System** - Integrated shared `smart_cache.py` library
+  - Replaced individual SHA-256 hashing with SHAKE256 (SHA-3 family)
+  - Cache location moved: `~/.claude-xlsx-cache/` → `~/.claude-cache/xlsx/`
+  - Automatic migration from old cache format
+  - Consistent hashing across all smart-extractor plugins
+
+### Added
+- Automatic SHA-256 → SHAKE256 cache migration
+- Lazy migration (only when files are accessed)
+- Unified cache directory structure with PDF and DOCX extractors
+
+### Fixed
+- Removed custom `get_file_hash()` function (now uses smart_cache)
+- Updated manifest to extract hash from cache_key
+
+### Technical
+- Uses shared `SmartCache` class from `/shared/smart_cache.py`
+- Zero breaking changes - old caches automatically migrate
+- See `/shared/CACHE_STRATEGY.md` for full documentation
+
+### Performance
+- Hash generation: Same performance as v1.0.0
+- Cache lookup: Identical O(1) with manifest check
+- Migration: One-time overhead only
+
+---
+
 ## [1.0.0] - 2025-10-20
 
 ### Added

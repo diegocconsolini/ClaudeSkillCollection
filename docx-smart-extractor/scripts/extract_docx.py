@@ -18,35 +18,15 @@ Output is cached in ~/.claude-docx-cache/ for instant reuse.
 
 import sys
 import json
-import hashlib
 from pathlib import Path
 from datetime import datetime
 from docx import Document
 from docx.shared import RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
-
-def get_cache_dir():
-    """Get cache directory, create if doesn't exist"""
-    cache_dir = Path.home() / ".claude-docx-cache"
-    cache_dir.mkdir(exist_ok=True)
-    return cache_dir
-
-
-def generate_cache_key(file_path):
-    """Generate cache key from file path and modification time"""
-    file_path = Path(file_path)
-    file_stats = file_path.stat()
-
-    # Use file path + mod time for cache key
-    key_string = f"{file_path.absolute()}_{file_stats.st_mtime}"
-    hash_obj = hashlib.md5(key_string.encode())
-    short_hash = hash_obj.hexdigest()[:12]
-
-    # Clean filename for cache directory
-    clean_name = file_path.stem.replace(" ", "_")[:50]
-
-    return f"{clean_name}_{short_hash}"
+# Import shared smart cache
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / 'shared'))
+from smart_cache import SmartCache
 
 
 def serialize_color(color):
@@ -125,12 +105,16 @@ def extract_docx(file_path, force=False):
         print("Supported formats: .docx, .docm")
         sys.exit(1)
 
-    # Generate cache key
-    cache_key = generate_cache_key(file_path)
-    cache_dir = get_cache_dir() / cache_key
+    # Initialize SmartCache (SHAKE256 hashing with auto-migration from SHA-256)
+    smart_cache = SmartCache(doc_type='docx')
+
+    # Generate cache key with SHAKE256 (auto-migrates from SHA-256 if needed)
+    cache_key, cache_dir = smart_cache.get_cache_key(str(file_path))
+    cache_dir.mkdir(parents=True, exist_ok=True)
 
     # Check if already cached
-    if cache_dir.exists() and not force:
+    manifest_path = cache_dir / "manifest.json"
+    if manifest_path.exists() and not force:
         print(f"Document already extracted!")
         print(f"Cache key: {cache_key}")
         print(f"Cache location: {cache_dir}")

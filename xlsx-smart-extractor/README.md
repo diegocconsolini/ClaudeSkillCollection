@@ -66,7 +66,7 @@ Saving extracted content...
 
 Extraction complete!
 Cache key: ComplianceMatrix_a8f9e2c1
-Cache location: /Users/you/.claude-xlsx-cache/ComplianceMatrix_a8f9e2c1
+Cache location: /Users/you/.claude-cache/xlsx/ComplianceMatrix_a8f9e2c1
 Total sheets: 12
 Total cells: 45,892
 Formulas: 1,234
@@ -349,7 +349,7 @@ python scripts/query_xlsx.py summary security_logs_b9d2e1
 
 ### vs. Loading Full Excel in LLM Context
 
-| Aspect | xlsx-analyzer | Full Loading |
+| Aspect | xlsx-smart-extractor | Full Loading |
 |--------|--------------|--------------|
 | Token usage | 20-100x less | Full workbook |
 | Speed | 10-50x faster | All tokens processed |
@@ -360,7 +360,7 @@ python scripts/query_xlsx.py summary security_logs_b9d2e1
 
 ### vs. pandas.read_excel()
 
-| Feature | xlsx-analyzer | pandas |
+| Feature | xlsx-smart-extractor | pandas |
 |---------|--------------|--------|
 | Formulas | Preserved | Values only |
 | Formatting | Preserved | Ignored |
@@ -399,7 +399,7 @@ pip3 install openpyxl
 ### "Permission denied" when creating cache
 
 ```bash
-chmod 755 ~/.claude-xlsx-cache/
+chmod 755 ~/.claude-cache/xlsx/
 ```
 
 ### "Workbook is password protected"
@@ -420,14 +420,14 @@ openpyxl cannot open password-protected files. Remove protection first:
 
 ### High memory usage
 
-**Solution:** Close other applications. xlsx-analyzer uses ~5x file size in memory during extraction.
+**Solution:** Close other applications. xlsx-smart-extractor uses ~5x file size in memory during extraction.
 
 ## Cache Management
 
 ### Cache Location
 
 ```
-~/.claude-xlsx-cache/
+~/.claude-cache/xlsx/
   ├── WorkbookName_a8f9e2c1/
   │   ├── manifest.json
   │   ├── metadata.json
@@ -454,10 +454,10 @@ openpyxl cannot open password-protected files. Remove protection first:
 
 ```bash
 # Remove all caches
-rm -rf ~/.claude-xlsx-cache/
+rm -rf ~/.claude-cache/xlsx/
 
 # Remove specific cache
-rm -rf ~/.claude-xlsx-cache/WorkbookName_a8f9e2c1/
+rm -rf ~/.claude-cache/xlsx/WorkbookName_a8f9e2c1/
 ```
 
 ### Force Re-extraction
@@ -509,8 +509,23 @@ MIT License - see LICENSE file for details
 - **pandas Documentation:** https://pandas.pydata.org/docs/
 - **Excel file format (OOXML):** https://docs.microsoft.com/en-us/openspecs/office_standards/
 
-## Version
+## Version History
 
-**Version:** 1.0.0
+See [CHANGELOG.md](./CHANGELOG.md) for complete version history.
+
+### v2.0.0 (Current)
+- **Unified Caching System** - Integrated shared `smart_cache.py` library
+- **SHAKE256 hashing** (SHA-3 family) replacing SHA-256
+- **Automatic cache migration** from v1.x format
+- **New cache location**: `~/.claude-cache/xlsx/` (migrated from `~/.claude-xlsx-cache/`)
+- Consistent hashing across all smart-extractor plugins
+
+### v1.0.0
+- Initial release
+- Lossless extraction of all Excel content (cells, formulas, formatting)
+- 20-100x token reduction through intelligent chunking
+- Persistent caching system
+- Support for .xlsx and .xlsm formats
+
 **Last Updated:** October 2025
 **Author:** Diego Consolini (diego@diegocon.nl)

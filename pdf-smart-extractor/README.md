@@ -52,7 +52,7 @@ Extracting PDF: document (3.30 MB)
   - Characters: 192,543
   - Words: 32,108
   - Estimated tokens: 48,135
-  - Cache location: /Users/you/.claude-pdf-cache/document_a1b2c3d4e5f6
+  - Cache location: /Users/you/.claude-cache/pdf/document_a1b2c3d4e5f6
 
 Successfully extracted document
 Cache key: document_a1b2c3d4e5f6
@@ -80,7 +80,7 @@ Statistics:
   - Avg tokens/chunk: 553
   - Content preservation: 99.87%
 
-✓ Chunks saved to: /Users/you/.claude-pdf-cache/document_a1b2c3d4e5f6
+✓ Chunks saved to: /Users/you/.claude-cache/pdf/document_a1b2c3d4e5f6
 ```
 
 ### 3. Search for Content
@@ -305,7 +305,7 @@ python scripts/query_pdf.py toc <cache_key>
 ### Cache Structure
 
 ```
-~/.claude-pdf-cache/
+~/.claude-cache/pdf/
 └── document_a1b2c3d4e5f6/
     ├── manifest.json           # Extraction metadata
     ├── full_text.txt           # Complete document text
@@ -440,7 +440,7 @@ python scripts/extract_pdf.py /path/to/document.pdf
 
 **Solution:** Check extraction output manually
 ```bash
-cat ~/.claude-pdf-cache/{cache_key}/full_text.txt | less
+cat ~/.claude-cache/pdf/{cache_key}/full_text.txt | less
 ```
 
 ### Issue: No search results
@@ -487,7 +487,7 @@ python scripts/semantic_chunker.py {cache_key} --target-size 3000
 
 ### Q: Can I delete the cache?
 
-**A:** Yes, but you'll need to re-extract. Cache location: `~/.claude-pdf-cache/`
+**A:** Yes, but you'll need to re-extract. Cache location: `~/.claude-cache/pdf/`
 
 ### Q: What happens if the PDF is updated?
 
@@ -518,7 +518,22 @@ This plugin is part of the Claude Code Skill Collection.
 
 ## Version History
 
-### v1.0.0 (Current)
+See [CHANGELOG.md](./CHANGELOG.md) for complete version history.
+
+### v2.0.0 (Current)
+- **Unified Caching System** - Integrated shared `smart_cache.py` library
+- **SHAKE256 hashing** (SHA-3 family) replacing SHA-256
+- **Automatic cache migration** from v1.x format
+- **New cache location**: `~/.claude-cache/pdf/` (migrated from `~/.claude-pdf-cache/`)
+- **Password protection support** - Interactive and CLI password input
+- Consistent hashing across all smart-extractor plugins
+
+### v1.1.0
+- Password-protected PDF support
+- Interactive password prompt with secure input
+- CLI password argument for automation
+
+### v1.0.0
 - Initial release
 - Full local PDF extraction
 - Semantic chunking with boundary detection
