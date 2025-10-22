@@ -247,7 +247,7 @@ Professional incident response playbook generator based on NIST SP 800-61r3 and 
 ### 4. PDF Smart Extractor
 **Production Ready** • **v2.0.0** • **NEW: Unified Caching System**
 
-Extract and analyze large PDF documents (3MB-35MB+) with 100% content preservation and 12-115x token reduction. Perfect for technical documentation, compliance frameworks, and research papers that exceed LLM context windows.
+Extract and analyze large PDF documents with 99%+ content preservation and 12-115x token reduction. Perfect for technical documentation, compliance frameworks, and research papers that exceed LLM context windows.
 
 **October 2025 Updates:**
 - ✅ **Password protection support** - Interactive prompts + CLI arguments for encrypted PDFs
@@ -264,12 +264,12 @@ Extract and analyze large PDF documents (3MB-35MB+) with 100% content preservati
 - **Migration:** Old SHA-256 caches automatically migrate to SHAKE256 format
 
 **Key Features:**
-- **100% Local Extraction** - Zero LLM involvement, complete privacy
+- **Local Extraction** - Zero LLM involvement, complete privacy
 - **Semantic Chunking** - Intelligent splitting at chapters, sections, paragraphs
 - **12-115x Token Reduction** - Load only relevant chunks, not entire documents
 - **Persistent Caching** - Extract once, query forever
 - **Password Support** - Interactive prompts (recommended) or CLI arguments for encrypted PDFs
-- **Content Preservation** - 99.76-99.81% preservation rate (mathematical verification)
+- **Content Preservation** - 99.76-99.81% preservation rate
 - **Fast Processing** - <2 minutes first extraction, <1 second subsequent queries
 - **PyMuPDF-Powered** - Lightweight, reliable PDF parsing with encryption support
 
@@ -354,19 +354,19 @@ python scripts/query_pdf.py list
 ### 5. Excel Smart Extractor
 **Production Ready** • **v2.0.0** • **Large Workbook Analysis & Unified Caching**
 
-Extract and analyze large Excel workbooks (1MB-50MB+) with 100% content preservation and 20-100x token reduction. Perfect for compliance matrices, financial models, security audit logs, and data tables that exceed LLM context windows.
+Extract and analyze large Excel workbooks (1MB-50MB+) with comprehensive content preservation and 20-100x token reduction. Perfect for compliance matrices, financial models, security audit logs, and data tables that exceed LLM context windows.
 
 **Caching Architecture:**
 - **Cache location:** `~/.claude-cache/xlsx/{workbook_name}_{hash}/`
 - **Cache key:** SHAKE256 hash (SHA-3 family, first 16 chars) ensures unique identification
 - **Cache contents:** full_workbook.json, sheet_{name}.json, named_ranges.json, metadata.json, manifest.json
 - **Cache reuse:** Instant - no re-extraction needed (unless --force flag used)
-- **Content preservation:** 100.04-100.59% (formulas, formatting, metadata all extracted)
+- **Comprehensive extraction:** Formulas, formatting, metadata, named ranges, merged cells
 - **Migration:** Old SHA-256 caches automatically migrate to SHAKE256 format
 
 **Key Features:**
-- **100% Local Extraction** - Zero LLM involvement, complete privacy (openpyxl-powered)
-- **100%+ Content Preservation** - Formulas, cell formatting, merged cells, hyperlinks, named ranges
+- **Local Extraction** - Zero LLM involvement, complete privacy (openpyxl-powered)
+- **Comprehensive Content Extraction** - Formulas, cell formatting, merged cells, hyperlinks, named ranges
 - **20-100x Token Reduction** - Load only relevant sheets/columns, not entire workbooks
 - **Persistent Caching** - Extract once, query forever
 - **Semantic Chunking** - Intelligent splitting by sheets, columns, and row ranges
@@ -377,7 +377,7 @@ Extract and analyze large Excel workbooks (1MB-50MB+) with 100% content preserva
 - **9 real-world files tested** (110KB - 1.5MB)
 - **287,460 cells processed** across 85 sheets
 - **15,409 formulas extracted** including array formulas
-- **Content preservation:** 100.04% - 100.59% (includes formulas + formatting)
+- **Comprehensive extraction** including formulas, formatting, and metadata
 - **Token reduction:** 4x - 58x (average 27.6x)
 
 **Example (Compliance Matrix):**
@@ -436,7 +436,7 @@ python scripts/query_xlsx.py list
 ### 6. Word Smart Extractor
 **Production Ready** • **v2.0.0** • **Large Document Analysis & Unified Caching**
 
-Extract and analyze large Word documents (1MB-50MB+) with complete content extraction and 10-50x token reduction. Perfect for policy documents, technical reports, contracts, and meeting notes with clear heading structure.
+Extract and analyze large Word documents (1MB-50MB+) with comprehensive content extraction and 10-50x token reduction. Perfect for policy documents, technical reports, contracts, and meeting notes with clear heading structure.
 
 **Caching Architecture:**
 - **Cache location:** `~/.claude-cache/docx/{document_name}_{hash}/`
@@ -447,8 +447,8 @@ Extract and analyze large Word documents (1MB-50MB+) with complete content extra
 - **Migration:** Old SHA-256 caches automatically migrate to SHAKE256 format
 
 **Key Features:**
-- **100% Local Extraction** - Zero LLM involvement, complete privacy (python-docx powered)
-- **Complete Content Extraction** - Text, tables, formatting, comments, tracked changes
+- **Local Extraction** - Zero LLM involvement, complete privacy (python-docx powered)
+- **Comprehensive Content Extraction** - Text, tables, formatting, comments, tracked changes
 - **10-50x Token Reduction** - Load only relevant sections, not entire documents
 - **Persistent Caching** - Extract once, query forever
 - **Semantic Chunking** - Intelligent splitting by heading hierarchy (H1, H2, H3)
@@ -1055,7 +1055,7 @@ All plugins are designed for **defensive security purposes**:
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 **Data Sources:**
 - **GDPR Auditor:** EUR-Lex (Official EU Law), ICO Guidance, EDPB Guidelines
