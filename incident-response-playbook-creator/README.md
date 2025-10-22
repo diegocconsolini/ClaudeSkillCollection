@@ -1,10 +1,10 @@
 # Incident Response Playbook Creator
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![NIST SP 800-61r3](https://img.shields.io/badge/NIST-SP%20800--61r3-green.svg)](https://doi.org/10.6028/NIST.SP.800-61r3)
 
-**Professional incident response playbooks from authoritative templates (NIST SP 800-61r3, CISA). Generate customized IR documentation for 8 scenarios including ransomware, data breach, and AI/ML security incidents with GDPR/HIPAA compliance.**
+**Professional incident response playbooks from authoritative templates (NIST SP 800-61r3, CISA, NIST SP 800-161r1). Generate customized IR documentation for 11 comprehensive incident scenarios including ransomware, data breach, supply chain attacks, container/Kubernetes security, IoT/OT security, cloud breaches, API security, insider threats, and DDoS attacks with GDPR/HIPAA compliance.**
 
 ---
 
@@ -49,11 +49,12 @@ python3 scripts/browse_scenarios.py --detail ransomware
 
 ### Core Capabilities
 
-- ✅ **8 Incident Scenarios**: Ransomware, Data Breach, Phishing/BEC, DDoS, Malware, Cloud Breach, Supply Chain, AI/ML
+- ✅ **11 Comprehensive Incident Scenarios**: Ransomware, Data Breach, Phishing/BEC, AI/ML Attacks, Supply Chain, Container/Kubernetes, IoT/OT, Cloud Breach, API Security, Insider Threats, DDoS
 - ✅ **NIST SP 800-61r3 Aligned**: Based on April 2025 revision with CSF 2.0 integration
+- ✅ **Comprehensive NIST Coverage**: Incorporates SP 800-161r1 (Supply Chain), SP 800-190 (Container Security), SP 800-82r3 (OT Security), SP 800-218 (Secure SDLC)
 - ✅ **GDPR & HIPAA Compliant**: Built-in breach notification requirements and timelines
 - ✅ **Organization Customization**: Tailored playbooks with your company name, industry, contacts
-- ✅ **100% Authoritative Content**: All data extracted from NIST, CISA, EUR-Lex official sources
+- ✅ **100% Authoritative Content**: All data extracted from NIST, CISA, AWS, EUR-Lex official sources
 - ✅ **Professional Format**: Ready-to-use Markdown playbooks for immediate deployment
 
 ### What's Included in Each Playbook
@@ -169,23 +170,86 @@ python3 scripts/generate_playbook_markdown.py \
 
 ## 📊 Available Scenarios
 
-### Current Version (1.0.0)
+### Version 2.0.0 - 11 Comprehensive Scenarios
 
-| Scenario ID | Name | Severity | GDPR | HIPAA | Description |
-|-------------|------|----------|------|-------|-------------|
-| `ransomware` | Ransomware Attack | Critical | ✅ | ✅ | Malware encrypting files and demanding payment |
-| `data_breach` | Data Breach / Exfiltration | Critical | ✅ | ✅ | Unauthorized access and data theft |
-| `phishing` | Phishing / BEC | High | ✅ | ✅ | Email-based credential compromise or fraud |
+| Scenario ID | Name | Category | Severity | GDPR | HIPAA |
+|-------------|------|----------|----------|------|-------|
+| `ransomware` | Ransomware Attack | Malware | Critical | ✅ | ✅ |
+| `data_breach` | Data Breach / Exfiltration | Data Breach | Critical | ✅ | ✅ |
+| `phishing` | Phishing / Business Email Compromise | Social Engineering | High | ✅ | ✅ |
+| `ai_ml_attack` | AI/ML Security Incident | Adversarial AI | High | ✅ | ⚠️ |
+| `supply_chain_attack` | Supply Chain Attack | Supply Chain | Critical | ✅ | ✅ |
+| `container_kubernetes_security` | Container/Kubernetes Security Incident | Container Orchestration | High | ✅ | ⚠️ |
+| `iot_ot_security` | IoT/OT Security Incident | Operational Technology | Critical | ⚠️ | ⚠️ |
+| `cloud_security_breach` | Cloud Security Breach | Cloud Infrastructure | Critical | ✅ | ✅ |
+| `api_security_incident` | API Security Incident | Application Security | High | ✅ | ⚠️ |
+| `insider_threat` | Insider Threat | Insider Risk | Critical | ✅ | ✅ |
+| `ddos_attack` | DDoS Attack | Availability | High | ⚠️ | ⚠️ |
 
-### Upcoming Scenarios
+### Scenario Details
 
-| Scenario ID | Name | Severity | Status |
-|-------------|------|----------|--------|
-| `ddos` | DDoS Attack | High | 🚧 In Development |
-| `malware` | Malware / System Compromise | High-Critical | 🚧 In Development |
-| `cloud_breach` | Cloud Security Breach | Critical | 🚧 In Development |
-| `supply_chain` | Supply Chain Attack | Critical | 🚧 In Development |
-| `ai_ml` | AI/ML Security Incident | Medium-High | 🚧 In Development |
+#### Traditional Attack Scenarios
+
+**Ransomware Attack** (`ransomware`)
+- Malware that encrypts files and demands payment for decryption
+- Includes double extortion and data exfiltration tactics
+- Based on NIST SP 800-61r3 and real-world incident patterns
+
+**Data Breach / Exfiltration** (`data_breach`)
+- Unauthorized access and theft of sensitive data
+- Covers both external attacks and insider threats
+- Comprehensive GDPR Article 33/34 and HIPAA breach notification guidance
+
+**Phishing / Business Email Compromise** (`phishing`)
+- Email-based social engineering attacks
+- Credential harvesting, BEC fraud, and executive impersonation
+- CEO fraud and wire transfer scam procedures
+
+#### Modern Attack Vectors
+
+**AI/ML Security Incident** (`ai_ml_attack`)
+- Adversarial attacks on machine learning models
+- Model poisoning, data poisoning, and inference attacks
+- Based on OWASP Top 10 for LLMs v2025
+
+**Supply Chain Attack** (`supply_chain_attack`)
+- Compromise through third-party software or services
+- Based on NIST SP 800-161r1 (Cybersecurity Supply Chain Risk Management)
+- Covers SolarWinds-style attacks and dependency vulnerabilities
+
+**Container/Kubernetes Security Incident** (`container_kubernetes_security`)
+- Container escape, cluster compromise, and orchestration attacks
+- Based on NIST SP 800-190 (Application Container Security Guide)
+- Kubernetes-specific security controls and detection
+
+#### Critical Infrastructure & Cloud
+
+**IoT/OT Security Incident** (`iot_ot_security`)
+- Industrial Control Systems (ICS) and SCADA security
+- Based on NIST SP 800-82r3 (ICS Security)
+- Safety-critical considerations for operational technology
+
+**Cloud Security Breach** (`cloud_security_breach`)
+- S3 bucket exposure, IAM compromise, and cloud misconfigurations
+- Based on AWS Security Incident Response Guide
+- Multi-cloud considerations (AWS, Azure, GCP)
+
+**API Security Incident** (`api_security_incident`)
+- API vulnerabilities, authentication bypass, and data exposure
+- Based on OWASP API Security Top 10 and NIST SP 800-218 (Secure SDLC)
+- REST, GraphQL, and microservices security
+
+#### Insider & Availability Threats
+
+**Insider Threat** (`insider_threat`)
+- Malicious or negligent insider actions
+- Data theft, sabotage, and privilege abuse
+- Based on NIST guidelines for insider threat programs
+
+**DDoS Attack** (`ddos_attack`)
+- Distributed Denial of Service attacks
+- Based on CISA Understanding and Responding to DDoS Attacks guide
+- Application-layer and network-layer attack mitigation
 
 ---
 
@@ -338,7 +402,13 @@ All playbook content is derived from authoritative sources:
 |--------|----------|---------|------|
 | **NIST** | SP 800-61r3 - IR Recommendations for Cybersecurity Risk Management | Revision 3 | April 2025 |
 | **NIST** | Cybersecurity Framework | Version 2.0 | February 2024 |
+| **NIST** | SP 800-161r1 - Cybersecurity Supply Chain Risk Management | Rev 1 Update 1 | May 2024 |
+| **NIST** | SP 800-190 - Application Container Security Guide | Final | September 2017 |
+| **NIST** | SP 800-82r3 - Guide to OT Security | Revision 3 | September 2023 |
+| **NIST** | SP 800-218 - Secure Software Development Framework | Version 1.1 | February 2022 |
 | **CISA** | Federal Incident Response Playbooks | Current | August 2024 |
+| **AWS** | Security Incident Response Guide | Current | 2024 |
+| **OWASP** | Top 10 for LLMs | Version 2025 | January 2025 |
 | **EUR-Lex** | GDPR (Regulation 2016/679) | Official | April 2016 |
 | **HHS** | HIPAA Breach Notification Rule | 45 CFR 164.400-414 | Current |
 
@@ -346,7 +416,8 @@ All playbook content is derived from authoritative sources:
 
 Located in `references/` directory:
 
-- `incident_scenarios_simplified.json` (9KB) - 3 validated incident scenarios
+- `incident_scenarios_v2.json` (145KB) - 11 comprehensive incident scenarios with full NIST mappings
+- `incident_scenarios_simplified.json` (9KB) - Original 3 scenarios (legacy)
 - `framework_mappings.json` (36KB) - NIST CSF 2.0, GDPR, HIPAA mappings
 - `communication_templates.json` (65KB) - Professional notification templates
 
@@ -391,13 +462,13 @@ pip install jinja2 pyyaml pandas openpyxl
 **Solution**: Install dependencies with `pip install -r requirements.txt`
 
 **Problem**: `Error: Scenario 'xyz' not found`
-**Solution**: Use `--list` to see available scenario IDs (ransomware, data_breach, phishing)
+**Solution**: Use `--list` to see all 11 available scenario IDs
 
 **Problem**: `PermissionError` when writing output file
 **Solution**: Check write permissions for output directory, or specify `--output` to a writable location
 
 **Problem**: `Invalid JSON in scenarios file`
-**Solution**: The scripts default to using `incident_scenarios_simplified.json` which is validated. If you specified a custom file, verify JSON syntax.
+**Solution**: The scripts default to using `incident_scenarios_v2.json` (v2.0.0+) which contains 11 validated scenarios. If you specified a custom file, verify JSON syntax.
 
 ### Getting Help
 
@@ -467,6 +538,6 @@ This plugin was created to provide high-quality, authoritative incident response
 
 ---
 
-**Last Updated**: 2025-10-19
-**Plugin Version**: 1.0.0
-**Status**: ✅ Production Ready (3 scenarios)
+**Last Updated**: 2025-10-21
+**Plugin Version**: 2.0.0
+**Status**: ✅ Production Ready (11 scenarios)

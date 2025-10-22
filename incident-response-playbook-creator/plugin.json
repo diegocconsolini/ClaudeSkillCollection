@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "incident-response-playbook-creator",
-  "version": "1.0.0",
-  "description": "Generate comprehensive incident response playbooks from authoritative templates (NIST SP 800-61r3, CISA). Creates customized IR documentation for 8 scenarios including ransomware, data breach, and AI/ML security incidents with GDPR/HIPAA compliance.",
+  "version": "2.0.0",
+  "description": "Generate comprehensive incident response playbooks from authoritative templates (NIST SP 800-61r3, CISA, NIST SP 800-161r1). Creates customized IR documentation for 11 comprehensive incident scenarios including ransomware, data breach, supply chain attacks, container/Kubernetes security, IoT/OT security, cloud breaches, API security, insider threats, and DDoS attacks with GDPR/HIPAA compliance.",
   "author": {
     "name": "Diego Consolini",
     "email": "diego@diegocon.nl"
@@ -21,8 +21,15 @@
     "gdpr-notification",
     "hipaa-breach",
     "ai-security",
-    "supply-chain-security",
-    "cloud-security",
+    "supply-chain",
+    "container",
+    "kubernetes",
+    "iot",
+    "ot",
+    "cloud",
+    "api",
+    "insider-threat",
+    "ddos",
     "incident-management",
     "security-operations",
     "soc",

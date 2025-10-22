@@ -1,6 +1,6 @@
 # Incident Response Playbook Creator
 
-**Version**: 1.0.0
+**Version**: 2.0.0
 **Category**: Security
 **Author**: Diego Consolini
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This skill generates comprehensive, customized incident response playbooks based on authoritative templates from **NIST SP 800-61r3** (April 2025) and **CISA** guidance. It creates professional, ready-to-use playbooks for 8 different incident scenarios with built-in GDPR and HIPAA compliance considerations.
+This skill generates comprehensive, customized incident response playbooks based on authoritative templates from **NIST SP 800-61r3** (April 2025), **CISA** guidance, and specialized NIST publications (SP 800-161r1, SP 800-190, SP 800-82r3, SP 800-218). It creates professional, ready-to-use playbooks for 11 different incident scenarios with built-in GDPR and HIPAA compliance considerations.
 
 ### What This Skill Does
 
@@ -19,11 +19,26 @@ This skill generates comprehensive, customized incident response playbooks based
 - ✅ Provides role-based responsibilities and escalation procedures
 - ✅ Based on 100% real, authoritative content (no mock data)
 
-### Available Incident Scenarios
+### Available Incident Scenarios (11 Total)
 
+**Traditional Attacks:**
 1. **Ransomware Attack** (Critical)
 2. **Data Breach / Exfiltration** (Critical)
 3. **Phishing / Business Email Compromise** (High)
+
+**Modern Attack Vectors:**
+4. **AI/ML Security Incident** (High)
+5. **Supply Chain Attack** (Critical)
+6. **Container/Kubernetes Security Incident** (High)
+
+**Critical Infrastructure & Cloud:**
+7. **IoT/OT Security Incident** (Critical)
+8. **Cloud Security Breach** (Critical)
+9. **API Security Incident** (High)
+
+**Insider & Availability Threats:**
+10. **Insider Threat** (Critical)
+11. **DDoS Attack** (High)
 
 ---
 
@@ -39,10 +54,38 @@ This skill should be activated when the user:
 - Asks about NIST SP 800-61 or CISA incident response guidance
 
 **Example Triggers**:
+
+*Traditional Attacks:*
 - "Create an incident response playbook for ransomware"
 - "I need IR procedures for data breaches"
 - "Generate incident response documentation"
 - "Help me prepare for a phishing attack"
+
+*Modern Attack Vectors:*
+- "Create playbook for AI/ML security incidents"
+- "I need response procedures for supply chain attacks"
+- "Generate IR playbook for software supply chain compromise"
+- "Help with container security incident response"
+- "Kubernetes security breach procedures"
+- "Docker security incident playbook"
+
+*Critical Infrastructure & Cloud:*
+- "IoT security incident response"
+- "OT security breach procedures"
+- "Industrial control system incident playbook"
+- "SCADA security incident response"
+- "Cloud security breach playbook"
+- "S3 bucket breach incident response"
+- "IAM compromise procedures"
+- "API security incident playbook"
+- "API vulnerability response procedures"
+
+*Insider & Availability Threats:*
+- "Insider threat response playbook"
+- "Malicious insider incident procedures"
+- "Employee data theft response"
+- "DDoS attack incident response"
+- "Denial of service attack playbook"
 
 ---
 
@@ -72,6 +115,9 @@ Use the **AskUserQuestion** tool to collect the required information from the us
 
 #### Question 1: Incident Scenario Selection
 
+Present scenarios in groups for better organization. You can use multiple questions or present options by category.
+
+**Option A: Single Question with All Scenarios (11 options - use if user hasn't specified)**
 ```python
 AskUserQuestion(questions=[
     {
@@ -81,15 +127,73 @@ AskUserQuestion(questions=[
         "options": [
             {
                 "label": "Ransomware Attack",
-                "description": "Malware that encrypts files and demands payment for decryption. Critical severity."
+                "description": "Malware that encrypts files and demands payment. Critical severity, GDPR/HIPAA applicable."
             },
             {
-                "label": "Data Breach / Exfiltration",
-                "description": "Unauthorized access and theft of sensitive data. Critical severity with GDPR/HIPAA implications."
+                "label": "Data Breach",
+                "description": "Unauthorized access and data theft. Critical severity, comprehensive compliance guidance."
             },
             {
                 "label": "Phishing / BEC",
-                "description": "Email-based social engineering attacks to compromise credentials or conduct fraud. High severity."
+                "description": "Email-based social engineering and fraud. High severity."
+            },
+            {
+                "label": "AI/ML Security",
+                "description": "Adversarial attacks on machine learning models. High severity."
+            },
+            {
+                "label": "Supply Chain Attack",
+                "description": "Compromise through third-party software/services. Critical severity."
+            },
+            {
+                "label": "Container/Kubernetes",
+                "description": "Container escape or cluster compromise. High severity."
+            },
+            {
+                "label": "IoT/OT Security",
+                "description": "Industrial control systems and SCADA security. Critical severity."
+            },
+            {
+                "label": "Cloud Breach",
+                "description": "S3 exposure, IAM compromise, cloud misconfigurations. Critical severity."
+            },
+            {
+                "label": "API Security",
+                "description": "API vulnerabilities and data exposure. High severity."
+            },
+            {
+                "label": "Insider Threat",
+                "description": "Malicious or negligent insider actions. Critical severity."
+            },
+            {
+                "label": "DDoS Attack",
+                "description": "Distributed denial of service attacks. High severity."
+            }
+        ]
+    }
+])
+```
+
+**Option B: Category-Based Question (if user mentioned a category)**
+```python
+# If user mentioned "cloud" or "container" etc., show relevant options
+AskUserQuestion(questions=[
+    {
+        "question": "Which modern attack scenario are you concerned about?",
+        "header": "Scenario",
+        "multiSelect": false,
+        "options": [
+            {
+                "label": "AI/ML Security Incident",
+                "description": "Model poisoning, adversarial attacks, inference manipulation"
+            },
+            {
+                "label": "Supply Chain Attack",
+                "description": "SolarWinds-style attacks, dependency vulnerabilities"
+            },
+            {
+                "label": "Container/Kubernetes Security",
+                "description": "Container escape, cluster compromise, orchestration attacks"
             }
         ]
     }
@@ -192,8 +296,16 @@ python3 scripts/generate_playbook_markdown.py \
 
 **Scenario ID Mapping**:
 - "Ransomware Attack" → `ransomware`
-- "Data Breach / Exfiltration" → `data_breach`
+- "Data Breach" / "Data Breach / Exfiltration" → `data_breach`
 - "Phishing / BEC" → `phishing`
+- "AI/ML Security" / "AI/ML Security Incident" → `ai_ml_attack`
+- "Supply Chain Attack" → `supply_chain_attack`
+- "Container/Kubernetes" / "Container/Kubernetes Security" → `container_kubernetes_security`
+- "IoT/OT Security" / "IoT/OT Security Incident" → `iot_ot_security`
+- "Cloud Breach" / "Cloud Security Breach" → `cloud_security_breach`
+- "API Security" / "API Security Incident" → `api_security_incident`
+- "Insider Threat" → `insider_threat`
+- "DDoS Attack" → `ddos_attack`
 
 ### Step 4: Present the Results
 
@@ -298,10 +410,10 @@ Always remind users:
 
 ### Limitations
 
-- Currently supports 3 scenarios (simplified version for testing)
-- Full version with 8 scenarios available but has JSON formatting issues (being fixed)
-- Generated playbooks are in Markdown format only (not Word/PDF yet)
+- Generated playbooks are in Markdown format only (Word/PDF export planned)
 - Does not include automated translation or localization
+- Contact information uses placeholders by default
+- Requires manual customization for organization-specific tools and systems
 
 ---
 
@@ -346,7 +458,7 @@ python3 scripts/generate_playbook_markdown.py --list
 ```
 
 **Required Parameters**:
-- `--scenario` or `-s`: Scenario ID (ransomware, data_breach, phishing)
+- `--scenario` or `-s`: Scenario ID (see 11 scenarios above)
 - `--org` or `-o`: Organization name
 
 **Optional Parameters**:
@@ -368,19 +480,21 @@ python3 scripts/generate_playbook_markdown.py --list
 **Solution**: Ensure you're running from the plugin directory, or use `--scenarios-file` to specify path
 
 **Issue**: "Invalid JSON"
-**Solution**: The script defaults to using `incident_scenarios_simplified.json` which is validated
+**Solution**: The script defaults to using `incident_scenarios_v2.json` (v2.0.0+) which contains 11 validated scenarios
 
 ---
 
 ## Future Enhancements
 
 Planned features for future versions:
-- All 8 incident scenarios (DDoS, Malware, Cloud Breach, Supply Chain, AI/ML)
 - Multi-format export (Word .docx, PDF, HTML)
 - Excel contact roster generation
 - Playbook versioning and change tracking
 - Tabletop exercise scenario generation
-- Integration with ticketing systems
+- Integration with ticketing systems (Jira, ServiceNow)
+- Automated playbook testing and validation
+- Custom scenario creation from templates
+- Translation and localization support
 
 ---
 
