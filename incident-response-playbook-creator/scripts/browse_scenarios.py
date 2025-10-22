@@ -18,7 +18,7 @@ Examples:
 
 Author: Diego Consolini
 License: MIT
-Version: 1.0.0
+Version: 2.0.0
 """
 
 import json
@@ -452,9 +452,9 @@ def main():
         scenarios_file = Path(args.scenarios_file)
     else:
         # Default: assume script is in scripts/ directory
-        # Use simplified version by default (full version has JSON syntax errors to be fixed)
+        # Use v2 scenarios file with 11 comprehensive scenarios
         script_dir = Path(__file__).parent
-        scenarios_file = script_dir.parent / 'references' / 'incident_scenarios_simplified.json'
+        scenarios_file = script_dir.parent / 'references' / 'incident_scenarios_v2.json'
 
     # Create browser
     browser = ScenarioBrowser(scenarios_file)

@@ -1,0 +1,1283 @@
+{
+  "metadata": {
+    "source": "NIST SP 800-61r3 (April 2025), NIST AI 100-2 E2025, MITRE ATLAS, OWASP Top 10 LLM 2025, NIST SP 800-218, NIST SP 800-161r1-upd1, NIST SP 800-190, NIST IR 8228, NIST SP 800-82r3, AWS Security IR Guide, CISA DDoS Guide, OWASP API Top 10 2023, NIST SP 800-61r3",
+    "version": "2.0.0",
+    "last_updated": "2025-10-21",
+    "description": "Comprehensive incident response scenarios covering 11 incident types: Ransomware, Data Breach, Phishing/BEC, AI/ML Security, Supply Chain, Container/K8s, IoT/OT, Cloud, API, Insider Threat, and DDoS"
+  },
+  "scenarios": [
+    {
+      "id": "ransomware",
+      "name": "Ransomware Attack",
+      "category": "malware",
+      "severity": "critical",
+      "description": "Ransomware deployment preventing system use and potentially causing data breaches",
+      "nist_example": "Attacker deploying ransomware to prevent use of systems and cause data breaches by copying files",
+      "indicators": {
+        "technical": [
+          "Files renamed with extensions: .locked, .crypto, .enc",
+          "Ransom notes: HELP_DECRYPT, README files",
+          "Volume Shadow Copies deleted",
+          "Unusual network traffic to C2 servers",
+          "Encryption processes consuming high CPU/disk I/O",
+          "Scheduled tasks or services created for persistence",
+          "PowerShell execution of obfuscated scripts",
+          "SMB lateral movement using PsExec or WMI",
+          "Kerberoasting or credential dumping tools (Mimikatz) detected"
+        ],
+        "behavioral": [
+          "Users cannot open previously accessible files",
+          "Desktop wallpaper changed to ransom message",
+          "Shared drives inaccessible",
+          "Rapid sequential file modifications across network shares",
+          "Antivirus or EDR disabled on multiple endpoints",
+          "Authentication attempts from compromised service accounts",
+          "Backup systems targeted and deleted before encryption"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-09: Monitor endpoint activity for ransomware behavior",
+          "DE.CM-01: Monitor network for C2 communication",
+          "DE.CM-07: Monitor file system for mass encryption activity",
+          "DE.CM-03: Monitor privileged account usage and lateral movement"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze alerts for ransomware indicators",
+          "DE.AE-04: Determine scope and affected systems",
+          "DE.AE-03: Correlate endpoint, network, and authentication events",
+          "DE.AE-08: Assess if data exfiltration preceded encryption"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Validate ransomware detection and identify ransomware family",
+          "Identify patient zero and initial infection vector",
+          "Determine if double extortion (encryption + data theft) occurred",
+          "Assess backup integrity and availability for recovery"
+        ],
+        "containment": [
+          "Isolate affected systems from network immediately",
+          "Disable compromised accounts and reset credentials",
+          "Block C2 domains and IP addresses at firewall",
+          "Segment critical assets to prevent further spread",
+          "Disable administrative shares (ADMIN$, C$) temporarily",
+          "Preserve forensic evidence before system shutdown"
+        ],
+        "eradication": [
+          "Remove ransomware binaries and malicious artifacts",
+          "Patch vulnerabilities exploited for initial access and lateral movement",
+          "Reset all potentially compromised credentials organization-wide",
+          "Remove persistence mechanisms (scheduled tasks, registry keys)",
+          "Rebuild severely affected systems from clean images",
+          "Update endpoint protection signatures and behavioral rules"
+        ]
+      },
+      "recovery_actions": [
+        "Restore systems from clean backups",
+        "Verify backup integrity before restoration",
+        "Implement enhanced monitoring"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Executive leadership",
+          "IT team",
+          "Legal"
+        ],
+        "external": [
+          "Law enforcement if payment considered",
+          "Cyber insurance"
+        ],
+        "public": [
+          "Customer notification if data exfiltrated"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Overall response coordination",
+        "IT Security: Technical containment and eradication",
+        "Legal: Payment decision guidance, regulatory compliance",
+        "Communications: Internal and external messaging"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "Yes, if personal data exfiltrated",
+        "article_33_timeline": "72 hours to supervisory authority",
+        "article_34_required": "If high risk to individuals",
+        "risk_factors": [
+          "Data encryption affecting availability",
+          "Potential data exfiltration"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "Yes, if PHI encrypted without HIPAA-compliant encryption",
+        "notification_timeline": "60 days from discovery",
+        "risk_assessment_factors": [
+          "PHI encryption status",
+          "Evidence of exfiltration"
+        ]
+      }
+    },
+    {
+      "id": "data_breach",
+      "name": "Data Breach / Exfiltration",
+      "category": "data-breach",
+      "severity": "critical",
+      "description": "Unauthorized access and exfiltration of sensitive data",
+      "nist_example": "Attacker gaining unauthorized access to databases containing personal information",
+      "indicators": {
+        "technical": [
+          "Unusual database queries or exports",
+          "Large outbound data transfers",
+          "Access from unauthorized IP addresses",
+          "Failed authentication followed by success",
+          "SQL injection attempts in web application logs",
+          "Bulk data download via APIs or database tools",
+          "Use of data exfiltration tools (Rclone, Mega, cloud sync)",
+          "Unauthorized privileged account elevation",
+          "Database connection from unexpected application servers"
+        ],
+        "behavioral": [
+          "Off-hours database access",
+          "Access to databases outside normal job function",
+          "Multiple users reporting account compromises",
+          "Unusual geographic login locations",
+          "Repeated failed login attempts across multiple accounts",
+          "Access to sensitive data repositories without business justification",
+          "VPN connections from anomalous countries or Tor exit nodes"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-03: Monitor user activity for anomalies",
+          "DE.CM-01: Monitor network for data exfiltration",
+          "DE.CM-07: Monitor database audit logs and query patterns",
+          "DE.CM-08: Monitor privileged access and credential usage"
+        ],
+        "analysis": [
+          "DE.AE-03: Correlate multiple data sources",
+          "DE.AE-08: Determine data types and volumes affected",
+          "DE.AE-02: Analyze authentication logs for credential compromise",
+          "DE.AE-04: Assess scope of unauthorized data access"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Identify affected data types and volume",
+          "Determine unauthorized access method (credential theft, SQL injection, vulnerability exploit)",
+          "Assess if data was exfiltrated or only accessed",
+          "Identify all compromised accounts and access points"
+        ],
+        "containment": [
+          "Revoke compromised credentials immediately",
+          "Block attacker IP addresses and network ranges",
+          "Implement additional access controls on affected databases",
+          "Enable database query throttling and monitoring",
+          "Isolate compromised systems from production network",
+          "Disable vulnerable application endpoints or services"
+        ],
+        "eradication": [
+          "Close exploited vulnerabilities (SQL injection, authentication bypass)",
+          "Remove attacker persistence mechanisms and backdoor accounts",
+          "Patch application and database vulnerabilities",
+          "Update firewall rules to restrict database access",
+          "Implement database encryption at rest and in transit",
+          "Strengthen authentication with MFA on administrative accounts"
+        ]
+      },
+      "recovery_actions": [
+        "Restore proper access controls",
+        "Implement enhanced monitoring on affected systems",
+        "Review and update data classification"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Executive leadership",
+          "Legal",
+          "Privacy Officer"
+        ],
+        "external": [
+          "Regulatory authorities",
+          "Affected individuals"
+        ],
+        "public": [
+          "Media statement if public disclosure required"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Response coordination",
+        "Forensics Team: Investigation and evidence collection",
+        "Legal/Privacy: Regulatory notification and compliance",
+        "Communications: Breach notification letters"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "Yes",
+        "article_33_timeline": "72 hours to supervisory authority",
+        "article_34_required": "Depends on data sensitivity and risk",
+        "risk_factors": [
+          "Type of personal data",
+          "Volume of records",
+          "Data sensitivity"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "Yes, unauthorized disclosure of PHI",
+        "notification_timeline": "60 days to affected individuals",
+        "risk_assessment_factors": [
+          "Types of PHI exposed",
+          "Likelihood of re-identification"
+        ]
+      }
+    },
+    {
+      "id": "phishing",
+      "name": "Phishing / Business Email Compromise",
+      "category": "social-engineering",
+      "severity": "high",
+      "description": "Email-based attack to compromise credentials or conduct fraud",
+      "nist_example": "Attacker sending phishing emails to harvest credentials or conduct wire fraud",
+      "indicators": {
+        "technical": [
+          "Emails from spoofed domains",
+          "Suspicious links or attachments",
+          "Multiple failed login attempts followed by success",
+          "Email forwarding rules created",
+          "DMARC/SPF/DKIM authentication failures on inbound emails",
+          "Malicious attachment file types (.js, .vbs, .hta, .iso)",
+          "OAuth consent phishing apps requesting broad permissions",
+          "Impossible travel detections after credential compromise",
+          "Email headers showing external sender masquerading as internal"
+        ],
+        "behavioral": [
+          "Users reporting suspicious emails",
+          "Unexpected password reset requests",
+          "Unusual wire transfer requests",
+          "Complaints of unauthorized email sends",
+          "Executive impersonation for financial fraud (CEO fraud)",
+          "Vendor email compromise requesting payment changes",
+          "Credential harvesting landing pages mimicking company login"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-03: Monitor email gateway for phishing indicators",
+          "DE.CM-01: Monitor for credential harvesting attempts",
+          "DE.CM-07: Monitor authentication logs for post-compromise activity",
+          "DE.CM-08: Monitor mailbox rules and OAuth app permissions"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze reported phishing emails",
+          "DE.AE-03: Correlate with authentication logs",
+          "DE.AE-04: Assess scope of credential compromise and account takeover",
+          "DE.AE-08: Determine if sensitive data accessed via compromised mailboxes"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Validate phishing report and identify attack type (credential theft, BEC, malware)",
+          "Identify number of recipients and clickers",
+          "Determine if credentials were entered on phishing site",
+          "Assess if compromised accounts accessed sensitive data or systems"
+        ],
+        "containment": [
+          "Remove phishing emails from all mailboxes",
+          "Block sender domains and malicious URLs",
+          "Reset credentials for affected accounts",
+          "Disable compromised mailboxes pending investigation",
+          "Block attacker IP addresses accessing compromised accounts",
+          "Freeze wire transfers if BEC suspected"
+        ],
+        "eradication": [
+          "Remove malicious email forwarding rules",
+          "Revoke OAuth tokens and malicious app permissions",
+          "Update email filtering rules and anti-phishing policies",
+          "Remove malware delivered via phishing attachments",
+          "Block phishing infrastructure at DNS and web gateway",
+          "Update DMARC policy to reject spoofed emails"
+        ]
+      },
+      "recovery_actions": [
+        "Restore normal email operations",
+        "Conduct user awareness training",
+        "Implement MFA if not already in place"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "All users - phishing warning",
+          "IT team",
+          "Management"
+        ],
+        "external": [
+          "Law enforcement if fraud occurred"
+        ],
+        "public": [
+          "Customer notification if credentials exposed"
+        ]
+      },
+      "roles_responsibilities": [
+        "IT Security: Email removal and account security",
+        "Identity Management: Credential resets",
+        "HR: User awareness training",
+        "Finance: Transaction verification if BEC"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "If credentials compromised and personal data accessed",
+        "article_33_timeline": "72 hours if breach confirmed",
+        "article_34_required": "Depends on data accessed",
+        "risk_factors": [
+          "Email account contents",
+          "Credential exposure"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If PHI in compromised email accounts",
+        "notification_timeline": "60 days if breach confirmed",
+        "risk_assessment_factors": [
+          "Email account purpose",
+          "PHI volume in emails"
+        ]
+      }
+    },
+    {
+      "id": "ai_ml_attack",
+      "name": "AI/ML Security Incident",
+      "category": "adversarial-ai",
+      "severity": "high",
+      "description": "Adversarial attacks targeting AI/ML systems including prompt injection, model poisoning, data poisoning, and model extraction",
+      "nist_example": "Attacker manipulating AI model inputs, training data, or extracting proprietary models (NIST AI 100-2 E2025, MITRE ATLAS)",
+      "indicators": {
+        "technical": [
+          "Unusual model predictions or outputs (MITRE ATLAS: AML.T0043)",
+          "Anomalous input patterns or adversarial examples",
+          "Unexpected model behavior after training updates",
+          "Large-scale model queries for extraction attempts",
+          "Prompt injection attempts in LLM logs (OWASP LLM01:2025)",
+          "Data poisoning indicators in training pipelines",
+          "Model performance degradation over time",
+          "Unauthorized model weight or artifact downloads"
+        ],
+        "behavioral": [
+          "Users reporting incorrect or biased AI predictions",
+          "Sudden increase in model API requests",
+          "Unexpected jailbreak or system prompt bypass",
+          "Model generating harmful or inappropriate content",
+          "Reports of sensitive data leakage from model outputs"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-07: Monitor ML model inputs for adversarial patterns",
+          "DE.CM-01: Monitor API access patterns for model extraction",
+          "DE.CM-09: Monitor training data integrity and provenance",
+          "DE.CM-03: Monitor user activity and model query patterns for anomalies",
+          "Monitor LLM outputs for prompt injection indicators"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze model prediction anomalies",
+          "DE.AE-04: Assess impact on model accuracy and reliability",
+          "DE.AE-08: Determine if sensitive data was exposed via model",
+          "DE.AE-03: Correlate model behavior changes with training updates",
+          "RS.AN-03: Analyze root cause of model compromise",
+          "Analyze training data for poisoning attempts"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Identify attack type: prompt injection, model poisoning, data poisoning, or extraction",
+          "Assess model degradation and impact on production systems",
+          "Determine if adversarial examples are evasion or poisoning attacks",
+          "Identify affected model versions and deployment scope"
+        ],
+        "containment": [
+          "Revert to last known good model version",
+          "Implement input validation and sanitization (OWASP LLM01 mitigation)",
+          "Rate-limit API access to prevent extraction attacks",
+          "Isolate affected training pipelines",
+          "Deploy adversarial detection filters",
+          "Disable compromised model endpoints"
+        ],
+        "eradication": [
+          "Remove poisoned training data from datasets",
+          "Retrain model with clean, validated data",
+          "Implement adversarial training techniques (NIST AI 100-2)",
+          "Update guardrails and semantic filters",
+          "Patch model vulnerabilities identified",
+          "Remove jailbreak prompts and injection vectors"
+        ]
+      },
+      "recovery_actions": [
+        "Deploy hardened model with adversarial defenses",
+        "Implement model monitoring and drift detection",
+        "Conduct adversarial testing and red-teaming (MITRE ATLAS)",
+        "Update model documentation and provenance records",
+        "Implement output validation and content filtering"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "AI/ML Engineering team",
+          "Data Science team",
+          "Security Operations",
+          "Legal"
+        ],
+        "external": [
+          "Model users/customers if output integrity affected",
+          "Regulatory bodies if sensitive data exposed"
+        ],
+        "public": [
+          "Disclosure if user safety impacted by model behavior"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Overall AI security incident coordination",
+        "ML Security Team: Adversarial defense and model hardening",
+        "Data Engineering: Training data integrity and pipeline security",
+        "Red Team: Adversarial testing and attack simulation",
+        "Legal/Compliance: AI governance and regulatory obligations"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "If model exposed personal data or training data compromised",
+        "article_33_timeline": "72 hours if personal data breach confirmed",
+        "article_34_required": "If model outputs revealed individual data",
+        "risk_factors": [
+          "Training data containing personal information",
+          "Model memorization of sensitive data",
+          "Data extraction via model inversion"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If ML model trained on or exposed PHI",
+        "notification_timeline": "60 days if PHI disclosure confirmed",
+        "risk_assessment_factors": [
+          "PHI in training datasets",
+          "Model output revealing patient information",
+          "Unauthorized model access to PHI"
+        ]
+      }
+    },
+    {
+      "id": "supply_chain_attack",
+      "name": "Supply Chain Attack",
+      "category": "supply-chain",
+      "severity": "critical",
+      "description": "Compromise through software supply chain including malicious dependencies, build pipeline injection, vendor compromise, or SBOM manipulation",
+      "nist_example": "Attacker compromising software supply chain through malicious code injection in dependencies, build systems, or third-party components (NIST SP 800-218, SP 800-161r1)",
+      "indicators": {
+        "technical": [
+          "Unexpected dependencies in package manifests (package.json, requirements.txt)",
+          "Unauthorized modifications to build pipelines or CI/CD configurations",
+          "Anomalous outbound connections from build servers",
+          "SBOM integrity violations or hash mismatches",
+          "Malicious code in npm, PyPI, or other package repositories",
+          "Unsigned or improperly signed software artifacts",
+          "Unusual git commits or repository access patterns",
+          "Modified compiler or build tool binaries"
+        ],
+        "behavioral": [
+          "Reports of compromised vendor systems (e.g., SolarWinds-style incidents)",
+          "Unexpected software behavior after dependency updates",
+          "Build process slowdowns or anomalies",
+          "Developers reporting unfamiliar package installation prompts",
+          "Third-party security researchers identifying malicious packages"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-07: Monitor software composition and dependency changes",
+          "DE.CM-08: Monitor build pipeline integrity and artifact signing",
+          "DE.CM-01: Monitor network traffic from development and build systems",
+          "DE.CM-09: Monitor version control systems for unauthorized commits",
+          "SR-03: Monitor supply chain elements for threats and vulnerabilities"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze dependency trees for malicious or suspicious packages",
+          "DE.AE-03: Correlate SBOM data with threat intelligence",
+          "DE.AE-04: Assess impact scope across all systems using affected components",
+          "RS.AN-03: Analyze root cause of supply chain compromise",
+          "SR-06: Evaluate provenance and pedigree of software components"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Validate supply chain compromise indicators",
+          "Identify affected software components and their dependencies",
+          "Determine compromise vector (dependency, build system, vendor)",
+          "Assess scope of deployment across production systems"
+        ],
+        "containment": [
+          "Isolate compromised build and development systems",
+          "Halt automated deployments and CI/CD pipelines",
+          "Block network communications to attacker infrastructure",
+          "Quarantine affected software versions and artifacts",
+          "Revoke signing keys and certificates if compromised",
+          "Implement emergency vendor communication protocols"
+        ],
+        "eradication": [
+          "Remove malicious dependencies from package manifests",
+          "Rebuild software from clean, verified source code",
+          "Restore build pipelines from known-good configurations",
+          "Update SBOM with verified component versions",
+          "Implement dependency pinning and hash verification",
+          "Patch exploited vulnerabilities in build infrastructure"
+        ]
+      },
+      "recovery_actions": [
+        "Deploy verified, clean software versions to production",
+        "Implement enhanced dependency scanning and verification",
+        "Establish software provenance tracking (SSDF PS.3.1)",
+        "Conduct security review of all third-party components",
+        "Implement multi-party code review for critical changes",
+        "Deploy SBOM generation and verification tools"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Development teams",
+          "DevOps/SRE",
+          "Security Operations",
+          "Executive leadership",
+          "Legal"
+        ],
+        "external": [
+          "Affected vendors and suppliers",
+          "Open source maintainers",
+          "CISA (if federal)",
+          "Downstream customers"
+        ],
+        "public": [
+          "Security advisory if customers affected",
+          "CVE publication if applicable"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Overall supply chain incident coordination",
+        "Software Engineering: Code review and rebuild from clean sources",
+        "DevSecOps: Pipeline security and artifact verification",
+        "Vendor Management: Third-party coordination and assessment",
+        "Legal/Compliance: Regulatory obligations and customer notifications"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "If customer data compromised via supply chain",
+        "article_33_timeline": "72 hours if personal data breach confirmed",
+        "article_34_required": "If high risk to individuals from compromised software",
+        "risk_factors": [
+          "Scope of software deployment",
+          "Data access by compromised components",
+          "Potential for data exfiltration"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If PHI accessible by compromised software components",
+        "notification_timeline": "60 days if PHI exposure confirmed",
+        "risk_assessment_factors": [
+          "PHI processing by affected software",
+          "Evidence of data access",
+          "Duration of compromise"
+        ]
+      }
+    },
+    {
+      "id": "container_kubernetes_security",
+      "name": "Container/Kubernetes Security Incident",
+      "category": "container-orchestration",
+      "severity": "high",
+      "description": "Security incidents involving container escape, Kubernetes RBAC bypass, malicious images, or orchestration platform compromise",
+      "nist_example": "Attacker exploiting container vulnerabilities to escape isolation, compromise orchestration layer, or pivot to host systems (NIST SP 800-190)",
+      "indicators": {
+        "technical": [
+          "Exposed Docker daemon on TCP port 2375/2376",
+          "Container processes accessing host file system unexpectedly",
+          "Kubernetes API server unauthorized access attempts",
+          "Privileged container deployments without justification",
+          "Malicious or vulnerable images in container registry",
+          "etcd database unauthorized access or modification",
+          "Anomalous pod creation or deletion activities",
+          "Resource exhaustion from container bombing",
+          "Modified Kubernetes RBAC policies or service accounts"
+        ],
+        "behavioral": [
+          "Containers running as root without business justification",
+          "Unexpected lateral movement between pods or namespaces",
+          "Cryptomining containers deployed without authorization",
+          "Registry pulls from untrusted or public repositories",
+          "Kubernetes secrets accessed by unauthorized pods"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-07: Monitor container runtime behavior and system calls",
+          "DE.CM-01: Monitor Kubernetes API server audit logs",
+          "DE.CM-08: Scan container images for vulnerabilities pre-deployment",
+          "DE.CM-03: Monitor pod-to-pod network traffic patterns"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze container escape attempts and privilege escalation",
+          "DE.AE-04: Assess scope across namespaces and clusters",
+          "DE.AE-03: Correlate container events with host-level activities",
+          "DE.AE-08: Determine data exposure through container compromise"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Identify type of container incident (escape, RBAC bypass, malicious image)",
+          "Determine affected containers, pods, and namespaces",
+          "Assess orchestration layer integrity (API server, etcd, scheduler)",
+          "Identify potential lateral movement to other nodes"
+        ],
+        "containment": [
+          "Isolate affected nodes from cluster networking",
+          "Delete compromised pods and prevent rescheduling",
+          "Revoke compromised service account tokens and RBAC bindings",
+          "Block malicious container images at registry level",
+          "Implement network policies to restrict pod communications",
+          "Cordon affected nodes to prevent new pod scheduling"
+        ],
+        "eradication": [
+          "Remove malicious or vulnerable container images from registry",
+          "Rebuild containers from verified base images",
+          "Patch container runtime vulnerabilities (containerd, CRI-O)",
+          "Restore Kubernetes RBAC policies to known-good state",
+          "Update admission controllers to enforce security policies",
+          "Harden Docker daemon and Kubernetes API server configurations"
+        ]
+      },
+      "recovery_actions": [
+        "Deploy hardened container images with security scanning",
+        "Implement pod security standards (restricted, baseline)",
+        "Enable Kubernetes audit logging and runtime monitoring",
+        "Deploy service mesh for enhanced network visibility",
+        "Implement image signing and verification (Notary, Cosign)",
+        "Establish least-privilege RBAC policies"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Platform Engineering",
+          "SRE team",
+          "Security Operations",
+          "Development teams"
+        ],
+        "external": [
+          "Cloud provider if managed K8s",
+          "Container security vendor"
+        ],
+        "public": [
+          "Customer notification if service disruption or data exposure"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Container incident response coordination",
+        "Platform Team: Kubernetes cluster remediation and hardening",
+        "Security Engineering: Container security policies and scanning",
+        "SRE: Service restoration and availability management",
+        "Development: Secure container image rebuilding"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "If personal data exposed through container compromise",
+        "article_33_timeline": "72 hours if data breach confirmed",
+        "article_34_required": "Depends on data sensitivity in affected containers",
+        "risk_factors": [
+          "Data processed by compromised containers",
+          "Scope of cluster compromise",
+          "Duration of unauthorized access"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If PHI processed by compromised containers",
+        "notification_timeline": "60 days if PHI exposure confirmed",
+        "risk_assessment_factors": [
+          "PHI in container volumes or secrets",
+          "Access to backend databases",
+          "Container logging exposure"
+        ]
+      }
+    },
+    {
+      "id": "iot_ot_security",
+      "name": "IoT/OT Security Incident",
+      "category": "operational-technology",
+      "severity": "critical",
+      "description": "Security incidents affecting IoT devices, industrial control systems (ICS), SCADA systems, or operational technology environments",
+      "nist_example": "Attacker compromising IoT/OT systems through firmware vulnerabilities, network infiltration, or ICS protocol exploitation (NIST IR 8228, SP 800-82r3)",
+      "indicators": {
+        "technical": [
+          "Unauthorized modifications to PLC ladder logic or configurations",
+          "Anomalous SCADA protocol traffic (Modbus, DNP3, OPC)",
+          "IoT devices communicating with unexpected external IPs",
+          "Firmware integrity violations or unauthorized updates",
+          "Unexpected changes to HMI displays or control parameters",
+          "Abnormal sensor readings or actuator behaviors",
+          "Botnet command-and-control traffic from IoT devices",
+          "Unauthorized access to engineering workstations",
+          "Safety system bypasses or alarm suppression"
+        ],
+        "behavioral": [
+          "Industrial processes operating outside normal parameters",
+          "Physical equipment malfunctions or unexpected shutdowns",
+          "IoT devices participating in DDoS attacks (Mirai-style)",
+          "Operators reporting loss of control or unusual system responses",
+          "Field devices unresponsive to legitimate commands"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-07: Monitor OT network traffic for protocol anomalies",
+          "DE.CM-06: Monitor physical system parameters and sensor data",
+          "DE.CM-01: Monitor IT/OT network boundary for unauthorized crossings",
+          "DE.CM-04: Monitor firmware and configuration integrity"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze ICS-specific indicators and protocol violations",
+          "DE.AE-04: Assess safety and operational impact to physical processes",
+          "DE.AE-05: Determine if incident affects safety instrumented systems",
+          "DE.AE-03: Correlate IT and OT security events"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Identify incident type (firmware compromise, network infiltration, botnet, ICS attack)",
+          "Assess immediate safety and operational risks",
+          "Determine affected OT zones and conduits",
+          "Evaluate impact on physical processes and equipment"
+        ],
+        "containment": [
+          "Isolate affected OT segments from IT networks",
+          "Disconnect compromised IoT devices from network",
+          "Implement emergency shutdown procedures if safety threatened",
+          "Block malicious IPs at IT/OT boundary firewalls",
+          "Disable compromised HMI workstations and engineering stations",
+          "Activate manual control procedures for critical processes"
+        ],
+        "eradication": [
+          "Reflash IoT device firmware from verified sources",
+          "Restore PLC configurations from known-good backups",
+          "Remove malware from HMI and engineering workstations",
+          "Patch SCADA server and historian vulnerabilities",
+          "Update default credentials on all OT devices",
+          "Eliminate unauthorized network paths between IT and OT"
+        ]
+      },
+      "recovery_actions": [
+        "Restore operational processes with enhanced monitoring",
+        "Implement OT network segmentation and DMZ architecture",
+        "Deploy OT-specific intrusion detection systems",
+        "Establish continuous monitoring of safety systems",
+        "Conduct operational readiness verification before full restart",
+        "Implement change management for OT configurations"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Operations team",
+          "Safety personnel",
+          "Engineering",
+          "IT/OT Security",
+          "Executive leadership"
+        ],
+        "external": [
+          "Equipment vendors and integrators",
+          "Industrial cybersecurity responders",
+          "Regulatory bodies (if applicable)"
+        ],
+        "public": [
+          "Public notification if critical infrastructure or safety impact"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: OT incident coordination with safety priority",
+        "Operations: Process control and manual operation procedures",
+        "OT Security: ICS-specific analysis and remediation",
+        "Safety Engineer: Safety system verification and risk assessment",
+        "Vendor Support: Equipment-specific expertise and firmware"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "If OT systems process or expose personal data",
+        "article_33_timeline": "72 hours if applicable",
+        "article_34_required": "Unlikely unless OT systems handle personal information",
+        "risk_factors": [
+          "Personal data in SCADA databases",
+          "Employee access logs",
+          "Building automation system data"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If medical IoT devices or healthcare facilities affected",
+        "notification_timeline": "60 days for healthcare entities",
+        "risk_assessment_factors": [
+          "Medical device compromise",
+          "Patient safety impact",
+          "PHI in building automation systems"
+        ]
+      }
+    },
+    {
+      "id": "cloud_security_breach",
+      "name": "Cloud Security Breach",
+      "category": "cloud-infrastructure",
+      "severity": "critical",
+      "description": "Security breach in cloud environment including S3 misconfiguration, IAM compromise, serverless exploitation, or multi-tenant isolation failure",
+      "nist_example": "Attacker exploiting cloud misconfigurations or compromising cloud credentials to access resources and data (AWS Security IR Guide)",
+      "indicators": {
+        "technical": [
+          "Publicly accessible S3 buckets with sensitive data",
+          "IAM credential usage from unexpected geographic locations",
+          "Unauthorized Lambda function invocations or modifications",
+          "CloudTrail logging disabled or logs deleted",
+          "EC2 instance metadata service (IMDS) abuse",
+          "Unusual API calls to sensitive AWS services (IAM, KMS, Secrets Manager)",
+          "GuardDuty findings for reconnaissance or credential access",
+          "Unauthorized resource creation (EC2, RDS, Lambda)",
+          "Cross-account access from unknown AWS accounts"
+        ],
+        "behavioral": [
+          "Unexpected AWS charges or resource consumption",
+          "Security team locked out of cloud console",
+          "Data exfiltration to external S3 buckets",
+          "Cryptomining instances launched in production accounts",
+          "Alerts from third-party cloud security posture management tools"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-01: Monitor CloudTrail logs for API activity",
+          "DE.CM-03: Monitor IAM credential usage and privilege escalation",
+          "DE.CM-08: Monitor cloud resource configurations for drift",
+          "DE.CM-07: Analyze GuardDuty and Security Hub findings"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze CloudTrail events for attack patterns",
+          "DE.AE-03: Correlate cross-service activities and assume-role chains",
+          "DE.AE-04: Assess scope across accounts, regions, and services",
+          "DE.AE-08: Determine data exposure through bucket access logs"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Identify incident type (misconfiguration, IAM compromise, service exploitation)",
+          "Determine compromised credentials or access keys",
+          "Assess blast radius across AWS accounts and regions",
+          "Identify data exposure through S3/RDS/DynamoDB access"
+        ],
+        "containment": [
+          "Rotate or delete compromised IAM access keys immediately",
+          "Apply restrictive SCPs to limit further unauthorized actions",
+          "Enable S3 Block Public Access at account level",
+          "Isolate compromised EC2 instances using security groups",
+          "Revoke assumed role sessions and temporary credentials",
+          "Enable MFA delete on critical S3 buckets",
+          "Lock down network access with VPC security groups and NACLs"
+        ],
+        "eradication": [
+          "Remove unauthorized IAM users, roles, and policies",
+          "Delete attacker-created resources (instances, functions, buckets)",
+          "Restore IAM policies from infrastructure-as-code",
+          "Remediate misconfigurations identified in Security Hub",
+          "Remove backdoor Lambda functions and API Gateway endpoints",
+          "Patch vulnerabilities in application code running on cloud services"
+        ]
+      },
+      "recovery_actions": [
+        "Restore services using infrastructure-as-code deployments",
+        "Implement preventive guardrails using AWS Config rules",
+        "Enable comprehensive CloudTrail logging across all regions",
+        "Deploy AWS Organizations with SCPs for security baselines",
+        "Implement least-privilege IAM policies organization-wide",
+        "Enable GuardDuty and Security Hub in all accounts and regions"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Cloud Platform team",
+          "DevOps",
+          "Security Operations",
+          "Executive leadership",
+          "Legal"
+        ],
+        "external": [
+          "AWS Support (Enterprise)",
+          "Cloud security vendor",
+          "Cyber insurance"
+        ],
+        "public": [
+          "Customer notification if data exposed",
+          "Regulatory reporting if applicable"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Cloud incident response coordination",
+        "Cloud Security: AWS-specific forensics and remediation",
+        "Platform Engineering: Infrastructure restoration via IaC",
+        "Identity Team: IAM policy review and credential rotation",
+        "Legal/Compliance: Regulatory obligations for cloud data"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "Yes, if personal data exposed in S3 or databases",
+        "article_33_timeline": "72 hours to supervisory authority",
+        "article_34_required": "If high risk from data exposure",
+        "risk_factors": [
+          "Publicly accessible S3 buckets",
+          "RDS database exposure",
+          "Scope and sensitivity of exposed data"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If PHI exposed through cloud misconfiguration",
+        "notification_timeline": "60 days from discovery",
+        "risk_assessment_factors": [
+          "PHI in S3 or RDS",
+          "Access logs showing data retrieval",
+          "Duration of public exposure"
+        ]
+      }
+    },
+    {
+      "id": "api_security_incident",
+      "name": "API Security Incident",
+      "category": "application-security",
+      "severity": "high",
+      "description": "API security vulnerabilities being exploited including BOLA, broken authentication, BFLA, mass assignment, or rate limit bypass",
+      "nist_example": "Attacker exploiting API vulnerabilities to access unauthorized data or perform unauthorized actions (OWASP API Security Top 10 2023)",
+      "indicators": {
+        "technical": [
+          "Sequential ID enumeration in API requests (BOLA/IDOR)",
+          "High volume of 401/403 authentication failures",
+          "API requests with manipulated object IDs or user references",
+          "Excessive API calls exceeding normal rate limits",
+          "Requests to undocumented or admin API endpoints",
+          "Parameter pollution or mass assignment attempts",
+          "JWT token manipulation or expired token reuse",
+          "GraphQL introspection queries or deeply nested requests",
+          "API requests bypassing web application firewall"
+        ],
+        "behavioral": [
+          "Users reporting access to other users' data",
+          "Unusual data access patterns across tenant boundaries",
+          "Spike in API traffic from single IP or user",
+          "Privilege escalation through API role manipulation",
+          "Data scraping activities via API endpoints"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-01: Monitor API gateway logs for anomalous patterns",
+          "DE.CM-03: Track authentication failures and authorization bypasses",
+          "DE.CM-07: Analyze API request parameters for injection attempts",
+          "DE.CM-08: Monitor API versioning and endpoint usage anomalies",
+          "Monitor rate limiting violations and automated scraping"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze API access patterns for BOLA/BFLA indicators",
+          "DE.AE-03: Correlate API calls with business logic violations",
+          "DE.AE-04: Assess data exposure scope across API endpoints",
+          "DE.AE-08: Determine unauthorized data access via object IDs"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Identify API vulnerability type (BOLA, BFLA, broken auth, mass assignment)",
+          "Determine affected API endpoints and versions",
+          "Assess unauthorized data access or modification",
+          "Identify attacker IPs and compromised accounts"
+        ],
+        "containment": [
+          "Block attacker IP addresses at API gateway",
+          "Revoke compromised API keys and OAuth tokens",
+          "Enable stricter rate limiting on affected endpoints",
+          "Disable vulnerable API endpoints temporarily",
+          "Implement emergency object-level authorization checks",
+          "Force password resets for affected user accounts"
+        ],
+        "eradication": [
+          "Implement proper object-level authorization (fix BOLA)",
+          "Add function-level authorization checks (fix BFLA)",
+          "Strengthen API authentication mechanisms",
+          "Implement mass assignment protection with allowlists",
+          "Deploy comprehensive input validation",
+          "Update API documentation and remove shadow APIs"
+        ]
+      },
+      "recovery_actions": [
+        "Deploy API security gateway with OWASP Top 10 protections",
+        "Implement API versioning and deprecation strategy",
+        "Enable comprehensive API logging and monitoring",
+        "Deploy rate limiting and throttling across all endpoints",
+        "Implement OAuth 2.0/OIDC with proper scope management",
+        "Conduct API security testing (DAST, fuzzing) in CI/CD"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "API Development team",
+          "Security Engineering",
+          "Product Management",
+          "Legal"
+        ],
+        "external": [
+          "API consumers/partners if B2B APIs affected",
+          "Security researchers if responsible disclosure"
+        ],
+        "public": [
+          "Customer notification if personal data accessed",
+          "Security advisory for API vulnerability"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: API security incident coordination",
+        "API Security: Vulnerability analysis and fix verification",
+        "Backend Engineering: Authorization logic implementation",
+        "Product Security: Security testing and validation",
+        "DevOps: Emergency deployment and rollback procedures"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "Yes, if BOLA allowed access to personal data",
+        "article_33_timeline": "72 hours to supervisory authority",
+        "article_34_required": "Likely, as API breaches often affect multiple users",
+        "risk_factors": [
+          "Scope of BOLA exploitation",
+          "Sensitivity of exposed data",
+          "Number of affected data subjects"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If API exposed PHI without authorization",
+        "notification_timeline": "60 days from discovery",
+        "risk_assessment_factors": [
+          "PHI accessible via API endpoints",
+          "Evidence of data retrieval",
+          "Number of patient records affected"
+        ]
+      }
+    },
+    {
+      "id": "insider_threat",
+      "name": "Insider Threat",
+      "category": "insider-risk",
+      "severity": "critical",
+      "description": "Malicious or negligent insider actions including data exfiltration, sabotage, credential abuse, or intellectual property theft",
+      "nist_example": "Insider with authorized access abusing privileges to exfiltrate data, sabotage systems, or conduct unauthorized activities (NIST SP 800-61r3)",
+      "indicators": {
+        "technical": [
+          "Large-scale data downloads or database exports by single user",
+          "Access to systems outside normal job responsibilities",
+          "After-hours access to sensitive resources",
+          "Data transfers to personal cloud storage (Dropbox, OneDrive)",
+          "USB device usage on restricted systems",
+          "Privileged credential sharing or lateral account usage",
+          "Attempts to disable logging or security monitoring",
+          "Mass deletion of files or system configurations",
+          "Creation of unauthorized administrative accounts"
+        ],
+        "behavioral": [
+          "Employee under performance review or recently terminated",
+          "Reports of disgruntlement or conflicts with management",
+          "Unusual working hours or location access",
+          "Requests for access beyond role requirements",
+          "Bypass of security procedures or policy violations",
+          "Interest in systems unrelated to job function",
+          "Departure preparations (resignation notice received)"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-03: Monitor privileged user activities and anomalies",
+          "DE.CM-01: Monitor data exfiltration through DLP systems",
+          "DE.CM-07: Track access to sensitive data repositories",
+          "DE.CM-08: Monitor external storage and removable media usage",
+          "Monitor HR systems for employment status changes"
+        ],
+        "analysis": [
+          "DE.AE-02: Analyze user behavior analytics (UBA) anomalies",
+          "DE.AE-03: Correlate access patterns with HR events",
+          "DE.AE-04: Assess scope of data access and exfiltration",
+          "DE.AE-08: Determine IP theft or trade secret exposure"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Validate insider threat indicators and intent (malicious vs negligent)",
+          "Identify affected systems and data repositories",
+          "Assess employee access level and duration of suspicious activity",
+          "Coordinate with HR and Legal on employment status"
+        ],
+        "containment": [
+          "Disable user accounts and revoke access credentials immediately",
+          "Block data exfiltration channels (email, cloud storage, USB)",
+          "Isolate affected systems from network if sabotage suspected",
+          "Preserve forensic evidence of user activities",
+          "Implement temporary increased monitoring of similar roles",
+          "Coordinate physical access removal with security team"
+        ],
+        "eradication": [
+          "Remove unauthorized accounts or backdoors created by insider",
+          "Restore sabotaged systems or configurations from backups",
+          "Revoke shared credentials potentially compromised",
+          "Eliminate shadow IT resources deployed by insider",
+          "Update access control policies to prevent recurrence",
+          "Conduct access review for remaining employees in similar roles"
+        ]
+      },
+      "recovery_actions": [
+        "Restore normal operations with enhanced insider risk monitoring",
+        "Implement user behavior analytics (UBA) and UEBA tools",
+        "Strengthen privileged access management (PAM) controls",
+        "Deploy data loss prevention (DLP) with insider risk profiles",
+        "Implement separation of duties and least privilege",
+        "Enhance offboarding procedures and access revocation"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Human Resources",
+          "Legal/GC",
+          "Executive leadership",
+          "Security Operations",
+          "Physical Security"
+        ],
+        "external": [
+          "Law enforcement if criminal activity",
+          "Legal counsel for investigation",
+          "Cyber insurance"
+        ],
+        "public": [
+          "Typically confidential unless data breach resulted"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: Insider threat investigation coordination",
+        "HR: Employment actions and policy enforcement",
+        "Legal: Investigation oversight and legal proceedings",
+        "Security Operations: Technical investigation and containment",
+        "Forensics: Evidence collection and preservation"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "If insider exfiltrated or exposed personal data",
+        "article_33_timeline": "72 hours to supervisory authority",
+        "article_34_required": "Depends on data sensitivity and exfiltration scope",
+        "risk_factors": [
+          "Volume of personal data accessed",
+          "Insider's level of access",
+          "Evidence of actual exfiltration"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "If insider accessed or disclosed PHI without authorization",
+        "notification_timeline": "60 days from discovery",
+        "risk_assessment_factors": [
+          "PHI access extent",
+          "Purpose of access",
+          "Evidence of disclosure to third parties"
+        ]
+      }
+    },
+    {
+      "id": "ddos_attack",
+      "name": "DDoS Attack",
+      "category": "availability",
+      "severity": "high",
+      "description": "Distributed denial-of-service attack causing service disruption through volumetric, protocol, or application-layer flooding",
+      "nist_example": "Attacker using botnet to overwhelm network or application resources causing denial of service (CISA DDoS Response Guide)",
+      "indicators": {
+        "technical": [
+          "Massive spike in inbound network traffic (Gbps-level)",
+          "UDP/ICMP/SYN flood patterns in network logs",
+          "HTTP/HTTPS request floods to web servers",
+          "DNS amplification attacks leveraging open resolvers",
+          "Slowloris or slow POST attacks consuming connections",
+          "NTP amplification traffic patterns",
+          "Unusual geographic distribution of source IPs",
+          "Firewall or load balancer resource exhaustion",
+          "CDN reporting DDoS mitigation activation"
+        ],
+        "behavioral": [
+          "Website or application unavailability for legitimate users",
+          "Severe network latency or packet loss",
+          "Server CPU/memory exhaustion",
+          "Application timeouts and connection failures",
+          "Customer complaints about service inaccessibility"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "DE.CM-01: Monitor network traffic volumes and patterns",
+          "DE.CM-07: Analyze protocol anomalies and traffic composition",
+          "DE.CM-08: Monitor bandwidth utilization and connection limits",
+          "DE.CM-06: Monitor external service provider availability",
+          "Monitor service availability and response times",
+          "Track firewall and load balancer connection states"
+        ],
+        "analysis": [
+          "DE.AE-02: Identify DDoS attack type (volumetric, protocol, application)",
+          "DE.AE-04: Assess impact on business-critical services",
+          "DE.AE-03: Distinguish DDoS from legitimate traffic spikes",
+          "RS.AN-01: Investigate DDoS attack vectors and patterns",
+          "DE.AE-05: Determine if DDoS is diversion for concurrent attacks",
+          "Analyze packet captures to identify attack signatures"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Confirm DDoS attack vs legitimate traffic spike or outage",
+          "Identify attack vectors (UDP flood, SYN flood, HTTP flood, etc.)",
+          "Determine attack scale and target services",
+          "Assess if DDoS is diversion for other malicious activity"
+        ],
+        "containment": [
+          "Activate DDoS mitigation service (Cloudflare, Akamai, AWS Shield)",
+          "Implement upstream ISP filtering for volumetric attacks",
+          "Enable rate limiting and connection throttling",
+          "Block attacking IP ranges at edge firewalls",
+          "Activate CDN and anycast routing for traffic distribution",
+          "Implement geo-blocking if attack from specific regions",
+          "Deploy WAF rules for application-layer attacks"
+        ],
+        "eradication": [
+          "Work with ISP and DDoS provider to null-route attack traffic",
+          "Update firewall ACLs to block identified attack patterns",
+          "Implement BCP38 ingress filtering to prevent spoofing",
+          "Disable vulnerable services (NTP monlist, DNS recursion)",
+          "Patch application vulnerabilities exploited in L7 attacks",
+          "Blackhole routing for overwhelming traffic"
+        ]
+      },
+      "recovery_actions": [
+        "Gradually restore normal traffic routing after attack subsides",
+        "Implement permanent DDoS protection architecture",
+        "Deploy anycast network and traffic scrubbing centers",
+        "Increase bandwidth and server capacity for resilience",
+        "Establish relationships with ISP and DDoS mitigation providers",
+        "Conduct DDoS tabletop exercises and update response playbooks"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Network Operations",
+          "Security Operations",
+          "IT Leadership",
+          "Customer Support"
+        ],
+        "external": [
+          "ISP and upstream providers",
+          "DDoS mitigation vendor",
+          "Hosting/cloud provider"
+        ],
+        "public": [
+          "Customer status page updates",
+          "Social media service notifications"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident Commander: DDoS response coordination",
+        "Network Operations: Traffic analysis and mitigation deployment",
+        "Security Operations: Attack pattern analysis and threat intel",
+        "Communications: Customer notifications and status updates",
+        "Vendor Relations: Coordination with ISP and DDoS providers"
+      ],
+      "gdpr_considerations": {
+        "notification_required": "Generally no, as DDoS affects availability not confidentiality",
+        "article_33_timeline": "Not applicable unless data breach occurred concurrently",
+        "article_34_required": "Not applicable for pure availability incidents",
+        "risk_factors": [
+          "Monitor for data exfiltration during DDoS diversion"
+        ]
+      },
+      "hipaa_considerations": {
+        "breach_determination": "No breach if only availability affected",
+        "notification_timeline": "Not applicable unless PHI accessed during incident",
+        "risk_assessment_factors": [
+          "Ensure DDoS not covering data exfiltration",
+          "Verify integrity of PHI systems"
+        ]
+      }
+    }
+  ]
+}
