@@ -168,7 +168,7 @@ Professional incident response playbook generator based on NIST SP 800-61r3 and 
 - NIST Cybersecurity Framework 2.0: Function and category mappings (February 2024)
 - GDPR (EU 2016/679): Article 33 (72-hour breach notification) and Article 34 (data subject notification)
 - HIPAA Breach Notification Rule: 45 CFR §§164.400-414 (60-day timeline)
-- 145KB of authoritative reference data (no mock content)
+- 288KB total reference data (incident_scenarios_v2.json: 58KB, 11 scenarios)
 
 **Key Features:**
 - **11 comprehensive incident scenarios** covering traditional, modern, and emerging threats
@@ -245,7 +245,7 @@ Professional incident response playbook generator based on NIST SP 800-61r3 and 
 ## 📊 Productivity Tools
 
 ### 4. PDF Smart Extractor
-**Production Ready** • **v1.1.0** • **NEW: Password Protection Support**
+**Production Ready** • **v2.0.0** • **NEW: Unified Caching System**
 
 Extract and analyze large PDF documents (3MB-35MB+) with 100% content preservation and 12-115x token reduction. Perfect for technical documentation, compliance frameworks, and research papers that exceed LLM context windows.
 
@@ -256,11 +256,12 @@ Extract and analyze large PDF documents (3MB-35MB+) with 100% content preservati
 - ✅ **Security considerations** - Passwords never cached, getpass.getpass() for hidden input
 
 **Caching Architecture:**
-- **Cache location:** `~/.claude-pdf-cache/{pdf_name}_{hash}/`
-- **Cache key:** SHA-256 hash (first 16 chars) ensures unique identification
+- **Cache location:** `~/.claude-cache/pdf/{pdf_name}_{hash}/`
+- **Cache key:** SHAKE256 hash (SHA-3 family, first 16 chars) ensures unique identification
 - **Cache contents:** full_text.txt, pages.json, metadata.json, toc.json, manifest.json
 - **Cache reuse:** Instant - no re-extraction needed (unless --force flag used)
 - **Password handling:** Passwords NEVER stored in cache (security by design)
+- **Migration:** Old SHA-256 caches automatically migrate to SHAKE256 format
 
 **Key Features:**
 - **100% Local Extraction** - Zero LLM involvement, complete privacy
@@ -351,16 +352,17 @@ python scripts/query_pdf.py list
 ---
 
 ### 5. Excel Smart Extractor
-**Production Ready** • **v1.0.0** • **Large Workbook Analysis & Token Optimization**
+**Production Ready** • **v2.0.0** • **Large Workbook Analysis & Unified Caching**
 
 Extract and analyze large Excel workbooks (1MB-50MB+) with 100% content preservation and 20-100x token reduction. Perfect for compliance matrices, financial models, security audit logs, and data tables that exceed LLM context windows.
 
 **Caching Architecture:**
-- **Cache location:** `~/.claude-xlsx-cache/{workbook_name}_{hash}/`
-- **Cache key:** SHA-256 hash (first 16 chars) ensures unique identification
+- **Cache location:** `~/.claude-cache/xlsx/{workbook_name}_{hash}/`
+- **Cache key:** SHAKE256 hash (SHA-3 family, first 16 chars) ensures unique identification
 - **Cache contents:** full_workbook.json, sheet_{name}.json, named_ranges.json, metadata.json, manifest.json
 - **Cache reuse:** Instant - no re-extraction needed (unless --force flag used)
 - **Content preservation:** 100.04-100.59% (formulas, formatting, metadata all extracted)
+- **Migration:** Old SHA-256 caches automatically migrate to SHAKE256 format
 
 **Key Features:**
 - **100% Local Extraction** - Zero LLM involvement, complete privacy (openpyxl-powered)
@@ -432,16 +434,17 @@ python scripts/query_xlsx.py list
 ---
 
 ### 6. Word Smart Extractor
-**Production Ready** • **v1.0.0** • **Large Document Analysis & Token Optimization**
+**Production Ready** • **v2.0.0** • **Large Document Analysis & Unified Caching**
 
 Extract and analyze large Word documents (1MB-50MB+) with complete content extraction and 10-50x token reduction. Perfect for policy documents, technical reports, contracts, and meeting notes with clear heading structure.
 
 **Caching Architecture:**
-- **Cache location:** `~/.claude-docx-cache/{document_name}_{hash}/`
-- **Cache key:** SHA-256 hash (first 16 chars) ensures unique identification
+- **Cache location:** `~/.claude-cache/docx/{document_name}_{hash}/`
+- **Cache key:** SHAKE256 hash (SHA-3 family, first 16 chars) ensures unique identification
 - **Cache contents:** full_text.txt, paragraphs.json, tables.json, metadata.json, headings.json, manifest.json
 - **Cache reuse:** Instant - no re-extraction needed (unless --force flag used)
 - **Content extraction:** Text, tables, formatting, comments, tracked changes, headers/footers
+- **Migration:** Old SHA-256 caches automatically migrate to SHAKE256 format
 
 **Key Features:**
 - **100% Local Extraction** - Zero LLM involvement, complete privacy (python-docx powered)
@@ -522,8 +525,8 @@ All three Smart Extractor plugins share the same efficient caching architecture:
 First Extraction (One-Time Process):
 ┌─────────────────────────────────────────────────────────────┐
 │ 1. User runs extract script with document path              │
-│ 2. Plugin generates SHA-256 hash of document                │
-│ 3. Creates cache directory: ~/.claude-{type}-cache/{name}_{hash}/ │
+│ 2. Plugin generates SHAKE256 hash of document (SHA-3)       │
+│ 3. Creates cache directory: ~/.claude-cache/{type}/{name}_{hash}/ │
 │ 4. Extracts content locally (PyMuPDF/openpyxl/python-docx) │
 │ 5. Saves structured JSON + full text to cache               │
 │ 6. Returns cache key for future queries                     │
@@ -545,12 +548,13 @@ Subsequent Queries (Instant):
 - ✅ **Token optimization** - 10-100x reduction by loading only relevant chunks
 - ✅ **Complete privacy** - All processing happens locally, no external API calls
 - ✅ **Persistent storage** - Cache survives Claude Code restarts
-- ✅ **Automatic invalidation** - Document changes detected via SHA-256 hash
+- ✅ **Automatic invalidation** - Document changes detected via SHAKE256 hash (SHA-3 family)
+- ✅ **Automatic migration** - Old SHA-256 caches automatically migrate to SHAKE256 format
 
-**Cache Locations:**
-- PDF: `~/.claude-pdf-cache/{pdf_name}_{hash}/`
-- Excel: `~/.claude-xlsx-cache/{workbook_name}_{hash}/`
-- Word: `~/.claude-docx-cache/{document_name}_{hash}/`
+**Cache Locations (v2.0.0 Unified):**
+- PDF: `~/.claude-cache/pdf/{pdf_name}_{hash}/`
+- Excel: `~/.claude-cache/xlsx/{workbook_name}_{hash}/`
+- Word: `~/.claude-cache/docx/{document_name}_{hash}/`
 
 **Cache Management:**
 ```bash
@@ -563,11 +567,14 @@ python scripts/query_{pdf|xlsx|docx}.py list
 # View cache statistics
 python scripts/query_{pdf|xlsx|docx}.py stats {cache_key}
 
-# Clear specific cache
-rm -rf ~/.claude-{pdf|xlsx|docx}-cache/{cache_key}/
+# Clear specific cache (v2.0.0 paths)
+rm -rf ~/.claude-cache/{pdf|xlsx|docx}/{cache_key}/
 
-# Clear all caches
-rm -rf ~/.claude-{pdf,xlsx,docx}-cache/
+# Clear all caches for one type
+rm -rf ~/.claude-cache/{pdf|xlsx|docx}/
+
+# Clear all caches (all three types)
+rm -rf ~/.claude-cache/
 ```
 
 ---
@@ -721,8 +728,8 @@ Claude loads pdf-smart-extractor plugin
   ↓
 Plugin guides Claude through:
   1. Run extract_pdf.py script (local PyMuPDF extraction)
-  2. Generate SHA-256 cache key
-  3. Save to ~/.claude-pdf-cache/{name}_{hash}/
+  2. Generate SHAKE256 cache key (SHA-3 family)
+  3. Save to ~/.claude-cache/pdf/{name}_{hash}/
   4. Run semantic_chunker.py (chapter/section splitting)
   5. Return cache key for future queries
   ↓
@@ -762,15 +769,15 @@ ClaudeSkillCollection/
 │   ├── scripts/                    # Playbook generation scripts
 │   │   ├── browse_scenarios.py    # Browse 11 scenarios
 │   │   └── generate_playbook_markdown.py  # Generate playbooks
-│   ├── references/                 # 145KB NIST/AWS/CISA/OWASP data
-│   │   ├── incident_scenarios_v2.json     # 11 scenarios (master file)
+│   ├── references/                 # 288KB NIST/AWS/CISA/OWASP data
+│   │   ├── incident_scenarios_v2.json     # 11 scenarios (58KB, master file)
 │   │   ├── incident_scenarios_simplified.json  # Legacy 4 scenarios
 │   │   ├── framework_mappings.json
 │   │   └── communication_templates.json
 │   ├── output/                     # Generated playbooks
 │   └── examples/
 │
-├── pdf-smart-extractor/            # PDF Smart Extractor (v1.1.0)
+├── pdf-smart-extractor/            # PDF Smart Extractor (v2.0.0)
 │   ├── README.md
 │   ├── plugin.json
 │   ├── agents/pdf-smart-extractor.md
@@ -780,7 +787,7 @@ ClaudeSkillCollection/
 │   ├── EDGE_CASES_PASSWORDS.md     # Password protection edge cases
 │   └── PASSWORD_PROTECTION_TEST_LOG.md
 │
-├── xlsx-smart-extractor/           # Excel Smart Extractor (v1.0.0)
+├── xlsx-smart-extractor/           # Excel Smart Extractor (v2.0.0)
 │   ├── README.md
 │   ├── plugin.json
 │   ├── agents/xlsx-smart-extractor.md
@@ -788,7 +795,7 @@ ClaudeSkillCollection/
 │   ├── test-files/                 # Test Excel files
 │   └── TEST_RESULTS.md             # Comprehensive test report
 │
-├── docx-smart-extractor/           # Word Smart Extractor (v1.0.0)
+├── docx-smart-extractor/           # Word Smart Extractor (v2.0.0)
 │   ├── README.md
 │   ├── plugin.json
 │   ├── agents/docx-smart-extractor.md
@@ -1011,7 +1018,7 @@ All plugins are designed for **defensive security purposes**:
   - Added 7 new scenarios: Supply Chain, Container/K8s, IoT/OT, Cloud, API, Insider, DDoS
   - Enhanced original 4 scenarios with improved quality metrics
   - Based on 8 authoritative sources (NIST, AWS, CISA, OWASP)
-  - 145KB authoritative reference data (up from 110KB)
+  - 288KB total reference data (incident_scenarios_v2.json: 58KB, 11 scenarios)
   - All scenarios pass quality validation (100% success rate)
   - Critical bug fix: Added missing eradication field in data_breach scenario
   - Quality improvements: 8-9 technical indicators, 5-7 behavioral indicators, 8-9 NIST CSF IDs per scenario
