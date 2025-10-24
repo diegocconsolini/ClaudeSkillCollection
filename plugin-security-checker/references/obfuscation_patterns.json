@@ -1,0 +1,312 @@
+{
+  "python": {
+    "encoding": {
+      "base64_decode": {
+        "pattern": "base64\\.b64decode\\s*\\(",
+        "severity": "MEDIUM",
+        "description": "Base64 decoding often used to hide malicious strings",
+        "threshold": 5,
+        "threshold_description": "Flag if more than 5 Base64 decode operations in single file"
+      },
+      "hex_decode": {
+        "pattern": "bytes\\.fromhex\\s*\\(|binascii\\.unhexlify\\s*\\(",
+        "severity": "MEDIUM",
+        "description": "Hex encoding used to obscure strings",
+        "threshold": 3
+      },
+      "rot13": {
+        "pattern": "codecs\\.decode\\s*\\([^,]*,\\s*['\"]rot[_-]?13['\"]\\)",
+        "severity": "LOW",
+        "description": "ROT13 encoding (weak obfuscation)",
+        "threshold": 1
+      },
+      "xor_decode": {
+        "pattern": "\\^\\s*0x[0-9a-fA-F]{2}|xor\\s*\\(",
+        "severity": "MEDIUM",
+        "description": "XOR encoding for string obfuscation",
+        "threshold": 5
+      }
+    },
+    "execution_chains": {
+      "eval_compile_chain": {
+        "pattern": "eval\\s*\\(\\s*compile\\s*\\(",
+        "severity": "HIGH",
+        "description": "eval(compile(...)) chain indicates code obfuscation",
+        "example": "eval(compile(base64.b64decode(data), '<string>', 'exec'))"
+      },
+      "exec_compile_chain": {
+        "pattern": "exec\\s*\\(\\s*compile\\s*\\(",
+        "severity": "HIGH",
+        "description": "exec(compile(...)) chain indicates code obfuscation",
+        "example": "exec(compile(encrypted_code, '<string>', 'exec'))"
+      },
+      "eval_base64_chain": {
+        "pattern": "eval\\s*\\(.*base64\\.b64decode",
+        "severity": "HIGH",
+        "description": "eval with Base64 decode - common malware pattern",
+        "example": "eval(base64.b64decode('bWFsaWNpb3VzX2NvZGU='))"
+      },
+      "exec_base64_chain": {
+        "pattern": "exec\\s*\\(.*base64\\.b64decode",
+        "severity": "HIGH",
+        "description": "exec with Base64 decode - common malware pattern",
+        "example": "exec(base64.b64decode(encoded_payload))"
+      }
+    },
+    "obfuscation_indicators": {
+      "lambda_chains": {
+        "pattern": "lambda.*:.*lambda.*:.*lambda",
+        "severity": "MEDIUM",
+        "description": "Nested lambda functions often indicate obfuscation",
+        "threshold": 2
+      },
+      "long_hex_strings": {
+        "pattern": "['\"]0x[0-9a-fA-F]{100,}['\"]",
+        "severity": "MEDIUM",
+        "description": "Very long hex strings (>100 chars) suspicious",
+        "threshold": 1
+      },
+      "long_base64_strings": {
+        "pattern": "['\"][A-Za-z0-9+/]{200,}={0,2}['\"]",
+        "severity": "MEDIUM",
+        "description": "Very long Base64 strings (>200 chars) suspicious",
+        "threshold": 1
+      },
+      "getattr_obfuscation": {
+        "pattern": "getattr\\s*\\(.*,\\s*['\"]__.*__['\"]\\s*\\)",
+        "severity": "LOW",
+        "description": "Dynamic attribute access to dunder methods",
+        "example": "getattr(obj, '__import__')",
+        "threshold": 3
+      },
+      "bytecode_manipulation": {
+        "pattern": "__code__|func_code|co_code",
+        "severity": "HIGH",
+        "description": "Direct bytecode manipulation - advanced obfuscation",
+        "example": "function.__code__ = modified_code"
+      }
+    },
+    "ast_manipulation_indicators": {
+      "variable_name_hashing": {
+        "pattern": "_[0-9a-f]{8,}",
+        "severity": "LOW",
+        "description": "Variables with hash-like names (shake_128 pattern)",
+        "threshold": 10,
+        "example": "_a1b2c3d4, _5e6f7g8h"
+      },
+      "control_flow_flattening": {
+        "ast_pattern": "while_with_state_variable",
+        "severity": "HIGH",
+        "description": "State machine pattern indicates control flow flattening",
+        "detection": "AST analysis required - look for while loops with state variables"
+      },
+      "string_encryption": {
+        "pattern": "chr\\s*\\(\\s*\\d+\\s*\\)|ord\\s*\\(|bytearray\\s*\\(",
+        "severity": "MEDIUM",
+        "description": "Character-by-character string construction",
+        "threshold": 10
+      }
+    },
+    "packing": {
+      "pyinstaller_artifacts": {
+        "pattern": "MEIPASS|_MEIPASS|sys\\._MEIPASS",
+        "severity": "INFO",
+        "description": "PyInstaller artifacts (not necessarily malicious)",
+        "note": "Common in legitimate frozen Python apps"
+      },
+      "cython_artifacts": {
+        "pattern": "\\.pyx|\\.pxd|__pyx_",
+        "severity": "INFO",
+        "description": "Cython compilation artifacts",
+        "note": "Can prevent source code inspection"
+      }
+    }
+  },
+  "javascript": {
+    "encoding": {
+      "atob_pattern": {
+        "pattern": "atob\\s*\\(",
+        "severity": "MEDIUM",
+        "description": "Base64 decode in JavaScript",
+        "threshold": 5
+      },
+      "btoa_pattern": {
+        "pattern": "btoa\\s*\\(",
+        "severity": "LOW",
+        "description": "Base64 encode (less suspicious than decode)",
+        "threshold": 10
+      },
+      "unescape_pattern": {
+        "pattern": "unescape\\s*\\(|decodeURI\\s*\\(|decodeURIComponent\\s*\\(",
+        "severity": "MEDIUM",
+        "description": "URL/URI decoding for obfuscation",
+        "threshold": 5
+      }
+    },
+    "string_obfuscation": {
+      "string_fromcharcode": {
+        "pattern": "String\\.fromCharCode\\s*\\(",
+        "severity": "MEDIUM",
+        "description": "Character code to string conversion",
+        "threshold": 5,
+        "example": "String.fromCharCode(72,101,108,108,111)"
+      },
+      "charcodeat_reverse": {
+        "pattern": "\\.charCodeAt\\s*\\(.*\\+",
+        "severity": "LOW",
+        "description": "Building strings from character codes",
+        "threshold": 10
+      },
+      "hexadecimal_escapes": {
+        "pattern": "\\\\x[0-9a-fA-F]{2}",
+        "severity": "LOW",
+        "description": "Hex escape sequences in strings",
+        "threshold": 20
+      },
+      "unicode_escapes": {
+        "pattern": "\\\\u[0-9a-fA-F]{4}",
+        "severity": "LOW",
+        "description": "Unicode escape sequences",
+        "threshold": 20
+      }
+    },
+    "execution_chains": {
+      "eval_atob_chain": {
+        "pattern": "eval\\s*\\(\\s*atob\\s*\\(",
+        "severity": "HIGH",
+        "description": "eval with Base64 decode - common obfuscation",
+        "example": "eval(atob('Y29uc29sZS5sb2coIkhlbGxvIik='))"
+      },
+      "function_constructor_obfuscation": {
+        "pattern": "Function\\s*\\(.*\\+.*\\)",
+        "severity": "HIGH",
+        "description": "Dynamic function creation with concatenation",
+        "example": "new Function('return ' + obfuscated)()"
+      },
+      "eval_with_concat": {
+        "pattern": "eval\\s*\\(.*\\+.*\\)",
+        "severity": "HIGH",
+        "description": "eval with string concatenation",
+        "example": "eval('al' + 'ert(1)')"
+      }
+    },
+    "obfuscation_tools": {
+      "javascript_obfuscator": {
+        "pattern": "_0x[0-9a-f]{4,}|\\['.*?'\\]\\['constructor'\\]",
+        "severity": "HIGH",
+        "description": "Patterns from javascript-obfuscator tool",
+        "tool": "https://github.com/javascript-obfuscator/javascript-obfuscator"
+      },
+      "jsfuck_pattern": {
+        "pattern": "\\[\\]\\[\\(.*?\\)\\+\\(.*?\\)\\]",
+        "severity": "HIGH",
+        "description": "JSFuck obfuscation (only []()!+ characters)",
+        "example": "[][(![]+[])[+[]]+(![]+[])[!+[]+!+[]]]"
+      },
+      "aaencode_pattern": {
+        "pattern": "゚ω゚|\\(゚Θ゚\\)",
+        "severity": "HIGH",
+        "description": "AAEncode obfuscation (Japanese characters)",
+        "example": "゚ω゚ノ= /`m´)ノ ~┻━┻"
+      }
+    },
+    "ast_indicators": {
+      "bracket_notation_excess": {
+        "pattern": "\\[['\"](\\w+)['\"]\\]",
+        "severity": "LOW",
+        "description": "Excessive use of bracket notation instead of dot notation",
+        "threshold": 20,
+        "example": "obj['property'] instead of obj.property"
+      },
+      "computed_property_names": {
+        "ast_pattern": "computed_member_expression",
+        "severity": "MEDIUM",
+        "description": "Excessive computed property access",
+        "detection": "AST analysis required"
+      }
+    },
+    "webpack_indicators": {
+      "webpack_jsonp": {
+        "pattern": "webpackJsonp|__webpack_require__",
+        "severity": "INFO",
+        "description": "Webpack bundle artifacts (legitimate but obfuscated)",
+        "note": "Common in built web applications"
+      },
+      "webpack_chunk": {
+        "pattern": "__webpack_chunk__",
+        "severity": "INFO",
+        "description": "Webpack code splitting",
+        "note": "Legitimate build artifact"
+      }
+    }
+  },
+  "detection_tools": {
+    "python": {
+      "ast_analysis": {
+        "library": "ast (built-in)",
+        "technique": "Parse code and traverse AST looking for patterns",
+        "example": "ast.parse(code) -> ast.NodeVisitor"
+      },
+      "regex_scanning": {
+        "library": "re (built-in)",
+        "technique": "Pattern matching on source code",
+        "limitation": "Can't understand context, many false positives"
+      },
+      "bandit": {
+        "tool": "bandit",
+        "description": "Security linter for Python",
+        "installation": "pip install bandit",
+        "usage": "bandit -r plugin_directory/"
+      }
+    },
+    "javascript": {
+      "babel_parser": {
+        "library": "@babel/parser",
+        "technique": "Parse JS/TS and traverse AST",
+        "example": "const ast = parser.parse(code)"
+      },
+      "obfuscation_detector": {
+        "tool": "@PerimeterX/obfuscation-detector",
+        "description": "Detects known obfuscation techniques",
+        "installation": "npm install obfuscation-detector",
+        "usage": "const detector = new ObfuscationDetector(code)"
+      },
+      "eslint_security": {
+        "tool": "eslint-plugin-security",
+        "description": "ESLint plugin for security",
+        "installation": "npm install eslint-plugin-security"
+      }
+    }
+  },
+  "scoring_guidelines": {
+    "severity_levels": {
+      "CRITICAL": "Definite obfuscation with code execution",
+      "HIGH": "Strong indicators of obfuscation",
+      "MEDIUM": "Suspicious patterns, may be legitimate",
+      "LOW": "Weak indicators, likely false positives",
+      "INFO": "Legitimate but makes analysis difficult"
+    },
+    "threshold_logic": {
+      "description": "Some patterns are only suspicious in high quantities",
+      "examples": {
+        "single_base64": "One Base64 decode = not suspicious",
+        "many_base64": "10+ Base64 decodes = likely obfuscation",
+        "context_matters": "Base64 + eval = definitely suspicious"
+      }
+    },
+    "false_positive_reduction": {
+      "legitimate_use_cases": [
+        "Webpack/bundler output (webpack_require)",
+        "Cython compiled code (.pyx artifacts)",
+        "PyInstaller frozen apps (MEIPASS)",
+        "Legitimate Base64 for data encoding (not code)"
+      ],
+      "detection_improvements": [
+        "Check if code is in node_modules/ (ignore)",
+        "Check if code is in build/ or dist/ (likely bundled)",
+        "Look for LICENSE files indicating legitimate tools",
+        "Combine multiple indicators for higher confidence"
+      ]
+    }
+  }
+}
