@@ -1,296 +1,302 @@
 # Quick Start Guide
 
-Get started with Claude Skills Collection in 5 minutes.
+Get started with Security & Compliance Marketplace in 5 minutes.
 
 ## Prerequisites
 
-- Claude Code installed
-- Git installed
-- Python 3.8+ (for scanning tools)
+- Claude Code installed and running
+- GitHub account (for marketplace access)
 
-## Installation (3 minutes)
+## Installation (3 Steps)
 
-```bash
-# 1. Navigate to Claude skills directory
-cd ~/.claude/skills/
-
-# 2. Clone this repository
-git clone https://github.com/diegocconsolini/ClaudeSkillCollection.git
-
-# 3. Create symlink to GDPR Auditor
-ln -s ClaudeSkillCollection/gdpr-auditor ./gdpr-auditor
-
-# 4. Make scripts executable
-chmod +x gdpr-auditor/scripts/*.py
-
-# 5. Restart Claude Code
-```
-
-## First Use (2 minutes)
-
-### Test the Skill
-
-In Claude Code, try:
-
-```
-"Can you audit my application for GDPR compliance?"
-```
-
-You should see:
-```
-The "gdpr-auditor" skill is running
-```
-
-### Run Your First Audit
-
-```
-"Audit the codebase at /path/to/my/project for GDPR compliance"
-```
-
-Claude will:
-1. Load GDPR auditor skill
-2. Analyze your code structure
-3. Scan for personal data patterns
-4. Check compliance against GDPR articles
-5. Generate a detailed audit report
-
-### Example Output
-
-```markdown
-# GDPR Compliance Audit Report
-
-## Executive Summary
-- Overall Status: PARTIALLY COMPLIANT
-- Critical Issues: 3
-- High Priority: 5
-- Risk Level: HIGH
-
-## Critical Issues
-
-1. Missing Privacy Policy
-   - GDPR Articles: 12, 13, 14
-   - Code Reference: None found
-   - Recommendation: Create comprehensive privacy policy...
-
-[... detailed findings with specific code references ...]
-```
-
-## Common Use Cases
-
-### Audit a Web Application
-
-```
-"Analyze my FastAPI application at /path/to/app for GDPR compliance,
-focusing on user data handling and security measures"
-```
-
-### Check Specific Compliance Area
-
-```
-"Check if my application implements all data subject rights required by GDPR"
-```
-
-### Review Database Schema
-
-```
-"Analyze this database schema for GDPR compliance:
-[paste schema]"
-```
-
-### Evaluate Privacy Policy
-
-```
-"Review this privacy policy against GDPR requirements:
-[paste policy]"
-```
-
-## What You Get
-
-### Automated Scans
-
-Claude can use Python tools to scan:
-- Data collection patterns (forms, APIs, cookies)
-- Database schemas for personal data
-- Data subject rights implementation
-- Security measures (encryption, auth)
-
-### Reference Materials
-
-Claude has access to 8 comprehensive GDPR references:
-- All key GDPR articles
-- Personal data categories
-- Security requirements
-- Legal bases for processing
-- And more...
-
-### Professional Reports
-
-Get detailed audit reports with:
-- Executive summary
-- Risk-prioritized findings
-- Specific code references (file:line)
-- GDPR article citations
-- Actionable recommendations
-- Implementation roadmap
-
-## Next Steps
-
-### Explore Features
-
-```
-# Ask about specific GDPR topics:
-"What are the GDPR requirements for data retention?"
-"How should I implement the right to erasure?"
-"What security measures does GDPR require?"
-
-# Get implementation help:
-"How do I add a consent mechanism to my app?"
-"Show me an example of GDPR-compliant data deletion"
-```
-
-### Run Scanning Tools Manually
+### Step 1: Add Marketplace from GitHub
 
 ```bash
-# Scan for data collection
-python scripts/scan_data_collection.py /path/to/code
-
-# Analyze database
-python scripts/analyze_database_schema.py /path/to/schema.sql
-
-# Check security
-python scripts/security_audit.py /path/to/app
+# Open Claude Code and run:
+/plugin marketplace add diegocconsolini/ClaudeSkillCollection
 ```
 
-### Customize for Your Needs
+**⚠️ Important:** Always use the GitHub repository format (`owner/repo`), NOT a local path. Using local paths prevents remote updates.
 
-- Edit reference materials in `references/`
-- Add custom scanning patterns to scripts
-- Create your own audit templates
+❌ Don't use: `/plugin marketplace add /path/to/ClaudeSkillCollection`
+✅ Use: `/plugin marketplace add diegocconsolini/ClaudeSkillCollection`
 
-## Troubleshooting
-
-### Skill Doesn't Load
+### Step 2: Install Plugins
 
 ```bash
-# Verify installation
-ls -la ~/.claude/skills/gdpr-auditor/SKILL.md
-
-# If missing, reinstall:
-cd ~/.claude/skills/
-rm -rf gdpr-auditor
-ln -s ClaudeSkillCollection/gdpr-auditor ./gdpr-auditor
-
-# Restart Claude Code completely
+# Install plugins from the marketplace
+/plugin install gdpr-auditor@security-compliance-marketplace
+/plugin install plugin-security-checker@security-compliance-marketplace
+/plugin install pdf-smart-extractor@security-compliance-marketplace
 ```
 
-### Python Scripts Don't Run
-
+**Browse available plugins:**
 ```bash
-# Fix permissions
-chmod +x ~/.claude/skills/gdpr-auditor/scripts/*.py
-
-# Test manually
-python3 ~/.claude/skills/gdpr-auditor/scripts/scan_data_collection.py --help
+/plugin  # Interactive plugin browser
 ```
 
-### Need More Help?
+### Step 3: Enable Plugins and Restart
 
-- **Full Installation Guide:** [docs/installation.md](./docs/installation.md)
-- **GDPR Auditor README:** [gdpr-auditor/README.md](./gdpr-auditor/README.md)
-- **GitHub Issues:** https://github.com/diegocconsolini/ClaudeSkillCollection/issues
+After installation:
 
-## Tips for Best Results
+1. Run `/plugin` to open the plugin manager
+2. Navigate to each installed plugin
+3. Select "Enable plugin"
+4. **Restart Claude Code** for plugins to load
 
-### 1. Be Specific
-
-Instead of: "Audit my app"
-
-Try: "Audit my FastAPI application at /path/to/app, focusing on user authentication, file uploads, and database schema"
-
-### 2. Provide Context
-
-```
-"I'm building a SaaS platform that processes user documents.
-Please audit for GDPR compliance, especially data retention
-and cross-border transfers."
-```
-
-### 3. Ask for Specific Areas
-
-```
-"Review my implementation of data subject rights:
-[paste relevant code]
-
-Do I meet GDPR Articles 15-22 requirements?"
-```
-
-### 4. Use for Learning
-
-```
-"Explain GDPR's data minimization principle with examples
-from my codebase at /path/to/app"
-```
-
-## Example Workflow
-
-### Complete Application Audit
-
-1. **Initial Scan**
-   ```
-   "Scan /path/to/app for GDPR compliance issues"
-   ```
-
-2. **Deep Dive on Findings**
-   ```
-   "You found missing consent - show me how to implement
-   GDPR-compliant consent for file uploads"
-   ```
-
-3. **Verify Fix**
-   ```
-   "Review this consent implementation:
-   [paste code]
-
-   Does it meet GDPR Article 7 requirements?"
-   ```
-
-4. **Generate Report**
-   ```
-   "Generate a complete GDPR audit report for this project
-   with all findings, recommendations, and a compliance roadmap"
-   ```
-
-## What's Next?
-
-### Contribute
-
-Found an issue or want to improve the skill?
-- Report bugs: [GitHub Issues](https://github.com/diegocconsolini/ClaudeSkillCollection/issues)
-- Suggest features: [Discussions](https://github.com/diegocconsolini/ClaudeSkillCollection/discussions)
-- Submit improvements: [CONTRIBUTING.md](./CONTRIBUTING.md)
-
-### Stay Updated
-
-```bash
-# Update to latest version
-cd ~/.claude/skills/ClaudeSkillCollection
-git pull origin main
-
-# Restart Claude Code
-```
-
-### Explore More Skills
-
-Check the [README](./README.md) for planned skills:
-- CCPA Compliance Auditor
-- Security Vulnerability Scanner
-- Accessibility Auditor
-- And more...
+**Note:** Plugins are disabled by default after first installation. You must enable them manually.
 
 ---
 
-**Ready to ensure GDPR compliance?** Start auditing now!
+## First Use (2 minutes)
+
+### Test GDPR Auditor
+
+```bash
+# In Claude Code:
+"Can you audit my application for GDPR compliance?"
+```
+
+Claude will automatically invoke the `gdpr-auditor` agent.
+
+### Scan a Plugin for Security Issues
+
+```bash
+"Scan this plugin directory for security vulnerabilities: /path/to/plugin"
+```
+
+Claude will use `plugin-security-checker` to analyze the code.
+
+### Extract a Large PDF
+
+```bash
+"Extract and analyze this PDF: /path/to/document.pdf"
+```
+
+Claude will use `pdf-smart-extractor` for efficient processing.
+
+---
+
+## Available Plugins
+
+### Security & Compliance
+
+1. **Plugin Security Checker** (v3.2.0)
+   - Scan Claude Code plugins for vulnerabilities
+   - 91 specialized detection agents
+   - MITRE ATT&CK/ATLAS framework mapping
+
+2. **GDPR Auditor** (v1.2.0)
+   - Analyze code for EU data protection compliance
+   - 8 reference documents from official sources
+   - 5 automated scanning tools
+
+3. **Cybersecurity Policy Generator** (v1.2.0)
+   - Generate security policies from 51 templates
+   - SANS Institute and CIS Controls
+   - ISO 27001, SOC 2, NIST compliance
+
+4. **Incident Response Playbook Creator** (v2.2.0)
+   - Generate IR playbooks based on NIST SP 800-61r3
+   - 11 comprehensive incident scenarios
+   - GDPR/HIPAA notification guidance
+
+### Productivity Tools
+
+5. **PDF Smart Extractor** (v2.2.0)
+   - Extract large PDFs (3MB-10MB+)
+   - 12-103x token reduction
+   - Persistent caching for instant reuse
+
+6. **Excel Smart Extractor** (v2.2.0)
+   - Analyze large workbooks (1MB-50MB+)
+   - Formula and formatting preservation
+   - 20-100x token reduction
+
+7. **Word Smart Extractor** (v2.2.0)
+   - Extract Word documents (1MB-50MB+)
+   - Heading-based semantic chunking
+   - 10-50x token reduction
+
+---
+
+## Updating Plugins
+
+### Method 1: Via Plugin Manager (Recommended)
+
+```bash
+/plugin  # Open plugin manager
+# Navigate to plugin details
+# Select "Update now"
+```
+
+### Method 2: Update All Plugins
+
+```bash
+/plugin marketplace update security-compliance-marketplace
+```
+
+### If You Can't Update (Wrong Installation)
+
+If you see "Local plugins cannot be updated remotely":
+
+```bash
+# Remove marketplace
+/plugin marketplace remove security-compliance-marketplace
+
+# Re-add using GitHub format
+/plugin marketplace add diegocconsolini/ClaudeSkillCollection
+
+# Reinstall plugins
+/plugin install gdpr-auditor@security-compliance-marketplace
+```
+
+---
+
+## Common Use Cases
+
+### GDPR Compliance Audit
 
 ```
-"Audit my application for GDPR compliance"
+"Audit my FastAPI application at /path/to/app for GDPR compliance,
+focusing on user data handling and security measures"
+```
+
+### Security Policy Generation
+
+```
+"Generate an Acceptable Use Policy for my organization with 500 employees
+in the healthcare industry"
+```
+
+### Incident Response Planning
+
+```
+"Create a ransomware incident response playbook for my organization
+with GDPR breach notification requirements"
+```
+
+### Large Document Analysis
+
+```
+"Analyze this 300-page NIST cybersecurity framework PDF and extract
+all controls related to access management"
+```
+
+### Plugin Security Scanning
+
+```
+"Before I install this plugin from GitHub, can you scan it for
+security vulnerabilities? Path: /path/to/plugin"
+```
+
+---
+
+## Troubleshooting
+
+### Plugins Don't Appear After Installation
+
+**Solution:** Enable plugins and restart Claude Code
+
+```bash
+/plugin  # Enable each plugin
+# Then restart Claude Code completely
+```
+
+### "Local plugins cannot be updated remotely"
+
+**Cause:** Marketplace was added using local path instead of GitHub format
+
+**Solution:**
+```bash
+/plugin marketplace remove security-compliance-marketplace
+/plugin marketplace add diegocconsolini/ClaudeSkillCollection
+```
+
+### Plugin Loading Errors
+
+**Check plugin status:**
+```bash
+/plugin  # View plugin details and error messages
+```
+
+**Common issues:**
+- Invalid plugin.json format
+- Missing required fields
+- Incorrect agents field format
+
+### Updates Not Appearing
+
+**Solution:**
+1. Wait 2-5 minutes for GitHub CDN to update
+2. Run `/plugin marketplace update security-compliance-marketplace`
+3. Restart Claude Code
+4. Check `/plugin` for new versions
+
+---
+
+## Best Practices
+
+### 1. Always Use GitHub Repository Format
+
+✅ **Correct:**
+```bash
+/plugin marketplace add owner/repository
+```
+
+❌ **Wrong:**
+```bash
+/plugin marketplace add /local/path/to/repo
+```
+
+### 2. Enable Plugins After Installation
+
+Plugins are disabled by default. Always:
+1. Install plugin
+2. Enable via `/plugin`
+3. Restart Claude Code
+
+### 3. Keep Plugins Updated
+
+Check for updates regularly:
+```bash
+/plugin marketplace update security-compliance-marketplace
+```
+
+### 4. Verify Plugin Security
+
+Before installing third-party plugins:
+```bash
+"Scan this plugin for security issues: /path/to/plugin"
+```
+
+---
+
+## Next Steps
+
+### Explore Plugin Documentation
+
+Each plugin has detailed documentation:
+- [GDPR Auditor](./gdpr-auditor/README.md)
+- [Plugin Security Checker](./plugin-security-checker/README.md)
+- [PDF Smart Extractor](./pdf-smart-extractor/README.md)
+- [All Plugins](./README.md)
+
+### Join the Community
+
+- **Report Issues:** [GitHub Issues](https://github.com/diegocconsolini/ClaudeSkillCollection/issues)
+- **Suggest Features:** [Discussions](https://github.com/diegocconsolini/ClaudeSkillCollection/discussions)
+- **Contribute:** [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+### Stay Updated
+
+Star the repository on GitHub to get notified of new plugins and updates:
+https://github.com/diegocconsolini/ClaudeSkillCollection
+
+---
+
+**Ready to get started?**
+
+```bash
+/plugin marketplace add diegocconsolini/ClaudeSkillCollection
 ```
