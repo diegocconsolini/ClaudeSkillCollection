@@ -12,7 +12,7 @@
       "name": "plugin-security-checker",
       "description": "Advanced security scanner for Claude Code plugins with 91 specialized pattern detection agents. Performs static code analysis using IntelligentOrchestrator with consensus voting, AccuracyCache shared learning, and MITRE ATT&CK/ATLAS framework mapping. Detects vulnerabilities, code obfuscation, hardcoded credentials, and security anti-patterns. Successfully scanned 987 real-world plugins with 100% accuracy. Includes adaptive routing, auto-evolving rules, and comprehensive reporting.",
       "source": "./plugin-security-checker",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "author": {
         "name": "Diego Consolini",
         "email": "diego@diegocon.nl"
@@ -43,7 +43,7 @@
       "name": "gdpr-auditor",
       "description": "Comprehensive GDPR compliance auditing plugin that analyzes static code files, database schemas, and configurations for EU data protection regulation compliance. Includes 8 reference documents, 5 automated scanning tools, and generates detailed compliance audit reports.",
       "source": "./gdpr-auditor",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Diego Consolini",
         "email": "diego@diegocon.nl"
@@ -67,7 +67,7 @@
       "name": "cybersecurity-policy-generator",
       "description": "Professional cybersecurity policy document generator using 51 industry-standard templates from SANS and CIS Controls. Creates complete, framework-compliant policy documents (Markdown, Word, HTML, PDF) customized for your organization. Covers 15 security categories with mappings to ISO 27001, SOC 2, NIST CSF, CIS Controls v8, and GDPR.",
       "source": "./cybersecurity-policy-generator",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Diego Consolini",
         "email": "diego@diegocon.nl"
@@ -97,7 +97,7 @@
       "name": "incident-response-playbook-creator",
       "description": "Professional incident response playbook generator based on NIST SP 800-61r3 (April 2025). Creates comprehensive, customized IR documentation for ransomware, data breach, and phishing incidents with GDPR Article 33/34 and HIPAA breach notification guidance. Includes NIST CSF 2.0 function mapping and 110KB of authoritative reference data.",
       "source": "./incident-response-playbook-creator",
-      "version": "1.0.0",
+      "version": "2.1.0",
       "author": {
         "name": "Diego Consolini",
         "email": "diego@diegocon.nl"
@@ -127,7 +127,7 @@
       "name": "pdf-smart-extractor",
       "description": "Extract and analyze large PDFs (3MB-10MB+) with minimal token usage. Preserves 100% of content while achieving 12-103x token reduction through local extraction, semantic chunking, and intelligent caching. Perfect for technical documentation (NIST, ISO, AWS guides), compliance frameworks, and research papers. One-time extraction, instant querying.",
       "source": "./pdf-smart-extractor",
-      "version": "1.0.0",
+      "version": "2.1.0",
       "author": {
         "name": "Diego Consolini",
         "email": "diego@diegocon.nl"
@@ -156,7 +156,7 @@
       "name": "xlsx-smart-extractor",
       "description": "Extract and analyze large Excel workbooks (1MB-50MB+) with minimal token usage. Lossless extraction of all formulas, cell formatting, and complex table structures while achieving 20-100x token reduction through local extraction, semantic chunking, and intelligent caching. Perfect for compliance matrices, financial models, security audit logs, and data tables. Tested with 287K cells and 15K formulas.",
       "source": "./xlsx-smart-extractor",
-      "version": "1.0.0",
+      "version": "2.1.0",
       "author": {
         "name": "Diego Consolini",
         "email": "diego@diegocon.nl"
@@ -186,7 +186,7 @@
       "name": "docx-smart-extractor",
       "description": "Extract and analyze Word documents (1MB-50MB+) with minimal token usage. Lossless extraction of all text, tables, formatting, and document structure while achieving 10-50x token reduction through local extraction, semantic chunking by headings, and intelligent caching. Perfect for policy documents, contracts, technical reports, and any large Word document.",
       "source": "./docx-smart-extractor",
-      "version": "1.0.0",
+      "version": "2.1.0",
       "author": {
         "name": "Diego Consolini",
         "email": "diego@diegocon.nl"
