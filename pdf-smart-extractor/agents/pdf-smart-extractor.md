@@ -122,6 +122,47 @@ When user provides a file path:
 - File hash verification for integrity
 - Automatic cache management
 
+**⚠️ IMPORTANT: Cache Location**
+
+Extracted content is stored in a **user cache directory**, NOT the working directory:
+
+**Cache locations by platform:**
+- **Linux/Mac:** `~/.claude-cache/pdf/{pdf_name}_{hash}/`
+- **Windows:** `C:\Users\{username}\.claude-pdf-cache\{pdf_name}_{hash}\`
+
+**Why cache directory?**
+1. **Persistent caching:** Extract once, query forever - even across different projects
+2. **Cross-project reuse:** Same PDF analyzed from different projects uses the same cache
+3. **Performance:** Subsequent queries are instant (no re-extraction needed)
+4. **Token optimization:** 12-115x reduction by loading only relevant chunks
+
+**Cache contents:**
+- `full_text.txt` - Complete extracted text
+- `pages.json` - Page-by-page content
+- `metadata.json` - PDF metadata
+- `toc.json` - Table of contents
+- `manifest.json` - Cache manifest
+
+**Accessing cached content:**
+```bash
+# List all cached PDFs
+python scripts/query_pdf.py list
+
+# Query cached content
+python scripts/query_pdf.py search {cache_key} "your query"
+
+# Find cache location (shown in extraction output)
+# Example: ~/.claude-cache/pdf/document_a1b2c3d4/
+```
+
+**If you need files in working directory:**
+```bash
+# Copy from cache to working directory
+cp -r ~/.claude-cache/pdf/{cache_key}/* ./extracted_content/
+```
+
+**Note:** Cache is local and not meant for version control. Keep original PDFs in your repo and let each developer extract locally (one-time operation).
+
 ## Workflow
 
 ### Phase 1: Extract PDF (One-Time Setup)

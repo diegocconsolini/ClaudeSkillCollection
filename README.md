@@ -78,6 +78,34 @@ All three extractors share unified caching: Local extraction → Semantic chunki
 - Shared caching library for consistency
 - See `/shared/CACHE_STRATEGY.md` for details
 
+**⚠️ IMPORTANT: Cache Location Behavior**
+
+Extracted files are stored in **user cache directory**, NOT your working directory:
+
+**Cache locations by platform:**
+- **Linux/Mac:** `~/.claude-cache/{pdf,xlsx,docx}/{document_name}_{hash}/`
+- **Windows:** `C:\Users\{username}\.claude-cache\{pdf,xlsx,docx}\{document_name}_{hash}\`
+
+**Why cache directory instead of working directory?**
+- **Cross-project reuse:** Same document analyzed from different projects uses the same cache
+- **Persistent caching:** Extract once, query forever (even after closing Claude Code)
+- **Performance:** Subsequent queries are instant (no re-extraction)
+- **Disk space efficiency:** One extraction shared across all projects
+
+**Accessing cached content:**
+```bash
+# List all cached documents
+python scripts/query_{pdf,xlsx,docx}.py list
+
+# Query specific document
+python scripts/query_pdf.py search {cache_key} "your search"
+
+# Copy cache to working directory (if needed)
+cp -r ~/.claude-cache/pdf/{cache_key}/* ./extracted/
+```
+
+**Note:** Cache is local and not meant for version control. Keep original documents in your repo and let each developer extract locally (one-time operation).
+
 ---
 
 ## 🔒 Security & Compliance Plugins

@@ -80,9 +80,48 @@ Typical reductions:
 - Medium documents (50-200 paragraphs): 10-30x
 - Large documents (200+ paragraphs): 30-50x
 
-## Cache Location
+## Persistent Caching (v2.0.0 Unified System)
 
-`~/.claude-docx-cache/<cache_key>/`
+**⚠️ IMPORTANT: Cache Location**
+
+Extracted content is stored in a **user cache directory**, NOT the working directory:
+
+**Cache locations by platform:**
+- **Linux/Mac:** `~/.claude-cache/docx/{document_name}_{hash}/`
+- **Windows:** `C:\Users\{username}\.claude-cache\docx\{document_name}_{hash}\`
+
+**Why cache directory?**
+1. **Persistent caching:** Extract once, query forever - even across different projects
+2. **Cross-project reuse:** Same document analyzed from different projects uses the same cache
+3. **Performance:** Subsequent queries are instant (no re-extraction needed)
+4. **Token optimization:** 10-50x reduction by loading only relevant sections
+
+**Cache contents:**
+- `full_document.json` - Complete document text with formatting
+- `headings.json` - Document heading structure
+- `tables.json` - Extracted tables
+- `metadata.json` - Document metadata
+- `manifest.json` - Cache manifest
+
+**Accessing cached content:**
+```bash
+# List all cached documents
+python scripts/query_docx.py list
+
+# Query cached content
+python scripts/query_docx.py search {cache_key} "your query"
+
+# Find cache location (shown in extraction output)
+# Example: ~/.claude-cache/docx/policy_document_a1b2c3d4/
+```
+
+**If you need files in working directory:**
+```bash
+# Copy from cache to working directory
+cp -r ~/.claude-cache/docx/{cache_key}/* ./extracted_content/
+```
+
+**Note:** Cache is local and not meant for version control. Keep original Word files in your repo and let each developer extract locally (one-time operation).
 
 ## Supported Formats
 
