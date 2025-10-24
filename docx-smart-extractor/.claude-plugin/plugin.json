@@ -1,5 +1,4 @@
 {
-  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "docx-smart-extractor",
   "version": "2.2.0",
   "description": "Extract and analyze Word documents (1MB-50MB+) with minimal token usage. Lossless extraction of all text, tables, formatting, and document structure while achieving 10-50x token reduction through local extraction, semantic chunking by headings, and intelligent caching.",
@@ -7,35 +6,5 @@
     "name": "Diego Consolini",
     "email": "diego@diegocon.nl"
   },
-  "license": "MIT",
-  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/docx-smart-extractor",
-  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
-  "category": "productivity",
-  "keywords": [
-    "word",
-    "docx",
-    "document",
-    "extraction",
-    "token-optimization",
-    "policy-documents",
-    "reports",
-    "documentation",
-    "python-docx",
-    "table-extraction",
-    "heading-structure",
-    "cache",
-    "semantic-chunking"
-  ],
-  "requirements": {
-    "python": ">=3.8",
-    "dependencies": [
-      "python-docx>=0.8.11"
-    ]
-  },
-  "agents": "./agents/",
-  "scripts": {
-    "extract": "python3 scripts/extract_docx.py",
-    "chunk": "python3 scripts/semantic_chunker.py",
-    "query": "python3 scripts/query_docx.py"
-  }
+  "agents": "./agents/docx-smart-extractor.md"
 }

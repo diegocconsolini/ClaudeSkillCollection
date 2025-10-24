@@ -1,5 +1,4 @@
 {
-  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "xlsx-smart-extractor",
   "version": "2.2.0",
   "description": "Extract and analyze Excel workbooks (1MB-50MB+) with minimal token usage. Lossless extraction of all formulas, cell formatting, and complex table structures while achieving 20-100x token reduction through local extraction, semantic chunking, and intelligent caching.",
@@ -7,35 +6,5 @@
     "name": "Diego Consolini",
     "email": "diego@diegocon.nl"
   },
-  "license": "MIT",
-  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/xlsx-smart-extractor",
-  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
-  "category": "productivity",
-  "keywords": [
-    "excel",
-    "xlsx",
-    "spreadsheet",
-    "workbook-analysis",
-    "token-optimization",
-    "compliance-matrix",
-    "financial-model",
-    "data-extraction",
-    "openpyxl",
-    "table-analysis",
-    "formula-extraction",
-    "cell-formatting"
-  ],
-  "requirements": {
-    "python": ">=3.8",
-    "dependencies": [
-      "openpyxl>=3.1.0",
-      "pandas>=2.0.0"
-    ]
-  },
-  "agents": "./agents/",
-  "scripts": {
-    "extract": "python3 scripts/extract_xlsx.py",
-    "chunk": "python3 scripts/chunk_sheets.py",
-    "query": "python3 scripts/query_xlsx.py"
-  }
+  "agents": "./agents/xlsx-smart-extractor.md"
 }
