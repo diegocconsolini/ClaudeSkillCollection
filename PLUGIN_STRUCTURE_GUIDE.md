@@ -389,17 +389,17 @@ Located at: `.claude-plugin/marketplace.json`
 - Each plugin in marketplace must have a valid `plugin.json` in its source directory
 - Marketplace metadata should match plugin.json metadata
 
-### ⚠️ CRITICAL: Version Synchronization Between Files
+### ⚠️ IMPORTANT: Version Synchronization Between Files
 
-**IMPORTANT:** When you update plugin versions, you MUST update versions in TWO places:
+**Note:** When you update plugin versions, you should update versions in TWO places:
 
 1. **Individual plugin.json files** - `your-plugin/plugin.json`
 2. **Marketplace catalog** - `.claude-plugin/marketplace.json`
 
-**Why both are required:**
+**Why both should be updated:**
 - Claude Code's `/plugin` command reads from `.claude-plugin/marketplace.json` to display the marketplace UI
-- Updating only the individual `plugin.json` files will NOT update the version shown in Claude Code
-- Both files must be kept in sync for users to see correct version numbers
+- Updating only the individual `plugin.json` files will not update the version shown in Claude Code
+- Keeping both files in sync ensures users see correct version numbers in the UI
 
 **Example workflow for version updates:**
 
@@ -611,7 +611,7 @@ capabilities: [...]
 - [ ] Validated all JSON files with `python3 -m json.tool`
 - [ ] Created comprehensive `README.md` with usage examples
 - [ ] Added plugin to `.claude-plugin/marketplace.json` if publishing
-- [ ] **IMPORTANT:** Ensured version in `plugin.json` matches version in `.claude-plugin/marketplace.json`
+- [ ] Ensured version in `plugin.json` matches version in `.claude-plugin/marketplace.json`
 - [ ] Tested plugin loads correctly in Claude Code
 - [ ] Verified agents are invocable
 
