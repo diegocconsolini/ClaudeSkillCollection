@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "plugin-security-checker",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Advanced security scanner for Claude Code plugins with 91 specialized pattern agents. Detects vulnerabilities, code obfuscation, and security anti-patterns using MITRE ATT&CK/ATLAS frameworks.",
   "author": {
     "name": "Diego Consolini",

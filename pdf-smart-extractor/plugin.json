@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pdf-smart-extractor",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Extract and analyze large PDFs (3MB-10MB+) with minimal token usage. Preserves 100% of content while achieving 12-103x token reduction through local extraction, semantic chunking, and intelligent caching. Perfect for technical documentation, compliance frameworks, and research papers.",
   "author": {
     "name": "Diego Consolini",
