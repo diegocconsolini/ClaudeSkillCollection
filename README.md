@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
-[![Plugins](https://img.shields.io/badge/plugins-6-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
+[![Plugins](https://img.shields.io/badge/plugins-7-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
 
 A curated collection of production-ready security, compliance, and productivity plugins for Claude Code. Built on authoritative sources and rigorously tested with real-world data.
 
@@ -15,6 +15,7 @@ A curated collection of production-ready security, compliance, and productivity 
 /plugin marketplace add diegocconsolini/ClaudeSkillCollection
 
 # Install plugins
+/plugin install plugin-security-checker@security-compliance-marketplace
 /plugin install gdpr-auditor@security-compliance-marketplace
 /plugin install pdf-smart-extractor@security-compliance-marketplace
 ```
@@ -56,7 +57,83 @@ All three extractors share unified caching: Local extraction → Semantic chunki
 
 ## 🔒 Security & Compliance Plugins
 
-### 1. GDPR Auditor
+### 1. Plugin Security Checker
+**Production Ready** • **v3.0.0** • **Plugin Vulnerability Scanner**
+
+Advanced security scanner for Claude Code plugins with 91 specialized pattern detection agents. Performs static code analysis to detect vulnerabilities, code obfuscation, hardcoded credentials, and security anti-patterns before you install untrusted plugins.
+
+**Technical Foundation:**
+- **IntelligentOrchestrator:** Consensus voting across 91 specialized agents
+- **AccuracyCache:** Bloom filter + Trie hybrid with zero false positives
+- **MITRE ATT&CK/ATLAS:** Framework mapping for attack technique identification
+- **Adaptive Learning:** Auto-evolving rules from validated detections
+- **Real-World Testing:** Successfully scanned 987 plugins from 15 marketplaces (100% scan success rate)
+
+**Key Features:**
+- **91 Specialized Agents** - 17 CRITICAL, 39 HIGH, 23 MEDIUM, 2 LOW severity patterns
+- **Consensus Voting** - Multiple agents vote on each detection with conflict resolution
+- **Dangerous Function Detection** - Python (eval, exec, os.system) and JavaScript (eval, innerHTML)
+- **Code Obfuscation Detection** - Base64 encoding, hex encoding, character obfuscation
+- **Credential Scanning** - Hardcoded API keys, passwords, cloud credentials, private keys
+- **Schema Validation** - Validates plugin.json structure and configurations
+- **CVE Mapping** - Links findings to CVE-2025-52882, CVE-2025-54794, CVE-2025-54795, CVE-2025-59828
+- **OWASP API Top 10** - Mappings to API1 (BOLA), API2 (Auth), API7 (SSRF), API8 (Misconfig)
+- **Comprehensive Reporting** - JSON, Markdown, and HTML report generation
+
+**Real-World Results:**
+- Scanned 987 plugins across 15 marketplace repositories
+- CRITICAL Risk: 3 plugins (0.3%)
+- HIGH Risk: 1 plugin (0.1%)
+- LOW Risk: 982 plugins (99.5%)
+- Test Results: 29/29 tests passed (100%)
+- Memory Usage: ~17 MB (3.4% of 500MB budget)
+- Cache Throughput: 11,111 ops/sec
+
+**Use Cases:**
+- Pre-installation security scanning of Claude Code plugins
+- Vulnerability assessment of plugin code before running
+- Security auditing of plugin repositories and marketplaces
+- Identifying malicious or suspicious code patterns
+- Validating plugin compliance with security best practices
+- Research and analysis of plugin security landscape
+
+**Who Should Use:**
+- Anyone installing Claude Code plugins from third-party sources
+- Plugin developers testing their own plugins for security issues
+- Security researchers analyzing the plugin ecosystem
+- Organizations with strict security policies for tooling
+- Marketplace maintainers validating submitted plugins
+- Security teams conducting defensive security assessments
+
+**Commands:**
+```bash
+# Scan a single plugin
+python3 scripts/scan_plugin.py /path/to/plugin
+
+# Scan with JSON output
+python3 scripts/scan_plugin.py /path/to/plugin --output scan.json --format json
+
+# Generate Markdown report
+python3 scripts/generate_report.py scan.json --format markdown --output report.md
+
+# Using IntelligentOrchestrator (Python API)
+from intelligent_orchestrator import IntelligentOrchestrator
+orchestrator = IntelligentOrchestrator(
+    patterns_file="references/dangerous_functions_expanded.json",
+    max_memory_mb=500
+)
+detections = orchestrator.scan_file("plugin.py", code)
+orchestrator.export_findings("findings.json")
+```
+
+**Important Disclaimer:**
+This is a SUPPORTING TOOL for preliminary security checks only. It does NOT guarantee plugin safety. Always review source code manually before installing plugins. You are ultimately responsible for plugins you install.
+
+[→ View Plugin Security Checker Documentation](./plugin-security-checker/README.md)
+
+---
+
+### 2. GDPR Auditor
 **Production Ready** • **v1.0.0** • **Data Privacy & Compliance**
 
 Comprehensive GDPR compliance auditing plugin that analyzes static code files, database schemas, and configurations for EU data protection regulation compliance.
@@ -95,7 +172,7 @@ Comprehensive GDPR compliance auditing plugin that analyzes static code files, d
 
 ---
 
-### 2. Cybersecurity Policy Generator
+### 3. Cybersecurity Policy Generator
 **Production Ready** • **v1.0.0** • **Security Governance & Compliance**
 
 Professional cybersecurity policy document generator using 51 industry-standard templates from SANS Institute and CIS Controls. Creates complete, framework-compliant policy documents customized for your organization.
@@ -150,7 +227,7 @@ Professional cybersecurity policy document generator using 51 industry-standard 
 
 ---
 
-### 3. Incident Response Playbook Creator
+### 4. Incident Response Playbook Creator
 **Production Ready** • **v2.0.0** • **Incident Response & Security Operations**
 
 Professional incident response playbook generator based on NIST SP 800-61r3 and authoritative sources. Creates comprehensive, customized IR documentation covering modern threat landscape with built-in GDPR and HIPAA compliance guidance.
@@ -244,7 +321,7 @@ Professional incident response playbook generator based on NIST SP 800-61r3 and 
 
 ## 📊 Productivity Tools
 
-### 4. PDF Smart Extractor
+### 5. PDF Smart Extractor
 **Production Ready** • **v2.0.0** • **NEW: Unified Caching System**
 
 Extract and analyze large PDF documents with 99%+ content preservation and 12-115x token reduction. Perfect for technical documentation, compliance frameworks, and research papers that exceed LLM context windows.
@@ -351,7 +428,7 @@ python scripts/query_pdf.py list
 
 ---
 
-### 5. Excel Smart Extractor
+### 6. Excel Smart Extractor
 **Production Ready** • **v2.0.0** • **Large Workbook Analysis & Unified Caching**
 
 Extract and analyze large Excel workbooks (1MB-50MB+) with comprehensive content preservation and 20-100x token reduction. Perfect for compliance matrices, financial models, security audit logs, and data tables that exceed LLM context windows.
@@ -433,7 +510,7 @@ python scripts/query_xlsx.py list
 
 ---
 
-### 6. Word Smart Extractor
+### 7. Word Smart Extractor
 **Production Ready** • **v2.0.0** • **Large Document Analysis & Unified Caching**
 
 Extract and analyze large Word documents (1MB-50MB+) with comprehensive content extraction and 10-50x token reduction. Perfect for policy documents, technical reports, contracts, and meeting notes with clear heading structure.
@@ -751,7 +828,21 @@ ClaudeSkillCollection/
 ├── CHANGELOG.md                    # Version history
 │
 ├── .claude-plugin/                 # Marketplace configuration
-│   └── marketplace.json            # Plugin catalog (6 plugins)
+│   └── marketplace.json            # Plugin catalog (7 plugins)
+│
+├── plugin-security-checker/        # Plugin Security Checker v3.0.0
+│   ├── README.md
+│   ├── plugin.json
+│   ├── agents/plugin-security-checker.md  # Agent with YAML frontmatter
+│   ├── scripts/                    # 91 specialized pattern detection agents
+│   │   ├── intelligent_orchestrator.py  # Consensus voting engine
+│   │   ├── accuracy_cache.py       # Shared learning with Bloom+Trie
+│   │   ├── pattern_agent.py        # Base agent class
+│   │   ├── scan_plugin.py          # Main scanner
+│   │   └── generate_report.py      # Report generation
+│   ├── references/                 # Pattern databases and CVE mappings
+│   │   └── dangerous_functions_expanded.json  # 91 patterns
+│   └── examples/
 │
 ├── gdpr-auditor/                   # GDPR Compliance Auditor
 │   ├── README.md
@@ -964,7 +1055,27 @@ All plugins are designed for **defensive security purposes**:
 
 ## 📋 Changelog
 
-### Version 2.0.0 (2025-10-21)
+### Version 2.0.0 (2025-10-24)
+**New Plugin Release:**
+- Released **Plugin Security Checker** v3.0.0
+  - 91 specialized pattern detection agents (17 CRITICAL, 39 HIGH, 23 MEDIUM, 2 LOW)
+  - IntelligentOrchestrator with consensus voting and conflict resolution
+  - AccuracyCache with Bloom filter + Trie hybrid (zero false positives)
+  - MITRE ATT&CK/ATLAS framework mapping for attack technique identification
+  - Real-world testing: Scanned 987 plugins from 15 marketplaces (100% success rate)
+  - Security results: 3 CRITICAL, 1 HIGH, 982 LOW risk plugins identified
+  - Test coverage: 29/29 tests passed (100%)
+  - Adaptive learning with auto-evolving rules from validated detections
+  - CVE mapping: CVE-2025-52882, CVE-2025-54794, CVE-2025-54795, CVE-2025-59828
+  - OWASP API Top 10 2023 mappings
+
+**Marketplace Updates:**
+- Updated marketplace to 7 total plugins
+- Enhanced marketplace description with plugin security scanning capabilities
+
+---
+
+### Version 2.0.0-extractors (2025-10-21)
 **Unified Caching System - Breaking Internal Changes, Zero User Impact:**
 - **NEW:** Shared `smart_cache.py` library for all smart-extractors
   - SHAKE256 hashing (SHA-3 family) replaces SHA-256

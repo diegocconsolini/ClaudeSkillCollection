@@ -1,0 +1,83 @@
+/Users/diegocavalariconsolini/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:34: NotOpenSSLWarning: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+================================================================================
+ Security Scan Report: marketplace-validator-plugin
+================================================================================
+
+Risk Score: 1700 (CRITICAL)
+Security Findings: 17
+Total Findings: 17
+
+Severity Distribution:
+  CRITICAL: 17
+
+================================================================================
+
+[1] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:35
+    Compiles source code into code object
+
+[2] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:54
+    Compiles source code into code object
+
+[3] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:55
+    Compiles source code into code object
+
+[4] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:56
+    Compiles source code into code object
+
+[5] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:57
+    Compiles source code into code object
+
+[6] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:58
+    Compiles source code into code object
+
+[7] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:59
+    Compiles source code into code object
+
+[8] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:60
+    Compiles source code into code object
+
+[9] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:61
+    Compiles source code into code object
+
+[10] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:66
+    Compiles source code into code object
+
+[11] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:67
+    Compiles source code into code object
+
+[12] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/security-scan/.scripts/url-validator.py:68
+    Compiles source code into code object
+
+[13] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/schema-validation/.scripts/format-validator.py:49
+    Compiles source code into code object
+
+[14] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/schema-validation/.scripts/format-validator.py:52
+    Compiles source code into code object
+
+[15] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/schema-validation/.scripts/format-validator.py:55
+    Compiles source code into code object
+
+[16] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/schema-validation/.scripts/format-validator.py:58
+    Compiles source code into code object
+
+[17] CRITICAL - Dangerous Function
+    File: /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/private/wip-plugins/plugin-security-checker/scripts/../test_plugins_full/repo-10-dhofheinz/plugins/marketplace-validator-plugin/commands/schema-validation/.scripts/format-validator.py:61
+    Compiles source code into code object
