@@ -10,14 +10,39 @@ A curated collection of production-ready security, compliance, and productivity 
 
 ## 🚀 Quick Start
 
-```bash
-# Add marketplace to Claude Code
-/plugin marketplace add diegocconsolini/ClaudeSkillCollection
+### Step 1: Add Marketplace (GitHub Repository)
 
-# Install plugins
+```bash
+# IMPORTANT: Use GitHub repository format for remote updates
+/plugin marketplace add diegocconsolini/ClaudeSkillCollection
+```
+
+**⚠️ Critical:** Do NOT use local paths like `/path/to/ClaudeSkillCollection` as this prevents remote updates. Always use the GitHub format `owner/repo` for automatic updates.
+
+### Step 2: Install Plugins
+
+```bash
+# Install desired plugins from the marketplace
 /plugin install plugin-security-checker@security-compliance-marketplace
 /plugin install gdpr-auditor@security-compliance-marketplace
 /plugin install pdf-smart-extractor@security-compliance-marketplace
+```
+
+### Step 3: Enable Plugins and Restart
+
+After installation:
+1. **Enable plugins** via `/plugin` interface (plugins are disabled by default after first install)
+2. **Restart Claude Code** to load the plugins properly
+
+### Updating Plugins
+
+```bash
+# To get updates from GitHub:
+/plugin  # Navigate to plugin details and select "Update now"
+
+# If you installed with a local path and can't update:
+/plugin marketplace remove security-compliance-marketplace
+/plugin marketplace add diegocconsolini/ClaudeSkillCollection  # Re-add using GitHub format
 ```
 
 ---
