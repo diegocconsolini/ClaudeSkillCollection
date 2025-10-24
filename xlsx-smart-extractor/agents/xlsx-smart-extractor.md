@@ -78,6 +78,49 @@ Use this agent when:
 - Extract array formulas
 - Preserve calculated column definitions
 
+### 6. Persistent Caching (v2.0.0 Unified System)
+
+**⚠️ IMPORTANT: Cache Location**
+
+Extracted content is stored in a **user cache directory**, NOT the working directory:
+
+**Cache locations by platform:**
+- **Linux/Mac:** `~/.claude-cache/xlsx/{workbook_name}_{hash}/`
+- **Windows:** `C:\Users\{username}\.claude-cache\xlsx\{workbook_name}_{hash}\`
+
+**Why cache directory?**
+1. **Persistent caching:** Extract once, query forever - even across different projects
+2. **Cross-project reuse:** Same workbook analyzed from different projects uses the same cache
+3. **Performance:** Subsequent queries are instant (no re-extraction needed)
+4. **Token optimization:** 20-100x reduction by loading only relevant sheets/columns
+
+**Cache contents:**
+- `full_workbook.json` - Complete workbook data
+- `sheet_{name}.json` - Individual sheet files
+- `named_ranges.json` - Named ranges and tables
+- `metadata.json` - Workbook metadata
+- `manifest.json` - Cache manifest
+
+**Accessing cached content:**
+```bash
+# List all cached workbooks
+python scripts/query_xlsx.py list
+
+# Query cached content
+python scripts/query_xlsx.py search {cache_key} "your query"
+
+# Find cache location (shown in extraction output)
+# Example: ~/.claude-cache/xlsx/ComplianceMatrix_a1b2c3d4/
+```
+
+**If you need files in working directory:**
+```bash
+# Copy from cache to working directory
+cp -r ~/.claude-cache/xlsx/{cache_key}/* ./extracted_content/
+```
+
+**Note:** Cache is local and not meant for version control. Keep original Excel files in your repo and let each developer extract locally (one-time operation).
+
 ## Workflow
 
 ### Step 1: Extract Excel Workbook
@@ -93,7 +136,7 @@ python3 scripts/extract_xlsx.py /path/to/workbook.xlsx
    - Extract merged cells and data validation
    - Extract comments and hyperlinks
 4. Extract named ranges and defined names
-5. Close workbook and save to cache (~/.claude-xlsx-cache/)
+5. Close workbook and save to cache (~/.claude-cache/xlsx/)
 6. Return cache key (e.g., `ComplianceMatrix_a8f9e2c1`)
 
 **Output files:**
