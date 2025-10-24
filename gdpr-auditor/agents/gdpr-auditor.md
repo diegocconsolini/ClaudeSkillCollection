@@ -1,6 +1,9 @@
 ---
+name: gdpr-auditor
 description: Comprehensive GDPR compliance auditing that analyzes static code files, database schemas, and configurations for EU data protection regulation compliance. Includes 8 reference documents and 5 automated scanning tools.
 capabilities: ["gdpr-compliance-audit", "privacy-analysis", "data-protection-assessment", "personal-data-identification", "compliance-reporting", "eu-regulation-verification"]
+tools: Read, Grep, Glob, Bash
+model: inherit
 ---
 
 # GDPR Auditor Skill

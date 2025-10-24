@@ -1,0 +1,39 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "plugin-security-checker",
+  "version": "3.2.0",
+  "description": "Advanced security scanner for Claude Code plugins with 91 specialized pattern agents. Detects vulnerabilities, code obfuscation, and security anti-patterns using MITRE ATT&CK/ATLAS frameworks.",
+  "author": {
+    "name": "Diego Consolini",
+    "email": "diego@diegocon.nl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/plugin-security-checker",
+  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+  "category": "security",
+  "keywords": [
+    "security",
+    "vulnerability",
+    "scanner",
+    "code-analysis",
+    "obfuscation",
+    "malware-detection",
+    "static-analysis",
+    "security-audit",
+    "plugin-security",
+    "mitre-attack",
+    "mitre-atlas",
+    "CVE",
+    "OWASP",
+    "compliance",
+    "consensus-voting",
+    "adaptive-learning"
+  ],
+  "requirements": {
+    "python": ">=3.8"
+  },
+  "agents": "./agents/",
+  "scripts": {
+    "scan": "python3 scripts/scan_plugin.py"
+  }
+}

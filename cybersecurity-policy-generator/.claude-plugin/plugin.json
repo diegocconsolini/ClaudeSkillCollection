@@ -1,0 +1,31 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "cybersecurity-policy-generator",
+  "version": "1.2.0",
+  "description": "Generate enterprise cybersecurity policies from 51 professional templates (SANS, CIS Controls) for ISO 27001, SOC 2, NIST, and CIS Controls compliance in Markdown, Word, HTML, and PDF formats.",
+  "author": {
+    "name": "Diego Consolini",
+    "email": "diego@diegocon.nl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/cybersecurity-policy-generator",
+  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+  "keywords": [
+    "cybersecurity",
+    "policy",
+    "compliance",
+    "ISO 27001",
+    "SOC 2",
+    "NIST",
+    "CIS Controls",
+    "security",
+    "governance",
+    "GDPR",
+    "templates",
+    "documentation",
+    "framework",
+    "audit"
+  ],
+  "category": "security",
+  "agents": "./agents/"
+}

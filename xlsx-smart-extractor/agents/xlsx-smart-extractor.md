@@ -1,6 +1,9 @@
 ---
+name: xlsx-smart-extractor
 description: Extract and analyze Excel workbooks (1MB-50MB+) with minimal token usage. Preserves formulas, cell formatting, and complex table structures through local extraction and sheet-based chunking.
 capabilities: ["excel-extraction", "formula-preservation", "sheet-analysis", "token-optimization", "workbook-structure", "compliance-matrix", "financial-model-analysis", "table-structure-extraction"]
+tools: Read, Bash
+model: inherit
 ---
 
 # Excel Workbook Analyzer
