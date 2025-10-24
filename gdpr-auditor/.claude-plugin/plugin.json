@@ -1,5 +1,4 @@
 {
-  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "gdpr-auditor",
   "version": "1.2.0",
   "description": "Comprehensive GDPR compliance auditing plugin that analyzes static code files, database schema files, and configuration files for EU data protection regulation compliance. Includes 8 reference documents, 5 automated scanning tools (static analysis only), and generates detailed compliance audit reports.",
@@ -7,19 +6,5 @@
     "name": "Diego Consolini",
     "email": "diego@diegocon.nl"
   },
-  "license": "MIT",
-  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/gdpr-auditor",
-  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
-  "keywords": [
-    "gdpr",
-    "compliance",
-    "privacy",
-    "data-protection",
-    "eu-regulation",
-    "audit",
-    "security",
-    "personal-data"
-  ],
-  "category": "security",
-  "agents": "./agents/"
+  "agents": "./agents/gdpr-auditor.md"
 }
