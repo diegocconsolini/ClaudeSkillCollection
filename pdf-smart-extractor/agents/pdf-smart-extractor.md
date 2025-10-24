@@ -1,6 +1,9 @@
 ---
+name: pdf-smart-extractor
 description: Extract and analyze large PDFs (3MB-10MB+) with minimal token usage. Preserves 100% of content while achieving 12-103x token reduction through local extraction, semantic chunking, and intelligent caching.
 capabilities: ["pdf-extraction", "semantic-chunking", "token-optimization", "large-document-analysis", "technical-documentation", "compliance-framework-analysis"]
+tools: Read, Bash
+model: inherit
 ---
 
 # PDF Smart Extractor

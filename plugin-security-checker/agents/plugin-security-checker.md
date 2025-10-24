@@ -1,6 +1,9 @@
 ---
+name: plugin-security-checker
 description: Advanced security scanner for Claude Code plugins with 91 specialized pattern agents. Detects vulnerabilities, code obfuscation, and security anti-patterns using MITRE ATT&CK/ATLAS frameworks.
 capabilities: ["security-scanning", "vulnerability-detection", "code-analysis", "obfuscation-detection", "credential-scanning", "mitre-attack-mapping", "static-analysis", "plugin-auditing", "consensus-voting", "adaptive-learning"]
+tools: Read, Grep, Glob, Bash
+model: inherit
 ---
 
 # Plugin Security Checker
