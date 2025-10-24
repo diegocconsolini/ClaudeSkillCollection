@@ -389,6 +389,64 @@ Located at: `.claude-plugin/marketplace.json`
 - Each plugin in marketplace must have a valid `plugin.json` in its source directory
 - Marketplace metadata should match plugin.json metadata
 
+### ⚠️ CRITICAL: Version Synchronization Between Files
+
+**IMPORTANT:** When you update plugin versions, you MUST update versions in TWO places:
+
+1. **Individual plugin.json files** - `your-plugin/plugin.json`
+2. **Marketplace catalog** - `.claude-plugin/marketplace.json`
+
+**Why both are required:**
+- Claude Code's `/plugin` command reads from `.claude-plugin/marketplace.json` to display the marketplace UI
+- Updating only the individual `plugin.json` files will NOT update the version shown in Claude Code
+- Both files must be kept in sync for users to see correct version numbers
+
+**Example workflow for version updates:**
+
+```bash
+# Step 1: Update individual plugin.json files
+# Edit: cybersecurity-policy-generator/plugin.json
+#   "version": "1.0.0" → "version": "1.1.0"
+
+# Edit: gdpr-auditor/plugin.json
+#   "version": "1.0.0" → "version": "1.1.0"
+
+# Step 2: Update marketplace.json with matching versions
+# Edit: .claude-plugin/marketplace.json
+#   Find each plugin entry and update its version field:
+#   "version": "1.0.0" → "version": "1.1.0"
+
+# Step 3: Commit both changes together
+git add */plugin.json .claude-plugin/marketplace.json
+git commit -m "Bump plugin versions to x.1.0"
+git push origin main
+
+# Step 4: Wait 1-5 minutes for GitHub CDN to update
+
+# Step 5: In Claude Code, refresh marketplace
+/plugin marketplace refresh  # or similar command
+
+# Step 6: Verify versions in Claude Code
+/plugin  # Check that new versions are displayed
+```
+
+**Real-World Issue (October 2025):**
+- Updated 7 plugin.json files from x.0.0 → x.1.0
+- Pushed to GitHub and waited for CDN refresh
+- Claude Code still showed old versions (x.0.0)
+- **Root cause:** `.claude-plugin/marketplace.json` was not updated
+- **Solution:** Updated marketplace.json versions to match plugin.json versions
+- Result: Versions immediately appeared correctly in Claude Code after push
+
+**Verification checklist when updating versions:**
+- [ ] Updated version in individual plugin's `plugin.json`
+- [ ] Updated version in `.claude-plugin/marketplace.json` entry
+- [ ] Both version numbers match exactly
+- [ ] Committed and pushed both files together
+- [ ] Waited 1-5 minutes for GitHub CDN cache
+- [ ] Refreshed marketplace in Claude Code
+- [ ] Verified new version displays in `/plugin` UI
+
 ---
 
 ## Testing Plugin Structure
@@ -553,8 +611,21 @@ capabilities: [...]
 - [ ] Validated all JSON files with `python3 -m json.tool`
 - [ ] Created comprehensive `README.md` with usage examples
 - [ ] Added plugin to `.claude-plugin/marketplace.json` if publishing
+- [ ] **IMPORTANT:** Ensured version in `plugin.json` matches version in `.claude-plugin/marketplace.json`
 - [ ] Tested plugin loads correctly in Claude Code
 - [ ] Verified agents are invocable
+
+## Checklist for Version Updates
+
+- [ ] Updated version in individual plugin's `plugin.json`
+- [ ] Updated version in `.claude-plugin/marketplace.json` entry for the same plugin
+- [ ] Verified both version numbers match exactly
+- [ ] Validated both JSON files with `python3 -m json.tool`
+- [ ] Committed both files together in same commit
+- [ ] Pushed to remote repository
+- [ ] Waited 1-5 minutes for GitHub CDN cache to update
+- [ ] Refreshed marketplace in Claude Code (`/plugin marketplace refresh` or restart)
+- [ ] Verified new version displays correctly in `/plugin` UI
 
 ---
 
