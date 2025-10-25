@@ -24,24 +24,49 @@ DOCX Smart Extractor solves the "Word document too large" problem by extracting 
 - Python 3.8 or higher
 - python-docx library
 
-### Install Dependencies
+### Option 1: Using Virtual Environment (Recommended for Isolation)
 
 ```bash
-pip install python-docx>=0.8.11
+# Create virtual environment
+python3 -m venv venv
+
+# Activate (Linux/Mac)
+source venv/bin/activate
+
+# Activate (Windows)
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-Or use the provided requirements.txt:
+### Option 2: System-Wide Installation
 
 ```bash
-cd /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/docx-smart-extractor
+# Install from requirements.txt
 pip install -r requirements.txt
+
+# OR install individually
+pip install python-docx>=0.8.11
 ```
 
 ### Verify Installation
 
 ```bash
-python3 -c "import docx; print('python-docx available')"
+python3 -c "import docx; print('python-docx version:', docx.__version__)"
 ```
+
+### Troubleshooting
+
+**Error: `ModuleNotFoundError: No module named 'docx'`**
+- Make sure you've installed dependencies: `pip install -r requirements.txt`
+- If using venv, ensure it's activated: `source venv/bin/activate`
+- Check Python version: `python3 --version` (must be 3.8+)
+
+**Error: `externally-managed-environment`**
+- Use virtual environment (Option 1 above)
+- OR use `pipx` for application installation
+- OR use `--break-system-packages` flag (not recommended)
 
 ## Quick Start
 

@@ -767,6 +767,20 @@ Have ideas for improving existing plugins?
 - **Python 3.8+** (for automated tools and scripts)
 - **Git** (for repository cloning)
 
+### Plugin-Specific Dependencies
+
+Some plugins require additional Python libraries. Each plugin includes a `requirements.txt` file for easy installation:
+
+- **PDF Smart Extractor** - Requires `pymupdf` • [Installation Guide](./pdf-smart-extractor/README.md#installation)
+- **Excel Smart Extractor** - Requires `openpyxl`, `pandas` • [Installation Guide](./xlsx-smart-extractor/README.md#installation)
+- **Word Smart Extractor** - Requires `python-docx` • [Installation Guide](./docx-smart-extractor/README.md#installation)
+
+**Installation methods:**
+1. Virtual environment (recommended): Creates isolated Python environment
+2. System-wide installation: Installs for all users
+
+See individual plugin READMEs for detailed instructions and troubleshooting.
+
 ### Option 1: Plugin Marketplace (Recommended)
 
 ```bash
