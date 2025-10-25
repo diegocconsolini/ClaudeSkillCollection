@@ -263,6 +263,8 @@ if __name__ == "__main__":
         # Handle output directory
         smart_cache = SmartCache(doc_type='docx')
         _, cache_path = smart_cache.get_cache_key(file_path)
+        should_copy = False
+        keep_cache = True  # Default: always keep cache
 
         if output_dir is None:
             # Ask user interactively if they want to copy to working directory
@@ -271,15 +273,21 @@ if __name__ == "__main__":
 
             if response == 'y':
                 output_dir = Path.cwd() / f"extracted_{cache_key}"
+                should_copy = True
 
-        if output_dir:
+                # Ask about cache behavior only if copying
+                print(f"\n💾 Maintain cache in {cache_path}?")
+                print("  (yes) Keep cache for instant reuse across projects")
+                print("  (no)  Remove cache after copying files")
+                keep_cache_response = input("Keep cache? (y/n): ").strip().lower()
+                keep_cache = keep_cache_response == 'y'
+        else:
+            # --output-dir was specified, skip prompts and copy files
+            should_copy = True
+            keep_cache = True  # Always keep cache when using --output-dir
+
+        if should_copy and output_dir:
             output_path = Path(output_dir)
-
-            # Ask about cache behavior
-            print(f"\n💾 Maintain cache in {cache_path}?")
-            print("  (yes) Keep cache for instant reuse across projects")
-            print("  (no)  Remove cache after copying files")
-            keep_cache = input("Keep cache? (y/n): ").strip().lower()
 
             # Copy all files from cache to output directory
             import shutil
@@ -295,7 +303,7 @@ if __name__ == "__main__":
             print(f"\n✓ Files copied to: {output_path}")
 
             # Remove cache if requested
-            if keep_cache != 'y':
+            if not keep_cache:
                 shutil.rmtree(cache_path)
                 print(f"  ✓ Cache removed")
             else:
