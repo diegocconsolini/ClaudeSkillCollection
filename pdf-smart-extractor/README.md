@@ -20,20 +20,51 @@ PDF Smart Extractor solves the "PDF too large" problem by extracting content loc
 ### Prerequisites
 
 - Python 3.8 or higher
-- PyMuPDF library
+- PyMuPDF (pymupdf) library
 
-### Install Dependencies
+### Option 1: Using Virtual Environment (Recommended for Isolation)
 
 ```bash
+# Create virtual environment
+python3 -m venv venv
+
+# Activate (Linux/Mac)
+source venv/bin/activate
+
+# Activate (Windows)
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Option 2: System-Wide Installation
+
+```bash
+# Install from requirements.txt
+pip install -r requirements.txt
+
+# OR install individually
 pip install pymupdf
 ```
 
 ### Verify Installation
 
 ```bash
-cd /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/pdf-smart-extractor
-python scripts/extract_pdf.py --help
+python3 -c "import pymupdf; print('PyMuPDF version:', pymupdf.__version__)"
 ```
+
+### Troubleshooting
+
+**Error: `ModuleNotFoundError: No module named 'pymupdf'`**
+- Make sure you've installed dependencies: `pip install -r requirements.txt`
+- If using venv, ensure it's activated: `source venv/bin/activate`
+- Check Python version: `python3 --version` (must be 3.8+)
+
+**Error: `externally-managed-environment`**
+- Use virtual environment (Option 1 above)
+- OR use `pipx` for application installation
+- OR use `--break-system-packages` flag (not recommended)
 
 ## Quick Start
 

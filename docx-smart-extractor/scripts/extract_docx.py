@@ -20,9 +20,16 @@ import sys
 import json
 from pathlib import Path
 from datetime import datetime
-from docx import Document
-from docx.shared import RGBColor
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+
+# Try to import python-docx - will be checked properly in check_dependencies()
+try:
+    from docx import Document
+    from docx.shared import RGBColor
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    DOCX_AVAILABLE = True
+except ModuleNotFoundError:
+    DOCX_AVAILABLE = False
+    Document = None
 
 # Import shared smart cache
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / 'shared'))
@@ -232,7 +239,31 @@ def extract_docx(file_path, force=False):
     return cache_key
 
 
+def check_dependencies():
+    """Check required dependencies and provide helpful error messages"""
+    missing = []
+
+    if not DOCX_AVAILABLE:
+        missing.append("python-docx")
+
+    if missing:
+        print("❌ Missing required dependencies:")
+        for dep in missing:
+            print(f"   - {dep}")
+        print("\n📦 Install dependencies:")
+        print("   Option 1 (recommended): pip install -r requirements.txt")
+        print("   Option 2: pip install python-docx")
+        print("\n💡 Using virtual environment? Activate it first:")
+        print("   python3 -m venv venv && source venv/bin/activate  # Linux/Mac")
+        print("   python3 -m venv venv && venv\\Scripts\\activate  # Windows")
+        print("\nFor more details, see: docx-smart-extractor/README.md#installation")
+        sys.exit(1)
+
+
 if __name__ == "__main__":
+    # Check dependencies first
+    check_dependencies()
+
     if len(sys.argv) < 2:
         print("Usage: python extract_docx.py <docx_file> [--force] [--output-dir DIR]")
         print("\nOptions:")

@@ -3,8 +3,22 @@
 Excel Workbook Analyzer - Extract full Excel content locally with zero LLM involvement
 """
 
-import openpyxl
-from openpyxl.utils import get_column_letter, column_index_from_string
+# Try to import required libraries - will be checked properly in check_dependencies()
+try:
+    import openpyxl
+    from openpyxl.utils import get_column_letter, column_index_from_string
+    OPENPYXL_AVAILABLE = True
+except ModuleNotFoundError:
+    OPENPYXL_AVAILABLE = False
+    openpyxl = None
+
+try:
+    import pandas
+    PANDAS_AVAILABLE = True
+except ModuleNotFoundError:
+    PANDAS_AVAILABLE = False
+    pandas = None
+
 import json
 import sys
 from pathlib import Path
@@ -278,7 +292,34 @@ def extract_workbook(xlsx_path, force=False):
 
     return cache_key
 
+def check_dependencies():
+    """Check required dependencies and provide helpful error messages"""
+    missing = []
+
+    if not OPENPYXL_AVAILABLE:
+        missing.append("openpyxl")
+
+    if not PANDAS_AVAILABLE:
+        missing.append("pandas")
+
+    if missing:
+        print("❌ Missing required dependencies:")
+        for dep in missing:
+            print(f"   - {dep}")
+        print("\n📦 Install dependencies:")
+        print("   Option 1 (recommended): pip install -r requirements.txt")
+        print("   Option 2: pip install openpyxl pandas")
+        print("\n💡 Using virtual environment? Activate it first:")
+        print("   python3 -m venv venv && source venv/bin/activate  # Linux/Mac")
+        print("   python3 -m venv venv && venv\\Scripts\\activate  # Windows")
+        print("\nFor more details, see: xlsx-smart-extractor/README.md#installation")
+        sys.exit(1)
+
+
 if __name__ == "__main__":
+    # Check dependencies first
+    check_dependencies()
+
     if len(sys.argv) < 2:
         print("Usage: python extract_xlsx.py <xlsx_path> [--force] [--output-dir DIR]")
         print("\nOptions:")

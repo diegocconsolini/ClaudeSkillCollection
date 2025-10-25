@@ -11,7 +11,14 @@ import json
 import getpass
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
-import pymupdf  # PyMuPDF
+
+# Try to import pymupdf - will be checked properly in check_dependencies()
+try:
+    import pymupdf  # PyMuPDF
+    PYMUPDF_AVAILABLE = True
+except ModuleNotFoundError:
+    PYMUPDF_AVAILABLE = False
+    pymupdf = None
 
 # Import shared smart cache
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / 'shared'))
@@ -244,8 +251,32 @@ class PDFExtractor:
         }
 
 
+def check_dependencies():
+    """Check required dependencies and provide helpful error messages"""
+    missing = []
+
+    if not PYMUPDF_AVAILABLE:
+        missing.append("pymupdf")
+
+    if missing:
+        print("❌ Missing required dependencies:")
+        for dep in missing:
+            print(f"   - {dep}")
+        print("\n📦 Install dependencies:")
+        print("   Option 1 (recommended): pip install -r requirements.txt")
+        print("   Option 2: pip install pymupdf")
+        print("\n💡 Using virtual environment? Activate it first:")
+        print("   python3 -m venv venv && source venv/bin/activate  # Linux/Mac")
+        print("   python3 -m venv venv && venv\\Scripts\\activate  # Windows")
+        print("\nFor more details, see: pdf-smart-extractor/README.md#installation")
+        sys.exit(1)
+
+
 def main():
     """Command-line interface"""
+    # Check dependencies first
+    check_dependencies()
+
     if len(sys.argv) < 2:
         print("Usage: python extract_pdf.py <pdf_path> [--force] [--password PASSWORD] [--output-dir DIR]")
         print("\nExtracts complete PDF content to cache for efficient processing")

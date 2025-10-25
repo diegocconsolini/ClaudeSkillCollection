@@ -25,25 +25,50 @@ Excel Smart Extractor solves the "Excel too large" problem by extracting content
 - openpyxl library
 - pandas library
 
-### Install Dependencies
+### Option 1: Using Virtual Environment (Recommended for Isolation)
 
 ```bash
-pip install openpyxl>=3.1.0 pandas>=2.0.0
+# Create virtual environment
+python3 -m venv venv
+
+# Activate (Linux/Mac)
+source venv/bin/activate
+
+# Activate (Windows)
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-Or use the provided requirements.txt:
+### Option 2: System-Wide Installation
 
 ```bash
-cd /Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection/xlsx-smart-extractor
+# Install from requirements.txt
 pip install -r requirements.txt
+
+# OR install individually
+pip install openpyxl>=3.1.0 pandas>=2.0.0
 ```
 
 ### Verify Installation
 
 ```bash
-python3 -c "import openpyxl; print('openpyxl available')"
-python3 -c "import pandas; print('pandas available')"
+python3 -c "import openpyxl; print('openpyxl version:', openpyxl.__version__)"
+python3 -c "import pandas; print('pandas version:', pandas.__version__)"
 ```
+
+### Troubleshooting
+
+**Error: `ModuleNotFoundError: No module named 'openpyxl'` or `'pandas'`**
+- Make sure you've installed dependencies: `pip install -r requirements.txt`
+- If using venv, ensure it's activated: `source venv/bin/activate`
+- Check Python version: `python3 --version` (must be 3.8+)
+
+**Error: `externally-managed-environment`**
+- Use virtual environment (Option 1 above)
+- OR use `pipx` for application installation
+- OR use `--break-system-packages` flag (not recommended)
 
 ## Quick Start
 
