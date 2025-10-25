@@ -52,7 +52,16 @@ Use this plugin for:
 
 1. **Extract document**
    ```bash
+   # Extract to cache (default)
    python scripts/extract_docx.py /path/to/document.docx
+
+   # Extract and copy to working directory (interactive prompt)
+   python scripts/extract_docx.py /path/to/document.docx
+   # Will prompt: "Copy files? (y/n)"
+   # Will ask: "Keep cache? (y/n)"
+
+   # Extract and copy to specific directory (no prompts)
+   python scripts/extract_docx.py /path/to/document.docx --output-dir ./extracted
    ```
    Output: Cache key (e.g., `policy_document_a8f9e2c1`)
 
@@ -117,7 +126,10 @@ python scripts/query_docx.py search {cache_key} "your query"
 
 **If you need files in working directory:**
 ```bash
-# Copy from cache to working directory
+# Option 1: Use --output-dir flag during extraction
+python scripts/extract_docx.py document.docx --output-dir ./extracted
+
+# Option 2: Copy from cache manually
 cp -r ~/.claude-cache/docx/{cache_key}/* ./extracted_content/
 ```
 

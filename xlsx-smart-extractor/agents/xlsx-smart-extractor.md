@@ -115,7 +115,10 @@ python scripts/query_xlsx.py search {cache_key} "your query"
 
 **If you need files in working directory:**
 ```bash
-# Copy from cache to working directory
+# Option 1: Use --output-dir flag during extraction
+python3 scripts/extract_xlsx.py workbook.xlsx --output-dir ./extracted
+
+# Option 2: Copy from cache manually
 cp -r ~/.claude-cache/xlsx/{cache_key}/* ./extracted_content/
 ```
 
@@ -125,7 +128,16 @@ cp -r ~/.claude-cache/xlsx/{cache_key}/* ./extracted_content/
 
 ### Step 1: Extract Excel Workbook
 ```bash
+# Extract to cache (default)
 python3 scripts/extract_xlsx.py /path/to/workbook.xlsx
+
+# Extract and copy to working directory (interactive prompt)
+python3 scripts/extract_xlsx.py /path/to/workbook.xlsx
+# Will prompt: "Copy files? (y/n)"
+# Will ask: "Keep cache? (y/n)"
+
+# Extract and copy to specific directory (no prompts)
+python3 scripts/extract_xlsx.py /path/to/workbook.xlsx --output-dir ./extracted
 ```
 
 **What happens:**

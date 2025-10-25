@@ -247,11 +247,12 @@ class PDFExtractor:
 def main():
     """Command-line interface"""
     if len(sys.argv) < 2:
-        print("Usage: python extract_pdf.py <pdf_path> [--force] [--password PASSWORD]")
+        print("Usage: python extract_pdf.py <pdf_path> [--force] [--password PASSWORD] [--output-dir DIR]")
         print("\nExtracts complete PDF content to cache for efficient processing")
         print("\nOptions:")
         print("  --force              Force re-extraction even if cached")
         print("  --password PASSWORD  Password for encrypted PDFs (will prompt if not provided)")
+        print("  --output-dir DIR     Copy extracted files to specified directory (prompts if not provided)")
         sys.exit(1)
 
     pdf_path = sys.argv[1]
@@ -267,6 +268,16 @@ def main():
             print("Error: --password requires a value")
             sys.exit(1)
 
+    # Extract output directory from arguments if provided
+    output_dir = None
+    if '--output-dir' in sys.argv:
+        output_dir_index = sys.argv.index('--output-dir')
+        if output_dir_index + 1 < len(sys.argv):
+            output_dir = sys.argv[output_dir_index + 1]
+        else:
+            print("Error: --output-dir requires a value")
+            sys.exit(1)
+
     extractor = PDFExtractor()
 
     try:
@@ -277,6 +288,47 @@ def main():
 
         if result['status'] == 'cached':
             print("\n💡 Use --force to re-extract")
+
+        # Handle output directory
+        cache_path = Path(result['cache_path'])
+
+        if output_dir is None:
+            # Ask user interactively if they want to copy to working directory
+            print("\n📁 Copy extracted files to working directory?")
+            response = input("Copy files? (y/n): ").strip().lower()
+
+            if response == 'y':
+                output_dir = Path.cwd() / f"extracted_{result['cache_key']}"
+
+        if output_dir:
+            output_path = Path(output_dir)
+
+            # Ask about cache behavior
+            print(f"\n💾 Maintain cache in {cache_path}?")
+            print("  (yes) Keep cache for instant reuse across projects")
+            print("  (no)  Remove cache after copying files")
+            keep_cache = input("Keep cache? (y/n): ").strip().lower()
+
+            # Copy all files from cache to output directory
+            import shutil
+
+            print(f"\n📋 Copying files to {output_path}...")
+            output_path.mkdir(parents=True, exist_ok=True)
+
+            for item in cache_path.iterdir():
+                if item.is_file():
+                    shutil.copy2(item, output_path / item.name)
+                    print(f"  ✓ {item.name}")
+
+            print(f"\n✓ Files copied to: {output_path}")
+
+            # Remove cache if requested
+            if keep_cache != 'y':
+                shutil.rmtree(cache_path)
+                print(f"  ✓ Cache removed")
+            else:
+                print(f"  ✓ Cache maintained at: {cache_path}")
+
     except PermissionError as e:
         print(f"\n❌ Error: {e}")
         print("\n💡 Tip: Use --password <password> to provide password via command line")
