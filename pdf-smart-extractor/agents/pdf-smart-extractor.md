@@ -157,7 +157,10 @@ python scripts/query_pdf.py search {cache_key} "your query"
 
 **If you need files in working directory:**
 ```bash
-# Copy from cache to working directory
+# Option 1: Use --output-dir flag during extraction
+python scripts/extract_pdf.py document.pdf --output-dir ./extracted
+
+# Option 2: Copy from cache manually
 cp -r ~/.claude-cache/pdf/{cache_key}/* ./extracted_content/
 ```
 
@@ -166,8 +169,17 @@ cp -r ~/.claude-cache/pdf/{cache_key}/* ./extracted_content/
 ## Workflow
 
 ### Phase 1: Extract PDF (One-Time Setup)
-```python
+```bash
+# Extract to cache (default)
 python scripts/extract_pdf.py /path/to/document.pdf
+
+# Extract and copy to working directory (interactive prompt)
+python scripts/extract_pdf.py /path/to/document.pdf
+# Will prompt: "Copy files? (y/n)"
+# Will ask: "Keep cache? (y/n)"
+
+# Extract and copy to specific directory (no prompts)
+python scripts/extract_pdf.py /path/to/document.pdf --output-dir ./extracted
 ```
 
 **What happens:**

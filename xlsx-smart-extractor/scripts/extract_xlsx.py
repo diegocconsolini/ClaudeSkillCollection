@@ -280,11 +280,24 @@ def extract_workbook(xlsx_path, force=False):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python extract_xlsx.py <xlsx_path> [--force]")
+        print("Usage: python extract_xlsx.py <xlsx_path> [--force] [--output-dir DIR]")
+        print("\nOptions:")
+        print("  --force          Force re-extraction even if cached")
+        print("  --output-dir DIR Copy extracted files to specified directory (prompts if not provided)")
         sys.exit(1)
 
     xlsx_path = sys.argv[1]
     force = "--force" in sys.argv
+
+    # Extract output directory from arguments if provided
+    output_dir = None
+    if '--output-dir' in sys.argv:
+        output_dir_index = sys.argv.index('--output-dir')
+        if output_dir_index + 1 < len(sys.argv):
+            output_dir = sys.argv[output_dir_index + 1]
+        else:
+            print("Error: --output-dir requires a value")
+            sys.exit(1)
 
     cache_key = extract_workbook(xlsx_path, force)
 
@@ -292,3 +305,49 @@ if __name__ == "__main__":
         print(f"\nNext steps:")
         print(f"1. Chunk content: python scripts/chunk_sheets.py {cache_key}")
         print(f"2. Query content: python scripts/query_xlsx.py search {cache_key} 'your query'")
+
+        # Handle output directory
+        smart_cache = SmartCache(doc_type='xlsx')
+        _, cache_path = smart_cache.get_cache_key(xlsx_path)
+
+        if output_dir is None:
+            # Ask user interactively if they want to copy to working directory
+            print("\n📁 Copy extracted files to working directory?")
+            response = input("Copy files? (y/n): ").strip().lower()
+
+            if response == 'y':
+                output_dir = Path.cwd() / f"extracted_{cache_key}"
+
+        if output_dir:
+            output_path = Path(output_dir)
+
+            # Ask about cache behavior
+            print(f"\n💾 Maintain cache in {cache_path}?")
+            print("  (yes) Keep cache for instant reuse across projects")
+            print("  (no)  Remove cache after copying files")
+            keep_cache = input("Keep cache? (y/n): ").strip().lower()
+
+            # Copy all files from cache to output directory
+            import shutil
+
+            print(f"\n📋 Copying files to {output_path}...")
+            output_path.mkdir(parents=True, exist_ok=True)
+
+            # Copy all files and directories
+            for item in cache_path.iterdir():
+                if item.is_file():
+                    shutil.copy2(item, output_path / item.name)
+                    print(f"  ✓ {item.name}")
+                elif item.is_dir():
+                    shutil.copytree(item, output_path / item.name, dirs_exist_ok=True)
+                    print(f"  ✓ {item.name}/ (directory)")
+
+            print(f"\n✓ Files copied to: {output_path}")
+
+            # Remove cache if requested
+            if keep_cache != 'y':
+                shutil.rmtree(cache_path)
+                print(f"  ✓ Cache removed")
+            else:
+                print(f"  ✓ Cache maintained at: {cache_path}")
+                print(f"  💡 Cache persists across projects for instant reuse")
