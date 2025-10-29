@@ -1,0 +1,228 @@
+{
+  "version": "1.0.0",
+  "templates": {
+    "executive": {
+      "name": "Executive Summary",
+      "description": "High-level report for C-suite and management",
+      "target_audience": "Executives, Board Members, Senior Management",
+      "max_pages": 3,
+      "sections": [
+        {
+          "id": "cover",
+          "title": "Security Assessment Report",
+          "enabled": true
+        },
+        {
+          "id": "executive_summary",
+          "title": "Executive Summary",
+          "content": ["risk_level", "key_statistics", "business_impact"],
+          "enabled": true
+        },
+        {
+          "id": "top_findings",
+          "title": "Critical Findings",
+          "max_items": 10,
+          "min_severity": "HIGH",
+          "enabled": true
+        },
+        {
+          "id": "recommendations",
+          "title": "Recommended Actions",
+          "max_items": 5,
+          "enabled": true
+        },
+        {
+          "id": "risk_trend",
+          "title": "Risk Trend Analysis",
+          "enabled": false
+        }
+      ],
+      "style": {
+        "tone": "business",
+        "technical_detail": "low",
+        "include_code_snippets": false,
+        "include_charts": true
+      }
+    },
+    "technical": {
+      "name": "Technical Deep Dive",
+      "description": "Detailed report for security engineers and developers",
+      "target_audience": "Security Engineers, Developers, DevOps Teams",
+      "max_pages": 50,
+      "sections": [
+        {
+          "id": "cover",
+          "title": "Security Assessment Report",
+          "enabled": true
+        },
+        {
+          "id": "executive_summary",
+          "title": "Executive Summary",
+          "content": ["risk_level", "key_statistics"],
+          "enabled": true
+        },
+        {
+          "id": "methodology",
+          "title": "Assessment Methodology",
+          "content": ["scan_parameters", "tools_used", "coverage"],
+          "enabled": true
+        },
+        {
+          "id": "framework_analysis",
+          "title": "Framework Analysis",
+          "content": ["mitre_attack", "mitre_atlas", "owasp", "cwe"],
+          "enabled": true
+        },
+        {
+          "id": "detailed_findings",
+          "title": "Detailed Findings",
+          "min_severity": "MEDIUM",
+          "include_code_snippets": true,
+          "include_remediation": true,
+          "group_by": "severity",
+          "enabled": true
+        },
+        {
+          "id": "plugin_breakdown",
+          "title": "Plugin-by-Plugin Analysis",
+          "enabled": true
+        },
+        {
+          "id": "false_positive_analysis",
+          "title": "False Positive Reduction",
+          "content": ["original_findings", "adjusted_findings", "filtering_rules"],
+          "enabled": true
+        },
+        {
+          "id": "recommendations",
+          "title": "Remediation Recommendations",
+          "enabled": true
+        },
+        {
+          "id": "appendix",
+          "title": "Appendix",
+          "content": ["glossary", "references", "tools"],
+          "enabled": true
+        }
+      ],
+      "style": {
+        "tone": "technical",
+        "technical_detail": "high",
+        "include_code_snippets": true,
+        "include_charts": true
+      }
+    },
+    "compliance": {
+      "name": "Compliance Audit",
+      "description": "Report aligned with regulatory frameworks",
+      "target_audience": "Auditors, Compliance Officers, Legal Teams",
+      "max_pages": 20,
+      "sections": [
+        {
+          "id": "cover",
+          "title": "Security Compliance Report",
+          "enabled": true
+        },
+        {
+          "id": "compliance_summary",
+          "title": "Compliance Summary",
+          "content": ["frameworks_assessed", "compliance_score", "gaps_identified"],
+          "enabled": true
+        },
+        {
+          "id": "framework_mappings",
+          "title": "Framework Mappings",
+          "frameworks": ["NIST_CSF", "ISO_27001", "SOC_2", "GDPR", "HIPAA"],
+          "enabled": true
+        },
+        {
+          "id": "control_analysis",
+          "title": "Control Assessment",
+          "content": ["implemented_controls", "missing_controls", "weak_controls"],
+          "enabled": true
+        },
+        {
+          "id": "findings_by_control",
+          "title": "Findings by Control",
+          "min_severity": "MEDIUM",
+          "enabled": true
+        },
+        {
+          "id": "gap_analysis",
+          "title": "Gap Analysis",
+          "enabled": true
+        },
+        {
+          "id": "remediation_plan",
+          "title": "Remediation Plan",
+          "prioritize_by": "compliance_impact",
+          "enabled": true
+        },
+        {
+          "id": "evidence",
+          "title": "Supporting Evidence",
+          "enabled": true
+        }
+      ],
+      "style": {
+        "tone": "formal",
+        "technical_detail": "medium",
+        "include_code_snippets": false,
+        "include_charts": true
+      }
+    }
+  },
+  "output_formats": {
+    "html": {
+      "enabled": true,
+      "theme": "dark",
+      "interactive": true,
+      "include_search": true,
+      "include_filters": true,
+      "responsive": true
+    },
+    "pdf": {
+      "enabled": true,
+      "page_size": "A4",
+      "orientation": "portrait",
+      "margins": {
+        "top": "2cm",
+        "bottom": "2cm",
+        "left": "2cm",
+        "right": "2cm"
+      },
+      "header": true,
+      "footer": true,
+      "page_numbers": true,
+      "table_of_contents": true
+    },
+    "docx": {
+      "enabled": true,
+      "page_size": "LETTER",
+      "orientation": "portrait",
+      "style_template": "professional",
+      "track_changes": false,
+      "include_comments": false
+    }
+  },
+  "charts": {
+    "severity_distribution": {
+      "type": "pie",
+      "colors": {
+        "CRITICAL": "#dc2626",
+        "HIGH": "#ea580c",
+        "MEDIUM": "#f59e0b",
+        "LOW": "#10b981",
+        "INFO": "#3b82f6"
+      }
+    },
+    "category_breakdown": {
+      "type": "bar",
+      "max_categories": 10
+    },
+    "framework_coverage": {
+      "type": "radar",
+      "frameworks": ["ATT&CK", "ATLAS", "OWASP", "CWE"]
+    }
+  }
+}

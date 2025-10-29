@@ -1,0 +1,12 @@
+# Core dependencies
+jinja2>=3.1.0
+weasyprint>=60.0
+python-docx>=1.1.0
+
+# Data analysis
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Additional utilities
+python-dateutil>=2.8.0
+Pillow>=10.0.0  # Image handling for logos

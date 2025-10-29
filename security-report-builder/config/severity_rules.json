@@ -1,0 +1,158 @@
+{
+  "version": "1.0.0",
+  "description": "Context-aware severity adjustment rules to reduce false positives",
+  "rules": {
+    "innerHTML": {
+      "default_severity": "MEDIUM",
+      "patterns": [
+        {
+          "pattern": "innerHTML\\s*=\\s*['\"]\\s*['\"]",
+          "adjusted_severity": "INFO",
+          "reason": "Clearing content - safe operation",
+          "confidence": 0.95
+        },
+        {
+          "pattern": "innerHTML\\s*=\\s*['\"][^$`{]*['\"]",
+          "adjusted_severity": "LOW",
+          "reason": "Static HTML string - best practice: use textContent",
+          "confidence": 0.90
+        },
+        {
+          "pattern": "innerHTML\\s*=\\s*`.*\\$\\{(?!.*user|.*input|.*req\\.|.*request).*\\}`",
+          "adjusted_severity": "MEDIUM",
+          "reason": "Template literal without obvious user input - verify escaping",
+          "confidence": 0.70
+        },
+        {
+          "pattern": "innerHTML\\s*=\\s*.*(user|input|req\\.|request|params|query|body)",
+          "adjusted_severity": "CRITICAL",
+          "reason": "Possible user input - XSS risk",
+          "confidence": 0.85
+        }
+      ],
+      "plugin_type_context": {
+        "web_ui_plugin": {
+          "severity_modifier": -1,
+          "reason": "Web UI plugins legitimately use innerHTML for rendering"
+        },
+        "cli_only_plugin": {
+          "severity_modifier": 1,
+          "reason": "innerHTML suspicious in CLI-only context"
+        }
+      }
+    },
+    "eval": {
+      "default_severity": "HIGH",
+      "patterns": [
+        {
+          "pattern": "eval\\s*\\(['\"].*['\"]\\)",
+          "adjusted_severity": "MEDIUM",
+          "reason": "eval() with static string - code smell but not exploitable",
+          "confidence": 0.85
+        },
+        {
+          "pattern": "eval\\s*\\(.*(user|input|req\\.|request|params|query|body)",
+          "adjusted_severity": "CRITICAL",
+          "reason": "eval() with user input - code execution risk",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "exec": {
+      "default_severity": "HIGH",
+      "patterns": [
+        {
+          "pattern": "exec\\s*\\(['\"].*['\"]\\)",
+          "adjusted_severity": "MEDIUM",
+          "reason": "exec() with static string - code smell",
+          "confidence": 0.85
+        },
+        {
+          "pattern": "exec\\s*\\(.*(user|input|req\\.|request|params|query|body)",
+          "adjusted_severity": "CRITICAL",
+          "reason": "exec() with user input - code execution risk",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "child_process": {
+      "default_severity": "HIGH",
+      "patterns": [
+        {
+          "pattern": "(exec|spawn|execSync|spawnSync)\\s*\\(['\"][^$`{]*['\"]",
+          "adjusted_severity": "LOW",
+          "reason": "Process execution with static command - verify necessity",
+          "confidence": 0.80
+        },
+        {
+          "pattern": "(exec|spawn|execSync|spawnSync)\\s*\\(.*(user|input|req\\.|request|params|query|body)",
+          "adjusted_severity": "CRITICAL",
+          "reason": "Command injection risk - user input in process execution",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "file_operations": {
+      "default_severity": "MEDIUM",
+      "patterns": [
+        {
+          "pattern": "(readFile|writeFile|open)\\s*\\(['\"][^$`{]*['\"]",
+          "adjusted_severity": "LOW",
+          "reason": "File operation with static path - safe",
+          "confidence": 0.90
+        },
+        {
+          "pattern": "(readFile|writeFile|open)\\s*\\(.*(user|input|req\\.|request|params|query|body|\\.\\./)",
+          "adjusted_severity": "CRITICAL",
+          "reason": "Path traversal risk - user-controlled file path",
+          "confidence": 0.90
+        }
+      ]
+    },
+    "hardcoded_secrets": {
+      "default_severity": "HIGH",
+      "patterns": [
+        {
+          "pattern": "(API_KEY|PASSWORD|SECRET|TOKEN)\\s*=\\s*['\"][a-zA-Z0-9+/=]{20,}['\"]",
+          "adjusted_severity": "HIGH",
+          "reason": "Hardcoded credential - should use environment variables",
+          "confidence": 0.95
+        }
+      ]
+    }
+  },
+  "severity_levels": {
+    "CRITICAL": {
+      "score": 100,
+      "cvss_range": [9.0, 10.0],
+      "description": "Exploitable vulnerability with user input"
+    },
+    "HIGH": {
+      "score": 50,
+      "cvss_range": [7.0, 8.9],
+      "description": "Potentially exploitable with limited context"
+    },
+    "MEDIUM": {
+      "score": 25,
+      "cvss_range": [4.0, 6.9],
+      "description": "Code smell or best practice violation"
+    },
+    "LOW": {
+      "score": 10,
+      "cvss_range": [0.1, 3.9],
+      "description": "Informational - improvement suggestion"
+    },
+    "INFO": {
+      "score": 0,
+      "cvss_range": [0.0, 0.0],
+      "description": "Not a security issue - normal operation"
+    }
+  },
+  "false_positive_indicators": [
+    "Clearing content with empty string",
+    "Static HTML without variables",
+    "Web UI plugin using standard DOM APIs",
+    "No user input in data flow",
+    "Template literal with sanitized data"
+  ]
+}
