@@ -1,0 +1,15 @@
+{
+  "company_name": "Your Organization",
+  "logo_path": null,
+  "primary_color": "#6366f1",
+  "secondary_color": "#8b5cf6",
+  "accent_color": "#ec4899",
+  "footer_text": "Confidential - Internal Use Only",
+  "contact": {
+    "department": "Security Team",
+    "email": "security@yourorg.com",
+    "website": "https://yourorg.com"
+  },
+  "document_classification": "CONFIDENTIAL",
+  "disclaimer": "This report contains confidential information about security vulnerabilities. Distribution should be limited to authorized personnel only."
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "security-report-builder",
+  "version": "1.0.0",
+  "description": "Professional security report generator with HTML, PDF, and DOCX output. Reduces false positives through context-aware analysis.",
+  "author": {
+    "name": "Diego Consolini",
+    "email": "diego@diegocon.nl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/security-report-builder",
+  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+  "category": "security",
+  "keywords": ["security-reports", "vulnerability-assessment", "pdf", "html", "docx", "mitre-attack", "compliance", "false-positive-reduction", "reporting", "documentation"],
+  "requirements": {
+    "python": ">=3.8",
+    "dependencies": [
+      "jinja2>=3.1.0",
+      "weasyprint>=60.0",
+      "python-docx>=1.1.0",
+      "pandas>=2.0.0",
+      "numpy>=1.24.0"
+    ]
+  },
+  "agents": "./agents/"
+}
