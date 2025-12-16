@@ -215,7 +215,7 @@
       "name": "security-report-builder",
       "description": "Professional security report generator with HTML, PDF, and DOCX output. Reduces false positives through context-aware analysis.",
       "source": "./security-report-builder",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Diego Consolini",
         "email": "diego@diegocon.nl"
@@ -223,6 +223,21 @@
       "category": "security",
       "keywords": ["security-reports", "vulnerability-assessment", "pdf", "html", "docx", "mitre-attack", "compliance", "false-positive-reduction", "reporting", "documentation"],
       "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/security-report-builder",
+      "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+      "license": "MIT"
+    },
+    {
+      "name": "chrome-devtools-optimizer",
+      "description": "Reduce token consumption by 70-80% when using Chrome DevTools MCP through smart snapshot strategies and optional Gemini Flash vision processing. Includes optimization rules, decision trees, and pattern guides for navigation, forms, debugging, and visual checks.",
+      "source": "./chrome-devtools-optimizer",
+      "version": "1.0.1",
+      "author": {
+        "name": "Diego Consolini",
+        "email": "diego@diegocon.nl"
+      },
+      "category": "productivity",
+      "keywords": ["chrome", "devtools", "mcp", "optimization", "tokens", "screenshots", "gemini", "vision", "web-testing", "automation"],
+      "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/chrome-devtools-optimizer",
       "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
       "license": "MIT"
     }
