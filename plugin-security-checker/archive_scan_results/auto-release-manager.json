@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "plugin_path": "plugin-security-checker/archive_dev_files/test_data/test_plugins_full/repo-07-devgom/plugins/auto-release-manager",
+    "scan_date": "2025-10-28T22:41:21.934896",
+    "scanner_version": "1.0.0",
+    "total_findings": 2,
+    "risk_level": "HIGH",
+    "risk_score": 100,
+    "verdict": "REVIEW"
+  },
+  "summary": {
+    "severity_counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "LOW": 0,
+      "INFO": 0
+    },
+    "categories": {
+      "Code Quality": 2
+    }
+  },
+  "findings": [
+    {
+      "id": "FINDING-002",
+      "severity": "MEDIUM",
+      "category": "Code Quality",
+      "subcategory": "Syntax Error",
+      "file": "skills/scripts/git_operations.py",
+      "line": 60,
+      "column": 63,
+      "code_snippet": "        print(f\"\u2713 Committed: {message.split('\\n')[0][:60]}...\")\n",
+      "description": "Python syntax error: f-string expression part cannot include a backslash",
+      "explanation": "Code contains syntax errors",
+      "impact": "Code will not execute",
+      "recommendation": "Fix syntax errors",
+      "cvss_score": 0.0,
+      "cve_reference": null,
+      "owasp_reference": null,
+      "remediation_effort": "LOW",
+      "false_positive_likelihood": "LOW"
+    },
+    {
+      "id": "FINDING-001",
+      "severity": "MEDIUM",
+      "category": "Code Quality",
+      "subcategory": "Syntax Error",
+      "file": "skills/scripts/update_version.py",
+      "line": 100,
+      "column": 59,
+      "code_snippet": "                    f\"Warning: Could not find version in {\n",
+      "description": "Python syntax error: EOL while scanning string literal",
+      "explanation": "Code contains syntax errors",
+      "impact": "Code will not execute",
+      "recommendation": "Fix syntax errors",
+      "cvss_score": 0.0,
+      "cve_reference": null,
+      "owasp_reference": null,
+      "remediation_effort": "LOW",
+      "false_positive_likelihood": "LOW"
+    }
+  ],
+  "disclaimer": "\n\u26a0\ufe0f IMPORTANT SECURITY DISCLAIMER\n\nThis is a SUPPORTING TOOL for preliminary security checks.\n\nWhat this tool DOES:\n\u2713 Detects common code obfuscation patterns\n\u2713 Identifies dangerous function usage\n\u2713 Validates plugin.json structure\n\u2713 Flags suspicious code patterns\n\u2713 Provides security recommendations\n\nWhat this tool does NOT do:\n\u2717 Guarantee plugin safety or security\n\u2717 Detect all possible vulnerabilities\n\u2717 Replace manual security code review\n\u2717 Provide legal or compliance advice\n\u2717 Detect zero-day vulnerabilities\n\u2717 Analyze runtime behavior\n\nYOUR RESPONSIBILITY:\n\ud83d\udd12 YOU are ultimately responsible for plugins you install and use\n\ud83d\udcd6 ALWAYS review plugin source code manually before installation\n\ud83d\udee1\ufe0f ONLY install plugins from sources you trust\n\ud83d\udd0d VERIFY the plugin author's identity and reputation\n\ud83d\udcbb RUN untrusted plugins in sandboxed environments only\n\u26a0\ufe0f USE this tool at your own risk\n\nLIMITATIONS:\n- Static analysis only (no runtime analysis)\n- May produce false positives\n- May miss sophisticated attacks\n- Obfuscation detection is heuristic-based\n- Cannot detect social engineering\n- Cannot verify external MCP server safety\n\nLEGAL:\nThis tool is provided \"AS IS\" without warranty of any kind, express or\nimplied. The authors assume no liability for damages resulting from the\nuse of this tool or from installing plugins scanned by this tool.\n"
+}

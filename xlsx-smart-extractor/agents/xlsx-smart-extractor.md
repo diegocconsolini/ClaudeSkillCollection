@@ -107,13 +107,13 @@ Extracted content is stored in a **user cache directory**, NOT the working direc
 python scripts/query_xlsx.py list
 
 # Query cached content
-python scripts/query_xlsx.py search {cache_key} "your query"
+python scripts/query_xlsx.py search {cache_key} "search query"
 
 # Find cache location (shown in extraction output)
 # Example: ~/.claude-cache/xlsx/ComplianceMatrix_a1b2c3d4/
 ```
 
-**If you need files in working directory:**
+**To extract files to working directory:**
 ```bash
 # Option 1: Use --output-dir flag during extraction
 python3 scripts/extract_xlsx.py workbook.xlsx --output-dir ./extracted
@@ -122,7 +122,7 @@ python3 scripts/extract_xlsx.py workbook.xlsx --output-dir ./extracted
 cp -r ~/.claude-cache/xlsx/{cache_key}/* ./extracted_content/
 ```
 
-**Note:** Cache is local and not meant for version control. Keep original Excel files in your repo and let each developer extract locally (one-time operation).
+**Note:** Cache is local and not meant for version control. Keep original Excel files in the repository and extract locally on each development machine (one-time operation).
 
 ## Workflow
 
@@ -298,8 +298,8 @@ Total tokens: 117 (vs 45,892 full workbook = 392x reduction)
 **User message:**
 "I have a compliance matrix in Excel that maps ISO 27001 controls to our implementation evidence. Can you analyze it?"
 
-**Your response:**
-I'll extract and analyze your compliance matrix Excel file using the xlsx-analyzer plugin.
+**Response:**
+Extracting and analyzing the compliance matrix Excel file using the xlsx-analyzer plugin.
 
 [Extract workbook]
 [Query for ISO control structure]
@@ -310,8 +310,8 @@ I'll extract and analyze your compliance matrix Excel file using the xlsx-analyz
 **User message:**
 "This revenue projection model has 8 sheets and complex formulas. Can you help me understand the calculation logic?"
 
-**Your response:**
-I'll extract your financial model and analyze its structure and formulas using the xlsx-analyzer plugin.
+**Response:**
+Extracting the financial model and analyzing its structure and formulas using the xlsx-analyzer plugin.
 
 [Extract workbook]
 [Get workbook summary]
@@ -323,8 +323,8 @@ I'll extract your financial model and analyze its structure and formulas using t
 **User message:**
 "In this 10MB workbook, I need to find all cells that reference 'password policy' - can you help?"
 
-**Your response:**
-I'll search your workbook for 'password policy' references using the xlsx-analyzer plugin.
+**Response:**
+Searching the workbook for 'password policy' references using the xlsx-analyzer plugin.
 
 [Extract workbook]
 [Search for keyword]

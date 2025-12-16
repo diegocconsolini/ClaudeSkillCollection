@@ -12,7 +12,7 @@ A comprehensive security analysis tool for Claude Code plugins. Performs static 
 
 ## Overview
 
-This skill helps you scan Claude Code plugins for security issues before installation. It provides preliminary security checks through static analysis, detecting common vulnerabilities and suspicious patterns.
+This skill scans Claude Code plugins for security issues before installation. It provides preliminary security checks through static analysis, detecting common vulnerabilities and suspicious patterns.
 
 **IMPORTANT:** This is a SUPPORTING TOOL for preliminary checks only. It does NOT guarantee plugin safety. Always review source code manually before installing plugins.
 
@@ -146,7 +146,7 @@ python3 scripts/generate_report.py scan_results.json --format html --output repo
 ### Batch Scanning
 
 ```bash
-# Scan multiple plugins from your collection
+# Scan multiple plugins from the collection
 bash scripts/test_scanner.sh
 
 # Scan ALL plugins from 15 marketplace repositories
@@ -175,8 +175,8 @@ bash scripts/scan_all_marketplace_plugins.sh
 
 ## Example Workflow
 
-1. **Find a plugin** you want to install
-2. **Clone the plugin repository** to your local machine
+1. **Find a plugin** to install
+2. **Clone the plugin repository** to the local machine
 3. **Run the security scanner**:
    ```bash
    python3 scripts/scan_plugin.py /path/to/plugin --output scan.json --format json
@@ -282,14 +282,14 @@ PluginScanner
 - **MCP Servers**: Cannot analyze external MCP server code
 - **Social Engineering**: Cannot detect malicious intent or trust issues
 
-## Your Responsibility
+## User Responsibility
 
-🔒 **YOU** are ultimately responsible for plugins you install
+🔒 Users are ultimately responsible for plugins they install
 📖 **ALWAYS** review plugin source code manually before installation
-🛡️ **ONLY** install plugins from sources you trust
+🛡️ **ONLY** install plugins from trusted sources
 🔍 **VERIFY** the plugin author's identity and reputation
 💻 **RUN** untrusted plugins in sandboxed environments only
-⚠️ **USE** this tool at your own risk
+⚠️ **USE** this tool at own risk
 
 ## Legal Disclaimer
 

@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin Security Scan Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+
+        .stat-card.critical {
+            border-left-color: #dc3545;
+        }
+
+        .stat-card.high {
+            border-left-color: #fd7e14;
+        }
+
+        .stat-card.medium {
+            border-left-color: #ffc107;
+        }
+
+        .stat-card.low {
+            border-left-color: #28a745;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #667eea;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .plugin-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .plugin-item {
+            background: #f9f9f9;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #ddd;
+        }
+
+        .plugin-item.critical {
+            border-left-color: #dc3545;
+            background: #fff5f5;
+        }
+
+        .plugin-item.high {
+            border-left-color: #fd7e14;
+            background: #fff8f0;
+        }
+
+        .plugin-item.medium {
+            border-left-color: #ffc107;
+            background: #fffbf0;
+        }
+
+        .plugin-name {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+            font-family: 'Courier New', monospace;
+        }
+
+        .plugin-meta {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge.critical {
+            background: #dc3545;
+            color: white;
+        }
+
+        .badge.high {
+            background: #fd7e14;
+            color: white;
+        }
+
+        .badge.medium {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .badge.low {
+            background: #28a745;
+            color: white;
+        }
+
+        .badge.pass {
+            background: #28a745;
+            color: white;
+        }
+
+        .badge.fail {
+            background: #dc3545;
+            color: white;
+        }
+
+        .badge.review {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .findings-count {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .chart-container {
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .chart {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .chart h3 {
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bar-label {
+            min-width: 100px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .bar {
+            flex: 1;
+            height: 30px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .bar.critical { background: linear-gradient(90deg, #dc3545 0%, #c82333 100%); }
+        .bar.high { background: linear-gradient(90deg, #fd7e14 0%, #e8590c 100%); }
+        .bar.medium { background: linear-gradient(90deg, #ffc107 0%, #e0a800 100%); }
+        .bar.low { background: linear-gradient(90deg, #28a745 0%, #218838 100%); }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: 50px;
+        }
+
+        .expandable {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .expandable::before {
+            content: '▶ ';
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .expandable.expanded::before {
+            transform: rotate(90deg);
+        }
+
+        .collapsible-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .collapsible-content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 Plugin Security Scan Report</h1>
+            <div class="subtitle">
+                Comprehensive security analysis of 894 Claude Code plugins<br>
+                Generated: 2025-10-28 22:46:09
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">894</div>
+                <div class="stat-label">Total Plugins Scanned</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">1883</div>
+                <div class="stat-label">Total Security Findings</div>
+            </div>
+            <div class="stat-card critical">
+                <div class="stat-value" style="color: #dc3545;">14</div>
+                <div class="stat-label">Critical Risk</div>
+            </div>
+            <div class="stat-card high">
+                <div class="stat-value" style="color: #fd7e14;">17</div>
+                <div class="stat-label">High Risk</div>
+            </div>
+            <div class="stat-card medium">
+                <div class="stat-value" style="color: #ffc107;">2</div>
+                <div class="stat-label">Medium Risk</div>
+            </div>
+            <div class="stat-card low">
+                <div class="stat-value" style="color: #28a745;">861</div>
+                <div class="stat-label">Low/Clean</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Distribution Analysis</h2>
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>Risk Levels</h3>
+                    <div class="bar-chart">
+
+                        <div class="bar-item">
+                            <div class="bar-label">CRITICAL</div>
+                            <div class="bar critical" style="width: 1.5659955257270695%;">14</div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">HIGH</div>
+                            <div class="bar high" style="width: 1.901565995525727%;">17</div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">MEDIUM</div>
+                            <div class="bar medium" style="width: 0.22371364653243847%;">2</div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">LOW</div>
+                            <div class="bar low" style="width: 96.30872483221476%;">861</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="chart">
+                    <h3>Severity Breakdown</h3>
+                    <div class="bar-chart">
+
+                        <div class="bar-item">
+                            <div class="bar-label">CRITICAL</div>
+                            <div class="bar critical" style="width: 0.0%;">0</div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">HIGH</div>
+                            <div class="bar high" style="width: 0.0%;">0</div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">MEDIUM</div>
+                            <div class="bar medium" style="width: 0.0%;">0</div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">LOW</div>
+                            <div class="bar low" style="width: 0.0%;">0</div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">INFO</div>
+                            <div class="bar info" style="width: 0.0%;">0</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="expandable expanded" onclick="toggleSection(this)">🚨 Critical Risk Plugins (14)</h2>
+            <div class="collapsible-content show">
+                <div class="plugin-list">
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">marketplace-repos-2025</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1313 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">repo-058-Miyabi</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">176 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">repo-115-claude-flow-baseline</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">72 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">repo-269-claude-flow</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">72 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">repo-230-claude-flow</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">72 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">repo-096-claude-flow----web3</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">59 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">repo-062-disruptors-ai-marketing-hub</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">50 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">repo-168-webflow-to-self-served-page</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">11 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">grey-haven-plugins</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">8 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">repo-129-opinionated-basic-cc-setup</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">7 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">repo-296-ccprompts</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">3 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">ai-experiment-logger</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">6 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">plugin</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">4 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item critical">
+                        <span class="plugin-name">autonomous-dev</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">4 findings</span>
+                            <span class="badge critical">FAIL</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="expandable expanded" onclick="toggleSection(this)">⚠️ High Risk Plugins (17)</h2>
+            <div class="collapsible-content show">
+                <div class="plugin-list">
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">frontend_nextjs_development</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">2 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">biome_format</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">2 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">titanium-toolkit</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">2 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">grey-haven-hooks</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">2 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">repo-238-community</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">repo-318-mathHelper</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">devops</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">repo-144-ClaudeSkillCollection</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">auto-release-manager</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">2 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">repo-050-playeola-plugins</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">repo-015-chrome-devtools-mcp</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">repo-247-claude</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">claude-md-compliance</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">repo-073-claude-skills-marketplace</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">assets</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">presenter</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">2 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item high">
+                        <span class="plugin-name">plugins</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge high">REVIEW</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="expandable" onclick="toggleSection(this)">⚡ Medium Risk Plugins (2)</h2>
+            <div class="collapsible-content">
+                <div class="plugin-list">
+
+                    <div class="plugin-item medium">
+                        <span class="plugin-name">claude-code-plugin</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge medium">REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item medium">
+                        <span class="plugin-name">claude-context-orchestrator</span>
+                        <div class="plugin-meta">
+                            <span class="findings-count">1 findings</span>
+                            <span class="badge medium">REVIEW</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="expandable" onclick="toggleSection(this)">✅ Low Risk / Clean Plugins (861)</h2>
+            <div class="collapsible-content">
+                <p style="color: #666; margin-bottom: 15px;">These plugins passed security checks with no significant findings.</p>
+                <div class="plugin-list">
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">10x-genomics</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">2-commit-fast</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">access-control-auditor</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">accessibility-architect</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">accessibility-expert</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">accessibility-test-scanner</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">agent-kit</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">agent-plugin</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">agent-sdk-dev</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">agile-tools</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-architect</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-commit-gen</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-engineer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-ethics-governance-specialist</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-ethics-officer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-ethics-validator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-ml-engineering-pack</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-pair-programming</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-sdk-agents</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-studio-orchestrator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ai-toolkit</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">alerting-rule-creator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">analytics-reporter</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">analyze-codebase</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">analyze-issue</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">angelos-symbo</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">announce-notification</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">anomaly-detection-system</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ansible-playbook-creator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-authentication-builder</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-batch-processor</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-cache-manager</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-contract-generator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-contract-sync-manager</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-contract-tester</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-designer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-docs-generator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-documentation-generator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-error-handler</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-event-emitter</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-fuzzer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-gateway-builder</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-integration-architect</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-integration-specialist</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-load-tester</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-migration-tool</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-mock-server</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-monitoring-dashboard</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-quality-assurance</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-rate-limiter</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-request-logger</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-response-validator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-schema-validator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-sdk-generator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-security-scanner</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-test-automation</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-tester</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-throttling-manager</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">api-versioning-manager</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">apm-dashboard-creator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">app-store-optimizer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">application-profiler</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">arbitrage-opportunity-finder</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">architecture</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">assembly</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">audit</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">auth-security</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">auth-security-agents</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">auth-security-hooks</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">authentication-specialist</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">authentication-validator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">auto-scaling-configurator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">automl-pipeline-builder</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">awesome-memory</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">aws-deployer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">azkg</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">b2b-project-shipper</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">backend</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">backend-architect</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">backend-security</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">backup-strategy-implementor</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">bds-dev</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">beads-issue-tracker</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">benchling</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">bill-optimization-analyzer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">biorender</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">blockchain-explorer-cli</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">blog-style-guide-creator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">book-reading-tracker</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">bottleneck-detector</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">brand-guardian</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">brand-strategist</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">browser-compatibility-tester</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">bug-detective</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">bug-fix</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">bundle-analyzer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cache-performance-optimizer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cache-strategist</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">calendar-to-workflow</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">capacity-planning-analyzer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">carbon-footprint-tracker</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">career-development-planner</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cc-handbook</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cc-handbook-dotnet</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cc-handbook-extras</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ceo-quality-controller-agent</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">changelog-generator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">chaos-engineering-toolkit</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">chrome-devtools</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ci</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ci-cd-pipeline-builder</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cicd-automation</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cicd-automation-agents</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cicd-automation-commands</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">classification-model-builder</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">claude</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">claude-desktop-extension</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">claude-plugin</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">claude-settings</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">claude-to-speech</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">claude-tools</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cli-developer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cli-mastery</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cloud-architect</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cloud-cost-optimizer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">clustering-algorithm-runner</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cmd</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">codanna-base</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">codanna-cc</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-analysis</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-architect</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-migrator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-quality-enforcement</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-quality-enforcement-agents</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-quality-enforcement-commands</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-quality-enforcement-hooks</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-quality-expert</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-refactorer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-review</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-review-assistant</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-review-automation</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-review-standards</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-reviewer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">code-standards</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">codebase-analyzer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">codebase-documenter</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">codebase-explorer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">codebase-learning</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">codex</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">coding</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">coding-best-practices</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">coinpaprika-claude-plugin</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">command-plugin</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">commit</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">common</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">common-tools</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">compliance-automation-specialist</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">compliance-checker</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">compliance-officer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">compliance-report-generator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">compounding-engineering</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">computer-vision-processor</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">concise-prompt-plugin</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">console-cleaner</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">container-registry-manager</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">container-security-scanner</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">content-creation-pipeline</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">content-creator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">content-gen</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">content-library-auditor</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">context-efficient-tools</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">context7-docs-fetcher</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">contextgraph</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">contract-test-validator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">contradiction-tools</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">conversational-api-debugger</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">core</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">core-essentials</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">core-essentials-agents</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">core-essentials-commands</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">core-essentials-hooks</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">core-memory</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cors-policy-validator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cors-security-expert</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cost-optimizer</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">courier-mcp</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cpu-usage-monitor</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">create-pr</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">create-pull-request</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">create-worktrees</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">creator-studio-pack</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">cross-chain-bridge-monitor</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">crypto-derivatives-tracker</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">crypto-news-aggregator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">crypto-portfolio-tracker</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">crypto-signal-generator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">crypto-tax-calculator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">csrf-protection-validator</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">ctx</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                    <div class="plugin-item">
+                        <span class="plugin-name">customer-success</span>
+                        <div class="plugin-meta">
+                            <span class="badge pass">PASS</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>🔒 Plugin Security Checker v3.0 | Generated by ClaudeSkillCollection</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                ⚠️ This report provides preliminary security analysis. Always review plugin source code manually before installation.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleSection(element) {
+            element.classList.toggle('expanded');
+            const content = element.nextElementSibling;
+            content.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

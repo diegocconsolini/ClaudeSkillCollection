@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Security Services - AOP26 HCL Cost Forecast</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        .slide-container {
+            width: 100%;
+            height: 100vh;
+            background: white;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+            position: relative;
+        }
+        
+        .aop-indicator {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, #3d2314, #6b4423);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #3d2314;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #6b4423;
+            font-size: 16px;
+        }
+        
+        /* Professional Timeline */
+        .timeline-section {
+            background: linear-gradient(to right, #fafafa, #f5f5f5);
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .timeline-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            right: 100px;
+            height: 2px;
+            background: linear-gradient(to right, #d4a574 0%, #d4a574 45%, #28a745 55%, #28a745 100%);
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+        
+        .timeline-arrow {
+            position: absolute;
+            right: 95px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid #28a745;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            z-index: 1;
+        }
+        
+        .timeline-node {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            min-width: 280px;
+        }
+        
+        .node-legacy {
+            border-top: 4px solid #d4a574;
+        }
+        
+        .node-hcl {
+            border-top: 4px solid #28a745;
+        }
+        
+        .node-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .node-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 20px;
+        }
+        
+        .node-legacy .node-icon {
+            background: linear-gradient(135deg, #d4a574, #deb887);
+        }
+        
+        .node-hcl .node-icon {
+            background: linear-gradient(135deg, #28a745, #20c997);
+        }
+        
+        .node-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #3d2314;
+        }
+        
+        .node-period {
+            font-size: 12px;
+            color: #6b4423;
+            margin-bottom: 15px;
+        }
+        
+        .node-amount {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .node-legacy .node-amount {
+            color: #d4a574;
+        }
+        
+        .node-hcl .node-amount {
+            color: #28a745;
+        }
+        
+        .node-breakdown {
+            width: 100%;
+            font-size: 11px;
+            color: #6b4423;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .breakdown-value {
+            font-weight: 600;
+            color: #3d2314;
+        }
+        
+        /* Service Cards Grid */
+        .services-section {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .services-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: linear-gradient(135deg, #3d2314, #6b4423);
+            color: white;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 3px solid #28a745;
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f0e8, #fff);
+            border-radius: 50%;
+            font-size: 24px;
+        }
+        
+        .service-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3d2314;
+            margin-bottom: 8px;
+        }
+        
+        .service-description {
+            font-size: 11px;
+            color: #6b4423;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+        
+        .service-amount {
+            font-size: 20px;
+            font-weight: bold;
+            color: #28a745;
+        }
+        
+        /* Cost Comparison */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .cost-panel {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .panel-header {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .panel-legacy .panel-header {
+            background: linear-gradient(135deg, #d4a574, #deb887);
+        }
+        
+        .panel-hcl .panel-header {
+            background: linear-gradient(135deg, #28a745, #20c997);
+        }
+        
+        .panel-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .panel-subtitle {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        .panel-body {
+            padding: 25px;
+        }
+        
+        .cost-breakdown {
+            margin-bottom: 20px;
+        }
+        
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #f8f8f8;
+            border-radius: 6px;
+            border-left: 3px solid;
+        }
+        
+        .panel-legacy .cost-item {
+            border-color: #d4a574;
+        }
+        
+        .panel-hcl .cost-item {
+            border-color: #28a745;
+        }
+        
+        .cost-label {
+            color: #6b4423;
+            font-size: 13px;
+        }
+        
+        .cost-value {
+            font-weight: bold;
+            color: #3d2314;
+            font-size: 14px;
+        }
+        
+        .total-row {
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .total-label {
+            font-size: 16px;
+            color: #3d2314;
+            font-weight: 600;
+        }
+        
+        .total-value {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .panel-legacy .total-value {
+            color: #d4a574;
+        }
+        
+        .panel-hcl .total-value {
+            color: #28a745;
+        }
+        
+        /* Savings Highlight */
+        .savings-section {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .savings-section::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            right: -100px;
+            top: -100px;
+        }
+        
+        .savings-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .savings-amount {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .savings-percentage {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .savings-description {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>IT Security Services Transformation</h1>
+            <div class="subtitle">Cost Optimization Through Centralized Service Delivery</div>
+        </div>
+        
+        <!-- Professional Timeline -->
+        <div class="timeline-section">
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-arrow"></div>
+                
+                <div class="timeline-node node-legacy">
+                    <div class="node-header">
+                        <div class="node-icon">📊</div>
+                        <div class="node-title">Accenture / Legacy</div>
+                    </div>
+                    <div class="node-period">AOP25 and Before</div>
+                    <div class="node-amount">$1,081K</div>
+                    <div class="node-breakdown">
+                        <div class="breakdown-item">
+                            <span>Local Costs</span>
+                            <span class="breakdown-value">$720K</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>IT SOC Services</span>
+                            <span class="breakdown-value">$231K</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>E5 Support (EUC)</span>
+                            <span class="breakdown-value">$130K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-node node-hcl">
+                    <div class="node-header">
+                        <div class="node-icon">✓</div>
+                        <div class="node-title">HCL Model</div>
+                    </div>
+                    <div class="node-period">AOP26 Forecast</div>
+                    <div class="node-amount">$685K</div>
+                    <div class="node-breakdown">
+                        <div class="breakdown-item">
+                            <span>Local Costs</span>
+                            <span class="breakdown-value">$0K</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Central Services</span>
+                            <span class="breakdown-value">$685K</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Efficiency</span>
+                            <span class="breakdown-value">100% Central</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Service Cards with AOP26 HCL Costs -->
+        <div class="services-section">
+            <div class="services-header">AOP26 Forecast for IT Security (HCL Service Cost Breakdown)</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <div class="service-name">IT SOC Services</div>
+                    <div class="service-description">
+                        24/7 Security Operations Center<br>
+                        Incident Response & Investigation
+                    </div>
+                    <div class="service-amount">$378K</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔗</div>
+                    <div class="service-name">Security Integration</div>
+                    <div class="service-description">
+                        Remediation Coordination<br>
+                        Local IT Bridge Services
+                    </div>
+                    <div class="service-amount">$117K</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <div class="service-name">Endpoint Protection</div>
+                    <div class="service-description">
+                        Microsoft Defender Management<br>
+                        Endpoint Security Operations
+                    </div>
+                    <div class="service-amount">$112K</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <div class="service-name">Vulnerability Mgmt</div>
+                    <div class="service-description">
+                        Qualys Platform Operations<br>
+                        Scanning & Reporting Services
+                    </div>
+                    <div class="service-amount">$79K</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cost Comparison Panels -->
+        <div class="comparison-section">
+            <div class="cost-panel panel-legacy">
+                <div class="panel-header">
+                    <div class="panel-title">Previous Model</div>
+                    <div class="panel-subtitle">Accenture / Legacy (AOP25)</div>
+                </div>
+                <div class="panel-body">
+                    <div class="cost-breakdown">
+                        <div class="cost-item">
+                            <span class="cost-label">Local Costs</span>
+                            <span class="cost-value">$720K</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">IT SOC Services</span>
+                            <span class="cost-value">$231K</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">E5 Support Contract (EUC)</span>
+                            <span class="cost-value">$130K</span>
+                        </div>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">Total Annual Cost</span>
+                        <span class="total-value">$1,081K</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cost-panel panel-hcl">
+                <div class="panel-header">
+                    <div class="panel-title">HCL Model</div>
+                    <div class="panel-subtitle">AOP26 Forecast</div>
+                </div>
+                <div class="panel-body">
+                    <div class="cost-breakdown">
+                        <div class="cost-item">
+                            <span class="cost-label">IT SOC Services</span>
+                            <span class="cost-value">$378K</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">Security Integration</span>
+                            <span class="cost-value">$117K</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">Endpoint Protection</span>
+                            <span class="cost-value">$112K</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">Vulnerability Management</span>
+                            <span class="cost-value">$79K</span>
+                        </div>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">Total Annual Cost</span>
+                        <span class="total-value">$685K</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Savings Section -->
+        <div class="savings-section">
+            <div class="savings-title">Overall Cost Reduction</div>
+            <div class="savings-amount">$396K</div>
+            <div class="savings-percentage">37% Annual Reduction</div>
+            <div class="savings-description">Achieved through service centralization and operational efficiency improvements</div>
+        </div>
+    </div>
+</body>
+</html>

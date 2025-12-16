@@ -1,14 +1,14 @@
 ---
 name: incident-response-playbook-creator
-description: Professional incident response playbook generator based on NIST SP 800-61r3. Creates comprehensive, customized IR documentation for ransomware, data breach, and phishing incidents with GDPR Article 33/34 and HIPAA breach notification guidance.
-capabilities: ["incident-response", "playbook-generation", "nist-800-61", "ransomware-response", "data-breach-handling", "phishing-response", "gdpr-notification", "hipaa-breach", "nist-csf-mapping"]
+description: Professional incident response playbook generator based on NIST SP 800-61r3. Creates comprehensive, customized IR documentation for 11 incident scenarios including ransomware, data breach, phishing, AI/ML security, supply chain attacks, container/Kubernetes security, IoT/OT security, cloud breaches, API security, insider threats, and DDoS attacks with GDPR Article 33/34 and HIPAA breach notification guidance.
+capabilities: ["incident-response", "playbook-generation", "nist-800-61", "ransomware-response", "data-breach-handling", "phishing-response", "gdpr-notification", "hipaa-breach", "nist-csf-mapping", "supply-chain-security", "container-security", "iot-ot-security", "cloud-security", "api-security", "insider-threat", "ddos-response"]
 tools: Read, Write, Bash, AskUserQuestion
 model: inherit
 ---
 
 # Incident Response Playbook Creator
 
-**Version**: 1.0.0
+**Version**: 2.2.0
 **Category**: Security
 **Author**: Diego Consolini
 
@@ -16,7 +16,7 @@ model: inherit
 
 ## Overview
 
-This skill generates comprehensive, customized incident response playbooks based on authoritative templates from **NIST SP 800-61r3** (April 2025) and **CISA** guidance. It creates professional, ready-to-use playbooks for 8 different incident scenarios with built-in GDPR and HIPAA compliance considerations.
+This skill generates comprehensive, customized incident response playbooks based on authoritative templates from **NIST SP 800-61r3** (April 2025), **CISA** guidance, and specialized NIST publications (SP 800-161r1, SP 800-190, SP 800-82r3, SP 800-218). It creates professional, ready-to-use playbooks for 11 different incident scenarios with built-in GDPR and HIPAA compliance considerations.
 
 ### What This Skill Does
 
@@ -27,11 +27,26 @@ This skill generates comprehensive, customized incident response playbooks based
 - ✅ Provides role-based responsibilities and escalation procedures
 - ✅ Based on 100% real, authoritative content (no mock data)
 
-### Available Incident Scenarios
+### Available Incident Scenarios (11 Total)
 
+**Traditional Attacks:**
 1. **Ransomware Attack** (Critical)
 2. **Data Breach / Exfiltration** (Critical)
 3. **Phishing / Business Email Compromise** (High)
+
+**Modern Attack Vectors:**
+4. **AI/ML Security Incident** (High)
+5. **Supply Chain Attack** (Critical)
+6. **Container/Kubernetes Security Incident** (High)
+
+**Critical Infrastructure & Cloud:**
+7. **IoT/OT Security Incident** (Critical)
+8. **Cloud Security Breach** (Critical)
+9. **API Security Incident** (High)
+
+**Insider & Availability Threats:**
+10. **Insider Threat** (Critical)
+11. **DDoS Attack** (High)
 
 ---
 
@@ -58,7 +73,7 @@ This skill should be activated when the user:
 
 ### Step 1: Browse Available Scenarios (Optional)
 
-First, you can show the user what scenarios are available:
+First, show the user what scenarios are available:
 
 ```bash
 python3 scripts/browse_scenarios.py --list
@@ -109,18 +124,18 @@ AskUserQuestion(questions=[
 ```python
 AskUserQuestion(questions=[
     {
-        "question": "What is your organization name?",
+        "question": "What is the organization name?",
         "header": "Organization",
         "multiSelect": false,
         "options": [
             {
                 "label": "Provide name",
-                "description": "Enter your organization's name for the playbook"
+                "description": "Enter the organization's name for the playbook"
             }
         ]
     },
     {
-        "question": "What industry sector are you in?",
+        "question": "What industry sector is the organization in?",
         "header": "Industry",
         "multiSelect": false,
         "options": [
@@ -164,11 +179,11 @@ AskUserQuestion(questions=[
         "options": [
             {
                 "label": "Use defaults",
-                "description": "Use placeholder contact information (you can edit later)"
+                "description": "Use placeholder contact information (editable later)"
             },
             {
                 "label": "Provide custom",
-                "description": "Enter your security team email and phone number"
+                "description": "Enter the security team email and phone number"
             }
         ]
     }
@@ -205,14 +220,14 @@ python3 scripts/generate_playbook_markdown.py \
 
 ### Step 4: Present the Results
 
-After generation, you should:
+After generation, complete these steps:
 
 1. **Confirm successful generation**: Show the user that the playbook was created successfully
-2. **Show the file location**: Tell them where the file was saved
+2. **Show the file location**: Indicate where the file was saved
 3. **Offer to display content**: Ask if they want to see the playbook content
 4. **Suggest next steps**:
-   - Review and customize the playbook for their specific environment
-   - Share with their security team
+   - Review and customize the playbook for the specific environment
+   - Share with the security team
    - Test the playbook with a tabletop exercise
    - Generate additional scenario playbooks
 
@@ -247,7 +262,7 @@ Here's a complete interaction flow:
 **User**: "I need an incident response playbook for ransomware attacks"
 
 ### 2. Scenario Browsing (Optional)
-**You**: Let me show you the ransomware scenario details first.
+**Response**: Let me show the ransomware scenario details first.
 
 ```bash
 python3 scripts/browse_scenarios.py --detail ransomware
@@ -256,7 +271,7 @@ python3 scripts/browse_scenarios.py --detail ransomware
 **You**: This scenario includes [summarize key points from output]
 
 ### 3. Information Collection (Required)
-**You**: I'll help you generate a custom playbook. Let me gather some information about your organization.
+**Response**: I'll help generate a custom playbook. Let me gather some information about the organization.
 
 ```python
 # Use AskUserQuestion for organization name and industry
@@ -272,7 +287,7 @@ python3 scripts/generate_playbook_markdown.py \
 ```
 
 ### 5. Results Presentation
-**You**: ✅ Successfully generated your ransomware playbook!
+**Response**: ✅ Successfully generated the ransomware playbook!
 
 [Show file location and summary of what's included]
 
@@ -280,7 +295,7 @@ python3 scripts/generate_playbook_markdown.py \
 **You**: Would you like me to:
 - Generate playbooks for other incident types?
 - Explain any section in detail?
-- Show you how to use the playbook in a real incident?
+- Show how to use the playbook in a real incident?
 
 ---
 
@@ -373,7 +388,7 @@ python3 scripts/generate_playbook_markdown.py --list
 **Solution**: Use `--list` to see available scenario IDs
 
 **Issue**: "Required file not found"
-**Solution**: Ensure you're running from the plugin directory, or use `--scenarios-file` to specify path
+**Solution**: Ensure running from the plugin directory, or use `--scenarios-file` to specify path
 
 **Issue**: "Invalid JSON"
 **Solution**: The script defaults to using `incident_scenarios_simplified.json` which is validated
