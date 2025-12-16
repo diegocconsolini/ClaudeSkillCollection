@@ -1,0 +1,14 @@
+{
+  "name": "chrome-devtools-optimizer",
+  "version": "1.0.1",
+  "description": "Reduce token consumption by 70-80% when using Chrome DevTools MCP through smart snapshot strategies and optional Gemini Flash vision processing",
+  "author": {
+    "name": "Diego Consolini",
+    "email": "diego@diegocon.nl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/chrome-devtools-optimizer",
+  "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+  "keywords": ["chrome", "devtools", "mcp", "optimization", "tokens", "screenshots", "gemini", "vision"],
+  "agents": ["agents/chrome-devtools-optimizer.md"]
+}
