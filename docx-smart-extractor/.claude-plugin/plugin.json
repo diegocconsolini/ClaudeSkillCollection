@@ -6,5 +6,5 @@
     "name": "Diego Consolini",
     "email": "diego@diegocon.nl"
   },
-  "agents": "./agents/docx-smart-extractor.md"
+  "agents": ["agents/docx-smart-extractor.md"]
 }

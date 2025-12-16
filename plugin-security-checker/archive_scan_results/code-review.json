@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "plugin_path": "plugin-security-checker/archive_dev_files/test_data/marketplace-repos-2025/repo-086-claude-code-marketplace/plugins/code-review",
+    "scan_date": "2025-10-28T22:41:22.764808",
+    "scanner_version": "1.0.0",
+    "total_findings": 0,
+    "risk_level": "LOW",
+    "risk_score": 0,
+    "verdict": "PASS"
+  },
+  "summary": {
+    "severity_counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0,
+      "INFO": 0
+    },
+    "categories": {}
+  },
+  "findings": [],
+  "disclaimer": "\n\u26a0\ufe0f IMPORTANT SECURITY DISCLAIMER\n\nThis is a SUPPORTING TOOL for preliminary security checks.\n\nWhat this tool DOES:\n\u2713 Detects common code obfuscation patterns\n\u2713 Identifies dangerous function usage\n\u2713 Validates plugin.json structure\n\u2713 Flags suspicious code patterns\n\u2713 Provides security recommendations\n\nWhat this tool does NOT do:\n\u2717 Guarantee plugin safety or security\n\u2717 Detect all possible vulnerabilities\n\u2717 Replace manual security code review\n\u2717 Provide legal or compliance advice\n\u2717 Detect zero-day vulnerabilities\n\u2717 Analyze runtime behavior\n\nYOUR RESPONSIBILITY:\n\ud83d\udd12 YOU are ultimately responsible for plugins you install and use\n\ud83d\udcd6 ALWAYS review plugin source code manually before installation\n\ud83d\udee1\ufe0f ONLY install plugins from sources you trust\n\ud83d\udd0d VERIFY the plugin author's identity and reputation\n\ud83d\udcbb RUN untrusted plugins in sandboxed environments only\n\u26a0\ufe0f USE this tool at your own risk\n\nLIMITATIONS:\n- Static analysis only (no runtime analysis)\n- May produce false positives\n- May miss sophisticated attacks\n- Obfuscation detection is heuristic-based\n- Cannot detect social engineering\n- Cannot verify external MCP server safety\n\nLEGAL:\nThis tool is provided \"AS IS\" without warranty of any kind, express or\nimplied. The authors assume no liability for damages resulting from the\nuse of this tool or from installing plugins scanned by this tool.\n"
+}

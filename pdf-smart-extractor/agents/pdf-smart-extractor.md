@@ -149,13 +149,13 @@ Extracted content is stored in a **user cache directory**, NOT the working direc
 python scripts/query_pdf.py list
 
 # Query cached content
-python scripts/query_pdf.py search {cache_key} "your query"
+python scripts/query_pdf.py search {cache_key} "search query"
 
 # Find cache location (shown in extraction output)
 # Example: ~/.claude-cache/pdf/document_a1b2c3d4/
 ```
 
-**If you need files in working directory:**
+**To extract files to working directory:**
 ```bash
 # Option 1: Use --output-dir flag during extraction
 python scripts/extract_pdf.py document.pdf --output-dir ./extracted
@@ -164,7 +164,7 @@ python scripts/extract_pdf.py document.pdf --output-dir ./extracted
 cp -r ~/.claude-cache/pdf/{cache_key}/* ./extracted_content/
 ```
 
-**Note:** Cache is local and not meant for version control. Keep original PDFs in your repo and let each developer extract locally (one-time operation).
+**Note:** Cache is local and not meant for version control. Keep original PDFs in the repository and extract locally on each development machine (one-time operation).
 
 ## Workflow
 
@@ -538,7 +538,7 @@ When using this skill, always:
 
 **Example communication:**
 ```
-I'll extract and analyze NIST SP 800-161r1 for you.
+Extracting and analyzing NIST SP 800-161r1.
 
 Step 1: Extracting PDF (one-time setup)...
 ✓ Extracted 155 pages (48,000 tokens)

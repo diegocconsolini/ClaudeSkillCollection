@@ -10,7 +10,7 @@ model: inherit
 
 ## Purpose
 
-Generate professional, framework-compliant cybersecurity policies using 51 industry-standard templates from SANS and CIS Controls. Creates complete policy documents customized for your organization in 4 formats: Markdown, Word, HTML, and PDF.
+Generate professional, framework-compliant cybersecurity policies using 51 industry-standard templates from SANS and CIS Controls. Creates complete policy documents customized for the organization in 4 formats: Markdown, Word, HTML, and PDF.
 
 **Key capabilities:**
 1. Browse 51 professional policy templates across 15 security categories
@@ -108,7 +108,7 @@ Use AskUserQuestion to ask about output preferences:
 
 If user selects "Custom", ask follow-up questions:
 - "Do you have a company logo file?" (Yes - will provide path / No - use company name)
-- "What are your brand colors?" (Provide hex codes or skip for defaults)
+- "What are the brand colors?" (Provide hex codes or skip for defaults)
 - "Any specific formatting preferences?" (Free text input)
 
 ### Phase 3: Organization Information
@@ -118,9 +118,9 @@ Use the **AskUserQuestion tool** to collect organization-specific information wi
 **Question Set 1 - Organization Basics:**
 
 Use AskUserQuestion to ask:
-1. "What is your organization's legal name?" (Let user type via "Other" option, provide 2 dummy options to meet minimum)
-2. "What industry does your organization operate in?" (header: "Industry", options: Technology, Finance, Healthcare, Government, Manufacturing, Retail)
-3. "How many employees does your organization have?" (header: "Size", options: <50, 50-500, 500-1000, 1000+)
+1. "What is the organization's legal name?" (Let user type via "Other" option, provide 2 dummy options to meet minimum)
+2. "What industry does the organization operate in?" (header: "Industry", options: Technology, Finance, Healthcare, Government, Manufacturing, Retail)
+3. "How many employees does the organization have?" (header: "Size", options: <50, 50-500, 500-1000, 1000+)
 
 **Question Set 2 - Governance:**
 
