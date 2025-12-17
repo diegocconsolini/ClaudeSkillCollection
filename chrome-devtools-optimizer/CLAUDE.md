@@ -1,5 +1,26 @@
 # Chrome DevTools Optimizer
 
+## Daily Usage (Fast)
+
+```bash
+# Start Chrome (once per session)
+chrome-debug
+
+# Process any screenshot through Gemini (instead of viewing in Claude)
+gemini-vision /tmp/screenshot.jpg
+gemini-vision /tmp/screenshot.jpg "find all buttons"
+```
+
+Add this alias to ~/.bashrc for quick access:
+```bash
+alias gemini-vision='node ~/ClaudeSkillCollection/chrome-devtools-optimizer/scripts/process-screenshot.js'
+```
+
+### Quick Decision
+- Need to **click/fill/automate**? → Use `take_snapshot`
+- Need to **see visuals**? → Save screenshot to file, then `gemini-vision <file>`
+- Need **both**? → Snapshot first, Gemini only if visual issue
+
 ## WSL2 Quick Setup
 
 ```bash
