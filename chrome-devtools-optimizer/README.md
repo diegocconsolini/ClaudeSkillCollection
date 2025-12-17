@@ -33,6 +33,60 @@ Use `fill_form` for multiple fields instead of separate `fill` calls.
 - Chrome DevTools MCP configured in Claude Code
 - Node.js 18+ (for Gemini integration)
 
+### WSL2 Setup (One-Time)
+
+If you're on WSL2, run the automated setup:
+
+```bash
+# Automated setup (installs Chrome, adds alias, configures MCP)
+cd chrome-devtools-optimizer && ./scripts/wsl2-setup.sh
+```
+
+Or manually:
+
+#### 1. Install Chrome in WSL2
+```bash
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt update && sudo apt install -y google-chrome-stable
+```
+
+#### 2. Add Bash Alias
+```bash
+echo "alias chrome-debug='mkdir -p /tmp/chrome-debug-profile && google-chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-debug-profile --no-sandbox > /tmp/chrome.log 2>&1 &'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+#### 3. Configure MCP Server
+
+Add to `~/.claude/settings.json` inside `mcpServers`:
+```json
+"chrome-devtools": {
+  "command": "npx",
+  "args": ["-y", "chrome-devtools-mcp@latest", "--browserUrl", "http://localhost:9222"],
+  "env": {}
+}
+```
+
+**Restart Claude Code after adding the MCP config.**
+
+### Other Platforms
+
+**Windows (native):**
+```cmd
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222
+```
+
+**macOS:**
+```bash
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+```
+
+**Linux:**
+```bash
+google-chrome --remote-debugging-port=9222
+```
+
 ### Install Plugin
 
 ```bash
