@@ -104,19 +104,24 @@ BAD:  fill("email", "...") → fill("password", "...") → fill("name", "...")
 | Full screenshot (JPEG 50%) | 800-1,200 | Complex visual debugging |
 | Full screenshot (PNG) | 1,600-4,000 | Last resort, precise pixels needed |
 
-## Setup Check
+## Setup Check (IMPORTANT - Do This First!)
 
-Before using Gemini integration, verify setup:
+**Before ANY Chrome DevTools work, verify Gemini is configured:**
 
 ```bash
 node chrome-devtools-optimizer/scripts/test-connection.js
 ```
 
-If not configured, run interactive setup:
+If you see "Config not found" or connection errors, **IMMEDIATELY run setup:**
 
 ```bash
 node chrome-devtools-optimizer/scripts/setup.js
 ```
+
+You'll need a Gemini API key (free tier: 15 req/min, 1M tokens/day):
+- Get key at: https://aistudio.google.com/apikey
+
+**DO NOT SKIP THIS STEP** - Without Gemini, you lose 50% of the token savings when visual analysis is needed.
 
 ## Example Workflows
 
