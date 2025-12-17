@@ -3,8 +3,8 @@
 **Professional Security, Compliance, and Productivity Plugins for Claude Code**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
-[![Plugins](https://img.shields.io/badge/plugins-7-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
+[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
+[![Plugins](https://img.shields.io/badge/plugins-9-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
 
 A curated collection of production-ready security, compliance, and productivity plugins for Claude Code. Built on authoritative sources and rigorously tested with real-world data.
 
@@ -895,7 +895,7 @@ ClaudeSkillCollection/
 ├── CHANGELOG.md                    # Version history
 │
 ├── .claude-plugin/                 # Marketplace configuration
-│   └── marketplace.json            # Plugin catalog (7 plugins)
+│   └── marketplace.json            # Plugin catalog (9 plugins)
 │
 ├── plugin-security-checker/        # Plugin Security Checker v3.0.0
 │   ├── README.md
@@ -959,6 +959,21 @@ ClaudeSkillCollection/
 │   ├── agents/docx-smart-extractor.md
 │   ├── scripts/                    # extract, chunk, query scripts
 │   └── examples/
+│
+├── security-report-builder/        # Security Report Builder (v1.0.1)
+│   ├── README.md
+│   ├── .claude-plugin/plugin.json
+│   ├── agents/security-report-builder.md
+│   ├── scripts/                    # Report generation scripts
+│   └── templates/                  # Report templates
+│
+├── chrome-devtools-optimizer/      # Chrome DevTools Optimizer (v1.0.1)
+│   ├── README.md
+│   ├── .claude-plugin/plugin.json
+│   ├── agents/chrome-devtools-optimizer.md
+│   ├── scripts/                    # Gemini Flash integration
+│   ├── references/                 # Tool reference, token costs
+│   └── patterns/                   # Navigation, forms, debugging patterns
 │
 ├── private/wip-plugins/            # Private development workspace
 │   └── cybersecurity-policy-generator/  # Policy Generator (in beta)
@@ -1121,6 +1136,32 @@ All plugins are designed for **defensive security purposes**:
 ---
 
 ## 📋 Changelog
+
+### Version 2.1.0 (2025-12-17)
+**New Plugins:**
+- Released **Chrome DevTools Optimizer** v1.0.1
+  - Reduce token consumption by 70-80% when using Chrome DevTools MCP
+  - Smart snapshot-first strategy (text over images)
+  - Optional Gemini Flash integration for visual analysis (~$0.001/image vs $0.005)
+  - Decision trees, pattern guides for navigation, forms, debugging, visual checks
+  - Interactive setup wizard for Gemini API key
+
+- Released **Security Report Builder** v1.0.1
+  - Professional security report generator with HTML, PDF, and DOCX output
+  - Context-aware analysis to reduce false positives
+  - MITRE ATT&CK framework mapping
+
+**Plugin Fixes:**
+- Fixed all 9 plugin manifests for Claude Code compatibility
+  - Changed agents format from string to array: `"./agents/"` → `["agents/name.md"]`
+  - Removed unsupported keys: `$schema`, `category`, `requirements`, `scripts`
+  - Moved plugin.json to `.claude-plugin/` directory where needed
+
+**Marketplace Updates:**
+- Updated marketplace to 9 total plugins (was 8)
+- Version bump to 2.1.0
+
+---
 
 ### Version 2.0.0 (2025-10-24)
 **New Plugin Release:**
