@@ -81,6 +81,30 @@ else
     fi
 fi
 
+# Step 4: Check Gemini API Setup
+echo ""
+echo "🔑 Step 4: Checking Gemini API configuration..."
+GEMINI_CONFIG="$HOME/.config/chrome-devtools-optimizer/config.json"
+
+if [ -f "$GEMINI_CONFIG" ] && jq -e '.geminiApiKey' "$GEMINI_CONFIG" >/dev/null 2>&1; then
+    MASKED_KEY=$(jq -r '.geminiApiKey' "$GEMINI_CONFIG" | sed 's/\(.\{8\}\).*\(.\{4\}\)$/\1...\2/')
+    echo -e "${GREEN}✓ Gemini API configured: $MASKED_KEY${NC}"
+else
+    echo -e "${YELLOW}⚠️  Gemini API not configured${NC}"
+    echo ""
+    echo "Gemini Flash provides 80% token savings on visual analysis."
+    echo "Free tier: 15 requests/min, 1M tokens/day"
+    echo "Get your API key at: https://aistudio.google.com/apikey"
+    echo ""
+    read -p "Do you want to configure Gemini now? (Y/n): " SETUP_GEMINI
+    if [ "$SETUP_GEMINI" != "n" ] && [ "$SETUP_GEMINI" != "N" ]; then
+        SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+        node "$SCRIPT_DIR/setup.js"
+    else
+        echo -e "${YELLOW}Skipped. Run later: node scripts/setup.js${NC}"
+    fi
+fi
+
 # Summary
 echo ""
 echo "======================================"
@@ -90,6 +114,10 @@ echo "Usage:"
 echo "  1. Start Chrome:  chrome-debug"
 echo "  2. Open new terminal or run: source ~/.bashrc"
 echo "  3. In Claude Code, use: list_pages, take_snapshot, click, fill, etc."
+echo ""
+echo "Gemini Integration (for visual analysis):"
+echo "  - Test: node scripts/test-connection.js"
+echo "  - Setup: node scripts/setup.js"
 echo ""
 echo "Troubleshooting:"
 echo "  - Check Chrome logs: cat /tmp/chrome.log"

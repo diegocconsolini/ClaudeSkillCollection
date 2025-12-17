@@ -13,10 +13,23 @@ grep -q "chrome-debug" ~/.bashrc || echo "alias chrome-debug='mkdir -p /tmp/chro
 jq -e '.mcpServers["chrome-devtools"]' ~/.claude/settings.json >/dev/null 2>&1 || (jq '.mcpServers["chrome-devtools"] = {"command":"npx","args":["-y","chrome-devtools-mcp@latest","--browserUrl","http://localhost:9222"],"env":{}}' ~/.claude/settings.json > /tmp/s.tmp && mv /tmp/s.tmp ~/.claude/settings.json && echo "Restart Claude Code")
 ```
 
+## Gemini API Setup (REQUIRED for full optimization)
+
+```bash
+# Test if configured
+node chrome-devtools-optimizer/scripts/test-connection.js
+
+# If not configured, run setup (get free key: https://aistudio.google.com/apikey)
+node chrome-devtools-optimizer/scripts/setup.js
+```
+
+Without Gemini, you lose 50% of savings on visual analysis tasks.
+
 ## Usage
 
 1. Start Chrome: `chrome-debug`
-2. Use optimized MCP tools (see decision tree below)
+2. Verify Gemini: `node scripts/test-connection.js`
+3. Use optimized MCP tools (see decision tree below)
 
 ## Token Optimization Decision Tree
 
