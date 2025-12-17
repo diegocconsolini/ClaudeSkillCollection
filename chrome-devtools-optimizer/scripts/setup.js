@@ -7,9 +7,53 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const https = require('https');
 
 const CONFIG_DIR = path.join(require('os').homedir(), '.config', 'chrome-devtools-optimizer');
 const CONFIG_FILE = path.join(CONFIG_DIR, 'config.json');
+
+// Test API connection
+function testAPI(config) {
+  return new Promise((resolve, reject) => {
+    const payload = JSON.stringify({
+      contents: [{ parts: [{ text: 'Reply with exactly: OK' }] }],
+      generationConfig: { temperature: 0, maxOutputTokens: 10 }
+    });
+
+    const options = {
+      hostname: 'generativelanguage.googleapis.com',
+      port: 443,
+      path: `/v1beta/models/${config.model}:generateContent?key=${config.geminiApiKey}`,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(payload)
+      }
+    };
+
+    const req = https.request(options, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const response = JSON.parse(data);
+          if (response.error) {
+            reject(new Error(response.error.message));
+            return;
+          }
+          const text = response.candidates?.[0]?.content?.parts?.[0]?.text;
+          resolve({ status: res.statusCode, response: text });
+        } catch (e) {
+          reject(new Error(`Parse error: ${e.message}`));
+        }
+      });
+    });
+
+    req.on('error', reject);
+    req.write(payload);
+    req.end();
+  });
+}
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -71,9 +115,26 @@ async function main() {
   fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
 
   console.log('\n✓ Configuration saved to:', CONFIG_FILE);
-  console.log('\nSetup complete! You can now use:');
-  console.log('  node scripts/process-screenshot.js <image_file_or_base64>');
-  console.log('  node scripts/test-connection.js');
+
+  // Auto-test the connection
+  console.log('\n🔄 Testing API connection...');
+  try {
+    const result = await testAPI(config);
+    console.log('✅ API test passed! Response:', result.response?.trim());
+    console.log('\n==========================================');
+    console.log('  Setup complete! Ready to use.');
+    console.log('==========================================');
+    console.log('\nUsage:');
+    console.log('  node scripts/process-screenshot.js <image_file_or_base64>');
+  } catch (error) {
+    console.log('❌ API test failed:', error.message);
+    console.log('\nPossible issues:');
+    console.log('  - Invalid API key');
+    console.log('  - API quota exceeded');
+    console.log('  - Network connectivity');
+    console.log('\nGet a new key at: https://aistudio.google.com/apikey');
+    console.log('Then run: node scripts/setup.js');
+  }
 
   rl.close();
 }
