@@ -1,13 +1,13 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Unified threat intelligence mappings: Dangerous code patterns → ATT&CK + ATLAS + OWASP + CWE + CVE",
-  "last_updated": "2025-10-23",
+  "last_updated": "2025-12-18",
   "frameworks": {
-    "mitre_attack": "v14.1",
+    "mitre_attack": "v18.1",
     "mitre_atlas": "v4.5.0",
     "owasp_api": "2023",
     "owasp_top10": "2021",
-    "cwe": "4.13"
+    "cwe": "4.14"
   },
   "mappings": {
     "subprocess.run_shell_true": {

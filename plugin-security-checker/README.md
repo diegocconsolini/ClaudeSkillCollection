@@ -1,8 +1,8 @@
-# Plugin Security Checker v3.0.0
+# Plugin Security Checker v3.2.0
 
 Static analysis tool for Claude Code plugins with 91 specialized pattern detection agents.
 
-## Current Status (October 23, 2025)
+## Current Status (December 2025)
 
 **Phase 3 Complete: IntelligentOrchestrator**
 
@@ -123,7 +123,86 @@ archive/
 - Consensus voting with conflict resolution
 - Adaptive routing enabled
 
+## Updating Threat Intelligence
+
+The scanner uses MITRE ATT&CK and ATLAS frameworks for threat intelligence. Keep the data current:
+
+### Check for Updates
+
+```bash
+# Check if updates are available
+python3 scripts/scan_plugin.py --check-updates
+```
+
+### Update Before Scanning
+
+```bash
+# Update threat data then scan
+python3 scripts/scan_plugin.py --update /path/to/plugin
+
+# Or update separately
+python3 -c "
+from scripts.taxii_updater import TAXIIUpdater
+updater = TAXIIUpdater()
+if updater.check_for_updates():
+    updater.update_all()
+"
+```
+
+### Manual Update (Shell Script)
+
+```bash
+# Download latest STIX data from GitHub
+bash scripts/download_attack_data.sh
+```
+
+### Data Sources
+
+| Source | Current Version | Update Frequency |
+|--------|-----------------|------------------|
+| MITRE ATT&CK (Enterprise) | v18.1 | Quarterly |
+| MITRE ATT&CK (Mobile) | v18.1 | Quarterly |
+| MITRE ATT&CK (ICS) | v18.1 | Quarterly |
+| MITRE ATLAS | v4.5.0 | As needed |
+| OWASP Top 10 | 2021 | ~4 years |
+| OWASP API | 2023 | ~2 years |
+| CWE | 4.14 | Quarterly |
+
+### Dependencies for Updates
+
+```bash
+pip3 install taxii2-client stix2
+```
+
+### Version Management
+
+All version numbers are managed from a single source of truth: `version.json`
+
+```bash
+# Preview version sync
+python3 scripts/sync_versions.py
+
+# Apply version changes across all files
+python3 scripts/sync_versions.py --apply
+```
+
+**Files synced from version.json:**
+- `.claude-plugin/plugin.json` (plugin version)
+- `README.md` (header, data source table)
+- `agents/plugin-security-checker.md` (version references)
+- `references/threat_mappings.json` (framework versions)
+- `scripts/scan_plugin.py` (scanner version constant)
+
 ## Changelog
+
+### v3.2.0 (December 2025)
+- Added `--update` and `--check-updates` CLI flags
+- Added `version.json` as single source of truth for versions
+- Added `sync_versions.py` script for version management
+- Updated STIX data to ATT&CK v18.1 (November 2025)
+- Updated threat_mappings.json to ATT&CK v18.1
+- Documented threat intelligence update procedures
+- Synced version numbers across all files
 
 ### v3.0.0 (October 23, 2025)
 - IntelligentOrchestrator with consensus voting

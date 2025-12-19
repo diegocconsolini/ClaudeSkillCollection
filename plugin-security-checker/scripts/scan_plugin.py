@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 Plugin Security Checker - Main Scanner
-Version: 1.0.0
 
 A SUPPORTING TOOL for preliminary security checks of Claude Code plugins.
 
@@ -20,6 +19,21 @@ from pathlib import Path
 from typing import Dict, List, Any, Optional
 from dataclasses import dataclass, asdict
 from datetime import datetime
+
+
+def get_version_info() -> Dict[str, Any]:
+    """Load version info from version.json (single source of truth)"""
+    script_dir = Path(__file__).parent
+    version_file = script_dir.parent / "version.json"
+    try:
+        with open(version_file, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {"plugin_version": "unknown", "threat_intel": {}, "last_updated": "unknown"}
+
+
+VERSION_INFO = get_version_info()
+PLUGIN_VERSION = VERSION_INFO.get("plugin_version", "unknown")
 
 
 @dataclass
@@ -602,7 +616,7 @@ class PluginScanner:
             "metadata": {
                 "plugin_path": str(self.plugin_path),
                 "scan_date": datetime.now().isoformat(),
-                "scanner_version": "1.0.0",
+                "scanner_version": PLUGIN_VERSION,
                 "total_findings": len(self.findings),
                 "risk_level": risk_level,
                 "risk_score": total_score,
@@ -755,6 +769,8 @@ Examples:
   %(prog)s /path/to/plugin
   %(prog)s /path/to/plugin --output report.json
   %(prog)s /path/to/plugin --format markdown --output report.md
+  %(prog)s --check-updates                    # Check for threat intel updates
+  %(prog)s --update /path/to/plugin           # Update data then scan
 
 IMPORTANT: This tool is for preliminary checks only. Users are responsible
 for reviewing plugins before installation. See --disclaimer for details.
@@ -791,6 +807,18 @@ for reviewing plugins before installation. See --disclaimer for details.
         help='Show security disclaimer and exit'
     )
 
+    parser.add_argument(
+        '--update',
+        action='store_true',
+        help='Update MITRE ATT&CK/ATLAS threat intelligence data before scanning'
+    )
+
+    parser.add_argument(
+        '--check-updates',
+        action='store_true',
+        help='Check if threat intelligence updates are available and exit'
+    )
+
     args = parser.parse_args()
 
     # Show disclaimer if requested
@@ -798,6 +826,42 @@ for reviewing plugins before installation. See --disclaimer for details.
         scanner = PluginScanner(".", ".")
         print(scanner._get_disclaimer())
         sys.exit(0)
+
+    # Handle threat intelligence updates
+    if args.update or args.check_updates:
+        try:
+            script_dir = Path(__file__).parent
+            sys.path.insert(0, str(script_dir))
+            from taxii_updater import TAXIIUpdater
+
+            updater = TAXIIUpdater()
+
+            if args.check_updates:
+                print("[*] Checking for threat intelligence updates...")
+                status = updater.get_update_status()
+                print(f"    Enterprise ATT&CK: {status.get('enterprise', {}).get('version', 'unknown')}")
+                print(f"    Mobile ATT&CK: {status.get('mobile', {}).get('version', 'unknown')}")
+                print(f"    ICS ATT&CK: {status.get('ics', {}).get('version', 'unknown')}")
+
+                if updater.check_for_updates():
+                    print("[!] Updates available! Run with --update to download.")
+                else:
+                    print("[+] Threat intelligence data is up to date.")
+                sys.exit(0)
+
+            if args.update:
+                print("[*] Updating threat intelligence data...")
+                if updater.check_for_updates():
+                    updater.update_all()
+                    print("[+] Threat intelligence data updated successfully.")
+                else:
+                    print("[+] Threat intelligence data is already up to date.")
+
+        except ImportError as e:
+            print(f"[!] Warning: Could not load TAXII updater: {e}", file=sys.stderr)
+            print("[!] Install dependencies: pip3 install taxii2-client stix2", file=sys.stderr)
+            if args.check_updates:
+                sys.exit(1)
 
     # Determine references path
     if args.references:
