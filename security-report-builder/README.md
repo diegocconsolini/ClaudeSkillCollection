@@ -215,6 +215,6 @@ Built for the Claude Code plugin ecosystem with inspiration from industry-leadin
 
 ---
 
-**Version:** 1.0.0
+**Version:** 1.2.0
 **Status:** Production Ready
-**Author:** Security Team
+**Author:** Diego Consolini

@@ -213,15 +213,15 @@
     },
     {
       "name": "security-report-builder",
-      "description": "Professional security report generator with HTML, PDF, and DOCX output. Reduces false positives through context-aware analysis.",
+      "description": "Professional security report generator with HTML, PDF, and DOCX output. Transforms raw plugin-security-checker results into executive-ready reports with context-aware analysis reducing false positives by 85-90%. Features MITRE ATT&CK/ATLAS/OWASP/CWE framework mappings, customizable branding, and three report templates (Executive, Technical, Compliance). Includes unified version system and comprehensive severity adjustment rules.",
       "source": "./security-report-builder",
-      "version": "1.0.1",
+      "version": "1.2.0",
       "author": {
         "name": "Diego Consolini",
         "email": "diego@diegocon.nl"
       },
       "category": "security",
-      "keywords": ["security-reports", "vulnerability-assessment", "pdf", "html", "docx", "mitre-attack", "compliance", "false-positive-reduction", "reporting", "documentation"],
+      "keywords": ["security-reports", "vulnerability-assessment", "pdf", "html", "docx", "mitre-attack", "mitre-atlas", "owasp", "cwe", "compliance", "false-positive-reduction", "reporting", "documentation", "executive-reports", "risk-assessment"],
       "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/security-report-builder",
       "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
       "license": "MIT"
