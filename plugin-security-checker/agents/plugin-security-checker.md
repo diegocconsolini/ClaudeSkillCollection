@@ -68,7 +68,7 @@ Use this agent when:
 - User mentions security vulnerabilities, malware, or suspicious code
 - User needs to generate a security report for a plugin
 
-## Core Features (v3.0.0)
+## Core Features (v3.2.0)
 
 ### 1. IntelligentOrchestrator
 - **91 specialized pattern agents** (17 CRITICAL, 39 HIGH, 23 MEDIUM, 2 LOW)
@@ -301,7 +301,7 @@ Found a vulnerability pattern we're missing? Have suggestions for improving dete
 
 ## Version
 
-Plugin Security Checker v3.0.0
+Plugin Security Checker v3.2.0
 
 ---
 
