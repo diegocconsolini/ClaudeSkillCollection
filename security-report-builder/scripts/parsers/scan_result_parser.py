@@ -66,6 +66,9 @@ class ScanResultParser:
             # Update statistics
             self._update_stats(result)
 
+            # Add to results list
+            self.results.append(result)
+
             return result
 
         except json.JSONDecodeError as e:
