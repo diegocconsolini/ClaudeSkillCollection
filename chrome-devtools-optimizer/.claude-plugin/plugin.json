@@ -10,5 +10,5 @@
   "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/chrome-devtools-optimizer",
   "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
   "keywords": ["chrome", "devtools", "mcp", "optimization", "tokens", "screenshots", "gemini", "vision"],
-  "agents": ["agents/chrome-devtools-optimizer.md"]
+  "agents": ["./agents/chrome-devtools-optimizer.md"]
 }

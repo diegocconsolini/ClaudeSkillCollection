@@ -6,5 +6,5 @@
     "name": "Diego Consolini",
     "email": "diego@diegocon.nl"
   },
-  "agents": ["agents/cybersecurity-policy-generator.md"]
+  "agents": ["./agents/cybersecurity-policy-generator.md"]
 }

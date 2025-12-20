@@ -1,9 +1,8 @@
 ---
 name: docx-smart-extractor
 description: Extract and analyze Word documents (1MB-50MB+) with minimal token usage through local extraction, semantic chunking by headings, and intelligent caching.
-capabilities: ["word-extraction", "table-extraction", "heading-structure", "token-optimization", "document-analysis", "policy-documents", "contract-analysis", "technical-reports"]
-tools: Read, Bash
-model: inherit
+trigger: When user provides Word document path (.docx), needs document extraction, encounters Word file too large errors, or wants to analyze policy documents, contracts, or technical reports
+tools: [Bash, Read, Write, Grep, Glob]
 ---
 
 # DOCX Smart Extractor Agent

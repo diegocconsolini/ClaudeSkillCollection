@@ -21,7 +21,5 @@
     "reporting",
     "documentation"
   ],
-  "agents": [
-    "agents/security-report-builder.md"
-  ]
+  "agents": ["./agents/security-report-builder.md"]
 }
