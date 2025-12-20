@@ -101,30 +101,29 @@ python3 <plugin>/scripts/sync_versions.py --apply
 
 ---
 
-## Session Summary (2025-12-19)
+## Session Summary (2025-12-20)
 
-### Completed: security-report-builder v1.2.0
+### Completed This Session
 
-**Changes Made:**
-1. Implemented unified version system (version.json + sync_versions.py)
-2. Fixed bug: `scan_result_parser.py` - parse_file() wasn't adding to results list
-3. Fixed bug: `context_analyzer.py` - rule keys not normalized to lowercase
-4. Fixed bug: `generate_report.py` - logger used before defined
-5. Added `references/framework_mappings.json` (was empty)
-6. Updated agent frontmatter (added name, trigger, tools)
-7. Updated marketplace.json with enhanced description
+| Commit | Plugin | Version | Issue |
+|--------|--------|---------|-------|
+| `ac8e000` | plugin-security-checker | v3.2.0 | #6 ✅ Closed |
+| `ee6fbd8` | security-report-builder | v1.2.0 | #13 ✅ Closed |
 
-**Test Results:** ✅ All passing
-- HTML report generation working
-- Context-aware analysis correctly identifies false positives
-- Version sync verified across all files
+**plugin-security-checker v3.2.0:**
+- Unified version system (version.json + sync_versions.py)
+- ATT&CK v18.1, ATLAS v4.5.0, OWASP 2021/2023, CWE 4.14
+- --update and --check-updates CLI flags
 
-### Pending Commits
+**security-report-builder v1.2.0:**
+- Unified version system implemented
+- Fixed: scan_result_parser.py - parse_file() results list bug
+- Fixed: context_analyzer.py - case-insensitive rule matching
+- Fixed: generate_report.py - logger initialization
+- Added: references/framework_mappings.json
+- Updated: agent frontmatter (name, trigger, tools)
 
-1. **plugin-security-checker v3.2.0** - Ready to commit (Issue #6)
-2. **security-report-builder v1.2.0** - Ready to commit (Issue #13)
-
-### Remaining Plugin Reviews (Issues #7-#12, #14)
+### Remaining Plugin Reviews
 
 | Issue | Plugin | Version | Status |
 |-------|--------|---------|--------|
@@ -138,9 +137,9 @@ python3 <plugin>/scripts/sync_versions.py --apply
 
 ### Review Checklist for Each Plugin
 
-1. Check plugin.json manifest format
+1. Check plugin.json manifest format (agents as array of .md strings)
 2. Check agent file frontmatter (name, description, trigger, tools)
-3. Validate JSON files
-4. Test main scripts
-5. Implement unified version system if missing
-6. Update marketplace.json
+3. Validate all JSON files
+4. Test main scripts compile and run
+5. Implement unified version system (version.json + sync_versions.py)
+6. Update marketplace.json with new version
