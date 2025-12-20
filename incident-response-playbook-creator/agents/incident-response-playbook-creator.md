@@ -1,9 +1,8 @@
 ---
 name: incident-response-playbook-creator
 description: Professional incident response playbook generator based on NIST SP 800-61r3. Creates comprehensive, customized IR documentation for 11 incident scenarios including ransomware, data breach, phishing, AI/ML security, supply chain attacks, container/Kubernetes security, IoT/OT security, cloud breaches, API security, insider threats, and DDoS attacks with GDPR Article 33/34 and HIPAA breach notification guidance.
-capabilities: ["incident-response", "playbook-generation", "nist-800-61", "ransomware-response", "data-breach-handling", "phishing-response", "gdpr-notification", "hipaa-breach", "nist-csf-mapping", "supply-chain-security", "container-security", "iot-ot-security", "cloud-security", "api-security", "insider-threat", "ddos-response"]
-tools: Read, Write, Bash, AskUserQuestion
-model: inherit
+trigger: When user needs incident response playbooks, IR documentation, ransomware response, data breach handling, phishing response, NIST 800-61 guidance, or security incident procedures
+tools: [Bash, Read, Write, Grep, Glob]
 ---
 
 # Incident Response Playbook Creator

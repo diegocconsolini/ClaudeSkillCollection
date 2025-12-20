@@ -1,0 +1,13 @@
+{
+  "plugin_version": "2.2.0",
+  "frameworks": {
+    "nist_sp_800_61": "r3 (2025)",
+    "nist_sp_800_161": "r1",
+    "nist_sp_800_190": "2017",
+    "nist_sp_800_82": "r3",
+    "nist_sp_800_218": "2022",
+    "nist_csf": "2.0",
+    "cisa": "2024"
+  },
+  "last_updated": "2025-12-20"
+}

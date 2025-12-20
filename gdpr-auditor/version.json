@@ -1,0 +1,8 @@
+{
+  "plugin_version": "1.2.0",
+  "frameworks": {
+    "gdpr": "2016/679",
+    "edpb_guidelines": "2023"
+  },
+  "last_updated": "2025-12-20"
+}

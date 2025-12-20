@@ -4,7 +4,7 @@ A comprehensive Claude Code skill for auditing applications, codebases, and syst
 
 ## Version
 
-**1.0.0** - Production Ready
+**1.2.0** - Production Ready
 
 ## Overview
 
