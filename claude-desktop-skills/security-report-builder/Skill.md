@@ -1,8 +1,17 @@
-# Security Report Builder
+---
+name: security-report-builder
+description: Transform plugin security scanner results into professional reports (HTML, PDF, DOCX) with intelligent false positive filtering and MITRE ATT&CK/OWASP integration. Reduces false positive rate from 85-90% to under 20%.
+license: MIT
+compatibility: claude-desktop
+metadata:
+  version: 1.0.1
+  author: Diego Consolini
+  category: security
+  runtime: python3
+  dependencies: requirements.txt
+---
 
-**Version:** 1.0.0
-**Category:** Security, Reporting, Documentation
-**Author:** Security Team
+# Security Report Builder
 
 ## Overview
 

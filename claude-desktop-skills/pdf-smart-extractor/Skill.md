@@ -1,8 +1,19 @@
+---
+name: pdf-smart-extractor
+description: Extract and analyze large PDFs (1MB-50MB+) with minimal token usage through local extraction, semantic chunking, and persistent caching. Enables 12-100x faster querying for technical documents like NIST, ISO, and AWS guides.
+license: MIT
+compatibility: claude-desktop
+metadata:
+  version: 2.2.0
+  author: Diego Consolini
+  category: productivity
+  runtime: python3
+  dependencies: requirements.txt
+---
+
 # PDF Smart Extractor
 
 **Extract and analyze large PDFs with minimal token usage**
-
----
 
 ## 🚨 AUTO-TRIGGER RULES (Read This First!)
 
