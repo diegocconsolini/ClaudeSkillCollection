@@ -1,98 +1,168 @@
-# Claude Desktop Skills - ClaudeSkillCollection
+# Claude Desktop Skills Pack
 
-This directory contains Claude Desktop skill versions of the 9 ClaudeSkillCollection plugins. These are optimized for Claude Desktop's skill system while maintaining the original Claude Code plugins unchanged.
+**Version:** 1.0.0
+**Release Date:** 2025-12-25
+**Status:** 8 of 9 skills ready for distribution
+
+## Overview
+
+Professional skills pack for Claude Desktop featuring security, compliance, and productivity tools. All skills derived from the ClaudeSkillCollection plugin repository with proper Claude Desktop packaging.
 
 ## Available Skills
 
-### Security & Compliance (4 skills)
-1. **GDPR Auditor** (v1.2.0) - GDPR compliance auditing for codebases and databases
-2. **Plugin Security Checker** (v3.2.0) - Security scanner for Claude Code plugins with 91 pattern agents
-3. **Cybersecurity Policy Generator** (v1.2.0) - Generate policies from 51 SANS/CIS templates
-4. **Incident Response Playbook Creator** (v2.2.0) - IR playbooks for 11 incident scenarios
+### Security & Compliance (5 skills)
 
-### Productivity & Optimization (2 skills)
-5. **Chrome DevTools Optimizer** (v1.0.1) - 70-80% token reduction for Chrome DevTools MCP
-6. **Security Report Builder** (v1.0.1) - Generate HTML/PDF/DOCX security reports
+**1. GDPR Auditor** (57 KB)
+- Analyze codebases, databases, and systems for GDPR compliance
+- Identify data protection issues and compliance gaps
+- Generate actionable audit reports
 
-### Document Processing (3 skills)
-7. **PDF Smart Extractor** (v2.2.0) - Extract large PDFs (3MB-10MB+) with minimal tokens
-8. **XLSX Smart Extractor** (v2.2.0) - Analyze Excel workbooks (1MB-50MB+) efficiently
-9. **DOCX Smart Extractor** (v2.2.0) - Process Word documents with token optimization
+**2. Cybersecurity Policy Generator** (168 KB)
+- Generate enterprise security policies from 51 professional templates
+- Support for ISO 27001, SOC 2, NIST, CIS Controls
+- Multiple output formats: Markdown, Word, HTML, PDF
 
-## Quick Start
+**3. Incident Response Playbook Creator** (85 KB)
+- Create IR playbooks based on NIST SP 800-61r3 and CISA guidance
+- 11 incident scenarios (ransomware, data breach, phishing, supply chain, etc.)
+- GDPR and HIPAA compliance considerations included
 
-### Installation
+**4. Security Report Builder** (35 KB)
+- Transform security scan results into professional reports
+- Intelligent false positive filtering (85-90% → <20%)
+- MITRE ATT&CK and OWASP Top 10 integration
 
-1. **Copy skill to Claude Desktop:**
-   ```bash
-   cp -r gdpr-auditor ~/.claude/skills/
-   ```
+**5. Plugin Security Checker** (pending)
+- ⏸️ **Size Issue:** 51MB uncompressed (exceeds 30MB limit)
+- 91 specialized pattern agents for vulnerability detection
+- MITRE ATT&CK/ATLAS framework integration
+- **Status:** Waiting for size optimization (STIX data: 50MB)
 
-2. **Install dependencies (if required):**
-   ```bash
-   cd ~/.claude/skills/gdpr-auditor
-   pip install -r requirements.txt  # For Python skills
-   ```
+### Productivity & Optimization (3 skills)
 
-3. **Follow skill-specific setup:**
-   - See each skill's SKILL.md for detailed instructions
-   - Some skills require API keys or MCP servers
+**6. PDF Smart Extractor** (17 KB)
+- Extract and analyze large PDFs (1MB-50MB+) efficiently
+- Semantic chunking with 12-100x token reduction
+- Persistent caching for instant reuse
 
-### Validation
+**7. Excel Smart Extractor** (16 KB)
+- Analyze Excel workbooks (1MB-50MB+) with minimal tokens
+- Preserve formulas, formatting, and table structures
+- Sheet-based semantic chunking
 
-```bash
-# Install validator
-npm install -g @anthropic/skills-ref
+**8. Word Smart Extractor** (14 KB)
+- Process Word documents (1MB-50MB+) efficiently
+- Preserve formatting, tables, and document structure
+- Semantic chunking by headings
 
-# Validate a skill
-skills-ref validate ./gdpr-auditor
+**9. Chrome DevTools Optimizer** (30 KB)
+- Reduce token consumption by 70-80% with Chrome DevTools MCP
+- Smart snapshot strategies and Gemini Flash integration
+- Decision trees and automated optimization workflows
+
+## Installation
+
+### Individual Skill Installation
+
+1. Download skill ZIP from `packages/` directory
+2. Open Claude Desktop
+3. Go to **Skills** menu
+4. Click **Import Skill**
+5. Select the ZIP file
+6. Confirm import
+
+### Batch Installation
+
+Import all 8 ready skills at once:
+1. Open Claude Desktop
+2. Go to **Skills** menu
+3. Click **Import Skill**
+4. Select all ZIP files from `packages/` directory
+5. Confirm batch import
+
+## Package Format
+
+All skills follow Claude Desktop format requirements:
+
+```
+skill-name.zip
+└── skill-name/
+    ├── Skill.md          # Entry file (REQUIRED)
+    ├── scripts/          # Optional scripts
+    ├── references/       # Optional reference data
+    └── requirements.txt  # Python dependencies (if applicable)
 ```
 
-## Skill Categories
+**Critical Requirements:**
+- Entry file MUST be named **exactly** `Skill.md` (capital S, lowercase kill)
+- MUST start with YAML frontmatter (`---`)
+- ZIP must have skill folder as root (not nested)
+- Uncompressed size limit: 30MB
 
-### No Dependencies (Ready to Use)
-- GDPR Auditor
-- Cybersecurity Policy Generator
-- Incident Response Playbook Creator
+## Dependencies
 
-### Python Dependencies
-- PDF Smart Extractor (`pip install pymupdf>=1.23.0`)
-- XLSX Smart Extractor (`pip install openpyxl`)
-- DOCX Smart Extractor (`pip install python-docx`)
-- Plugin Security Checker (`pip install -r requirements.txt`)
+### Python Skills
+Most skills require Python 3.8+. Install dependencies:
 
-### External APIs (Optional)
-- Chrome DevTools Optimizer (Gemini Flash API for 50% additional token savings)
+```bash
+pip install -r skill-name/requirements.txt
+```
 
-### MCP Server Requirements
-- Chrome DevTools Optimizer (requires chrome-devtools MCP server)
+**Specific dependencies:**
+- **pdf-smart-extractor:** pymupdf
+- **xlsx-smart-extractor:** openpyxl, pandas
+- **docx-smart-extractor:** python-docx
+- **plugin-security-checker:** stix2, taxii2-client, mitreattack-python
 
-## Differences from Claude Code Plugins
+### Node.js Skills
+- **chrome-devtools-optimizer:** Node.js 14+ (uses npx for dependencies)
 
-These Desktop skills are **additional versions**, not replacements:
+## Documentation
 
-| Aspect | Claude Code Plugin | Desktop Skill |
-|--------|-------------------|---------------|
-| Entry file | `agents/*.md` | `SKILL.md` |
-| Manifest | `.claude-plugin/plugin.json` | Frontmatter in SKILL.md |
-| Frontmatter | `capabilities`, `tools`, `model` | `name`, `description`, `license` |
-| Loading | Plugin system | Skill system |
-| Location | Plugin directory | `~/.claude/skills/` |
+- **CHANGELOG.md** - Version history and release notes
+- **MIGRATION_GUIDE.md** - Claude Code plugins vs Desktop skills comparison
+- Each skill includes comprehensive documentation in its `Skill.md` file
 
-## Contributing
+## Known Issues
 
-These skills are derived from ClaudeSkillCollection plugins. To contribute:
+**1. Plugin Security Checker - Size Limit**
+- **Issue:** 51MB uncompressed (30MB limit)
+- **Cause:** 50MB STIX threat intelligence data
+- **Status:** Pending decision on data removal or separate download
+- **Original:** Preserved in `/plugin-security-checker/` directory
 
-1. Report issues in the main repository
-2. Suggest improvements to skill packaging
-3. Test skills on different platforms (macOS/Linux/Windows)
+## Comparison: Claude Code vs Desktop
+
+| Feature | Claude Code Plugin | Claude Desktop Skill |
+|---------|-------------------|---------------------|
+| Entry file | `agents/*.md` | `Skill.md` |
+| Installation | `/plugin install` | Import ZIP via GUI |
+| Packaging | Git repository | ZIP file |
+| Frontmatter | `capabilities`, `tools`, `model` | `license`, `compatibility`, `metadata` |
+| Size limit | No limit | 30MB uncompressed |
+
+**Both versions available** - Choose based on your workflow preference.
+
+## Support
+
+- **Issues:** Original plugin repository
+- **Documentation:** See individual Skill.md files
+- **Migration Help:** See MIGRATION_GUIDE.md
+
+## Version History
+
+- **1.0.0** (2025-12-25) - Initial release with 8 distributable skills
 
 ## License
 
-All skills are licensed under MIT License (see individual skill directories).
+All skills: MIT License
 
-## Resources
+## Credits
 
-- **Original Plugins:** https://github.com/diegocconsolini/ClaudeSkillCollection
-- **Claude Desktop Docs:** https://docs.anthropic.com/claude/docs/desktop
-- **Skill Spec:** https://agentskills.io/specification
+Created by Diego Consolini
+Based on NIST frameworks, MITRE ATT&CK/ATLAS, GDPR, and HIPAA regulations
+
+---
+
+**Total Package Size:** 425 KB (8 distributable ZIP files)
+**Ready for Claude Desktop:** 8 of 9 skills ✅
