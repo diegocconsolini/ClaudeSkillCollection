@@ -9,6 +9,19 @@
   "license": "MIT",
   "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/security-report-builder",
   "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
-  "keywords": ["security-reports", "vulnerability-assessment", "pdf", "html", "docx", "mitre-attack", "compliance", "false-positive-reduction", "reporting", "documentation"],
-  "agents": ["agents/security-report-builder.md"]
+  "keywords": [
+    "security-reports",
+    "vulnerability-assessment",
+    "pdf",
+    "html",
+    "docx",
+    "mitre-attack",
+    "compliance",
+    "false-positive-reduction",
+    "reporting",
+    "documentation"
+  ],
+  "agents": [
+    "./agents/security-report-builder.md"
+  ]
 }

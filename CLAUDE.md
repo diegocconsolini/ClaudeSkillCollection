@@ -89,12 +89,13 @@ All plugins use the correct Claude Code manifest format:
   "version": "X.Y.Z",
   "description": "...",
   "author": { "name": "...", "email": "..." },
-  "agents": ["agents/plugin-name.md"]
+  "agents": ["./agents/plugin-name.md"]
 }
 ```
 
 **Important:**
 - `agents` must be an array of strings ending in `.md`
+- Agent paths **MUST** start with `./` (e.g., `"./agents/plugin-name.md"`)
 - Do NOT use: `$schema`, `category`, `requirements`, `scripts` (unsupported)
 - Plugin manifest goes in `.claude-plugin/plugin.json`
 

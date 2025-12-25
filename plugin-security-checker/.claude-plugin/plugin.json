@@ -6,5 +6,7 @@
     "name": "Diego Consolini",
     "email": "diego@diegocon.nl"
   },
-  "agents": ["agents/plugin-security-checker.md"]
+  "agents": [
+    "./agents/plugin-security-checker.md"
+  ]
 }
