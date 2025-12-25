@@ -1,10 +1,16 @@
-# Incident Response Playbook Creator
-
-**Version**: 2.0.0
-**Category**: Security
-**Author**: Diego Consolini
-
 ---
+name: incident-response-playbook-creator
+description: Generate comprehensive incident response playbooks based on NIST SP 800-61r3 and CISA guidance. Supports 11 incident scenarios including ransomware, data breach, phishing, supply chain attacks, and more. Includes GDPR and HIPAA compliance considerations.
+license: MIT
+compatibility: claude-desktop
+metadata:
+  version: 2.2.0
+  author: Diego Consolini
+  category: security
+  runtime: python3
+---
+
+# Incident Response Playbook Creator
 
 ## Overview
 
