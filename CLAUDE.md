@@ -2,55 +2,81 @@
 
 This is a Claude Code plugin marketplace containing 9 professional security, compliance, and productivity plugins.
 
-## ✅ COMPLETED: Claude Desktop Skills Pack v1.0.0
+## ✅ Claude Desktop Skills Pack v1.0.0 - RELEASED
 
-**Status:** All 9 skills packaged and ready for distribution
+**Status:** 8 of 9 skills ready for distribution (1 pending size optimization)
 **Location:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/`
 **Packages:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/packages/`
 
-### Skills Included (9/9)
-✅ **gdpr-auditor** (56 KB) - GDPR compliance auditing
+### Ready for Distribution (8/9)
+✅ **gdpr-auditor** (57 KB) - GDPR compliance auditing
 ✅ **cybersecurity-policy-generator** (168 KB) - Security policy generator
-✅ **incident-response-playbook-creator** (84 KB) - IR playbook creator (11 scenarios)
+✅ **incident-response-playbook-creator** (85 KB) - IR playbook creator (11 scenarios)
 ✅ **security-report-builder** (35 KB) - Security report generator
 ✅ **pdf-smart-extractor** (17 KB) - PDF extraction with caching
 ✅ **xlsx-smart-extractor** (16 KB) - Excel extraction with caching
 ✅ **docx-smart-extractor** (14 KB) - Word extraction with caching
-✅ **plugin-security-checker** (9.2 MB) - Plugin vulnerability scanner (91 agents)
 ✅ **chrome-devtools-optimizer** (30 KB) - Chrome DevTools token optimizer
 
+### Pending (1/9)
+⏸️ **plugin-security-checker** (9.2 MB) - Exceeds Claude Desktop 30MB uncompressed limit
+   - Issue: 50MB STIX data in `references/stix/`
+   - Options: Remove STIX data OR provide separate download instructions
+   - Original data preserved in plugin-security-checker/ directory
+
 ### Documentation
-✅ README.md - Skills catalog and installation guide
-✅ CHANGELOG.md - Version 1.0.0 release notes
-✅ MIGRATION_GUIDE.md - Claude Code vs Desktop comparison
+✅ **README.md** - Skills catalog and installation guide
+✅ **CHANGELOG.md** - Version 1.0.0 release notes
+✅ **MIGRATION_GUIDE.md** - Claude Code vs Desktop comparison
 
 ### Package Format
 All skills packaged as ZIP files with correct structure:
 ```
 skill-name.zip
 └── skill-name/
-    ├── Skill.md (capital S, lowercase kill)
-    ├── scripts/ (if applicable)
-    ├── references/ (if applicable)
+    ├── Skill.md (capital S, lowercase kill - REQUIRED)
+    ├── scripts/ (optional)
+    ├── references/ (optional)
     └── requirements.txt (Python skills only)
 ```
 
-**Total Package Size:** 9.8 MB (9 ZIP files)
+**Important:** All Skill.md files MUST:
+- Start with `---` (YAML frontmatter)
+- Have proper permissions (644, not executable)
+- Include required fields: `name`, `description`, `license`
+
+**Total Package Size:** 425 KB (8 distributable ZIP files)
 
 ## Repository Structure
 
 ```
 ClaudeSkillCollection/
-├── .claude-plugin/marketplace.json    # Marketplace manifest (9 plugins)
-├── plugin-security-checker/           # v3.2.0 - Plugin vulnerability scanner
-├── gdpr-auditor/                      # v1.2.0 - GDPR compliance auditing
-├── cybersecurity-policy-generator/    # v1.2.0 - Security policy generator
-├── incident-response-playbook-creator/# v2.2.0 - IR playbook generator
-├── pdf-smart-extractor/               # v2.2.0 - PDF extraction with caching
-├── xlsx-smart-extractor/              # v2.2.0 - Excel extraction with caching
-├── docx-smart-extractor/              # v2.2.0 - Word extraction with caching
-├── security-report-builder/           # v1.0.1 - Security report generator
-└── chrome-devtools-optimizer/         # v1.0.1 - Chrome DevTools token optimizer
+├── .claude-plugin/marketplace.json         # Marketplace manifest (9 plugins)
+│
+├── claude-desktop-skills/                  # Claude Desktop Skills Pack
+│   ├── README.md                           # Installation guide
+│   ├── CHANGELOG.md                        # Version history
+│   ├── MIGRATION_GUIDE.md                  # Code vs Desktop comparison
+│   ├── packages/                           # Distributable ZIP files (8 ready)
+│   ├── gdpr-auditor/                       # v1.2.0
+│   ├── cybersecurity-policy-generator/     # v1.2.0
+│   ├── incident-response-playbook-creator/ # v2.2.0
+│   ├── security-report-builder/            # v1.0.1
+│   ├── pdf-smart-extractor/                # v2.2.0
+│   ├── xlsx-smart-extractor/               # v2.2.0
+│   ├── docx-smart-extractor/               # v2.2.0
+│   ├── chrome-devtools-optimizer/          # v1.0.1
+│   └── plugin-security-checker/            # v3.2.0 (pending size optimization)
+│
+├── plugin-security-checker/                # Claude Code plugin
+├── gdpr-auditor/                           # Claude Code plugin
+├── cybersecurity-policy-generator/         # Claude Code plugin
+├── incident-response-playbook-creator/     # Claude Code plugin
+├── pdf-smart-extractor/                    # Claude Code plugin
+├── xlsx-smart-extractor/                   # Claude Code plugin
+├── docx-smart-extractor/                   # Claude Code plugin
+├── security-report-builder/                # Claude Code plugin
+└── chrome-devtools-optimizer/              # Claude Code plugin
 ```
 
 ## Plugin Manifest Format
@@ -101,14 +127,27 @@ done
 node -e "const p=JSON.parse(require('fs').readFileSync('plugin/.claude-plugin/plugin.json')); console.log(Array.isArray(p.agents) && p.agents.every(a => typeof a === 'string' && a.endsWith('.md')))"
 ```
 
-## Adding to Claude Code
+## Installation
+
+### Claude Desktop Skills (8 ready for use)
+
+**Location:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/packages/`
+
+Import ZIP files directly into Claude Desktop:
+1. Open Claude Desktop
+2. Go to Skills menu
+3. Click "Import Skill"
+4. Select ZIP file from packages/ directory
+
+### Claude Code Plugins (9 available)
 
 ```bash
 # Add marketplace
 /plugin marketplace add diegocconsolini/ClaudeSkillCollection
 
 # Install specific plugin
-/plugin install plugin-security-checker@security-compliance-marketplace
+/plugin install gdpr-auditor@security-compliance-marketplace
+/plugin install pdf-smart-extractor@security-compliance-marketplace
 ```
 
 ## Cache Locations
