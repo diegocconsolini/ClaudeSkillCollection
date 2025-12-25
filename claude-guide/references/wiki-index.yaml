@@ -1,0 +1,212 @@
+# Claude Code Wiki Index
+# Searchable reference for the claude-guide skill
+
+wiki_url: https://github.com/diegocconsolini/ClaudeSkillCollection/wiki
+
+categories:
+  getting-started:
+    description: New user onboarding
+    pages:
+      - name: Overview
+        file: Getting-Started.md
+        keywords: [start, begin, new, introduction]
+      - name: Installation
+        file: Getting-Started-Installation.md
+        keywords: [install, setup, npm, node, download]
+      - name: First Session
+        file: Getting-Started-First-Session.md
+        keywords: [first, begin, start, tutorial, walkthrough]
+      - name: Quick Reference
+        file: Getting-Started-Quick-Reference.md
+        keywords: [quick, reference, cheatsheet, commands, summary]
+
+  configuration:
+    description: Configuration and settings
+    pages:
+      - name: CLAUDE.md Guide
+        file: Configuration-CLAUDE-md.md
+        keywords: [claudemd, claude.md, instructions, project, memory]
+      - name: Memory Architecture
+        file: Configuration-Memory-Architecture.md
+        keywords: [memory, levels, priority, hierarchy, merge]
+      - name: Settings
+        file: Configuration-Settings.md
+        keywords: [settings, json, config, configuration]
+      - name: Permissions
+        file: Configuration-Permissions.md
+        keywords: [permissions, allow, deny, security, access]
+
+  mcp:
+    description: MCP Server configuration
+    pages:
+      - name: Configuration
+        file: MCP-Configuration.md
+        keywords: [mcp, server, setup, add, configure]
+      - name: Transports
+        file: MCP-Transports.md
+        keywords: [transport, http, stdio, sse, protocol]
+      - name: Scopes
+        file: MCP-Scopes.md
+        keywords: [scope, local, project, user, enterprise]
+      - name: Authentication
+        file: MCP-Authentication.md
+        keywords: [auth, token, oauth, api key, credentials]
+      - name: Troubleshooting
+        file: MCP-Troubleshooting.md
+        keywords: [mcp, error, fix, debug, issue]
+
+  plugins:
+    description: Plugin development and management
+    pages:
+      - name: Overview
+        file: Plugins.md
+        keywords: [plugin, extension, install, manage]
+      - name: Lifecycle
+        file: Plugins-Lifecycle.md
+        keywords: [lifecycle, load, enable, disable, state]
+      - name: Plugins vs MCP
+        file: Plugins-vs-MCP.md
+        keywords: [compare, difference, choose, when]
+      - name: Creating Plugins
+        file: Plugins-Creating.md
+        keywords: [create, develop, build, manifest, agent]
+
+  context:
+    description: Context optimization
+    pages:
+      - name: Overview
+        file: Context-Optimization.md
+        keywords: [context, optimize, token, limit, performance]
+      - name: What Consumes Context
+        file: Context-What-Consumes.md
+        keywords: [consume, use, token, cost, budget]
+      - name: Reduction Strategies
+        file: Context-Reduction-Strategies.md
+        keywords: [reduce, save, minimize, strategy, tips]
+      - name: Subagent Delegation
+        file: Context-Subagent-Delegation.md
+        keywords: [subagent, delegate, isolate, explore, parallel]
+
+  session:
+    description: Session management
+    pages:
+      - name: Overview
+        file: Session-Management.md
+        keywords: [session, manage, start, end, organize]
+      - name: Task-Based Config
+        file: Session-Task-Based-Config.md
+        keywords: [task, config, mode, setup, customize]
+      - name: When to Restart
+        file: Session-When-to-Restart.md
+        keywords: [restart, refresh, new, when, signal]
+      - name: Workflow Patterns
+        file: Session-Workflow-Patterns.md
+        keywords: [workflow, pattern, approach, strategy, organize]
+
+  platforms:
+    description: Platform-specific guides
+    pages:
+      - name: macOS
+        file: Platform-macOS.md
+        keywords: [macos, mac, apple, darwin]
+      - name: Linux
+        file: Platform-Linux.md
+        keywords: [linux, ubuntu, debian, fedora]
+      - name: WSL2
+        file: Platform-WSL2.md
+        keywords: [wsl, wsl2, windows, subsystem]
+      - name: Windows Native
+        file: Platform-Windows-Native.md
+        keywords: [windows, powershell, cmd, native]
+
+  examples:
+    description: Ready-to-use examples
+    pages:
+      - name: Index
+        file: Examples.md
+        keywords: [examples, list, all, overview]
+      - name: CLAUDE.md Minimal
+        file: Examples-CLAUDE-md-Minimal.md
+        keywords: [minimal, simple, basic, claudemd]
+      - name: CLAUDE.md TypeScript
+        file: Examples-CLAUDE-md-TypeScript.md
+        keywords: [typescript, react, node, ts]
+      - name: CLAUDE.md Python
+        file: Examples-CLAUDE-md-Python.md
+        keywords: [python, fastapi, django, flask]
+      - name: CLAUDE.md Monorepo
+        file: Examples-CLAUDE-md-Monorepo.md
+        keywords: [monorepo, turborepo, nx, workspace]
+      - name: MCP GitHub
+        file: Examples-MCP-GitHub.md
+        keywords: [github, mcp, pr, issues]
+      - name: MCP Database
+        file: Examples-MCP-Database.md
+        keywords: [database, postgres, mysql, sqlite]
+      - name: MCP Multi-Server
+        file: Examples-MCP-Multi-Server.md
+        keywords: [multi, multiple, servers, combined]
+      - name: Workflow Code Review
+        file: Examples-Workflow-Code-Review.md
+        keywords: [review, code, pr, security]
+      - name: Workflow Debugging
+        file: Examples-Workflow-Debugging.md
+        keywords: [debug, error, fix, troubleshoot]
+      - name: Workflow Data Analysis
+        file: Examples-Workflow-Data-Analysis.md
+        keywords: [data, analysis, query, sql]
+      - name: Settings Minimal
+        file: Examples-Settings-Minimal.md
+        keywords: [settings, minimal, simple, basic]
+      - name: Settings Team
+        file: Examples-Settings-Team.md
+        keywords: [settings, team, shared, collaborative]
+      - name: Settings Security
+        file: Examples-Settings-Security.md
+        keywords: [settings, security, restricted, safe]
+
+  troubleshooting:
+    description: Problem solving guides
+    pages:
+      - name: Overview
+        file: Troubleshooting.md
+        keywords: [troubleshoot, fix, error, problem, help]
+      - name: Context Issues
+        file: Troubleshooting-Context.md
+        keywords: [context, slow, forgot, performance]
+      - name: Plugin Issues
+        file: Troubleshooting-Plugins.md
+        keywords: [plugin, load, conflict, error]
+      - name: Platform Issues
+        file: Troubleshooting-Platform.md
+        keywords: [platform, os, install, permission]
+
+  reference:
+    description: Reference documentation
+    pages:
+      - name: Commands
+        file: Reference-Commands.md
+        keywords: [commands, cli, slash, reference]
+      - name: Environment Variables
+        file: Reference-Environment-Variables.md
+        keywords: [env, environment, variable, config]
+      - name: File Locations
+        file: Reference-File-Locations.md
+        keywords: [files, paths, locations, where]
+      - name: Glossary
+        file: Reference-Glossary.md
+        keywords: [glossary, terms, definitions, meaning]
+
+# Quick lookup for common queries
+shortcuts:
+  mcp: mcp/Configuration
+  claudemd: configuration/CLAUDE.md Guide
+  claude.md: configuration/CLAUDE.md Guide
+  context: context/Overview
+  session: session/Overview
+  plugins: plugins/Overview
+  examples: examples/Index
+  troubleshoot: troubleshooting/Overview
+  help: getting-started/Quick Reference
+  install: getting-started/Installation
+  commands: reference/Commands
