@@ -10,6 +10,13 @@ import argparse
 from pathlib import Path
 from typing import List, Dict, Any
 
+# Configure logging first (before any imports that might use it)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent))
 
@@ -32,12 +39,6 @@ try:
 except ImportError as e:
     logger.warning(f"DOCX generator unavailable: {e}")
     DOCXReportGenerator = None
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
 
 
 class ReportOrchestrator:

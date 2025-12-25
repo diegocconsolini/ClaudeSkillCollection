@@ -45,7 +45,9 @@ class ContextAnalyzer:
             with open(rules_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
 
-            self.rules = data.get('rules', {})
+            # Normalize rule keys to lowercase for case-insensitive matching
+            raw_rules = data.get('rules', {})
+            self.rules = {k.lower(): v for k, v in raw_rules.items()}
             self.severity_levels = data.get('severity_levels', {})
             self.false_positive_indicators = data.get('false_positive_indicators', [])
 

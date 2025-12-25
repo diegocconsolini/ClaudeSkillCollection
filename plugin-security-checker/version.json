@@ -1,0 +1,11 @@
+{
+  "plugin_version": "3.2.0",
+  "threat_intel": {
+    "mitre_attack": "v18.1",
+    "mitre_atlas": "v4.5.0",
+    "owasp_api": "2023",
+    "owasp_top10": "2021",
+    "cwe": "4.14"
+  },
+  "last_updated": "2025-12-18"
+}

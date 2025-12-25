@@ -1,6 +1,8 @@
 ---
+name: security-report-builder
 description: Generate professional security reports from scan results in HTML, PDF, and DOCX formats with intelligent false positive filtering
-capabilities: ["report-generation", "html-reports", "pdf-reports", "docx-reports", "false-positive-filtering", "context-aware-analysis", "risk-assessment", "mitre-attack-mapping", "compliance-reporting"]
+trigger: When user needs to generate security reports, convert scan results to reports, create executive summaries, produce compliance documentation, or needs false positive filtering for security findings
+tools: [Bash, Read, Write, Grep, Glob]
 ---
 
 # Security Report Builder Agent

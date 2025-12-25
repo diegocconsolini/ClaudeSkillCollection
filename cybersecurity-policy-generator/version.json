@@ -1,0 +1,11 @@
+{
+  "plugin_version": "1.2.0",
+  "frameworks": {
+    "iso_27001": "2022",
+    "soc_2": "2017",
+    "nist_csf": "2.0",
+    "cis_controls": "8.0",
+    "sans_templates": "2024"
+  },
+  "last_updated": "2025-12-20"
+}
