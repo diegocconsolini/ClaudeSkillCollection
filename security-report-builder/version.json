@@ -1,0 +1,14 @@
+{
+  "plugin_version": "1.2.0",
+  "frameworks": {
+    "mitre_attack": "v18.1",
+    "mitre_atlas": "v4.5.0",
+    "owasp_api": "2023",
+    "owasp_top10": "2021",
+    "cwe": "4.14"
+  },
+  "dependencies": {
+    "plugin_security_checker": "3.2.0"
+  },
+  "last_updated": "2025-12-19"
+}

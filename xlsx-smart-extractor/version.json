@@ -1,0 +1,7 @@
+{
+  "plugin_version": "2.2.0",
+  "dependencies": {
+    "openpyxl": ">=3.1.0"
+  },
+  "last_updated": "2025-12-20"
+}

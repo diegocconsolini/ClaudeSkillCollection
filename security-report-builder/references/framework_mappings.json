@@ -1,0 +1,157 @@
+{
+  "version": "1.1.0",
+  "last_updated": "2025-12-18",
+  "description": "Security framework mappings for report generation",
+  "note": "For full threat intelligence data, use plugin-security-checker/references/threat_mappings.json",
+  "frameworks": {
+    "mitre_attack": {
+      "version": "v18.1",
+      "source": "https://attack.mitre.org/",
+      "categories": {
+        "execution": {
+          "id": "TA0002",
+          "name": "Execution",
+          "techniques": ["T1059", "T1059.006", "T1059.007"]
+        },
+        "defense_evasion": {
+          "id": "TA0005",
+          "name": "Defense Evasion",
+          "techniques": ["T1027", "T1140", "T1562"]
+        },
+        "credential_access": {
+          "id": "TA0006",
+          "name": "Credential Access",
+          "techniques": ["T1552", "T1555"]
+        },
+        "collection": {
+          "id": "TA0009",
+          "name": "Collection",
+          "techniques": ["T1005", "T1119"]
+        },
+        "exfiltration": {
+          "id": "TA0010",
+          "name": "Exfiltration",
+          "techniques": ["T1041", "T1567"]
+        }
+      }
+    },
+    "mitre_atlas": {
+      "version": "v4.5.0",
+      "source": "https://atlas.mitre.org/",
+      "categories": {
+        "ml_attack_staging": {
+          "id": "AML.TA0002",
+          "name": "ML Attack Staging"
+        },
+        "ml_model_access": {
+          "id": "AML.TA0003",
+          "name": "ML Model Access"
+        }
+      }
+    },
+    "owasp": {
+      "top10_version": "2021",
+      "api_version": "2023",
+      "source": "https://owasp.org/",
+      "categories": {
+        "injection": {
+          "id": "A03:2021",
+          "name": "Injection",
+          "description": "SQL, NoSQL, OS, LDAP injection"
+        },
+        "broken_access_control": {
+          "id": "A01:2021",
+          "name": "Broken Access Control"
+        },
+        "cryptographic_failures": {
+          "id": "A02:2021",
+          "name": "Cryptographic Failures"
+        },
+        "insecure_design": {
+          "id": "A04:2021",
+          "name": "Insecure Design"
+        },
+        "security_misconfiguration": {
+          "id": "A05:2021",
+          "name": "Security Misconfiguration"
+        },
+        "vulnerable_components": {
+          "id": "A06:2021",
+          "name": "Vulnerable and Outdated Components"
+        },
+        "identification_failures": {
+          "id": "A07:2021",
+          "name": "Identification and Authentication Failures"
+        },
+        "software_integrity": {
+          "id": "A08:2021",
+          "name": "Software and Data Integrity Failures"
+        },
+        "logging_failures": {
+          "id": "A09:2021",
+          "name": "Security Logging and Monitoring Failures"
+        },
+        "ssrf": {
+          "id": "A10:2021",
+          "name": "Server-Side Request Forgery (SSRF)"
+        }
+      }
+    },
+    "cwe": {
+      "version": "4.14",
+      "source": "https://cwe.mitre.org/",
+      "common_weaknesses": {
+        "xss": {
+          "id": "CWE-79",
+          "name": "Improper Neutralization of Input During Web Page Generation"
+        },
+        "sql_injection": {
+          "id": "CWE-89",
+          "name": "SQL Injection"
+        },
+        "command_injection": {
+          "id": "CWE-78",
+          "name": "Improper Neutralization of Special Elements used in an OS Command"
+        },
+        "path_traversal": {
+          "id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory"
+        },
+        "hardcoded_credentials": {
+          "id": "CWE-798",
+          "name": "Use of Hard-coded Credentials"
+        },
+        "sensitive_data_exposure": {
+          "id": "CWE-200",
+          "name": "Exposure of Sensitive Information"
+        },
+        "code_injection": {
+          "id": "CWE-94",
+          "name": "Improper Control of Generation of Code"
+        }
+      }
+    }
+  },
+  "severity_mapping": {
+    "CRITICAL": {
+      "cvss_range": [9.0, 10.0],
+      "description": "Exploitable vulnerability with direct impact"
+    },
+    "HIGH": {
+      "cvss_range": [7.0, 8.9],
+      "description": "Significant security risk"
+    },
+    "MEDIUM": {
+      "cvss_range": [4.0, 6.9],
+      "description": "Moderate security concern"
+    },
+    "LOW": {
+      "cvss_range": [0.1, 3.9],
+      "description": "Minor security issue"
+    },
+    "INFO": {
+      "cvss_range": [0.0, 0.0],
+      "description": "Informational finding"
+    }
+  }
+}

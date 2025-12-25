@@ -1,6 +1,6 @@
 # Security Report Builder
 
-**Version:** 1.0.0
+**Version:** 1.2.0
 **Category:** Security, Reporting, Documentation
 **Author:** Security Team
 
@@ -443,6 +443,6 @@ MIT License - See LICENSE file for details
 
 ---
 
-**Version:** 1.0.0
-**Last Updated:** 2025-10-29
+**Version:** 1.2.0
+**Last Updated:** 2025-12-19
 **Status:** Production Ready

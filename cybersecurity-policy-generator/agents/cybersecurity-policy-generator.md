@@ -1,9 +1,8 @@
 ---
 name: cybersecurity-policy-generator
 description: Generate enterprise cybersecurity policies from 51 professional templates (SANS, CIS Controls) for ISO 27001, SOC 2, NIST, and CIS Controls compliance in Markdown, Word, HTML, and PDF formats.
-capabilities: ["policy-generation", "compliance-frameworks", "iso-27001", "soc-2", "nist-csf", "cis-controls", "sans-templates", "security-governance", "multi-format-output"]
-tools: Read, Write, Bash, AskUserQuestion
-model: inherit
+trigger: When user needs security policies, compliance documentation, ISO 27001 policies, SOC 2 policies, NIST CSF policies, CIS Controls policies, SANS templates, or security governance documents
+tools: [Bash, Read, Write, Grep, Glob]
 ---
 
 # Cybersecurity Policy Generator
