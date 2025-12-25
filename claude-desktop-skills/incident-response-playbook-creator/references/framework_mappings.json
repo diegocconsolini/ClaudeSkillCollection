@@ -1,0 +1,735 @@
+{
+  "metadata": {
+    "title": "Incident Response Framework Mappings",
+    "description": "Authoritative mappings between incident response activities and compliance frameworks",
+    "version": "1.0.0",
+    "last_updated": "2025-10-19",
+    "sources": [
+      {
+        "framework": "NIST CSF 2.0",
+        "document": "NIST Cybersecurity Framework Version 2.0",
+        "publication_date": "2024-02-26",
+        "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"
+      },
+      {
+        "framework": "NIST SP 800-61r3",
+        "document": "Computer Security Incident Handling Guide Revision 3",
+        "publication_date": "2025-04",
+        "source": "Local: ClaudeSkillCollection/docs/NIST.SP.800-61r3.pdf"
+      },
+      {
+        "framework": "GDPR",
+        "document": "Regulation (EU) 2016/679 - General Data Protection Regulation",
+        "publication_date": "2016-04-27",
+        "enforced_date": "2018-05-25",
+        "source": "EUR-Lex Official Journal of the European Union"
+      },
+      {
+        "framework": "HIPAA",
+        "document": "HIPAA Breach Notification Rule (45 CFR §§ 164.400-414)",
+        "publication_date": "2009-09-23",
+        "source": "U.S. Department of Health and Human Services"
+      }
+    ]
+  },
+
+  "nist_csf_2_0": {
+    "description": "NIST Cybersecurity Framework 2.0 Functions, Categories, and Subcategories for Incident Response",
+    "functions": {
+      "govern": {
+        "id": "GV",
+        "name": "Govern",
+        "description": "Establish and monitor the organization's cybersecurity risk management strategy, expectations, and policy",
+        "relevant_categories": [
+          {
+            "id": "GV.RM",
+            "name": "Risk Management Strategy",
+            "description": "The organization's priorities, constraints, risk tolerances, and assumptions are established and used to support risk decisions",
+            "incident_response_application": "Defines incident severity classification, escalation thresholds, and acceptable risk for incident response decisions"
+          },
+          {
+            "id": "GV.PO",
+            "name": "Policy",
+            "description": "Organizational cybersecurity policy is established, communicated, and enforced",
+            "incident_response_application": "Incident response policies, procedures, and playbooks that guide response activities"
+          }
+        ]
+      },
+      "identify": {
+        "id": "ID",
+        "name": "Identify",
+        "description": "Develop organizational understanding to manage cybersecurity risk to systems, people, assets, data, and capabilities",
+        "relevant_categories": [
+          {
+            "id": "ID.AM",
+            "name": "Asset Management",
+            "description": "Assets are managed consistent with their relative importance",
+            "incident_response_application": "Understanding which systems are affected and their criticality during incident triage"
+          },
+          {
+            "id": "ID.RA",
+            "name": "Risk Assessment",
+            "description": "The cybersecurity risk to the organization is understood",
+            "incident_response_application": "Assessing incident impact and potential damage to determine response priority"
+          }
+        ]
+      },
+      "detect": {
+        "id": "DE",
+        "name": "Detect",
+        "description": "Find and analyze possible cybersecurity attacks and compromises",
+        "relevant_categories": [
+          {
+            "id": "DE.CM",
+            "name": "Continuous Monitoring",
+            "description": "Assets are monitored to find anomalies and events and to verify the effectiveness of protective measures",
+            "subcategories": [
+              {
+                "id": "DE.CM-01",
+                "description": "Networks and network services are monitored to find potentially adverse events",
+                "incident_examples": ["Network IDS alerts for lateral movement", "Firewall logs showing unusual outbound connections", "DNS queries to known C2 domains"]
+              },
+              {
+                "id": "DE.CM-02",
+                "description": "The physical environment is monitored to find potentially adverse events",
+                "incident_examples": ["Unauthorized physical access attempts", "Server room environmental alerts"]
+              },
+              {
+                "id": "DE.CM-03",
+                "description": "Personnel activity and technology usage are monitored to find potentially adverse events",
+                "incident_examples": ["Failed login attempts", "Privileged account usage anomalies", "After-hours access patterns"]
+              },
+              {
+                "id": "DE.CM-06",
+                "description": "External service provider activities and services are monitored to find potentially adverse events",
+                "incident_examples": ["Third-party vendor security alerts", "Cloud service provider notifications", "Supply chain compromise indicators"]
+              },
+              {
+                "id": "DE.CM-09",
+                "description": "Computing hardware and software, runtime environments, and their data are monitored to find potentially adverse events",
+                "incident_examples": ["Endpoint detection alerts", "Ransomware behavior detection", "File integrity monitoring alerts", "Memory analysis anomalies"]
+              }
+            ]
+          },
+          {
+            "id": "DE.AE",
+            "name": "Adverse Event Analysis",
+            "description": "Anomalies and events are analyzed to characterize the events and detect cybersecurity incidents",
+            "subcategories": [
+              {
+                "id": "DE.AE-02",
+                "description": "Potentially adverse events are analyzed to better understand associated activities",
+                "incident_examples": ["Log correlation and SIEM analysis", "Threat intelligence enrichment", "IOC validation"]
+              },
+              {
+                "id": "DE.AE-03",
+                "description": "Information is correlated from multiple sources",
+                "incident_examples": ["Multi-source event correlation", "Cross-system timeline reconstruction", "Threat hunting across endpoints"]
+              },
+              {
+                "id": "DE.AE-04",
+                "description": "The estimated impact and scope of adverse events are understood",
+                "incident_examples": ["Determining blast radius", "Identifying affected systems and data", "Assessing business impact"]
+              },
+              {
+                "id": "DE.AE-06",
+                "description": "Information on adverse events is provided to authorized staff and tools",
+                "incident_examples": ["Security team notifications", "SIEM/SOAR platform integration", "Management escalation"]
+              }
+            ]
+          }
+        ]
+      },
+      "respond": {
+        "id": "RS",
+        "name": "Respond",
+        "description": "Take action regarding a detected cybersecurity incident",
+        "relevant_categories": [
+          {
+            "id": "RS.MA",
+            "name": "Incident Management",
+            "description": "Responses to detected cybersecurity incidents are managed",
+            "subcategories": [
+              {
+                "id": "RS.MA-01",
+                "description": "The incident response plan is executed in coordination with relevant third parties once an incident is declared",
+                "incident_examples": ["Activating incident response team", "Following playbook procedures", "Engaging external forensics firm"]
+              },
+              {
+                "id": "RS.MA-02",
+                "description": "Incident reports are triaged and validated",
+                "incident_examples": ["Initial alert validation", "False positive elimination", "Severity classification"]
+              },
+              {
+                "id": "RS.MA-03",
+                "description": "Incidents are categorized and prioritized",
+                "incident_examples": ["Critical/High/Medium/Low severity assignment", "Business impact assessment", "Resource allocation decisions"]
+              },
+              {
+                "id": "RS.MA-04",
+                "description": "Incidents are escalated or elevated as needed",
+                "incident_examples": ["Management notification for critical incidents", "Legal team engagement for data breaches", "PR team involvement for public incidents"]
+              },
+              {
+                "id": "RS.MA-05",
+                "description": "The criteria for initiating incident recovery are applied",
+                "incident_examples": ["Determining when threat is eradicated", "Validation of system integrity before restoration", "Criteria for transitioning to recovery phase"]
+              }
+            ]
+          },
+          {
+            "id": "RS.AN",
+            "name": "Incident Analysis",
+            "description": "Investigations are conducted to ensure effective response and support forensics and recovery activities",
+            "subcategories": [
+              {
+                "id": "RS.AN-03",
+                "description": "Analysis is performed to establish what has taken place during an incident and the root cause of the incident",
+                "incident_examples": ["Forensic disk/memory analysis", "Log timeline reconstruction", "Root cause analysis", "Attack vector identification"]
+              },
+              {
+                "id": "RS.AN-06",
+                "description": "Actions performed during an investigation are recorded, and the records' integrity is preserved",
+                "incident_examples": ["Chain of custody documentation", "Forensic evidence preservation", "Investigation notes and findings"]
+              },
+              {
+                "id": "RS.AN-07",
+                "description": "Incident data and metadata are collected, and their integrity is preserved",
+                "incident_examples": ["Disk imaging", "Memory dumps", "Network packet captures", "Log preservation"]
+              },
+              {
+                "id": "RS.AN-08",
+                "description": "An incident's magnitude is estimated and validated",
+                "incident_examples": ["Data exfiltration volume quantification", "Number of affected systems count", "User/customer impact assessment"]
+              }
+            ]
+          },
+          {
+            "id": "RS.CO",
+            "name": "Incident Response Reporting and Communication",
+            "description": "Response activities are coordinated with internal and external stakeholders as required by laws, regulations, or policies",
+            "subcategories": [
+              {
+                "id": "RS.CO-02",
+                "description": "Internal and external stakeholders are notified of incidents",
+                "incident_examples": ["CISO/executive notification", "Board reporting", "Customer notifications", "Regulatory breach reporting"]
+              },
+              {
+                "id": "RS.CO-03",
+                "description": "Information is shared with designated internal and external stakeholders",
+                "incident_examples": ["Threat intelligence sharing", "ISAC/ISAO reporting", "Law enforcement coordination", "Insurance claim filing"]
+              }
+            ]
+          },
+          {
+            "id": "RS.MI",
+            "name": "Incident Mitigation",
+            "description": "Activities are performed to prevent expansion of an event and mitigate its effects",
+            "subcategories": [
+              {
+                "id": "RS.MI-01",
+                "description": "Incidents are contained",
+                "incident_examples": ["Network segmentation", "Affected system isolation", "Account disablement", "Firewall rule updates"]
+              },
+              {
+                "id": "RS.MI-02",
+                "description": "Incidents are eradicated",
+                "incident_examples": ["Malware removal", "Backdoor elimination", "Compromised credential revocation", "Vulnerability patching"]
+              }
+            ]
+          }
+        ]
+      },
+      "recover": {
+        "id": "RC",
+        "name": "Recover",
+        "description": "Restore assets and operations that were impaired due to a cybersecurity incident",
+        "relevant_categories": [
+          {
+            "id": "RC.RP",
+            "name": "Incident Recovery Plan Execution",
+            "description": "Restoration activities are performed to ensure operational availability of systems and services affected by cybersecurity incidents",
+            "subcategories": [
+              {
+                "id": "RC.RP-01",
+                "description": "The recovery portion of the incident response plan is executed once initiated from the incident response process",
+                "incident_examples": ["Executing disaster recovery procedures", "Restoring from clean backups", "Rebuilding compromised systems"]
+              },
+              {
+                "id": "RC.RP-02",
+                "description": "Recovery actions are selected, scoped, prioritized, and performed",
+                "incident_examples": ["Critical system restoration first", "Phased recovery approach", "Business continuity prioritization"]
+              },
+              {
+                "id": "RC.RP-03",
+                "description": "The integrity of backups and other restoration assets is verified before using them for restoration",
+                "incident_examples": ["Backup malware scanning", "Restoration point validation", "Pre-recovery integrity checks"]
+              },
+              {
+                "id": "RC.RP-05",
+                "description": "The integrity of restored assets is verified, systems and services are restored, and normal operating status is confirmed",
+                "incident_examples": ["Post-restoration validation testing", "System integrity verification", "Service availability confirmation", "Performance monitoring"]
+              },
+              {
+                "id": "RC.RP-06",
+                "description": "The end of incident recovery operations is declared based on criteria, and any needed follow-on actions are identified",
+                "incident_examples": ["Incident closure criteria met", "Lessons learned session scheduled", "Post-incident report creation"]
+              }
+            ]
+          },
+          {
+            "id": "RC.CO",
+            "name": "Incident Recovery Communication",
+            "description": "Restoration activities are coordinated with internal and external parties",
+            "subcategories": [
+              {
+                "id": "RC.CO-03",
+                "description": "Recovery activities and progress are communicated to internal and external stakeholders, and leadership and management",
+                "incident_examples": ["Status updates to executives", "Customer restoration notifications", "Regulatory follow-up reporting"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+
+  "gdpr_breach_notification": {
+    "regulation": "Regulation (EU) 2016/679",
+    "description": "General Data Protection Regulation breach notification requirements",
+    "source": "EUR-Lex Official Journal of the European Union L 119/1",
+    "applicability": "Incidents involving personal data of EU/EEA residents",
+
+    "article_33": {
+      "title": "Notification of a personal data breach to the supervisory authority",
+      "timeline": "72 hours",
+      "trigger": "Breach of security leading to accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, personal data",
+      "requirements": [
+        {
+          "requirement": "Notify supervisory authority without undue delay",
+          "timeline_detail": "Where feasible, not later than 72 hours after having become aware of it",
+          "exception": "Unless the breach is unlikely to result in a risk to rights and freedoms of natural persons"
+        },
+        {
+          "requirement": "Notification content must include",
+          "elements": [
+            "Nature of the personal data breach (categories and approximate number of data subjects and records concerned)",
+            "Name and contact details of the data protection officer or other contact point",
+            "Description of the likely consequences of the breach",
+            "Description of measures taken or proposed to address the breach and mitigate possible adverse effects"
+          ]
+        },
+        {
+          "requirement": "Delayed notification justification",
+          "detail": "If notification is not made within 72 hours, it shall be accompanied by reasons for the delay"
+        },
+        {
+          "requirement": "Documentation",
+          "detail": "Controller shall document all personal data breaches, comprising facts, effects, and remedial action (even if not notified to SA)"
+        }
+      ],
+      "risk_assessment_criteria": [
+        "Type of breach (confidentiality, integrity, availability)",
+        "Nature, sensitivity and volume of personal data",
+        "Ease of identification of individuals",
+        "Severity of consequences for individuals",
+        "Special characteristics of the individual (e.g., vulnerable persons)",
+        "Special characteristics of the controller",
+        "Number of affected individuals"
+      ]
+    },
+
+    "article_34": {
+      "title": "Communication of a personal data breach to the data subject",
+      "timeline": "Without undue delay",
+      "trigger": "Breach likely to result in a high risk to the rights and freedoms of natural persons",
+      "requirements": [
+        {
+          "requirement": "Direct communication to data subjects",
+          "timeline_detail": "Without undue delay",
+          "condition": "When breach likely to result in high risk to rights and freedoms"
+        },
+        {
+          "requirement": "Communication content must include",
+          "elements": [
+            "Description of the nature of the breach in clear and plain language",
+            "Name and contact details of the data protection officer or other contact point",
+            "Description of the likely consequences of the breach",
+            "Description of measures taken or proposed to address the breach and mitigate possible adverse effects"
+          ]
+        },
+        {
+          "requirement": "Exceptions to data subject notification",
+          "conditions": [
+            "Controller has implemented appropriate technical and organizational protection measures (e.g., encryption) rendering data unintelligible",
+            "Controller has taken subsequent measures ensuring high risk is no longer likely to materialize",
+            "It would involve disproportionate effort (public communication or similar measure instead)"
+          ]
+        }
+      ],
+      "high_risk_indicators": [
+        "Potential for identity theft or fraud",
+        "Financial loss",
+        "Damage to reputation",
+        "Loss of confidentiality of personal data protected by professional secrecy",
+        "Discrimination",
+        "Any other significant economic or social disadvantage"
+      ]
+    },
+
+    "penalties": {
+      "article_83": "Administrative fines up to €10 million or 2% of annual worldwide turnover (whichever is higher) for notification violations",
+      "factors": "Intent, negligence, mitigation actions, cooperation with SA, previous infringements"
+    },
+
+    "incident_type_mapping": {
+      "ransomware": {
+        "likely_triggers_notification": true,
+        "article_33_required": "Almost always (availability breach + potential confidentiality if exfiltration)",
+        "article_34_required": "If personal data exfiltrated or high risk of inability to access data",
+        "risk_factors": ["Data encryption affecting availability", "Potential data exfiltration", "Business disruption"]
+      },
+      "data_breach": {
+        "likely_triggers_notification": true,
+        "article_33_required": "Yes (confidentiality breach)",
+        "article_34_required": "Depends on data sensitivity and risk to individuals",
+        "risk_factors": ["Type and volume of personal data", "Data sensitivity", "Ease of individual identification"]
+      },
+      "phishing_bec": {
+        "likely_triggers_notification": true,
+        "article_33_required": "If personal data accessed or exfiltrated",
+        "article_34_required": "If high risk (e.g., credentials, sensitive emails)",
+        "risk_factors": ["Email account compromise", "Potential credential exposure", "Sensitive data in emails"]
+      },
+      "ddos": {
+        "likely_triggers_notification": false,
+        "article_33_required": "Unlikely unless prolonged unavailability of critical services",
+        "article_34_required": "Rarely (availability only, no confidentiality breach)",
+        "risk_factors": ["Service disruption duration", "Critical service impact"]
+      },
+      "malware_compromise": {
+        "likely_triggers_notification": true,
+        "article_33_required": "If personal data potentially accessed",
+        "article_34_required": "Depends on malware capabilities and data exposure risk",
+        "risk_factors": ["System access level", "Data accessible to malware", "Exfiltration evidence"]
+      },
+      "cloud_breach": {
+        "likely_triggers_notification": true,
+        "article_33_required": "If personal data stored in cloud affected",
+        "article_34_required": "Depends on data sensitivity and breach scope",
+        "risk_factors": ["Cloud storage contents", "Misconfiguration exposure", "Third-party access"]
+      },
+      "supply_chain": {
+        "likely_triggers_notification": true,
+        "article_33_required": "If personal data processed by supplier affected",
+        "article_34_required": "Depends on supplier's data processing scope",
+        "risk_factors": ["Supplier access to personal data", "Breach propagation to controller's systems", "Data processing agreement terms"]
+      },
+      "ai_ml_incident": {
+        "likely_triggers_notification": "Varies",
+        "article_33_required": "If training data or model outputs expose personal data",
+        "article_34_required": "If model inversion or training data extraction risks",
+        "risk_factors": ["Personal data in training sets", "Model output sensitivity", "Privacy attack feasibility"]
+      }
+    }
+  },
+
+  "hipaa_breach_notification": {
+    "regulation": "45 CFR §§ 164.400-414",
+    "description": "HIPAA Breach Notification Rule requirements for unauthorized use or disclosure of Protected Health Information (PHI)",
+    "source": "U.S. Department of Health and Human Services",
+    "applicability": "HIPAA covered entities and business associates - incidents involving unsecured PHI",
+
+    "breach_definition": {
+      "definition": "Acquisition, access, use, or disclosure of PHI in a manner not permitted under the Privacy Rule which compromises the security or privacy of the PHI",
+      "presumption": "Impermissible use or disclosure is presumed to be a breach unless low probability that PHI has been compromised",
+      "exclusions": [
+        "Unintentional acquisition, access, or use by workforce member acting in good faith and within scope of authority (if no further impermissible use/disclosure)",
+        "Inadvertent disclosure from authorized person to another authorized person at same covered entity/organized health care arrangement (if no further impermissible use/disclosure)",
+        "Disclosure where covered entity/BA has good faith belief that unauthorized person could not reasonably have retained the information"
+      ]
+    },
+
+    "risk_assessment": {
+      "required": "4-factor risk assessment to determine if breach occurred",
+      "factors": [
+        {
+          "factor": "Nature and extent of PHI involved",
+          "considerations": ["Types of identifiers", "Likelihood of re-identification", "Financial, clinical, sensitive information"]
+        },
+        {
+          "factor": "Unauthorized person who used PHI or to whom disclosure was made",
+          "considerations": ["Relationship to covered entity", "Whether actually viewed/acquired PHI", "Ability to re-identify", "Obligation to safeguard"]
+        },
+        {
+          "factor": "Whether PHI was actually acquired or viewed",
+          "considerations": ["Evidence of access", "Extent of unauthorized use", "Duration of exposure"]
+        },
+        {
+          "factor": "Extent to which risk has been mitigated",
+          "considerations": ["Remedial actions taken", "Assurances from recipient", "Evidence of deletion/destruction"]
+        }
+      ],
+      "documentation": "Must document risk assessment and decision, even if determined not to be a breach"
+    },
+
+    "notification_requirements": {
+      "individual_notification": {
+        "timeline": "60 days",
+        "trigger": "Discovery of breach of unsecured PHI",
+        "method": "Written notice by first-class mail (or email if individual agreed to electronic notice)",
+        "substitute_notice": {
+          "condition": "If contact information insufficient or out-of-date",
+          "methods": [
+            "If <10 individuals: Telephone or other written notice",
+            "If ≥10 individuals: Conspicuous posting on website for 90 days OR notice in major print/broadcast media where individuals likely reside"
+          ]
+        },
+        "content_required": [
+          "Brief description of what happened (date of breach, date of discovery)",
+          "Types of unsecured PHI involved (e.g., name, SSN, DOB, account number, diagnosis, disability code)",
+          "Steps individuals should take to protect themselves",
+          "Brief description of what covered entity is doing to investigate, mitigate harm, protect against future breaches",
+          "Contact procedures for individuals to ask questions or learn additional information"
+        ]
+      },
+
+      "media_notification": {
+        "timeline": "60 days",
+        "trigger": "Breach affecting more than 500 residents of a State or jurisdiction",
+        "method": "Notice to prominent media outlets serving the State or jurisdiction",
+        "content": "Same information as individual notification"
+      },
+
+      "hhs_secretary_notification": {
+        "immediate_reporting": {
+          "trigger": "Breach affecting 500 or more individuals",
+          "timeline": "60 days from discovery",
+          "method": "Electronic submission via HHS Breach Reporting Portal"
+        },
+        "annual_reporting": {
+          "trigger": "Breaches affecting fewer than 500 individuals",
+          "timeline": "Annually, no later than 60 days after calendar year end",
+          "method": "Log of all breaches discovered during year"
+        }
+      },
+
+      "business_associate_to_covered_entity": {
+        "timeline": "60 days",
+        "trigger": "BA discovers breach of unsecured PHI",
+        "requirement": "BA must notify covered entity without unreasonable delay, no later than 60 days from discovery",
+        "information_to_provide": "Identification of affected individuals and any other information reasonably requested by CE"
+      }
+    },
+
+    "penalties": {
+      "civil_monetary_penalties": [
+        {
+          "tier": "Tier 1 - Individual did not know and could not have known",
+          "penalty_per_violation": "$100 - $50,000",
+          "annual_maximum": "$25,000 (for identical violations)"
+        },
+        {
+          "tier": "Tier 2 - Reasonable cause",
+          "penalty_per_violation": "$1,000 - $50,000",
+          "annual_maximum": "$100,000"
+        },
+        {
+          "tier": "Tier 3 - Willful neglect, corrected within 30 days",
+          "penalty_per_violation": "$10,000 - $50,000",
+          "annual_maximum": "$250,000"
+        },
+        {
+          "tier": "Tier 4 - Willful neglect, not corrected",
+          "penalty_per_violation": "$50,000",
+          "annual_maximum": "$1.5 million"
+        }
+      ],
+      "state_attorneys_general": "Can bring civil actions on behalf of state residents"
+    },
+
+    "incident_type_mapping": {
+      "ransomware": {
+        "likely_triggers_notification": true,
+        "breach_presumption": "Yes - unless risk assessment shows low probability PHI compromised",
+        "notification_required": "If PHI not encrypted prior to ransomware (HIPAA-compliant encryption = safe harbor)",
+        "risk_factors": ["PHI encryption status", "Evidence of exfiltration", "Ransomware variant capabilities"]
+      },
+      "data_breach": {
+        "likely_triggers_notification": true,
+        "breach_presumption": "Yes - unauthorized disclosure of PHI",
+        "notification_required": "Unless 4-factor risk assessment shows low probability of compromise",
+        "risk_factors": ["Types of PHI exposed", "Volume of records", "Sensitivity of information"]
+      },
+      "phishing_bec": {
+        "likely_triggers_notification": true,
+        "breach_presumption": "If email account contained PHI",
+        "notification_required": "Depends on PHI in compromised emails and risk assessment",
+        "risk_factors": ["Email account purpose", "PHI volume in emails", "Unauthorized access duration"]
+      },
+      "ddos": {
+        "likely_triggers_notification": false,
+        "breach_presumption": "No - availability incident, not unauthorized acquisition/disclosure",
+        "notification_required": "No (unless coupled with data exfiltration)",
+        "risk_factors": ["Service disruption only typically not a breach"]
+      },
+      "malware_compromise": {
+        "likely_triggers_notification": true,
+        "breach_presumption": "If malware had capability to access/exfiltrate PHI",
+        "notification_required": "Depends on forensic evidence of PHI access",
+        "risk_factors": ["Malware capabilities", "Systems with PHI access", "Exfiltration indicators"]
+      },
+      "cloud_breach": {
+        "likely_triggers_notification": true,
+        "breach_presumption": "If cloud storage contains unsecured PHI",
+        "notification_required": "Unless PHI encrypted with HIPAA-compliant encryption",
+        "risk_factors": ["Cloud PHI encryption", "Access controls", "Misconfiguration scope"]
+      },
+      "supply_chain": {
+        "likely_triggers_notification": true,
+        "breach_presumption": "If BA compromise affects covered entity's PHI",
+        "notification_required": "BA notifies CE within 60 days; CE assesses and notifies individuals if needed",
+        "risk_factors": ["BA's access to PHI", "Extent of compromise", "BAA requirements"]
+      },
+      "ai_ml_incident": {
+        "likely_triggers_notification": "Varies",
+        "breach_presumption": "If PHI used in training data or model outputs expose PHI",
+        "notification_required": "Depends on model's PHI exposure risk",
+        "risk_factors": ["PHI in training/test data", "Model inversion risk", "Re-identification potential"]
+      }
+    },
+
+    "unsecured_phi_definition": {
+      "definition": "PHI that is not rendered unusable, unreadable, or indecipherable to unauthorized persons through use of a technology or methodology specified by HHS",
+      "safe_harbor_encryption": "Encryption processes must meet NIST SP 800-111 guidance or be otherwise consistent with NIST standards",
+      "safe_harbor_destruction": "Clearing, purging, or destroying per NIST SP 800-88 guidelines",
+      "importance": "Encrypted PHI (meeting HIPAA standards) is not subject to breach notification even if accessed by unauthorized parties"
+    }
+  },
+
+  "incident_to_framework_matrix": {
+    "description": "Cross-reference matrix showing which regulatory frameworks apply to each incident type",
+    "matrix": {
+      "ransomware": {
+        "nist_csf_primary_functions": ["DE.CM", "DE.AE", "RS.MA", "RS.MI", "RC.RP"],
+        "gdpr_applicable": true,
+        "gdpr_high_priority": true,
+        "gdpr_rationale": "Availability breach + potential confidentiality if data exfiltrated",
+        "hipaa_applicable": true,
+        "hipaa_high_priority": true,
+        "hipaa_rationale": "Unsecured PHI exposure unless encrypted per HIPAA standards"
+      },
+      "data_breach": {
+        "nist_csf_primary_functions": ["DE.AE", "RS.AN", "RS.CO", "RC.CO"],
+        "gdpr_applicable": true,
+        "gdpr_high_priority": true,
+        "gdpr_rationale": "Direct confidentiality breach of personal data",
+        "hipaa_applicable": true,
+        "hipaa_high_priority": true,
+        "hipaa_rationale": "Unauthorized disclosure of PHI"
+      },
+      "phishing_bec": {
+        "nist_csf_primary_functions": ["DE.CM", "RS.MA", "RS.AN"],
+        "gdpr_applicable": true,
+        "gdpr_high_priority": "Medium",
+        "gdpr_rationale": "If email accounts contain personal data",
+        "hipaa_applicable": true,
+        "hipaa_high_priority": "Medium-High",
+        "hipaa_rationale": "Healthcare organizations often use email for PHI - high risk"
+      },
+      "ddos": {
+        "nist_csf_primary_functions": ["DE.CM", "RS.MI", "RC.RP"],
+        "gdpr_applicable": false,
+        "gdpr_high_priority": "Low",
+        "gdpr_rationale": "Availability only, rarely triggers notification unless prolonged",
+        "hipaa_applicable": false,
+        "hipaa_high_priority": "Low",
+        "hipaa_rationale": "Availability incident, not unauthorized acquisition/disclosure"
+      },
+      "malware_compromise": {
+        "nist_csf_primary_functions": ["DE.CM", "RS.AN", "RS.MI", "RC.RP"],
+        "gdpr_applicable": true,
+        "gdpr_high_priority": "Medium-High",
+        "gdpr_rationale": "Depends on malware capabilities and data access",
+        "hipaa_applicable": true,
+        "hipaa_high_priority": "Medium-High",
+        "hipaa_rationale": "Forensic analysis needed to determine PHI exposure"
+      },
+      "cloud_breach": {
+        "nist_csf_primary_functions": ["DE.CM", "RS.AN", "RS.CO"],
+        "gdpr_applicable": true,
+        "gdpr_high_priority": true,
+        "gdpr_rationale": "Cloud often stores significant personal data volumes",
+        "hipaa_applicable": true,
+        "hipaa_high_priority": true,
+        "hipaa_rationale": "Cloud PHI storage common - encryption critical for safe harbor"
+      },
+      "supply_chain": {
+        "nist_csf_primary_functions": ["DE.CM", "RS.MA", "RS.AN", "RS.CO"],
+        "gdpr_applicable": true,
+        "gdpr_high_priority": true,
+        "gdpr_rationale": "Processor breach requires controller notification per Article 33(2)",
+        "hipaa_applicable": true,
+        "hipaa_high_priority": true,
+        "hipaa_rationale": "BA must notify CE within 60 days per 45 CFR 164.410"
+      },
+      "ai_ml_incident": {
+        "nist_csf_primary_functions": ["DE.CM", "RS.AN", "RS.CO"],
+        "gdpr_applicable": true,
+        "gdpr_high_priority": "Medium",
+        "gdpr_rationale": "Emerging area - model inversion and training data extraction risks",
+        "hipaa_applicable": true,
+        "hipaa_high_priority": "Medium",
+        "hipaa_rationale": "PHI in ML models or training data requires assessment"
+      }
+    }
+  },
+
+  "communication_timing_matrix": {
+    "description": "Consolidated timeline requirements across frameworks for quick reference",
+    "timelines": [
+      {
+        "stakeholder": "GDPR Supervisory Authority",
+        "timeline": "72 hours from awareness",
+        "condition": "Personal data breach unlikely to be low risk",
+        "framework": "GDPR Article 33"
+      },
+      {
+        "stakeholder": "GDPR Data Subjects",
+        "timeline": "Without undue delay",
+        "condition": "Breach likely to result in high risk to rights and freedoms",
+        "framework": "GDPR Article 34"
+      },
+      {
+        "stakeholder": "HIPAA Affected Individuals",
+        "timeline": "60 days from discovery",
+        "condition": "Breach of unsecured PHI",
+        "framework": "HIPAA 45 CFR 164.404"
+      },
+      {
+        "stakeholder": "HIPAA HHS Secretary (500+ individuals)",
+        "timeline": "60 days from discovery",
+        "condition": "Breach affecting 500 or more individuals",
+        "framework": "HIPAA 45 CFR 164.408"
+      },
+      {
+        "stakeholder": "HIPAA Media",
+        "timeline": "60 days from discovery",
+        "condition": "Breach affecting 500+ residents of a State/jurisdiction",
+        "framework": "HIPAA 45 CFR 164.406"
+      },
+      {
+        "stakeholder": "HIPAA Business Associate to Covered Entity",
+        "timeline": "60 days from discovery",
+        "condition": "BA discovers breach",
+        "framework": "HIPAA 45 CFR 164.410"
+      },
+      {
+        "stakeholder": "HIPAA HHS Secretary (annual log <500 individuals)",
+        "timeline": "60 days after calendar year end",
+        "condition": "Annual reporting of small breaches",
+        "framework": "HIPAA 45 CFR 164.408"
+      }
+    ]
+  }
+}

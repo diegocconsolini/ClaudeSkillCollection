@@ -1,0 +1,13 @@
+{
+  "company_name": "TechStart Inc.",
+  "industry": "Technology",
+  "organization_size": "50-500 employees",
+  "responsible_officer": "Chief Technology Officer (CTO)",
+  "responsible_department": "Information Technology Department",
+  "contact_email": "security@techstart.io",
+  "effective_date": "2025-11-01",
+  "review_schedule": "Annually",
+  "version": "1.0",
+  "frameworks": ["ISO 27001", "SOC 2"],
+  "regulations": ["None"]
+}

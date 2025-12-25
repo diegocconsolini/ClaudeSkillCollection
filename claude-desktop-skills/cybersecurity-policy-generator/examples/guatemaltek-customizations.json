@@ -1,0 +1,13 @@
+{
+  "company_name": "Guatemaltek",
+  "industry": "Technology",
+  "organization_size": "<50 employees",
+  "responsible_officer": "Chief Information Security Officer (CISO)",
+  "responsible_department": "IT Department",
+  "contact_email": "test@guatemaltek.com",
+  "effective_date": "2026-01-01",
+  "review_schedule": "Annually",
+  "version": "1.0",
+  "frameworks": ["ISO 27001", "SOC 2", "NIST CSF"],
+  "regulations": ["None"]
+}

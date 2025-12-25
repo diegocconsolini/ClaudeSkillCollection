@@ -1,0 +1,966 @@
+{
+  "metadata": {
+    "source": "NIST SP 800-61r3 (April 2025) - Incident Response Recommendations and Considerations for Cybersecurity Risk Management",
+    "version": "1.0.0",
+    "last_updated": "2025-10-19",
+    "description": "Incident response scenarios extracted from authoritative NIST guidance"
+  ],
+  "scenarios": [
+    {
+      "id": "ransomware",
+      "name": "Ransomware Attack",
+      "category": "malware",
+      "severity": "critical",
+      "description": "Deploying ransomware to prevent the use of computer systems and cause multiple data breaches by copying files from those systems",
+      "nist_example": "An attacker deploying ransomware to prevent the use of computer systems and cause multiple data breaches by copying files from those systems (NIST SP 800-61r3, page 10)",
+      "indicators": {
+        "technical": [
+          "Files renamed with unusual extensions (.locked, .crypto, .enc)",
+          "Unexpected encryption of files",
+          "Ransom notes appearing on systems",
+          "Unusual file system activity",
+          "Signs of data exfiltration before encryption",
+          "Lateral movement across network",
+          "Disabled backup systems or shadow copies"
+        ],
+        "behavioral": [
+          "Anomalous user activity or unusual patterns of activity",
+          "Authentication and logical access attempts from unusual locations",
+          "Deviations from expected behavior by systems"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "Monitor computing hardware and software for potentially adverse events (DE.CM-09)",
+          "Monitor networks and network services to find potentially adverse events (DE.CM-01)",
+          "Monitor personnel activity and technology usage for potentially adverse events (DE.CM-03)"
+        ],
+        "analysis": [
+          "Analyze potentially adverse events to better understand associated activities (DE.AE-02)",
+          "Correlate information from multiple sources (DE.AE-03)",
+          "Estimate the impact and scope of adverse events (DE.AE-04)",
+          "Integrate cyber threat intelligence and other contextual information into the analysis (DE.AE-07)"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Perform preliminary review to verify a cybersecurity incident has occurred (RS.MA-02)",
+          "Estimate the severity of the incident and the level of urgency needed to respond",
+          "Categorize incident by type (ransomware) and prioritize based on scope, impact, and resources (RS.MA-03)"
+        ],
+        "containment": [
+          "Quarantine affected systems immediately",
+          "Isolate compromised endpoints to remediation network",
+          "Block malicious IP addresses and domains",
+          "Disable compromised user accounts",
+          "Segment network to prevent lateral movement",
+          "Preserve evidence before making changes"
+        ],
+        "eradication": [
+          "Identify all affected hosts and services within the organization (RS.MI-02)",
+          "Delete malware and malicious artifacts",
+          "Disable breached user accounts and reset credentials",
+          "Identify and mitigate all exploited vulnerabilities",
+          "Remove persistence mechanisms and backdoors",
+          "Verify threat actor access has been completely removed"
+        ],
+        "investigation": [
+          "Determine the sequence of events that occurred during the incident (RS.AN-03)",
+          "Determine what vulnerabilities, threats, and threat actors were involved",
+          "Analyze the incident to find underlying or systemic root causes",
+          "Check cyber deception technology for additional information on attacker behavior",
+          "Collect and preserve incident data and metadata with chain of custody (RS.AN-07)"
+        ]
+      },
+      "recovery_actions": [
+        "Verify the integrity of backups before using them for restoration (RC.RP-03)",
+        "Check restoration assets for indicators of compromise and file corruption",
+        "Restore systems from clean backups",
+        "Rebuild compromised systems from known-good sources",
+        "Replace compromised files with clean versions",
+        "Install patches and security updates",
+        "Change all passwords and tighten security controls",
+        "Validate essential services are restored in appropriate order (RC.RP-04)",
+        "Verify correctness and adequacy of restoration before putting systems online (RC.RP-05)",
+        "Monitor performance of restored systems to verify adequacy"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Notify incident response team and incident lead (RS.MA-01)",
+          "Coordinate with system owners and asset owners",
+          "Update senior leadership regularly on status (RS.CO-03)",
+          "Notify human resources if insider activity suspected"
+        ],
+        "external": [
+          "Contact incident response service provider if appropriate (RS.MA-01)",
+          "Notify law enforcement agencies based on criteria in incident response plan (RS.CO-02)",
+          "Perform notifications in compliance with incident notification laws and regulations",
+          "Notify affected third parties of data breaches in accordance with regulatory, legal, and contractual requirements"
+        ],
+        "public": [
+          "Follow media communications procedures for incident response (RS.CO-03)",
+          "Establish and follow media engagement strategy",
+          "Explain steps being taken to recover and prevent recurrence (RC.CO-04)"
+        ]
+      },
+      "roles_responsibilities": [
+        "Leadership: Oversee incident response, allocate funding, decision-making authority",
+        "Incident handlers: Verify incident, collect evidence, prioritize, contain, eradicate, restore",
+        "Technology professionals: Network, system, cloud engineers for recovery efforts",
+        "Legal: Review compliance with laws and regulations, provide guidance",
+        "Public affairs: Manage media communications and public statements",
+        "Human resources: Coordinate if employee suspected of causing incident",
+        "Physical security: Provide facility access during incident handling"
+      ],
+      "gdpr_considerations": {
+        "breach_notification": "If personal data involved, notify supervisory authority within 72 hours of becoming aware",
+        "data_subject_notification": "Notify affected individuals without undue delay if high risk to their rights and freedoms",
+        "documentation": "Document the facts of the breach, its effects, and remedial actions taken"
+      ],
+      "hipaa_considerations": {
+        "breach_notification": "Notify HHS within 60 days for breaches affecting 500+ individuals",
+        "risk_assessment": "Conduct breach risk assessment to determine if notification required",
+        "business_associate": "Notify covered entity if breach occurs at business associate"
+      }
+    },
+    {
+      "id": "data_breach",
+      "name": "Data Breach / Exfiltration",
+      "category": "data_compromise",
+      "severity": "critical",
+      "description": "Unauthorized access to and exfiltration of sensitive organizational or customer data",
+      "nist_example": "Deploying ransomware to prevent the use of computer systems and cause multiple data breaches by copying files from those systems (NIST SP 800-61r3, page 10)",
+      "indicators": {
+        "technical": [
+          "Unusual outbound data transfers or traffic patterns",
+          "Large file transfers to external destinations",
+          "Access to sensitive data repositories by unauthorized accounts",
+          "Database queries for large amounts of records",
+          "Use of data exfiltration tools or techniques",
+          "Anomalous authentication patterns",
+          "Compromised credentials being used"
+        ],
+        "behavioral": [
+          "Anomalous user activity or unusual patterns of activity (DE.CM-03)",
+          "Access attempts from unusual locations or times",
+          "Privilege escalation attempts"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "Monitor computing hardware and software for data leaks and exfiltration (DE.CM-09)",
+          "Monitor networks for unusual outbound data transfers",
+          "Monitor authentication attempts to identify unauthorized credential use (DE.CM-09)",
+          "Monitor external service provider activities for deviations (DE.CM-06)"
+        ],
+        "analysis": [
+          "Correlate information from multiple log sources (DE.AE-03)",
+          "Estimate impact and scope - which data was accessed/exfiltrated (DE.AE-04)",
+          "Integrate threat intelligence to identify known data breach TTPs (DE.AE-07)"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Verify that data breach has occurred and estimate severity (RS.MA-02)",
+          "Identify what data was compromised and classify by sensitivity",
+          "Determine regulatory notification requirements (GDPR, HIPAA, state laws)",
+          "Categorize and prioritize based on data sensitivity and regulatory impact (RS.MA-03)"
+        ],
+        "containment": [
+          "Revoke access credentials immediately",
+          "Block attacker IP addresses and close access paths",
+          "Isolate affected systems",
+          "Prevent further data exfiltration",
+          "Preserve forensic evidence"
+        ],
+        "eradication": [
+          "Remove attacker access to all systems (RS.MI-02)",
+          "Eliminate all persistence mechanisms",
+          "Patch vulnerabilities that enabled the breach",
+          "Reset all potentially compromised credentials",
+          "Review and tighten access controls"
+        ],
+        "investigation": [
+          "Determine full scope of compromised data (RS.AN-03)",
+          "Identify how attacker gained initial access",
+          "Map attacker's lateral movement and data access",
+          "Determine what vulnerabilities were exploited",
+          "Collect and preserve evidence for potential legal action (RS.AN-07)",
+          "Perform root cause analysis"
+        ]
+      },
+      "recovery_actions": [
+        "Implement enhanced access controls and monitoring (RC.RP-02)",
+        "Deploy additional data loss prevention (DLP) measures",
+        "Strengthen authentication mechanisms",
+        "Review and update data classification and handling procedures",
+        "Verify integrity of remaining data (RC.RP-05)",
+        "Monitor for misuse of exfiltrated data"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Notify incident response team and legal department immediately (RS.MA-01, RS.CO-02)",
+          "Brief senior leadership on breach scope and regulatory obligations",
+          "Coordinate with data owners and privacy team",
+          "Update stakeholders regularly on investigation progress"
+        ],
+        "external": [
+          "Notify regulatory bodies within required timeframes (GDPR: 72 hours, HIPAA: 60 days) (RS.CO-02)",
+          "Notify affected individuals as required by law",
+          "Contact law enforcement if appropriate",
+          "Coordinate with cyber insurance provider",
+          "Notify business partners if their data was compromised"
+        ],
+        "public": [
+          "Prepare public statement following organization's breach notification procedures (RC.CO-04)",
+          "Coordinate media response with public affairs team (RS.CO-03)",
+          "Explain remediation steps and measures to prevent recurrence"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident lead: Coordinate overall response and investigation",
+        "Legal team: Determine notification obligations and manage regulatory compliance",
+        "Privacy officer/DPO: Oversee data protection aspects and notification",
+        "Forensics team: Investigate breach scope and attacker activities",
+        "Technology teams: Implement containment and recovery measures",
+        "Public affairs: Manage external communications and media inquiries",
+        "HR: Coordinate if insider threat suspected"
+      ],
+      "gdpr_considerations": {
+        "breach_notification": "Notify relevant supervisory authority within 72 hours of becoming aware of the breach",
+        "data_subject_notification": "Notify affected data subjects without undue delay if high risk to rights and freedoms",
+        "documentation": "Document breach facts, effects, and remedial action (Article 33-34)",
+        "risk_assessment": "Assess whether breach is likely to result in risk to individuals' rights and freedoms"
+      ],
+      "hipaa_considerations": {
+        "breach_notification": "Notify HHS within 60 days for breaches affecting 500+ individuals; affected individuals within 60 days",
+        "business_associate": "Business associates must notify covered entities within 60 days",
+        "media_notification": "Notify prominent media outlets if breach affects 500+ individuals in same state/jurisdiction",
+        "breach_log": "Maintain log of breaches affecting fewer than 500 individuals"
+      }
+    },
+    {
+      "id": "phishing_bec",
+      "name": "Phishing / Business Email Compromise (BEC)",
+      "category": "social_engineering",
+      "severity": "high",
+      "description": "Using phishing emails to compromise user accounts and using those accounts to commit financial fraud or further attacks",
+      "nist_example": "Using phishing emails to compromise user accounts and using those accounts to commit financial fraud (NIST SP 800-61r3, page 10)",
+      "indicators": {
+        "technical": [
+          "Suspicious email headers or spoofed sender addresses",
+          "Emails with malicious attachments or links",
+          "Login attempts from unusual locations after phishing campaign",
+          "Unusual email forwarding rules created",
+          "Large volumes of outbound phishing emails from compromised accounts",
+          "Unexpected password reset requests",
+          "Multi-factor authentication bypass attempts"
+        ],
+        "behavioral": [
+          "Reports from users of suspicious emails",
+          "Anomalous user account activity (DE.CM-03)",
+          "Unusual patterns of email access or transmission",
+          "Fraudulent financial transactions or wire transfer requests"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "Monitor email for phishing, malware, and suspicious content (DE.CM-09)",
+          "Monitor authentication attempts to identify credential compromise (DE.CM-09)",
+          "Monitor for anomalous user activity and unusual access patterns (DE.CM-03)",
+          "Track email forwarding rules and delegate permissions"
+        ],
+        "analysis": [
+          "Analyze reported phishing emails and identify indicators (DE.AE-02)",
+          "Correlate failed/successful logins with phishing campaign timing (DE.AE-03)",
+          "Estimate how many users received or clicked phishing emails (DE.AE-04)",
+          "Use threat intelligence to identify known phishing campaigns (DE.AE-07)"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Verify phishing incident and assess if credentials were compromised (RS.MA-02)",
+          "Determine number of affected users and accounts",
+          "Assess if financial fraud or data theft occurred",
+          "Prioritize based on compromise scope and potential financial impact (RS.MA-03)"
+        ],
+        "containment": [
+          "Disable compromised user accounts immediately",
+          "Remove phishing emails from all mailboxes",
+          "Block malicious URLs and sender domains",
+          "Reset passwords for affected accounts",
+          "Revoke active sessions for compromised accounts",
+          "Block suspicious IP addresses if attacker access detected"
+        ],
+        "eradication": [
+          "Remove all malware installed via phishing attachments (RS.MI-02)",
+          "Delete malicious email forwarding rules",
+          "Remove attacker-created accounts or backdoors",
+          "Identify and patch vulnerabilities in email security controls",
+          "Update email filtering and anti-phishing rules"
+        ],
+        "investigation": [
+          "Determine how many users were targeted and compromised (RS.AN-03)",
+          "Identify what the compromised accounts were used for",
+          "Track financial fraud or unauthorized transactions",
+          "Analyze attacker techniques and infrastructure",
+          "Preserve email logs and authentication records as evidence (RS.AN-07)"
+        ]
+      },
+      "recovery_actions": [
+        "Force password resets for all potentially affected users (RC.RP-02)",
+        "Re-enable accounts after password reset and security verification",
+        "Implement or strengthen multi-factor authentication (MFA)",
+        "Enhance email security controls and phishing detection",
+        "Verify no unauthorized configuration changes remain (RC.RP-05)",
+        "Monitor for continued phishing attempts or account compromise"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Alert all users about phishing campaign (RS.CO-02)",
+          "Provide guidance on identifying and reporting phishing",
+          "Notify IT security team and helpdesk",
+          "Brief leadership if financial fraud occurred",
+          "Coordinate with finance team if fraudulent transactions detected"
+        ],
+        "external": [
+          "Report phishing infrastructure to anti-phishing organizations",
+          "Notify financial institutions if wire fraud attempted",
+          "Contact law enforcement if significant financial loss occurred (RS.CO-02)",
+          "Notify customers if compromise affects external communications"
+        ],
+        "public": [
+          "Issue public warning if phishing targets customers or partners",
+          "Provide guidance on verifying legitimate communications from organization"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident handlers: Coordinate response and remove phishing emails",
+        "Email administrators: Implement blocks and update email security rules",
+        "Identity and access management: Reset credentials and review access",
+        "Finance team: Verify and potentially reverse fraudulent transactions",
+        "Legal: Assess liability and coordinate with law enforcement if needed",
+        "Communications: Notify users and potentially customers",
+        "HR: Provide security awareness training following incident"
+      ],
+      "gdpr_considerations": {
+        "breach_notification": "If credentials compromised and personal data accessed, notify within 72 hours",
+        "data_subject_notification": "Notify individuals if their data was accessed using compromised credentials",
+        "security_measures": "Document email security controls and multi-factor authentication implementation"
+      ],
+      "hipaa_considerations": {
+        "breach_notification": "Assess if PHI was accessed; notify if breach occurred",
+        "risk_assessment": "Determine probability that PHI was compromised",
+        "workforce_training": "Document security awareness training on phishing"
+      }
+    },
+    {
+      "id": "ddos",
+      "name": "Distributed Denial of Service (DDoS) Attack",
+      "category": "availability",
+      "severity": "high",
+      "description": "Employing a botnet to send high volumes of connection requests to make services unavailable to legitimate users",
+      "nist_example": "Employing a botnet to send high volumes of connection requests to an internet-facing service, making it unavailable to legitimate service users (NIST SP 800-61r3, page 10)",
+      "indicators": {
+        "technical": [
+          "Unusual spike in traffic volume to specific services",
+          "High number of requests from single or multiple IP addresses",
+          "Service degradation or complete unavailability",
+          "Network bandwidth saturation",
+          "Server resource exhaustion (CPU, memory, connections)",
+          "Patterns consistent with botnet activity",
+          "Amplification attacks using DNS, NTP, or other protocols"
+        ],
+        "behavioral": [
+          "Customer reports of service unavailability",
+          "Alerts from monitoring systems about service degradation",
+          "Unusual patterns of connection attempts"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "Monitor networks and network services for unusual traffic patterns (DE.CM-01)",
+          "Monitor service availability and performance metrics",
+          "Track connection attempts and request volumes",
+          "Monitor external service provider activities (DE.CM-06)"
+        ],
+        "analysis": [
+          "Analyze traffic patterns to distinguish attack from legitimate traffic (DE.AE-02)",
+          "Correlate network logs with service availability metrics (DE.AE-03)",
+          "Estimate attack magnitude and impact on services (DE.AE-04)",
+          "Integrate threat intelligence on known DDoS botnets and attack signatures (DE.AE-07)"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Verify DDoS attack is occurring and not legitimate traffic spike (RS.MA-02)",
+          "Determine attack type (volumetric, protocol, application-layer)",
+          "Assess impact on critical services and customers",
+          "Prioritize mitigation based on service criticality (RS.MA-03)"
+        ],
+        "containment": [
+          "Activate DDoS mitigation service or scrubbing center",
+          "Implement rate limiting and traffic filtering",
+          "Block malicious IP addresses and traffic patterns",
+          "Enable geo-blocking if attack originates from specific regions",
+          "Redirect traffic through content delivery network (CDN)",
+          "Consider authorizing ISP/CSP to act automatically (RS.MI-01)"
+        ],
+        "eradication": [
+          "Continue filtering malicious traffic until attack subsides (RS.MI-02)",
+          "Identify and block new attack vectors as they emerge",
+          "Update firewall and IPS rules to prevent similar attacks",
+          "Coordinate with upstream providers to filter attack traffic"
+        ],
+        "investigation": [
+          "Analyze attack vectors and techniques used (RS.AN-03)",
+          "Identify botnet command and control infrastructure if possible",
+          "Determine if DDoS is smokescreen for other malicious activity",
+          "Capture network traffic and logs for analysis (RS.AN-07)"
+        ]
+      },
+      "recovery_actions": [
+        "Gradually restore normal traffic routing as attack subsides (RC.RP-02)",
+        "Verify services are functioning normally (RC.RP-05)",
+        "Monitor for resumption of attack",
+        "Assess and implement enhanced DDoS protection measures (RC.RP-04)",
+        "Review and update DDoS response procedures",
+        "Increase capacity or implement auto-scaling if resource exhaustion occurred"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Notify incident response team and network operations (RS.MA-01)",
+          "Brief leadership on service impact and customer effects",
+          "Coordinate with infrastructure teams for mitigation",
+          "Update stakeholders on restoration progress"
+        ],
+        "external": [
+          "Contact DDoS mitigation service provider (RS.MA-01)",
+          "Coordinate with ISP for upstream filtering (RS.CO-02)",
+          "Notify cloud service provider if cloud-hosted",
+          "Consider contacting law enforcement for large-scale attacks"
+        ],
+        "public": [
+          "Provide status updates to customers about service availability (RC.CO-03)",
+          "Explain nature of disruption and estimated restoration time",
+          "Issue public statement if attack is newsworthy (RC.CO-04)"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident lead: Coordinate overall response and decision-making",
+        "Network operations: Implement traffic filtering and mitigation measures",
+        "Infrastructure team: Monitor server health and implement auto-scaling",
+        "DDoS mitigation vendor: Provide scrubbing services and expert guidance",
+        "ISP/upstream providers: Implement network-level filtering",
+        "Communications: Manage customer notifications and status updates",
+        "Leadership: Approve use of mitigation services and resources"
+      ],
+      "gdpr_considerations": {
+        "service_availability": "Document service disruption and restoration efforts",
+        "data_protection": "Ensure DDoS is not cover for data breach attempt",
+        "notification": "Generally no GDPR notification required unless personal data compromised"
+      ],
+      "hipaa_considerations": {
+        "availability": "Document impact on availability of ePHI",
+        "breach_assessment": "Assess if attack resulted in unauthorized access to PHI",
+        "business_continuity": "Activate continuity plans to maintain healthcare operations"
+      }
+    },
+    {
+      "id": "malware_compromise",
+      "name": "Malware / System Compromise",
+      "category": "malware",
+      "severity": "high",
+      "description": "Malware infection or system compromise that provides unauthorized access or causes system malfunction",
+      "nist_example": "Intrusion upon an organization's network to steal credentials and compromise industrial control systems, causing major service disruption (NIST SP 800-61r3, page 10)",
+      "indicators": {
+        "technical": [
+          "Antivirus/EDR alerts on malware detection",
+          "Unexpected processes or services running",
+          "Unusual network connections to external IPs",
+          "Registry or system configuration changes",
+          "New scheduled tasks or persistence mechanisms",
+          "Signs of lateral movement",
+          "Command and control (C2) communication patterns",
+          "File integrity violations"
+        ],
+        "behavioral": [
+          "System performance degradation",
+          "Unexpected system behavior or crashes",
+          "Anomalous user or service account activity (DE.CM-03)",
+          "Unusual authentication patterns"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "Monitor computing hardware and software for malware and suspicious activity (DE.CM-09)",
+          "Monitor for unauthorized software installation and execution (DE.CM-09)",
+          "Monitor network for C2 communications and data exfiltration (DE.CM-01)",
+          "Monitor for deviations from security baselines (DE.CM-09)"
+        ],
+        "analysis": [
+          "Analyze malware behavior and capabilities (DE.AE-02)",
+          "Correlate malware detections across multiple systems (DE.AE-03)",
+          "Estimate scope of infection and potential impact (DE.AE-04)",
+          "Use threat intelligence to identify malware family and attacker TTPs (DE.AE-07)"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Verify malware infection and assess severity (RS.MA-02)",
+          "Identify malware type and capabilities",
+          "Determine number of infected systems",
+          "Assess if data was stolen or systems were damaged",
+          "Prioritize response based on malware capabilities and system criticality (RS.MA-03)"
+        ],
+        "containment": [
+          "Isolate infected systems from network",
+          "Block malware C2 domains and IP addresses",
+          "Quarantine malware samples",
+          "Disable compromised accounts",
+          "Prevent malware from spreading to additional systems",
+          "Consider taking critical systems offline if at risk"
+        ],
+        "eradication": [
+          "Remove malware from all infected systems (RS.MI-02)",
+          "Delete malicious files, registry keys, and scheduled tasks",
+          "Eliminate persistence mechanisms",
+          "Patch vulnerabilities exploited by malware",
+          "Reset compromised credentials",
+          "Verify complete removal before reconnecting to network"
+        ],
+        "investigation": [
+          "Determine initial infection vector (RS.AN-03)",
+          "Identify what systems and data were accessed",
+          "Analyze malware to understand full capabilities",
+          "Map attacker's activities and lateral movement",
+          "Identify all indicators of compromise (IOCs)",
+          "Preserve malware samples and forensic evidence (RS.AN-07)"
+        ]
+      },
+      "recovery_actions": [
+        "Rebuild severely compromised systems from known-good images (RC.RP-02)",
+        "Restore from clean backups after verifying integrity (RC.RP-03)",
+        "Apply security patches and updates",
+        "Reconfigure systems with hardened security settings",
+        "Verify systems are clean before reconnecting to production network (RC.RP-05)",
+        "Monitor restored systems for signs of reinfection",
+        "Update antivirus/EDR signatures with new IOCs"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Alert incident response team and IT security (RS.MA-01)",
+          "Notify system owners of infected systems",
+          "Brief leadership on infection scope and potential data loss",
+          "Coordinate with IT teams for remediation efforts"
+        ],
+        "external": [
+          "Share IOCs with information sharing communities (RS.CO-03)",
+          "Report to antivirus vendors for signature updates",
+          "Notify affected third parties if their systems may be at risk",
+          "Contact law enforcement if major compromise or data theft"
+        ],
+        "public": [
+          "Generally no public communication unless customer data affected",
+          "Issue guidance if malware targets customers or partners"
+        ]
+      },
+      "roles_responsibilities": [
+        "Incident handlers: Coordinate response and malware analysis",
+        "Malware analysts: Reverse engineer malware and identify capabilities",
+        "System administrators: Isolate, clean, and rebuild affected systems",
+        "Network security: Block C2 infrastructure and monitor for spread",
+        "Forensics team: Investigate infection vector and attacker activities",
+        "Endpoint security team: Deploy updated signatures and detection rules"
+      ],
+      "gdpr_considerations": {
+        "breach_notification": "Assess if malware accessed or exfiltrated personal data; notify if breach occurred",
+        "data_subject_notification": "Notify individuals if their data was compromised",
+        "security_measures": "Document endpoint protection and malware prevention controls"
+      ],
+      "hipaa_considerations": {
+        "breach_notification": "Determine if malware accessed ePHI; notify if unauthorized access occurred",
+        "risk_assessment": "Assess probability that PHI was viewed, acquired, or disclosed",
+        "forensics": "Conduct forensic analysis to determine PHI exposure"
+      }
+    },
+    {
+      "id": "cloud_breach",
+      "name": "Cloud Security Breach",
+      "category": "cloud",
+      "severity": "critical",
+      "description": "Obtaining administrative credentials at a cloud service provider, putting sensitive tenant data at risk",
+      "nist_example": "Obtaining administrative credentials at a software-as-a-service provider, which puts sensitive tenant data entrusted to that provider at risk (NIST SP 800-61r3, page 10)",
+      "indicators": {
+        "technical": [
+          "Unauthorized access to cloud administration console",
+          "Unexpected configuration changes in cloud environment",
+          "New user accounts or elevated permissions",
+          "Unusual API calls or access patterns",
+          "Data access from unexpected IP addresses or locations",
+          "Unexpected changes to IAM policies or roles",
+          "Suspicious resource provisioning (compute, storage)",
+          "Cloud service provider security alerts"
+        ],
+        "behavioral": [
+          "Alerts from cloud security posture management (CSPM) tools",
+          "Deviations from expected cloud service behavior (DE.CM-06)",
+          "Anomalous administrative activity"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "Monitor cloud service provider activities for deviations from expected behavior (DE.CM-06)",
+          "Monitor authentication attempts in cloud environments (DE.CM-09)",
+          "Monitor for configuration changes and unauthorized access",
+          "Track API calls and administrative actions in cloud audit logs"
+        ],
+        "analysis": [
+          "Analyze cloud logs to identify unauthorized activities (DE.AE-02)",
+          "Correlate cloud audit logs with identity and access management (IAM) logs (DE.AE-03)",
+          "Estimate scope of unauthorized access and data exposure (DE.AE-04)",
+          "Use threat intelligence on cloud-specific attack techniques (DE.AE-07)"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Verify unauthorized cloud access has occurred (RS.MA-02)",
+          "Identify compromised credentials or access keys",
+          "Determine which cloud resources and data were accessed",
+          "Assess regulatory notification requirements for exposed data",
+          "Prioritize based on sensitivity of accessed data and resources (RS.MA-03)"
+        ],
+        "containment": [
+          "Revoke compromised credentials and access keys immediately",
+          "Disable compromised user accounts and service principals",
+          "Rotate all potentially exposed credentials and secrets",
+          "Enable additional access controls and restrictions",
+          "Isolate affected cloud resources",
+          "Review and restrict network security groups/firewall rules"
+        ],
+        "eradication": [
+          "Remove unauthorized user accounts and resources (RS.MI-02)",
+          "Delete attacker-created infrastructure and backdoors",
+          "Remove malicious IAM policies or role assignments",
+          "Patch vulnerabilities in cloud-hosted applications",
+          "Review and remediate misconfigurations",
+          "Update cloud security group rules and policies"
+        ],
+        "investigation": [
+          "Analyze cloud audit logs to determine full scope of breach (RS.AN-03)",
+          "Identify how attacker obtained initial cloud access",
+          "Map attacker's activities across cloud resources",
+          "Determine what data was accessed, modified, or exfiltrated",
+          "Preserve cloud logs and evidence (RS.AN-07)",
+          "Identify root cause (misconfiguration, credential theft, etc.)"
+        ]
+      },
+      "recovery_actions": [
+        "Implement stronger cloud access controls and policies (RC.RP-02)",
+        "Enable multi-factor authentication for all cloud accounts",
+        "Implement least privilege access principles",
+        "Deploy cloud security posture management (CSPM) tools",
+        "Enable enhanced logging and monitoring",
+        "Verify no unauthorized resources or configurations remain (RC.RP-05)",
+        "Conduct cloud security assessment and remediate findings"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Notify incident response team and cloud administrators (RS.MA-01)",
+          "Brief leadership on cloud breach scope and data exposure",
+          "Coordinate with legal team on notification requirements",
+          "Update stakeholders on remediation progress"
+        ],
+        "external": [
+          "Contact cloud service provider (CSP) for assistance (RS.MA-01, RS.CO-02)",
+          "Notify regulatory bodies if personal data was compromised",
+          "Notify affected customers or tenants",
+          "Engage cloud security specialists if needed",
+          "Coordinate with law enforcement if appropriate"
+        ],
+        "public": [
+          "Prepare breach notification following regulatory requirements (RC.CO-04)",
+          "Issue public statement explaining incident and remediation (if required)",
+          "Provide guidance to customers on protective measures"
+        ]
+      },
+      "roles_responsibilities": [
+        "Cloud security team: Implement containment and remediation in cloud environment",
+        "Cloud administrators: Assist with investigation and recovery",
+        "Identity and access management: Review and remediate IAM policies",
+        "Incident handlers: Coordinate overall response and investigation",
+        "Legal and compliance: Determine notification obligations",
+        "Cloud service provider: Provide logs, support, and security guidance",
+        "Forensics team: Analyze cloud logs and determine breach scope"
+      ],
+      "gdpr_considerations": {
+        "breach_notification": "If personal data compromised, notify supervisory authority within 72 hours",
+        "data_subject_notification": "Notify affected individuals if high risk to their rights",
+        "processor_responsibilities": "If acting as processor, notify controller without undue delay",
+        "security_measures": "Document technical and organizational measures for cloud security"
+      ],
+      "hipaa_considerations": {
+        "breach_notification": "If ePHI compromised, follow HIPAA breach notification rule",
+        "business_associate": "If CSP is business associate, ensure BAA is in place",
+        "risk_assessment": "Conduct assessment of ePHI exposure in cloud environment",
+        "encryption": "Assess if ePHI was encrypted (safe harbor provision)"
+      }
+    },
+    {
+      "id": "supply_chain",
+      "name": "Supply Chain Attack / Third-Party Compromise",
+      "category": "supply_chain",
+      "severity": "critical",
+      "description": "Compromising a vendor's software or services which is subsequently distributed to customers in its compromised state",
+      "nist_example": "Compromising a vendor's software, which is subsequently distributed to customers in its compromised state (NIST SP 800-61r3, page 10)",
+      "indicators": {
+        "technical": [
+          "Unexpected software updates or patches",
+          "Code integrity violations in vendor software",
+          "Unusual behavior in third-party software or services",
+          "Backdoors discovered in vendor products",
+          "Malicious code in software supply chain (libraries, dependencies)",
+          "Compromised vendor credentials accessing your systems",
+          "Alerts from software composition analysis tools"
+        ],
+        "behavioral": [
+          "Vendor security incident notifications",
+          "Reports of vendor compromise in media or threat intelligence",
+          "Unusual activity from vendor-provided services (DE.CM-06)"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "Monitor external service provider activities and services for potentially adverse events (DE.CM-06)",
+          "Monitor vendor-provided software for anomalous behavior (DE.CM-09)",
+          "Track software integrity and verify digital signatures",
+          "Monitor vendor remote access and administrative activities"
+        ],
+        "analysis": [
+          "Analyze alerts related to vendor products and services (DE.AE-02)",
+          "Correlate vendor security advisories with internal detections (DE.AE-03)",
+          "Estimate impact of compromised vendor software on organization (DE.AE-04)",
+          "Integrate threat intelligence on supply chain attacks (DE.AE-07)",
+          "Rapidly acquire and analyze vendor vulnerability disclosures (DE.AE-07)"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Verify supply chain compromise and identify affected vendor (RS.MA-02)",
+          "Determine which products, services, or software are compromised",
+          "Identify all systems using affected vendor products",
+          "Assess potential impact on organization's operations and data",
+          "Prioritize based on criticality of affected systems (RS.MA-03)"
+        ],
+        "containment": [
+          "Isolate systems running compromised vendor software",
+          "Disable or restrict vendor remote access",
+          "Block malicious infrastructure associated with supply chain attack",
+          "Prevent deployment of compromised updates or patches",
+          "Segment networks to limit potential damage",
+          "Preserve evidence of vendor software compromise"
+        ],
+        "eradication": [
+          "Remove or rollback compromised vendor software/updates (RS.MI-02)",
+          "Apply vendor-provided remediation or clean versions",
+          "Eliminate any malicious code introduced via supply chain",
+          "Remove vendor-installed backdoors or persistence mechanisms",
+          "Revoke and rotate credentials used by vendor",
+          "Patch vulnerabilities exploited in supply chain attack"
+        ],
+        "investigation": [
+          "Determine full extent of vendor compromise impact (RS.AN-03)",
+          "Identify what attacker accessed through compromised vendor channel",
+          "Map vendor's access to your systems and data",
+          "Analyze compromised software for malicious functionality",
+          "Coordinate investigation with vendor and other affected customers",
+          "Preserve logs of vendor access and software activity (RS.AN-07)"
+        ]
+      },
+      "recovery_actions": [
+        "Deploy clean versions of vendor software from trusted sources (RC.RP-02)",
+        "Verify integrity of vendor software before deployment (RC.RP-03)",
+        "Implement enhanced vetting for vendor software updates",
+        "Review and strengthen vendor access controls",
+        "Deploy software composition analysis (SCA) tools",
+        "Verify no vendor-introduced compromises remain (RC.RP-05)",
+        "Monitor for indicators of compromise from supply chain attack"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Alert incident response team and vendor management (RS.MA-01)",
+          "Notify all teams using affected vendor products",
+          "Brief leadership on supply chain risk and vendor relationships",
+          "Coordinate with procurement and legal on vendor contracts"
+        ],
+        "external": [
+          "Engage directly with compromised vendor for information and remediation (RS.CO-02)",
+          "Share information with other vendor customers if appropriate (RS.CO-03)",
+          "Report to information sharing organizations (ISACs) (RS.CO-03)",
+          "Notify regulatory bodies if required",
+          "Contact law enforcement for significant supply chain attacks",
+          "Coordinate with industry peers affected by same vendor"
+        ],
+        "public": [
+          "Issue statement if supply chain compromise affects customers",
+          "Provide guidance to downstream customers on protective measures",
+          "Coordinate messaging with affected vendor (if appropriate)"
+        ]
+      },
+      "roles_responsibilities": [
+        "Vendor management: Coordinate with vendor and manage relationship",
+        "Procurement/contracts: Review vendor agreements and liability",
+        "Incident handlers: Lead investigation and response efforts",
+        "Software developers: Assess impact on applications using vendor components",
+        "Security architecture: Review and enhance vendor access controls",
+        "Legal: Assess contractual obligations and potential liability",
+        "Supply chain risk management: Conduct vendor risk reassessment"
+      ],
+      "gdpr_considerations": {
+        "processor_breach": "If vendor is processor, they must notify you as controller without undue delay",
+        "breach_notification": "Assess if personal data compromised; notify supervisory authority if so",
+        "liability": "Controller may be liable for processor's failure to comply with GDPR",
+        "vendor_contracts": "Review data processing agreements and security requirements"
+      ],
+      "hipaa_considerations": {
+        "business_associate": "If vendor is business associate, ensure breach notification per BAA",
+        "breach_assessment": "Determine if PHI was compromised through vendor",
+        "vendor_liability": "Review business associate agreement for liability provisions",
+        "notification": "Follow HIPAA breach notification rule if PHI compromised"
+      }
+    },
+    {
+      "id": "ai_ml_security",
+      "name": "AI/ML Security Incident",
+      "category": "emerging_threats",
+      "severity": "high",
+      "description": "Security incidents involving AI/ML systems including prompt injection, model poisoning, data exfiltration, or misuse of AI-generated content",
+      "nist_example": "Modern threat requiring specialized incident response (NIST SP 800-61r3 emphasis on adapting to evolving threat landscape)",
+      "indicators": {
+        "technical": [
+          "Adversarial inputs causing unexpected AI model behavior",
+          "Unusual model outputs or degraded performance",
+          "Unauthorized access to model weights or training data",
+          "Prompt injection attempts in LLM applications",
+          "Model inversion or membership inference attacks",
+          "Data poisoning in training datasets",
+          "Extraction of proprietary model information",
+          "Deepfake or synthetic media creation for malicious purposes"
+        ],
+        "behavioral": [
+          "Reports of AI system manipulation or bias exploitation",
+          "Unusual patterns in AI system queries or usage",
+          "Complaints about inappropriate AI-generated content",
+          "Evidence of AI being used for social engineering or fraud"
+        ]
+      },
+      "detection_activities": {
+        "continuous_monitoring": [
+          "Monitor AI/ML system inputs and outputs for anomalies (DE.CM-09)",
+          "Track model performance metrics for degradation",
+          "Monitor access to model repositories and training data",
+          "Detect adversarial input patterns and prompt injection attempts",
+          "Monitor for unauthorized model inference or extraction"
+        ],
+        "analysis": [
+          "Analyze AI system logs to identify attack patterns (DE.AE-02)",
+          "Correlate model behavior changes with potential attacks (DE.AE-03)",
+          "Estimate impact of AI compromise on downstream systems (DE.AE-04)",
+          "Integrate threat intelligence on AI/ML attack techniques (DE.AE-07)",
+          "Reference NIST AI Risk Management Framework and MITRE ATLAS"
+        ]
+      },
+      "response_actions": {
+        "triage": [
+          "Verify AI/ML security incident and classify attack type (RS.MA-02)",
+          "Identify affected AI models and systems",
+          "Assess impact on model integrity, availability, or confidentiality",
+          "Determine if incident affects safety-critical or high-stakes applications",
+          "Prioritize based on AI system criticality and potential harm (RS.MA-03)"
+        ],
+        "containment": [
+          "Suspend affected AI model deployment if safety risk exists",
+          "Implement input validation and sanitization for prompt injection",
+          "Restrict access to model APIs and inference endpoints",
+          "Enable rate limiting to prevent model extraction attacks",
+          "Isolate compromised training data or model versions",
+          "Implement additional monitoring on AI system inputs/outputs"
+        ],
+        "eradication": [
+          "Remove poisoned data from training datasets (RS.MI-02)",
+          "Retrain models with clean, validated data",
+          "Patch vulnerabilities in AI application layer",
+          "Remove prompt injection payloads or adversarial inputs",
+          "Update model access controls and authentication",
+          "Implement adversarial robustness techniques"
+        ],
+        "investigation": [
+          "Determine how AI system was compromised (RS.AN-03)",
+          "Analyze adversarial inputs or poisoned training data",
+          "Assess extent of model extraction or data leakage",
+          "Identify if compromise affects model fairness or bias",
+          "Document attack techniques for threat intelligence sharing",
+          "Preserve AI system logs and model artifacts as evidence (RS.AN-07)"
+        ]
+      },
+      "recovery_actions": [
+        "Deploy retrained or remediated model versions (RC.RP-02)",
+        "Verify model integrity and performance before redeployment (RC.RP-03)",
+        "Implement enhanced AI security controls (input filters, output validation)",
+        "Deploy AI security monitoring and anomaly detection",
+        "Conduct AI red teaming to identify remaining vulnerabilities",
+        "Verify model behavior is restored to expected baselines (RC.RP-05)",
+        "Document lessons learned for AI security improvements"
+      ],
+      "communication_requirements": {
+        "internal": [
+          "Alert AI/ML engineering team and incident response (RS.MA-01)",
+          "Notify data science and model operations teams",
+          "Brief leadership on AI security incident and potential impacts",
+          "Coordinate with legal on AI liability and transparency requirements"
+        ],
+        "external": [
+          "Notify affected users if AI system behavior was compromised",
+          "Engage AI security specialists or red team services (RS.CO-02)",
+          "Share AI attack patterns with research community (RS.CO-03)",
+          "Report to AI incident databases (e.g., AI Incident Database)",
+          "Coordinate with AI model providers if third-party models affected"
+        ],
+        "public": [
+          "Provide transparency on AI incident per AI transparency principles",
+          "Issue guidance if AI-generated content was used maliciously",
+          "Explain remediation and enhanced AI safety measures (RC.CO-04)"
+        ]
+      },
+      "roles_responsibilities": [
+        "AI/ML engineers: Investigate model compromise and retrain if needed",
+        "Data scientists: Analyze training data for poisoning or bias",
+        "Application security: Secure AI application layer and APIs",
+        "Incident handlers: Coordinate response to AI security incident",
+        "Ethics/compliance: Assess AI fairness and transparency implications",
+        "Legal: Review AI liability and disclosure obligations",
+        "Product team: Assess impact on AI-powered features and users"
+      ],
+      "gdpr_considerations": {
+        "automated_decision_making": "Assess if compromised AI affects GDPR Article 22 automated decisions",
+        "data_breach": "If training data or model outputs expose personal data, notify per GDPR",
+        "transparency": "Provide information to data subjects about AI incident affecting them",
+        "data_protection_by_design": "Document AI security measures and privacy safeguards"
+      ],
+      "hipaa_considerations": {
+        "ai_phi_exposure": "Assess if AI model compromise led to PHI disclosure",
+        "training_data": "Determine if PHI in training data was compromised",
+        "clinical_decision_support": "Assess safety impact if AI used for healthcare decisions",
+        "breach_notification": "Notify if ePHI was compromised through AI system"
+      ],
+      "ai_specific_considerations": {
+        "nist_ai_rmf": "Apply NIST AI Risk Management Framework for governance",
+        "mitre_atlas": "Reference MITRE ATLAS for AI threat tactics and techniques",
+        "model_cards": "Update model documentation with security incident information",
+        "responsible_ai": "Assess incident impact on AI fairness, transparency, accountability",
+        "safety": "Evaluate if incident creates safety risks in AI deployment",
+        "adversarial_ml": "Implement adversarial ML defenses and robustness testing"
+      }
+    }
+  ]
+}
