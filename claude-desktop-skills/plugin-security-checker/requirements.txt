@@ -1,0 +1,18 @@
+# Plugin Security Checker - Python Dependencies
+# Version: 2.0.0 (STIX 2.1 Integration)
+#
+# Note: Versions compatible with Python 3.8+ (macOS system Python 3.9)
+
+# STIX 2.1 - Official OASIS CTI Library
+# stix2 v3.0+ requires Python 3.10+, using v2.x for compatibility
+stix2>=2.0.0,<3.0.0
+
+# TAXII 2.1 Client - For MITRE ATT&CK data access
+taxii2-client>=2.3.0
+
+# MITRE ATT&CK Python Library
+# v3.0+ requires Python 3.10+, using v2.x for compatibility
+mitreattack-python>=2.0.0,<3.0.0
+
+# Standard library extensions (no external dependencies for v1.0.0)
+# All other functionality uses Python stdlib only

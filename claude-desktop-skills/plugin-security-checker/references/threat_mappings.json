@@ -1,0 +1,424 @@
+{
+  "version": "1.0.0",
+  "description": "Unified threat intelligence mappings: Dangerous code patterns → ATT&CK + ATLAS + OWASP + CWE + CVE",
+  "last_updated": "2025-10-23",
+  "frameworks": {
+    "mitre_attack": "v14.1",
+    "mitre_atlas": "v4.5.0",
+    "owasp_api": "2023",
+    "owasp_top10": "2021",
+    "cwe": "4.13"
+  },
+  "mappings": {
+    "subprocess.run_shell_true": {
+      "pattern": "subprocess.run.*shell\\s*=\\s*True",
+      "language": "python",
+      "severity": "CRITICAL",
+      "cvss": 8.7,
+      "attack": {
+        "technique_id": "T1059.006",
+        "technique_name": "Command and Scripting Interpreter: Python",
+        "tactic": "Execution",
+        "description": "Adversaries may abuse Python for execution",
+        "url": "https://attack.mitre.org/techniques/T1059/006"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-78",
+        "name": "OS Command Injection",
+        "url": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "owasp": {
+        "category": "A03:2021 - Injection",
+        "api_category": null
+      },
+      "cve_examples": ["CVE-2025-54795"],
+      "description": "Command injection via subprocess with shell=True",
+      "risk": "Allows arbitrary command execution via shell metacharacters",
+      "safe_alternative": "subprocess.run(['cmd', 'arg'], shell=False)",
+      "test_malicious": "subprocess.run(f'ls {user_input}', shell=True)",
+      "test_safe": "subprocess.run(['ls', user_input], shell=False)"
+    },
+    "eval": {
+      "pattern": "\\beval\\s*\\(",
+      "language": "python",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "attack": {
+        "technique_id": "T1059.006",
+        "technique_name": "Command and Scripting Interpreter: Python",
+        "tactic": "Execution"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-95",
+        "name": "Improper Neutralization of Directives in Dynamically Evaluated Code",
+        "url": "https://cwe.mitre.org/data/definitions/95.html"
+      },
+      "owasp": {
+        "category": "A03:2021 - Injection",
+        "api_category": "API10: Unsafe Consumption of APIs"
+      },
+      "cve_examples": ["CVE-2025-54795"],
+      "description": "Arbitrary Python code execution from string",
+      "risk": "Complete system compromise",
+      "safe_alternative": "ast.literal_eval() for literals only, refactor logic",
+      "test_malicious": "eval(user_input)",
+      "test_safe": "ast.literal_eval('[1, 2, 3]')"
+    },
+    "pickle.loads": {
+      "pattern": "pickle\\.loads\\s*\\(",
+      "language": "python",
+      "severity": "CRITICAL",
+      "cvss": 9.0,
+      "attack": {
+        "technique_id": "T1027.010",
+        "technique_name": "Obfuscated Files or Information: Command Obfuscation",
+        "tactic": "Defense Evasion"
+      },
+      "atlas": {
+        "technique_id": "AML.T0043",
+        "technique_name": "Craft Adversarial Data",
+        "tactic": "ML Model Access",
+        "description": "Model poisoning via malicious pickle files",
+        "url": "https://atlas.mitre.org/techniques/AML.T0043"
+      },
+      "cwe": {
+        "id": "CWE-502",
+        "name": "Deserialization of Untrusted Data",
+        "url": "https://cwe.mitre.org/data/definitions/502.html"
+      },
+      "owasp": {
+        "category": "A08:2021 - Software and Data Integrity Failures",
+        "api_category": "API10: Unsafe Consumption of APIs"
+      },
+      "cve_examples": ["CVE-2022-48564"],
+      "description": "Arbitrary code execution via pickle deserialization, AI model poisoning",
+      "risk": "Can execute code, poison ML models",
+      "safe_alternative": "json.loads() or use model_validate() from Pydantic",
+      "test_malicious": "model = pickle.loads(untrusted_data)",
+      "test_safe": "data = json.loads(trusted_json)"
+    },
+    "exec": {
+      "pattern": "\\bexec\\s*\\(",
+      "language": "python",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "attack": {
+        "technique_id": "T1059.006",
+        "technique_name": "Command and Scripting Interpreter: Python",
+        "tactic": "Execution"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-94",
+        "name": "Improper Control of Generation of Code",
+        "url": "https://cwe.mitre.org/data/definitions/94.html"
+      },
+      "owasp": {
+        "category": "A03:2021 - Injection",
+        "api_category": "API10: Unsafe Consumption of APIs"
+      },
+      "cve_examples": ["CVE-2025-54795"],
+      "description": "Arbitrary Python code execution",
+      "risk": "Complete system compromise",
+      "safe_alternative": "Refactor logic to avoid dynamic execution",
+      "test_malicious": "exec('import os; os.system(\"rm -rf /\")')",
+      "test_safe": "# Refactor - no safe alternative"
+    },
+    "requests.get": {
+      "pattern": "requests\\.get\\s*\\(",
+      "language": "python",
+      "severity": "MEDIUM",
+      "cvss": 7.5,
+      "attack": {
+        "technique_id": "T1071.001",
+        "technique_name": "Application Layer Protocol: Web Protocols",
+        "tactic": "Command and Control"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-918",
+        "name": "Server-Side Request Forgery (SSRF)",
+        "url": "https://cwe.mitre.org/data/definitions/918.html"
+      },
+      "owasp": {
+        "category": "A10:2021 - Server-Side Request Forgery",
+        "api_category": "API7: Server Side Request Forgery"
+      },
+      "cve_examples": [],
+      "description": "HTTP request with potentially user-controlled URL (SSRF risk)",
+      "risk": "Access to internal services, data exfiltration",
+      "safe_alternative": "Validate URL against whitelist of allowed domains",
+      "test_malicious": "requests.get(user_url)",
+      "test_safe": "if url.startswith('https://api.trusted.com/'): requests.get(url)"
+    },
+    "eval_javascript": {
+      "pattern": "\\beval\\s*\\(",
+      "language": "javascript",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "attack": {
+        "technique_id": "T1059.007",
+        "technique_name": "Command and Scripting Interpreter: JavaScript",
+        "tactic": "Execution"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-95",
+        "name": "Improper Neutralization of Directives in Dynamically Evaluated Code"
+      },
+      "owasp": {
+        "category": "A03:2021 - Injection",
+        "api_category": "API10: Unsafe Consumption of APIs"
+      },
+      "cve_examples": ["CVE-2025-54795"],
+      "description": "Arbitrary JavaScript code execution",
+      "risk": "Complete compromise of JavaScript runtime",
+      "safe_alternative": "Refactor to avoid dynamic code execution",
+      "test_malicious": "eval(userInput)",
+      "test_safe": "// Refactor entirely"
+    },
+    "child_process.exec": {
+      "pattern": "child_process\\.exec\\s*\\(",
+      "language": "javascript",
+      "severity": "CRITICAL",
+      "cvss": 8.6,
+      "attack": {
+        "technique_id": "T1059.007",
+        "technique_name": "Command and Scripting Interpreter: JavaScript",
+        "tactic": "Execution"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-78",
+        "name": "OS Command Injection"
+      },
+      "owasp": {
+        "category": "A03:2021 - Injection",
+        "api_category": null
+      },
+      "cve_examples": ["CVE-2024-27980"],
+      "description": "Shell command execution in Node.js",
+      "risk": "Command injection via shell metacharacters",
+      "safe_alternative": "child_process.execFile() with argument array",
+      "test_malicious": "exec(`ls ${userDir}`)",
+      "test_safe": "execFile('ls', [userDir])"
+    },
+    "innerHTML": {
+      "pattern": "\\.innerHTML\\s*=",
+      "language": "javascript",
+      "severity": "MEDIUM",
+      "cvss": 6.5,
+      "attack": {
+        "technique_id": "T1189",
+        "technique_name": "Drive-by Compromise",
+        "tactic": "Initial Access"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Cross-site Scripting (XSS)"
+      },
+      "owasp": {
+        "category": "A03:2021 - Injection",
+        "api_category": null
+      },
+      "cve_examples": [],
+      "description": "Setting HTML content without sanitization (XSS risk)",
+      "risk": "Cross-site scripting, session hijacking",
+      "safe_alternative": "textContent for text, DOMPurify for HTML",
+      "test_malicious": "div.innerHTML = userInput",
+      "test_safe": "div.textContent = userInput"
+    },
+    "base64.b64decode": {
+      "pattern": "base64\\.b64decode\\s*\\(",
+      "language": "python",
+      "severity": "MEDIUM",
+      "cvss": 6.0,
+      "attack": {
+        "technique_id": "T1027",
+        "technique_name": "Obfuscated Files or Information",
+        "tactic": "Defense Evasion"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-506",
+        "name": "Embedded Malicious Code"
+      },
+      "owasp": {
+        "category": "A08:2021 - Software and Data Integrity Failures",
+        "api_category": null
+      },
+      "cve_examples": [],
+      "description": "Base64 decoding (often used for obfuscation)",
+      "risk": "Hidden malicious code",
+      "safe_alternative": "Legitimate use acceptable, flag if combined with exec/eval",
+      "test_malicious": "exec(base64.b64decode('cHJpbnQoMSk='))",
+      "test_safe": "config = base64.b64decode(encoded_config)  # OK if not executed"
+    },
+    "exec_base64_chain": {
+      "pattern": "exec\\s*\\([^)]*b64decode",
+      "language": "python",
+      "severity": "CRITICAL",
+      "cvss": 9.5,
+      "attack": {
+        "technique_id": "T1027",
+        "technique_name": "Obfuscated Files or Information",
+        "tactic": "Defense Evasion"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-94",
+        "name": "Improper Control of Generation of Code"
+      },
+      "owasp": {
+        "category": "A03:2021 - Injection",
+        "api_category": null
+      },
+      "cve_examples": [],
+      "description": "Obfuscated code execution via base64 + exec",
+      "risk": "Hidden malware, multi-stage payload",
+      "safe_alternative": "Never execute decoded data",
+      "test_malicious": "exec(base64.b64decode('aW1wb3J0IG9z'))",
+      "test_safe": "# Avoid entirely"
+    },
+    "anthropic_api_key": {
+      "pattern": "sk-ant-[a-zA-Z0-9-]{95,}",
+      "language": "any",
+      "severity": "HIGH",
+      "cvss": 8.0,
+      "attack": {
+        "technique_id": "T1552.001",
+        "technique_name": "Unsecured Credentials: Credentials In Files",
+        "tactic": "Credential Access"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-798",
+        "name": "Use of Hard-coded Credentials"
+      },
+      "owasp": {
+        "category": "A02:2021 - Cryptographic Failures",
+        "api_category": "API2: Broken Authentication"
+      },
+      "cve_examples": [],
+      "description": "Hardcoded Anthropic API key in source code",
+      "risk": "API abuse, billing fraud, data exfiltration",
+      "safe_alternative": "os.environ['ANTHROPIC_API_KEY']",
+      "test_malicious": "api_key = 'sk-ant-api03-...'",
+      "test_safe": "api_key = os.getenv('ANTHROPIC_API_KEY')"
+    },
+    "llm_prompt_injection": {
+      "pattern": "messages.*user.*content.*\\+.*user",
+      "language": "python",
+      "severity": "CRITICAL",
+      "cvss": 8.5,
+      "attack": {
+        "technique_id": "T1059.006",
+        "technique_name": "Command and Scripting Interpreter: Python",
+        "tactic": "Execution"
+      },
+      "atlas": {
+        "technique_id": "AML.T0051",
+        "technique_name": "LLM Prompt Injection",
+        "tactic": "Execution",
+        "description": "Inject malicious instructions into LLM prompts",
+        "url": "https://atlas.mitre.org/techniques/AML.T0051"
+      },
+      "cwe": {
+        "id": "CWE-94",
+        "name": "Improper Control of Generation of Code"
+      },
+      "owasp": {
+        "category": "A03:2021 - Injection",
+        "api_category": "API10: Unsafe Consumption of APIs"
+      },
+      "cve_examples": [],
+      "description": "Unsanitized user input in LLM prompt",
+      "risk": "Prompt injection, unauthorized actions, data exfiltration",
+      "safe_alternative": "Validate/sanitize input, use system prompts to constrain behavior",
+      "test_malicious": "messages=[{'role': 'user', 'content': f'User: {user_input}'}]",
+      "test_safe": "# Sanitize user_input first, use clear role separation"
+    },
+    "yaml.load": {
+      "pattern": "yaml\\.load\\s*\\([^,)]*\\)",
+      "language": "python",
+      "severity": "HIGH",
+      "cvss": 7.0,
+      "attack": {
+        "technique_id": "T1027.010",
+        "technique_name": "Obfuscated Files or Information: Command Obfuscation",
+        "tactic": "Defense Evasion"
+      },
+      "atlas": null,
+      "cwe": {
+        "id": "CWE-502",
+        "name": "Deserialization of Untrusted Data"
+      },
+      "owasp": {
+        "category": "A08:2021 - Software and Data Integrity Failures",
+        "api_category": "API10: Unsafe Consumption of APIs"
+      },
+      "cve_examples": ["CVE-2022-48564"],
+      "description": "Unsafe YAML deserialization",
+      "risk": "Arbitrary code execution",
+      "safe_alternative": "yaml.safe_load()",
+      "test_malicious": "config = yaml.load(untrusted_yaml)",
+      "test_safe": "config = yaml.safe_load(yaml_string)"
+    }
+  },
+  "threat_actors": {
+    "T1059.006": {
+      "groups": ["APT28", "Lazarus Group", "APT41", "Kimsuky", "BRONZE BUTLER"],
+      "campaigns": ["Olympic Destroyer", "WannaCry", "NotPetya"]
+    },
+    "T1027": {
+      "groups": ["APT29", "APT32", "Turla", "FIN7"],
+      "campaigns": ["SolarWinds", "Sunburst"]
+    },
+    "T1552.001": {
+      "groups": ["APT33", "APT39", "Leviathan"],
+      "campaigns": ["Cloud Hopper"]
+    }
+  },
+  "mitigations": {
+    "T1059.006": {
+      "ids": ["M1038", "M1042", "M1049"],
+      "techniques": [
+        "Execution Prevention",
+        "Disable or Remove Feature or Program",
+        "Antivirus/Antimalware"
+      ]
+    },
+    "T1027": {
+      "ids": ["M1049", "M1040"],
+      "techniques": [
+        "Antivirus/Antimalware",
+        "Behavior Prevention on Endpoint"
+      ]
+    },
+    "T1552.001": {
+      "ids": ["M1027", "M1041", "M1047"],
+      "techniques": [
+        "Password Policies",
+        "Encrypt Sensitive Information",
+        "Audit"
+      ]
+    }
+  },
+  "statistics": {
+    "total_mappings": 14,
+    "by_severity": {
+      "CRITICAL": 8,
+      "HIGH": 3,
+      "MEDIUM": 3
+    },
+    "by_framework": {
+      "attack_techniques": 7,
+      "atlas_techniques": 2,
+      "cwe": 12,
+      "owasp": 14
+    }
+  }
+}

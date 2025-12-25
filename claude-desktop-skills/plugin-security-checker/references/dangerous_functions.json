@@ -1,0 +1,299 @@
+{
+  "python": {
+    "critical": {
+      "eval": {
+        "severity": "CRITICAL",
+        "cvss": 9.8,
+        "description": "Executes arbitrary Python code from string",
+        "risk": "Complete system compromise, arbitrary code execution",
+        "safe_alternative": "ast.literal_eval() for literals only, refactor to avoid dynamic execution",
+        "detection_pattern": "\\beval\\s*\\(",
+        "example_vulnerable": "eval(user_input)",
+        "example_safe": "ast.literal_eval('[1, 2, 3]')  # Only for literals",
+        "cve_reference": "CVE-2025-54795"
+      },
+      "exec": {
+        "severity": "CRITICAL",
+        "cvss": 9.8,
+        "description": "Executes arbitrary Python statements from string",
+        "risk": "Complete system compromise, arbitrary code execution",
+        "safe_alternative": "Refactor to avoid dynamic code execution entirely",
+        "detection_pattern": "\\bexec\\s*\\(",
+        "example_vulnerable": "exec('import os; os.system(\"rm -rf /\")')",
+        "example_safe": "# No safe alternative - refactor logic",
+        "cve_reference": "CVE-2025-54795"
+      },
+      "__import__": {
+        "severity": "CRITICAL",
+        "cvss": 9.0,
+        "description": "Dynamically imports modules by name",
+        "risk": "Can import and execute malicious modules",
+        "safe_alternative": "Use normal import statements",
+        "detection_pattern": "\\b__import__\\s*\\(",
+        "example_vulnerable": "__import__(user_supplied_module_name)",
+        "example_safe": "import known_safe_module"
+      },
+      "compile": {
+        "severity": "CRITICAL",
+        "cvss": 9.0,
+        "description": "Compiles source code into code object",
+        "risk": "Often used with eval/exec for code execution",
+        "safe_alternative": "Avoid dynamic compilation",
+        "detection_pattern": "\\bcompile\\s*\\(",
+        "example_vulnerable": "eval(compile(malicious_code, '<string>', 'exec'))",
+        "example_safe": "# Avoid entirely"
+      }
+    },
+    "high": {
+      "os.system": {
+        "severity": "HIGH",
+        "cvss": 8.6,
+        "description": "Executes shell command via os.system()",
+        "risk": "Command injection, shell command execution",
+        "safe_alternative": "subprocess.run(['cmd', 'arg'], shell=False)",
+        "detection_pattern": "os\\.system\\s*\\(",
+        "example_vulnerable": "os.system(f'ls {user_dir}')",
+        "example_safe": "subprocess.run(['ls', user_dir], shell=False)",
+        "cve_reference": "CVE-2025-54795"
+      },
+      "subprocess.Popen": {
+        "severity": "HIGH",
+        "cvss": 8.6,
+        "description": "Process execution with shell=True parameter",
+        "risk": "Command injection via shell metacharacters",
+        "safe_alternative": "Use shell=False and pass command as list",
+        "detection_pattern": "subprocess\\.(Popen|run|call).*shell\\s*=\\s*True",
+        "context_check": "shell=True",
+        "example_vulnerable": "subprocess.run(user_cmd, shell=True)",
+        "example_safe": "subprocess.run(['ls', '-la'], shell=False)",
+        "cve_reference": "CVE-2025-54795"
+      },
+      "subprocess.run": {
+        "severity": "HIGH",
+        "cvss": 8.6,
+        "description": "Process execution with shell=True parameter",
+        "risk": "Command injection via shell metacharacters",
+        "safe_alternative": "Use shell=False and pass command as list",
+        "detection_pattern": "subprocess\\.run.*shell\\s*=\\s*True",
+        "context_check": "shell=True",
+        "example_vulnerable": "subprocess.run(cmd, shell=True)",
+        "example_safe": "subprocess.run(['git', 'status'], shell=False)"
+      },
+      "os.popen": {
+        "severity": "HIGH",
+        "cvss": 7.8,
+        "description": "Opens pipe to/from command (deprecated)",
+        "risk": "Command injection",
+        "safe_alternative": "subprocess with shell=False",
+        "detection_pattern": "os\\.popen\\s*\\(",
+        "example_vulnerable": "os.popen('cat ' + filename).read()",
+        "example_safe": "subprocess.run(['cat', filename], capture_output=True)"
+      }
+    },
+    "medium": {
+      "pickle.loads": {
+        "severity": "MEDIUM",
+        "cvss": 7.5,
+        "description": "Deserializes Python objects (can execute code)",
+        "risk": "Arbitrary code execution via crafted pickle data",
+        "safe_alternative": "json.loads() for data serialization",
+        "detection_pattern": "pickle\\.loads?\\s*\\(",
+        "example_vulnerable": "pickle.loads(untrusted_data)",
+        "example_safe": "json.loads(trusted_json_string)"
+      },
+      "marshal.loads": {
+        "severity": "MEDIUM",
+        "cvss": 7.5,
+        "description": "Deserializes internal Python objects",
+        "risk": "Can execute arbitrary code",
+        "safe_alternative": "json or other safe formats",
+        "detection_pattern": "marshal\\.loads?\\s*\\(",
+        "example_vulnerable": "marshal.loads(data)",
+        "example_safe": "json.loads(data)"
+      },
+      "shelve.open": {
+        "severity": "MEDIUM",
+        "cvss": 6.5,
+        "description": "Opens persistent dictionary (uses pickle)",
+        "risk": "Pickle vulnerabilities apply",
+        "safe_alternative": "sqlite3 or json files",
+        "detection_pattern": "shelve\\.open\\s*\\(",
+        "example_vulnerable": "db = shelve.open('untrusted.db')",
+        "example_safe": "# Use sqlite3 or json instead"
+      },
+      "yaml.load": {
+        "severity": "MEDIUM",
+        "cvss": 7.0,
+        "description": "YAML deserialization (unsafe by default in old versions)",
+        "risk": "Arbitrary code execution",
+        "safe_alternative": "yaml.safe_load()",
+        "detection_pattern": "yaml\\.load\\s*\\([^,)]*\\)",
+        "example_vulnerable": "yaml.load(untrusted_yaml)",
+        "example_safe": "yaml.safe_load(yaml_string)"
+      },
+      "input": {
+        "severity": "MEDIUM",
+        "cvss": 6.0,
+        "description": "Python 2 input() evaluates code (CRITICAL in Python 2)",
+        "risk": "Code execution in Python 2.x",
+        "safe_alternative": "raw_input() in Python 2, input() safe in Python 3",
+        "detection_pattern": "\\binput\\s*\\(",
+        "example_vulnerable": "# In Python 2: input('Enter value: ')",
+        "example_safe": "# Python 3: input() is safe, Python 2: use raw_input()"
+      }
+    },
+    "low": {
+      "tempfile.mktemp": {
+        "severity": "LOW",
+        "cvss": 4.0,
+        "description": "Creates temporary filename (deprecated, race condition)",
+        "risk": "Race condition, symlink attacks",
+        "safe_alternative": "tempfile.mkstemp() or TemporaryFile()",
+        "detection_pattern": "tempfile\\.mktemp\\s*\\(",
+        "example_vulnerable": "tmp = tempfile.mktemp()",
+        "example_safe": "fd, tmp = tempfile.mkstemp()"
+      }
+    }
+  },
+  "javascript": {
+    "critical": {
+      "eval": {
+        "severity": "CRITICAL",
+        "cvss": 9.8,
+        "description": "Executes arbitrary JavaScript code from string",
+        "risk": "Complete system compromise, arbitrary code execution",
+        "safe_alternative": "Refactor logic to avoid dynamic execution",
+        "detection_pattern": "\\beval\\s*\\(",
+        "example_vulnerable": "eval(userInput)",
+        "example_safe": "// Refactor to avoid eval entirely",
+        "cve_reference": "CVE-2025-54795"
+      },
+      "Function": {
+        "severity": "CRITICAL",
+        "cvss": 9.8,
+        "description": "Creates function from string (like eval)",
+        "risk": "Arbitrary code execution",
+        "safe_alternative": "Use normal function declarations",
+        "detection_pattern": "new\\s+Function\\s*\\(|\\bFunction\\s*\\(",
+        "example_vulnerable": "new Function('return ' + userCode)()",
+        "example_safe": "function normalFunction() { /* ... */ }"
+      },
+      "setTimeout_string": {
+        "severity": "CRITICAL",
+        "cvss": 8.5,
+        "description": "setTimeout with string argument (evaluates code)",
+        "risk": "Code execution",
+        "safe_alternative": "Pass function reference",
+        "detection_pattern": "setTimeout\\s*\\(\\s*['\"`]",
+        "example_vulnerable": "setTimeout('alert(1)', 1000)",
+        "example_safe": "setTimeout(() => alert(1), 1000)"
+      },
+      "setInterval_string": {
+        "severity": "CRITICAL",
+        "cvss": 8.5,
+        "description": "setInterval with string argument (evaluates code)",
+        "risk": "Code execution",
+        "safe_alternative": "Pass function reference",
+        "detection_pattern": "setInterval\\s*\\(\\s*['\"`]",
+        "example_vulnerable": "setInterval('doSomething()', 1000)",
+        "example_safe": "setInterval(doSomething, 1000)"
+      }
+    },
+    "high": {
+      "child_process.exec": {
+        "severity": "HIGH",
+        "cvss": 8.6,
+        "description": "Executes shell command",
+        "risk": "Command injection",
+        "safe_alternative": "child_process.execFile() or spawn()",
+        "detection_pattern": "child_process\\.exec\\s*\\(",
+        "example_vulnerable": "exec(`ls ${userDir}`)",
+        "example_safe": "execFile('ls', [userDir])",
+        "cve_reference": "CVE-2025-54795"
+      },
+      "child_process.spawn_shell": {
+        "severity": "HIGH",
+        "cvss": 8.6,
+        "description": "Spawns process with shell: true",
+        "risk": "Command injection",
+        "safe_alternative": "spawn() with shell: false (default)",
+        "detection_pattern": "spawn\\s*\\([^)]*shell\\s*:\\s*true",
+        "context_check": "shell: true",
+        "example_vulnerable": "spawn('ls', [dir], {shell: true})",
+        "example_safe": "spawn('ls', [dir])  // shell: false is default"
+      },
+      "vm.runInNewContext": {
+        "severity": "HIGH",
+        "cvss": 7.5,
+        "description": "Runs code in new V8 context",
+        "risk": "Sandbox escape possible",
+        "safe_alternative": "Avoid if possible, use Worker threads",
+        "detection_pattern": "vm\\.runInNewContext\\s*\\(",
+        "example_vulnerable": "vm.runInNewContext(userCode)",
+        "example_safe": "// Use Worker threads or avoid entirely"
+      },
+      "vm.runInThisContext": {
+        "severity": "HIGH",
+        "cvss": 8.0,
+        "description": "Runs code in current context",
+        "risk": "Full access to current context",
+        "safe_alternative": "Avoid dynamic code execution",
+        "detection_pattern": "vm\\.runInThisContext\\s*\\(",
+        "example_vulnerable": "vm.runInThisContext(code)",
+        "example_safe": "// Avoid entirely"
+      }
+    },
+    "medium": {
+      "innerHTML": {
+        "severity": "MEDIUM",
+        "cvss": 6.5,
+        "description": "Sets HTML content (XSS risk)",
+        "risk": "Cross-site scripting if user input",
+        "safe_alternative": "textContent or DOM methods",
+        "detection_pattern": "\\.innerHTML\\s*=",
+        "example_vulnerable": "div.innerHTML = userInput",
+        "example_safe": "div.textContent = userInput"
+      },
+      "document.write": {
+        "severity": "MEDIUM",
+        "cvss": 6.0,
+        "description": "Writes HTML to document (XSS risk)",
+        "risk": "XSS, blocks parsing",
+        "safe_alternative": "DOM methods (createElement, appendChild)",
+        "detection_pattern": "document\\.write\\s*\\(",
+        "example_vulnerable": "document.write(userHTML)",
+        "example_safe": "element.appendChild(document.createTextNode(text))"
+      },
+      "dangerouslySetInnerHTML": {
+        "severity": "MEDIUM",
+        "cvss": 6.5,
+        "description": "React prop for setting HTML (XSS risk)",
+        "risk": "XSS if unsan it ized",
+        "safe_alternative": "Normal React elements",
+        "detection_pattern": "dangerouslySetInnerHTML",
+        "example_vulnerable": "<div dangerouslySetInnerHTML={{__html: userInput}} />",
+        "example_safe": "<div>{sanitizedText}</div>"
+      }
+    }
+  },
+  "detection_strategies": {
+    "ast_analysis": {
+      "python": "Use ast.NodeVisitor to find Call nodes with dangerous function names",
+      "javascript": "Use @babel/parser and @babel/traverse to find CallExpression nodes"
+    },
+    "regex_patterns": {
+      "python": "Use patterns above, check for shell=True parameter separately",
+      "javascript": "Use patterns above, check for shell: true in spawn options"
+    },
+    "context_analysis": {
+      "description": "Check if user input flows to dangerous functions",
+      "technique": "Data flow analysis or taint tracking"
+    },
+    "severity_scoring": {
+      "CRITICAL": 100,
+      "HIGH": 75,
+      "MEDIUM": 50,
+      "LOW": 25
+    }
+  }
+}
