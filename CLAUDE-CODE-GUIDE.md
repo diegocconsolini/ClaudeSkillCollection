@@ -13,7 +13,8 @@ A universal reference for optimizing Claude Code across any project. Copy this t
 5. [Context Optimization](#context-optimization)
 6. [Subagents & Delegation](#subagents--delegation)
 7. [Settings & Permissions](#settings--permissions)
-8. [Quick Reference](#quick-reference)
+8. [Troubleshooting](#troubleshooting)
+9. [Quick Reference](#quick-reference)
 
 ---
 
@@ -49,13 +50,11 @@ Brief description of what this project does.
 - Database: PostgreSQL/MongoDB/etc
 
 ## Project Structure
-```
 src/
 ├── components/   # React components
 ├── services/     # Business logic
 ├── utils/        # Helpers
 └── types/        # TypeScript types
-```
 
 ## Coding Standards
 - Use functional components with hooks
@@ -63,36 +62,31 @@ src/
 - All functions must have JSDoc comments
 
 ## Commands
-```bash
 npm run dev      # Development server
 npm run test     # Run tests
 npm run build    # Production build
-```
 
 ## Important Files
-- `src/config.ts` - Environment configuration
-- `src/api/index.ts` - API routes
-- `.env.example` - Required environment variables
+- src/config.ts - Environment configuration
+- src/api/index.ts - API routes
+- .env.example - Required environment variables
 
 ## Don't
-- Don't modify files in `vendor/`
-- Don't commit `.env` files
-- Don't use `any` type in TypeScript
+- Don't modify files in vendor/
+- Don't commit .env files
+- Don't use any type in TypeScript
 ```
 
 ### Best Practices
 
-```markdown
-# Keep it concise - Claude reads this every session
-# Focus on what Claude needs to know, not documentation
-
-## DO include:
+```
+DO include:
 - Build/test commands
 - Project structure overview
 - Critical patterns to follow
 - Files to never modify
 
-## DON'T include:
+DON'T include:
 - Lengthy documentation
 - Historical context
 - Marketing content
@@ -214,6 +208,14 @@ claude
 
 ## MCP Servers
 
+### Transport Types
+
+| Transport | Use Case | Example |
+|-----------|----------|---------|
+| **HTTP** | Cloud APIs, remote services | Sentry, GitHub, Notion |
+| **Stdio** | Local tools, filesystem access | Database, custom scripts |
+| **SSE** | Legacy (deprecated) | Migrate to HTTP |
+
 ### Quick Setup
 
 ```bash
@@ -226,9 +228,41 @@ claude mcp add --transport stdio db -- npx -y pg-mcp-server
 # With auth
 claude mcp add --transport http api https://api.example.com/mcp \
   --header "Authorization: Bearer ${TOKEN}"
+
+# Multiple headers
+claude mcp add --transport http secure https://api.example.com/mcp \
+  --header "Authorization: Bearer ${TOKEN}" \
+  --header "X-Custom: value"
 ```
 
-### Scope Selection
+### Stdio Server Examples
+
+```bash
+# NPM package
+claude mcp add --transport stdio airtable -- npx -y airtable-mcp-server
+
+# With environment variables
+claude mcp add --transport stdio postgres \
+  --env DATABASE_URL="${DB_URL}" \
+  -- npx -y @modelcontextprotocol/server-postgres
+
+# Python script
+claude mcp add --transport stdio custom -- python /path/to/server.py
+
+# Windows (requires cmd wrapper)
+claude mcp add --transport stdio tool -- cmd /c npx -y @package/name
+```
+
+### Scope Levels
+
+| Scope | Location | Shared | Command Flag |
+|-------|----------|--------|--------------|
+| **Local** | `~/.claude.json` (per-project) | No | (default) |
+| **Project** | `.mcp.json` | Yes (git) | `--scope project` |
+| **User** | `~/.claude.json` (global) | No | `--scope user` |
+| **Enterprise** | `/etc/claude-code/managed-mcp.json` | Yes | (admin) |
+
+**Scope Precedence:** Local → Project → User → Enterprise
 
 ```bash
 # Personal dev tools → Local (default)
@@ -241,33 +275,139 @@ claude mcp add --scope project --transport http shared https://...
 claude mcp add --scope user --transport http utility https://...
 ```
 
-### .mcp.json Template
+### .mcp.json Configuration
 
 ```json
 {
   "mcpServers": {
     "github": {
       "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/"
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_TOKEN}"
+      }
     },
     "database": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "pg-mcp@2.0.0"],
+      "args": ["-y", "pg-mcp-server@2.1.0"],
       "env": {
-        "DATABASE_URL": "${DB_URL}"
+        "DATABASE_URL": "${DB_URL}",
+        "POOL_SIZE": "${DB_POOL:-10}"
       }
     }
   }
 }
 ```
 
-### Environment Variables
+### Variable Expansion
+
+```json
+{
+  "mcpServers": {
+    "api": {
+      "type": "http",
+      "url": "${API_BASE:-https://api.example.com}/mcp",
+      "headers": {
+        "Authorization": "Bearer ${API_TOKEN}"
+      },
+      "env": {
+        "TIMEOUT": "${TIMEOUT:-30000}"
+      }
+    }
+  }
+}
+```
+
+**Supported variables:**
+- `${VAR}` - Environment variable
+- `${VAR:-default}` - With fallback
+- `${HOME}`, `${PWD}` - System paths
+- `${CLAUDE_PLUGIN_ROOT}` - Plugin directory
+
+### MCP Commands Reference
 
 ```bash
-MCP_TIMEOUT=15000           # Startup timeout (ms)
-MCP_TOOL_TIMEOUT=120000     # Execution timeout (ms)
-MAX_MCP_OUTPUT_TOKENS=50000 # Output limit (default: 25000)
+# Add servers
+claude mcp add --transport http <name> <url> [--header "Key: Value"]
+claude mcp add --transport stdio <name> [--env KEY=val] -- <command> [args]
+claude mcp add --scope <local|project|user> ...
+
+# List and inspect
+claude mcp list                    # All servers
+claude mcp get <name>              # Server details
+
+# Remove
+claude mcp remove <name>           # Remove server
+
+# Advanced
+claude mcp add-json <name> '<json>' [--scope scope]  # Add from JSON
+claude mcp add-from-claude-desktop                    # Import from Desktop
+claude mcp reset-project-choices                      # Reset approvals
+claude mcp serve                                       # Run as MCP server
+
+# In-session (within Claude Code)
+/mcp                               # Manage, authenticate, view status
+```
+
+### Environment Variables
+
+| Variable | Default | Purpose |
+|----------|---------|---------|
+| `MCP_TIMEOUT` | 5000 | Server startup timeout (ms) |
+| `MCP_TOOL_TIMEOUT` | 30000 | Tool execution timeout (ms) |
+| `MAX_MCP_OUTPUT_TOKENS` | 25000 | Max output per tool call |
+
+```bash
+# Slow-starting servers
+MCP_TIMEOUT=15000 claude
+
+# Long-running queries
+MCP_TOOL_TIMEOUT=120000 claude
+
+# Large data operations
+MAX_MCP_OUTPUT_TOKENS=100000 claude
+
+# Combined
+MCP_TIMEOUT=15000 MCP_TOOL_TIMEOUT=120000 MAX_MCP_OUTPUT_TOKENS=50000 claude
+```
+
+### Authentication Methods
+
+**OAuth 2.0 (Interactive):**
+```bash
+claude mcp add --transport http sentry https://mcp.sentry.dev/mcp
+# Then in session: /mcp → Authenticate → Browser opens
+```
+
+**Bearer Token:**
+```bash
+export API_TOKEN="your-token"
+claude mcp add --transport http api https://api.example.com/mcp \
+  --header "Authorization: Bearer ${API_TOKEN}"
+```
+
+**API Key:**
+```bash
+# Header-based
+claude mcp add --transport http service https://api.example.com/mcp \
+  --header "X-API-Key: ${SERVICE_API_KEY}"
+
+# Environment-based (Stdio)
+claude mcp add --transport stdio tool \
+  --env API_KEY="${MY_API_KEY}" \
+  -- npx -y tool-server
+```
+
+**Security Rules:**
+```bash
+# NEVER hardcode secrets
+# BAD:
+claude mcp add ... --header "Authorization: Bearer sk-secret-123"
+
+# GOOD:
+export TOKEN="sk-secret-123"
+claude mcp add ... --header "Authorization: Bearer ${TOKEN}"
 ```
 
 ### MCP Best Practices
@@ -277,6 +417,32 @@ MAX_MCP_OUTPUT_TOKENS=50000 # Output limit (default: 25000)
 3. **Pin versions** - `pkg@1.2.3` in args
 4. **Never hardcode secrets** - Use `${ENV_VAR}`
 5. **Clean up regularly** - `claude mcp list` → remove unused
+
+### Team Collaboration
+
+```bash
+# Use project scope for shared servers
+claude mcp add --scope project --transport http github https://...
+
+# Document in .mcp.json (commit to git)
+git add .mcp.json
+git commit -m "Add GitHub MCP integration"
+
+# Team members approve on first use
+/mcp  # Approve project servers
+```
+
+### Auto-Approval Settings
+
+In `.claude/settings.json`:
+
+```json
+{
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": ["github", "sentry"],
+  "disabledMcpjsonServers": ["experimental"]
+}
+```
 
 ---
 
@@ -440,6 +606,80 @@ In `.claude/agents.json`:
 
 ---
 
+## Troubleshooting
+
+### MCP Server Won't Start
+
+```bash
+# Increase timeout
+MCP_TIMEOUT=15000 claude
+
+# Test command manually
+npx -y package-name
+
+# Check dependencies
+npm list -g package-name
+```
+
+### Authentication Fails
+
+```bash
+# Re-authenticate
+/mcp → Clear authentication → Authenticate again
+
+# Verify token is set
+echo $API_TOKEN
+
+# Check header format
+claude mcp get server-name
+```
+
+### Tools Not Appearing
+
+```bash
+# Check server status
+/mcp
+
+# Verify server is running
+claude mcp list
+
+# Restart Claude Code
+exit
+claude
+```
+
+### Windows Stdio Issues
+
+```bash
+# WRONG
+claude mcp add --transport stdio server -- npx -y @package
+
+# CORRECT (use cmd /c wrapper)
+claude mcp add --transport stdio server -- cmd /c npx -y @package
+```
+
+### Large Output Warnings
+
+```bash
+# Increase limit
+MAX_MCP_OUTPUT_TOKENS=100000 claude
+
+# Or request less data
+> "Show only first 10 results"
+```
+
+### Context Full
+
+```bash
+# Signs: slow responses, forgotten context
+# Solution:
+1. Complete current task
+2. Exit and restart Claude Code
+3. Start fresh with minimal context
+```
+
+---
+
 ## Quick Reference
 
 ### Essential Commands
@@ -528,16 +768,12 @@ cat > CLAUDE.md << 'EOF'
 - Database:
 
 ## Commands
-```bash
 npm run dev
 npm run test
-```
 
 ## Structure
-```
 src/
 ├── ...
-```
 EOF
 
 # 2. Create .mcp.json (if needed)
