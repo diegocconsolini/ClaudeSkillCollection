@@ -28,14 +28,86 @@ CLAUDE.md provides project-specific instructions that Claude Code reads automati
 - Set behavioral guidelines
 - Provide context Claude needs
 
-### File Locations (Priority Order)
+### Memory Architecture (5 Levels)
 
-| Location | Scope | Use Case |
-|----------|-------|----------|
-| `./CLAUDE.md` | Project root | Main project instructions |
-| `./CLAUDE.local.md` | Personal | Your overrides (gitignored) |
-| `~/.claude/CLAUDE.md` | Global | Cross-project defaults |
-| `./dir/CLAUDE.md` | Directory | Submodule-specific rules |
+Claude Code **merges** all CLAUDE.md files found (not override). Priority from highest to lowest:
+
+| Priority | Location | Scope | Behavior |
+|----------|----------|-------|----------|
+| 1 (highest) | Enterprise policy | Organization-wide | Cannot be overridden |
+| 2 | `./CLAUDE.md` | Project (team-shared) | Committed to git |
+| 3 | `./.claude/rules/*.md` | Modular rules | Path-specific possible |
+| 4 | `./CLAUDE.local.md` | Personal project | Gitignored |
+| 5 (lowest) | `~/.claude/CLAUDE.md` | Global personal | All your projects |
+
+### Platform-Specific Paths
+
+#### Enterprise Policy (Priority 1)
+
+| Platform | Path |
+|----------|------|
+| **macOS** | `/Library/Application Support/ClaudeCode/CLAUDE.md` |
+| **Linux/WSL2** | `/etc/claude-code/CLAUDE.md` |
+| **Windows Native** | `C:\Program Files\ClaudeCode\CLAUDE.md` |
+
+#### Global Personal (Priority 5)
+
+| Platform | Path |
+|----------|------|
+| **macOS** | `~/.claude/CLAUDE.md` |
+| **Linux/WSL2** | `~/.claude/CLAUDE.md` |
+| **Windows Native** | `%USERPROFILE%\.claude\CLAUDE.md` |
+
+#### Global Settings
+
+| Platform | Path |
+|----------|------|
+| **macOS** | `~/.claude/settings.json` |
+| **Linux/WSL2** | `~/.claude/settings.json` |
+| **Windows Native** | `%USERPROFILE%\.claude\settings.json` |
+
+### Project-Level Files (All Platforms)
+
+```
+your-project/
+├── CLAUDE.md                 # Priority 2: Team-shared
+├── CLAUDE.local.md           # Priority 4: Personal (gitignored)
+└── .claude/
+    ├── settings.json         # Project settings
+    ├── settings.local.json   # Personal settings (gitignored)
+    └── rules/                # Priority 3: Modular rules
+        ├── code-style.md
+        ├── testing.md
+        └── frontend/
+            └── react.md
+```
+
+### Path-Specific Rules
+
+Rules in `.claude/rules/` can target specific files:
+
+```markdown
+# .claude/rules/react.md
+---
+paths: src/components/**/*.tsx
+---
+
+# React Rules
+- Use functional components
+- Prefer hooks over HOCs
+```
+
+**Supported patterns:** `**/*.ts`, `src/**/*`, `*.md`, `{src,lib}/**/*.ts`
+
+### When to Use Each Level
+
+| Level | Use When |
+|-------|----------|
+| **Enterprise** | IT deploys org-wide policies |
+| **Project** | Team standards, architecture |
+| **Rules** | Complex projects, path-specific |
+| **Local** | Personal project preferences |
+| **Global** | Preferences for ALL projects |
 
 ### Effective CLAUDE.md Structure
 
@@ -255,14 +327,22 @@ claude mcp add --transport stdio tool -- cmd /c npx -y @package/name
 
 ### Scope Levels
 
-| Scope | Location | Shared | Command Flag |
-|-------|----------|--------|--------------|
-| **Local** | `~/.claude.json` (per-project) | No | (default) |
-| **Project** | `.mcp.json` | Yes (git) | `--scope project` |
-| **User** | `~/.claude.json` (global) | No | `--scope user` |
-| **Enterprise** | `/etc/claude-code/managed-mcp.json` | Yes | (admin) |
+| Scope | Shared | Command Flag |
+|-------|--------|--------------|
+| **Local** | No | (default) |
+| **Project** | Yes (git) | `--scope project` |
+| **User** | No | `--scope user` |
+| **Enterprise** | Yes | (admin) |
 
 **Scope Precedence:** Local → Project → User → Enterprise
+
+**Platform-specific MCP paths:**
+
+| Scope | macOS | Linux/WSL2 | Windows Native |
+|-------|-------|------------|----------------|
+| **Local/User** | `~/.claude.json` | `~/.claude.json` | `%USERPROFILE%\.claude.json` |
+| **Project** | `./.mcp.json` | `./.mcp.json` | `.\.mcp.json` |
+| **Enterprise** | `/Library/Application Support/ClaudeCode/managed-mcp.json` | `/etc/claude-code/managed-mcp.json` | `C:\Program Files\ClaudeCode\managed-mcp.json` |
 
 ```bash
 # Personal dev tools → Local (default)
@@ -648,14 +728,40 @@ exit
 claude
 ```
 
-### Windows Stdio Issues
+### Windows-Specific Issues
 
+**Stdio servers require cmd wrapper:**
 ```bash
-# WRONG
+# WRONG (Windows Native)
 claude mcp add --transport stdio server -- npx -y @package
 
-# CORRECT (use cmd /c wrapper)
+# CORRECT (Windows Native)
 claude mcp add --transport stdio server -- cmd /c npx -y @package
+```
+
+**WSL2 works like Linux:**
+```bash
+# WSL2 - no wrapper needed
+claude mcp add --transport stdio server -- npx -y @package
+```
+
+**Path format differences:**
+
+| Platform | Example Path |
+|----------|--------------|
+| **macOS/Linux/WSL2** | `~/.claude/CLAUDE.md` |
+| **Windows Native** | `%USERPROFILE%\.claude\CLAUDE.md` |
+| **Windows PowerShell** | `$env:USERPROFILE\.claude\CLAUDE.md` |
+
+**Environment variables:**
+```powershell
+# Windows PowerShell
+$env:MCP_TIMEOUT = "15000"
+claude
+
+# Windows CMD
+set MCP_TIMEOUT=15000
+claude
 ```
 
 ### Large Output Warnings
@@ -705,21 +811,26 @@ claude mcp remove name
 
 ### File Locations
 
+**Project (all platforms):**
 ```
-Project:
-├── CLAUDE.md                 # Project instructions
-├── CLAUDE.local.md           # Personal overrides (gitignored)
+your-project/
+├── CLAUDE.md                 # Project instructions (Priority 2)
+├── CLAUDE.local.md           # Personal overrides (Priority 4, gitignored)
 ├── .mcp.json                 # Project MCP servers
 └── .claude/
     ├── settings.json         # Project settings
-    └── settings.local.json   # Personal settings (gitignored)
-
-Global:
-├── ~/.claude.json            # User MCP servers
-└── ~/.claude/
-    ├── CLAUDE.md             # Global instructions
-    └── settings.json         # Global settings
+    ├── settings.local.json   # Personal settings (gitignored)
+    └── rules/*.md            # Modular rules (Priority 3)
 ```
+
+**Global paths by platform:**
+
+| File | macOS | Linux/WSL2 | Windows Native |
+|------|-------|------------|----------------|
+| **Global Memory** | `~/.claude/CLAUDE.md` | `~/.claude/CLAUDE.md` | `%USERPROFILE%\.claude\CLAUDE.md` |
+| **Global Settings** | `~/.claude/settings.json` | `~/.claude/settings.json` | `%USERPROFILE%\.claude\settings.json` |
+| **User MCP** | `~/.claude.json` | `~/.claude.json` | `%USERPROFILE%\.claude.json` |
+| **Enterprise** | `/Library/Application Support/ClaudeCode/` | `/etc/claude-code/` | `C:\Program Files\ClaudeCode\` |
 
 ### Environment Variables
 
