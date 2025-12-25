@@ -2,6 +2,40 @@
 
 This is a Claude Code plugin marketplace containing 9 professional security, compliance, and productivity plugins.
 
+## 🚧 ACTIVE PROJECT: Claude Desktop Skills Migration (In Progress)
+
+**Status:** Phase 2 of 4 (6/9 skills complete)
+**Location:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/`
+**Plan:** `/home/diegocc/.claude/plans/fluttering-foraging-torvalds.md`
+
+### Completed Skills (6/9)
+✅ gdpr-auditor - Ready for packaging
+✅ cybersecurity-policy-generator - Ready for packaging
+✅ incident-response-playbook-creator - Ready for packaging
+✅ security-report-builder - Ready for packaging
+✅ pdf-smart-extractor - Ready for packaging
+✅ xlsx-smart-extractor - Ready for packaging
+
+### Remaining Skills (3/9)
+⏳ docx-smart-extractor - Need to create Skill.md
+⏳ plugin-security-checker - Need to create Skill.md
+⏳ chrome-devtools-optimizer - Need to create Skill.md (most complex)
+
+### Remaining Tasks
+- [ ] Create Skill.md for 3 remaining skills
+- [ ] Create CHANGELOG.md
+- [ ] Create MIGRATION_GUIDE.md
+- [ ] Install `zip` utility
+- [ ] Package all 9 skills as `.zip` files (required format for Claude Desktop)
+
+**CRITICAL:** All skills must be packaged as ZIP files with structure:
+```
+skill-name.zip
+└── skill-name/
+    ├── Skill.md (case sensitive!)
+    └── [scripts/, references/, etc.]
+```
+
 ## Repository Structure
 
 ```
