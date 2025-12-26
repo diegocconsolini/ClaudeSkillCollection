@@ -5,8 +5,26 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
 [![Plugins](https://img.shields.io/badge/plugins-9-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
+[![Wiki](https://img.shields.io/badge/wiki-53_pages-purple.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)
 
 A curated collection of production-ready security, compliance, and productivity plugins for Claude Code. Built on authoritative sources and rigorously tested with real-world data.
+
+## 📚 Documentation Wiki
+
+**[→ Full Documentation Wiki (53 pages)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)**
+
+| Category | Topics |
+|----------|--------|
+| Getting Started | Installation, First Session, Quick Reference |
+| Configuration | CLAUDE.md, Memory Architecture, Settings, Permissions |
+| MCP Servers | Transports, Scopes, Authentication, Troubleshooting |
+| Plugins | Lifecycle, Plugins vs MCP, Creating Plugins |
+| Context | What Consumes Context, Reduction Strategies, Subagent Delegation |
+| Sessions | Task-Based Config, When to Restart, Workflow Patterns |
+| Platforms | macOS, Linux, WSL2, Windows Native |
+| Examples | 14 copy-paste examples for CLAUDE.md, MCP, Workflows, Settings |
+
+---
 
 ## 🚀 Quick Start
 

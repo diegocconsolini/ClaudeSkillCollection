@@ -2,6 +2,23 @@
 
 This is a Claude Code plugin marketplace containing 9 professional security, compliance, and productivity plugins.
 
+## 📚 Documentation Wiki
+
+**Wiki:** https://github.com/diegocconsolini/ClaudeSkillCollection/wiki
+
+53 comprehensive pages covering:
+- Getting Started (Installation, First Session, Quick Reference)
+- Configuration (CLAUDE.md, Memory Architecture, Settings, Permissions)
+- MCP Servers (Transports, Scopes, Authentication, Troubleshooting)
+- Plugins (Lifecycle, vs MCP, Creating)
+- Context Optimization (What Consumes, Reduction Strategies, Subagent Delegation)
+- Session Management (Task-Based Config, When to Restart, Workflow Patterns)
+- Platform Guides (macOS, Linux, WSL2, Windows)
+- Examples (14 copy-paste examples)
+- Troubleshooting
+
+**/claude-guide skill:** Navigate documentation with `/claude-guide [topic]`
+
 ## ✅ Claude Desktop Skills Pack v1.0.0 - RELEASED
 
 **Status:** 8 of 9 skills ready for distribution (1 pending size optimization)
