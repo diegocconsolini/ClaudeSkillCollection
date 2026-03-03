@@ -5,13 +5,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
 [![Plugins](https://img.shields.io/badge/plugins-9-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
-[![Wiki](https://img.shields.io/badge/wiki-53_pages-purple.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)
+[![Wiki](https://img.shields.io/badge/wiki-60%2B_pages-purple.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)
 
 A curated collection of production-ready security, compliance, and productivity plugins for Claude Code. Built on authoritative sources and rigorously tested with real-world data.
 
 ## 📚 Documentation Wiki
 
-**[→ Full Documentation Wiki (53 pages)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)**
+**[→ Full Documentation Wiki (60+ pages)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)**
 
 | Category | Topics |
 |----------|--------|
@@ -22,7 +22,7 @@ A curated collection of production-ready security, compliance, and productivity 
 | Context | What Consumes Context, Reduction Strategies, Subagent Delegation |
 | Sessions | Task-Based Config, When to Restart, Workflow Patterns |
 | Platforms | macOS, Linux, WSL2, Windows Native |
-| Examples | 14 copy-paste examples for CLAUDE.md, MCP, Workflows, Settings |
+| Examples | 13 copy-paste examples for CLAUDE.md, MCP, Workflows, Settings |
 
 ---
 
@@ -62,6 +62,34 @@ After installation:
 /plugin marketplace remove security-compliance-marketplace
 /plugin marketplace add diegocconsolini/ClaudeSkillCollection  # Re-add using GitHub format
 ```
+
+---
+
+## 🖥️ Claude Desktop Skills
+
+8 skills are also available as Claude Desktop skill packages for use outside of Claude Code.
+
+**Installation:**
+1. Download the ZIP file from `claude-desktop-skills/packages/`
+2. Open Claude Desktop → Skills menu → Import Skill
+3. Select the downloaded ZIP file
+
+**Available Skills:**
+
+| Skill | Version | Size | Description |
+|-------|---------|------|-------------|
+| gdpr-auditor | v1.2.0 | 57 KB | GDPR compliance auditing |
+| cybersecurity-policy-generator | v1.2.0 | 168 KB | Security policy generator |
+| incident-response-playbook-creator | v2.2.0 | 85 KB | IR playbook creator (11 scenarios) |
+| security-report-builder | v1.2.0 | 35 KB | Security report generator |
+| pdf-smart-extractor | v2.2.0 | 17 KB | PDF extraction with caching |
+| xlsx-smart-extractor | v2.2.0 | 16 KB | Excel extraction with caching |
+| docx-smart-extractor | v2.2.0 | 14 KB | Word extraction with caching |
+| chrome-devtools-optimizer | v1.0.1 | 30 KB | Chrome DevTools token optimizer |
+
+**Note:** plugin-security-checker (v3.2.0, 9.1 MB) exceeds Claude Desktop's 30MB uncompressed limit. See `claude-desktop-skills/README.md` for details.
+
+For migration guide between Claude Code plugins and Desktop skills, see `claude-desktop-skills/MIGRATION_GUIDE.md`.
 
 ---
 
