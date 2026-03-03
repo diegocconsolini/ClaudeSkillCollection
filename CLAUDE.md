@@ -149,7 +149,7 @@ node -e "const p=JSON.parse(require('fs').readFileSync('plugin/.claude-plugin/pl
 
 ### Claude Desktop Skills (8 ready for use)
 
-**Location:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/packages/`
+**Location:** `./claude-desktop-skills/packages/`
 
 Import ZIP files directly into Claude Desktop:
 1. Open Claude Desktop
