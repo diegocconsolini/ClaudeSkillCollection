@@ -22,8 +22,8 @@ This is a Claude Code plugin marketplace containing 9 professional security, com
 ## ✅ Claude Desktop Skills Pack v1.0.0 - RELEASED
 
 **Status:** 8 of 9 skills ready for distribution (1 pending size optimization)
-**Location:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/`
-**Packages:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/packages/`
+**Location:** `./claude-desktop-skills/`
+**Packages:** `./claude-desktop-skills/packages/`
 
 ### Ready for Distribution (8/9)
 ✅ **gdpr-auditor** (57 KB) - GDPR compliance auditing
