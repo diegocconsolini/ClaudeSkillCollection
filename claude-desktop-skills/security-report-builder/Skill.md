@@ -4,7 +4,7 @@ description: Transform plugin security scanner results into professional reports
 license: MIT
 compatibility: claude-desktop
 metadata:
-  version: 1.0.1
+  version: 1.2.0
   author: Diego Consolini
   category: security
   runtime: python3
