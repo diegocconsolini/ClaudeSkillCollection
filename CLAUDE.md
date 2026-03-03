@@ -47,20 +47,34 @@ This is a Claude Code plugin marketplace containing 9 professional security, com
 ✅ **MIGRATION_GUIDE.md** - Claude Code vs Desktop comparison
 
 ### Package Format
-All skills packaged as ZIP files with correct structure:
+
+**Claude Code Plugins** (root directories) use:
+```
+plugin-name/
+├── .claude-plugin/plugin.json    # Manifest (REQUIRED)
+├── SKILL.md                      # Skill definition (all caps)
+├── agents/plugin-name.md         # Agent file with YAML frontmatter
+├── scripts/ (optional)
+├── references/ (optional)
+├── version.json (optional)
+└── requirements.txt (Python plugins only)
+```
+
+**Claude Desktop Skills** (claude-desktop-skills/) use:
 ```
 skill-name.zip
 └── skill-name/
-    ├── Skill.md (capital S, lowercase kill - REQUIRED)
+    ├── Skill.md                  # Skill definition (capital S)
     ├── scripts/ (optional)
     ├── references/ (optional)
     └── requirements.txt (Python skills only)
 ```
 
-**Important:** All Skill.md files MUST:
+**Skill.md/SKILL.md frontmatter:**
+- Required fields: `name`, `description`
+- Desktop-specific fields: `license`, `compatibility`, `metadata`
 - Start with `---` (YAML frontmatter)
 - Have proper permissions (644, not executable)
-- Include required fields: `name`, `description`, `license`
 
 **Total Package Size:** 425 KB (8 distributable ZIP files)
 
