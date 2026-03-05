@@ -240,6 +240,21 @@
       "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/chrome-devtools-optimizer",
       "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
       "license": "MIT"
+    },
+    {
+      "name": "claude-guide",
+      "description": "Navigate Claude Code documentation and get quick answers about configuration, MCP servers, plugins, context optimization, and best practices. Invoke with /claude-guide [topic].",
+      "source": "./claude-guide",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Consolini",
+        "email": "diego@diegocon.nl"
+      },
+      "category": "productivity",
+      "keywords": ["documentation", "guide", "claude-code", "mcp", "plugins", "configuration", "best-practices", "quick-reference"],
+      "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/claude-guide",
+      "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+      "license": "MIT"
     }
   ]
 }
