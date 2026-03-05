@@ -913,7 +913,7 @@ ClaudeSkillCollection/
 ├── CHANGELOG.md                    # Version history
 │
 ├── .claude-plugin/                 # Marketplace configuration
-│   └── marketplace.json            # Plugin catalog (9 plugins)
+│   └── marketplace.json            # Plugin catalog (10 plugins)
 │
 ├── plugin-security-checker/        # Plugin Security Checker v3.0.0
 │   ├── README.md
