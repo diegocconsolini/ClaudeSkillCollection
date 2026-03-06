@@ -56,6 +56,7 @@ Provide:
 | macos, linux, wsl, windows | Platform Guides |
 | command, reference | Commands Reference |
 | permission, setting, config | Configuration |
+| start, begin, new, onboard | Start Here Guide |
 
 ## Quick Reference Response
 
@@ -111,6 +112,15 @@ List available examples:
 - MCP: GitHub, Database, Multi-Server
 - Workflows: Code Review, Debugging, Data Analysis
 - Settings: Minimal, Team, Security
+
+### For "/claude-guide start"
+
+Respond with Start Here overview:
+- Link to wiki Start Here page: https://github.com/diegocconsolini/ClaudeSkillCollection/wiki/Start-Here
+- 5-Minute Setup Checklist (abbreviated): install, create CLAUDE.md, add marketplace, install plugin, enable
+- Decision tree: developer (CLAUDE.md Templates) vs security/compliance (Security & Compliance Path)
+- Link to CLAUDE.md Templates for project setup
+- Link to Plugin Installation for available tools
 
 ## Behavior
 

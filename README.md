@@ -6,6 +6,7 @@
 [![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
 [![Plugins](https://img.shields.io/badge/plugins-9-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
 [![Wiki](https://img.shields.io/badge/wiki-53_pages-purple.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)
+[![Start Here](https://img.shields.io/badge/Start_Here-guide-brightgreen.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki/Start-Here)
 
 A curated collection of production-ready security, compliance, and productivity plugins for Claude Code. Built on authoritative sources and rigorously tested with real-world data.
 
