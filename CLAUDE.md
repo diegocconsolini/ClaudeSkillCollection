@@ -1,6 +1,6 @@
 # Security & Compliance Marketplace
 
-This is a Claude Code plugin marketplace containing 9 professional security, compliance, and productivity plugins.
+This is a Claude Code plugin marketplace containing 10 professional security, compliance, and productivity plugins.
 
 ## 📚 Documentation Wiki
 
@@ -68,7 +68,7 @@ skill-name.zip
 
 ```
 ClaudeSkillCollection/
-├── .claude-plugin/marketplace.json         # Marketplace manifest (9 plugins)
+├── .claude-plugin/marketplace.json         # Marketplace manifest (10 plugins)
 │
 ├── claude-desktop-skills/                  # Claude Desktop Skills Pack
 │   ├── README.md                           # Installation guide
@@ -78,7 +78,7 @@ ClaudeSkillCollection/
 │   ├── gdpr-auditor/                       # v1.2.0
 │   ├── cybersecurity-policy-generator/     # v1.2.0
 │   ├── incident-response-playbook-creator/ # v2.2.0
-│   ├── security-report-builder/            # v1.0.1
+│   ├── security-report-builder/            # v1.2.0
 │   ├── pdf-smart-extractor/                # v2.2.0
 │   ├── xlsx-smart-extractor/               # v2.2.0
 │   ├── docx-smart-extractor/               # v2.2.0
@@ -157,7 +157,7 @@ Import ZIP files directly into Claude Desktop:
 3. Click "Import Skill"
 4. Select ZIP file from packages/ directory
 
-### Claude Code Plugins (9 available)
+### Claude Code Plugins (10 available)
 
 ```bash
 # Add marketplace

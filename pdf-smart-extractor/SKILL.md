@@ -1,3 +1,8 @@
+---
+name: pdf-smart-extractor
+description: Extract and analyze large PDFs with minimal token usage using SHAKE256 caching and intelligent chunking.
+---
+
 # PDF Smart Extractor
 
 **Extract and analyze large PDFs with minimal token usage**

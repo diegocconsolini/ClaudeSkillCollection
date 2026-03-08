@@ -1,3 +1,8 @@
+---
+name: incident-response-playbook-creator
+description: Generate incident response playbooks for 11 security scenarios with MITRE ATT&CK mapping, producing Markdown and HTML outputs.
+---
+
 # Incident Response Playbook Creator
 
 **Version**: 2.2.0

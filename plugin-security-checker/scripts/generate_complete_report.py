@@ -9,6 +9,12 @@ import os
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict, Counter
+import html as html_module
+
+
+def _esc(val):
+    return html_module.escape(str(val))
+
 
 RESULTS_DIR = Path("plugin-security-checker/archive_scan_results")
 THREAT_MAP_FILE = Path("plugin-security-checker/references/threat_mappings.json")
@@ -614,7 +620,7 @@ def generate_html(results, analysis, threat_map):
         percentage = (count / max_cat * 100) if max_cat > 0 else 0
         html += f"""
                     <div class="bar-item">
-                        <div class="bar-label">{category}</div>
+                        <div class="bar-label">{_esc(category)}</div>
                         <div class="bar" style="width: {percentage}%;">{count}</div>
                     </div>
 """
@@ -642,17 +648,17 @@ def generate_html(results, analysis, threat_map):
             html += f"""
                 <div class="finding-card critical">
                     <div class="finding-header">
-                        <div class="finding-title">{plugin} - {finding.get('description', 'Security Issue')}</div>
+                        <div class="finding-title">{_esc(plugin)} - {_esc(finding.get('description', 'Security Issue'))}</div>
                         <span class="severity-badge critical">CRITICAL</span>
                     </div>
                     <div class="finding-details">
                         <div class="detail-row">
                             <span class="detail-label">Category:</span>
-                            <span class="detail-value">{finding.get('category')} / {finding.get('subcategory')}</span>
+                            <span class="detail-value">{_esc(finding.get('category'))} / {_esc(finding.get('subcategory'))}</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label">Location:</span>
-                            <span class="detail-value">{finding.get('file')}:{finding.get('line')}</span>
+                            <span class="detail-value">{_esc(finding.get('file'))}:{_esc(finding.get('line'))}</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label">CVSS Score:</span>
@@ -660,11 +666,11 @@ def generate_html(results, analysis, threat_map):
                         </div>
                         <div class="detail-row">
                             <span class="detail-label">Impact:</span>
-                            <span class="detail-value">{finding.get('impact', 'N/A')}</span>
+                            <span class="detail-value">{_esc(finding.get('impact', 'N/A'))}</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label">Recommendation:</span>
-                            <span class="detail-value">{finding.get('recommendation', 'Review code manually')}</span>
+                            <span class="detail-value">{_esc(finding.get('recommendation', 'Review code manually'))}</span>
                         </div>
                     </div>
 """
@@ -672,7 +678,7 @@ def generate_html(results, analysis, threat_map):
             # Code snippet
             if finding.get('code_snippet'):
                 html += f"""
-                    <div class="code-snippet">{finding['code_snippet']}</div>
+                    <div class="code-snippet">{_esc(finding['code_snippet'])}</div>
 """
 
             # Framework mappings (if available)
@@ -685,9 +691,9 @@ def generate_html(results, analysis, threat_map):
                         <strong>Framework Mappings:</strong><br>
 """
                 if cve:
-                    html += f'<span class="technique-tag">CVE: {cve}</span>'
+                    html += f'<span class="technique-tag">CVE: {_esc(cve)}</span>'
                 if owasp:
-                    html += f'<span class="technique-tag owasp">OWASP: {owasp}</span>'
+                    html += f'<span class="technique-tag owasp">OWASP: {_esc(owasp)}</span>'
                 html += """
                     </div>
 """
@@ -714,9 +720,9 @@ def generate_html(results, analysis, threat_map):
             html += f"""
                     <div class="plugin-item {risk_class}">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span class="plugin-name">{plugin['name']}</span>
+                            <span class="plugin-name">{_esc(plugin['name'])}</span>
                             <div>
-                                <span class="severity-badge {risk_class}">{plugin['risk_level']}</span>
+                                <span class="severity-badge {risk_class}">{_esc(plugin['risk_level'])}</span>
                                 <span style="margin-left: 10px; color: #a0a0ff; font-weight: 600;">
                                     {plugin['findings_count']} findings | Risk Score: {plugin['risk_score']}
                                 </span>

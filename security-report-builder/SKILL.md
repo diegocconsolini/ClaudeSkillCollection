@@ -1,3 +1,8 @@
+---
+name: security-report-builder
+description: Transform security scanner results into professional reports (HTML, PDF, DOCX) with intelligent false positive filtering and MITRE ATT&CK/OWASP integration.
+---
+
 # Security Report Builder
 
 **Version:** 1.2.0

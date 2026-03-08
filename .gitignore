@@ -69,6 +69,17 @@ personal/
 # Private development folder (tracked only in 'private' branch)
 /private/
 
+# Sensitive business documents
+docs/*.xlsm
+docs/*.xlsx
+docs/*.csv
+docs/*.pbix
+docs/*.zip
+docs/**/*.xlsm
+docs/**/*.xlsx
+docs/**/*.csv
+docs/**/*.pbix
+
 # Build artifacts
 *.pyc
 *.pyo
