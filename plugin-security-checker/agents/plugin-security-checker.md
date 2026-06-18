@@ -48,6 +48,15 @@ This skill scans Claude Code plugins for security issues before installation. It
 - Identifies known vulnerable packages
 - Checks for suspicious dependencies
 
+✓ **Supply-Chain IOC Detection** (npm + PyPI, 2024-2026)
+- Matches named-incident indicators from `references/supply_chain_iocs.json`:
+  Shai-Hulud worm v1/v2, Nx s1ngularity, chalk/debug crypto-clipper, Axios + plain-crypto-js RAT,
+  litellm/.pth startup hooks, PyPI setup.py install-exec and typosquat payloads
+- Flags the specific campaign + GHSA/CVE at the incident's severity (most are CRITICAL)
+- Checks package.json scripts/dependencies, file names (setup_bun.js, *.pth, binding.gyp),
+  and source content; complements the generic "any install script" check
+- All incidents verified against primary sources (CISA, GitHub Advisory DB, PyPI blog)
+
 ## What This Tool Does NOT Do
 
 ✗ Guarantee plugin safety or security

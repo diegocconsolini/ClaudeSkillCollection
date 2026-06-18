@@ -79,6 +79,11 @@ class PluginScanner:
         self.obfuscation_patterns = self._load_json(
             self.references_path / "obfuscation_patterns.json"
         )
+        # Named-incident supply-chain IOCs (npm + PyPI, 2024-2026). Optional: an
+        # older install without this file still scans normally.
+        self.supply_chain_iocs = self._load_json_optional(
+            self.references_path / "supply_chain_iocs.json"
+        )
 
     def _load_json(self, filepath: Path, fallback: Path = None) -> Dict:
         """Load a JSON reference file, optionally falling back to another path."""
@@ -95,6 +100,17 @@ class PluginScanner:
                 sys.exit(1)
         print(f"Error: reference file not found: {filepath}", file=sys.stderr)
         sys.exit(1)
+
+    def _load_json_optional(self, filepath: Path) -> Dict:
+        """Load a JSON reference file; return {} if it's absent (non-fatal)."""
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except FileNotFoundError:
+            return {}
+        except Exception as e:
+            print(f"Warning: could not load {filepath}: {e}", file=sys.stderr)
+            return {}
 
     def _generate_finding_id(self) -> str:
         """Generate unique finding ID"""
@@ -124,6 +140,11 @@ class PluginScanner:
         # Step 5: Check permissions
         print("[*] Step 5/5: Checking permissions and hooks...")
         self._check_permissions()
+
+        # Step 6: Named-incident supply-chain IOC sweep (npm + PyPI)
+        if self.supply_chain_iocs:
+            print("[*] Step 6/6: Matching known supply-chain attack IOCs...")
+            self._scan_supply_chain_iocs()
 
         # Generate report
         return self._generate_report()
@@ -590,6 +611,103 @@ class PluginScanner:
 
         except Exception as e:
             print(f"[!] Error analyzing MCP server {filepath}: {e}", file=sys.stderr)
+
+    def _scan_supply_chain_iocs(self):
+        """Match known 2024-2026 npm/PyPI supply-chain attack IOCs against the plugin.
+
+        Each IOC carries a regex `detection_pattern` and a list of `match_targets`
+        describing where to look. Unlike the generic 'any postinstall' check, a hit
+        here attributes a specific named campaign (Shai-Hulud, Axios RAT, litellm, ...)
+        and is reported at the IOC's severity. Patterns and incidents are verified
+        against primary sources (see references/supply_chain_iocs.json metadata)."""
+        # Gather the material each match target needs, once.
+        pkg_scripts_blob = ""
+        pkg_deps_blob = ""
+        package_json = self.plugin_path / "package.json"
+        if package_json.exists():
+            try:
+                pkg = json.loads(package_json.read_text(encoding="utf-8", errors="ignore"))
+                pkg_scripts_blob = json.dumps(pkg.get("scripts", {}))
+                pkg_deps_blob = json.dumps({
+                    **pkg.get("dependencies", {}),
+                    **pkg.get("devDependencies", {}),
+                })
+            except Exception:
+                pass
+
+        # File names present anywhere in the plugin (e.g. setup_bun.js, *.pth, binding.gyp).
+        all_files = [p for p in self.plugin_path.rglob("*") if p.is_file()]
+        file_names_blob = "\n".join(p.name for p in all_files)
+
+        # Source/manifest content to grep (bounded: skip huge/binary files).
+        scannable_exts = {".js", ".ts", ".mjs", ".cjs", ".py", ".json", ".pth", ".yml", ".yaml", ".sh"}
+        setup_py_content = ""
+        pth_content = ""
+        content_blobs = []
+        for p in all_files:
+            try:
+                if p.suffix.lower() not in scannable_exts:
+                    continue
+                if p.stat().st_size > 2_000_000:  # 2 MB cap per file
+                    continue
+                text = p.read_text(encoding="utf-8", errors="ignore")
+            except Exception:
+                continue
+            content_blobs.append(text)
+            if p.name == "setup.py":
+                setup_py_content += text + "\n"
+            if p.suffix.lower() == ".pth":
+                pth_content += text + "\n"
+        file_content_blob = "\n".join(content_blobs)
+
+        target_material = {
+            "package_json_scripts": pkg_scripts_blob,
+            "package_json_dependencies": pkg_deps_blob,
+            "file_name": file_names_blob,
+            "file_content": file_content_blob,
+            "setup_py_content": setup_py_content,
+            "pth_content": pth_content,
+        }
+
+        for ecosystem, iocs in self.supply_chain_iocs.items():
+            if ecosystem == "metadata" or not isinstance(iocs, dict):
+                continue
+            for ioc_key, ioc in iocs.items():
+                pattern = ioc.get("detection_pattern")
+                if not pattern:
+                    continue
+                try:
+                    rx = re.compile(pattern, re.MULTILINE)
+                except re.error:
+                    continue
+                # Search only the declared targets for this IOC.
+                for target in ioc.get("match_targets", []):
+                    material = target_material.get(target, "")
+                    if material and rx.search(material):
+                        self.findings.append(Finding(
+                            id=self._generate_finding_id(),
+                            severity=ioc.get("severity", "HIGH"),
+                            category="Supply Chain",
+                            subcategory=ioc.get("incident", "Known IOC"),
+                            file=("package.json" if target.startswith("package_json")
+                                  else target.replace("_", " ")),
+                            line=0,
+                            column=0,
+                            code_snippet=ioc.get("example_suspicious", "")[:300],
+                            description=f"Supply-chain IOC match: {ioc.get('incident', ioc_key)}",
+                            explanation=ioc.get("description", ""),
+                            impact=ioc.get("risk", "Potential supply-chain compromise"),
+                            recommendation=(
+                                f"Investigate against {ioc.get('reference', 'the referenced advisory')}. "
+                                "Do not install; if already installed, rotate npm/GitHub/cloud tokens "
+                                "from a clean machine and audit published versions."
+                            ),
+                            cvss_score=float(ioc.get("cvss", 8.0)),
+                            cve_reference=ioc.get("reference"),
+                            remediation_effort="HIGH",
+                            false_positive_likelihood="LOW",
+                        ))
+                        break  # one finding per IOC is enough
 
     def _generate_report(self) -> Dict[str, Any]:
         """Generate comprehensive security report"""

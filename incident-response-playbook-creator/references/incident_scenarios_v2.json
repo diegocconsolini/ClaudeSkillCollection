@@ -3,7 +3,8 @@
     "source": "NIST SP 800-61r3 (April 2025), NIST AI 100-2 E2025, MITRE ATLAS, OWASP Top 10 LLM 2025, NIST SP 800-218, NIST SP 800-161r1-upd1, NIST SP 800-190, NIST IR 8228, NIST SP 800-82r3, AWS Security IR Guide, CISA DDoS Guide, OWASP API Top 10 2023, NIST SP 800-61r3",
     "version": "2.0.0",
     "last_updated": "2025-10-21",
-    "description": "Comprehensive incident response scenarios covering 11 incident types: Ransomware, Data Breach, Phishing/BEC, AI/ML Security, Supply Chain, Container/K8s, IoT/OT, Cloud, API, Insider Threat, and DDoS"
+    "description": "Comprehensive incident response scenarios covering 11 incident types: Ransomware, Data Breach, Phishing/BEC, AI/ML Security, Supply Chain, Container/K8s, IoT/OT, Cloud, API, Insider Threat, and DDoS",
+    "supply_chain_threat_intel_updated": "2026-06-19"
   },
   "scenarios": [
     {
@@ -468,14 +469,20 @@
           "Malicious code in npm, PyPI, or other package repositories",
           "Unsigned or improperly signed software artifacts",
           "Unusual git commits or repository access patterns",
-          "Modified compiler or build tool binaries"
+          "Modified compiler or build tool binaries",
+          "Malicious lifecycle scripts in package.json (e.g. postinstall running bundle.js, or preinstall running setup_bun.js) — see the Shai-Hulud npm worm (Sept/Nov 2025)",
+          "Unexpected credential-harvesting on install: reads of NPM_TOKEN/GITHUB_TOKEN/cloud creds and exfil to attacker GitHub repos (Shai-Hulud, Nx s1ngularity GHSA-cxm3-wv7p-598c)",
+          "Hidden/typosquatted transitive dependency pulling a second-stage payload (e.g. plain-crypto-js@4.2.1 in compromised axios 1.14.1/0.30.4, GHSA-fw8c-xr5c-95f9)",
+          "PyPI install-time execution: os.system/subprocess in setup.py, or a malicious .pth startup hook (litellm Mar 2026, Hades June 2026)",
+          "Browser crypto-clipper injected into a popular package hooking window.fetch/XMLHttpRequest/window.ethereum to swap wallet addresses (chalk/debug, Sept 2025)"
         ],
         "behavioral": [
           "Reports of compromised vendor systems (e.g., SolarWinds-style incidents)",
           "Unexpected software behavior after dependency updates",
           "Build process slowdowns or anomalies",
           "Developers reporting unfamiliar package installation prompts",
-          "Third-party security researchers identifying malicious packages"
+          "Third-party security researchers identifying malicious packages",
+          "Maintainer account takeover via phishing (e.g. support@npmjs.help) leading to malicious package versions"
         ]
       },
       "detection_activities": {
@@ -570,7 +577,14 @@
           "Evidence of data access",
           "Duration of compromise"
         ]
-      }
+      },
+      "threat_intel_references": [
+        "CISA AA 2025-09-23 (Shai-Hulud npm compromise)",
+        "GHSA-cxm3-wv7p-598c (Nx s1ngularity)",
+        "GHSA-4x49-vf9v-38px / CVE-2025-59144 (chalk/debug crypto-clipper)",
+        "GHSA-fw8c-xr5c-95f9 (axios + plain-crypto-js RAT)",
+        "PyPI blog 2026-04-02 (litellm/Telnyx); StepSecurity Hades campaign (June 2026)"
+      ]
     },
     {
       "id": "container_kubernetes_security",

