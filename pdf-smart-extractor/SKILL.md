@@ -1,3 +1,9 @@
+---
+name: pdf-smart-extractor
+description: Use this skill to extract and analyze large PDFs (3MB-10MB+) with minimal token usage. Preserves ~100% of content while achieving 12-103x token reduction through local extraction, semantic chunking, and intelligent caching. Use when a PDF is too large for the context window, or for technical/compliance documentation (NIST, ISO, AWS) and research papers.
+license: MIT
+---
+
 # PDF Smart Extractor
 
 **Extract and analyze large PDFs with minimal token usage**

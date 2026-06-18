@@ -1,3 +1,9 @@
+---
+name: incident-response-playbook-creator
+description: Use this skill to generate comprehensive incident response playbooks from authoritative templates (NIST SP 800-61r3, CISA, NIST SP 800-161r1). Creates customized IR documentation for 11 incident scenarios — ransomware, data breach, phishing, supply-chain, cloud, API, container/K8s, IoT/OT, insider threat, AI/ML, and DDoS — with GDPR Article 33/34 and HIPAA breach-notification guidance.
+license: MIT
+---
+
 # Incident Response Playbook Creator
 
 **Version**: 2.2.0

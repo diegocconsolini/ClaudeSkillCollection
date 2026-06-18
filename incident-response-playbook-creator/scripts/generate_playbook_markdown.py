@@ -20,7 +20,17 @@ import sys
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, Optional
-from jinja2 import Template
+
+try:
+    from jinja2 import Template
+except ImportError:
+    print(
+        "ERROR: this generator requires Jinja2.\n"
+        "  Install it:  pip install -r requirements.txt   (or:  pip install 'jinja2>=3.1')\n"
+        "  Tip: use a virtual environment — python3 -m venv venv && source venv/bin/activate",
+        file=sys.stderr,
+    )
+    sys.exit(1)
 
 
 class PlaybookGenerator:

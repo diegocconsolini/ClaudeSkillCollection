@@ -27,7 +27,7 @@ import os
 def load_findings(findings_file: str) -> Dict[str, Any]:
     """Load findings from JSON file."""
     try:
-        with open(findings_file, 'r') as f:
+        with open(findings_file, 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
         print(f"Error: Findings file '{findings_file}' not found")

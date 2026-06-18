@@ -12,13 +12,6 @@ except ModuleNotFoundError:
     OPENPYXL_AVAILABLE = False
     openpyxl = None
 
-try:
-    import pandas
-    PANDAS_AVAILABLE = True
-except ModuleNotFoundError:
-    PANDAS_AVAILABLE = False
-    pandas = None
-
 import json
 import sys
 from pathlib import Path
@@ -301,16 +294,13 @@ def check_dependencies():
     if not OPENPYXL_AVAILABLE:
         missing.append("openpyxl")
 
-    if not PANDAS_AVAILABLE:
-        missing.append("pandas")
-
     if missing:
         print("❌ Missing required dependencies:")
         for dep in missing:
             print(f"   - {dep}")
         print("\n📦 Install dependencies:")
         print("   Option 1 (recommended): pip install -r requirements.txt")
-        print("   Option 2: pip install openpyxl pandas")
+        print("   Option 2: pip install openpyxl")
         print("\n💡 Using virtual environment? Activate it first:")
         print("   python3 -m venv venv && source venv/bin/activate  # Linux/Mac")
         print("   python3 -m venv venv && venv\\Scripts\\activate  # Windows")

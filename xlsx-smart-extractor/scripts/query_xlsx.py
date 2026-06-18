@@ -147,10 +147,11 @@ def get_summary(cache_key):
 
     if chunk_index:
         summary.update({
-            "chunks": chunk_index["total_chunks"],
-            "total_tokens": chunk_index["total_tokens"],
-            "avg_tokens_per_chunk": chunk_index["avg_tokens_per_chunk"],
-            "content_preservation": chunk_index["content_preservation"],
+            "chunks": chunk_index.get("total_chunks"),
+            "total_tokens": chunk_index.get("total_tokens"),
+            "avg_tokens_per_chunk": chunk_index.get("avg_tokens_per_chunk"),
+            # content_preservation is not emitted by chunk_sheets.py — tolerate its absence
+            "content_preservation": chunk_index.get("content_preservation", "N/A"),
         })
 
     return summary
@@ -266,11 +267,12 @@ if __name__ == "__main__":
             print(f"Named ranges: {summary['named_ranges']}")
 
             if "chunks" in summary:
+                total_tokens = summary.get('total_tokens') or 0
                 print(f"\nChunking Statistics:")
-                print(f"  Total chunks: {summary['chunks']}")
-                print(f"  Total tokens: {summary['total_tokens']:,}")
-                print(f"  Avg tokens/chunk: {summary['avg_tokens_per_chunk']}")
-                print(f"  Content preservation: {summary['content_preservation']}")
+                print(f"  Total chunks: {summary.get('chunks', 'N/A')}")
+                print(f"  Total tokens: {total_tokens:,}")
+                print(f"  Avg tokens/chunk: {summary.get('avg_tokens_per_chunk', 'N/A')}")
+                print(f"  Content preservation: {summary.get('content_preservation', 'N/A')}")
 
             print(f"\nExtracted: {summary['extracted_at']}")
             print("="*60 + "\n")

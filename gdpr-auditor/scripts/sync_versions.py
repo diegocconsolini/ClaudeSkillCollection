@@ -19,7 +19,7 @@ def load_version_config():
         print(f"ERROR: {version_file} not found")
         sys.exit(1)
 
-    with open(version_file) as f:
+    with open(version_file, encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -31,7 +31,7 @@ def update_plugin_json(version: str, dry_run: bool = True) -> bool:
         print(f"  SKIP: {plugin_file} not found")
         return False
 
-    with open(plugin_file) as f:
+    with open(plugin_file, encoding="utf-8") as f:
         data = json.load(f)
 
     current = data.get("version", "unknown")
@@ -44,7 +44,7 @@ def update_plugin_json(version: str, dry_run: bool = True) -> bool:
         return False
 
     data["version"] = version
-    with open(plugin_file, "w") as f:
+    with open(plugin_file, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
         f.write("\n")
 
@@ -93,7 +93,10 @@ def main():
     print("=" * 60)
 
     config = load_version_config()
-    version = config["plugin_version"]
+    version = config.get("plugin_version")
+    if not version:
+        print("ERROR: version.json is missing the 'plugin_version' field.")
+        sys.exit(1)
 
     print(f"\nSource of truth: version.json")
     print(f"Target version: {version}")

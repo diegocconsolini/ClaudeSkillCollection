@@ -1,0 +1,4 @@
+# Incident Response Playbook Creator - Python Dependencies
+
+# Jinja2 templating for generate_playbook_markdown.py
+jinja2>=3.1

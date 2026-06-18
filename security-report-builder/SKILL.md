@@ -1,3 +1,9 @@
+---
+name: security-report-builder
+description: Use this skill to build professional security reports (HTML, PDF, DOCX) from plugin-security-checker scan results. Reduces false positives through context-aware analysis and maps findings to MITRE ATT&CK/ATLAS, OWASP, and CWE. Use when turning raw scan output into executive-ready, technical, or compliance reports.
+license: MIT
+---
+
 # Security Report Builder
 
 **Version:** 1.2.0

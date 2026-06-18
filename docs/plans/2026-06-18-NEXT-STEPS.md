@@ -35,8 +35,8 @@ Three independent sites, three mechanisms — **not** one shared fix (the revisi
 
 ---
 
-## Phase 2 — remaining #44 / #25 small bugs ⬜
-Low-risk, batchable after XSS:
+## Phase 2 — remaining #44 / #25 small bugs ✅ DONE (2026-06-18)
+All fixed + verified (compile + behavioral tests for N5/C2); posted to #44/#25.
 - **#44 N4** — drop phantom `pandas` from `xlsx-smart-extractor` (`requirements.txt` + `check_dependencies()` `sys.exit`). *Reword: "enforced-but-unused", import is guarded.*
 - **#44 N5** — `xlsx query_xlsx.py` `summary` `KeyError` on `content_preservation`: write it in `chunk_sheets.py` or `.get()` on read.
 - **#44 N8** — `gdpr-auditor` encoding: add `encoding='utf-8', errors='ignore'` to `analyze_database_schema.py:~197`, `generate_audit_report.py:30`, `sync_versions.py`.
