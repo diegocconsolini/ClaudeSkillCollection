@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>/sbom Skill — Usage Manual</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --border:#30363d;
+    --ink:#e6edf3; --muted:#9da7b3; --faint:#6e7681;
+    --accent:#4f9cff; --accent2:#7ee787; --warn:#f0a35e; --danger:#ff7b72;
+    --code-bg:#0a0e14; --kbd:#21262d;
+    --sidebar-w:262px;
+    --mono:"SF Mono",SFMono-Regular,ui-monospace,"Cascadia Code","JetBrains Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:15.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code{font-family:var(--mono);font-size:.86em;background:var(--kbd);
+    padding:.12em .42em;border-radius:5px;color:#d2dae6;border:1px solid #2b3340}
+  pre{background:var(--code-bg);border:1px solid var(--border);border-radius:10px;
+    padding:16px 18px;overflow:auto;margin:14px 0;position:relative}
+  pre code{background:none;border:none;padding:0;color:#c9d4e0;font-size:13px;line-height:1.6}
+  kbd{font-family:var(--mono);background:var(--kbd);border:1px solid var(--border);
+    border-bottom-width:2px;border-radius:5px;padding:1px 7px;font-size:.8em}
+
+  /* layout */
+  .wrap{display:flex;min-height:100vh}
+  nav.side{width:var(--sidebar-w);flex:0 0 var(--sidebar-w);position:sticky;top:0;
+    height:100vh;overflow-y:auto;background:var(--panel);border-right:1px solid var(--border);
+    padding:22px 16px 50px}
+  nav.side h1{font-size:15px;margin:4px 6px 2px;letter-spacing:.3px}
+  nav.side .ver{font-size:11.5px;color:var(--faint);margin:0 6px 18px;font-family:var(--mono)}
+  nav.side a{display:block;color:var(--muted);padding:5px 10px;border-radius:7px;
+    font-size:13.5px;margin:1px 0}
+  nav.side a:hover{background:var(--panel2);color:var(--ink);text-decoration:none}
+  nav.side a.grp{margin-top:14px;color:var(--faint);font-size:11px;text-transform:uppercase;
+    letter-spacing:.7px;pointer-events:none;padding-left:10px}
+  main{flex:1;min-width:0;max-width:920px;margin:0 auto;padding:46px 52px 120px}
+
+  header.hero{border:1px solid var(--border);border-radius:14px;
+    background:linear-gradient(135deg,#161b22,#11202f 60%,#142233);
+    padding:30px 34px;margin-bottom:14px}
+  header.hero .tag{font-family:var(--mono);font-size:12px;color:var(--accent2);
+    background:rgba(126,231,135,.09);border:1px solid rgba(126,231,135,.25);
+    display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:14px}
+  header.hero h1{margin:0 0 8px;font-size:32px;letter-spacing:-.5px}
+  header.hero h1 .cmd{color:var(--accent)}
+  header.hero p{margin:0;color:var(--muted);font-size:16px;max-width:62ch}
+
+  section{margin-top:46px;scroll-margin-top:20px}
+  section>h2{font-size:23px;border-bottom:1px solid var(--border);padding-bottom:8px;
+    margin:0 0 18px;letter-spacing:-.3px}
+  section h3{font-size:17.5px;margin:30px 0 10px;color:#dbe5f0}
+  p{margin:12px 0}
+  ul,ol{padding-left:22px} li{margin:5px 0}
+
+  .grid{display:grid;gap:14px}
+  .cols-2{grid-template-columns:1fr 1fr}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:880px){.cols-2,.cols-3{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:11px;padding:16px 18px}
+  .card h4{margin:0 0 6px;font-size:15px}
+  .card p{margin:0;color:var(--muted);font-size:13.6px}
+
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:13.8px}
+  th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+  th{background:var(--panel2);font-weight:600;color:#dbe5f0}
+  td code{white-space:nowrap}
+  tr:nth-child(even) td{background:rgba(255,255,255,.012)}
+
+  .callout{border-radius:10px;padding:13px 16px 13px 16px;margin:18px 0;
+    border:1px solid var(--border);border-left-width:3px;font-size:14px}
+  .callout .lbl{font-weight:700;font-size:12px;letter-spacing:.5px;text-transform:uppercase;
+    display:block;margin-bottom:4px}
+  .callout.rule{background:rgba(255,123,114,.06);border-left-color:var(--danger)}
+  .callout.rule .lbl{color:var(--danger)}
+  .callout.tip{background:rgba(126,231,135,.06);border-left-color:var(--accent2)}
+  .callout.tip .lbl{color:var(--accent2)}
+  .callout.note{background:rgba(79,156,255,.06);border-left-color:var(--accent)}
+  .callout.note .lbl{color:var(--accent)}
+  .callout.warn{background:rgba(240,163,94,.07);border-left-color:var(--warn)}
+  .callout.warn .lbl{color:var(--warn)}
+
+  .pill{display:inline-block;font-family:var(--mono);font-size:11px;padding:1px 8px;
+    border-radius:20px;border:1px solid var(--border);background:var(--panel2);color:var(--muted)}
+  .pass{color:var(--accent2);font-weight:600}
+  .gate{color:var(--accent2)}
+  .flag{color:var(--warn)}
+
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0;font-family:var(--mono);font-size:12.5px}
+  .flow .node{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:7px 11px}
+  .flow .arr{color:var(--faint)}
+
+  footer{margin-top:70px;border-top:1px solid var(--border);padding-top:20px;
+    color:var(--faint);font-size:12.5px}
+  .scorebar{height:8px;border-radius:5px;background:var(--panel2);overflow:hidden;border:1px solid var(--border);margin-top:4px}
+  .scorebar>span{display:block;height:100%}
+  .legend{font-size:12px;color:var(--faint);margin-top:2px}
+  details{border:1px solid var(--border);border-radius:9px;padding:0 16px;margin:12px 0;background:var(--panel)}
+  details>summary{cursor:pointer;padding:13px 0;font-weight:600;font-size:14.5px;list-style:none}
+  details>summary::-webkit-details-marker{display:none}
+  details[open]>summary{border-bottom:1px solid var(--border);margin-bottom:10px}
+  .toolrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="side">
+  <h1>/sbom <span style="color:var(--faint);font-weight:400">manual</span></h1>
+  <div class="ver">skill v0.2.0 · 2026-06-18</div>
+  <a href="#overview">Overview</a>
+  <a href="#install">Install &amp; load</a>
+  <a href="#quickstart">Quick start</a>
+  <a class="grp">Reference</a>
+  <a href="#commands">Commands &amp; flags</a>
+  <a href="#rules">Hard rules</a>
+  <a href="#stacks">Stack matrix</a>
+  <a href="#outputs">Outputs &amp; formats</a>
+  <a class="grp">Workflow</a>
+  <a href="#how">How it works</a>
+  <a href="#score">Quality scoring</a>
+  <a href="#scan">Scan &amp; VEX</a>
+  <a href="#sign">Sign &amp; attest</a>
+  <a class="grp">Practical</a>
+  <a href="#examples">Worked examples</a>
+  <a href="#tested">Test results</a>
+  <a href="#limits">Limits &amp; gaps</a>
+  <a href="#faq">FAQ</a>
+  <a href="#standards">Standards &amp; refs</a>
+</nav>
+
+<main>
+
+<header class="hero">
+  <span class="tag">CycloneDX 1.6 · SPDX 2.3 · zero-dependency</span>
+  <h1><span class="cmd">/sbom</span> — Software Bill of Materials generator</h1>
+  <p>Generate standards-compliant SBOMs for a project across many stacks — npm, Python,
+  Go, Rust, Java, containers — <strong>without adding a single dependency</strong> to the
+  target. Optional quality scoring, vulnerability scan, VEX, and signing.</p>
+</header>
+
+<div class="grid cols-3" style="margin-top:14px">
+  <div class="card"><h4>🧾 Two formats</h4><p>Emits CycloneDX 1.6 <em>and</em> SPDX 2.3 from one pass — both NTIA- and CISA-endorsed.</p></div>
+  <div class="card"><h4>🪶 Zero install</h4><p>npm reads the lockfile directly; other stacks use ephemeral runners. Nothing is added to the project manifest.</p></div>
+  <div class="card"><h4>♻️ Reproducible</h4><p>Pin <code>SBOM_TIMESTAMP</code> → byte-identical output, so re-runs are diff-clean.</p></div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <h2>Overview</h2>
+  <p>An <strong>SBOM</strong> is a complete inventory of every component a project depends
+  on — direct and transitive — with versions, identifiers, hashes and licenses. It lets
+  you answer <em>“am I shipping the compromised version of X?”</em> in seconds, which is the
+  concrete defense against the 2024–2026 npm supply-chain wave (xz-utils, Shai-Hulud,
+  chalk/debug, Axios RAT).</p>
+  <p>The <code>/sbom</code> skill is an <strong>orchestrator</strong>: it detects the
+  project’s stack, routes to the right zero-dependency generator, writes both formats into
+  <code>sbom/</code>, and can optionally score, scan, and sign the result.</p>
+  <div class="flow">
+    <span class="node">detect stack</span><span class="arr">→</span>
+    <span class="node">generate (CDX + SPDX)</span><span class="arr">→</span>
+    <span class="node">score</span><span class="arr">→</span>
+    <span class="node">scan + VEX</span><span class="arr">→</span>
+    <span class="node">sign</span><span class="arr">→</span>
+    <span class="node">report</span>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section id="install">
+  <h2>Install &amp; load</h2>
+  <p>The skill ships in two places by design:</p>
+  <table>
+    <tr><th>Path</th><th>Role</th></tr>
+    <tr><td><code>sbom-generator/</code></td><td><strong>Canonical, version-controlled source.</strong> Edit here.</td></tr>
+    <tr><td><code>.claude/skills/sbom/</code></td><td><strong>Loadable copy.</strong> A directory named <code>sbom</code> in a recognized skills location is what makes <code>/sbom</code> resolve.</td></tr>
+  </table>
+  <div class="callout note"><span class="lbl">Why two copies</span>
+    Claude Code only auto-discovers skills under <code>~/.claude/skills/&lt;name&gt;/</code> or
+    <code>.claude/skills/&lt;name&gt;/</code>, and the manifest <strong>must</strong> be
+    <code>SKILL.md</code> (all-caps). <code>.claude/</code> is git-ignored, so the tracked
+    source lives in <code>sbom-generator/</code>.</div>
+  <p>After editing the source, re-sync the loadable copy:</p>
+  <pre><code>cp -r sbom-generator/{SKILL.md,agents,references,scripts} .claude/skills/sbom/</code></pre>
+  <p><strong>Requirements:</strong> <code>node</code> (for the npm path). Optional, per-feature:
+  <span class="pill">syft</span> <span class="pill">docker</span> <span class="pill">grype / osv-scanner</span>
+  <span class="pill">cosign v3</span> <span class="pill">pipx</span> — only needed for the stacks/flags that use them.</p>
+</section>
+
+<!-- QUICKSTART -->
+<section id="quickstart">
+  <h2>Quick start</h2>
+  <pre><code># SBOM for the current directory (auto-detect stack)
+/sbom
+
+# SBOM for a specific project
+/sbom ./path/to/repo
+
+# also score the result against quality profiles (gate &ge; 7.0)
+/sbom --score
+
+# also vulnerability-scan the SBOM   (networked, asks first)
+/sbom --scan
+
+# also create a cosign attestation   (networked, asks first)
+/sbom --sign</code></pre>
+  <p>Under the hood, the npm path runs the vendored zero-dependency generator:</p>
+  <pre><code>SBOM_TIMESTAMP="$(date -u +%Y-%m-%dT00:00:00Z)" \
+  node .claude/skills/sbom/scripts/generate-sbom.mjs \
+  --root ./path/to/repo --out-dir ./path/to/repo/sbom
+# → sbom/bom.cdx.json (CycloneDX 1.6) + sbom/bom.spdx.json (SPDX 2.3)</code></pre>
+</section>
+
+<!-- COMMANDS -->
+<section id="commands">
+  <h2>Commands &amp; flags</h2>
+  <h3>Skill invocation</h3>
+  <table>
+    <tr><th>Form</th><th>Effect</th></tr>
+    <tr><td><code>/sbom</code></td><td>SBOM for the current directory; auto-detects the stack.</td></tr>
+    <tr><td><code>/sbom [path]</code></td><td>SBOM for the project at <code>path</code>.</td></tr>
+    <tr><td><code>/sbom --score</code></td><td>Generate, then run <code>sbomqs</code> quality scoring. Flags a result below the <span class="gate">7.0</span> gate.</td></tr>
+    <tr><td><code>/sbom --scan</code></td><td>Generate, then run a vulnerability scan (Grype / OSV). <span class="flag">Networked — confirms first.</span></td></tr>
+    <tr><td><code>/sbom --sign</code></td><td>Generate, then create a cosign attestation. <span class="flag">Networked — confirms first.</span></td></tr>
+  </table>
+
+  <h3>Underlying generator flags <code>(generate-sbom.mjs)</code></h3>
+  <table>
+    <tr><th>Flag</th><th>Default</th><th>Meaning</th></tr>
+    <tr><td><code>--root DIR</code></td><td>script’s parent dir</td><td>Target project (where <code>package.json</code> + <code>package-lock.json</code> live).</td></tr>
+    <tr><td><code>--out-dir DIR</code></td><td><code>&lt;root&gt;/sbom</code></td><td>Where both documents are written.</td></tr>
+    <tr><td><code>--format</code></td><td><code>both</code></td><td><code>cyclonedx</code> | <code>spdx</code> | <code>both</code>.</td></tr>
+    <tr><td><code>--out FILE</code></td><td>—</td><td>Explicit CycloneDX path (back-compat; CDX only).</td></tr>
+    <tr><td><code>SBOM_TIMESTAMP</code> <span class="pill">env</span></td><td>now</td><td>Pin for reproducible, diff-clean output.</td></tr>
+  </table>
+</section>
+
+<!-- RULES -->
+<section id="rules">
+  <h2>Hard rules</h2>
+  <p>These are enforced on every run — they are what make the skill safe to point at any repo.</p>
+  <div class="callout rule"><span class="lbl">1 · Ask before touching a repo</span>One repo at a time; the plan is shown before anything executes.</div>
+  <div class="callout rule"><span class="lbl">2 · Never <code>npm install</code></span>No command that modifies the target’s manifest/lockfile. npm reads the lockfile; other stacks use ephemeral runners (<code>npx -y</code>, <code>pipx run</code>, <code>go run …@latest</code>, Docker).</div>
+  <div class="callout rule"><span class="lbl">3 · Never guess the stack</span>Detected from files actually read, not assumed.</div>
+  <div class="callout rule"><span class="lbl">4 · Outputs land in <code>sbom/</code></span>And are kept out of the project bundle. Nothing is committed unless you ask.</div>
+  <div class="callout rule"><span class="lbl">5 · <code>--scan</code> / <code>--sign</code> are networked &amp; opt-in</span>They reach external services; the skill states that and gets an explicit OK first.</div>
+  <div class="callout tip"><span class="lbl">Never imply completeness</span>If an SBOM is direct-deps-only, or a stack couldn’t be fully covered, the skill says so explicitly (CISA “Known Unknowns”) rather than presenting a partial result as complete.</div>
+</section>
+
+<!-- STACKS -->
+<section id="stacks">
+  <h2>Stack matrix</h2>
+  <p>Step 1 reads the manifest, then routes:</p>
+  <table>
+    <tr><th>Detected</th><th>Generator</th><th>Notes</th></tr>
+    <tr><td>npm <code>package-lock.json</code> (v2/v3)</td><td><strong>vendored <code>generate-sbom.mjs</code></strong></td><td>Zero-dep, reads the lockfile. The preferred path.</td></tr>
+    <tr><td>pnpm <code>pnpm-lock.yaml</code></td><td>Syft (<code>syft dir:.</code>)</td><td>Or native <code>pnpm sbom</code> (pnpm ≥ 11) if available.</td></tr>
+    <tr><td>yarn <code>yarn.lock</code></td><td>Syft</td><td>The zero-dep reader needs an npm lockfile.</td></tr>
+    <tr><td>Python <code>requirements.txt</code> / <code>poetry.lock</code></td><td><code>pipx run cyclonedx-py …</code></td><td>Unpinned deps are excluded-with-warnings.</td></tr>
+    <tr><td>Go <code>go.sum</code></td><td><code>go run …cyclonedx-gomod@latest</code></td><td>Pass <code>-json</code> (defaults to XML). Caps at spec 1.6.</td></tr>
+    <tr><td>Rust <code>Cargo.lock</code></td><td><code>cargo cyclonedx</code></td><td><span class="flag">Caps at spec 1.5 (defaults 1.3)</span> — verify the emitted <code>specVersion</code>, normalize via Syft if needed.</td></tr>
+    <tr><td>Java <code>pom.xml</code> / Gradle</td><td>CycloneDX Maven/Gradle plugin</td><td>Plugin run, not added to the build file.</td></tr>
+    <tr><td>.NET <code>*.csproj</code></td><td><code>dotnet CycloneDX</code></td><td>Needs <code>dotnet restore</code> — <span class="flag">networked</span>.</td></tr>
+    <tr><td>container image / mixed repo</td><td>Syft / cdxgen</td><td>Image pull may need registry creds; pin <code>@digest</code>.</td></tr>
+    <tr><td>npm <strong>monorepo</strong> (<code>workspaces</code>)</td><td>warn → Syft / cdxgen</td><td>The vendored reader is single-package; it warns it may under-report members.</td></tr>
+  </table>
+</section>
+
+<!-- OUTPUTS -->
+<section id="outputs">
+  <h2>Outputs &amp; formats</h2>
+  <table>
+    <tr><th>File</th><th>Format</th><th>Why</th></tr>
+    <tr><td><code>sbom/bom.cdx.json</code></td><td><strong>CycloneDX 1.6</strong></td><td>Security-oriented; native VEX path. Mandatory fields <code>bomFormat</code> + <code>specVersion</code>.</td></tr>
+    <tr><td><code>sbom/bom.spdx.json</code></td><td><strong>SPDX 2.3</strong></td><td>ISO/IEC 5962 lineage; widest licensing-tool recognition.</td></tr>
+  </table>
+  <div class="callout note"><span class="lbl">Why 1.6 / 2.3 and not the newest</span>
+    CycloneDX 1.7 and SPDX 3.0.1 are released, but as of 2026-06 the major consumers
+    (Dependency-Track, Trivy, Grype) still <strong>reject 1.7</strong> and don’t reliably
+    ingest SPDX 3.x. 1.6 / 2.3 are the broadest-consumed targets — a deliberate
+    compatibility choice, revisited as consumers catch up.</div>
+  <p>Both outputs carry the <strong>NTIA seven minimum elements</strong>: Supplier, Component
+  Name, Version, Other Unique Identifiers (purl), Dependency Relationship, Author of SBOM
+  Data, Timestamp.</p>
+
+  <details><summary>Sample — CycloneDX component (real output)</summary>
+<pre><code>{
+  "type": "library",
+  "bom-ref": "pkg:npm/%40alloc%2Fquick-lru@5.2.0",
+  "name": "@alloc/quick-lru",
+  "version": "5.2.0",
+  "purl": "pkg:npm/%40alloc%2Fquick-lru@5.2.0",
+  "scope": "excluded",
+  "hashes": [{ "alg": "SHA-512", "content": "52b700…3b0a2f" }],
+  "licenses": [{ "license": { "id": "MIT" } }]
+}</code></pre>
+  <p style="color:var(--muted);font-size:13px;margin:6px 0 12px">
+  Dual-license strings are emitted correctly as an expression, e.g.
+  <code>{ "expression": "Apache-2.0 AND LGPL-3.0-or-later AND MIT" }</code>. Dev
+  dependencies get <code>scope: "excluded"</code>.</p>
+  </details>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <h2>How it works — the 6 steps</h2>
+  <ol>
+    <li><strong>Detect the stack</strong> — glob the target root for manifests/lockfiles (never guess).</li>
+    <li><strong>Generate</strong> — route to the matching generator (npm → vendored reader; others → ephemeral runner / Syft).</li>
+    <li><strong>Score</strong> <span class="pill">--score</span> — run <code>sbomqs</code>, flag below 7.0.</li>
+    <li><strong>Scan</strong> <span class="pill">--scan</span> — Grype / OSV over the SBOM; offer a VEX for non-exploitable findings.</li>
+    <li><strong>Sign</strong> <span class="pill">--sign</span> — cosign attestation.</li>
+    <li><strong>Report</strong> — stacks detected, generator used, component counts, score, findings, and <em>any gap</em>.</li>
+  </ol>
+</section>
+
+<!-- SCORE -->
+<section id="score">
+  <h2>Quality scoring <span class="pill">--score</span></h2>
+  <p>Runs the <code>sbomqs</code> scorer as an ephemeral Docker container — nothing installed:</p>
+  <pre><code>docker run --rm -v "$(pwd)":/sboms \
+  ghcr.io/interlynk-io/sbomqs:latest score /sboms/bom.cdx.json</code></pre>
+  <div class="callout tip"><span class="lbl">Gate</span>Treat <span class="gate">≥ 7.0</span> on the
+    <strong>NTIA Minimum Elements (2021)</strong> profile as the pass bar for a lockfile-derived SBOM.
+    A low <em>Licensing</em>/<em>Completeness</em> score is expected for source SBOMs (see <a href="#limits">Limits</a>) — not a defect.</div>
+  <p>Optionally cross-check with the SPDX conformance checker:</p>
+  <pre><code>pipx run ntia-conformance-checker --file sbom/bom.spdx.json</code></pre>
+</section>
+
+<!-- SCAN -->
+<section id="scan">
+  <h2>Vulnerability scan &amp; VEX <span class="pill">--scan</span></h2>
+  <p>Feed the SBOM to a scanner (consumes CycloneDX/SPDX directly):</p>
+  <pre><code>grype sbom:sbom/bom.cdx.json
+# or
+osv-scanner --sbom=sbom/bom.cdx.json</code></pre>
+  <p>For findings that don’t actually apply, the skill can draft an <strong>OpenVEX</strong>
+  document (simpler than CSAF; natively consumed by Grype/Trivy/OSV). VEX statements link to
+  a component by <strong>purl</strong>:</p>
+  <pre><code>{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://example.com/vex-0001",
+  "author": "your-org",
+  "timestamp": "2026-06-18T00:00:00Z",
+  "version": 1,
+  "statements": [{
+    "vulnerability": { "name": "CVE-2023-12345" },
+    "products": [{ "@id": "pkg:npm/lodash@4.17.21" }],
+    "status": "not_affected",
+    "justification": "vulnerable_code_not_in_execute_path"
+  }]
+}</code></pre>
+</section>
+
+<!-- SIGN -->
+<section id="sign">
+  <h2>Sign &amp; attest <span class="pill">--sign</span></h2>
+  <p>Sign the SBOM with Sigstore <strong>cosign v3</strong>. Keyless/OIDC is the default in CI
+  (<code>COSIGN_EXPERIMENTAL</code> is no longer required):</p>
+  <pre><code># standalone SBOM file (blob):
+cosign attest-blob --predicate sbom/bom.cdx.json --type cyclonedx sbom/bom.cdx.json
+
+# container image:
+cosign attest --predicate sbom/bom.cdx.json --type cyclonedx &lt;image&gt;@&lt;digest&gt;
+
+# verify:
+cosign verify-attestation --type cyclonedx \
+  --certificate-oidc-issuer https://token.actions.githubusercontent.com &lt;ref&gt;</code></pre>
+  <p>Provenance (who built it, when, from which source) complements the SBOM (what’s in it).
+  SLSA provenance + in-toto attestations are the higher-assurance tier.</p>
+</section>
+
+<!-- EXAMPLES -->
+<section id="examples">
+  <h2>Worked examples</h2>
+
+  <h3>1 · A single npm project</h3>
+  <pre><code>/sbom ./my-app
+# Detected: npm (package-lock.json v3, single package)
+# Wrote sbom/bom.cdx.json (CycloneDX 1.6) + sbom/bom.spdx.json (SPDX 2.3)
+#   — 1066 components (851 runtime, 215 dev).</code></pre>
+
+  <h3>2 · npm + quality gate in CI</h3>
+  <pre><code>SBOM_TIMESTAMP="$(date -u +%Y-%m-%dT00:00:00Z)" \
+  node .claude/skills/sbom/scripts/generate-sbom.mjs --root . --out-dir sbom
+docker run --rm -v "$(pwd)/sbom":/sboms \
+  ghcr.io/interlynk-io/sbomqs:latest score --json /sboms/bom.cdx.json \
+  | jq '.files[0].avg_score' | awk '{ if ($1 &lt; 7.0) { print "below gate"; exit 1 } }'</code></pre>
+
+  <h3>3 · A monorepo (workspaces) — honest fallback</h3>
+  <pre><code>/sbom ./mono-repo
+# WARNING: package.json declares `workspaces` — the zero-dep reader inventories the
+# root project only and may under-report members. Routing to Syft for full coverage:
+syft dir:./mono-repo -o cyclonedx-json=sbom/bom.cdx.json -o spdx-json=sbom/bom.spdx.json</code></pre>
+
+  <h3>4 · A Python service (no deps added)</h3>
+  <pre><code>pipx run cyclonedx-py requirements \
+  --input-file requirements.txt \
+  --output-file sbom/bom.cdx.json --spec-version 1.6</code></pre>
+
+  <h3>5 · A container image</h3>
+  <pre><code>syft myregistry/app@sha256:&lt;digest&gt; \
+  -o cyclonedx-json=sbom/bom.cdx.json -o spdx-json=sbom/bom.spdx.json</code></pre>
+</section>
+
+<!-- TESTED -->
+<section id="tested">
+  <h2>Test results <span class="pill">2026-06-18</span></h2>
+  <p>The skill was exercised end-to-end against real projects, validated by an
+  <strong>independent</strong> scorer (<code>sbomqs</code> 7.x):</p>
+  <table>
+    <tr><th>#</th><th>Test</th><th>Result</th></tr>
+    <tr><td>0</td><td>Loads from <code>.claude/skills/sbom/</code></td><td class="pass">PASS</td></tr>
+    <tr><td>1</td><td>npm path on a real 1,066-component project</td><td class="pass">PASS</td></tr>
+    <tr><td>2</td><td>Structural validity + NTIA-7 fields</td><td class="pass">PASS</td></tr>
+    <tr><td>3</td><td>Reproducible (identical md5 across runs)</td><td class="pass">PASS</td></tr>
+    <tr><td>4</td><td>Monorepo → warn + route to Syft</td><td class="pass">PASS</td></tr>
+    <tr><td>5</td><td>Unsupported lockfile → clean error, no crash</td><td class="pass">PASS</td></tr>
+    <tr><td>6</td><td><code>--score</code> via sbomqs</td><td class="pass">PASS</td></tr>
+    <tr><td>7</td><td>SPDX output also scores (cross-format)</td><td class="pass">PASS</td></tr>
+  </table>
+
+  <h3>Independent score (sbomqs) of the generated CycloneDX</h3>
+  <table>
+    <tr><th>Profile / category</th><th>Score</th><th></th></tr>
+    <tr><td><strong>NTIA Minimum Elements (2021)</strong></td><td>7.1 / 10</td><td><div class="scorebar"><span style="width:71%;background:var(--accent2)"></span></div></td></tr>
+    <tr><td>Identification</td><td>10 / 10</td><td><div class="scorebar"><span style="width:100%;background:var(--accent2)"></span></div></td></tr>
+    <tr><td>Integrity (hashes)</td><td>9 / 10</td><td><div class="scorebar"><span style="width:90%;background:var(--accent2)"></span></div></td></tr>
+    <tr><td>Vulnerability</td><td>10 / 10</td><td><div class="scorebar"><span style="width:100%;background:var(--accent2)"></span></div></td></tr>
+    <tr><td>Structural</td><td>8 / 10</td><td><div class="scorebar"><span style="width:80%;background:var(--accent)"></span></div></td></tr>
+    <tr><td>Licensing</td><td>1.5 / 10</td><td><div class="scorebar"><span style="width:15%;background:var(--warn)"></span></div></td></tr>
+    <tr><td>Completeness</td><td>3 / 10</td><td><div class="scorebar"><span style="width:30%;background:var(--warn)"></span></div></td></tr>
+  </table>
+  <p class="legend">The low Licensing/Completeness scores are an inherent property of a
+  <em>lockfile-derived</em> SBOM (npm lockfiles don’t carry supplier or full license text per
+  package) — not a bug. For richer fields, run Syft over an installed tree.</p>
+</section>
+
+<!-- LIMITS -->
+<section id="limits">
+  <h2>Limits &amp; gaps</h2>
+  <div class="grid cols-2">
+    <div class="card"><h4>Source vs build SBOM</h4><p>The npm path describes declared dependencies from the lockfile — not what a build actually links. Label as source-level when handing off.</p></div>
+    <div class="card"><h4>Monorepos</h4><p>The zero-dep reader is single-package. <code>workspaces</code> projects get a warning and should use Syft/cdxgen.</p></div>
+    <div class="card"><h4>Per-package metadata</h4><p>Supplier, download location and full license text aren’t in npm lockfiles → lower Licensing/Completeness scores.</p></div>
+    <div class="card"><h4>Rust spec version</h4><p><code>cargo-cyclonedx</code> caps at spec 1.5 — verify the emitted <code>specVersion</code> and normalize if a consumer needs 1.6.</p></div>
+    <div class="card"><h4>Ephemeral tools must be reachable</h4><p>Non-npm stacks and <code>--score/--scan/--sign</code> need their tool fetchable/installed; if not, the skill reports the gap rather than faking output.</p></div>
+    <div class="card"><h4>Private containers</h4><p>Image pulls may need registry credentials; the skill confirms you’re logged in rather than running <code>docker login</code> for you.</p></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2>FAQ</h2>
+  <details><summary>Does it add anything to my project?</summary><p>No. That’s the core promise. npm reads the existing lockfile; every other stack uses an ephemeral runner (<code>npx -y</code>, <code>pipx run</code>, <code>go run …@latest</code>, Docker). Your <code>package.json</code> / <code>requirements.txt</code> / <code>Cargo.toml</code> are never modified.</p></details>
+  <details><summary>Why both CycloneDX and SPDX?</summary><p>Both are NTIA- and CISA-endorsed and different consumers prefer different formats. Emitting both maximizes interoperability at no extra cost (one pass).</p></details>
+  <details><summary>Why not the newest spec versions?</summary><p>CycloneDX 1.7 / SPDX 3.0.1 exist but major consumers (Dependency-Track, Trivy, Grype) still reject 1.7 and don’t reliably ingest SPDX 3.x as of 2026-06. 1.6 / 2.3 are the safe, broadly-consumed defaults.</p></details>
+  <details><summary>Is an SBOM legally required?</summary><p>US OMB M-26-05 (Jan 2026) rescinded the prior federal mandate — SBOMs are now an optional, on-request contractual term. The EU CRA drives obligations from Sep 2026 (reporting) / Dec 2027 (main). Either way, an SBOM is the practical basis for vulnerability response.</p></details>
+  <details><summary>How do I make re-runs diff-clean?</summary><p>Set <code>SBOM_TIMESTAMP</code> to a fixed value. Output is then byte-identical across runs (verified), so committing it produces clean diffs.</p></details>
+  <details><summary>Where do the files go?</summary><p>Into <code>&lt;target&gt;/sbom/</code> by default (<code>--out-dir</code> to override). They’re meant to stay out of the project bundle; the marketplace <code>.gitignore</code> already ignores <code>sbom/</code>.</p></details>
+</section>
+
+<!-- STANDARDS -->
+<section id="standards">
+  <h2>Standards &amp; references</h2>
+  <div class="grid cols-2">
+    <div class="card"><h4>Formats</h4><p>CycloneDX 1.6 (ECMA-424) · SPDX 2.3 (ISO/IEC 5962) · Package URL (purl) for identifiers.</p></div>
+    <div class="card"><h4>Minimum elements</h4><p>NTIA “Minimum Elements for an SBOM” (2021, 7 fields) · CISA 2025 update (draft: Coverage, Known Unknowns).</p></div>
+    <div class="card"><h4>Quality &amp; scan</h4><p>sbomqs · SPDX ntia-conformance-checker · Grype · Trivy · OSV-Scanner.</p></div>
+    <div class="card"><h4>VEX &amp; signing</h4><p>OpenVEX / CSAF · Sigstore cosign v3 · in-toto · SLSA provenance.</p></div>
+  </div>
+  <p style="margin-top:14px">In-repo: <code>references/sbom-knowledge.md</code> (verified facts),
+  <code>agents/sbom-generator.md</code> (full procedure),
+  <code>docs/plans/2026-06-18-REVISION-ultracode.md</code> (design rationale &amp; open items).</p>
+</section>
+
+<footer>
+  <p><strong>/sbom skill</strong> v0.2.0 · manual generated 2026-06-18 · part of the
+  Security &amp; Compliance Marketplace (ClaudeSkillCollection). Wraps the workspace
+  zero-dependency SBOM toolkit. All facts verified via deep research + adversarial review;
+  re-confirm time-sensitive CLI/regulatory details before quoting in an audit deliverable.</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>
