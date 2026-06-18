@@ -125,6 +125,14 @@ Three viable homes (you asked to decide after reviewing current skill docs; here
 
 My recommendation: **(B) now → (A) later.** Build it as a standalone skill that drives the existing toolkit (fast, low-risk, respects the no-reinvent rule), and promote it to a marketplace plugin once the core bugs (#44) are fixed and it has a self-SBOM story. But this is your call.
 
+### 3.7 BUILD STATUS — ✅ built & verified (2026-06-18)
+**User chose (B) standalone skill + vendored generator + resolve open questions first.** All done:
+- Open questions resolved (research, cited): **SPDX 2.3 default** (3.0.1 finalized but breaking JSON-LD); **OpenVEX** over CSAF (purl-linked, native in Grype/Trivy/OSV); **cosign v3** `attest-blob` for files, keyless-by-default; **sbomqs** gate **≥ 7.0** (Docker-ephemeral). Recorded in `references/sbom-knowledge.md`.
+- Skill scaffolded at `sbom-generator/` (claude-guide-style): `Skill.md` (`/sbom`), `agents/sbom-generator.md`, `references/sbom-knowledge.md`, vendored `scripts/generate-sbom.mjs`.
+- **Bug found by verification:** the canonical generator hardcodes the lockfile path to the script's own parent dir, so a portable copy couldn't target an arbitrary project. Fixed by adding a backward-compatible **`--root <dir>`** flag to the vendored copy (one intentional divergence, documented in the sync header).
+- **Verified working:** ran against a real 787-component npm project → valid CycloneDX 1.6 (787 components, correct purl encoding) + SPDX 2.3 (788 packages, purl refs) + **byte-reproducible** across runs. Not registered in marketplace.json (standalone skill).
+- **Not yet covered (next):** the non-npm ephemeral-runner paths and `--score/--scan/--sign` are documented in the agent but not yet smoke-tested end-to-end; a self-SBOM pass over the marketplace's own plugins.
+
 ---
 
 ## 4. Suggested sequence (when the build phase starts)
