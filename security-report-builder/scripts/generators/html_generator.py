@@ -4,6 +4,7 @@ Generate interactive HTML security reports with modern styling.
 """
 
 import json
+import html
 import logging
 from pathlib import Path
 from typing import Dict, List, Any
@@ -17,6 +18,13 @@ except ImportError:
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+
+def _esc(value):
+    """Escape scan-controlled text before embedding it in HTML.
+    Findings (description, code_snippet, plugin name) originate from scanned
+    plugins and are attacker-influenced — prevents HTML/script injection."""
+    return html.escape("" if value is None else str(value))
 
 
 class HTMLReportGenerator:
@@ -34,7 +42,11 @@ class HTMLReportGenerator:
 
         if Template:
             try:
-                self.env = Environment(loader=FileSystemLoader(str(self.template_dir)))
+                # autoescape=True: never emit unescaped values through the template path.
+                self.env = Environment(
+                    loader=FileSystemLoader(str(self.template_dir)),
+                    autoescape=True,
+                )
             except Exception as e:
                 logger.warning(f"Could not load templates: {e}")
 
@@ -492,10 +504,10 @@ class HTMLReportGenerator:
 
             html += f"""
                         <tr>
-                            <td><span class="plugin-name">{plugin.get('plugin_name', 'unknown')}</span></td>
-                            <td><strong>{plugin['risk_score']}</strong></td>
-                            <td><span class="risk-level risk-{plugin['risk_level']}">{plugin['risk_level']}</span></td>
-                            <td>{plugin['real_finding_count']}/{plugin['finding_count']}</td>
+                            <td><span class="plugin-name">{_esc(plugin.get('plugin_name', 'unknown'))}</span></td>
+                            <td><strong>{_esc(plugin['risk_score'])}</strong></td>
+                            <td><span class="risk-level risk-{_esc(plugin['risk_level'])}">{_esc(plugin['risk_level'])}</span></td>
+                            <td>{_esc(plugin['real_finding_count'])}/{_esc(plugin['finding_count'])}</td>
                             <td class="severity-CRITICAL"><strong>{crit}</strong></td>
                             <td class="severity-HIGH"><strong>{high}</strong></td>
                         </tr>"""
@@ -524,21 +536,21 @@ class HTMLReportGenerator:
                 html += f"""
                 <div class="finding-card CRITICAL">
                     <div class="finding-header">
-                        <div class="finding-title">{category}</div>
+                        <div class="finding-title">{_esc(category)}</div>
                         <span class="severity-badge CRITICAL">CRITICAL</span>
                     </div>
-                    <div class="plugin-name">Plugin: {plugin}</div>
-                    <p style="margin: 12px 0;">{description}</p>"""
+                    <div class="plugin-name">Plugin: {_esc(plugin)}</div>
+                    <p style="margin: 12px 0;">{_esc(description)}</p>"""
 
                 if code:
-                    html += f"""<code>{code[:500]}</code>"""
+                    html += f"""<code>{_esc(code[:500])}</code>"""
 
                 if attack_techs or owasp:
                     html += '<div class="framework-tags">'
                     for tech in attack_techs[:3]:
-                        html += f'<span class="framework-tag">ATT&CK: {tech}</span>'
+                        html += f'<span class="framework-tag">ATT&CK: {_esc(tech)}</span>'
                     for cat in owasp[:2]:
-                        html += f'<span class="framework-tag">OWASP: {cat}</span>'
+                        html += f'<span class="framework-tag">OWASP: {_esc(cat)}</span>'
                     html += '</div>'
 
                 html += """

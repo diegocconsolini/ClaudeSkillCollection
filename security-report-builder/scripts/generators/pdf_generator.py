@@ -3,10 +3,19 @@
 Generate professional PDF security reports using WeasyPrint.
 """
 
+import html as html_lib
 import logging
 from pathlib import Path
 from typing import Dict, List, Any
 from datetime import datetime
+
+
+def _esc(value):
+    """Escape scan-controlled text before embedding in the report markup.
+    WeasyPrint runs no JS, so this guards against markup/link/layout injection
+    (broken PDFs, smuggled links) from attacker-influenced finding fields."""
+    return html_lib.escape("" if value is None else str(value))
+
 
 try:
     from weasyprint import HTML, CSS
@@ -372,10 +381,10 @@ class PDFReportGenerator:
             sev_dist = plugin.get('severity_distribution', {})
             html += f"""
             <tr>
-                <td>{plugin.get('plugin_name', 'unknown')}</td>
-                <td><strong>{plugin['risk_score']}</strong></td>
-                <td>{plugin['risk_level']}</td>
-                <td>{plugin['real_finding_count']}/{plugin['finding_count']}</td>
+                <td>{_esc(plugin.get('plugin_name', 'unknown'))}</td>
+                <td><strong>{_esc(plugin['risk_score'])}</strong></td>
+                <td>{_esc(plugin['risk_level'])}</td>
+                <td>{_esc(plugin['real_finding_count'])}/{_esc(plugin['finding_count'])}</td>
                 <td>{sev_dist.get('CRITICAL', 0)}</td>
                 <td>{sev_dist.get('HIGH', 0)}</td>
             </tr>"""
@@ -397,9 +406,9 @@ class PDFReportGenerator:
 
                 html += f"""
     <div class="finding-card CRITICAL">
-        <h3>{idx}. {category} <span class="severity-badge CRITICAL">CRITICAL</span></h3>
-        <p><strong>Plugin:</strong> <code>{plugin}</code></p>
-        <p>{desc}</p>
+        <h3>{idx}. {_esc(category)} <span class="severity-badge CRITICAL">CRITICAL</span></h3>
+        <p><strong>Plugin:</strong> <code>{_esc(plugin)}</code></p>
+        <p>{_esc(desc)}</p>
     </div>"""
         else:
             html += '<p>No critical findings identified.</p>'

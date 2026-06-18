@@ -6,9 +6,17 @@ Includes all threat intelligence, CVE references, OWASP mappings, and CWE detail
 
 import json
 import os
+import html as html_lib  # aliased: the report string is also named `html`
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict, Counter
+
+
+def _esc(value):
+    """Escape user/scan-controlled text before embedding in the HTML report.
+    Prevents stored XSS from a scanned plugin's description/code_snippet/etc."""
+    return html_lib.escape("" if value is None else str(value))
+
 
 RESULTS_DIR = Path("plugin-security-checker/archive_scan_results")
 THREAT_MAP_FILE = Path("plugin-security-checker/references/threat_mappings.json")
@@ -642,29 +650,29 @@ def generate_html(results, analysis, threat_map):
             html += f"""
                 <div class="finding-card critical">
                     <div class="finding-header">
-                        <div class="finding-title">{plugin} - {finding.get('description', 'Security Issue')}</div>
+                        <div class="finding-title">{_esc(plugin)} - {_esc(finding.get('description', 'Security Issue'))}</div>
                         <span class="severity-badge critical">CRITICAL</span>
                     </div>
                     <div class="finding-details">
                         <div class="detail-row">
                             <span class="detail-label">Category:</span>
-                            <span class="detail-value">{finding.get('category')} / {finding.get('subcategory')}</span>
+                            <span class="detail-value">{_esc(finding.get('category'))} / {_esc(finding.get('subcategory'))}</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label">Location:</span>
-                            <span class="detail-value">{finding.get('file')}:{finding.get('line')}</span>
+                            <span class="detail-value">{_esc(finding.get('file'))}:{_esc(finding.get('line'))}</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label">CVSS Score:</span>
-                            <span class="detail-value"><span class="{cvss_class} cvss-score">{cvss}</span></span>
+                            <span class="detail-value"><span class="{cvss_class} cvss-score">{_esc(cvss)}</span></span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label">Impact:</span>
-                            <span class="detail-value">{finding.get('impact', 'N/A')}</span>
+                            <span class="detail-value">{_esc(finding.get('impact', 'N/A'))}</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label">Recommendation:</span>
-                            <span class="detail-value">{finding.get('recommendation', 'Review code manually')}</span>
+                            <span class="detail-value">{_esc(finding.get('recommendation', 'Review code manually'))}</span>
                         </div>
                     </div>
 """
@@ -672,7 +680,7 @@ def generate_html(results, analysis, threat_map):
             # Code snippet
             if finding.get('code_snippet'):
                 html += f"""
-                    <div class="code-snippet">{finding['code_snippet']}</div>
+                    <div class="code-snippet">{_esc(finding['code_snippet'])}</div>
 """
 
             # Framework mappings (if available)

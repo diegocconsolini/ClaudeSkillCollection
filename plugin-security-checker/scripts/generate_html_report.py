@@ -5,9 +5,16 @@ Generate unified HTML report from all plugin security scan results
 
 import json
 import os
+import html as html_lib  # aliased: the report string is also named `html`
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
+
+
+def _esc(value):
+    """Escape scan-controlled text before embedding in the HTML report (anti-XSS)."""
+    return html_lib.escape("" if value is None else str(value))
+
 
 RESULTS_DIR = Path("plugin-security-checker/archive_scan_results")
 OUTPUT_FILE = Path("plugin-security-checker/archive_scan_results/security_report.html")
@@ -471,10 +478,10 @@ def generate_html(results, stats):
         for plugin in stats['critical_plugins'][:50]:  # Show top 50
             html += f"""
                     <div class="plugin-item critical">
-                        <span class="plugin-name">{plugin['name']}</span>
+                        <span class="plugin-name">{_esc(plugin['name'])}</span>
                         <div class="plugin-meta">
-                            <span class="findings-count">{plugin['findings']} findings</span>
-                            <span class="badge critical">{plugin['verdict']}</span>
+                            <span class="findings-count">{_esc(plugin['findings'])} findings</span>
+                            <span class="badge critical">{_esc(plugin['verdict'])}</span>
                         </div>
                     </div>
 """
@@ -495,10 +502,10 @@ def generate_html(results, stats):
         for plugin in stats['high_risk_plugins'][:50]:
             html += f"""
                     <div class="plugin-item high">
-                        <span class="plugin-name">{plugin['name']}</span>
+                        <span class="plugin-name">{_esc(plugin['name'])}</span>
                         <div class="plugin-meta">
-                            <span class="findings-count">{plugin['findings']} findings</span>
-                            <span class="badge high">{plugin['verdict']}</span>
+                            <span class="findings-count">{_esc(plugin['findings'])} findings</span>
+                            <span class="badge high">{_esc(plugin['verdict'])}</span>
                         </div>
                     </div>
 """
@@ -519,10 +526,10 @@ def generate_html(results, stats):
         for plugin in stats['medium_risk_plugins'][:100]:
             html += f"""
                     <div class="plugin-item medium">
-                        <span class="plugin-name">{plugin['name']}</span>
+                        <span class="plugin-name">{_esc(plugin['name'])}</span>
                         <div class="plugin-meta">
-                            <span class="findings-count">{plugin['findings']} findings</span>
-                            <span class="badge medium">{plugin['verdict']}</span>
+                            <span class="findings-count">{_esc(plugin['findings'])} findings</span>
+                            <span class="badge medium">{_esc(plugin['verdict'])}</span>
                         </div>
                     </div>
 """
@@ -546,9 +553,9 @@ def generate_html(results, stats):
         for plugin in sorted(all_clean, key=lambda x: x['name'])[:200]:
             html += f"""
                     <div class="plugin-item">
-                        <span class="plugin-name">{plugin['name']}</span>
+                        <span class="plugin-name">{_esc(plugin['name'])}</span>
                         <div class="plugin-meta">
-                            <span class="badge pass">{plugin['verdict']}</span>
+                            <span class="badge pass">{_esc(plugin['verdict'])}</span>
                         </div>
                     </div>
 """
