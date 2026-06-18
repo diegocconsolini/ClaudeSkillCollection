@@ -1,5 +1,12 @@
 # Next-Steps Plan — addressing all remaining work
 
+> **2026-06-19 — COMPLETE.** All engineering phases (0-6) done and verified. The only
+> open items are the user-owned C1 follow-through (history scrub / credential rotation /
+> GDPR-NDA legal) and the optional feature issues #34-#43. Remaining code findings cleared:
+> N7 (script-relative report paths), H4 (4 SKILL.md added), H5 (demo_learning guard),
+> M3 (claude-guide registered + paths fixed). Self-SBOMs generated for all Python plugins.
+
+
 **Date:** 2026-06-18 · **Status:** active execution plan · **Basis:** `2026-06-18-REVISION-ultracode.md` (corrections) + the audit issues (#25/#23/#44) + user decisions this session.
 
 > **Decisions locked (2026-06-18):** XSS first · supply-chain scope = **npm + PyPI together** · C1 scrub/rotation/legal = **user handles outside this session** · gitwatch left running.

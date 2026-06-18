@@ -3,8 +3,11 @@
 
 set -e
 
-WIKI_DIR="/home/diegocc/ClaudeSkillCollection/wiki"
-REPO_DIR="/home/diegocc/ClaudeSkillCollection"
+# Resolve paths relative to this script so it works on any machine.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+# The wiki is a separate GitHub wiki checkout; override with WIKI_DIR env var if needed.
+WIKI_DIR="${WIKI_DIR:-$REPO_DIR/wiki}"
 
 # Colors for output
 RED='\033[0;31m'

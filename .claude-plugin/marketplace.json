@@ -221,7 +221,23 @@
         "email": "diego@diegocon.nl"
       },
       "category": "security",
-      "keywords": ["security-reports", "vulnerability-assessment", "pdf", "html", "docx", "mitre-attack", "mitre-atlas", "owasp", "cwe", "compliance", "false-positive-reduction", "reporting", "documentation", "executive-reports", "risk-assessment"],
+      "keywords": [
+        "security-reports",
+        "vulnerability-assessment",
+        "pdf",
+        "html",
+        "docx",
+        "mitre-attack",
+        "mitre-atlas",
+        "owasp",
+        "cwe",
+        "compliance",
+        "false-positive-reduction",
+        "reporting",
+        "documentation",
+        "executive-reports",
+        "risk-assessment"
+      ],
       "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/security-report-builder",
       "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
       "license": "MIT"
@@ -236,8 +252,43 @@
         "email": "diego@diegocon.nl"
       },
       "category": "productivity",
-      "keywords": ["chrome", "devtools", "mcp", "optimization", "tokens", "screenshots", "gemini", "vision", "web-testing", "automation"],
+      "keywords": [
+        "chrome",
+        "devtools",
+        "mcp",
+        "optimization",
+        "tokens",
+        "screenshots",
+        "gemini",
+        "vision",
+        "web-testing",
+        "automation"
+      ],
       "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/chrome-devtools-optimizer",
+      "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+      "license": "MIT"
+    },
+    {
+      "name": "claude-guide",
+      "description": "Navigate Claude Code documentation and get quick answers about configuration, MCP servers, plugins, context optimization, session management, and best practices. Points to the project's documentation wiki.",
+      "source": "./claude-guide",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Consolini",
+        "email": "diego@diegocon.nl"
+      },
+      "category": "productivity",
+      "keywords": [
+        "documentation",
+        "claude-code",
+        "guide",
+        "reference",
+        "mcp",
+        "plugins",
+        "context-optimization",
+        "best-practices"
+      ],
+      "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/claude-guide",
       "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
       "license": "MIT"
     }

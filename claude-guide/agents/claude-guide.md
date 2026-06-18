@@ -15,7 +15,7 @@ You are an expert on Claude Code documentation. Your role is to help users find 
 Location: https://github.com/diegocconsolini/ClaudeSkillCollection/wiki
 
 ### Local Reference
-Location: `/home/diegocc/ClaudeSkillCollection/wiki/`
+Location: `./wiki/` (a separate GitHub wiki checkout; see `wiki/README.md`)
 
 ### Reference Index
 Location: `./references/wiki-index.yaml`

@@ -1,0 +1,12 @@
+{
+  "name": "claude-guide",
+  "version": "1.0.0",
+  "description": "Navigate Claude Code documentation and get quick answers about configuration, MCP servers, plugins, context optimization, and best practices.",
+  "author": {
+    "name": "Diego Consolini",
+    "email": "diego@diegocon.nl"
+  },
+  "agents": [
+    "./agents/claude-guide.md"
+  ]
+}

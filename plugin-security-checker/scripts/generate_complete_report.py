@@ -18,9 +18,12 @@ def _esc(value):
     return html_lib.escape("" if value is None else str(value))
 
 
-RESULTS_DIR = Path("plugin-security-checker/archive_scan_results")
-THREAT_MAP_FILE = Path("plugin-security-checker/references/threat_mappings.json")
-OUTPUT_FILE = Path("plugin-security-checker/archive_scan_results/complete_security_report.html")
+# Resolve paths relative to this script (not the caller's cwd), so the report works
+# from any working directory. (#44 N7)
+_PLUGIN_ROOT = Path(__file__).resolve().parent.parent
+RESULTS_DIR = _PLUGIN_ROOT / "archive_scan_results"
+THREAT_MAP_FILE = _PLUGIN_ROOT / "references" / "threat_mappings.json"
+OUTPUT_FILE = _PLUGIN_ROOT / "archive_scan_results" / "complete_security_report.html"
 
 def load_threat_mappings():
     """Load MITRE ATT&CK/ATLAS/OWASP/CWE mappings"""
