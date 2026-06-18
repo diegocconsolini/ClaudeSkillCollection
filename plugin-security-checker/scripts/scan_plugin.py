@@ -67,22 +67,34 @@ class PluginScanner:
         self.findings: List[Finding] = []
         self.finding_counter = 0
 
-        # Load reference databases
+        # Load reference databases. The expanded set is the CANONICAL pattern source
+        # (99 patterns + obfuscation/credentials sections) and is a strict superset of
+        # the legacy dangerous_functions.json in the same python/javascript→severity→func
+        # tree this scanner walks — so reconciling on it adds coverage with no format
+        # change. Fall back to the legacy file if the expanded set is absent.
         self.dangerous_functions = self._load_json(
-            self.references_path / "dangerous_functions.json"
+            self.references_path / "dangerous_functions_expanded.json",
+            fallback=self.references_path / "dangerous_functions.json",
         )
         self.obfuscation_patterns = self._load_json(
             self.references_path / "obfuscation_patterns.json"
         )
 
-    def _load_json(self, filepath: Path) -> Dict:
-        """Load JSON reference file"""
-        try:
-            with open(filepath, 'r') as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Error loading {filepath}: {e}", file=sys.stderr)
-            sys.exit(1)
+    def _load_json(self, filepath: Path, fallback: Path = None) -> Dict:
+        """Load a JSON reference file, optionally falling back to another path."""
+        for path in (filepath, fallback):
+            if path is None:
+                continue
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except FileNotFoundError:
+                continue
+            except Exception as e:
+                print(f"Error loading {path}: {e}", file=sys.stderr)
+                sys.exit(1)
+        print(f"Error: reference file not found: {filepath}", file=sys.stderr)
+        sys.exit(1)
 
     def _generate_finding_id(self) -> str:
         """Generate unique finding ID"""

@@ -88,3 +88,8 @@ personal/
 # Build artifacts
 *.pyc
 *.pyo
+
+# plugin-security-checker: generated pattern build artifact (regenerate via expand_patterns.py;
+# the canonical, committed file is references/dangerous_functions_expanded.json)
+plugin-security-checker/references/dangerous_functions_expanded.generated.json
+plugin-security-checker/references/dangerous_functions_expanded_v*.json

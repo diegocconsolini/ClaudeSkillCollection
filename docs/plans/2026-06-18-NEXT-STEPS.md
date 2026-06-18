@@ -46,7 +46,15 @@ All fixed + verified (compile + behavioral tests for N5/C2); posted to #44/#25.
 
 ---
 
-## Phase 3 — scanner-engine reconciliation ⬜ (BLOCKS Phase 4)
+## Phase 3 — scanner-engine reconciliation ✅ DONE (2026-06-18)
+**Resolved:** `scan_plugin.py` (documented entry) now loads `dangerous_functions_expanded.json`
+(verified strict superset — 63 python patterns vs 14, + obfuscation/credentials sections), with a
+graceful fallback to the basic file. Stale `_v2`/`_v3` removed (untracked; `_v3` was byte-identical
+to canonical); `expand_patterns.py` now writes a gitignored `.generated.json` build artifact.
+Verified: documented entry now catches expanded-only patterns (e.g. `ctypes.CDLL`) it previously
+missed. **New IOCs now land in ONE canonical file** → Phase 4 unblocked.
+
+### Original finding (for reference)
 **Critical finding from the ultracode re-audit:** the real entrypoint `scan_plugin.py` loads `dangerous_functions.json`; the `IntelligentOrchestrator` loads `dangerous_functions_expanded.json` and is **never called by scan_plugin**. Any new detectors added to the orchestrator are **dead code**.
 - **Decide the canonical engine** (likely wire `scan_plugin.py` → the orchestrator/expanded set, or land everything in `dangerous_functions.json`).
 - Add a smoke test that runs `scan_plugin.py` on a known-malicious fixture and asserts the new patterns fire.

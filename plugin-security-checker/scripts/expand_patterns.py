@@ -693,15 +693,19 @@ def main():
     print(f"TOTAL:    {total} patterns (was 27, added {total - 27})")
     print("=" * 70)
 
-    # Save
-    output_file = Path(__file__).parent.parent / "references" / "dangerous_functions_expanded_v3.json"
-    with open(output_file, 'w') as f:
+    # Save to a clearly-named BUILD ARTIFACT (gitignored). This regenerates the
+    # canonical pattern set; review the diff, then promote it to the canonical file:
+    #   mv dangerous_functions_expanded.generated.json dangerous_functions_expanded.json
+    # (The old _v2/_v3 names were removed — the active scanner loads the canonical file.)
+    output_file = Path(__file__).parent.parent / "references" / "dangerous_functions_expanded.generated.json"
+    with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
 
     print(f"\n✓ Saved to: {output_file}")
     print(f"\nNext steps:")
-    print(f"1. Test patterns on malicious code samples")
-    print(f"2. Validate false positive rate on marketplace sample")
+    print(f"1. Diff against references/dangerous_functions_expanded.json (the canonical file)")
+    print(f"2. Test patterns on malicious code samples; validate false-positive rate")
+    print(f"3. Promote: mv {output_file.name} dangerous_functions_expanded.json")
     print(f"3. Replace dangerous_functions_expanded.json with v3")
 
 if __name__ == '__main__':
