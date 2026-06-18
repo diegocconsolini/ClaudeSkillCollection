@@ -1,6 +1,6 @@
 {
   "name": "security-report-builder",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Professional security report generator with HTML, PDF, and DOCX output. Reduces false positives through context-aware analysis.",
   "author": {
     "name": "Diego Consolini",

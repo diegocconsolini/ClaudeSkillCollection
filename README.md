@@ -5,14 +5,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
 [![Plugins](https://img.shields.io/badge/plugins-9-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
-[![Wiki](https://img.shields.io/badge/wiki-53_pages-purple.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)
+[![Wiki](https://img.shields.io/badge/wiki-docs-purple.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)
 [![Start Here](https://img.shields.io/badge/Start_Here-guide-brightgreen.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki/Start-Here)
 
 A curated collection of production-ready security, compliance, and productivity plugins for Claude Code. Built on authoritative sources and rigorously tested with real-world data.
 
 ## 📚 Documentation Wiki
 
-**[→ Full Documentation Wiki (53 pages)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)**
+**[→ Full Documentation Wiki](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)**
 
 | Category | Topics |
 |----------|--------|
@@ -63,6 +63,28 @@ After installation:
 /plugin marketplace remove security-compliance-marketplace
 /plugin marketplace add diegocconsolini/ClaudeSkillCollection  # Re-add using GitHub format
 ```
+
+---
+
+## 🖥️ Claude Desktop Skills
+
+These plugins are also packaged as **Claude Desktop skills** (importable ZIPs) under
+[`claude-desktop-skills/`](./claude-desktop-skills/). They mirror the Claude Code plugins
+but use the Desktop skill format (`Skill.md` + bundled `scripts/`/`references/`).
+
+```
+Open Claude Desktop → Skills → Import Skill → select a ZIP from
+claude-desktop-skills/packages/
+```
+
+8 skills are ready to import (gdpr-auditor, cybersecurity-policy-generator,
+incident-response-playbook-creator, security-report-builder, pdf/xlsx/docx-smart-extractor,
+chrome-devtools-optimizer). The **plugin-security-checker** desktop package is held back
+because its bundled STIX reference data exceeds Claude Desktop's 30 MB uncompressed limit —
+use the Claude Code plugin form for that one. See
+[`claude-desktop-skills/README.md`](./claude-desktop-skills/README.md) and
+[`MIGRATION_GUIDE.md`](./claude-desktop-skills/MIGRATION_GUIDE.md) for the Code-vs-Desktop
+differences.
 
 ---
 

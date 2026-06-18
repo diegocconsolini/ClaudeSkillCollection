@@ -3,13 +3,12 @@
  * generate-sbom.mjs — produce CycloneDX 1.6 + SPDX 2.3 SBOMs from package-lock.json.
  *
  * ┌─ VENDORED COPY ───────────────────────────────────────────────────────────┐
- * │ Canonical source: /_workspace/sbom-toolkit/generate-sbom.mjs (v1.1.0).     │
- * │ This is a self-contained copy bundled into the /sbom skill so the skill is │
- * │ portable. To re-sync after the canonical changes:                          │
+ * │ Canonical source: /_workspace/sbom-toolkit/generate-sbom.mjs.              │
+ * │ Self-contained copy bundled into the /sbom skill so the skill is portable. │
+ * │ The `--root <dir>` flag was upstreamed (2026-06-19), so canonical is now a │
+ * │ superset — re-sync cleanly after canonical changes, then re-add this header:│
  * │   cp ../../../_workspace/sbom-toolkit/generate-sbom.mjs scripts/            │
- * │ then re-add this header AND re-apply the one intentional divergence below.  │
- * │ DIVERGENCE: a `--root <dir>` flag (see below) lets the portable skill target │
- * │ any project. Everything else must stay identical to canonical.              │
+ * │ Keep the logic identical to canonical.                                     │
  * └────────────────────────────────────────────────────────────────────────────┘
  *
  * Zero new dependencies (reads the lockfile directly), so it respects the

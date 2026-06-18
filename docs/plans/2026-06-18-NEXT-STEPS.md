@@ -78,14 +78,26 @@ missed. **New IOCs now land in ONE canonical file** → Phase 4 unblocked.
 
 ---
 
-## Phase 5 — SBOM skill follow-through ⬜
+## Phase 5 — SBOM skill follow-through ✅ PARTIAL (2026-06-19)
+- ✅ Upstreamed `--root` into canonical `_workspace/sbom-toolkit/generate-sbom.mjs` (canonical now superset; vendored header updated — divergence resolved).
+- ⬜ Self-SBOM the marketplace plugins (needs plugin `requirements.txt` pinning first) — deferred.
+
+### Original notes
 - **Self-SBOM the marketplace plugins** — but the plugins are Python with **unpinned** `requirements.txt`; pin first (also closes N3/N4), then smoke-test the `cyclonedx-py` path before claiming the milestone.
 - **Upstream `--root`** into the canonical `_workspace/sbom-toolkit/generate-sbom.mjs`, then re-vendor (canonical = superset).
 - Remaining low/nit script hardening from revision §D.6–D.7 (SPDX dev-dep filter, SRI length validation).
 
 ---
 
-## Phase 6 — docs & feature issues ⬜
+## Phase 6 — docs & feature issues ✅ DONE (#23) (2026-06-19)
+Fixed: 3 `/home/diegocc` paths in CLAUDE.md → relative; SRB plugin.json 1.0.1 → 1.2.0 (drift
+resolved); "`license` required" claim corrected + SKILL.md filename/location note added; README
+gained a Claude Desktop Skills section; stale "53 pages" hardcodes removed; `wiki/README.md`
+pointer added. Feature issues #34–#43 remain valid, sequenced later.
+Also: added a threat-informed **Software Supply Chain Security Policy** to the policy generator
+(52 policies now) — the Phase-4 policy-clause tail.
+
+### Original notes
 - **#23** doc fixes: remove `/home/diegocc` paths from CLAUDE.md, fix SRB version drift (plugin.json 1.0.1 → 1.2.0), correct "`license` required" claim, stale counts (53 pages / "8 of 9" / 425 KB), add the desktop-skills README section.
 - **#42** (wiki auto-updater) would *derive* those numbers at build time → prevents the whole drift class. Good candidate.
 - Triaged feature issues **#34–#43** remain valid; sequence after the bug/supply-chain work.

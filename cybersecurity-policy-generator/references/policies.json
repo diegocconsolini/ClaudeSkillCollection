@@ -2446,6 +2446,41 @@
         "dateAdded": "2025-10-16T20:44:15.696265",
         "wordCount": 611
       }
+    },
+    {
+      "id": "software-supply-chain-security-policy",
+      "title": "Software Supply Chain Security Policy",
+      "source": "ClaudeSkillCollection (2026, threat-informed)",
+      "category": "Application Security",
+      "type": "policy",
+      "purpose": "Reduce the risk of compromise via third-party packages, dependency confusion, typosquatting, malicious install scripts, and maintainer-account takeover, in response to the 2024-2026 npm/PyPI supply-chain attack wave (xz-utils CVE-2024-3094, Shai-Hulud, chalk/debug, Axios/plain-crypto-js, litellm).",
+      "scope": "All software the organization builds, installs, or ships, across all package ecosystems (npm, PyPI, and others) and all CI/CD pipelines.",
+      "sections": {
+        "policy": "Software Supply Chain Security Policy\n\n1. Dependency intake\n  - Pin dependencies and commit lockfiles; install with integrity verification (npm ci / pip --require-hashes).\n  - Apply a minimum-release-age / cooldown (e.g. 24h-72h) before adopting a new release, so most malicious publishes are caught and yanked before they reach builds.\n  - Block install-time lifecycle scripts by default (npm: ignore-scripts / npm v12 default; allowlist only vetted exceptions). Treat any postinstall/preinstall and binding.gyp as requiring review.\n\n2. Provenance & integrity\n  - Prefer packages published with provenance/SLSA attestations; verify Sigstore provenance where available (noting provenance proves how a package was built, not that it is benign).\n  - Generate and retain an SBOM (CycloneDX + SPDX) for every release; scan SBOMs against OSV/Grype and track a VEX for non-exploitable findings.\n\n3. Publishing & maintainer accounts\n  - Require phishing-resistant 2FA (passkeys/WebAuthn) on all registry maintainer accounts.\n  - Publish from CI via Trusted Publishing / OIDC instead of long-lived tokens; scope and rotate any remaining tokens.\n  - Treat unexpected dependency additions, typosquat-adjacent names, and wallet/credential-exfil code patterns as incidents (see Incident Response).\n\n4. Detection & response\n  - Scan third-party plugins/packages before installation for known-incident IOCs (postinstall->bundle.js, setup_bun.js, plain-crypto-js, malicious .pth, window.fetch/ethereum wallet hooks).\n  - On suspected compromise, rotate npm/GitHub/cloud credentials from a clean machine, audit published versions, and revoke OIDC trust.\n\nResponsibility: Application Security owns this policy; Engineering and DevOps enforce it in pipelines.\nExceptions: Documented, time-boxed, and approved by the security team.",
+        "cisControls": "Control 16 (Application Software Security), Control 2 (Inventory & Control of Software Assets)"
+      },
+      "tags": [
+        "supply-chain",
+        "dependencies",
+        "npm",
+        "pypi",
+        "sbom",
+        "provenance",
+        "sigstore",
+        "typosquatting",
+        "2fa",
+        "trusted-publishing"
+      ],
+      "frameworks": [
+        "CIS Controls v8",
+        "NIST CSF",
+        "NIST SP 800-161",
+        "SLSA"
+      ],
+      "metadata": {
+        "added": "2026-06-19",
+        "threat_informed": true
+      }
     }
   ]
 }

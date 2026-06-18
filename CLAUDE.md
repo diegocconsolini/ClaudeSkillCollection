@@ -22,8 +22,8 @@ This is a Claude Code plugin marketplace containing 9 professional security, com
 ## ✅ Claude Desktop Skills Pack v1.0.0 - RELEASED
 
 **Status:** 8 of 9 skills ready for distribution (1 pending size optimization)
-**Location:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/`
-**Packages:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/packages/`
+**Location:** `./claude-desktop-skills/`
+**Packages:** `./claude-desktop-skills/packages/`
 
 ### Ready for Distribution (8/9)
 ✅ **gdpr-auditor** (57 KB) - GDPR compliance auditing
@@ -60,7 +60,13 @@ skill-name.zip
 **Important:** All Skill.md files MUST:
 - Start with `---` (YAML frontmatter)
 - Have proper permissions (644, not executable)
-- Include required fields: `name`, `description`, `license`
+- Include `name` and `description` (the only fields Claude Code actually requires).
+  `license` is a project convention here, **not** an official required frontmatter field.
+
+> **Filename note:** Claude Code requires the manifest to be `SKILL.md` (all caps) and the
+> skill directory to live under `~/.claude/skills/<name>/` or `.claude/skills/<name>/` to
+> auto-load. The desktop-skills copies use `Skill.md` for the Claude Desktop importer; the
+> root plugins carry agents under `agents/*.md` instead.
 
 **Total Package Size:** 425 KB (8 distributable ZIP files)
 
@@ -149,7 +155,7 @@ node -e "const p=JSON.parse(require('fs').readFileSync('plugin/.claude-plugin/pl
 
 ### Claude Desktop Skills (8 ready for use)
 
-**Location:** `/home/diegocc/ClaudeSkillCollection/claude-desktop-skills/packages/`
+**Location:** `./claude-desktop-skills/packages/`
 
 Import ZIP files directly into Claude Desktop:
 1. Open Claude Desktop
