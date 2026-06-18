@@ -1,0 +1,50 @@
+{
+  "_comment": "Ready-made security hooks. Copy the entries you want into .claude/settings.json (or a plugin's hooks/hooks.json) and review in /hooks. Paths assume this skill dir; adjust as needed.",
+  "hooks": {
+    "ConfigChange": [
+      {
+        "matcher": "user_settings|project_settings|local_settings|policy_settings|skills",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT:-.}/scripts/audit_config_change.sh\"",
+            "description": "Append the config change to ~/.claude/security-audit.log (compliance audit trail)"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Does this Bash command destructively delete data, disable security controls, or exfiltrate secrets (e.g. rm -rf on broad paths, chmod 777, curl|sh, history rewrite, credential reads piped to network)? Answer yes only if it is clearly dangerous and should be blocked.",
+            "description": "Flag destructive/exfiltrating shell commands before they run"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Is this write targeting a sensitive file that should not be created or modified casually — credentials (.env, *.pem, *.key), or business/financial data (financials, pricing, contracts, activity logs)? Answer yes only if the path clearly matches one of those.",
+            "description": "Warn on writes to credential or sensitive-business file paths"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "http",
+            "url": "https://example.invalid/security-webhook",
+            "description": "OPTIONAL: POST a session-end security event to a webhook/SIEM. Replace the URL to enable; left as example.invalid so it is inert by default."
+          }
+        ]
+      }
+    ]
+  }
+}

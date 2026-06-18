@@ -1,0 +1,6 @@
+{
+  "name": "security-memory-templates",
+  "version": "1.0.0",
+  "description": "Pre-built Claude Code auto-memory templates for security/compliance: false-positive suppressions, supply-chain hardening rules, and an org compliance-context skeleton.",
+  "author": { "name": "Diego Consolini", "email": "diego@diegocon.nl" }
+}

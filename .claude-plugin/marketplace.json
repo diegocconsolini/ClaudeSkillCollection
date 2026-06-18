@@ -291,6 +291,53 @@
       "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/claude-guide",
       "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
       "license": "MIT"
+    },
+    {
+      "name": "security-memory-templates",
+      "description": "Pre-built Claude Code auto-memory templates for security/compliance: false-positive suppressions for the plugin-security-checker, npm/PyPI supply-chain hardening rules, and an org compliance-context skeleton.",
+      "source": "./security-memory-templates",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Consolini",
+        "email": "diego@diegocon.nl"
+      },
+      "category": "security",
+      "keywords": [
+        "memory",
+        "auto-memory",
+        "security",
+        "compliance",
+        "false-positive",
+        "supply-chain",
+        "templates"
+      ],
+      "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/security-memory-templates",
+      "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+      "license": "MIT"
+    },
+    {
+      "name": "security-hooks",
+      "description": "Ready-made Claude Code hooks for security and compliance: a ConfigChange audit trail (JSONL log of every settings/skills change), PreToolUse guards for destructive shell commands and sensitive-file writes, and an optional HTTP security-event notifier. Covers command, prompt, and http hook types.",
+      "source": "./security-hooks",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Consolini",
+        "email": "diego@diegocon.nl"
+      },
+      "category": "security",
+      "keywords": [
+        "hooks",
+        "configchange",
+        "audit-trail",
+        "compliance",
+        "pretooluse",
+        "http-hooks",
+        "security-monitoring",
+        "notifications"
+      ],
+      "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/security-hooks",
+      "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+      "license": "MIT"
     }
   ]
 }

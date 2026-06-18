@@ -1,0 +1,6 @@
+{
+  "name": "security-hooks",
+  "version": "1.0.0",
+  "description": "Ready-made Claude Code hooks for security and compliance: a ConfigChange audit trail, PreToolUse guards for destructive shell commands and sensitive-file writes, and an optional HTTP security-event notifier.",
+  "author": { "name": "Diego Consolini", "email": "diego@diegocon.nl" }
+}
