@@ -62,6 +62,22 @@ tmp/
 *.pem
 secrets.json
 
+# Sensitive business/financial documents — MUST NOT be committed to this public repo.
+# (Untracked 2026-06-18 per audit #25 C1. These remain in git HISTORY until a scrub;
+#  treat the data as already-exposed → rotation/notification, not just a rewrite.)
+docs/*.xlsx
+docs/*.xlsm
+docs/*.csv
+docs/**/*.xlsx
+docs/**/*.xlsm
+docs/**/*.csv
+# Test fixtures for the extractors belong in each plugin's own test-files/, not docs/.
+
+# Generated SBOMs (kept local, per the workspace SBOM toolkit rule)
+sbom/
+bom.cdx.json
+bom.spdx.json
+
 # User-specific
 .user/
 personal/

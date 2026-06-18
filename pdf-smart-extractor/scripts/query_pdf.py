@@ -12,6 +12,16 @@ from pathlib import Path
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass
 
+# Resolve the cache dir from SmartCache so query reads the SAME location extract writes
+# to (~/.claude-cache/pdf), not the legacy ~/.claude-pdf-cache. (Fixes #44 N1.)
+sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(1, str(Path(__file__).parent.parent.parent / 'shared'))
+try:
+    from smart_cache import SmartCache
+    _DEFAULT_CACHE_DIR = str(SmartCache(doc_type='pdf').cache_dir)
+except Exception:
+    _DEFAULT_CACHE_DIR = os.path.expanduser("~/.claude-cache/pdf")
+
 
 @dataclass
 class SearchResult:
@@ -30,7 +40,7 @@ class PDFQueryEngine:
     def __init__(self, cache_dir: str = None):
         """Initialize query engine"""
         if cache_dir is None:
-            cache_dir = os.path.expanduser("~/.claude-pdf-cache")
+            cache_dir = _DEFAULT_CACHE_DIR
 
         self.cache_dir = Path(cache_dir)
 

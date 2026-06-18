@@ -24,8 +24,10 @@ import sys
 from pathlib import Path
 from datetime import datetime, time, date
 
-# Import shared smart cache
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / 'shared'))
+# Import smart cache: prefer the vendored copy beside this script (works when the plugin
+# is installed standalone), fall back to the workspace shared/ for in-repo dev. (#44 N2)
+sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(1, str(Path(__file__).parent.parent.parent / 'shared'))
 from smart_cache import SmartCache
 
 def serialize_cell_value(value):

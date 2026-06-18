@@ -8,6 +8,16 @@ import sys
 from pathlib import Path
 from collections import defaultdict
 
+# Resolve the cache dir from SmartCache so chunking reads the SAME location extract writes
+# to (~/.claude-cache/xlsx), not the legacy ~/.claude-xlsx-cache. (Fixes #44 N1.)
+sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(1, str(Path(__file__).parent.parent.parent / 'shared'))
+try:
+    from smart_cache import SmartCache
+    _CACHE_BASE = SmartCache(doc_type='xlsx').cache_dir
+except Exception:
+    _CACHE_BASE = Path.home() / ".claude-cache" / "xlsx"
+
 def estimate_tokens(data):
     """Estimate token count (rough approximation: chars / 4)"""
     if isinstance(data, dict):
@@ -114,7 +124,7 @@ def chunk_sheet(sheet_data, sheet_name, chunk_size_target=2000):
 
 def chunk_workbook(cache_key):
     """Chunk entire workbook"""
-    cache_base = Path.home() / ".claude-xlsx-cache"
+    cache_base = _CACHE_BASE
     cache_dir = cache_base / cache_key
 
     if not cache_dir.exists():

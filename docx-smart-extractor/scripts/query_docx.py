@@ -16,10 +16,20 @@ import sys
 import json
 from pathlib import Path
 
+# Resolve the cache dir from SmartCache so query reads the SAME location extract writes
+# to (~/.claude-cache/docx), not the legacy ~/.claude-docx-cache. (Fixes #44 N1.)
+sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(1, str(Path(__file__).parent.parent.parent / 'shared'))
+try:
+    from smart_cache import SmartCache
+    _CACHE_BASE = SmartCache(doc_type='docx').cache_dir
+except Exception:
+    _CACHE_BASE = Path.home() / ".claude-cache" / "docx"
+
 
 def get_cache_dir():
     """Get cache directory"""
-    cache_dir = Path.home() / ".claude-docx-cache"
+    cache_dir = _CACHE_BASE
     if not cache_dir.exists():
         print(f"Error: Cache directory not found: {cache_dir}")
         print("Run extract_docx.py first")

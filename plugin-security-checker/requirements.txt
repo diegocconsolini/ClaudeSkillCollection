@@ -1,5 +1,5 @@
 # Plugin Security Checker - Python Dependencies
-# Version: 2.0.0 (STIX 2.1 Integration)
+# Version: 3.2.0
 #
 # Note: Versions compatible with Python 3.8+ (macOS system Python 3.9)
 
@@ -14,5 +14,7 @@ taxii2-client>=2.3.0
 # v3.0+ requires Python 3.10+, using v2.x for compatibility
 mitreattack-python>=2.0.0,<3.0.0
 
-# Standard library extensions (no external dependencies for v1.0.0)
-# All other functionality uses Python stdlib only
+# Process memory introspection used by the IntelligentOrchestrator.
+# Optional at runtime — the orchestrator falls back to the stdlib `resource`
+# module if psutil is absent — but listed here as the preferred path. (#44 N3)
+psutil>=5.9.0

@@ -17,11 +17,36 @@ Design:
 - Manage memory budget across cache and all agents
 """
 
+import sys
 import json
-import psutil
 import time
 from collections import defaultdict
 from dataclasses import dataclass
+
+# psutil is preferred for RSS memory checks but is optional: fall back to the stdlib
+# `resource` module so a clean install without psutil doesn't crash the core scanner
+# on import. (Fixes #44 N3.)
+try:
+    import psutil
+    _HAS_PSUTIL = True
+except ImportError:
+    psutil = None
+    _HAS_PSUTIL = False
+    try:
+        import resource as _resource
+    except ImportError:  # Windows: no `resource` module
+        _resource = None
+
+
+def _current_rss_mb() -> float:
+    """Resident-set memory in MB, via psutil if present, else stdlib resource, else 0."""
+    if _HAS_PSUTIL:
+        return psutil.Process().memory_info().rss / 1024 / 1024
+    if _resource is not None:
+        rss = _resource.getrusage(_resource.RUSAGE_SELF).ru_maxrss
+        # ru_maxrss is bytes on macOS, kilobytes on Linux.
+        return rss / (1024 * 1024) if sys.platform == "darwin" else rss / 1024
+    return 0.0
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 
@@ -317,8 +342,7 @@ class IntelligentOrchestrator:
 
     def _check_memory_pressure(self) -> bool:
         """Check if memory usage exceeds emergency threshold"""
-        process = psutil.Process()
-        memory_mb = process.memory_info().rss / 1024 / 1024
+        memory_mb = _current_rss_mb()
         threshold_mb = self.max_memory_bytes / 1024 / 1024 * self.emergency_threshold
 
         return memory_mb > threshold_mb
@@ -371,8 +395,7 @@ class IntelligentOrchestrator:
 
     def get_statistics(self) -> Dict:
         """Get orchestrator statistics"""
-        process = psutil.Process()
-        memory_mb = process.memory_info().rss / 1024 / 1024
+        memory_mb = _current_rss_mb()
 
         return {
             **self.stats,

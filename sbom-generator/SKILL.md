@@ -1,10 +1,11 @@
 ---
-name: sbom-generator
-description: Generate standards-compliant SBOMs (CycloneDX 1.6 + SPDX 2.3) for a project across stacks, with optional quality scoring, vulnerability scan, VEX, and signing. Zero dependencies added to the target project.
-version: 0.1.0
-author: ClaudeSkillCollection
-license: MIT
-invocation: /sbom [path]
+name: sbom
+description: Generate standards-compliant SBOMs (CycloneDX 1.6 + SPDX 2.3) for a project across stacks (npm, Python, Go, Rust, Java, containers), with optional quality scoring, vulnerability scan, VEX, and signing. Adds zero dependencies to the target project. Use when the user asks for a software bill of materials, dependency inventory, supply-chain manifest, or CycloneDX/SPDX output.
+argument-hint: "[path-to-project]"
+metadata:
+  skill-version: 0.2.0
+  author: ClaudeSkillCollection
+  license: MIT
 ---
 
 # SBOM Generator Skill
@@ -55,8 +56,15 @@ per-stack tools, regulatory facts (US M-26-05 / EU CRA), VEX (OpenVEX), and sign
 | Python / Go / Rust / Maven / .NET | per-stack ephemeral runner (knowledge pack §4) |
 | container image / mixed repo | Syft / cdxgen |
 
-Status: v0.1.0 — initial build, standalone skill (Option B). The npm path is
-**verified** (smoke-tested against a real 787-component project → valid CycloneDX 1.6 +
-SPDX 2.3, reproducible output). Non-npm stacks rely on ephemeral tools that must be
-available or fetchable. Not registered in `marketplace.json` (it's a standalone skill,
-like `claude-guide/`); promote to a plugin later if desired.
+Status: v0.2.0 — standalone skill (Option B), **made loadable** (2026-06-18).
+- **Install:** the loadable copy lives at `.claude/skills/sbom/` (recognized location →
+  invocable as `/sbom`). This directory (`sbom-generator/`) is the **tracked canonical
+  source**; `.claude/` is gitignored, so re-copy after edits:
+  `cp -r sbom-generator/{SKILL.md,agents,references,scripts} .claude/skills/sbom/`.
+- **Format fixed:** `SKILL.md` (all caps), valid frontmatter (off-schema
+  `invocation`/`version`/`author`/`license` removed; `name: sbom` drives `/sbom`).
+- **npm path verified** against a real 787-component project (valid CycloneDX 1.6 + SPDX
+  2.3, reproducible bytes); license **expressions** emit as `{expression}`; npm
+  **workspaces** monorepos trigger an explicit under-report warning → route to Syft.
+- Non-npm stacks rely on ephemeral tools that must be available/fetchable. Not in
+  `marketplace.json` (standalone skill); promote to a plugin later if desired.

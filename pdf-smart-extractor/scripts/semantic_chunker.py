@@ -12,6 +12,16 @@ from pathlib import Path
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass, asdict
 
+# Resolve the cache dir from SmartCache so chunking reads the SAME location extract writes
+# to (~/.claude-cache/pdf), not the legacy ~/.claude-pdf-cache. (Fixes #44 N1.)
+sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(1, str(Path(__file__).parent.parent.parent / 'shared'))
+try:
+    from smart_cache import SmartCache
+    _CACHE_BASE = SmartCache(doc_type='pdf').cache_dir
+except Exception:
+    _CACHE_BASE = Path.home() / ".claude-cache" / "pdf"
+
 
 @dataclass
 class SemanticBoundary:
@@ -337,7 +347,7 @@ def main():
         target_size = int(sys.argv[idx + 1])
 
     # Load from cache
-    cache_dir = Path.home() / ".claude-pdf-cache" / cache_key
+    cache_dir = _CACHE_BASE / cache_key
     text_path = cache_dir / "full_text.txt"
 
     if not text_path.exists():

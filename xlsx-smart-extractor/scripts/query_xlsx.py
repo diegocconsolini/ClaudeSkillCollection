@@ -8,9 +8,19 @@ import sys
 from pathlib import Path
 import re
 
+# Resolve the cache dir from SmartCache so query reads the SAME location extract writes
+# to (~/.claude-cache/xlsx), not the legacy ~/.claude-xlsx-cache. (Fixes #44 N1.)
+sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(1, str(Path(__file__).parent.parent.parent / 'shared'))
+try:
+    from smart_cache import SmartCache
+    _CACHE_BASE = SmartCache(doc_type='xlsx').cache_dir
+except Exception:
+    _CACHE_BASE = Path.home() / ".claude-cache" / "xlsx"
+
 def search_chunks(cache_key, query):
     """Search all chunks for query text"""
-    cache_base = Path.home() / ".claude-xlsx-cache"
+    cache_base = _CACHE_BASE
     cache_dir = cache_base / cache_key
     chunks_dir = cache_dir / "chunks"
 
@@ -68,7 +78,7 @@ def search_chunks(cache_key, query):
 
 def get_sheet(cache_key, sheet_name):
     """Get all chunks for a specific sheet"""
-    cache_base = Path.home() / ".claude-xlsx-cache"
+    cache_base = _CACHE_BASE
     cache_dir = cache_base / cache_key
     chunks_dir = cache_dir / "chunks"
 
@@ -104,7 +114,7 @@ def get_sheet(cache_key, sheet_name):
 
 def get_summary(cache_key):
     """Get workbook summary"""
-    cache_base = Path.home() / ".claude-xlsx-cache"
+    cache_base = _CACHE_BASE
     cache_dir = cache_base / cache_key
 
     # Load manifest

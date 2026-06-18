@@ -67,11 +67,25 @@ const lock = JSON.parse(
   fs.readFileSync(path.join(root, "package-lock.json"), "utf8"),
 );
 
-if (lock.lockfileVersion < 2 || !lock.packages) {
+if (!(lock.lockfileVersion >= 2) || !lock.packages) {
   console.error(
     "Unsupported lockfile: need lockfileVersion >= 2 with a `packages` map.",
   );
   process.exit(1);
+}
+
+// Single-package only: this zero-dep reader does NOT expand npm workspaces. If the root
+// package.json declares `workspaces`, warn — workspace members will be under-reported and
+// the caller should route to Syft/cdxgen instead. (Honors "never imply completeness".)
+const rootPkgForWorkspaceCheck = JSON.parse(
+  fs.readFileSync(path.join(root, "package.json"), "utf8"),
+);
+if (rootPkgForWorkspaceCheck.workspaces) {
+  console.error(
+    "WARNING: package.json declares `workspaces` — this reader inventories the root " +
+    "project only and may under-report workspace members. For a complete monorepo SBOM, " +
+    "use Syft (`syft dir:.`) or cdxgen instead.",
+  );
 }
 
 const timestamp = process.env.SBOM_TIMESTAMP ?? new Date().toISOString();
@@ -80,7 +94,7 @@ const timestamp = process.env.SBOM_TIMESTAMP ?? new Date().toISOString();
 function purl(name, version) {
   // pkg:npm/@scope%2Fname@version  (slash in scope is %2F per the purl spec)
   const encoded = name.startsWith("@")
-    ? "%40" + name.slice(1).replace("/", "%2F")
+    ? "%40" + name.slice(1).replaceAll("/", "%2F")
     : name;
   return `pkg:npm/${encoded}@${version}`;
 }
@@ -144,6 +158,24 @@ const rootPurl = purl(rootName, rootVersion);
 const TOOL = "orizon-generate-sbom";
 const TOOL_VERSION = "1.1.0";
 
+// Spec versions are pinned for CONSUMER COMPATIBILITY, not because newer specs don't
+// exist. As of 2026-06, CycloneDX 1.7 and SPDX 3.0.1 are released but Dependency-Track /
+// Trivy / Grype still reject 1.7 and don't reliably ingest SPDX 3.x — so 1.6 / 2.3 are
+// the broadest-consumed targets. Revisit when the major consumers accept the newer specs.
+const CDX_SPEC_VERSION = "1.6";
+const SPDX_SPEC_VERSION = "SPDX-2.3";
+
+/** Normalize a lockfile `license` field into a CycloneDX licenses[] entry.
+ *  A bare SPDX id → {license:{id}}; an SPDX expression (e.g. "MIT OR Apache-2.0") →
+ *  {expression}; an object/array form is coerced to a string id when possible. */
+function cdxLicenses(license) {
+  if (!license) return undefined;
+  const value = typeof license === "string" ? license : license.type ?? null;
+  if (!value || typeof value !== "string") return undefined;
+  const isExpression = /\s|\bOR\b|\bAND\b|\bWITH\b|[()]/.test(value);
+  return isExpression ? [{ expression: value }] : [{ license: { id: value } }];
+}
+
 /* ---------------------------------- CycloneDX 1.6 ---------------------------- */
 
 function buildCycloneDx() {
@@ -159,13 +191,14 @@ function buildCycloneDx() {
     };
     const h = hashes(p.integrity);
     if (h) component.hashes = h;
-    if (p.license) component.licenses = [{ license: { id: p.license } }];
+    const lic = cdxLicenses(p.license);
+    if (lic) component.licenses = lic;
     return component;
   });
 
   return {
     bomFormat: "CycloneDX",
-    specVersion: "1.6",
+    specVersion: CDX_SPEC_VERSION,
     version: 1,
     metadata: {
       timestamp,
@@ -262,7 +295,7 @@ function buildSpdx() {
   ];
 
   return {
-    spdxVersion: "SPDX-2.3",
+    spdxVersion: SPDX_SPEC_VERSION,
     dataLicense: "CC0-1.0",
     SPDXID: "SPDXRef-DOCUMENT",
     name: `${rootName}@${rootVersion}`,
