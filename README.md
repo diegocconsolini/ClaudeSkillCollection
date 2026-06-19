@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/releases)
-[![Plugins](https://img.shields.io/badge/plugins-9-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
+[![Plugins](https://img.shields.io/badge/plugins-12-green.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection)
 [![Wiki](https://img.shields.io/badge/wiki-docs-purple.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki)
 [![Start Here](https://img.shields.io/badge/Start_Here-guide-brightgreen.svg)](https://github.com/diegocconsolini/ClaudeSkillCollection/wiki/Start-Here)
 
@@ -936,7 +936,7 @@ ClaudeSkillCollection/
 ├── CHANGELOG.md                    # Version history
 │
 ├── .claude-plugin/                 # Marketplace configuration
-│   └── marketplace.json            # Plugin catalog (9 plugins)
+│   └── marketplace.json            # Plugin catalog (12 plugins)
 │
 ├── plugin-security-checker/        # Plugin Security Checker v3.0.0
 │   ├── README.md

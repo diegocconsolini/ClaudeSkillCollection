@@ -1,6 +1,6 @@
 # Security & Compliance Marketplace
 
-This is a Claude Code plugin marketplace containing 9 professional security, compliance, and productivity plugins.
+This is a Claude Code plugin marketplace containing 12 professional security, compliance, and productivity plugins.
 
 ## 📚 Documentation Wiki
 
@@ -121,6 +121,34 @@ All plugins use the correct Claude Code manifest format:
 - Agent paths **MUST** start with `./` (e.g., `"./agents/plugin-name.md"`)
 - Do NOT use: `$schema`, `category`, `requirements`, `scripts` (unsupported)
 - Plugin manifest goes in `.claude-plugin/plugin.json`
+
+## Conventions (established 2026-06; verified against current Claude Code docs)
+
+- **Skill filename & loading.** A *loadable* skill manifest must be `SKILL.md` (all caps)
+  and the skill dir must live under `~/.claude/skills/<name>/` or `.claude/skills/<name>/`.
+  Only `name` + `description` are required frontmatter; `license`/`version`/`author` are
+  conventions (put non-standard keys under `metadata:`). `invocation:` is NOT a real field —
+  the slash command name comes from the directory name. The `/sbom` skill follows this: its
+  tracked source is `sbom-generator/`, with a loadable copy at `.claude/skills/sbom/`
+  (re-sync after edits; `.claude/` is gitignored).
+- **Shared cache library.** Each smart-extractor **vendors** `smart_cache.py` into its own
+  `scripts/` (don't rely on the repo-root `shared/` — it isn't bundled on install). All
+  extract/chunk/query scripts resolve the cache via `SmartCache(doc_type=...).cache_dir`
+  (`~/.claude-cache/{type}/`), never the legacy `~/.claude-{type}-cache/`.
+- **Scanner pattern source.** `plugin-security-checker/scripts/scan_plugin.py` loads the
+  **canonical** `references/dangerous_functions_expanded.json` (superset of the legacy file).
+  Add new detection patterns there once. Named supply-chain IOCs live in
+  `references/supply_chain_iocs.json` (verify each against a primary source before adding).
+  `expand_patterns.py` writes a gitignored `.generated.json` build artifact — diff, then
+  promote to the canonical file.
+- **HTML report safety.** Every report generator must `html.escape()` scan-controlled
+  finding fields (or set jinja `autoescape=True`). Findings come from scanned plugins and
+  are attacker-influenced.
+- **Doc-count drift.** Do not hardcode counts (plugins, wiki pages, ZIP sizes) in docs.
+  `scripts/check_doc_drift.py` derives them from the repo and fails on drift.
+- **Generated SBOMs** live in each project's gitignored `sbom/` and are labelled source-vs-build
+  (CISA "Known Unknowns" when transitive deps aren't expanded). Use the `/sbom` skill; never
+  `npm install` / pin just to make an SBOM.
 
 ## Agent File Format
 
