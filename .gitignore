@@ -83,6 +83,11 @@ docs/*.zip
 docs/**/*.zip
 # Test fixtures for the extractors belong in each plugin's own test-files/, not docs/.
 
+# C1 incident-response documents — describe the exposed data (employees, client, HCL figures)
+# and the GDPR breach assessment. These are CONFIDENTIAL and MUST NOT be committed to this
+# public repo (committing them would re-create the very exposure C1 remediated).
+docs/security/
+
 # Generated SBOMs (kept local, per the workspace SBOM toolkit rule)
 sbom/
 bom.cdx.json
