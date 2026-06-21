@@ -63,14 +63,24 @@ tmp/
 secrets.json
 
 # Sensitive business/financial documents — MUST NOT be committed to this public repo.
-# (Untracked 2026-06-18 per audit #25 C1. These remain in git HISTORY until a scrub;
-#  treat the data as already-exposed → rotation/notification, not just a rewrite.)
+# (Untracked 2026-06-18 per audit #25 C1. HISTORY SCRUBBED 2026-06-21 via git-filter-repo:
+#  the 16 spreadsheets + AOP Dashboard.pbix + JDE/GMFA work order + GAP_CER_SAP PDF +
+#  SANS/pentest books + iTerm zips were removed from all refs and force-pushed.
+#  The exposed data is still treated as compromised → see docs/security/C1-*.md for the
+#  rotation checklist and GDPR Art.33/34 assessment.)
 docs/*.xlsx
 docs/*.xlsm
 docs/*.csv
 docs/**/*.xlsx
 docs/**/*.xlsm
 docs/**/*.csv
+docs/*.pbix
+docs/**/*.pbix
+# Power BI / business dashboards and bulk binaries don't belong in this public repo.
+# Confidential client PDFs (work orders, gap assessments) must NOT live in docs/ either —
+# public reference PDFs (NIST, OWASP) are fine; client/engagement docs are not.
+docs/*.zip
+docs/**/*.zip
 # Test fixtures for the extractors belong in each plugin's own test-files/, not docs/.
 
 # Generated SBOMs (kept local, per the workspace SBOM toolkit rule)
