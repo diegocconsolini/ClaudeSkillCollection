@@ -54,16 +54,23 @@ def run_scanner(target, scanner):
     if not Path(scanner).exists():
         sys.exit(f"error: scanner not found at {scanner} "
                  f"(override with --scanner PATH)")
+    import os
     import tempfile
     out = tempfile.NamedTemporaryFile("r", suffix=".json", delete=False)
     out.close()
-    proc = subprocess.run(
-        [sys.executable, str(scanner), target,
-         "--output", out.name, "--format", "json"],
-        capture_output=True, text=True)
-    if proc.returncode != 0:
-        sys.exit(f"error: scanner failed on {target}:\n{proc.stderr}")
-    return load_findings(out.name)
+    try:
+        proc = subprocess.run(
+            [sys.executable, str(scanner), target,
+             "--output", out.name, "--format", "json"],
+            capture_output=True, text=True)
+        if proc.returncode != 0:
+            sys.exit(f"error: scanner failed on {target}:\n{proc.stderr}")
+        return load_findings(out.name)
+    finally:
+        try:
+            os.unlink(out.name)
+        except FileNotFoundError:
+            pass
 
 
 def render(diff, before, after):
