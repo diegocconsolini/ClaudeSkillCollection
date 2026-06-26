@@ -338,6 +338,31 @@
       "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/security-hooks",
       "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
       "license": "MIT"
+    },
+    {
+      "name": "batch-security-migration",
+      "description": "Recipe skill that turns Claude Code's built-in /batch into a security-migration tool: 7 copy-paste batch recipes (XSS innerHTML→textContent, HTTP→HTTPS, SQLi parameterization, input validation, log PII redaction, secret rotation, dependency CVE patches), each with a safety tier and false-positive trap, plus scan_diff.py — a before/after plugin-security-checker gate that fails on any new HIGH/CRITICAL finding.",
+      "source": "./batch-security-migration",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Consolini",
+        "email": "diego@diegocon.nl"
+      },
+      "category": "security",
+      "keywords": [
+        "batch",
+        "security",
+        "migration",
+        "vulnerability",
+        "remediation",
+        "xss",
+        "sqli",
+        "scan-diff",
+        "regression-gate"
+      ],
+      "homepage": "https://github.com/diegocconsolini/ClaudeSkillCollection/tree/main/batch-security-migration",
+      "repository": "https://github.com/diegocconsolini/ClaudeSkillCollection",
+      "license": "MIT"
     }
   ]
 }
