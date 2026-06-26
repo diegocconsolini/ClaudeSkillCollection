@@ -1,0 +1,7 @@
+{
+  "name": "batch-security-migration",
+  "version": "1.0.0",
+  "description": "Recipe skill that turns Claude Code's built-in /batch into a security-migration tool: 7 copy-paste batch recipes (XSS, HTTPS, SQLi, input validation, log PII, secret rotation, CVE patches) with per-recipe safety tiers and false-positive traps, plus scan_diff.py — a before/after plugin-security-checker gate that fails on any new HIGH/CRITICAL finding.",
+  "author": { "name": "Diego Consolini", "email": "diego@diegocon.nl" },
+  "keywords": ["batch", "security", "migration", "vulnerability", "remediation", "xss", "sqli", "scan-diff", "regression-gate"]
+}
