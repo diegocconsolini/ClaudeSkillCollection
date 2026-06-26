@@ -48,3 +48,86 @@ def diff_findings(before, after):
 
 def has_blocking(new):
     return any(f["severity"] in BLOCKING for f in new)
+
+
+def run_scanner(target, scanner):
+    if not Path(scanner).exists():
+        sys.exit(f"error: scanner not found at {scanner} "
+                 f"(override with --scanner PATH)")
+    import tempfile
+    out = tempfile.NamedTemporaryFile("r", suffix=".json", delete=False)
+    out.close()
+    proc = subprocess.run(
+        [sys.executable, str(scanner), target,
+         "--output", out.name, "--format", "json"],
+        capture_output=True, text=True)
+    if proc.returncode != 0:
+        sys.exit(f"error: scanner failed on {target}:\n{proc.stderr}")
+    return load_findings(out.name)
+
+
+def render(diff, before, after):
+    order = ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFO"]
+    def counts(findings):
+        c = {k: 0 for k in order}
+        for f in findings:
+            c[f["severity"]] = c.get(f["severity"], 0) + 1
+        return c
+    cb, ca = counts(before), counts(after)
+    lines = ["Severity   before -> after"]
+    for sev in order:
+        lines.append(f"  {sev:<8} {cb[sev]:>5} -> {ca[sev]:<5}")
+    lines.append("")
+    lines.append(f"new: {len(diff['new'])}  fixed: {len(diff['fixed'])}  "
+                 f"unchanged: {len(diff['unchanged'])}")
+    if diff["new"]:
+        lines.append("\nNEW findings:")
+        for f in diff["new"]:
+            lines.append(f"  [{f['severity']}] {f['file']}:{f['line']} "
+                         f"{f['description']}")
+    if diff["fixed"]:
+        lines.append("\nFIXED findings:")
+        for f in diff["fixed"]:
+            lines.append(f"  [{f['severity']}] {f['file']}:{f['line']} "
+                         f"{f['description']}")
+    return "\n".join(lines)
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(
+        description="Diff two plugin-security-checker scans; fail on new HIGH/CRITICAL.")
+    p.add_argument("before", nargs="?", help="before scan JSON (omit when using --scan)")
+    p.add_argument("after", nargs="?", help="after scan JSON (omit when using --scan)")
+    p.add_argument("--scan", nargs=2, metavar=("BEFORE_DIR", "AFTER_DIR"),
+                   help="scan two plugin dirs with the bundled scanner instead of "
+                        "passing pre-made JSON files")
+    p.add_argument("--scanner", default=str(DEFAULT_SCANNER),
+                   help="path to scan_plugin.py (default: bundled plugin-security-checker)")
+    p.add_argument("--report-only", action="store_true",
+                   help="print the diff but always exit 0 (escape hatch)")
+    args = p.parse_args(argv)
+
+    if args.scan:
+        before = run_scanner(args.scan[0], Path(args.scanner))
+        after = run_scanner(args.scan[1], Path(args.scanner))
+    elif args.before and args.after:
+        before = load_findings(args.before)
+        after = load_findings(args.after)
+    else:
+        p.error("provide two scan JSON files, or use --scan BEFORE_DIR AFTER_DIR")
+
+    diff = diff_findings(before, after)
+    if not before and not after:
+        print("no findings; nothing to compare")
+        return 0
+    print(render(diff, before, after))
+
+    if has_blocking(diff["new"]) and not args.report_only:
+        print("\nGATE: FAIL — new HIGH/CRITICAL finding(s) introduced.")
+        return 1
+    print("\nGATE: PASS — no new HIGH/CRITICAL findings.")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

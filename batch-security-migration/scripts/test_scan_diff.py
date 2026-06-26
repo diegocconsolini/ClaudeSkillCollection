@@ -66,5 +66,45 @@ class TestCore(unittest.TestCase):
             self.m.load_findings("/no/such/file.json")
 
 
+class TestCLI(unittest.TestCase):
+    def run_cli(self, args):
+        return subprocess.run([sys.executable, str(SCRIPT), *args],
+                              capture_output=True, text=True)
+
+    def test_new_high_exits_1(self):
+        before = write_scan([])
+        after = write_scan([make_finding("HIGH", description="brand-new")])
+        r = self.run_cli([before, after])
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("brand-new", r.stdout)
+
+    def test_fixed_finding_exits_0(self):
+        before = write_scan([make_finding("CRITICAL", description="was-here")])
+        after = write_scan([])
+        r = self.run_cli([before, after])
+        self.assertEqual(r.returncode, 0)
+        self.assertIn("was-here", r.stdout)  # listed under FIXED
+
+    def test_report_only_suppresses_exit_1(self):
+        before = write_scan([])
+        after = write_scan([make_finding("HIGH", description="brand-new")])
+        r = self.run_cli([before, after, "--report-only"])
+        self.assertEqual(r.returncode, 0)
+
+    def test_identity_keying_same_finding_diff_id_is_unchanged(self):
+        before = write_scan([make_finding("HIGH", description="same", fid="FINDING-001")])
+        after = write_scan([make_finding("HIGH", description="same", fid="FINDING-777")])
+        r = self.run_cli([before, after])
+        self.assertEqual(r.returncode, 0)  # not new -> no block
+
+    def test_scan_mode_end_to_end(self):
+        # Smoke test: --scan over two real plugin dirs runs the real scanner.
+        # gdpr-auditor has 0 findings both sides -> no new HIGH -> exit 0.
+        repo = SCRIPT.resolve().parent.parent.parent
+        target = str(repo / "gdpr-auditor")
+        r = self.run_cli(["--scan", target, target])
+        self.assertEqual(r.returncode, 0, msg=r.stderr)
+
+
 if __name__ == "__main__":
     unittest.main()
