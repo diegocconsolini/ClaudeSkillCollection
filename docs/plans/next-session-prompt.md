@@ -1,49 +1,83 @@
-# Next-session prompt — ClaudeSkillCollection
+# Next-session prompt — ClaudeSkillCollection (2026-06-29)
 
-Copy-paste this into the next session.
+Copy-paste this verbatim into a fresh session.
 
 ---
 
-Continue work on the ClaudeSkillCollection marketplace
-(/Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection).
+Continue work on the ClaudeSkillCollection marketplace.
+Repo: `/Users/diegocavalariconsolini/ClaudeCode/ClaudeSkillCollection`
+GitHub: `diegocconsolini/ClaudeSkillCollection`
+Commit straight to main (standing choice). A local gitwatch daemon auto-commits ~90s but is **local-only (AUTO_PUSH=false) — NEVER touch it**.
 
-Start by reading `docs/plans/2026-06-24-SESSION-SUMMARY.md` for full context. Last session
-executed the **C1 git-history scrub** (3 filter-repo passes, removed the 16 spreadsheets +
-.pbix + client PDFs + 5 "AOP26 HCL Cost Forecast" slide HTMLs that the original glob missed,
-deleted the public `private` branch, hardened .gitignore) and **designed but did not build**
-the #40 plugin.
+## Step 0 — verify state before acting
 
-Verify state first before acting: `gh issue list`, `python3 scripts/check_doc_drift.py`, and
-that the 12 plugins still load. A local gitwatch daemon auto-commits this repo ~90s but is
-**local-only (AUTO_PUSH=false) — NEVER touch it** (my standing instruction). Ground every
-claim in real file reads/tests; no success claims without evidence.
+Run all four; do not claim success without evidence:
 
-## Priority 1 — finish #40 (paused at the spec-approval gate)
+```
+gh issue list --state open
+python3 scripts/check_doc_drift.py
+git status && git log --oneline -5
+```
 
-The spec is committed + pushed:
-`docs/superpowers/specs/2026-06-22-batch-security-migration-design.md`. I still need to approve
-it. Two open questions from the brainstorm:
-- Recipe tiering OK? (secret-rotation + dependency-CVE-updates are marked 🔴 high-risk-manual.)
-- Ship an `agents/*.md`, or skill-only? (spec says skill + script, no agent.)
+Also confirm 13 plugins are present (one dir per plugin, each with `.claude-plugin/plugin.json`). If anything diverges from the state below, stop and reconcile before building.
 
-Once I approve: writing-plans → build the 13th plugin `batch-security-migration`:
-`SKILL.md` (7 `/batch` security recipes w/ safety tiers), `scripts/scan_diff.py` (before/after
-`plugin-security-checker` diff, blocks on new HIGH+, `--report-only` flag) + its unittest,
-`.claude-plugin/plugin.json`, and a `marketplace.json` entry mirroring `security-hooks`. Then
-re-run `check_doc_drift.py` (count goes 12 → 13).
+**Expected state:** main in sync with origin (HEAD 8162c35). 13 marketplace plugins. doc-drift clean. Issues closed this past session: #40, #41, #35, #39.
 
-## Priority 2 — close already-built GitHub issues
+## Priority 1 — BUILD #34 "Agent Teams Security Playbook" (14th plugin)
 
-#35, #39, #41, #42 are **built but still OPEN**; #25/#23/#44 fixes shipped. Close/update them on
-GitHub so the issue list reflects reality.
+Design is **fully committed** at:
+`docs/superpowers/specs/2026-06-29-agent-teams-security-playbook-design.md`
 
-## Priority 3 — remaining feature builds (order in docs/feature-designs/2026-06-19-feature-designs.md)
+Three design decisions are **settled — do not reopen**:
 
-#34/#37 (orchestration pair) → #36 (dashboard) → #43 (wiki) → #38 (voice, lowest priority).
+1. **SCOPE:** ship all 3 swarm configurations — Security Audit Swarm (5 agents: dependencies scanner, static code analyzer, secrets detector, config reviewer, infrastructure auditor), Compliance Audit Swarm (4 agents: GDPR, ISO 27001, SOC 2, NIST CSF), Incident Response Swarm (3 agents: triage analyst, containment specialist, documentation lead).
+2. **HOOKS:** ship real working hook scripts + a unittest (not inline doc snippets). Two hooks: `TeammateIdle` (exit 2 keeps a teammate working) and `TaskCompleted` (exit 2 prevents premature completion).
+3. **GATE LOGIC:** `TaskCompleted` gate blocks (exit 2) unless a `scan_plugin.py --output JSON` scan artifact exists for the target, parses cleanly, and contains `summary.severity_counts`. File-based, testable, ties the gate to `plugin-security-checker`.
 
-## C1 follow-up (MINE to do — not Claude's, but remind me)
+**Approved file structure:**
 
-C1 is code-complete but **exposure has not 100% ceased**. The 3 deliverables in `docs/security/`
-(gitignored) are waiting on me: (1) file the **GitHub Support GC purge request** — old blobs
-are still SHA-retrievable until GitHub garbage-collects; (2) run the **credential-rotation
-checklist**; (3) take the **GDPR Art.33/34 assessment** to a DPO. Ask me whether I've done these.
+```
+agent-teams-security-playbook/
+  .claude-plugin/plugin.json            # skill-only manifest; name must equal dir name; author: Diego Consolini <diego@diegocon.nl>; NO $schema/category/requirements/scripts keys
+  SKILL.md                              # 3 swarm configs + spawn prompts + best practices; frontmatter: name + description required
+  scripts/
+    teammate_idle_gate.sh               # TeammateIdle hook — exits 0 by default with a documented customization point (comment block); stdlib shell only
+    task_completed_gate.py              # TaskCompleted hook — reads event payload from stdin; looks for scan artifact via SECURITY_SCAN_DIR env var (default: ~/.claude-cache/security-scans/); exits 0 (allow) or exit 2 (block) with message to stderr; stdlib only
+    test_task_completed_gate.py         # 5 unittest cases: artifact missing→exit 2; artifact+valid→exit 0; artifact+unparseable→exit 2; artifact missing severity_counts→exit 2; opt-out env var set→exit 0
+```
+
+**Build sequence:**
+
+1. Run `/writing-plans` skill on the spec file above to produce a concrete task list.
+2. Run `/subagent-driven-development` to build the plugin (SKILL.md, 2 hook scripts + test, plugin.json).
+3. Add marketplace entry in `.claude-plugin/marketplace.json` mirroring the `security-hooks` entry (may use `category`/`keywords`/`homepage`/`repository`/`license`).
+4. Re-run `python3 scripts/check_doc_drift.py` — count must go 13 → 14 cleanly.
+5. Close #34 on GitHub with evidence (link to commit + drift check output).
+
+**Repo conventions that must hold:**
+- `plugin.json` must NOT have keys: `$schema`, `category`, `requirements`, `scripts`.
+- SKILL.md frontmatter: only `name` + `description` required; non-standard keys under `metadata:`.
+- Zero third-party deps; stdlib only throughout.
+- Do not hardcode plugin counts in any docs — `check_doc_drift.py` owns that.
+- Agent Teams is experimental (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`); cannot be executed in this environment. Swarm configs are prose-validated by review; only hook scripts are executable + tested.
+
+## Priority 2 — remaining feature builds (in order)
+
+After #34 ships, work through:
+
+- **#37** — worktree parallel scanner
+- **#36** — compliance dashboard MCP
+- **#43** — wiki content (needs #42 first)
+- **#38** — voice integration (lowest priority)
+
+**Note on #42 Wiki Auto-Updater:** it is **NOT built**. The feature-designs doc may label it as partially done via `check_doc_drift.py` — that is a stretch; a real wiki-updater skill does not exist. `./wiki` is just a README stub. Build #42 before #43.
+
+## C1 follow-up (user's own tasks — remind them)
+
+Three deliverables are waiting in `docs/security/` (gitignored):
+
+1. **File the GitHub Support GC purge request** — old blobs are still SHA-retrievable until GitHub garbage-collects the history post-filter-repo.
+2. **Run the credential-rotation checklist** — any secrets that may have been in the purged files.
+3. **Take the GDPR Art.33/34 assessment to a DPO** — data was in a public repo; breach timeline and notification obligations need a qualified assessment.
+
+Ask the user whether any of these have been completed before moving on.
